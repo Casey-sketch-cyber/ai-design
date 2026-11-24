@@ -4,7 +4,9 @@
 
 ## 项目概述
 
-设计 + AI 方向的论文选题与研究仓库。当前课题：**从图像生成到方案交付：OPC（一人公司）驱动的乡村农产品包装设计实践**，目标是一篇开放获取的 SCI/SSCI 期刊论文。
+设计 + AI 方向的论文选题与研究仓库。当前课题：**DieLineDiff：面向折叠包装设计的印刷约束多面扩散生成方法**（DieLineDiff: Print-Constrained Multi-Face Diffusion for Foldable Packaging Design），以乡村农产品包装为测试场景，目标是一篇开放获取的 SCIE 期刊论文。方案见 `docs/METHOD_PLAN.md`。
+
+（课题最初为“从图像生成到方案交付：OPC 驱动的乡村农产品包装设计实践”，2026-11-24 调整，过程见 `docs/DECISIONS.md`。）
 
 ## 共享方法（开工前先读）
 
@@ -17,10 +19,14 @@
 ## 目录结构
 
 - `tasks/`：下达给各个 AI 的任务书，按编号排列。先看最新的、指派给你的那一份。
-- `docs/`：文献树（`docs/literature-tree/`）、创新点评估（`INNOVATION.md`）、期刊调研（`JOURNALS.md`）、进度（`PROGRESS.md`）、决策（`DECISIONS.md`）。
+- `code/`、`third_party/`：实验代码与第三方基线（固定 commit）。
+- `docs/`：方案设计（`METHOD_PLAN.md`）、实验报告（`experiments/`）、文献树（`docs/literature-tree/`）、创新点评估（`INNOVATION.md`）、期刊调研（`JOURNALS.md`）、进度（`PROGRESS.md`）、决策（`DECISIONS.md`）。
 - `literature/`：检索记录、文献清单。
 
 ## 研究约束
+
+- 实验必须能在 RTX 3090（24 GB 显存）上跑通；RTX 5090（32 GB）可用于加速。不训练大模型，主方法免训练。
+- 论文正式插图由 Claude 用 PowerPoint 绘制；其他 AI 只出数据图。
 
 - 文献检索只用免费来源（作者没有 Scopus、Web of Science 权限）。
 - 数据只用公开数据或自行网上采集的数据，不购买数据集。

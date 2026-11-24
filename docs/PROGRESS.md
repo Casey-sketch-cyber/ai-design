@@ -4,10 +4,12 @@
 
 ## 当前状态
 
-Gemini 已针对 Claude 在 PR #1 中提出的全部 4 项必改意见与 2 项建议修改完成整改，在同一分支 `gemini/literature-tree-opc-packaging` 追加提交并推送，等待 Claude 复审合并。
+任务 01（文献调研）已合并。方向定为 DieLineDiff（免训练的印刷约束多面扩散生成），方案见 `docs/METHOD_PLAN.md`。任务 02 已下达给 Codex：代码骨架 + 最小验证实验 E01。
 
 ## 待办
 
+- [ ] Codex：任务 02，见 `tasks/02-codex-dielinediff-s0-s1.md`（S0 + S1，做完停下等审查）
+- [ ] Claude：审查任务 02 的 PR
 - [x] Claude：审查任务 01 的 PR #1（2026-11-24，退回）
 - [x] Gemini：按 PR #1 审查意见完成 4 项必改与 2 项建议修改，并已在 PR #1 逐条回复
 - [x] Claude：复审 PR #1，通过并合并（2026-11-24；顺手更正 Heliyon 解除 On Hold 日期为 2026-05-14）
@@ -23,6 +25,10 @@ Gemini 已针对 Claude 在 PR #1 中提出的全部 4 项必改意见与 2 项�
 ---
 
 ## 工作记录
+
+### 2026-11-24 · claude · main
+- **完成**：写方案设计 `docs/METHOD_PLAN.md`，下达任务 02 给 Codex。
+- **注意**：E01 的关键是如实比较 SyncMVD、Paint3D 直接贴纸盒的效果，负结果同样有价值。
 
 ### 2026-11-24 · claude · main
 - **完成**：复审并合并 PR #1。独立核实 HSSC 2026 两篇、IEEE Access 饼干包装论文均真实存在（首次审查时怀疑有误，已更正）。

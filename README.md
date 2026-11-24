@@ -2,7 +2,7 @@
 
 设计 + AI 方向的论文选题与研究仓库，多个 AI 协作维护（规则见 `AGENTS.md`）。
 
-当前课题：**从图像生成到方案交付：OPC（一人公司）驱动的乡村农产品包装设计实践**。
+当前课题：**DieLineDiff：面向折叠包装设计的印刷约束多面扩散生成方法**（DieLineDiff: Print-Constrained Multi-Face Diffusion for Foldable Packaging Design），以乡村农产品包装为测试场景。方案见 `docs/METHOD_PLAN.md`。
 
 ## 发给 Gemini 的指令（直接复制）
 
@@ -15,10 +15,20 @@
 
 网页版 Gemini 不能执行命令时：把 `tasks/01-gemini-literature-tree-opc-packaging.md` 和 findInnovation 的 `SKILL.md`、两个模板的内容一起粘贴给它，产出再由你或其他 AI 提交到本仓库。
 
+## 发给 Codex 的指令（任务 02，直接复制）
+
+```
+请先 clone 或 pull 仓库 https://github.com/Casey-sketch-cyber/ai-design.git ，
+阅读根目录的 AGENTS.md，然后完整阅读 docs/METHOD_PLAN.md，
+再执行 tasks/02-codex-dielinediff-s0-s1.md 里的任务（只做 S0 和 S1，做完就停）。
+必须能在 RTX 3090 24GB 上跑通。在分支 codex/dielinediff-s0-s1 上完成，推送并创建 PR，不要自己合并。全程用中文沟通。
+```
+
 ## 目录
 
 | 路径 | 内容 |
 | --- | --- |
 | `tasks/` | 给各个 AI 的任务书 |
+| `code/`、`third_party/` | 实验代码与第三方基线 |
 | `docs/` | 文献树、创新点评估、期刊调研、进度与决策 |
 | `literature/` | 检索记录与文献清单 |
