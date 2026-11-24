@@ -17,6 +17,9 @@ case "${1:-}" in
     *) printf 'Usage: %s [pilot|tune|full] [E01 settings]\n' "$0" >&2; exit 2 ;;
 esac
 config=code/configs/E01.yaml
+if [[ "$phase" == full || ( -z "$phase" && -f code/configs/E01.frozen.yaml ) ]]; then
+    config=code/configs/E01.frozen.yaml
+fi
 geometry="$AD_ROOT/outputs/geometry"
 args=("$@")
 for ((n=0; n<${#args[@]}; n++)); do
@@ -50,13 +53,13 @@ if [[ "$phase" == full ]]; then
     score_done="$score_dir/generation-finished"
     trap 'touch "$score_done"' EXIT
     OMP_NUM_THREADS=3 MKL_NUM_THREADS=3 OPENBLAS_NUM_THREADS=3 \
-        "$python" -m dielinediff.e01 measure --phase "$phase" --device cpu \
+        "$python" -m dielinediff.e01 measure --phase "$phase" --config "$config" --device cpu \
         --follow-until "$score_done" "$@" &
     scorer="$!"
 fi
 for method in "${method_list[@]}"; do
     if ! flock "$AD_ROOT/tmp/e01-gpu.lock" "$python" -m dielinediff.e01 generate \
-        --phase "$phase" --methods "$method" "$@"; then
+        --phase "$phase" --config "$config" --methods "$method" "$@"; then
         printf 'Generation failed for %s. Inspect the recorded error and resume.\n' "$method" >&2
         if [[ "$method" != b4 ]]; then
             status=1
@@ -68,7 +71,7 @@ if [[ "$phase" == full ]]; then
     if ! wait "$scorer"; then
         status=1
     fi
-elif ! flock "$AD_ROOT/tmp/e01-gpu.lock" "$python" -m dielinediff.e01 measure --phase "$phase" "$@"; then
+elif ! flock "$AD_ROOT/tmp/e01-gpu.lock" "$python" -m dielinediff.e01 measure --phase "$phase" --config "$config" "$@"; then
     status=1
 fi
 exit "$status"
