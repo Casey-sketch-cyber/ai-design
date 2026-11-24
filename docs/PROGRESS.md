@@ -4,26 +4,47 @@
 
 ## 当前状态
 
-仓库刚建立。课题“从图像生成到方案交付：OPC 驱动的乡村农产品包装设计实践”处于选题调研阶段，等待 Gemini 完成任务 01（文献树、创新点、期刊调研）。
+Gemini 已针对 Claude 在 PR #1 中提出的全部 4 项必改意见与 2 项建议修改完成整改，在同一分支 `gemini/literature-tree-opc-packaging` 追加提交并推送，等待 Claude 复审合并。
 
 ## 待办
 
-- [ ] Gemini：任务 01，见 `tasks/01-gemini-literature-tree-opc-packaging.md`
 - [x] Claude：审查任务 01 的 PR #1（2026-11-24，退回）
-- [ ] Gemini：按 PR #1 审查意见修改：① 44 条仅凭检索摘录标为“已核对”，需逐条核对，查不到的 HSSC 2026 两篇从结论中删除；② 补 3D 纹理生成脉络（TexFusion、SyncMVD 等），DieLineDiff 改判为情况 2 并加对应基线；③ 说明 PackDieline-Syn 的监督信号，主方法优先免训练；④ 期刊表的预警和 On Hold 说法补出处
+- [x] Gemini：按 PR #1 审查意见完成 4 项必改与 2 项建议修改，并已在 PR #1 逐条回复
+- [ ] Claude：复审 PR #1 并决定是否合并
 - [x] 作者：已决定不招募专家或消费者，只用评价方案 A（2026-11-24）
+- [ ] 作者：确认单位对 MDPI / IEEE Access 的认定口径，以及是否启动 1 周最小验证实验（以 ECMA A20 折叠盒网格对比 SyncMVD / Paint3D 与免训练印刷硬约束同步原型）
 
 ## 已知问题
 
-- 
+- `literature/papers.csv` 中共有 5 篇标为 `verified=no`（2 篇未定位独立 DOI 的种子文献 + 3 篇 Elsevier 付费墙阻挡摘要的文献），均已单独标注且未作为核心论证依据；其余 102 篇均已核对官方摘要（`summary_source=abstract`）。
+- 公开数据集的国内网络拉取速度与 PKU PosterLayout 协议审批周期需在实验启动第一周实测。
+- `docs/JOURNALS.md` 中的 JIF 与中科院 2025 分区来自公开汇总数据，正式投稿前须在 Clarivate MJL 官网与本单位图书馆目录复核。
 
 ---
 
 ## 工作记录
 
+### 2026-11-24 · gemini · gemini/literature-tree-opc-packaging（PR #1 审查返修）
+- **完成**：
+  - 合并 `origin/main`（`8eb149a`），按 Claude 的 4 项必改与 2 项建议意见逐项整改：
+    1. **文献核对审计（消灭全部 `verified=yes` + `snippet`）**：逐条核查原 44 条 `snippet` 文献，其中 41 条已通过 OpenAlex / arXiv 官方页获取并核对完整摘要（升级为 `summary_source=abstract`）；3 篇 Elsevier 付费墙未能读取摘要原文的条目严格降为 `verified=no`。针对 Claude 点名标疑的 5 篇 2026 论文（*HSSC* `10.1057/s41599-026-08755-y`、`10.1057/s41599-026-06948-z`；*IEEE Access* `10.1109/access.2026.3723820`、`10.1109/access.2026.3730226`；*Mathematics* `10.3390/math14203759`），均已通过直接 DOI 跳转及 OpenAlex 官方摘要核实为真实已发表论文。
+    2. **补全 3D 网格纹理生成脉络并下调创新判断**：新增并核对 7 篇 3D 纹理生成里程碑官方摘要与 DOI（Text2Tex ICCV 2023、TexFusion ICCV 2023、Point-UV Diffusion ICCV 2023、SyncMVD SIGGRAPH Asia 2024、Meta 3D TextureGen 2024、RoCoTex 2024、MVPaint CVPR 2025），`papers.csv` 增至 107 篇（102 篇 `verified=yes, abstract`，5 篇 `verified=no`）。在 `literature-tree-v1.md` 与 `INNOVATION.md` 中将 `DieLineDiff` 从情况 3 回调为**情况 2**，将“直接把 TexFusion / SyncMVD / Paint3D / MVPaint 跑在以刀版为 UV 的纸盒 3D 网格上”列为必选基线，并将贡献边界精准收束至 6 项印刷硬约束（粘口/插舌不可见面、3 mm 出血与安全区、每面文字物理朝上、无光照平稿、CMYK 色域、密集中文小字法定标签）。
+    3. **厘清 `PackDieline-Syn` 监督信号并确立免训练主方法**：明确指出 CC0 贴图合成图不能作为包装排版训练监督目标，将 `PackDieline-Syn` 明确定位为**开源客观评测基准**；在 `INNOVATION.md` 中将**免训练的推理期同步与印刷硬约束引导（`DieLineDiff-TF`）**设为保底主方法，仅将基于真实商品数据（Open Food Facts / RPC / ABO / Crello / AnyWord-3M）监督的轻量训练适配器列为 2 周限时加分项。
+    4. **补齐期刊表风险出处链接**：在 `docs/JOURNALS.md` 中为中科院 2025 预警名单（5 本）、*IEEE Access* 预警史（修正为 2020 年试行版中档、2021 年起移出）与 *Heliyon* On Hold 状态（2024-09-30 列入、2026-08-07 Retraction Watch 报道解除）全部附上已实测 HTTP 200 的可点击来源链接。
+    5. **中性化措辞与场景定位校准**：通篇清理“极高”“100%”“根治”“铁证”等夸大表述，统一将乡村农产品明确定位为深度学习包装设计方法的主要测试场景。
+- **未完成**：待 Claude 复审 PR #1 后合并，随后进入最小验证实验阶段。
+
 ### 2026-11-24 · claude · main
 - **完成**：审查 PR #1（Gemini 任务 01），退回修改，意见见 PR 留言。
 - **注意 / 坑**：Gemini 最初从旧提交开分支，后来已自行合并修订版任务书。
+
+### 2026-11-24 · gemini · gemini/literature-tree-opc-packaging（修订版：深度学习做包装设计 + 纯客观指标 A 套 + 公开数据集）
+- **完成**：
+  - 合并 `origin/main`（`3bbc3d8`），按修订版任务书升级文献树、创新点、数据集调研（`docs/DATASETS.md`）、期刊表与 100 篇文献清单。
+
+### 2026-11-24 · gemini · gemini/literature-tree-opc-packaging（初版，按 OPC 交付方向完成）
+- **完成**：
+  - 按 `findInnovation` 的 `SKILL.md` 及模板完成首版文献树、创新点评估、期刊调研与 64 篇文献清单，提交 PR #1。
 
 ### 2026-11-24 · claude · main
 - **完成**：建立仓库结构（AGENTS.md、GEMINI.md、docs/、tasks/），下达任务 01。
