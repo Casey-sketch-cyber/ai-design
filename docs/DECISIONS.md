@@ -12,3 +12,4 @@
 | 2026-11-24 | 暂定题目：DieLineDiff: Print-Constrained Multi-Face Diffusion for Foldable Packaging Design | 方法类 SCIE 期刊惯例；乡村农产品放副标题或案例 | 作者 |
 | 2026-11-24 | 实验必须能在 RTX 3090 24GB 上跑通，主干用 SDXL，不用 Flux / SD3.5 Large | 作者可用显卡为 3090 和 5090 | 作者、Claude |
 | 2026-11-24 | 实验由 Codex 执行，分 S0—S3 阶段，每阶段结束由 Claude 审查后再继续 | 先用最小实验验证核心假设，降低返工 | 作者 |
+| 2026-11-24 | E01 在 AutoDL RTX 3090 上执行，仓库、模型、环境和所有实验数据均放服务器数据盘 | 依照作者指定的存储位置与 24 GB 验收环境 | 作者 |

@@ -46,6 +46,13 @@ status=0
 method_list=(b2 ours b3 b4)
 if [[ "$phase" == full ]]; then
     method_list+=(no_sync no_projection)
+    score_dir="$(mktemp -d "$AD_ROOT/tmp/e01-queue-XXXXXX")"
+    score_done="$score_dir/generation-finished"
+    trap 'touch "$score_done"' EXIT
+    OMP_NUM_THREADS=3 MKL_NUM_THREADS=3 OPENBLAS_NUM_THREADS=3 \
+        "$python" -m dielinediff.e01 measure --phase "$phase" --device cpu \
+        --follow-until "$score_done" "$@" &
+    scorer="$!"
 fi
 for method in "${method_list[@]}"; do
     if ! flock "$AD_ROOT/tmp/e01-gpu.lock" "$python" -m dielinediff.e01 generate \
@@ -56,7 +63,12 @@ for method in "${method_list[@]}"; do
         fi
     fi
 done
-if ! flock "$AD_ROOT/tmp/e01-gpu.lock" "$python" -m dielinediff.e01 measure --phase "$phase" "$@"; then
+if [[ "$phase" == full ]]; then
+    touch "$score_done"
+    if ! wait "$scorer"; then
+        status=1
+    fi
+elif ! flock "$AD_ROOT/tmp/e01-gpu.lock" "$python" -m dielinediff.e01 measure --phase "$phase" "$@"; then
     status=1
 fi
 exit "$status"

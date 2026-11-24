@@ -24,7 +24,7 @@ def read_json(path):
 
 
 def write_json(path, data):
-    temporary = path.with_suffix(".tmp")
+    temporary = path.with_suffix(f".{os.getpid()}.tmp")
     temporary.write_text(json.dumps(data, ensure_ascii=False, indent=2), encoding="utf-8")
     temporary.replace(path)
 
@@ -149,6 +149,7 @@ def main():
     parser.add_argument("--methods", nargs="+", choices=METHODS)
     parser.add_argument("--device", default="cuda")
     parser.add_argument("--learned", nargs="*", default=["lpips", "clip", "hps", "ocr"])
+    parser.add_argument("--follow-until", type=Path, help="Wait for generation to write this marker")
     args = parser.parse_args()
 
     config_bytes = args.config.read_bytes()
@@ -194,22 +195,34 @@ def main():
 
     from .metrics import Evaluator
 
-    evaluator = Evaluator(args.geometry, args.lut, device=args.device, learned=tuple(args.learned))
-    for method, brief, seed, output in jobs:
-        if not output.is_file() or not output.with_suffix(".run.json").is_file():
-            continue
-        target = output.with_suffix(".metrics.json")
-        if target.is_file():
-            existing = read_json(target)
-            if existing.get("learned_backends") == sorted(args.learned):
-                continue
-        run = read_json(output.with_suffix(".run.json"))
-        metrics = evaluator.measure(
-            output, prompt=prompt_for(brief), elapsed_seconds=run["elapsed_seconds"],
-            peak_memory_mib=run["peak_memory_mib"],
-        )
-        write_json(target, {**metrics, "learned_backends": sorted(args.learned)})
-        print(f"Measured {method} {brief['id']} {seed}", flush=True)
+    with Evaluator(args.geometry, args.lut, device=args.device, learned=tuple(args.learned)) as evaluator:
+        pending = list(jobs)
+        while pending:
+            generation_finished = args.follow_until is None or args.follow_until.is_file()
+            waiting = []
+            for method, brief, seed, output in pending:
+                if not output.is_file() or not output.with_suffix(".run.json").is_file():
+                    waiting.append((method, brief, seed, output))
+                    continue
+                target = output.with_suffix(".metrics.json")
+                if target.is_file():
+                    existing = read_json(target)
+                    if existing.get("learned_backends") == sorted(args.learned):
+                        continue
+                run = read_json(output.with_suffix(".run.json"))
+                metrics = evaluator.measure(
+                    output, prompt=prompt_for(brief), elapsed_seconds=run["elapsed_seconds"],
+                    peak_memory_mib=run["peak_memory_mib"],
+                )
+                write_json(target, {**metrics, "learned_backends": sorted(args.learned)})
+                print(f"Measured {method} {brief['id']} {seed}", flush=True)
+            if len(waiting) != len(pending):
+                summarize_outputs(jobs, output_root)
+            if generation_finished:
+                break
+            pending = waiting
+            if pending:
+                time.sleep(5)
     summarize_outputs(jobs, output_root)
 
 
