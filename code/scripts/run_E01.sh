@@ -48,7 +48,7 @@ fi
 status=0
 method_list=(b2 ours b3 b4)
 if [[ "$phase" == full ]]; then
-    method_list+=(no_sync no_projection)
+    method_list=(b2 ours b3 no_sync no_projection b4)
     score_dir="$(mktemp -d "$AD_ROOT/tmp/e01-queue-XXXXXX")"
     score_done="$score_dir/generation-finished"
     trap 'touch "$score_done"' EXIT

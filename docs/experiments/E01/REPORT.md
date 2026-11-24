@@ -79,4 +79,4 @@ B2 与 Ours 使用 30 步 DDIM，基线沿用各自调度器，每次扩散调�
 
 AutoDL RTX 3090 24 GB，Ubuntu 22.04，驱动 595.71.05。主环境用 PyTorch 2.5.1 / CUDA 12.4、Diffusers 0.35.2 和 Transformers 4.56.2。ICC 为 ISO Coated v2 (ECI) / FOGRA39L，使用相对比色和黑场补偿构建 33³ LUT。使用与再分发条件及文件 SHA-256 见[指标说明](../../../code/dielinediff/metrics/README.md)。主要模型的上游修订和权重 SHA-256 见 `code/scripts/fetch_E01_models.py`。服务器下载时，使用经逐字节校验的公开镜像提供大文件。
 
-仓库位于数据盘 `/root/autodl-tmp/ai-design/repo`。`DIELINEDIFF_ROOT` 指定项目工作区，模型、临时文件、输出、环境和日志均在其子目录。环境准备后执行 `bash code/scripts/run_E01.sh pilot`。冻结后执行 `bash code/scripts/run_E01.sh` 复现完整合成与评估。生成图像及每张图对应的运行记录均可断点续跑。
+仓库位于数据盘 `/root/autodl-tmp/ai-design/repo`。`DIELINEDIFF_ROOT` 指定项目工作区，模型、临时文件、输出、环境和日志均在其子目录。主环境、权重、ICC 和指标通过 `bash code/scripts/setup_E01.sh` 准备。3D 基线的独立环境、仓库修订和模型缓存由 `code/scripts/setup_3d_baselines.sh` 准备。准备后运行 `bash code/scripts/run_E01.sh pilot`。冻结后，`bash code/scripts/run_E01.sh` 使用正式配置运行完整生成与评估。正式评测在一个 CPU 进程中增量评分，与单卡生成并行。生成和评分都可断点续跑。
