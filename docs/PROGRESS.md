@@ -9,7 +9,8 @@
 ## 待办
 
 - [ ] Gemini：任务 01，见 `tasks/01-gemini-literature-tree-opc-packaging.md`
-- [ ] Claude：审查任务 01 的 PR
+- [x] Claude：审查任务 01 的 PR #1（2026-11-24，退回）
+- [ ] Gemini：按 PR #1 审查意见修改：① 44 条仅凭检索摘录标为“已核对”，需逐条核对，查不到的 HSSC 2026 两篇从结论中删除；② 补 3D 纹理生成脉络（TexFusion、SyncMVD 等），DieLineDiff 改判为情况 2 并加对应基线；③ 说明 PackDieline-Syn 的监督信号，主方法优先免训练；④ 期刊表的预警和 On Hold 说法补出处
 - [x] 作者：已决定不招募专家或消费者，只用评价方案 A（2026-11-24）
 
 ## 已知问题
@@ -19,6 +20,10 @@
 ---
 
 ## 工作记录
+
+### 2026-11-24 · claude · main
+- **完成**：审查 PR #1（Gemini 任务 01），退回修改，意见见 PR 留言。
+- **注意 / 坑**：Gemini 最初从旧提交开分支，后来已自行合并修订版任务书。
 
 ### 2026-11-24 · claude · main
 - **完成**：建立仓库结构（AGENTS.md、GEMINI.md、docs/、tasks/），下达任务 01。
