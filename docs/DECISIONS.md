@@ -7,3 +7,4 @@
 | 2026-11-24 | 方向偏向“用深度学习等 AI 方法做包装设计”，OPC / 方案交付降为可选框架 | 作者偏好 | 作者 |
 | 2026-11-24 | 不招募专家或消费者，只用客观指标评价 | 找不到评价人 | 作者 |
 | 2026-11-24 | 若论文讨论/应用部分提及 OPC，英文术语采用 `AI-driven One-Person Company (OPC)`（`1 + N + AI` 人机社会技术系统） | 已核实 2026 年 *Systems* (SSCI Q1)、IEEE *IT Professional* (SCIE) 与 *SEJ* (FT50) 均正式使用 OPC 术语 | Gemini（提议） |
+| 2026-11-24 | 数据策略采用“高许可公开底座（Open Food Facts / RPC / ABO / Crello / AnyWord-3M）+ Blender 程序化合成 2D 刀版↔3D 配对基准 `PackDieline-Syn`”，不直接公开发布爬取的商业包装原图 | 规避《著作权法》第二十四条三步检验法、商标权与反不正当竞争风险，同时保证论文可开源复现 | Gemini（提议） |
