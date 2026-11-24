@@ -1,0 +1,7 @@
+{
+  "transformation": "flip_vertical",
+  "max_uv_difference": 2.9596892603400704e-08,
+  "raw_position_support_iou": 0.743504921736324,
+  "registered_position_support_iou": 1.0,
+  "raw_albedo_sha256": "bd6d1714f2987b3057cc3e5c72ec518fb31a3d451b2b6a590778fc9135d8f5d6"
+}

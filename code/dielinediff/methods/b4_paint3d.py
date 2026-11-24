@@ -61,6 +61,72 @@ def model_snapshot(cache, identifier):
     return path
 
 
+def corner_uvs(mesh):
+    """Return texture coordinates keyed by the geometric corners of each OBJ face."""
+    vertex_count = 0
+    coordinates = []
+    faces = []
+    for line in mesh.read_text(encoding="utf-8").splitlines():
+        fields = line.split("#", 1)[0].split()
+        if not fields:
+            continue
+        if fields[0] == "v":
+            vertex_count += 1
+        elif fields[0] == "vt":
+            coordinates.append(tuple(map(float, fields[1:3])))
+        elif fields[0] == "f":
+            corners = []
+            for field in fields[1:]:
+                vertex, uv, *_ = field.split("/")
+                vertex = int(vertex)
+                vertex = vertex_count + vertex + 1 if vertex < 0 else vertex
+                uv = int(uv)
+                corners.append((vertex, *coordinates[uv - 1 if uv > 0 else uv]))
+            faces.append(sorted(corners))
+    if not faces:
+        raise ValueError(f"No textured OBJ faces in {mesh}")
+    return sorted(faces, key=lambda face: tuple(corner[0] for corner in face))
+
+
+def atlas_registration(mesh, native_mesh):
+    original = corner_uvs(mesh)
+    native = corner_uvs(native_mesh)
+    original_corners = [tuple(corner[0] for corner in face) for face in original]
+    native_corners = [tuple(corner[0] for corner in face) for face in native]
+    if original_corners != native_corners:
+        raise ValueError("Paint3D changed the geometry of the input OBJ faces.")
+    aligned = [
+        (source, target)
+        for source_face, target_face in zip(original, native)
+        for source, target in zip(source_face, target_face)
+    ]
+    # Kaolin versions may import OBJ V as 1-V. Determine the actual coordinate
+    # convention from Paint3D's stage-one mesh instead of assuming a backend version.
+    for flip_v in (False, True):
+        error = max(
+            max(abs(source[1] - target[1]), abs(source[2] - (1 - target[2] if flip_v else target[2])))
+            for source, target in aligned
+        )
+        if error <= 1e-6:
+            return flip_v, error
+    raise ValueError("Paint3D's atlas cannot be registered to the supplied dieline UVs.")
+
+
+def save_registered_atlas(raw_atlas, mesh, native_mesh, width, height, output):
+    from PIL import Image
+
+    flip_v, error = atlas_registration(mesh, native_mesh)
+    with Image.open(raw_atlas) as atlas:
+        image = atlas.convert("RGB")
+        if flip_v:
+            image = image.transpose(Image.Transpose.FLIP_TOP_BOTTOM)
+        resized = image.resize((width, height), Image.Resampling.BILINEAR)
+        temporary = output.with_suffix(".tmp.png")
+        resized.save(temporary)
+        temporary.replace(output)
+    return {"transformation": "flip_vertical" if flip_v else "identity", "max_uv_difference": error}
+
+
 def run(args):
     workspace = args.workspace.resolve()
     source = workspace / "third_party" / "Paint3D"
@@ -102,7 +168,6 @@ def run(args):
                            StableDiffusionControlNetInpaintPipeline,
                            StableDiffusionControlNetPipeline)
     from omegaconf import OmegaConf
-    from PIL import Image
     import pipeline_paint3d_stage1 as stage1
     import pipeline_paint3d_stage2 as stage2
 
@@ -161,11 +226,9 @@ def run(args):
     elapsed = time.monotonic() - started
     peak = torch.cuda.max_memory_allocated() / 1024**2
     final_atlas = refined_out / "tile_res_0" / "albedo.png"
-    with Image.open(final_atlas) as atlas:
-        resized = atlas.convert("RGB").resize((args.width, args.height), Image.Resampling.BILINEAR)
-        temporary = output.with_suffix(".tmp.png")
-        resized.save(temporary)
-        temporary.replace(output)
+    native_mesh = coarse_out / "res-0" / "mesh.obj"
+    registration = save_registered_atlas(final_atlas, mesh, native_mesh, args.width, args.height, output)
+    (logs / "atlas_registration.json").write_text(json.dumps(registration) + "\n", encoding="utf-8")
     data = {"elapsed_seconds": elapsed, "peak_memory_mib": peak}
     output.with_suffix(".run.json").write_text(json.dumps(data) + "\n", encoding="utf-8")
     print(json.dumps({"output": str(output), **data}), flush=True)

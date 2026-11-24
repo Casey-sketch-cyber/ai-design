@@ -48,7 +48,7 @@ B2 与 Ours 使用 30 步 DDIM，基线沿用各自调度器，每次扩散调�
 ### 第三方基线
 
 - SyncMVD 使用官方提交 `faa95621d220d7327847a994cd380608c04af5ab`。使用原版 SD 1.5、Depth ControlNet、8 个方位与 2 个顶视角，按原版同步组运行 30 步。保留六面 OBJ UV，原生 1024² 图集重采样至 1024 × 1160。输出按官方烘焙原样评分，粘口和出血不做补救。首盒 GPU 诊断样本（E01-001、种子 17）用时 117.08 秒，PyTorch 峰值分配 4.89 GiB。导出网格的 24 个 UV 坐标与输入的最大差异小于 `4.4e-7`。[官方代码](https://github.com/LIU-Yuxin/SyncMVD/tree/faa95621d220d7327847a994cd380608c04af5ab)
-- Paint3D 使用官方提交 `d5545d38db6aaf78efc563269f70177688a4218e`。独立 PyTorch 2.5.1 / CUDA 12.4 / Kaolin 0.17 环境通过 3090 两阶段完整推理。首盒 GPU 诊断样本（E01-001、种子 17）用时 109.14 秒，PyTorch 峰值分配 4.13 GiB。该方法的耗时包含两阶段模型加载。各公开权重版本见 `code/dielinediff/methods/b4_paint3d.py`。[官方代码](https://github.com/OpenTexture/Paint3D/tree/d5545d38db6aaf78efc563269f70177688a4218e)
+- Paint3D 使用官方提交 `d5545d38db6aaf78efc563269f70177688a4218e`。独立 PyTorch 2.5.1 / CUDA 12.4 / Kaolin 0.17 环境通过 3090 两阶段完整推理。首盒 GPU 诊断样本（E01-001、种子 17）用时 109.14 秒，PyTorch 峰值分配 4.13 GiB。该方法的耗时包含两阶段模型加载。Kaolin 0.17 的 OBJ 导入翻转了 V，按阶段一导出的实际 UV 配准图集，保留官方原图。验证中可见面 UV 支撑 IoU 由 0.7435 升至 1.0000。[配准记录](paint3d-atlas-registration.json)。各公开权重版本见 `code/dielinediff/methods/b4_paint3d.py`。[官方代码](https://github.com/OpenTexture/Paint3D/tree/d5545d38db6aaf78efc563269f70177688a4218e)
 
 ### 原型与方案的实现差异
 
