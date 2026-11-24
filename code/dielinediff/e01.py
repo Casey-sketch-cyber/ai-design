@@ -128,7 +128,7 @@ def summarize_outputs(jobs, root):
     extra = sorted({key for row in rows for key in row} - set(meta + known_metrics))
     temp = path.with_suffix(".tmp")
     with temp.open("w", encoding="utf-8", newline="") as stream:
-        writer = csv.DictWriter(stream, fieldnames=(*meta, *known_metrics, *extra))
+        writer = csv.DictWriter(stream, fieldnames=(*meta, *known_metrics, *extra), lineterminator="\n")
         writer.writeheader()
         writer.writerows(rows)
     temp.replace(path)

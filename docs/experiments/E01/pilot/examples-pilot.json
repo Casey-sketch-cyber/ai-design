@@ -1,0 +1,27 @@
+{
+  "phase": "pilot",
+  "seed": 42,
+  "chosen_briefs": [
+    "E01-001",
+    "E01-002",
+    "E01-003"
+  ],
+  "figures": [
+    "example-pilot-E01-001-seed42.jpg",
+    "example-pilot-E01-002-seed42.jpg",
+    "example-pilot-E01-003-seed42.jpg"
+  ],
+  "expected_figure_count": 3,
+  "common_brief_count": 5,
+  "included_methods": [
+    "b2",
+    "b3",
+    "ours"
+  ],
+  "missing_methods": [],
+  "available_brief_counts": {
+    "b2": 5,
+    "b3": 5,
+    "ours": 5
+  }
+}
