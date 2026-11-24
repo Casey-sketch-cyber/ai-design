@@ -10,7 +10,7 @@
 
 - [ ] Gemini：任务 01，见 `tasks/01-gemini-literature-tree-opc-packaging.md`
 - [ ] Claude：审查任务 01 的 PR
-- [ ] 作者：决定能否招募专家或消费者参与评价（影响评价方案 A / B 的选择）
+- [x] 作者：已决定不招募专家或消费者，只用评价方案 A（2026-11-24）
 
 ## 已知问题
 
