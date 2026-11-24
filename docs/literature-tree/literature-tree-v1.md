@@ -1,47 +1,47 @@
-# 深度学习驱动的包装设计（面向乡村农产品场景）文献树
+# 深度学习驱动的包装设计文献树（以乡村农产品为测试场景）
 
-- 版本：v1（Gemini 起草并按 2026-11-24 修订版任务书全面重构）
-- 状态：草稿（待 Claude 核查）
-- 检索截至：2026-11-24。检索记录见 [`literature/search-log.md`](../../literature/search-log.md)（共 34 组中英文与顶会/数据集/期刊定向检索），完整文献清单见 [`literature/papers.csv`](../../literature/papers.csv)（共 100 篇，其中已核对 98 篇，未核对 2 篇单独标出），公开数据集与自采版权分析专报见 [`docs/DATASETS.md`](../DATASETS.md)。
+- 版本：v1（Gemini 起草，2026-11-24；已按作者修订方向及 PR #1 审查意见完成二轮修订）
+- 状态：草稿（待 Claude 复核）
+- 检索截至：2026-11-24。检索记录见 [`literature/search-log.md`](../../literature/search-log.md)（共 37 组检索与核查），完整文献清单见 [`literature/papers.csv`](../../literature/papers.csv)（共 107 篇：已核对官方摘要 102 篇 `verified=yes, summary_source=abstract`；未核对或仅见元数据 5 篇单独标 `verified=no`），公开数据集与版权分析专报见 [`docs/DATASETS.md`](../DATASETS.md)。
 
-**核心问题结论**：按作者 2026-11-24 修订方向——转向**“用人工智能（深度学习等）做包装设计”**（以 AI 方法本身为核心贡献，OPC/方案交付降为可选应用框架）且**只采用纯客观评价指标（方案 A，不招募专家与消费者）**——本方向**完全可以发表开放获取（OA）的 SCIE 期刊论文**，而且比偏主观问卷的传统设计论文**更契合 SCIE 工程/计算机综合期刊对“可复现定量对比 + 模块消融实验”的审稿标准**。文献树表明：计算机视觉顶会已经较好解决了单张自然图像生成（LDM/SD3）、单面电商海报图文版式（CGL-GAN/PosterLayout/PosterLLaVA）和单面商品大标题渲染（AnyText2/PosterMaker），但**在真实包装设计上仍有五大未解决的硬核技术难点**——尤其是**① 参数化刀版展开图与 3D 多面折痕连续性对应**、**② 包装密集中文文字（艺术大字 + 法规小字）的零差错混合渲染**与**③ 跨 SKU 品牌元素/主色板一致性及印刷色域约束**。最值得做的深度学习方法切入点是在开源扩散底座（SDXL/Flux/SD3）上，用单卡 RTX 5090 (32 GB) 提出**“刀版拓扑感知的多面一致条件扩散 + 中文双轨图文解耦与印前引导架构（PackDiff / DieLineDiff）”**，配套公开数据集（Open Food Facts / RPC / ABO / Crello / AnyWord-3M）与自建可开源合成 2D 刀版—3D 渲染基准，用 **FID / LPIPS / HPS v2 / VQAScore / OCR Acc & 1-NED / 版式 mIoU & Overlap / 跨折线缝隙 PSNR / 3D 重投影 SSIM / CMYK 溢出率 & GB 7718-2025 规则通过率**全套客观指标做 SOTA 基线对比与消融实验。首选纯 OA SCIE 期刊为 ***IEEE Access***、***Applied Sciences***、***Scientific Reports***、***PLOS ONE***、***Electronics*** 与 ***Symmetry***；主要风险是若仅简单微调一个 LoRA 或堆砌现成工具而无针对包装技术难点的架构/损失/引导创新与严谨消融，将被判定为“简单 A+B 应用”而拒稿。
+**核心问题结论**：按作者 2026-11-24 修订方向——以**深度学习等 AI 方法做包装设计**为核心贡献（乡村农产品作为主要测试场景，OPC / 方案交付降为可选应用或讨论框架），且**仅使用纯客观评价指标（方案 A，不招募专家与消费者）**——本方向**可以发表开放获取（OA）的 SCIE 期刊论文**，并且纯客观指标 + SOTA 基线对比 + 模块消融实验的论证形式较契合工程与计算机综合类 SCIE 期刊的审稿规范。不过，经补全 **3D 网格纹理生成（跨视角、跨接缝一致性）**脉络（TEXTure、Text2Tex、TexFusion、Point-UV Diffusion、Paint3D、SyncMVD、Meta 3D TextureGen、RoCoTex、MVPaint）后必须客观承认：**折叠纸盒本质上是简单 3D 网格，其 UV 展开图即刀版，因此跨视角无缝贴图本身属于情况 2（别处已有较成熟解法），而非情况 3 空白**。真正尚未被现有 3D 纹理同步方法覆盖、且能构成可辩护方法贡献的空白，集中在**工业印刷与包装硬约束**：① 3D 外视角不可见的**粘口、插舌与防尘翼**处理；② **3 mm 出血线与模切/压痕安全区**约束；③ 各折叠面上的**文字物理正向朝上**排布；④ **无光照烘焙的平面印刷稿（albedo-only）**；⑤ **CMYK 印刷色域约束**；⑥ **密集中文小字法定标签（GB 7718-2025 / GB 28050-2025）**。最务实的深度学习主方法应采用**免训练的推理期同步与印刷硬约束引导**（在冻结扩散主干上结合刀版 UV 潜在同步、不可见面/出血安全区掩码、分面正向对齐、中文双轨文字解耦与 CMYK 软色域引导），以乡村农产品多品类折叠盒为测试场景，在公开数据底座与自建评测基准上完成多基线（含直接运行在纸盒网格上的 TexFusion / SyncMVD / Paint3D / MVPaint）定量对比与消融实验。首选纯 OA SCIE 期刊为 ***IEEE Access***、***Applied Sciences***、***Scientific Reports***、***PLOS ONE***、***Electronics*** 与 ***Symmetry***。
 
 ---
 
 ## 怎么读
 
-- **方法来源**：遵循彭思达的科研选题与领域视野方法（[learning_research](https://github.com/pengsida/learning_research)、[选题课件](https://pengsida.net/files/research_topic_selection.pdf)）与 `findInnovation` 模板：以时间线梳理技术演进，用“难点—解法树”定位技术空白，用“四种情况”判断选题创新空间。
-- **脉络权重调整（按 2026-11-24 作者决策）**：
-  - **时间线一（绝对主线，45 篇已核对）**：深度学习 / 生成式 AI 用于包装、平面、版式、文字渲染、品牌一致性与 3D 多面贴图（深度追踪 CVPR / ICCV / ECCV / SIGGRAPH / NeurIPS / ICLR / IJCAI / IEEE TMM 里程碑）。
-  - **时间线二（应用场景，18 篇）**：农产品包装设计与乡村振兴（明确乡村包装的约束特征与低质文献警示）。
-  - **时间线三（可选框架，14 篇）**：OPC / 一人公司与人机协作设计（作为论文讨论或落地部署框架，不再占核心技术篇幅）。
-  - **时间线四（核心评测与数据，23 篇 + 14 个公开数据集）**：**纯客观无人工指标体系（方案 A）**与可用公开数据集（详表见 [`docs/DATASETS.md`](../DATASETS.md)）。
-- **核对声明**：凡带可点开 DOI 链接的 98 篇文献均已通过 OpenAlex / Crossref API 核实标题、作者、年份与发表处；2 篇未能核实原文的种子文献单独标注 `verified=no`。
+- **方法来源**：遵循彭思达的科研选题与领域视野方法（[learning_research](https://github.com/pengsida/learning_research)、[选题课件](https://pengsida.net/files/research_topic_selection.pdf)）与 `findInnovation` 模板：按时间线梳理技术演变，提炼“难点—解法树”，再用“四种情况”审慎界定创新空间。
+- **脉络结构（四条，以脉络一为核心主线）**：
+  - **时间线一（核心主线，52 篇已核对）**：深度学习用于包装、平面版式、中文文字渲染、品牌风格/主体控制，以及 **3D 网格跨视角/跨接缝纹理生成**（追踪 CVPR / ICCV / ECCV / SIGGRAPH / SIGGRAPH Asia / NeurIPS / ICLR / IJCAI / IEEE TMM 里程碑）。
+  - **时间线二（测试场景背景，15 篇已核对）**：农产品包装与乡村振兴（阐明乡村农产品作为强约束测试场景的价值，以及低质期刊扎堆风险）。
+  - **时间线三（可选讨论框架，13 篇已核对）**：OPC / 一人公司与人机协作设计（作为单卡轻量化推理的落地应用讨论背景）。
+  - **时间线四（客观评测与公开数据，22 篇已核对 + 14 个公开数据集）**：零人类被试的纯客观指标体系（方案 A）与公开数据集（详表见 [`docs/DATASETS.md`](../DATASETS.md)）。
+- **核对规则（严格执行）**：`literature/papers.csv` 中所有标 `verified=yes` 的 102 篇文献均已获取并核对官方页面或 OpenAlex / arXiv 官方摘要（`summary_source=abstract`），**不存在仅凭检索摘录标 `verified=yes` 的条目**；未能打开摘要原文的 5 篇（2 篇未定位原文的种子文献 + 3 篇付费墙阻挡摘要的 Elsevier 文献）均单独标为 `verified=no`，不作为核心方法依据。
 
 ---
 
-## 初步假设（H1—H4）检验结论（聚焦：深度学习方法论文能否成立）
+## 初步假设（H1—H4）检验结论（归结至深度学习方法论文可行性）
 
 | 假设 | 结论 | 核心依据与对“深度学习方法论文”的启示 |
 | --- | --- | --- |
-| **H1（交付与技术缺口）**：现有“AIGC + 包装设计”多停在出图与审美评价，很少解决刀版、印刷、中文文字、法规、条码与品牌一致性 | **高度成立（构成 DL 方法论文的核心问题源）** | 现有包装应用 SCI/SSCI 论文（Gao & Li 2025 *J. Eng. Des.*; Song & Bai 2025 *Applied Sciences*; Zhao et al. 2026 *HSSC*; Liu et al. 2026 *IEEE Access*）全部停留在单面概念图或商用 Midjourney 提示词调用；而 CV 顶会虽有电商海报生成（PosterMaker CVPR 2025）与 3D 贴图扩散（Paint3D CVPR 2024、MV-Adapter ICCV 2025），但**尚未解决工业折叠包装特有的“刚性参数化刀版多面拓扑 + 中文密集小字零错渲染 + CMYK/出血印前约束 + 多 SKU 品牌一致”联合建模问题**。**结论：深度学习方法论文完全成立，核心贡献应落在针对这些技术难点的模型结构/条件引导/解耦合成机制上。** |
-| **H2（组织形态：OPC）**：现有研究少以“一人 + 多智能体整单交付”为研究对象 | **部分成立（按作者决策降为可选应用/讨论框架）** | 2026 年已有 *Systems* (`10.3390/systems14080994`)、IEEE *IT Professional* (`10.1109/mitp.2026.3694520`) 与 *SEJ* (`10.1002/sej.70067`) 确立 `One-Person Company (OPC)`（`1+N+AI`）学术概念。若以深度学习方法为主线，OPC 不宜喧宾夺主，最合适的位置是作为 **Discussion / Deployment Case（轻量化单卡 5090 推理如何支撑单人设计师低成本服务县域农产品包装）**，放大方法论文的实用价值。 |
-| **H3（场景价值）**：乡村农产品预算低、品类碎、缺设计资源 | **成立（决定论文的类别条件与基准构造场景）** | 乡村农产品（茶、粮油、果干、蜂蜜、杂粮等）高频使用标准折叠纸盒/自立袋/罐贴，同时受 **GB 7718-2025 & GB 28050-2025**（2027-03-16 正式强制实施）强中文标签约束，是检验深度学习方法“按产品类别控制风格 + 中文文字零错 + 刀版/印前合规”的理想高难测试场（challenging cases）。 |
-| **H4（低质风险）**：“AI + 农产品包装”已有不少弱刊论文，简单出图难进 SCI | **高度成立（警示必须做扎实的方法对比与消融）** | 7 篇种子文献中，2 篇发在已被 Scopus 剔除的弱刊（*AMNS* 2024、*JISEM* 2024），其中 Songyong Hu (2024) 虽题含 Deep Learning 实为传统 HSV/灰度共生矩阵浅层特征。要发高认可度 OA SCIE，**绝不能只做“微调一个 LoRA + 展示几张效果图”**，必须有明确的技术痛点定义、架构/损失/条件机制设计、公开/开源合成基准上的多基线定量对比与消融实验。 |
+| **H1（交付与技术缺口）**：现有“AIGC + 包装设计”多停在出图与审美评价，很少处理刀版、印刷、中文文字、法规、条码与品牌一致性 | **成立（但需精确界定与 3D 纹理生成工作的边界）** | 现有包装应用 SCI/SSCI 论文（Gao & Li 2025 *J. Eng. Des.*; Song & Bai 2025 *Applied Sciences*; Liu et al. 2026 *IEEE Access*; Zhao et al. 2026 *HSSC*）普遍停留在单面概念图或提示词调用。另一方面，CV/图形学顶会已发展出较成熟的 **3D 网格跨视角无缝纹理同步方法**（TexFusion ICCV 2023、SyncMVD SIGGRAPH Asia 2024、MVPaint CVPR 2025）和单面电商海报中文大字生成（PosterMaker CVPR 2025）。**因此，深度学习方法论文能够成立，但贡献点不能泛泛地写成“解决多面无缝贴图”，而必须精准落在现有 3D 纹理方法未覆盖的印刷与包装硬约束上（粘口/插舌等不可见面、出血与安全区、分面文字正向朝上、无光照平面稿、CMYK 色域、背面密集中文小字法规排版）。** |
+| **H2（组织形态：OPC）**：现有研究少以“一人 + 多智能体整单交付”为研究对象 | **部分成立（按作者决策降为可选讨论框架）** | 2026 年已有 *Systems* (`10.3390/systems14080994`)、IEEE *IT Professional* (`10.1109/mitp.2026.3694520`) 与 *SEJ* (`10.1002/sej.70067`) 正式使用 `One-Person Company (OPC)`。在深度学习方法论文中，OPC 适合放在 Discussion 中说明“单卡 RTX 5090 免训练推理如何降低小微设计与独立设计师的使用门槛”，不喧宾夺主。 |
+| **H3（场景价值）**：乡村农产品预算低、品类碎、缺设计资源 | **成立（适合作为高约束测试场景）** | 乡村农产品（茶叶、杂粮、果干、蜂蜜等）多采用标准折叠纸盒、自立袋与罐贴，且受 **GB 7718-2025 & GB 28050-2025**（2027-03-16 正式强制实施）强中文标签规范约束，可为深度学习包装方法提供清晰、具挑战性的公开测试场景。 |
+| **H4（低质风险）**：“AI + 农产品包装”已有不少低影响力论文，简单出图难进 SCI | **成立** | 7 篇种子文献中有 2 篇发在已被 Scopus 剔除的期刊（*AMNS* 2024、*JISEM* 2024），其中 Songyong Hu (2024) 仅用传统 HSV/灰度共生矩阵特征分析却冠名 Deep Learning。深度学习方法论文必须包含清晰的约束建模机制、强基线（含 TexFusion/SyncMVD/PosterMaker/ControlNet）定量对比与消融实验，避免沦为简单工具拼接。 |
 
 ---
 
 ## 长远目标与路线图
 
-**长远目标**：构建面向真实工业制造与商业流通的**结构感知、文字精确、风格可控、印前可生产的深度学习包装生成范式与客观评测基准**，以单卡可部署的轻量化开源模型赋能乡村农产品与小微品牌包装设计。
+**长远目标**：发展面向工业制造与商业流通的**可印刷、强约束、高文字精度的深度学习包装生成方法与开源客观评测基准**，并以乡村农产品包装作为典型测试场景验证其在小微品牌中的实用价值。
 
 | 里程碑任务 | 内容 | 现状 | 判断 |
 | --- | --- | --- | --- |
-| **M0：通用文生图与风格微调** | 用扩散模型 + LoRA/ControlNet 生成单面包装概念图 | **已做到**（LDM / SD3 / ControlNet / IP-Adapter 已成通用基础） | 已做到（不可作主贡献） |
-| **M1：二维单面电商海报与文字渲染** | 内容感知避让主体排版 + 单面中英文视觉标题准确渲染 | **已较好解决**（CGL-GAN / PosterLayout / AnyText2 / Glyph-ByT5-v2 / PosterMaker CVPR 2025 / PosterLLaVA IEEE TMM 2026） | 已有强基线（包装需向多面与密集小字突破） |
-| **M2：包装专用五大技术难点联合攻关** | ① 刀版展开图与 3D 多面折痕连续性对应；② 中文视觉标题 + 密集法规小字零错混合生成；③ 跨 SKU 品牌 Logo/色板一致性；④ 按农产品类别与文化风格解耦控制；⑤ CMYK/出血/300DPI 可印刷性引导 | **未解决 / 高度割裂**（仅在远域 3D 网格贴图 Paint3D/MV-Adapter 或 2D 透明图层 LayerDiffusion 有局部前置组件） | **空白，最值得做（深度学习方法主贡献）** |
-| **M3：零人工纯客观包装生成评测基准与开源数据集** | 基于公开数据 + 程序化合成 2D 刀版↔3D 渲染对构建开源 Benchmark，并用纯客观多维指标体系验证方法与消融 | **未见**（现有仅有 2D 海报基准 PKU PosterLayout/Crello 或 3D 通用物块 ABO，无包装刀版—文字—合规配对基准） | **空白，值得做（与 M2 耦合直接支撑无被试 SCIE 论文）** |
-| **M4（可选延展）：单卡轻量化推理与 OPC 落地框架** | 将 M2 模型封装为单卡 RTX 5090 可运行的轻量工作流服务乡村农产品小微交付 | **待验证** | 作为论文应用章节或后续工程扩展 |
+| **M0：单面包装概念图生成** | 扩散模型 + LoRA/ControlNet 生成单面效果图 | **已做到** | 已做到，不作为主贡献 |
+| **M1：单面电商海报排版与大标题中文渲染** | 主体避让版式 + 单面中英文标题准确渲染 | **较成熟**（CGL-GAN / PosterLayout / AnyText2 / PosterMaker CVPR 2025 / PosterLLaVA IEEE TMM 2026） | 已有强基线 |
+| **M2：3D 网格跨视角无缝纹理合成** | 在共享潜空间或纹理域同步多视角去噪，消除一般 3D 网格接缝 | **较成熟**（Text2Tex / TexFusion ICCV 2023 / Point-UV ICCV 2023 / Paint3D CVPR 2024 / SyncMVD SIGGRAPH Asia 2024 / MVPaint CVPR 2025） | 别处已有成熟解法（**必须纳入基线对比**） |
+| **M3：印刷硬约束下的刀版包装生成与中文双轨解耦** | 在刀版 UV 展开图上同时满足：不可见面（粘口/插舌）留白、出血与安全区、分面文字正向朝上、无光照平面印刷稿、CMYK 色域约束、以及正面艺术字 + 背面密集中文法定标签双轨合成 | **未见系统解法**（现有 3D 纹理同步方法与 2D 海报方法均未联合处理上述印刷与法规约束） | **值得做（情况 2，核心方法切入点）** |
+| **M4：零人工纯客观包装生成评测基准** | 基于高许可公开数据集与程序化合成标准折叠盒型构建开源评测集，以纯客观几何/OCR/印前/偏好代理指标做基线与消融 | **空白** | **值得做（与 M3 同步作为论文核心产出）** |
 
 ---
 
@@ -49,93 +49,92 @@
 
 | 问题 | 回答 | 依据 |
 | --- | --- | --- |
-| **里程碑论文有哪些** | ① 扩散与控制基石：LDM (CVPR 2022)、ControlNet (ICCV 2023)、SD3/Rectified Flow (ICML 2024)、Diffusion-4K (CVPR 2025)；② 版式与电商海报：Content-aware Layout (TOG 2019)、CanvasVAE (ICCV 2021)、CGL-GAN (IJCAI 2022)、PosterLayout/DS-GAN (CVPR 2023)、LayoutDM (CVPR 2023)、LayoutGPT (NeurIPS 2023)、COLE (2023)、LayerDiffusion (SIGGRAPH 2024)、PosterMaker (CVPR 2025)、CreatiPoster (2025)、PosterLLaVA (IEEE TMM 2026)；③ 中文视觉文字渲染：TextDiffuser (NeurIPS 2023)、GlyphControl (NeurIPS 2023)、AnyText (ICLR 2024)、Glyph-ByT5 (ECCV 2024)、UDiffText (ECCV 2024)、AnyText2 (2024)、FonTS (ICCV 2025)；④ 主体/风格一致与 3D 贴图：LoRA (2021)、DreamBooth (CVPR 2023)、IP-Adapter (2023)、InstantStyle (2024)、AnyDoor (CVPR 2024)、TEXTure (SIGGRAPH 2023)、Paint3D (CVPR 2024)、MV-Adapter (ICCV 2025)；⑤ 客观评价指标：FID (NeurIPS 2017)、LPIPS (CVPR 2018)、CLIPScore (EMNLP 2021)、ImageReward/PickScore (NeurIPS 2023)、HPS v2 (2023)、VQAScore (ECCV 2024)、DesignCritic (*IEEE Access* 2026)。 | 详见时间线一、四及 `literature/papers.csv` |
-| **技术如何演变** | **第一代（2019–2022）**：GAN/VAE 离散版式框生成（LayoutGAN、CanvasVAE、CGL-GAN）；**第二代（2022–2023）**：潜在扩散 + 空间/主体适配器（LDM、ControlNet、DreamBooth、IP-Adapter、LayoutDM）；**第三代（2024–2025）**：MMDiT 底座 + 多语种字符感知渲染（AnyText/Glyph-ByT5/AnyText2/FonTS）+ 透明多图层（LayerDiffusion）+ 电商商品文字解耦（PosterMaker）+ 去光照 3D UV 贴图与多视角适配器（Paint3D、MV-Adapter）+ 原生 SVG 代码生成（StarVector）；**第四代前沿（2025–2026）**：从单面 RGB 视觉合成走向**多条件拓扑约束（刀版/3D UV）+ 图层与矢量代码混合解耦 + 客观原则驱动的推理引导/奖励对齐**。 | 综合时间线一 45 篇顶会顶刊演进轨迹 |
-| **领域的终极目标** | 给定产品类别、结构刀版参数、品牌视觉资产、地域文化风格与法定文字清单，端到端或结构化生成**视觉高质、多面折合无缝、中文零错字、品牌零漂移、300 DPI CMYK 可直接制版印刷**的包装方案。 | 综合包装工业需求与 CV/图形学生成范式 |
-| **目前达到什么水平** | 单面 RGB 电商海报与中英文艺术标题准确率已突破 85%–90%+（AnyText2 / PosterMaker CVPR 2025）；通用 3D 网格无光照贴图与多视角生成已实现即插即用（Paint3D / MV-Adapter ICCV 2025）；透明多图层与 4K 生成已跑通（LayerDiffusion / Diffusion-4K CVPR 2025）。但在**面向工业包装的“刀版折面拓扑连续性 + 密集小字零错 + 品牌多 SKU 锁定 + CMYK 可印刷性”联合求解**上仍远未达标。 | 见下文“难点—解法树”五大难点分析 |
-| **哪些重要问题未解决** | 五大具体深度学习技术难点：① 包装密集中文文字（尤以小字配料/营养表与曲面透视）渲染错误；② 跨 SKU/多视图品牌 Logo 与色板漂移；③ 2D 参数化刀版展开图与 3D 折叠多面几何对应及跨折线接缝断裂；④ 按产品类别与地域文化风格的细粒度解耦控制；⑤ 屏幕 RGB 像素输出到 300 DPI CMYK 可印刷/可编辑多图层交付的鸿沟。 | 见“难点—解法树” |
-| **当前热点** | ① 商业商品海报解耦生成（PosterMaker CVPR 2025、CreatiPoster 2025、PosterLLaVA IEEE TMM 2026）；② 即插即用多视角/3D 贴图扩散（Paint3D CVPR 2024、MV-Adapter ICCV 2025）；③ 字符与排版可控 DiT（AnyText2、FonTS ICCV 2025）；④ 无人工自动设计审计与奖励对齐（VQAScore ECCV 2024、DesignCritic *IEEE Access* 2026、ARIA-Diff *Mathematics* 2026）。 | 2024–2026 CVPR/ICCV/ECCV/SCIE 热点聚类 |
+| **里程碑论文有哪些** | ① 扩散与控制底座：LDM (CVPR 2022)、ControlNet (ICCV 2023)、SD3 (ICML 2024)、Diffusion-4K (CVPR 2025)；② 平面版式与电商海报：Content-aware Layout (TOG 2019)、CanvasVAE (ICCV 2021)、CGL-GAN (IJCAI 2022)、PosterLayout (CVPR 2023)、LayoutDM (CVPR 2023)、LayoutGPT (NeurIPS 2023)、COLE (2023)、LayerDiffusion (SIGGRAPH 2024)、PosterMaker (CVPR 2025)、CreatiPoster (2025)、PosterLLaVA (IEEE TMM 2026)；③ 中文视觉文字：TextDiffuser (NeurIPS 2023)、GlyphControl (NeurIPS 2023)、AnyText (ICLR 2024)、Glyph-ByT5 (ECCV 2024)、UDiffText (ECCV 2024)、AnyText2 (2024)、FonTS (ICCV 2025)；④ **3D 网格跨视角无缝纹理**：TEXTure (SIGGRAPH 2023)、Text2Tex (ICCV 2023)、TexFusion (ICCV 2023)、Point-UV Diffusion (ICCV 2023)、Paint3D (CVPR 2024)、SyncMVD (SIGGRAPH Asia 2024)、Meta 3D TextureGen (2024)、RoCoTex (2024)、MV-Adapter (ICCV 2025)、MVPaint (CVPR 2025)；⑤ 主体/风格一致：LoRA (2021)、DreamBooth (CVPR 2023)、IP-Adapter (2023)、InstantStyle (2024)、AnyDoor (CVPR 2024)；⑥ 客观指标：FID (2017)、LPIPS (2018)、CLIPScore (2021)、ImageReward/PickScore (2023)、HPS v2 (2023)、VQAScore (ECCV 2024)、DesignCritic (*IEEE Access* 2026)。 | 详见下文时间线一、四及 `literature/papers.csv` |
+| **技术如何演变** | ① 2019–2022：GAN/VAE 二维版式框生成；② 2022–2023：扩散底座 + ControlNet/IP-Adapter，同时 3D 纹理从逐视角修补（TEXTure、Text2Tex）迈向**共享潜空间纹理同步去噪（TexFusion）**与点云-UV 粗细扩散（Point-UV）；③ 2024–2025：多视角同步去噪趋于成熟（SyncMVD、Paint3D 无光照 UV、RoCoTex、MVPaint、MV-Adapter），同时平面界完成多语种文字渲染（AnyText2、Glyph-ByT5-v2、PosterMaker）与透明分层/SVG 代码化（LayerDiffusion、StarVector）；④ 2025–2026：开始探索面向垂直制造与设计原则的约束引导、奖励对齐与自动审计（ARIA-Diff、DesignCritic）。 | 时间线一 52 篇顶会顶刊演进轨迹 |
+| **领域的终极目标** | 输入产品类别、参数化刀版、品牌视觉资产与法定标签文本，生成兼具高视觉质量、多面折合无缝、文字零差错且可直接用于 CMYK 制版印刷的包装文件。 | 工业包装流程与生成式 AI 交叉目标 |
+| **目前达到什么水平** | 在**单面电商海报中文大字**（PosterMaker、AnyText2）与**通用 3D 网格跨视角无缝贴图**（TexFusion、SyncMVD、Paint3D、MVPaint）上均已有较成熟的开源方案；但在**面向印刷制版的刀版硬约束（粘口/插舌不可见面、出血线、安全区、分面文字正向、CMYK 色域）与背面密集中文法规排版**的联合满足上，现有方法仍存在明显失效。 | 详见“难点—解法树” |
+| **哪些重要问题未解决** | 五类包装专用技术难点：① 刀版印刷硬约束与 3D 纹理同步的衔接（不可见面、出血/安全区、分面文字朝向、无光照平稿）；② 密集中文小字法定标签与艺术标题的混合零错生成；③ 跨 SKU 品牌 Logo 与主色板一致性保持；④ 产品类别先验与地域文化风格的解耦控制；⑤ sRGB 视觉生成到 300 DPI CMYK 可印刷性与可编辑分层的转换。 | 详见“难点—解法树” |
+| **当前热点** | 同步多视角 3D 纹理精修（SyncMVD / MVPaint）、商品海报图文解耦（PosterMaker / CreatiPoster / PosterLLaVA）、可印刷高分辨率与多图层生成（Diffusion-4K / LayerDiffusion）、以及无人工设计原则审计与奖励对齐（VQAScore / DesignCritic / ARIA-Diff）。 | 2024–2026 顶会与 SCIE 检索聚类 |
 
 ---
 
-## 时间线一（主线）：深度学习用于包装、平面、版式、文字渲染与 3D 贴图
+## 时间线一（核心主线）：深度学习用于包装、平面版式、文字渲染与 3D 网格纹理生成
 
-近七年，该主线从“二维矩形版式 GAN”演进到“可控多图层扩散 + 中文字符渲染 + 3D 无光照多视角贴图”，但**尚未针对“折叠包装刀版拓扑、密集中文合规排版与印刷色域约束”建立专用深度学习架构与基准**。
+近七年，视觉与图形学界分别在“2D 版式与中文文字渲染”和“3D 网格跨视角无缝纹理生成”两条支线上取得显著进展，但**尚未将两者与工业包装印刷硬约束（不可见面、出血安全区、分面正向排版、CMYK 色域、法定中文小字）打通**。
 
-| 年份 | 工作（带链接） | 子方向 / 里程碑 | 解决了什么（Pipeline 与技术洞见） | 留下什么（面向包装的空白） |
+### 子线 1A：平面版式、中文文字渲染、品牌一致与多图层生成
+
+| 年份 | 工作（带链接） | 里程碑 / 后续 | 解决了什么 | 留下什么（面向包装的空白） |
 | --- | --- | --- | --- | --- |
-| 2019 | Zheng et al., *Content-aware Graphic Layout* ([ACM TOG / SIGGRAPH](https://doi.org/10.1145/3306346.3322971)) | 版式生成·里程碑 | 根据图像与文本语义生成杂志版式，开启内容感知布局建模 | 仅二维单面，无包装结构与文字实体 |
-| 2021 | Li et al., *LayoutGAN* ([IEEE TPAMI](https://doi.org/10.1109/tpami.2019.2963663)) | 版式生成·里程碑 | 可微矢量线框渲染器实现几何—像素联合对抗训练 | 难以处理复杂嵌套层级与多面拓扑 |
-| 2021 | Yamaguchi, *CanvasVAE* ([ICCV](https://doi.org/10.1109/iccv48922.2021.00543)) | 多层文档·里程碑 | 多图层矢量文档建模 + 发布 **Crello** 公开基准 | 生成画质受限于早期 VAE |
-| 2021 | Hu et al., *LoRA* ([arXiv / ICLR 2022](https://doi.org/10.48550/arxiv.2106.09685)) | 轻量微调·里程碑 | 低秩适配大幅降低大模型微调显存，成单卡 5090 风格/类别微调基础 | 单独微调易过拟合且缺乏结构硬约束 |
-| 2022 | Rombach et al., *LDM / Stable Diffusion* ([CVPR](https://doi.org/10.1109/cvpr52688.2022.01042)) | 文生图底座·里程碑 | 潜在空间扩散实现高分辨率文生图，奠定开源生成底座 | 文字畸变、空间不可控、RGB 像素无图层 |
-| 2022 | Zhou et al., *CGL-GAN* ([IJCAI](https://doi.org/10.24963/ijcai.2022/692)) | 电商海报·里程碑 | 构图感知电商海报版式生成 + 发布 6 万级中文 **CGL** 数据集与主体避让指标 | 仅预测 2D 边界框，不生成图像与包装折面 |
-| 2023 | Zhang et al., *ControlNet* ([ICCV](https://doi.org/10.1109/iccv51070.2023.00355)) | 空间控制·里程碑 | 零卷积条件分支注入线稿/深度/分割等空间约束 | 仅对齐像素轮廓，不保证多面跨缝连续与矢量文字 |
-| 2023 | Ruiz et al., *DreamBooth* ([CVPR](https://doi.org/10.1109/cvpr52729.2023.02155)) | 主体一致·里程碑 | 少样本定制扩散模型实现特定主体跨场景生成 | 每品牌需单独微调，且难同步保持 Logo 几何零畸变 |
-| 2023 | Ye et al., *IP-Adapter* ([arXiv](https://doi.org/10.48550/arxiv.2308.06721)) | 图像提示·里程碑 | 22M 解耦交叉注意力适配器实现免微调参考图注入，兼容 ControlNet | 易发生内容与风格耦合（语义泄露） |
-| 2023 | Hsu et al., *PosterLayout (DS-GAN)* ([CVPR](https://doi.org/10.1109/cvpr52729.2023.00583)) | 电商版式·里程碑 | 显著性感知海报排版 + **PKU PosterLayout** 基准与标准客观版式指标体系 | 面向平面促销海报，未引入刀版安全区与多面对应 |
-| 2023 | Inoue et al., *LayoutDM* ([CVPR](https://doi.org/10.1109/cvpr52729.2023.00980)) | 版式扩散·里程碑 | 离散状态扩散统一处理多类版式条件约束 | 仅处理矩形框集合，无图文像素联合渲染 |
-| 2023 | Feng et al., *LayoutGPT* ([NeurIPS](https://doi.org/10.52202/075280-0802)) | LLM 规划·里程碑 | 用 LLM 生成 CSS 声明式空间布局指导下游扩散模型 | 缺乏确定性几何/印刷规则反向校验 |
-| 2023 | Chen et al., *TextDiffuser* ([NeurIPS](https://doi.org/10.52202/075280-0410)) & Yang et al., *GlyphControl* ([NeurIPS](https://doi.org/10.52202/075280-1912)) | 文字渲染·里程碑 | 字符掩码/字形图条件注入扩散模型 + 发布 **MARIO-10M** | 主要针对英文大字，中文复杂笔画与小字仍高错 |
-| 2023 | Richardson et al., *TEXTure* ([SIGGRAPH](https://doi.org/10.1145/3588432.3591503)) | 3D 贴图·里程碑 | 迭代多视角深度扩散为 3D 网格上色 | 易烘焙虚假光影，在纸盒锐利棱边易产生接缝与文字扭曲 |
-| 2023 | Jia et al., *COLE* ([arXiv](https://doi.org/10.48550/arxiv.2311.16974)) & Jain et al., *VectorFusion* ([CVPR](https://doi.org/10.1109/cvpr52729.2023.00190)) | 多层/SVG·里程碑 | 层次化多模型生成可编辑分层海报；SDS 蒸馏像素扩散生成 SVG | 闭源数据/路径冗余，无包装刀版与印刷规范 |
-| 2024 | Esser et al., *SD3 / Rectified Flow* ([ICML](https://doi.org/10.48550/arxiv.2403.03206)) | 底座跃迁·里程碑 | MMDiT + Rectified Flow 架构，大幅改善复杂提示理解与英文拼写 | 原生中文小字与包装多面展开拓扑依然失效 |
-| 2024 | Tuo et al., *AnyText* ([ICLR](https://doi.org/10.48550/arxiv.2311.03054)) & *AnyText2* ([arXiv](https://doi.org/10.48550/arxiv.2411.15245)) | 中文文字·里程碑 | OCR 笔画编码 + WriteNet+AttnX 实现中英文逐行字体/颜色定制 + 发布 **AnyWord-3M** (Apache-2.0) | 适合包装大标题/艺术字，但对背面 200+ 字密集配料表与营养成分表仍存在字符粘连与错字 |
-| 2024 | Liu et al., *Glyph-ByT5* ([ECCV](https://doi.org/10.1007/978-3-031-73226-3_21)) & *v2* ([arXiv](https://doi.org/10.48550/arxiv.2406.10208)) | 多语种字形·后续 | 字符级 ByT5 编码器耦合 SDXL 支持含中文在内的 10 语种高准文字渲染 | 仍属光栅像素渲染，无法矢量编辑或单黑印刷 |
-| 2024 | Zhang & Agrawala, *LayerDiffusion* ([ACM TOG / SIGGRAPH](https://doi.org/10.1145/3658150)) | 透明图层·里程碑 | 潜在空间编码 Alpha 通道原生生成透明前景与多层构图 | 为包装元素分离提供关键底座，但未结合刀版布局约束 |
-| 2024 | Wang et al., *InstantStyle* ([arXiv](https://doi.org/10.48550/arxiv.2404.02733)) & Chen et al., *AnyDoor* ([CVPR](https://doi.org/10.1109/cvpr52733.2024.00630)) | 风格解耦/对象植入·里程碑 | 注意力层减法实现风格与内容解耦；DINOv2 特征零样本植入对象 | 尚未针对“农产品类别先验 × 地域文化风格 × Logo 锁定”联合优化 |
-| 2024 | Zeng et al., *Paint3D* ([CVPR](https://doi.org/10.1109/cvpr52733.2024.00407)) | 无光照 UV 贴图·里程碑 | 粗细两阶段去光照 UV 扩散消除 3D 表面阴影烘焙与接缝 | 面向通用 3D 物体，未利用折叠纸盒规则多面平面 UV 与印刷排版约束 |
-| 2025 | Gao et al., *PosterMaker* ([CVPR](https://doi.org/10.1109/cvpr52734.2025.00757)) | 商品海报·里程碑 | 解耦 TextRenderNet (>90% 文本精度) 与 SceneGenNet，实现高精度中文商品海报生成 | **最接近包装设计的 CVPR 前沿基线**，但仅覆盖单面 2D 电商海报，无刀版折叠拓扑与法定背面排版 |
-| 2025 | Huang et al., *MV-Adapter* ([ICCV](https://doi.org/10.1109/iccv51701.2025.01520)) | 多视角一致·里程碑 | 即插即用并行多视角注意力将 2D 扩散低成本升级为 3D 多视图一致生成 | 面向自由 3D 视角，尚未将折叠包装的**刀版邻接图（正/侧/背/顶共边关系）**显式编入跨面注意力 |
-| 2025 | Rodriguez et al., *StarVector* ([CVPR](https://doi.org/10.1109/cvpr52734.2025.01508)) & Zhang et al., *Diffusion-4K* ([CVPR](https://doi.org/10.1109/cvpr52734.2025.02185)) | SVG 代码 / 4K 超分·里程碑 | MLLM 直接生成语义 SVG 代码（+ **SVG-Stack**）；小波微调原生 4K 图像生成（+ GLCM 细节指标） | 分别推进了矢量代码化与印刷级 300 DPI 分辨率，但未整合入包装展开图生成管线 |
-| 2025 | Shi et al., *FonTS* ([ICCV](https://doi.org/10.1109/iccv51701.2025.01716)) & Hong et al., *CreatiPoster* ([arXiv](https://doi.org/10.48550/arxiv.2506.10890)) | 排版控制/多层协议·后续 | DiT 词级字体风格控制；RGBA 协议模型输出 JSON 图层与 10 万无版权多层语料 | 均止步于数字平面海报，缺印刷色域与 3D 包装对应 |
-| 2026 | Yang et al., *PosterLLaVA* ([IEEE TMM](https://doi.org/10.1109/tmm.2026.3753095)) | MLLM 版式·里程碑 | 视觉指令微调 MLLM 输出 JSON 版式并导出可编辑 SVG 海报 | 单面二维海报范式，未扩展至包装展开多面与食品法规 |
-| 2025–26 | Gao & Li ([J. Eng. Des. 2025](https://doi.org/10.1080/09544828.2025.2489647)); Wu ([IEEE Access 2025](https://doi.org/10.1109/access.2025.3596858)); Liu et al. ([IEEE Access 2026](https://doi.org/10.1109/access.2026.3723820)) | 包装应用对照 | 将评论挖掘/模糊注意力/人机协同引入茶/饼干等产品包装 | **鲜明对比**：现有包装类 SCI 论文几乎全停留在调用现成生图工具或浅层分类器，严重落后于 CV 顶会的前沿架构 |
+| 2019 | Zheng et al., *Content-aware Graphic Layout* ([ACM TOG](https://doi.org/10.1145/3306346.3322971)) | 里程碑 | 内容语义驱动的深度杂志版式合成 | 仅单面二维矩形框 |
+| 2021 | Li et al., *LayoutGAN* ([IEEE TPAMI](https://doi.org/10.1109/tpami.2019.2963663)) & Yamaguchi, *CanvasVAE* ([ICCV](https://doi.org/10.1109/iccv48922.2021.00543)) | 里程碑 | 矢量线框版式对抗训练；多图层矢量文档建模与 **Crello** 数据集 | 未耦合现代高保真扩散底座 |
+| 2021–22 | Hu et al., *LoRA* ([arXiv/ICLR](https://doi.org/10.48550/arxiv.2106.09685)); Rombach et al., *LDM* ([CVPR 2022](https://doi.org/10.1109/cvpr52688.2022.01042)); Zhou et al., *CGL-GAN* ([IJCAI 2022](https://doi.org/10.24963/ijcai.2022/692)) | 里程碑 | 低秩轻量微调、潜在扩散底座、电商海报主体避让版式与 6 万级 **CGL** 数据集 | 仅 2D 单面构图，无文字像素与包装折面 |
+| 2023 | Zhang et al., *ControlNet* ([ICCV](https://doi.org/10.1109/iccv51070.2023.00355)); Ruiz et al., *DreamBooth* ([CVPR](https://doi.org/10.1109/cvpr52729.2023.02155)); Ye et al., *IP-Adapter* ([arXiv](https://doi.org/10.48550/arxiv.2308.06721)) | 里程碑 | 线稿/分割空间控制、主体定制微调与免微调图像提示适配器 | 单独使用难以防止风格—内容语义泄露或跨折线断裂 |
+| 2023 | Hsu et al., *PosterLayout / DS-GAN* ([CVPR](https://doi.org/10.1109/cvpr52729.2023.00583)); Inoue et al., *LayoutDM* ([CVPR](https://doi.org/10.1109/cvpr52729.2023.00980)); Feng et al., *LayoutGPT* ([NeurIPS](https://doi.org/10.52202/075280-0802)); Li et al., *RADM* ([CIKM](https://doi.org/10.1145/3583780.3615028)) | 里程碑 | **PKU PosterLayout** 基准与客观版式指标；离散扩散/LLM/关系感知可控排版 | 面向单面促销海报，不含包装刀版安全区与多面对应 |
+| 2023 | Chen et al., *TextDiffuser* ([NeurIPS](https://doi.org/10.52202/075280-0410)); Yang et al., *GlyphControl* ([NeurIPS](https://doi.org/10.52202/075280-1912)); Jia et al., *COLE* ([arXiv](https://doi.org/10.48550/arxiv.2311.16974)); Jain et al., *VectorFusion* ([CVPR](https://doi.org/10.1109/cvpr52729.2023.00190)) | 里程碑 | 字符掩码/字形控制渲染（+ **MARIO-10M**）；层次化多图层可编辑生成；文本到 SVG 蒸馏 | 以英文短句为主，复杂中文密集排版与印刷矢量精度不足 |
+| 2024 | Esser et al., *SD3 / Rectified Flow* ([ICML](https://doi.org/10.48550/arxiv.2403.03206)); Zhang & Agrawala, *LayerDiffusion* ([ACM TOG](https://doi.org/10.1145/3658150)); Wang et al., *InstantStyle* ([arXiv](https://doi.org/10.48550/arxiv.2404.02733)); Chen et al., *AnyDoor* ([CVPR](https://doi.org/10.1109/cvpr52733.2024.00630)) | 里程碑 | MMDiT 底座、潜在透明 Alpha 多图层生成、风格—内容注意力解耦、DINOv2 零样本对象植入 | 仍局限于 sRGB 屏幕域单面图像 |
+| 2024 | Tuo et al., *AnyText* ([ICLR](https://doi.org/10.48550/arxiv.2311.03054)) & *AnyText2* ([arXiv](https://doi.org/10.48550/arxiv.2411.15245)); Liu et al., *Glyph-ByT5* ([ECCV](https://doi.org/10.1007/978-3-031-73226-3_21) / [arXiv](https://arxiv.org/abs/2403.09622)) & *v2* ([arXiv](https://doi.org/10.48550/arxiv.2406.10208)); Chen et al., *TextDiffuser-2* ([ECCV](https://doi.org/10.1007/978-3-031-72652-1_23)); Zhao & Lian, *UDiffText* ([ECCV](https://doi.org/10.1007/978-3-031-72751-1_13)) | 里程碑 | 中文等多语种视觉文字高精度渲染与逐行字体/颜色定制（+ **AnyWord-3M**） | 适合大标题艺术字，对背面 100–300 字小号中文法规文本仍易出现笔画粘连，且非矢量单黑印刷 |
+| 2025 | Gao et al., *PosterMaker* ([CVPR](https://doi.org/10.1109/cvpr52734.2025.00757)); Rodriguez et al., *StarVector* ([CVPR](https://doi.org/10.1109/cvpr52734.2025.01508)); Zhang et al., *Diffusion-4K* ([CVPR](https://doi.org/10.1109/cvpr52734.2025.02185)); Shi et al., *FonTS* ([ICCV](https://doi.org/10.1109/iccv51701.2025.01716)); Hong et al., *CreatiPoster* ([arXiv](https://doi.org/10.48550/arxiv.2506.10890)) | 里程碑 | 商品海报文字与场景解耦（中文高精度）、MLLM 原生 SVG 代码生成、原生 4K 小波微调、RGBA 多图层协议 | 均面向 2D 数字海报或通用矢量图标，未处理折叠包装多面刀版与印刷色域 |
+| 2026 | Yang et al., *PosterLLaVA* ([IEEE TMM](https://doi.org/10.1109/tmm.2026.3753095)); Cao & Chen, *ARIA-Diff* ([Mathematics](https://doi.org/10.3390/math14203759)); Liu et al. ([IEEE Access](https://doi.org/10.1109/access.2026.3723820)) | 里程碑 / 包装对照 | MLLM 输出 JSON 版式并导出 SVG；少步扩散奖励对齐；饼干包装人机协同案例 | 现有包装 SCI 应用文仍显著滞后于上述视觉生成架构 |
 
-**本线技术范式小结**：视觉生成顶会已清晰演化出四项可组合的现代深度模块——**① 轻量适配器（LoRA / IP-Adapter / InstantStyle / MV-Adapter）**、**② 字符与图文双网络解耦（AnyText2 / PosterMaker）**、**③ 潜在透明图层与去光照 UV 扩散（LayerDiffusion / Paint3D）**、**④ 结构化 JSON/SVG 代码层（PosterLLaVA / StarVector）**。但工业包装设计界尚未吸收这套现代深度学习武器库，形成了显著的**“顶会通用视觉组件先进 vs. 包装垂直领域停留在 Midjourney 提示词阶段”的代差红利**——这正是我们在单卡 RTX 5090 上以“领域专用深度学习架构 + 损失/引导创新”切入 SCIE 的最佳窗口！
+### 子线 1B：3D 网格跨视角与跨接缝一致性纹理生成（关键补全脉络）
+
+> **为什么这条脉络至关重要**：折叠纸盒本质上是一个由若干平面面片组成的简单 3D 网格，其 UV 展开图即工业刀版。近年来图形学与 CV 顶会已发展出较成熟的 3D 网格无缝纹理同步方法，**任何面向“2D 刀版 ↔ 3D 包装一致生成”的研究都必须正面继承并与之定量对比**。
+
+| 年份 | 工作（带链接） | 里程碑 / 后续 | 解决了什么（跨视角/跨接缝核心机制） | 留下什么（为何不能直接套用作包装印刷稿） |
+| --- | --- | --- | --- | --- |
+| 2023 | Richardson et al., *TEXTure* ([ACM SIGGRAPH](https://doi.org/10.1145/3588432.3591503)) | 里程碑 | 基于深度条件扩散迭代绘制并修补 3D 网格多视角纹理 | 顺序投影修补易累积视角不一致、棱边接缝与阴影烘焙 |
+| 2023 | Chen et al., *Text2Tex* ([ICCV](https://doi.org/10.1109/iccv51070.2023.01701)) | 里程碑 | 引入动态生成状态掩码（新建/更新/保持）指导多视角深度修补，减少视角拉伸 | 仍属异步逐视角绘制，在锐利盒棱处难以保证全局图案连贯，且无法控制文字正向 |
+| 2023 | Cao et al., *TexFusion* ([ICCV](https://doi.org/10.1109/iccv51070.2023.00385) / [arXiv](https://arxiv.org/abs/2310.13772)) | **核心里程碑** | **在共享的潜空间纹理图（latent texture map）上交错同步多视角 2D 去噪采样**，从机理上显著缓解跨视角接缝与不一致 | 面向通用 3D 渲染网格：① 忽略粘口/插舌等 3D 不可见面；② 无 3 mm 出血与模切安全区；③ 不控制各折面文字物理朝上与密集中文排版；④ 易残留视图光照倾向与 sRGB 超色域 |
+| 2023 | Yu et al., *Point-UV Diffusion* ([ICCV](https://doi.org/10.1109/iccv51070.2023.00388) / [arXiv](https://arxiv.org/abs/2308.10490)) | 里程碑 | 粗阶段 3D 点云扩散保证全局一致 + 细阶段 UV 空间扩散提升高频细节 | 依赖点云/网格类特定训练分布，未适配印刷刀版布局与图文法规约束 |
+| 2024 | Zeng et al., *Paint3D* ([CVPR](https://doi.org/10.1109/cvpr52733.2024.00407)) | 里程碑 | 粗细两阶段去光照 UV 扩散（UVHD）消除 3D 贴图中的光照烘焙与接缝 | 解决“无光照”痛点迈出关键一步，但未处理包装刀版不可见面、出血线、文字朝向、CMYK 色域与密集中文排版 |
+| 2024 | Liu et al., *SyncMVD* ([SIGGRAPH Asia](https://doi.org/10.1145/3680528.3687621) / [arXiv](https://arxiv.org/abs/2311.12891)) | **核心里程碑** | **在去噪早期于共享纹理域同步所有渲染视角的扩散轨迹**（免训练），以较低成本获得全局一致的无缝 3D 纹理 | 与 TexFusion 同理：只优化 3D 可见表面的视觉连贯性，缺乏对包装粘口/插舌、出血/安全区、每面文字正向、CMYK 色域及法定中文文本的约束建模 |
+| 2024 | Bensadoun et al., *Meta 3D TextureGen* ([arXiv](https://arxiv.org/abs/2407.02430)) & Kim et al., *RoCoTex* ([arXiv](https://arxiv.org/abs/2409.19989)) | 后续 | 前馈两阶段快速一致 3D 纹理生成；基于 SDXL + 多 ControlNet + 对称视角与区域提示的免训练一致纹理合成 | 面向游戏/影视 3D 资产展示，未考虑平面制版印刷规范与中文包装信息层级 |
+| 2025 | Huang et al., *MV-Adapter* ([ICCV](https://doi.org/10.1109/iccv51701.2025.01520)) & Cheng et al., *MVPaint* ([CVPR](https://doi.org/10.1109/cvpr52734.2025.00063) / [arXiv](https://arxiv.org/abs/2411.02336)) | 里程碑 | 即插即用并行多视角注意力适配器；同步多视角生成 + 空间感知 3D 修补（补盲区）+ 接缝平滑 UV 精修 | MVPaint 的空间修补仅针对普通 3D 遮挡区，并不理解包装粘口必须留白免油墨、出血区需外扩延展等工业刀版语义 |
+
+**本线技术范式小结**：如果只看“给纸盒 3D 网格贴上跨棱边无缝的纹理”，TexFusion (ICCV 2023)、Paint3D (CVPR 2024)、SyncMVD (SIGGRAPH Asia 2024) 与 MVPaint (CVPR 2025) 已经提供了成熟的共享潜空间/纹理域同步范式。**但把 3D 资产纹理直接当成包装印刷稿会立即暴露六大结构性缺口**（不可见面粘口/插舌、出血与安全区、分面文字物理朝上、无光照平面印刷稿、CMYK 色域、密集中文小字法规排版）。这决定了我们的研究定位属于**情况 2**（将成熟的多视角潜空间同步机制迁移并改造至带工业印刷硬约束的新场景），技术贡献必须明确落在上述六大缺口上。
 
 ---
 
-## 时间线二（应用场景）：农产品包装设计与乡村振兴
+## 时间线二（测试场景背景）：农产品包装设计与乡村振兴
 
-该脉络为深度学习模型提供真实约束与应用场景：既涵盖消费感知与可持续材料背景，也暴露了低质期刊扎堆与 **GB 7718-2025/28050-2025** 强法规约束的现实背景。
+本脉络提供具有代表性的高约束测试场景与行业参照（仅列出已核对摘要的文献；3 篇未能打开摘要原文的 Elsevier 文献及 2 篇未定位原文的种子文献均已在 `papers.csv` 标 `verified=no`）：
 
-| 年份 | 工作（带链接） | 角色 | 核心结论与对 DL 方法设计的约束输入 |
+| 年份 | 工作（带链接） | 角色 | 核心结论与对测试场景的约束输入 |
 | --- | --- | --- | --- |
-| 2007–2009 | Silayoi & Speece ([EJM](https://doi.org/10.1108/03090560710821279)); Rundh ([Br. Food J.](https://doi.org/10.1108/00070700910992880)) | 领域奠基 | 包装兼具“视觉美学吸引”与“标签信息/供应链结构”双职能 → 证明模型必须同时优化视觉质量与结构/信息合规 |
-| 2020–2024 | Boz et al. ([Sustainability 2020](https://doi.org/10.3390/su12062192)); Duan et al. ([Sustainability 2024](https://doi.org/10.3390/su16041381)); Rivers et al. ([Food Control 2024](https://doi.org/10.1016/j.foodcont.2023.110101)) | 可持续与合规背景 | 农废材质（牛皮纸/秸秆纸）表面底色偏黄/低饱和度，且预包装食品标签高频违规 → 对扩散模型的印刷色域与强制信息保留提出硬约束 |
-| 2024 | Chen Tao et al. ([JISEM](https://doi.org/10.55267/iadt.07.15214)); Songyong Hu ([AMNS](https://doi.org/10.2478/amns-2024-1882)) | 种子2、3（弱来源） | 均已被 Scopus 剔除；Hu (2024) 仅用传统 HSV/GLCM 特征却冠名 Deep Learning，属典型反面教材 |
-| 2025 | Song & Bai ([Applied Sciences](https://doi.org/10.3390/app15116033)); Chen & Fu ([AHFE](https://doi.org/10.54941/ahfe1006930)); Tang et al. ([JTAER](https://doi.org/10.3390/jtaer20030248)) | 种子4、5 + 电商背景 | 种子 5 依赖 100 人问卷 + AHP/TOPSIS + Midjourney，无法在不招募被试时复现；Tang (2025) 证明包装色彩/字体/插画直接决定电商复购 |
-| 2026 | Zhao et al. ([HSSC](https://doi.org/10.1057/s41599-026-06948-z)); Wu et al. ([ACSR](https://doi.org/10.2991/978-94-6239-737-8_27)); 李雪娜等 ([2026](https://doi.org/10.64216/3104-9664.26.04.014)) | 种子7 + 新国标线索 | 文化转译+主观评分已被占满；**GB 7718-2025 & GB 28050-2025**（2027-03-16 强制实施）带来明确的机器可执行法规约束（禁用“零添加”、字高 ≥1.8 mm、1+6 营养表、数字标签二维码），天然适合作为零被试客观评测指标 |
+| 2007–2009 | Silayoi & Speece ([EJM](https://doi.org/10.1108/03090560710821279)); Rundh ([Br. Food J.](https://doi.org/10.1108/00070700910992880)) | 领域奠基 | 包装同时承担“视觉传播”与“信息/物流结构”双职能，说明生成模型须兼顾审美与结构/信息合规 |
+| 2020–2024 | Boz et al. ([Sustainability 2020](https://doi.org/10.3390/su12062192)); Tanaiutchawoot et al. ([PTS 2023](https://doi.org/10.1002/pts.2755)); Duan et al. ([Sustainability 2024](https://doi.org/10.3390/su16041381)); Giri & Chaulagai ([Cogent Food Agric. 2024](https://doi.org/10.1080/23311932.2024.2399793)) | 农业与可持续背景 | 农产品包装正向生态纸材与规范信息演进，对底材色域与清晰标签提出明确约束 |
+| 2024 | Chen Tao et al. ([JISEM](https://doi.org/10.55267/iadt.07.15214)); Songyong Hu ([AMNS](https://doi.org/10.2478/amns-2024-1882)) | 种子2、3（弱来源） | 所在期刊已被 Scopus 剔除；Hu (2024) 仅做浅层 HSV/GLCM 特征，作反面警示 |
+| 2025 | Song & Bai ([Applied Sciences](https://doi.org/10.3390/app15116033)); Chen & Fu ([AHFE](https://doi.org/10.54941/ahfe1006930)); Gao & Li ([J. Eng. Des.](https://doi.org/10.1080/09544828.2025.2489647)); Tang et al. ([JTAER](https://doi.org/10.3390/jtaer20030248)) | 种子4、5 + 同类参照 | 现有 AIGC 包装 SCI 论文均采用“评论/问卷 + AHP + 商用生图 + TOPSIS”，依赖人工评价且未解决刀版与印前硬约束 |
+| 2026 | Zhao et al. ([HSSC](https://doi.org/10.1057/s41599-026-06948-z)); Liu et al. ([HSSC](https://doi.org/10.1057/s41599-026-08755-y)); Wu et al. ([ACSR](https://doi.org/10.2991/978-94-6239-737-8_27)); 李雪娜等 ([2026](https://doi.org/10.64216/3104-9664.26.04.014)) | 种子7 + 新国标背景 | 注：上述两篇 2026 *HSSC* 论文均已核实官方 Nature URL 及 OpenAlex 完整摘要（马奶酒包装与乡村工艺工作流），均偏向人文/文化转译而非深度学习算法架构；**GB 7718-2025 & GB 28050-2025**（2027-03-16 正式强制实施）为测试场景提供了明确的客观中文标签合规基准 |
 
 ---
 
-## 时间线三（可选应用/讨论框架）：OPC 一人公司与人机协同设计
+## 时间线三（可选讨论框架）：OPC 一人公司与人机协同设计
 
-> 按 2026-11-24 作者决策，本脉络降为**可选应用框架或论文 Discussion 章节**，用于说明所提轻量深度学习模型（单卡 RTX 5090 可推理）为何能赋能小微农业与单人设计师，不再作为主实验目标。
+> 按作者决策，本脉络仅作为论文引言/讨论部分的可选应用背景（论证轻量化免训练推理如何赋能单人设计实践），不作为核心算法主线。
 
-| 年份 | 代表工作（带链接） | 核心洞见（供论文引言/讨论引用） |
+| 年份 | 代表工作（带链接） | 核心洞见（均已核对官方摘要） |
 | --- | --- | --- |
-| 2019–2023 | Räisänen & Tuovinen ([J. Rural Studies 2019](https://doi.org/10.1016/j.jrurstud.2019.09.010)); Noy & Zhang ([Science 2023](https://doi.org/10.1126/science.adh2586)) | 农村小微企业缺专业设计资源，AI 可显著降低个体专业任务门槛 |
-| 2024–2025 | Zhou et al., *OptiMuse* ([CHI 2024](https://doi.org/10.1145/3613904.3642812)); Chen et al., *CoExploreDS* ([CHI 2025](https://doi.org/10.1145/3706598.3713869)); Rezazadeh & Bonehgazy ([arXiv:2511.09533](https://doi.org/10.48550/arxiv.2511.09533)) | 创意设计是非线性人机协同过程，单人创业者可借助智能体扩展产能 |
-| 2026 | Liu & Yang ([Systems](https://doi.org/10.3390/systems14080994)); Kshetri ([IEEE IT Prof.](https://doi.org/10.1109/mitp.2026.3694520)); Li, Zeng, & Li ([SEJ](https://doi.org/10.1002/sej.70067)); Dell'Acqua et al. ([Org. Sci.](https://doi.org/10.1287/orsc.2025.21838)); Chen et al. ([J. Eng. Des.](https://doi.org/10.1080/09544828.2026.2616583)) | 学术界已正式确立 **`One-Person Company (OPC)`**（`1+N+AI` 社会技术系统），并证明在“锯齿状技术前沿”之外（如强结构/强法规任务）必须通过确定性工程约束与自动校验保障最低可行智能（MVI） |
+| 2023–2025 | Noy & Zhang ([Science 2023](https://doi.org/10.1126/science.adh2586)); Choi et al., *CreativeConnect* ([CHI 2024](https://doi.org/10.1145/3613904.3642794)); Zhou et al., *OptiMuse* ([CHI 2024](https://doi.org/10.1145/3613904.3642812)); Chen et al., *CoExploreDS* ([CHI 2025](https://doi.org/10.1145/3706598.3713869)); Rezazadeh & Bonehgazy ([arXiv:2511.09533](https://doi.org/10.48550/arxiv.2511.09533)) | 生成式 AI 提升个体创作效率，但专业设计是非线性、多约束过程 |
+| 2026 | Liu & Yang ([Systems](https://doi.org/10.3390/systems14080994)); Kshetri ([IEEE IT Prof.](https://doi.org/10.1109/mitp.2026.3694520)); Li, Zeng, & Li ([SEJ](https://doi.org/10.1002/sej.70067)); Dell'Acqua et al. ([Org. Sci.](https://doi.org/10.1287/orsc.2025.21838)); Chen et al. ([J. Eng. Des.](https://doi.org/10.1080/09544828.2026.2616583)) | 2026 年同行评审期刊已正式确立 **`One-Person Company (OPC)`**（`1+N+AI`），并指出在“锯齿状技术前沿”之外（如硬工程/合规任务）需要确定性护栏与自动校验 |
 
 ---
 
-## 时间线四（核心评测与数据）：零人工纯客观指标体系（方案 A）与公开数据集
+## 时间线四（核心评测与公开数据）：纯客观指标体系（方案 A）与数据集
 
-> 按 2026-11-24 作者决策，**完全放弃方案 B（不招募专家与消费者）**，全部评价由可复现的**纯客观深度学习指标 + 基线定量对比 + 消融实验**支撑。
+> 按作者决策，**不招募专家或消费者，全部评测严格采用方案 A（纯客观指标 + 多基线定量对比 + 消融实验）**。
 
-| 客观指标维度 | 代表指标与出处（带链接） | 测量对象 | 是否需人类被试 |
-| --- | --- | --- | --- |
-| **1. 图像分布与感知保真** | **FID** ([Heusel et al., NeurIPS 2017](https://doi.org/10.48550/arxiv.1706.08500))、**LPIPS** ([Zhang et al., CVPR 2018](https://doi.org/10.1109/cvpr.2018.00068)) | 生成包装图与真实公开包装库（Open Food Facts / RPC）的特征分布距离及感知多样性 | **否** |
-| **2. 自动审美与偏好代理** | **HPS v2** ([Wu et al., 2023](https://doi.org/10.48550/arxiv.2306.09341))、**ImageReward** ([Xu et al., NeurIPS 2023](https://doi.org/10.52202/075280-0700))、**PickScore** ([Kirstain et al., NeurIPS 2023](https://doi.org/10.52202/075280-1594))、**DesignCritic** ([Wu & Song, IEEE Access 2026](https://doi.org/10.1109/access.2026.3730226)) | 基于预训练偏好奖励模型自动打分，被 CVPR/NeurIPS/SCIE 广泛认可为无人工视觉审美代理指标 | **否** |
-| **3. 细粒度图文与类别/风格对齐** | **CLIPScore** ([Hessel et al., EMNLP 2021](https://doi.org/10.18653/v1/2021.emnlp-main.595))、**VQAScore** ([Lin et al., ECCV 2024](https://doi.org/10.1007/978-3-031-72673-6_20))、DINOv2 / CLIP-I 风格-内容解耦相似度 | 衡量生成图对“农产品类别 + 地域文化风格 + 指定元素”复杂组合条件的忠实度 | **否** |
-| **4. 中文视觉文字渲染精度** | **OCR Sentence Accuracy / Word Accuracy / 字符错误率 CER / `1 - NED`**（PaddleOCR / AnyText-benchmark 协议，[Tuo et al., ICLR 2024](https://doi.org/10.48550/arxiv.2311.03054)） | 客观定量比较各基线模型在中文品名、卖点与配料表渲染上的拼写正确率 | **否** |
-| **5. 版式与刀版几何约束指标** | **mIoU / Alignment / Overlap / Saliency Occlusion (`R_occ`) / Underlay (`R_und`)**（[CGL-GAN IJCAI 2022](https://doi.org/10.24963/ijcai.2022/692); [PosterLayout CVPR 2023](https://doi.org/10.1109/cvpr52729.2023.00583)）+ **刀版出血/安全区越界率（Bleed Violation Rate）** + **跨折线缝隙连续性（Seam Edge PSNR/LPIPS）** + **3D 折叠多视角重投影 SSIM** | 客观验证 2D 刀版展开图与 3D 折叠效果图的几何一致性、无缝连续性与版式规整度 | **否** |
-| **6. 品牌一致与可印刷/法规硬指标** | **Logo 检测召回率 & 模板 SSIM**、**品牌色板 CIEDE2000 ($\Delta E_{00}$)**、**CMYK 色域溢出率（Out-of-Gamut %）**、**300 DPI 高频清晰度（GLCM，[Diffusion-4K CVPR 2025](https://doi.org/10.1109/cvpr52734.2025.02185)）**、**条码 `pyzbar` 自动解码率**、**GB 7718-2025 规则通过率** | 客观证明生成结果不仅好看，而且满足跨 SKU 一致性与工业印刷/法规硬要求（呼应 [Jung, *Sustainability* 2026](https://doi.org/10.3390/su18062943) 双层脱节评测） | **否** |
+| 客观指标维度 | 代表指标与出处（带链接，均已核对官方摘要） | 测量对象 |
+| --- | --- | --- |
+| **1. 分布与高频画质** | **FID** ([Heusel et al., NeurIPS 2017](https://doi.org/10.48550/arxiv.1706.08500))、**LPIPS** ([Zhang et al., CVPR 2018](https://doi.org/10.1109/cvpr.2018.00068))、**GLCM 细节度** ([Diffusion-4K, CVPR 2025](https://doi.org/10.1109/cvpr52734.2025.02185)) | 与公开真实包装库的分布距离、感知多样性及高分辨率细节 |
+| **2. 无人工偏好代理** | **HPS v2** ([Wu et al., 2023](https://doi.org/10.48550/arxiv.2306.09341))、**ImageReward** ([Xu et al., NeurIPS 2023](https://doi.org/10.52202/075280-0700))、**PickScore** ([Kirstain et al., NeurIPS 2023](https://doi.org/10.52202/075280-1594))、**DesignCritic** ([Wu & Song, IEEE Access 2026](https://doi.org/10.1109/access.2026.3730226)) | 预训练人类偏好奖励模型自动打分与校准后的设计原则审计 |
+| **3. 组合语义对齐** | **CLIPScore** ([Hessel et al., EMNLP 2021](https://doi.org/10.18653/v1/2021.emnlp-main.595))、**VQAScore** ([Lin et al., ECCV 2024](https://doi.org/10.1007/978-3-031-72673-6_20) / [arXiv](https://arxiv.org/abs/2404.01291)) | 衡量生成图对“产品品类 + 地域文化风格 + 指定元素”复合提示的忠实度 |
+| **4. 中文文字渲染精度** | **OCR Sentence Acc / Word Acc / CER / `1 - NED`**（PaddleOCR，遵循 [AnyText-benchmark, ICLR 2024](https://doi.org/10.48550/arxiv.2311.03054) 协议） | 定量评估正面艺术大字与背面密集中文标签的字符准确度 |
+| **5. 版式与刀版几何** | **mIoU / Alignment / Overlap / Saliency Occlusion (`R_occ`)**（[CGL-GAN IJCAI 2022](https://doi.org/10.24963/ijcai.2022/692); [PosterLayout CVPR 2023](https://doi.org/10.1109/cvpr52729.2023.00583)）+ **跨折线缝隙 Seam PSNR/LPIPS** + **3D 折叠多视角重投影 SSIM** + **不可见面污染率（Glue-Flap Contamination %）** + **3 mm 出血/安全区越界率** + **分面文字朝向正确率** | 定量检验相较于通用 3D 纹理同步方法（TexFusion / SyncMVD / MVPaint）在包装刀版印刷硬约束上的真实改进 |
+| **6. 品牌与印前/法规硬指标** | **DINOv2 / CLIP-I 跨 SKU 相似度**、**色板 CIEDE2000 ($\Delta E_{00}$)**、**CMYK 色域溢出率（Out-of-Gamut %）**、**条码 `pyzbar` 解码率**、**GB 7718-2025/28050-2025 确定性规则通过率** | 呼应 [Jung (*Sustainability* 2026)](https://doi.org/10.3390/su18062943) 的“视觉层 vs. 可操作逻辑层”双层客观评测思路 |
 
-> 公开数据集详表（Open Food Facts、ABO、RPC、Crello、PKU PosterLayout、CGL、CreatiPoster 100K、AnyWord-3M、MARIO-10M、SVG-Stack 等 14 个数据集的规模、License、下载方式与自采版权风险）见专报 [`docs/DATASETS.md`](../DATASETS.md)。
+> 14 个免费公开数据集详表与自采版权分析见专报 [`docs/DATASETS.md`](../DATASETS.md)。
 
 ---
 
@@ -143,35 +142,34 @@
 
 | 里程碑任务 | 代表性深度网络 Pipeline | 代表论文 |
 | --- | --- | --- |
-| **单面商品海报与中文文字生成** | `产品前景图 + 布局规划器(MLLM/LayoutDM) → SceneGenNet 背景生成 + TextRenderNet / WriteNet+AttnX 字形分支 → 单面 RGB 海报` | PosterMaker (CVPR 2025); AnyText2 (2024); PosterLLaVA (IEEE TMM 2026) |
-| **品牌风格与主体控制** | `冻结扩散主干(SDXL/SD3/Flux) + 轻量适配器(LoRA / IP-Adapter 解耦层 InstantStyle / DINOv2 AnyDoor) → 风格或主体锁定图像` | IP-Adapter (2023); InstantStyle (2024); AnyDoor (CVPR 2024) |
-| **3D 多视角与无光照 UV 贴图** | `3D 网格深度/法线/UV 坐标图 → 粗阶段多视角一致扩散(MV-Adapter) → 细阶段去光照 UV 空间修补扩散(Paint3D) → 无缝 3D 贴图` | TEXTure (SIGGRAPH 2023); Paint3D (CVPR 2024); MV-Adapter (ICCV 2025) |
-| **透明多图层与高分辨率合成** | `潜在透明偏移编码(LayerDiffusion) / RGBA 协议 JSON(CreatiPoster) + 小波 4K 扩散(Diffusion-4K) → 可编辑高清分层文档` | LayerDiffusion (SIGGRAPH 2024); CreatiPoster (2025); Diffusion-4K (CVPR 2025) |
-| **本课题目标空白（包装专用 DL 架构）** | `参数化刀版拓扑图(面邻接矩阵+折线/出血掩码) + 品类/文化解耦编码 + 品牌资产锁定 → 刀版拓扑感知跨面注意力扩散(无光照 UV 底图) + 双轨文字合成(大标题视觉文字分支 + 背面矢量法规排版层) + 印前 CMYK/安全区引导 → 2D 可印刷刀版图 & 3D 折叠多视图` | **当前文献空白（本课题核心方法靶点）** |
+| **单面商品海报与中文文字生成** | `产品图 + 版式规划(MLLM/LayoutDM) → SceneGenNet + TextRenderNet / AnyText2 → 单面 RGB 海报` | PosterMaker (CVPR 2025); AnyText2 (2024); PosterLLaVA (IEEE TMM 2026) |
+| **3D 网格跨视角无缝纹理生成** | `3D 网格多视角渲染(深度/法线) → 共享潜空间/纹理域同步多视角去噪(TexFusion / SyncMVD) → 去光照精修(Paint3D) / 遮挡修补与接缝平滑(MVPaint) → 3D 渲染 UV 贴图` | TexFusion (ICCV 2023); Paint3D (CVPR 2024); SyncMVD (SIGGRAPH Asia 2024); MVPaint (CVPR 2025) |
+| **品牌风格/主体控制与透明分层** | `冻结扩散底座 + IP-Adapter/InstantStyle/AnyDoor + LayerDiffusion → 可分离风格化前景与背景` | IP-Adapter (2023); InstantStyle (2024); AnyDoor (CVPR 2024); LayerDiffusion (SIGGRAPH 2024) |
+| **本课题目标空白（印刷硬约束刀版生成）** | `参数化刀版 UV 网格(可见面/粘口插舌不可见面/3 mm 出血与安全区/每面正向旋转角) → 免训练同步潜空间 UV 去噪(去光照+不可见面留白+出血延展+分面正向旋转对齐) + 可微 CMYK 软色域引导 + 双轨中文文字(艺术大字扩散 + 背面矢量法规层) → 可印刷 2D 刀版稿 & 3D 折叠多视图` | **现有 3D 纹理同步方法与 2D 海报方法均未联合覆盖的交叉空白** |
 
 ---
 
 ## 难点—解法树（深度学习做包装设计的五大具体技术难点）
 
-| 具体技术难点 | 现有代表性深度学习方法 | 来自 | 在包装设计上的具体空白（为什么现有方法还不够好） | 别的数据域里有没有同内核的解法 |
+| 具体技术难点 | 现有代表性方法 | 来自 | 在包装设计上的具体空白 | 别的数据域里有没有同内核的解法 |
 | --- | --- | --- | --- | --- |
-| **T1：包装上中文文字渲染错误**（大标题艺术字错笔画、背面密集配料表/营养表乱码、折面/曲面文字畸变） | AnyText (ICLR 2024)、AnyText2 (2024)、Glyph-ByT5-v2 (2024)、UDiffText (ECCV 2024)、PosterMaker (CVPR 2025)、FonTS (ICCV 2025) | CV/AI 顶会 | 现有方法仅验证**短句大标题**（1–15 字）；农产品包装正面需地域风格中文艺术大字，背面/侧面同时含 **100–300 字小号法规文本与表格**，像素扩散在密集小字上 CER 依然极高且不可单黑印刷；缺乏**“视觉艺术字扩散分支 + 法定信息矢量排版掩码保护”双轨协同架构** | 有：前端网页代码生成（Design2Code NAACL 2025）与多层海报协议（CreatiPoster 2025）采用结构化渲染避免密集小字像素崩坏 |
-| **T2：品牌元素与跨 SKU 主体一致性**（多口味/多规格/多盒型下 Logo 变形、IP 漂移、主色板 $\Delta E_{00}$ 偏移） | LoRA (2021)、DreamBooth (CVPR 2023)、IP-Adapter (2023)、InstantStyle (2024)、AnyDoor (CVPR 2024) | CV 顶会 | 单用 IP-Adapter 易把参考图的旧构图/文字一起带入（语义泄露），单用 LoRA 需为每个县域小品牌重训；针对同一农产品品牌下 **3–6 个不同规格/口味 SKU 同步锁定 Logo 几何、主色板与文化纹样**，尚缺免重训的多条件色板+标志保持引导机制 | 有：视频/故事生成中的跨帧一致性注意力（Consistent Self-Attention）与 InstantStyle 层级注入 |
-| **T3：多面展开图 / 刀版与 3D 包装效果图的对应**（折线处图案断裂、顶盖/侧面文字倒置、模切/糊口区误绘、3D 渲染阴影污染 2D 印稿） | ControlNet (ICCV 2023)、TEXTure (SIGGRAPH 2023)、Paint3D (CVPR 2024)、MV-Adapter (ICCV 2025) | CV/图形学顶会 | **最核心空白**：直接用 2D 扩散画展开图会导致物理折叠后相邻共边严重错位、侧面图文方向颠倒；而 Paint3D/MV-Adapter 面向任意 3D 雕塑网格，**未利用工业折叠纸盒的刚性平面折面拓扑（已知精确的边邻接映射与 90°/180° 旋转对应关系）**。把“刀版邻接边循环卷积 / 跨折面配对注意力 + 去光照 UV 约束”引入扩散模型，是极具技术含金量的原创新机制 | 有：全景图无缝生成中的 **Circular Padding / MultiDiffusion 跨边界特征对齐** 与 MV-Adapter 的并行多视角注意力（极少数远域有同内核解法 → **情况 3**！） |
-| **T4：按产品类别与地域文化风格精准控制**（类别先验与地域纹样耦合导致“茶叶不像茶叶、文化符号僵硬贴图”） | CGL-GAN (IJCAI 2022)、PosterLayout (CVPR 2023)、SD3 (ICML 2024)、InstantStyle (2024)、ARIA-Diff (*Mathematics* 2026) | CV 顶会 & SCIE | 现有农产品包装研究靠人工拼凑长 Prompt（易同质化且跨品类泛化差）；缺乏将**产品品类结构先验（茶盒/果干袋/罐贴）**与**地域文化风格嵌入**在特征空间正交解耦、并结合客观原则奖励对齐的可控扩散微调方法 | 有：属性解耦风格迁移（InstantStyle）与奖励微调（Diffusion-DPO / Flow-GRPO NeurIPS 2025） |
-| **T5：生成结果的可印刷性与可编辑性**（分辨率不足 300 DPI、RGB 荧光色转 CMYK 色域崩溃、不可分图层修改、图文越过出血/压痕线） | LayerDiffusion (SIGGRAPH 2024)、Diffusion-4K (CVPR 2025)、StarVector (CVPR 2025)、PosterLLaVA (IEEE TMM 2026) | CV/图形学顶会 | 现有模型全在 sRGB 屏幕域优化，无 CMYK 色域惩罚损失、无出血/模切安全区掩码约束、无图层化印前导出；生成图在视觉上好看，却无法直接制版 | 有：可持续城市设计双层评测（Jung 2026 *Sustainability*）与可微色彩空间投影（sRGB→CMYK soft-gamut loss） |
+| **T1：包装上中文文字渲染错误** | AnyText (ICLR 2024)、AnyText2 (2024)、Glyph-ByT5-v2 (2024)、UDiffText (ECCV 2024)、PosterMaker (CVPR 2025)、FonTS (ICCV 2025) | CV/AI 顶会 | 现有方法面向单面大标题；包装背面需渲染 **100–300 字小号中文配料表与 1+6 营养表**，像素扩散难以满足零错字与单黑矢量印刷，需与正面艺术大字分轨协同处理 | 有：网页代码生成（Design2Code NAACL 2025）与多层协议（CreatiPoster 2025）通过结构化矢量/代码层规避密集小字像素畸变 |
+| **T2：品牌元素与跨 SKU 一致性** | LoRA (2021)、DreamBooth (CVPR 2023)、IP-Adapter (2023)、InstantStyle (2024)、AnyDoor (CVPR 2024) | CV 顶会 | 多口味/多盒型系列生成时仍易出现 Logo 畸变、主色板 $\Delta E_{00}$ 偏移与参考图构图泄露 | 有：跨帧一致自注意力与层级风格解耦（InstantStyle） |
+| **T3：2D 刀版展开图与 3D 折叠多面对应及印刷硬约束** | **TexFusion (ICCV 2023)、SyncMVD (SIGGRAPH Asia 2024)、Paint3D (CVPR 2024)、Point-UV (ICCV 2023)、RoCoTex (2024)、MVPaint (CVPR 2025)、MV-Adapter (ICCV 2025)** | CV/图形学顶会 | **通用跨视角无缝贴图在 3D 纹理领域已有较成熟方案**；但直接套用到纸盒网格上仍无法解决六大印刷硬约束：**① 粘口/插舌/防尘翼等 3D 不可见面的留白或上胶免油墨规则；② 3 mm 出血线外扩与模切/压痕安全区保护；③ 各折面折叠后文字物理朝上的旋转角约束；④ 严格无光照平面印刷稿；⑤ CMYK 印刷色域；⑥ 背面密集中文小字** | **有成熟同内核解法**：3D 网格纹理同步去噪（TexFusion / SyncMVD / MVPaint）已解决共享 UV 潜空间同步的核心机理，本课题属于将其改造迁移至印刷硬约束包装场景（**情况 2**） |
+| **T4：按产品类别与地域文化风格解耦控制** | CGL-GAN (IJCAI 2022)、PosterLayout (CVPR 2023)、SD3 (ICML 2024)、InstantStyle (2024)、ARIA-Diff (*Mathematics* 2026) | CV 顶会 & SCIE | 农产品品类结构先验与地域文化纹样在提示词中易相互干扰，尚缺面向包装类别与风格的正交控制机制 | 有：属性解耦风格注入（InstantStyle）与受约束奖励对齐（ARIA-Diff） |
+| **T5：生成结果的可印刷性与可编辑性** | LayerDiffusion (SIGGRAPH 2024)、Diffusion-4K (CVPR 2025)、StarVector (CVPR 2025)、PosterLLaVA (IEEE TMM 2026) | CV/图形学顶会 | 现有模型在 sRGB 屏幕域优化，缺少可微 CMYK 色域引导、300 DPI 高频细节保真与刀版分层矢量导出 | 有：可微色彩空间投影（sRGB→CMYK soft-gamut penalty）与双层客观评测（Jung 2026 *Sustainability*） |
 
 ---
 
-## 候选课题（全部定位为深度学习/AI 方法论文，纯客观指标 A 套）
+## 候选课题（深度学习方法 + 纯客观指标 A 套）
 
-| 候选 | 设定（输入 → 输出） | 要解决的具体技术难点或 failure case | 来源 |
+| 候选 | 设定（输入 → 输出） | 要解决的具体问题或 failure case | 来源 |
 | --- | --- | --- | --- |
-| **DL-1：刀版拓扑感知的多面一致包装扩散模型（DieLineDiff）** | 输入：参数化 2D 刀版拓扑（面掩码、共边邻接表、旋转角、出血/安全区）+ 品类/文化提示 + 品牌参考图 → 输出：跨折线无缝连续、无光照 2D 印刷展开图 + 精确对应的 3D 折叠多视角图 | **T3（刀版与 3D 多面对应断裂、文字倒置）+ T2（跨面风格/色板一致性）+ T5（出血与安全区越界）** | 难点—解法树 + 新锤子（迁移 MV-Adapter / Paint3D / 跨缝特征对齐） |
-| **DL-2：双轨图文解耦与印前引导的中文农产品包装生成框架（PackLayText）** | 输入：包装品类与文化文本 + 中文艺术标题 + 结构化法定标签 JSON（配料/营养/条码）+ 品牌色板 → 输出：高准中文艺术标题前景 + 零错矢量法规层 + 避让显著性主体且符合 CMYK 色域约束的完整分层包装图 | **T1（中文密集小字乱码）+ T4（类别与风格解耦）+ T5（可印刷 CMYK 色域与无重叠合规版式）** | failure case + 工程问题转科学问题（改进 PosterMaker / LayerDiffusion） |
-| **DL-3：跨 SKU 品牌一致性与类别-文化解耦的可控包装生成网络（BrandPack-Adapter）** | 输入：1 张品牌核心资产（Logo + 3–5 主色 + 文化参考图）+ N 个不同产品类别/规格条件 → 输出：一套跨 SKU 风格/Logo/色板高度锁定且品类特征清晰的系列化包装图 | **T2（跨 SKU 品牌漂移与语义泄露）+ T4（按产品类别与文化解耦控制）** | 用户需求 + failure case（改进 IP-Adapter / InstantStyle） |
-| **DL-4：基于可微 CMYK 色域损失与多目标奖励对齐的可印刷包装扩散微调（PrintAlign-Diff）** | 输入：预训练扩散模型 + 公开食品包装库 → 输出：经 CMYK 可微色域惩罚、OCR 正确率奖励与版式规则奖励对齐后的包装专用扩散权重 | **T1 + T5（用 Flow-GRPO / 奖励微调解决 RGB 色域溢出与排版违规）** | 新锤子（迁移 Flow-GRPO NeurIPS 2025 / ARIA-Diff *Mathematics* 2026） |
-| **DL-5：传统“感性工学 + 商用 Midjourney + 问卷/AHP”包装研究** | 输入：调研问卷 + Midjourney 提示词 → 输出：概念效果图 | 无深度学习方法创新且依赖人工被试 | 对照排除项 |
+| **DL-1（免训练优先）：面向印刷硬约束的刀版同步包装扩散框架（PrintDieLine-Sync / DieLineDiff）** | 输入：参数化 2D 刀版网格与功能区掩码（可见面、粘口/插舌不可见面、3 mm 出血、安全区、分面正向旋转角）+ 品类/文化文本 + 中文标题与法定标签 JSON → 输出：无光照 2D 可印刷 CMYK 刀版稿 + 几何一致 3D 折叠多视角图 | 针对直接把 TexFusion / SyncMVD / Paint3D 跑在纸盒网格上时产生的六大印刷失效（粘口污染、出血截断、侧面文字倒置、光照烘焙、CMYK 溢色、中文小字乱码），提出免训练推理期同步与约束引导框架 | 难点—解法树 + failure case（面向 3D 纹理同步的新约束迁移） |
+| **DL-2：双轨图文解耦与印前引导的中文包装生成框架（PackLayText）** | 输入：包装品类与地域风格条件 + 中文艺术标题 + 结构化法定标签 JSON + 品牌色板 → 输出：高准艺术大字 + 零错矢量法规层 + 满足显著性避让与 CMYK 色域约束的分层包装 | T1（中文密集小字错乱）+ T4（类别与风格解耦）+ T5（CMYK 色域与版式重叠） | failure case + 工程问题转科学问题 |
+| **DL-3：跨 SKU 品牌一致与品类-文化解耦适配器（BrandPack-Adapter）** | 输入：1 组品牌资产（Logo + 主色板 + 文化参考）+ 多规格/品类条件 → 输出：跨 SKU 色偏低、标识保持稳定的系列包装 | T2（跨 SKU 漂移与语义泄露）+ T4（品类—文化解耦） | 用户需求 + failure case |
+| **DL-4：基于真实数据/多目标客观奖励的包装扩散对齐微调（PrintAlign-Diff）** | 输入：冻结扩散模型 + 真实公开包装分布（Open Food Facts / RPC）与客观印刷/OCR 奖励 → 输出：对齐后的包装专用轻量权重 | T1 + T5（减少 CMYK 溢色与排版违规） | 新锤子（ARIA-Diff / 扩散对齐） |
+| **DL-5：传统感性工学 + 商用 Midjourney + 问卷/AHP** | 输入：调研问卷 + 提示词 → 输出：单面概念效果图 | 无深度学习方法创新且依赖人工评价 | 淘汰对照组 |
 
 ---
 
@@ -183,26 +181,26 @@
 3. “只有少数一两个完全不同 data domain、技术问题内核相同的任务，有不错的解决方案。”
 4. “在各个不同领域的任务中，虽然有类似的技术问题，但都没有较好的解决方案。”
 
-> 注：彭思达课件只指出“不同问题的创新空间区别很大”，并未给四种情况排序；下表判断与优先级由本研究结合“纯客观指标 A 套 + 单卡 RTX 5090 + 零付费数据 + 目标 OA SCIE”独立作出。
+> 注：彭思达课件只指出“不同问题的创新空间区别很大”，并未对四种情况排序；下表判断由本研究基于补全后的 3D 纹理生成脉络与约束条件独立作出。
 
 | 候选 | 属于哪种情况 | 理由 | 与已有工作的区别类型 | 初步结论 |
 | --- | --- | --- | --- | --- |
-| **DL-1：刀版拓扑感知的多面一致包装扩散模型（DieLineDiff）** | **情况 3** | 技术内核（“已知刚性拓扑邻接关系下的跨区域无缝一致扩散 + 去光照 UV 生成”）目前仅在少数远域（通用 3D 网格 Paint3D/MV-Adapter、全景图无缝拼接）有解法；引入工业折叠包装的精确刀版邻接映射、90°/180° 折面朝向约束与出血/安全区掩码后，问题几何结构清晰且能用**纯客观 3D 重投影 SSIM + 跨折线缝隙 PSNR + 越界率**铁证胜出，完全不需人工评价！ | **克服现有方案局限 + 换一个角度看问题（从 2D 平面图升级为刀版拓扑感知多面生成）+ 更有效的方法** | **最优先（方法创新最强、最抗审稿、最适合纯客观指标）** |
-| **DL-2：双轨图文解耦与印前引导的中文包装生成框架（PackLayText）** | **情况 2**（部分情况 3） | 商品海报文字+场景解耦在 PosterMaker (CVPR 2025) 和 CreatiPoster (2025) 已有强先例，迁移至中文农产品包装并增加“密集小字矢量层保护 + 刀版安全区 + CMYK 可微色域约束”，新约束清晰且所有增益（OCR CER、CMYK 溢出率、Overlap、GB 7718 规则通过率）均可 100% 客观定量验证 | **克服现有方案局限 + 满足新场景硬约束** | **优先（工程落地稳妥，可与 DL-1 模块化组合或独立成篇）** |
-| **DL-3：跨 SKU 品牌一致与类别-文化解耦适配器（BrandPack-Adapter）** | **情况 2** | 风格/主体解耦适配器在 InstantStyle/IP-Adapter/AnyDoor 已有较成熟路线，迁移至多 SKU 包装系列并引入色板 $\Delta E_{00}$ 与 Logo 保持约束，区分度中等偏稳，但方法新意略逊于 DL-1 | **改善可控性与跨 SKU 一致性** | **备选（可作为 DL-1 的“大胆尝试”扩展分支）** |
-| **DL-4：多目标客观奖励对齐扩散微调（PrintAlign-Diff）** | **情况 2** | 扩散在线奖励微调（Flow-GRPO / DPO / ARIA-Diff）在通用生图与室内设计已热，用于包装 CMYK/OCR 奖励对齐有一定新意，但训练稳定性与奖励 hacking（为了压低 CMYK 溢出导致画面灰暗）调试周期较长 | **更有效的对齐训练方法** | **备选（作后续或消融中的增强模块，不作首篇唯一押注）** |
-| **DL-5：感性工学 + Midjourney + 问卷/AHP** | **情况 1** | 已被 2025–2026 多篇 SCI/SSCI 充分解决，且违背“深度学习方法 + 零被试”两条作者硬约束 | 无实质方法区别 | **坚决换题（淘汰）** |
+| **DL-1：印刷硬约束刀版同步包装扩散框架（DieLineDiff，免训练优先）** | **情况 2**（已从情况 3 审慎回调） | 跨视角、跨接缝 3D 网格纹理同步（TexFusion、SyncMVD、Paint3D、MVPaint）在图形学领域已有较成熟方案，折叠纸盒 UV 本质上也是 3D 网格贴图；本课题属于**将成熟的多视角同步技术迁移到带有印刷硬约束的新场景**，核心贡献在于系统揭示并解决现有 3D 纹理同步方法在粘口/插舌不可见面、出血线与安全区、分面文字物理朝上、无光照平稿、CMYK 色域及密集中文小字上的结构性失效，且无需人工评价即可用客观指标清晰度量 | **克服现有方案在新约束下的局限 + 满足工业印刷新需求** | **优先（核心推荐，主方法优先采用免训练推理同步与引导）** |
+| **DL-2：双轨图文解耦与印前引导中文包装框架（PackLayText）** | **情况 2** | 单面商品海报图文解耦在 PosterMaker (CVPR 2025) 和 CreatiPoster (2025) 已有强先例，迁移至中文预包装食品并引入密集中文法规矢量层保护与 CMYK 软色域引导，新约束清晰且所有指标均可自动评测 | **克服现有方案局限 + 满足新场景硬约束** | **优先（可与 DL-1 融为一体作为其图文与印前约束模块）** |
+| **DL-3：跨 SKU 品牌一致与品类-文化解耦适配器** | **情况 2** | 风格/主体适配器（IP-Adapter / InstantStyle / AnyDoor）较成熟，扩展至跨 SKU 品牌色板 $\Delta E_{00}$ 与标识保持，适合作为增强分支 | **改善跨 SKU 可控性与一致性** | **备选（可作 DL-1 的可选扩展）** |
+| **DL-4：客观奖励对齐扩散微调（PrintAlign-Diff）** | **情况 2** | 扩散对齐微调在通用生图与室内设计已有先例，需防范多目标奖励冲突导致画质退化，调参周期较长 | **更有效的微调对齐方法** | **备选（作为后续训练式加分项）** |
+| **DL-5：感性工学 + Midjourney + 问卷/AHP** | **情况 1** | 已有大量成熟先例，且不符合“深度学习方法 + 零被试”约束 | 无实质方法区别 | **换题（淘汰）** |
 
 ---
 
 ## 未核实事项与下一步
 
 ### 未核实事项
-1. **未核对的 2 篇种子文献**：Tao Chen（Semarak Ilmu 标题）与 SAUNIC 2026（寨子乡论文）在 OpenAlex / Crossref / 公开网页均未定位独立 DOI 或官方出版页，已标 `verified=no`。
-2. **公开数据集下载实测**：`docs/DATASETS.md` 中 14 个公开数据集的规模与许可均来自官方仓库/HuggingFace/论文页公开说明，实际拉取（尤其是国内网络访问 HuggingFace / AWS S3 下载速度及 PKU PosterLayout 协议审批耗时）需在开工第一周实测确认。
-3. **空白判断边界**：关于“尚未见将折叠纸盒参数化刀版邻接拓扑显式编入扩散模型跨面注意力的 SCIE/顶会论文”的结论基于 2026-11-24 在 OpenAlex / Crossref / arXiv 的 34 组检索，不含尚未公开的在审预印本。
+1. **5 篇标为 `verified=no` 的条目**（详见 `literature/papers.csv`）：
+   - 2 篇未定位独立 DOI 的种子文献：Tao Chen（Semarak Ilmu 标题）、SAUNIC 2026（寨子乡论文）。
+   - 3 篇付费墙阻挡摘要的 Elsevier 文献：`10.1016/j.engappai.2025.112865`、`10.1016/j.foodcont.2023.110101`、`10.1016/j.jrurstud.2019.09.010`（均已确认 DOI 真实存在并跳转 Elsevier 官方页，但因未能读取摘要原文，按严格核对规则暂标 `verified=no`，不作为核心论证依据）。
+2. **公开数据集拉取实测**：[`docs/DATASETS.md`](../DATASETS.md) 中 14 个数据集的下载速度与协议审批周期需在开工首周实测。
 
 ### 下一步
-- [ ] 阅读 [`docs/DATASETS.md`](../DATASETS.md)，确定首阶段下载的公开数据集子集（推荐优先拉取 **Open Food Facts + RPC + Crello + AnyWord-3M 小子集**，零申请直下）并搭建 Blender 参数化折叠盒型合成脚本。
-- [ ] 阅读 [`docs/INNOVATION.md`](../INNOVATION.md)，确认首选深度学习方法切入点（推荐 **DL-1 刀版拓扑感知多面一致扩散**，或稳健版 **DL-2 双轨中文图文与印前约束生成**）并立刻启动 1 周最小验证实验。
-- [ ] 阅读 [`docs/JOURNALS.md`](../JOURNALS.md)，按单位对 MDPI / IEEE Access / 综合 SCIE 刊的认定口径敲定 1–2 本目标纯 OA SCIE 期刊。
+- [ ] 阅读修订后的 [`docs/INNOVATION.md`](../INNOVATION.md)，确认“**免训练推理期同步与印刷硬约束引导为主方法** + 纳入 TexFusion/SyncMVD/Paint3D/MVPaint 纸盒网格基线”的实验路线。
+- [ ] 启动 1 周最小验证实验：在标准 ECMA A20 折叠纸盒 3D 网格（以刀版为 UV）上直接运行 SyncMVD / Paint3D 开源基线，定量暴露其在粘口/插舌、出血安全区、文字朝向、CMYK 色域与中文小字上的失效数据，并验证免训练印刷硬约束同步原型的客观增益。
