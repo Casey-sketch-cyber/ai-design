@@ -4,7 +4,7 @@
 
 ## 当前状态
 
-任务 07 已由 Claude 审查并合并（PR #7）。v3 的环带部分明显优于基线：L—B 环绕缝 ΔE00 为 4.07，对照组为 11.6—13.8；出血两种口径都更高；21.6 秒/盒。Step 1 关口没过，原因集中在顶面和底面：盖面与侧面在风格、色调上不连续。任务 08（Codex 修盖面）与任务 09（Gemini 审阅）已下达，并行进行。
+任务 08 已完成盖面单项试验。RTX 3090 在前十盒上依次评估 C1a、C1b、C2、C3 和 C4，最终保留 C1a + inpainting + 盖面放大。环带与任务 07 逐像素一致，指标冻结记录核验通过。盖面六缝有改善，七条非原生缝和全盒条带仍未过关，停在 Step 1，待 Claude 审查。
 
 ## 待办
 
@@ -20,7 +20,7 @@
 - [x] Claude：复审并合并 PR #5，完成 docs/METHOD_V3_CONSENSUS.md
 - [x] Codex：完成任务 07 Step 0 和 Step 1（见 E02 报告，关口未过）
 - [x] Claude：审查任务 07 的 PR #7，通过并合并（2026-11-25）
-- [ ] Codex：任务 08，见 `tasks/08-codex-v3-cap-fix.md`（盖面修复，做完停下等审查）
+- [x] Codex：任务 08，见 `tasks/08-codex-v3-cap-fix.md`（盖面修复，已完成，关口未过）
 - [x] Gemini：任务 09，见 `tasks/09-gemini-v3-cap-review.md`（已在 PR #7 留言审阅并补录 C5 相关 4 篇文献）
 - [ ] Claude：审查任务 08 的 PR，结合 Gemini 意见，和 Gemini 讨论后续
 - [x] Claude：审查任务 01 的 PR #1（2026-11-24，退回）
@@ -40,14 +40,8 @@
 
 ## 工作记录
 
-### 2026-11-25 · gemini · gemini/v3-cap-review（任务 09：v3 Step 1 审阅与盖面修复建议）
-- **完成**：
-  - 核查 E02 报告、示例图、`native-folds*.png`、`results.csv`、`v3.py` / `v3_geometry.py` / `v3_attention.py` 及留出集简报 `E01-011` 至 `E01-050`，已在 **PR #7 下完成 4 问审阅留言**（https://github.com/Casey-sketch-cyber/ai-design/pull/7#issuecomment-7156686175）：
-    1. 结合顶底不对称数据（`top_seam_lpips 0.600` vs `bottom 0.473`）与源码，指出盖面问题由提示词、基础 UNet 无重采样早期低频失配、`halos` 16–24 px 间隙和小画布尺度共同造成，并定位了 `v3.py:162` 仅缓存末步 $t \approx 0$ K/V 注入全部高噪步导致共享注意力变差的时间步错配 Bug；
-    2. 提出零新增权重、极低开销的 **C5（边界调和/Coons 插值初始化 + SDEdit 部分加噪 / ILVR 低频先验 + 可选 AdaIN 统计对齐）**，建议在任务 08 优先于 C4 叠加测试；
-    3. 给出论文中顶面徽章与侧面延续的取舍（优先 `顶面 C1b + 底面 C1a`，兜底 `C1a + S2 双轨矢量叠加` 并透明报告消融）；
-    4. 预警 Step 2 留出集 4 类风险（剪纸/窗棂/红果等高对比与 OOG% 回升、`E01-001` 暴露的环带纵向三横幅分裂、10 盒长尾过拟合与 `stripe_index` 窄容差、C2 双 UNet 显存与色温一致性）。
-  - 在分支 `gemini/v3-cap-review` 补充核对 4 篇文献（`Poisson image editing`、`AdaIN`、`ILVR`、`SDXL`，均 `verified=yes, abstract`）至 `literature/papers.csv`（总计 133 篇，128 篇已核对，0 违规）与 `literature/search-log.md`（Q42），并提交 PR 待 Claude 合并。
+- [x] Codex：任务 08，见 `tasks/08-codex-v3-cap-fix.md`（盖面修复，已完成，关口未过）
+- [x] Gemini：任务 09，见 `tasks/09-gemini-v3-cap-review.md`（已在 PR #7 留言审阅并补录 C5 相关 4 篇文献）
 
 ### 2026-11-25 · claude · main
 - **完成**：审查并合并 PR #7；下达任务 08（Codex 盖面修复）和任务 09（Gemini 审阅）。

@@ -1,0 +1,424 @@
+{
+  "stages": [
+    {
+      "stage": "C1",
+      "n": 10,
+      "reference": "c1a",
+      "challenger": "c1b",
+      "means": {
+        "c1a": {
+          "cap_6_delta_e00": 24.60438967148463,
+          "cap_6_lpips": 0.5289378295342128,
+          "non_native_7_sdr": 7.64907169342041,
+          "non_native_7_lpips": 0.47714726084045,
+          "stripe_index": 1.4515291847829281,
+          "clip_score": 0.6818266734480858,
+          "image_reward": -1.6412352681159974,
+          "elapsed_seconds": 21.901468839868905,
+          "peak_memory_mib": 10422.250146484375
+        },
+        "c1b": {
+          "cap_6_delta_e00": 24.795440884431205,
+          "cap_6_lpips": 0.5287467708190282,
+          "non_native_7_sdr": 7.739206409454345,
+          "non_native_7_lpips": 0.4769834962274347,
+          "stripe_index": 1.4969259232492607,
+          "clip_score": 0.6851334124803543,
+          "image_reward": -1.6644490599632262,
+          "elapsed_seconds": 21.99689820315689,
+          "peak_memory_mib": 10422.250146484375
+        }
+      },
+      "hardware": {
+        "c1a": {
+          "passed": true,
+          "highest_sample_seconds": 22.717103373259306,
+          "highest_sample_peak_mib": 10422.25048828125,
+          "seconds_limit": 60,
+          "peak_mib_limit": 20480,
+          "over_limit": []
+        },
+        "c1b": {
+          "passed": true,
+          "highest_sample_seconds": 22.41447209380567,
+          "highest_sample_peak_mib": 10422.25048828125,
+          "seconds_limit": 60,
+          "peak_mib_limit": 20480,
+          "over_limit": []
+        }
+      },
+      "challenger_minus_reference": {
+        "cap_6_delta_e00": 0.1910512129465758,
+        "cap_6_lpips": -0.00019105871518454443,
+        "non_native_7_sdr": 0.09013471603393519,
+        "non_native_7_lpips": -0.00016376461301531586,
+        "stripe_index": 0.04539673846633252,
+        "clip_score": 0.003306739032268524,
+        "image_reward": -0.023213791847228826,
+        "elapsed_seconds": 0.0954293632879839
+      },
+      "challenger_wins": [
+        "cap_6_lpips",
+        "non_native_7_lpips",
+        "clip_score"
+      ],
+      "challenger_losses": [
+        "cap_6_delta_e00",
+        "non_native_7_sdr",
+        "stripe_index",
+        "image_reward"
+      ],
+      "ties": [
+        "elapsed_seconds"
+      ],
+      "challenger_net_votes": -1,
+      "selected": "c1a",
+      "reason": "net_votes",
+      "scores_sha256": {
+        "c1a/E01-001-42": "d37e213af0dc7ffc176765d2e9be9d2bc30b74b370a6094f7dabf5c195bbff1b",
+        "c1a/E01-002-42": "3322c8c333cc8b99844ae82388c187653b779e8298eb98aee04b68422c75d713",
+        "c1a/E01-003-42": "edc4b492062361d39ca546bd8c67b0d55751264bafd531777b8683849dff8253",
+        "c1a/E01-004-42": "fd48e59af29925220d5dc33cdc03371886a02b956b23f4ddbd05d73b64e9328d",
+        "c1a/E01-005-42": "296a5a262593e039fbc638ef70c89a848bcf6150a699400f5ea98652187ea911",
+        "c1a/E01-006-42": "6bc29f11fd6316491c9d0f58908969e901deb80068808235f69886b2b77f7589",
+        "c1a/E01-007-42": "33402e29717662e2569b692bdd477c7db97cee0c4e996cc9d5ed8e2dfb3bebc2",
+        "c1a/E01-008-42": "ca9af849cb87d9e3cac61ddfc04407763a446f3e20b5be95dcdfc1d8e7ec5725",
+        "c1a/E01-009-42": "f999180e5ed23e3a8813270e70dfc1335a44dc506946dddc60d7b09395713b9e",
+        "c1a/E01-010-42": "cfeb0556be92696febacde676656323b953ef5d131e27f8799368c7a688abd55",
+        "c1b/E01-001-42": "ba3b1b4d1ba814d970690a64a0ea34247178aee8b236b07d0b676d5ce78b5596",
+        "c1b/E01-002-42": "06b21b2929f1a471014b7e76bdd3f8ee89a70a92960cc9d38cbdb8cc52bddf10",
+        "c1b/E01-003-42": "889cfcc5f99c724e3c3878db6414cd5baba6af22055f162a758619d12876a1f7",
+        "c1b/E01-004-42": "d4f6590d6140bdcc45e50bd92bbee59ceded15e78f5d3d6e7f6578b193bb2ce5",
+        "c1b/E01-005-42": "50222153e3a8426ca2100de19ec0b0e6862e2c36158f467eb7fc52854779acf5",
+        "c1b/E01-006-42": "fd4aa80963ebe978435417d02ed6e4c2988800ae0e19563b2e3ad33b3dbff6e9",
+        "c1b/E01-007-42": "bfda3c9bc77762316f96eb500e805733bb93ba136ec3c4e5b3b868a82e0c4344",
+        "c1b/E01-008-42": "2c9c8293842e0b8105631ad7dc48359f888f6fc771a222f202ffe831d4daa2f6",
+        "c1b/E01-009-42": "c5f25af3da06a362096491ed4ac67daf4d6fc452cff30068799dbf788fa59450",
+        "c1b/E01-010-42": "66730fcc20a9df3b8583305f7d01a1ed57fa80896e744d071f42dc79c2012e77"
+      }
+    },
+    {
+      "stage": "C2",
+      "n": 10,
+      "reference": "c1a",
+      "challenger": "c2",
+      "means": {
+        "c1a": {
+          "cap_6_delta_e00": 24.60438967148463,
+          "cap_6_lpips": 0.5289378295342128,
+          "non_native_7_sdr": 7.64907169342041,
+          "non_native_7_lpips": 0.47714726084045,
+          "stripe_index": 1.4515291847829281,
+          "clip_score": 0.6818266734480858,
+          "image_reward": -1.6412352681159974,
+          "elapsed_seconds": 21.901468839868905,
+          "peak_memory_mib": 10422.250146484375
+        },
+        "c2": {
+          "cap_6_delta_e00": 23.31080131928126,
+          "cap_6_lpips": 0.5206311603387197,
+          "non_native_7_sdr": 7.83288345336914,
+          "non_native_7_lpips": 0.47002725867288453,
+          "stripe_index": 1.3082904074941524,
+          "clip_score": 0.6771496012806892,
+          "image_reward": -1.6530464887619019,
+          "elapsed_seconds": 21.970162948779763,
+          "peak_memory_mib": 10422.250146484375
+        }
+      },
+      "hardware": {
+        "c1a": {
+          "passed": true,
+          "highest_sample_seconds": 22.717103373259306,
+          "highest_sample_peak_mib": 10422.25048828125,
+          "seconds_limit": 60,
+          "peak_mib_limit": 20480,
+          "over_limit": []
+        },
+        "c2": {
+          "passed": true,
+          "highest_sample_seconds": 22.743373153731227,
+          "highest_sample_peak_mib": 10422.25048828125,
+          "seconds_limit": 60,
+          "peak_mib_limit": 20480,
+          "over_limit": []
+        }
+      },
+      "challenger_minus_reference": {
+        "cap_6_delta_e00": -1.2935883522033684,
+        "cap_6_lpips": -0.008306669195493055,
+        "non_native_7_sdr": 0.1838117599487301,
+        "non_native_7_lpips": -0.007120002167565476,
+        "stripe_index": -0.14323877728877576,
+        "clip_score": -0.004677072167396545,
+        "image_reward": -0.011811220645904452,
+        "elapsed_seconds": 0.06869410891085792
+      },
+      "challenger_wins": [
+        "cap_6_delta_e00",
+        "cap_6_lpips",
+        "non_native_7_lpips",
+        "stripe_index"
+      ],
+      "challenger_losses": [
+        "non_native_7_sdr",
+        "clip_score",
+        "image_reward"
+      ],
+      "ties": [
+        "elapsed_seconds"
+      ],
+      "challenger_net_votes": 1,
+      "selected": "c2",
+      "reason": "net_cap_improvement",
+      "scores_sha256": {
+        "c1a/E01-001-42": "d37e213af0dc7ffc176765d2e9be9d2bc30b74b370a6094f7dabf5c195bbff1b",
+        "c1a/E01-002-42": "3322c8c333cc8b99844ae82388c187653b779e8298eb98aee04b68422c75d713",
+        "c1a/E01-003-42": "edc4b492062361d39ca546bd8c67b0d55751264bafd531777b8683849dff8253",
+        "c1a/E01-004-42": "fd48e59af29925220d5dc33cdc03371886a02b956b23f4ddbd05d73b64e9328d",
+        "c1a/E01-005-42": "296a5a262593e039fbc638ef70c89a848bcf6150a699400f5ea98652187ea911",
+        "c1a/E01-006-42": "6bc29f11fd6316491c9d0f58908969e901deb80068808235f69886b2b77f7589",
+        "c1a/E01-007-42": "33402e29717662e2569b692bdd477c7db97cee0c4e996cc9d5ed8e2dfb3bebc2",
+        "c1a/E01-008-42": "ca9af849cb87d9e3cac61ddfc04407763a446f3e20b5be95dcdfc1d8e7ec5725",
+        "c1a/E01-009-42": "f999180e5ed23e3a8813270e70dfc1335a44dc506946dddc60d7b09395713b9e",
+        "c1a/E01-010-42": "cfeb0556be92696febacde676656323b953ef5d131e27f8799368c7a688abd55",
+        "c2/E01-001-42": "5bbbd8f158184e62d5f9dcce2c5f9f793560b2770226058d40e803423ccc466c",
+        "c2/E01-002-42": "c7189dbcae03e7763c49b2a0fa82ded8429d3734c4654e1df73bc95c3f87e9cb",
+        "c2/E01-003-42": "6f7eaecc73b559b39434e71df0a442ca3c9617972596d9ab02be5eac090e3faa",
+        "c2/E01-004-42": "8c9594b06e8882dde96ece58e774406bcc29de4bc20d04f250e6e1d56ce257a8",
+        "c2/E01-005-42": "4c24628c28043c7d269726717f3cb436ce49f5a4a324a495f5d6784e2df77a78",
+        "c2/E01-006-42": "ba6e731ce8409b236cdcd3f6a0dcd03b9539df033925c4cfa140bb761ab92f06",
+        "c2/E01-007-42": "261cb9d106e6b98b08ff9ac0d4c9094861e45b0bf9cddcaa840ecb3d890922bb",
+        "c2/E01-008-42": "dfd314fd1e923d714666743d70d82a100c08249bd0a8d063bb33d2abdae5dd48",
+        "c2/E01-009-42": "c067463bd9927503ebed62da7f58f3526522baaed6674c665d4f7a884abd8f92",
+        "c2/E01-010-42": "b1703686651becd0fa129aa5ce9c6829362480e8a6a03a02fca1b53a25dac2ca"
+      }
+    },
+    {
+      "stage": "C3",
+      "n": 10,
+      "reference": "c2",
+      "challenger": "c3",
+      "means": {
+        "c2": {
+          "cap_6_delta_e00": 23.31080131928126,
+          "cap_6_lpips": 0.5206311603387197,
+          "non_native_7_sdr": 7.83288345336914,
+          "non_native_7_lpips": 0.47002725867288453,
+          "stripe_index": 1.3082904074941524,
+          "clip_score": 0.6771496012806892,
+          "image_reward": -1.6530464887619019,
+          "elapsed_seconds": 21.970162948779763,
+          "peak_memory_mib": 10422.250146484375
+        },
+        "c3": {
+          "cap_6_delta_e00": 21.29207710027695,
+          "cap_6_lpips": 0.47324011971553165,
+          "non_native_7_sdr": 6.945592403411865,
+          "non_native_7_lpips": 0.4294063667101519,
+          "stripe_index": 1.5979902216101705,
+          "clip_score": 0.6838448531925678,
+          "image_reward": -1.6171766519546509,
+          "elapsed_seconds": 44.776679839007556,
+          "peak_memory_mib": 10511.138671875
+        }
+      },
+      "hardware": {
+        "c2": {
+          "passed": true,
+          "highest_sample_seconds": 22.743373153731227,
+          "highest_sample_peak_mib": 10422.25048828125,
+          "seconds_limit": 60,
+          "peak_mib_limit": 20480,
+          "over_limit": []
+        },
+        "c3": {
+          "passed": true,
+          "highest_sample_seconds": 44.99536379054189,
+          "highest_sample_peak_mib": 10511.138671875,
+          "seconds_limit": 60,
+          "peak_mib_limit": 20480,
+          "over_limit": []
+        }
+      },
+      "challenger_minus_reference": {
+        "cap_6_delta_e00": -2.018724219004312,
+        "cap_6_lpips": -0.04739104062318805,
+        "non_native_7_sdr": -0.887291049957275,
+        "non_native_7_lpips": -0.04062089196273261,
+        "stripe_index": 0.2896998141160181,
+        "clip_score": 0.006695251911878586,
+        "image_reward": 0.03586983680725098,
+        "elapsed_seconds": 22.806516890227794
+      },
+      "challenger_wins": [
+        "cap_6_delta_e00",
+        "cap_6_lpips",
+        "non_native_7_sdr",
+        "non_native_7_lpips",
+        "clip_score",
+        "image_reward"
+      ],
+      "challenger_losses": [
+        "stripe_index",
+        "elapsed_seconds"
+      ],
+      "ties": [],
+      "challenger_net_votes": 4,
+      "selected": "c3",
+      "reason": "net_cap_improvement",
+      "scores_sha256": {
+        "c2/E01-001-42": "5bbbd8f158184e62d5f9dcce2c5f9f793560b2770226058d40e803423ccc466c",
+        "c2/E01-002-42": "c7189dbcae03e7763c49b2a0fa82ded8429d3734c4654e1df73bc95c3f87e9cb",
+        "c2/E01-003-42": "6f7eaecc73b559b39434e71df0a442ca3c9617972596d9ab02be5eac090e3faa",
+        "c2/E01-004-42": "8c9594b06e8882dde96ece58e774406bcc29de4bc20d04f250e6e1d56ce257a8",
+        "c2/E01-005-42": "4c24628c28043c7d269726717f3cb436ce49f5a4a324a495f5d6784e2df77a78",
+        "c2/E01-006-42": "ba6e731ce8409b236cdcd3f6a0dcd03b9539df033925c4cfa140bb761ab92f06",
+        "c2/E01-007-42": "261cb9d106e6b98b08ff9ac0d4c9094861e45b0bf9cddcaa840ecb3d890922bb",
+        "c2/E01-008-42": "dfd314fd1e923d714666743d70d82a100c08249bd0a8d063bb33d2abdae5dd48",
+        "c2/E01-009-42": "c067463bd9927503ebed62da7f58f3526522baaed6674c665d4f7a884abd8f92",
+        "c2/E01-010-42": "b1703686651becd0fa129aa5ce9c6829362480e8a6a03a02fca1b53a25dac2ca",
+        "c3/E01-001-42": "2d344c7453fd56be9918b4bbbb6ca4f3bdbec9470996df932734b7edb3e543c0",
+        "c3/E01-002-42": "739f0631b437166172940f725e8b4b31a253f3a84255d45c1f65d84178473327",
+        "c3/E01-003-42": "55dbb59c83cb3b3da322ee76056c0c6e62f823d23db6b40df46726e58a7013d9",
+        "c3/E01-004-42": "e3bd241f99d6c07a76911c7e5a2ee2bcc198e9d913639f0a97dbac4b1fc0107d",
+        "c3/E01-005-42": "778e475a6385a6479f7e2efe9533caf0e76b54486208a000916b8acf2a116953",
+        "c3/E01-006-42": "d4c946c72776cb6b00f33788d2c96866f0076f25387312d42ea07d1214d5c0f0",
+        "c3/E01-007-42": "ba70fa9ec3c32dcc942fc9d9e65ba0b48e2d9a89bb0b36b9535f5af4749274ca",
+        "c3/E01-008-42": "ccba22a597d8e4f37bd401695017e48b09537dfe78c0c1afd9eb101c2490b106",
+        "c3/E01-009-42": "460c8d5c89d26257ebf17074ffb21c88412cb64bf73005ffba8e4ff5db067db4",
+        "c3/E01-010-42": "08096c41f75b2a6a09b4a79bea385492d5f2fac7a6e07550cf486447222fd75f"
+      }
+    },
+    {
+      "stage": "C4",
+      "n": 10,
+      "reference": "c3",
+      "challenger": "c4",
+      "means": {
+        "c3": {
+          "cap_6_delta_e00": 21.29207710027695,
+          "cap_6_lpips": 0.47324011971553165,
+          "non_native_7_sdr": 6.945592403411865,
+          "non_native_7_lpips": 0.4294063667101519,
+          "stripe_index": 1.5979902216101705,
+          "clip_score": 0.6838448531925678,
+          "image_reward": -1.6171766519546509,
+          "elapsed_seconds": 44.776679839007556,
+          "peak_memory_mib": 10511.138671875
+        },
+        "c4": {
+          "cap_6_delta_e00": 22.398215345541637,
+          "cap_6_lpips": 0.48693903535604477,
+          "non_native_7_sdr": 7.295796918869018,
+          "non_native_7_lpips": 0.4411482944020203,
+          "stripe_index": 1.3282179568148345,
+          "clip_score": 0.6811342239379883,
+          "image_reward": -1.6454024195671082,
+          "elapsed_seconds": 45.60790704190731,
+          "peak_memory_mib": 10511.13916015625
+        }
+      },
+      "hardware": {
+        "c3": {
+          "passed": true,
+          "highest_sample_seconds": 44.99536379054189,
+          "highest_sample_peak_mib": 10511.138671875,
+          "seconds_limit": 60,
+          "peak_mib_limit": 20480,
+          "over_limit": []
+        },
+        "c4": {
+          "passed": true,
+          "highest_sample_seconds": 45.923564091324806,
+          "highest_sample_peak_mib": 10511.13916015625,
+          "seconds_limit": 60,
+          "peak_mib_limit": 20480,
+          "over_limit": []
+        }
+      },
+      "challenger_minus_reference": {
+        "cap_6_delta_e00": 1.1061382452646882,
+        "cap_6_lpips": 0.01369891564051312,
+        "non_native_7_sdr": 0.35020451545715314,
+        "non_native_7_lpips": 0.011741927691868381,
+        "stripe_index": -0.269772264795336,
+        "clip_score": -0.002710629254579544,
+        "image_reward": -0.02822576761245732,
+        "elapsed_seconds": 0.831227202899754
+      },
+      "challenger_wins": [
+        "stripe_index"
+      ],
+      "challenger_losses": [
+        "cap_6_delta_e00",
+        "cap_6_lpips",
+        "non_native_7_sdr",
+        "non_native_7_lpips",
+        "clip_score",
+        "image_reward",
+        "elapsed_seconds"
+      ],
+      "ties": [],
+      "challenger_net_votes": -6,
+      "selected": "c3",
+      "reason": "no_cap_improvement",
+      "scores_sha256": {
+        "c3/E01-001-42": "2d344c7453fd56be9918b4bbbb6ca4f3bdbec9470996df932734b7edb3e543c0",
+        "c3/E01-002-42": "739f0631b437166172940f725e8b4b31a253f3a84255d45c1f65d84178473327",
+        "c3/E01-003-42": "55dbb59c83cb3b3da322ee76056c0c6e62f823d23db6b40df46726e58a7013d9",
+        "c3/E01-004-42": "e3bd241f99d6c07a76911c7e5a2ee2bcc198e9d913639f0a97dbac4b1fc0107d",
+        "c3/E01-005-42": "778e475a6385a6479f7e2efe9533caf0e76b54486208a000916b8acf2a116953",
+        "c3/E01-006-42": "d4c946c72776cb6b00f33788d2c96866f0076f25387312d42ea07d1214d5c0f0",
+        "c3/E01-007-42": "ba70fa9ec3c32dcc942fc9d9e65ba0b48e2d9a89bb0b36b9535f5af4749274ca",
+        "c3/E01-008-42": "ccba22a597d8e4f37bd401695017e48b09537dfe78c0c1afd9eb101c2490b106",
+        "c3/E01-009-42": "460c8d5c89d26257ebf17074ffb21c88412cb64bf73005ffba8e4ff5db067db4",
+        "c3/E01-010-42": "08096c41f75b2a6a09b4a79bea385492d5f2fac7a6e07550cf486447222fd75f",
+        "c4/E01-001-42": "5d19ce979d110a859c630925f31785b3d40bb172a7a2a76ebc1bc60c27e4818e",
+        "c4/E01-002-42": "b1d7fdde80edde896a8d91071331f5b105d65da90ce25bf48949f1185278e932",
+        "c4/E01-003-42": "1359c91964d664d1c6dfa87039628fe3f3e524b6c3651aeae4ecdf08255ff262",
+        "c4/E01-004-42": "f6d267da8d10468e08571fe3b074ae823399c9d7a907594d2673c9fe4be4841f",
+        "c4/E01-005-42": "d55c930cd0b692cbe749d7e6dd73529862686e9fdc69a8c97781ad7ba9a5670e",
+        "c4/E01-006-42": "e902181bfb061ca6bff74caee6cf037da7115f5b01bd98f646fe2bf2dffc1b9b",
+        "c4/E01-007-42": "41913ec254f584e5c71893063dc44cc91df9d8459a8ac0ed023dc9363492821c",
+        "c4/E01-008-42": "d3e1bab66562b0a77cf341ef782ced28fb0ed18e97d2667aa33839f68cd63c31",
+        "c4/E01-009-42": "2c3400c12a199afa2084c17873276322fd92ce6731609693513798b2f2e26e20",
+        "c4/E01-010-42": "062834bed3df038d8f2b913a009de4d8baf0db488562885bcb737afe324a8bb9"
+      }
+    }
+  ],
+  "candidates": {
+    "c1a": {
+      "prompt_mode": "plain",
+      "cap_scale": 1,
+      "inpaint": false,
+      "repaint": false
+    },
+    "c1b": {
+      "prompt_mode": "emblem",
+      "cap_scale": 1,
+      "inpaint": false,
+      "repaint": false
+    },
+    "c2": {
+      "prompt_mode": "plain",
+      "cap_scale": 1,
+      "inpaint": true,
+      "repaint": false
+    },
+    "c3": {
+      "prompt_mode": "plain",
+      "cap_scale": 2,
+      "inpaint": true,
+      "repaint": false
+    },
+    "c4": {
+      "prompt_mode": "plain",
+      "cap_scale": 2,
+      "inpaint": true,
+      "repaint": true
+    }
+  },
+  "selected": "c3",
+  "complete": true
+}
