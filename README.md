@@ -15,7 +15,16 @@
 
 网页版 Gemini 不能执行命令时：把 `tasks/01-gemini-literature-tree-opc-packaging.md` 和 findInnovation 的 `SKILL.md`、两个模板的内容一起粘贴给它，产出再由你或其他 AI 提交到本仓库。
 
-## 发给 Gemini 的指令（任务 06 第二轮，直接复制）
+## 发给 Codex 的指令（任务 07，作者确认共识方案后直接复制）
+
+```
+请 pull 仓库 https://github.com/Casey-sketch-cyber/ai-design.git 的最新 main，
+先读 AGENTS.md，再完整阅读 docs/METHOD_V3_CONSENSUS.md（规格书），
+然后执行 tasks/07-codex-v3-step0-step1.md（先做 Step 0 诊断并冻结指标，再做 Step 1 最小验证，做完就停）。
+必须能在 RTX 3090 24GB 上跑通。在分支 codex/v3-step0-step1 上完成，推送并创建 PR，不要自己合并。全程用中文沟通。
+```
+
+## 发给 Gemini 的指令（任务 06 第二轮，已完成）
 
 ```
 请 pull 仓库 https://github.com/Casey-sketch-cyber/ai-design.git，切到你的分支 gemini/method-v3-research，并合并最新 main。

@@ -4,7 +4,7 @@
 
 ## 当前状态
 
-任务 05 已由 Claude 审查并合并（PR #6），E01b 的 v2 路线到此结束：背面—底面条带已消除（1.0446），但其他折线仍有亮边（最大 1.8047）；B2-post 的色域外比例为 0%，色域不再是方法优势；接缝和出血仍是 B2 / B2-post 更好。方法进入 v3：Gemini 已按 PR #5 中 Claude 的第一轮 6 项审查意见完成 `docs/METHOD_V3_PROPOSALS.md` 修订并逐条回复，等待 Claude 复审并汇总成 `docs/METHOD_V3_CONSENSUS.md`。
+v3 方法经 Gemini 提案、Claude 两轮审查达成共识（PR #5 已合并），见 `docs/METHOD_V3_CONSENSUS.md`：四侧面环带用环形卷积单次生成，顶面、底面以冻结环带为条件顺序外扩，新增 B2-regional 基线，新指标 M1—M4 在生成前冻结。**等待作者确认共识方案**，确认后由 Codex 执行任务 07（Step 0 + Step 1）。
 
 ## 待办
 
@@ -34,6 +34,10 @@
 ---
 
 ## 工作记录
+
+### 2026-11-25 · claude · main
+- **完成**：第二轮审查并合并 PR #5；写 `docs/METHOD_V3_CONSENSUS.md` 和任务 07。
+- **注意**：Step 1 关口中 CLIPScore 为单侧判定（不低于 B2 减 0.05）。
 
 ### 2026-11-25 · gemini · gemini/method-v3-research（PR #5 第一轮审查修订与逐条回应）
 - **完成**：
