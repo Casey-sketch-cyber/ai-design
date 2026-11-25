@@ -1,0 +1,29 @@
+{
+  "metrics_commit": "33fe37229119c47f7aafdb0b5ee5f3116a2a57d1",
+  "parameter_sha256": "76b23ea65839e95a60d3a0c3f9354b601a8d7daa8429eb2ff71a72560631577c",
+  "files": {
+    "code/configs/E02_metrics.yaml": "76b23ea65839e95a60d3a0c3f9354b601a8d7daa8429eb2ff71a72560631577c",
+    "code/dielinediff/metrics/e02_physical.py": "9417ddca644da5fec757d8b06f69e9db76f79e70091140e5b037b53ab22ff1fc",
+    "code/dielinediff/metrics/e02_repetition.py": "f23ac69f6ba56dc2b5f108ed420607971ac48a2f8f01c0938b2748cfab0879dd",
+    "code/dielinediff/metrics/physical.py": "f64fc04feadd1f41277cda04ef38afeb65d5dc32819dec0637584a5167358325",
+    "code/dielinediff/metrics/__init__.py": "c2877dab69506abf22c332052f303a29824ab736a3ab30a738963cfacf2d8c2c",
+    "code/dielinediff/metrics/e01b.py": "0c313acf16436ba422f47816457fe037c7b4e26e54624e3353d50416318ff6af"
+  },
+  "dino_files": {
+    "config.json": "1809f83e3bdb1609a501a610ad4a742f4fd8ae44d72ca4aa0df52d1f2ac8628d",
+    "preprocessor_config.json": "14e780d86fa1861f8751f868d7f45425b5feb55c38ca26f152ca5097ab30f828",
+    "model.safetensors": "ae1e99fcefd534ed978cdeb8326f08030c96e28b7a81ffcbc98a857c84d14be1"
+  },
+  "history_evidence": {
+    "physical_count": 755,
+    "dino_count": 755,
+    "sanity_passed": true,
+    "history_result_csv_sha256": {
+      "outputs/e02/step0/history/physical-4cc65d9e8a35/results.csv": "686c419874c1e134a303a7663f0c175732633a94add15c46cae3929f1e3c9ea1",
+      "outputs/e02/step0/history/physical-8ea48a7fbc4b/results.csv": "ea19bf7977e56b59889434d83f15ab56255705c11990b93695e26cd15363600d",
+      "outputs/e02/step0/history/physical-c1b990ee9b4b/results.csv": "ad3df86c261a36d7e73f998ec1ae45bad2ee960bd9463d07253bfff39afe13c1",
+      "outputs/e02/step0/history/physical-c3b7dfc38c4f/results.csv": "d88306581edb4cf9bc0d7dc9a5b14fc0c95479cd2bfc5bff6ab12f7cb44fb496",
+      "outputs/e02/step0/history/m4-ab87da0dc417/results.csv": "08c7f1e057484622b92d095f922d564ea6f2e1561f2939ab2dbe50eaa3cbdeed"
+    }
+  }
+}
