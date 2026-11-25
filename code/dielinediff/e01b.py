@@ -279,7 +279,7 @@ def save_results(experiment, phase, jobs, scores):
     extra = sorted({key for row in rows for key in row} - set(fields + METRIC_KEYS))
     temp = path.with_suffix(f".{os.getpid()}.tmp")
     with temp.open("w", newline="", encoding="utf-8") as stream:
-        writer = csv.DictWriter(stream, fieldnames=fields + METRIC_KEYS + tuple(extra))
+        writer = csv.DictWriter(stream, fieldnames=fields + METRIC_KEYS + tuple(extra), lineterminator="\n")
         writer.writeheader()
         writer.writerows(rows)
     temp.replace(path)
@@ -467,7 +467,12 @@ def summarize(experiment, phase):
             write_json(destination / "runtime-estimate.json",
                        {"mean_v2_seconds_per_box": average, "planning_boxes": 450,
                         "estimated_generation_hours_at_v2_rate": 450 * average / 3600})
-            print("Objective pilot checks passed. Record an actual visual review before tuning.", flush=True)
+            if gate["passed"]:
+                print("The complete pilot gate passed.", flush=True)
+            elif gate["visual_review"] is not None:
+                raise ValueError(f"Pilot edge review failed. See {experiment.pilot_run / 'pilot-gate.json'}")
+            else:
+                print("Objective pilot checks passed. Record an actual visual review before tuning.", flush=True)
         else:
             raise ValueError(f"Pilot objective checks failed. See {experiment.pilot_run / 'pilot-gate.json'}")
     if len(scores) != len(jobs):
