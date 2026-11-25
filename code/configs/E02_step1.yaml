@@ -1,0 +1,24 @@
+# E02 Step 1 examines only the first ten E01 briefs at seed 42.
+protocol: e02-v3-step1
+seed: 42
+common:
+  steps: 30
+  guidance: 5.0
+  regional_weight: 1.0
+  cap_band: 16
+  share_attention: false
+  projection_strength: 0.20
+  projection_tail: 0.30
+  projection_interval: 3
+  controlnet_scale: 0.65
+ring_sizes:
+  v3_1280: [1280, 1024]
+  v3_1472: [1472, 1152]
+# Optional follow-up at the selected resolution. Only this option changes and
+# the result is compared on the same ten cases before selecting the final run.
+shared_attention_candidate: true
+gate:
+  stripe_factor: 1.20
+  clip_margin: 0.05
+  seconds: 60
+  peak_memory_mib: 20480

@@ -1,0 +1,128 @@
+{
+  "selected": "v3_1280",
+  "n": 10,
+  "fingerprint": "f426db2718a8ee083f9d669325b9b045e1daa155b51dc0a9f8a5dc5ae3b7ad82",
+  "checks": {
+    "seven_folded_seams": {
+      "passed": false,
+      "metrics": {
+        "non_native_7_sdr": {
+          "v3": 7.692974424362182,
+          "baselines": {
+            "b2_regional": 4.417501974105835,
+            "b2_post": 4.619852018356323
+          },
+          "passed": false
+        },
+        "non_native_7_lpips": {
+          "v3": 0.4840012892016343,
+          "baselines": {
+            "b2_regional": 0.36460329634802685,
+            "b2_post": 0.41345378288200924
+          },
+          "passed": false
+        }
+      }
+    },
+    "bleed": {
+      "passed": true,
+      "metrics": {
+        "bleed_fill_pct": {
+          "v3": 57.85224545766198,
+          "baselines": {
+            "b2_regional": 52.99622900239973,
+            "b2_post": 52.847103188207065
+          },
+          "passed": true
+        },
+        "bleed_fill_v2_pct": {
+          "v3": 50.24468632156325,
+          "baselines": {
+            "b2_regional": 28.46074734316078,
+            "b2_post": 47.38472745971889
+          },
+          "passed": true
+        }
+      }
+    },
+    "fold_stripe": {
+      "passed": false,
+      "objective_passed": false,
+      "baseline": "b4",
+      "threshold": 1.252775233689771,
+      "means": {
+        "v3_1280": 1.28965977192921,
+        "b2": 1.2270549828093935,
+        "b2_post": 1.2288052747297844,
+        "b2_regional": 1.1399088085999431,
+        "b3": 1.2732381419603758,
+        "b4": 1.0439793614081425
+      },
+      "visual_passed": false,
+      "ready_for_visual_review": true
+    },
+    "clip": {
+      "passed": true,
+      "means": {
+        "v3_1280": 0.6878196373581886,
+        "b2": 0.6862232200801373
+      },
+      "minimum": 0.6362232200801372
+    },
+    "runtime": {
+      "passed": true,
+      "mean_seconds": 21.570231997407973,
+      "mean_peak_mib": 10423.578271484375,
+      "highest_sample_peak_mib": 10423.57861328125,
+      "seconds_limit": 60,
+      "peak_mib_limit": 20480
+    }
+  },
+  "visual_review": {
+    "reviewer": "Codex",
+    "fingerprint": "f426db2718a8ee083f9d669325b9b045e1daa155b51dc0a9f8a5dc5ae3b7ad82",
+    "samples": {
+      "E01-001": {
+        "visible_artifact": false,
+        "notes": "三条纵折线纹样连续。两条盖折线有山水、图标和绿色画块的硬切，未见独立窄亮边或规则竖纹。"
+      },
+      "E01-002": {
+        "visible_artifact": true,
+        "notes": "正面—顶面靠盖内一侧可见横贯大部分折线的细暗线，部分与图标轮廓相连。背底可见色调硬切，未见旧版周期竖纹。"
+      },
+      "E01-003": {
+        "visible_artifact": false,
+        "notes": "正面—顶面有随图标位置变化的局部浅色块。背面稻田与底盖深绿边框交界明显，未见独立贯通的亮边或周期条纹。"
+      },
+      "E01-004": {
+        "visible_artifact": false,
+        "notes": "两条盖折线可见图案和淡灰色调变化，三条纵折线纹样连续，未见独立贯通的窄条带。"
+      },
+      "E01-005": {
+        "visible_artifact": false,
+        "notes": "正面—顶面及背面—底面有版画纹理与深浅变化，沿折线的内容硬切可辨。未见可分离的持续亮边。"
+      },
+      "E01-006": {
+        "visible_artifact": false,
+        "notes": "背底橄榄色面块在折线处突变并延伸入底盖，正顶图标截断。未见独立窄亮边或旧式周期栅纹。"
+      },
+      "E01-007": {
+        "visible_artifact": false,
+        "notes": "正面—顶面靠盖内一侧有局部暗灰线段，位置多与图标黑描边相合。背底深橄榄色为盖面框形色块。未见独立贯通的亮边或周期栅纹。"
+      },
+      "E01-008": {
+        "visible_artifact": false,
+        "notes": "右面—背面的原生边上莓果与枝叶贯通。顶、底盖有构图切换，未见纵向窄带或盖折线的连续亮边。"
+      },
+      "E01-009": {
+        "visible_artifact": true,
+        "notes": "背面—底面折线的底盖侧出现较长绿色横带，形态比普通题材断层更接近边框。正顶感知变化主要来自图标与低饱和画面的硬切。"
+      },
+      "E01-010": {
+        "visible_artifact": false,
+        "notes": "正顶和背底有明暗与题材切换，三条纵折线的植物和叶片轮廓横跨折线，未见独立贯通的窄亮边。"
+      }
+    }
+  },
+  "passed": false
+}
