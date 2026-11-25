@@ -1,0 +1,9 @@
+protocol: e02-v3-capgeom
+capfix_reference: 437980f564bb
+task07_reference: c6bb770094d3
+archived_rings: 0979bc4c77ef
+selection_seed: 42
+validation_seed: 1234
+strengths: [0.75, 0.85]
+attention:
+  layer: up_blocks.0.attentions.0.transformer_blocks.0.attn1

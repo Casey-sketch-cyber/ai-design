@@ -16,9 +16,9 @@ INK = (30, 45, 56)
 MARK = (24, 147, 155)
 
 
-def _example_comparisons(experiment, chosen):
-    methods = ("b2_regional", "v3_1280", chosen)
-    titles = ("B2-regional", "Task 07 v3", "Task 08 cap fix")
+def _example_comparisons(experiment, chosen, original_method, original_title, current_title):
+    methods = ("b2_regional", original_method, chosen)
+    titles = ("B2-regional", original_title, current_title)
     records = {(job.atlas.method, job.atlas.brief["id"]): job
                for job in experiment.samples(methods=methods)}
     output = experiment.output / "examples"
@@ -65,11 +65,11 @@ def _edge_tiles(faces, face, edge, neighbor, other_edge, reverse, width):
     return Image.fromarray(np.ascontiguousarray(side)), Image.fromarray(np.ascontiguousarray(cap))
 
 
-def _cap_edges(experiment, chosen):
+def _cap_edges(experiment, chosen, original_method, original_title, current_title):
     topology = read_json(experiment.geometry / "topology.json")
     bounds = {name: face["rect"] for name, face in topology["faces"].items()}
     directions = {face: _cap_neighbors(topology, face) for face in CAPS}
-    both = list(experiment.samples(methods=("v3_1280", chosen)))
+    both = list(experiment.samples(methods=(original_method, chosen)))
     cases = {(j.atlas.brief["id"], j.atlas.method): j for j in both}
     output = experiment.output / "cap-edges"
     output.mkdir(parents=True, exist_ok=True)
@@ -82,9 +82,9 @@ def _cap_edges(experiment, chosen):
         page = Image.new("RGB", (2 * span + 62, 114 + 8 * 75), "white")
         draw = ImageDraw.Draw(page)
         draw.text((16, 10), f"{name} / Cap-edge pairs at native scale / Side above, cap below", fill=INK, font=header)
-        draw.text((16, 39), "Task 07 v3", fill=INK, font=font)
-        draw.text((span + 48, 39), "Task 08 cap fix", fill=INK, font=font)
-        for i, method in enumerate(("v3_1280", chosen)):
+        draw.text((16, 39), original_title, fill=INK, font=font)
+        draw.text((span + 48, 39), current_title, fill=INK, font=font)
+        for i, method in enumerate((original_method, chosen)):
             with Image.open(cases[name, method].atlas.path) as atlas:
                 faces = {face: np.asarray(atlas.crop(rect).convert("RGB")) for face, rect in bounds.items()}
             origin = 16 + i * (span + 32)
@@ -105,7 +105,8 @@ def _cap_edges(experiment, chosen):
         page.save(output / f"{name}-cap-edges.png", optimize=True)
 
 
-def render_capfix(experiment, chosen):
-    _example_comparisons(experiment, chosen)
+def render_capfix(experiment, chosen, *, original_method="v3_1280",
+                  original_title="Task 07 v3", current_title="Task 08 cap fix"):
+    _example_comparisons(experiment, chosen, original_method, original_title, current_title)
     render_native_creases(experiment, chosen)
-    _cap_edges(experiment, chosen)
+    _cap_edges(experiment, chosen, original_method, original_title, current_title)

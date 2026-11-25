@@ -1,0 +1,46 @@
+{
+  "config": {
+    "protocol": "e02-v3-capgeom",
+    "capfix_reference": "437980f564bb",
+    "task07_reference": "c6bb770094d3",
+    "archived_rings": "0979bc4c77ef",
+    "selection_seed": 42,
+    "validation_seed": 1234,
+    "strengths": [
+      0.75,
+      0.85
+    ],
+    "attention": {
+      "layer": "up_blocks.0.attentions.0.transformer_blocks.0.attn1"
+    },
+    "gate": {
+      "stripe_factor": 1.2,
+      "clip_margin": 0.05,
+      "seconds": 60,
+      "peak_memory_mib": 20480
+    }
+  },
+  "metrics": "3acf4b16d925f133ca4aeba21cd14c44ce585ab045c69de75e03c2ad3ebbc170",
+  "ring": {
+    "commit": "b18ed8e775bf072fbcd3b32b9f381abdfbdb9728",
+    "ring_block_ast_sha256": "185fa28a74927e816ad38d585e4bbbd4fdb5a8ff3c61377e7e8aaf2dd2d5bbf1",
+    "unchanged_source_files": {
+      "v3_geometry.py": "a5d96d3614c376ffc429bc7844005adebeedeb427199fb678e124dbcd01f7801",
+      "v3_circular.py": "9ef30a3676024943228fc0f107228c5cbf471421094a40d286f161094b473ef6",
+      "v3_attention.py": "9fd3663c96e6b3fbfa66706a3aaa8f98c4a355443141f31e57650613b8f45ffa",
+      "ours_tf.py": "7f8cd89b0af065667fc93625d46bd28d7f605bdc22a975b4bf9c54f3c62a7969",
+      "sdxl.py": "e86d47a54703d5467d842331ce73ec64d0393631463308be48e5b0739c92b7bf",
+      "b2_controlnet.py": "25d7630521deb3b8eeba0fd09a84256279a344276e2db6fad30c28b9ea7c5808"
+    }
+  },
+  "task07_sha256": "7bef0a64c01d60981d9ab88524eedffec76a5cbf1d60059a8bfd82b20b32ba7e",
+  "capfix_sha256": "e66c444cbda2d3e5c658e778a5adef302aea5995f87ef4f71b190e2781e3c4e5",
+  "implementation": {
+    "v3_capgeom.py": "f2fe1c2b5b28f2577905f637a65fa4a946bce43a99ed350fa182048669eee0d2",
+    "v3_capgeom_geometry.py": "06013a7f1b7207876f4dbd1a49b4334c504da2350665400df94cb8cd28c274af",
+    "v3_capgeom_attention.py": "05f624b62c3036d9b1251ec11d089de9bcf1fd4ff0b9ff07d2c71b3df9259d7d",
+    "v3_capfix.py": "01a58afe72f66900a8734ee5e72f12407e272e73d7061d8e8db3cb64dcec07d3",
+    "v3_capfix_geometry.py": "c49b59c3f7f8511c866f8373dcd7309e5eaa2b2a60b1ebf33ad82c94444c91dc",
+    "v3_inpainting.py": "cd5704744a8bca9c0609cd5b08ac6d20996030459dfb45ac0337ad0e0471aac9"
+  }
+}
