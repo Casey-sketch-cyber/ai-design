@@ -1,0 +1,141 @@
+{
+  "selected": "g1",
+  "n": 10,
+  "fingerprint": "048ecfd10576f70412bcef0b0df3e0669e31cfb2d97c476930308bd1f59e98a6",
+  "checks": {
+    "seven_folded_seams": {
+      "passed": false,
+      "metrics": {
+        "non_native_7_sdr": {
+          "v3": 3.8631723642349245,
+          "baselines": {
+            "b2_regional": 4.417501974105835,
+            "b2_post": 4.619852018356323
+          },
+          "passed": true
+        },
+        "non_native_7_lpips": {
+          "v3": 0.40309942077313154,
+          "baselines": {
+            "b2_regional": 0.36460329634802685,
+            "b2_post": 0.41345378288200924
+          },
+          "passed": false
+        }
+      }
+    },
+    "bleed": {
+      "passed": false,
+      "metrics": {
+        "bleed_fill_pct": {
+          "v3": 52.35558793280768,
+          "baselines": {
+            "b2_regional": 52.99622900239973,
+            "b2_post": 52.847103188207065
+          },
+          "passed": false
+        },
+        "bleed_fill_v2_pct": {
+          "v3": 47.8372471717518,
+          "baselines": {
+            "b2_regional": 28.46074734316078,
+            "b2_post": 47.38472745971889
+          },
+          "passed": true
+        }
+      }
+    },
+    "fold_stripe": {
+      "passed": false,
+      "objective_passed": false,
+      "baseline": "b4",
+      "threshold": 1.252775233689771,
+      "means": {
+        "g1": 1.7715371394646802,
+        "b2": 1.2270549828093935,
+        "b2_post": 1.2288052747297844,
+        "b2_regional": 1.1399088085999431,
+        "b3": 1.2732381419603758,
+        "b4": 1.0439793614081425
+      },
+      "visual_passed": true,
+      "ready_for_visual_review": true
+    },
+    "clip": {
+      "passed": true,
+      "means": {
+        "g1": 0.6848931461572647,
+        "b2": 0.6862232200801373
+      },
+      "minimum": 0.6362232200801372
+    },
+    "runtime": {
+      "passed": true,
+      "mean_seconds": 44.83014238793403,
+      "mean_peak_mib": 10509.8515625,
+      "highest_sample_peak_mib": 10509.8515625,
+      "seconds_limit": 60,
+      "peak_mib_limit": 20480,
+      "highest_sample_seconds": 45.175534991547465,
+      "over_limit": []
+    }
+  },
+  "visual_review": {
+    "reviewer": "Codex",
+    "fingerprint": "048ecfd10576f70412bcef0b0df3e0669e31cfb2d97c476930308bd1f59e98a6",
+    "native_folds_reviewed": 50,
+    "samples": {
+      "E01-001": {
+        "visible_artifact": false,
+        "notes": "正顶山脊跨线，暖灰盖与米白正面有整面色调阶跃。背底暗林线、灰棕地形可接续，盖侧更软。三纵折无沿折亮边。侧带内的浅色横幅分隔横穿纵折，判入环带构图诊断。",
+        "raw_sha256": "d6ed6a02a328cc9a96c061d09665b288cbf179e3c5aa424c83977b88f3c965c7"
+      },
+      "E01-002": {
+        "visible_artifact": false,
+        "notes": "正顶左侧枝勾跨过折线，暖灰盖和米白正面仍分界清楚。背底叶片轮廓延伸到灰褐盖面。三纵折纹样相接。未检出贴折独立窄带或亮边。",
+        "raw_sha256": "f7d71e1f4b77ab654a1f8e9912cf613ee72461b50075c75fd77f43c68cd90b7d"
+      },
+      "E01-003": {
+        "visible_artifact": false,
+        "notes": "正顶由整块灰暖顶盖接浅青天空，任务08的 y376–383 八像素灰窄带消退。背底草叶延续，底盖偏棕和柔化。三纵折的稻田、山体及天空可跨线。未检出贴折独立窄带或亮边。",
+        "raw_sha256": "e3c92767718f2c1dfe9dc3ed9d4dcd14abb33fb52a13833b8ca38e325cee5f25"
+      },
+      "E01-004": {
+        "visible_artifact": false,
+        "notes": "正顶几处枝叶跨接，背景由暖灰突变为米白，部分枝端错位。背底灰色枝叶跨线，盖侧柔化且略棕。三纵折花和叶片可跨线。未检出贴折独立窄带或亮边。",
+        "raw_sha256": "be5241b3dce1f32d531606f099c47a4d98d8dd4a3c4a5808a5b364760d4ceae7"
+      },
+      "E01-005": {
+        "visible_artifact": false,
+        "notes": "正顶木刻纤维和大轮廓相接。背底年轮大体续接，局部锐度有差异。三纵折木纹贯通。未检出贴折独立窄带或亮边。",
+        "raw_sha256": "618e03f963aac5f5b8f093480a9d5cb14a9c2f454c06ad234a5b513e3a4c4973"
+      },
+      "E01-006": {
+        "visible_artifact": false,
+        "notes": "正顶较浅的盖侧与正面浅绿交界，枝叶存在局部错位。背底盖侧偏蓝和软化，右半的橙粉斑点组成弯曲的印刷纹样，向盖内弯离折线。三纵折果叶连续。未检出贴折独立窄带或亮边。",
+        "raw_sha256": "f5f05978ba5b5edd3efdb2c0146b8c472e423b195606d1acaacb63572270f9f9"
+      },
+      "E01-007": {
+        "visible_artifact": false,
+        "notes": "正顶两端云头跨接，中段灰暖盖与浅天空有明显色调阶跃。背底麦穗跨接，盖侧偏棕和柔化。三纵折纹样跨线。未检出贴折独立窄带或亮边。",
+        "raw_sha256": "967a808588677713b8b43fcdd71438219b4c41e162f27da96b3438ed2e083def"
+      },
+      "E01-008": {
+        "visible_artifact": false,
+        "notes": "正顶部分枝叶跨过暖灰盖与米白底的分界。背底枝叶继续，盖左边缘出现红果图形。三纵折红果与青叶轮廓贯通。未检出贴折独立窄带或亮边。",
+        "raw_sha256": "c528edd7bf062fa01402f8d843b79c7cb4453ccffb57712bd31356e1e60e6ada"
+      },
+      "E01-009": {
+        "visible_artifact": false,
+        "notes": "正顶灰暖盖接浅蓝天空的整面色调阶跃较明显，两端云头位置延续。背底花叶位置相接，盖侧发灰且更软。三纵折花叶、天空和地形有连续结构。未检出贴折独立窄带或亮边。",
+        "raw_sha256": "8025f7b09a27183644c3319a8594cf19fcaa6d978b0dfd94fd7852f15d41eb67"
+      },
+      "E01-010": {
+        "visible_artifact": false,
+        "notes": "正顶几处叶形有错位及锐度差。背底锈色叶片轮廓部分续接，底盖浅灰枝叶较软。三纵折叶片轮廓连续。未检出贴折独立窄带或亮边。",
+        "raw_sha256": "e27aa5242c1a48dd7842f42fd52fdf0a3aa9bb6a808431056340852c453d4d4e"
+      }
+    }
+  },
+  "passed": false
+}

@@ -1,0 +1,1530 @@
+{
+  "selection_seed_42_tail": {
+    "seed": 42,
+    "n": 10,
+    "variant": "preflight",
+    "p90_definition": "Hyndman–Fan type 7 (linear; at n=10, x[8] + 0.1 × (x[9]−x[8]) in zero-based ascending order)",
+    "methods": {
+      "b2": {
+        "cap_6_delta_e00": {
+          "mean": 14.290806897481282,
+          "p90": 19.230387465159097,
+          "worst_two": [
+            {
+              "brief_id": "E01-006",
+              "value": 22.469595591227215
+            },
+            {
+              "brief_id": "E01-008",
+              "value": 18.87047545115153
+            }
+          ]
+        },
+        "stripe_index": {
+          "mean": 1.2270549828093935,
+          "p90": 1.3474239409968205,
+          "worst_two": [
+            {
+              "brief_id": "E01-007",
+              "value": 1.857886017183279
+            },
+            {
+              "brief_id": "E01-009",
+              "value": 1.2907059325316586
+            }
+          ]
+        }
+      },
+      "b2_post": {
+        "cap_6_delta_e00": {
+          "mean": 14.26031858921051,
+          "p90": 19.216800371805824,
+          "worst_two": [
+            {
+              "brief_id": "E01-006",
+              "value": 22.470035235087078
+            },
+            {
+              "brief_id": "E01-008",
+              "value": 18.855329831441242
+            }
+          ]
+        },
+        "stripe_index": {
+          "mean": 1.2288052747297844,
+          "p90": 1.3489949204921676,
+          "worst_two": [
+            {
+              "brief_id": "E01-007",
+              "value": 1.8593867140403901
+            },
+            {
+              "brief_id": "E01-009",
+              "value": 1.292284721209032
+            }
+          ]
+        }
+      },
+      "b3": {
+        "cap_6_delta_e00": {
+          "mean": 15.880752499898275,
+          "p90": 20.99776309331258,
+          "worst_two": [
+            {
+              "brief_id": "E01-002",
+              "value": 24.176068623860676
+            },
+            {
+              "brief_id": "E01-008",
+              "value": 20.644618034362793
+            }
+          ]
+        },
+        "stripe_index": {
+          "mean": 1.2732381419603758,
+          "p90": 1.5976193533802707,
+          "worst_two": [
+            {
+              "brief_id": "E01-010",
+              "value": 2.7259098681704064
+            },
+            {
+              "brief_id": "E01-005",
+              "value": 1.4722537406258116
+            }
+          ]
+        }
+      },
+      "b4": {
+        "cap_6_delta_e00": {
+          "mean": 11.572795736789704,
+          "p90": 26.958961486816406,
+          "worst_two": [
+            {
+              "brief_id": "E01-001",
+              "value": 29.94217300415039
+            },
+            {
+              "brief_id": "E01-008",
+              "value": 26.627493540445965
+            }
+          ]
+        },
+        "stripe_index": {
+          "mean": 1.0439793614081425,
+          "p90": 1.1170060808427615,
+          "worst_two": [
+            {
+              "brief_id": "E01-001",
+              "value": 1.2553187143323619
+            },
+            {
+              "brief_id": "E01-005",
+              "value": 1.1016380104550283
+            }
+          ]
+        }
+      },
+      "b2_regional": {
+        "cap_6_delta_e00": {
+          "mean": 9.493489535649617,
+          "p90": 12.429644346237183,
+          "worst_two": [
+            {
+              "brief_id": "E01-001",
+              "value": 13.275798320770264
+            },
+            {
+              "brief_id": "E01-009",
+              "value": 12.335627237955729
+            }
+          ]
+        },
+        "stripe_index": {
+          "mean": 1.1399088085999431,
+          "p90": 1.2330049694554168,
+          "worst_two": [
+            {
+              "brief_id": "E01-002",
+              "value": 1.302709019914825
+            },
+            {
+              "brief_id": "E01-007",
+              "value": 1.2252600749599272
+            }
+          ]
+        }
+      },
+      "c3": {
+        "cap_6_delta_e00": {
+          "mean": 21.29207710027695,
+          "p90": 25.439426199595133,
+          "worst_two": [
+            {
+              "brief_id": "E01-003",
+              "value": 28.708640734354656
+            },
+            {
+              "brief_id": "E01-008",
+              "value": 25.07618014017741
+            }
+          ]
+        },
+        "stripe_index": {
+          "mean": 1.5979902216101705,
+          "p90": 2.041158045827317,
+          "worst_two": [
+            {
+              "brief_id": "E01-003",
+              "value": 3.5421892123811918
+            },
+            {
+              "brief_id": "E01-002",
+              "value": 1.8743768050991094
+            }
+          ]
+        }
+      },
+      "g1": {
+        "cap_6_delta_e00": {
+          "mean": 11.497355703512827,
+          "p90": 13.024997742970784,
+          "worst_two": [
+            {
+              "brief_id": "E01-003",
+              "value": 15.936814149220785
+            },
+            {
+              "brief_id": "E01-004",
+              "value": 12.701462586720785
+            }
+          ]
+        },
+        "stripe_index": {
+          "mean": 1.7715371394646802,
+          "p90": 2.6454927169540845,
+          "worst_two": [
+            {
+              "brief_id": "E01-003",
+              "value": 3.7510131587263467
+            },
+            {
+              "brief_id": "E01-007",
+              "value": 2.5226571123127224
+            }
+          ]
+        }
+      },
+      "g2_075": {
+        "cap_6_delta_e00": {
+          "mean": 5.817604657014211,
+          "p90": 8.438136553764343,
+          "worst_two": [
+            {
+              "brief_id": "E01-008",
+              "value": 8.648086071014404
+            },
+            {
+              "brief_id": "E01-005",
+              "value": 8.414808829625448
+            }
+          ]
+        },
+        "stripe_index": {
+          "mean": 2.0807116067189306,
+          "p90": 2.9272683314413235,
+          "worst_two": [
+            {
+              "brief_id": "E01-004",
+              "value": 4.1568959823155325
+            },
+            {
+              "brief_id": "E01-002",
+              "value": 2.7906430368997452
+            }
+          ]
+        }
+      },
+      "g2_085": {
+        "cap_6_delta_e00": {
+          "mean": 5.377338683605194,
+          "p90": 6.8218827724456785,
+          "worst_two": [
+            {
+              "brief_id": "E01-008",
+              "value": 7.1833813190460205
+            },
+            {
+              "brief_id": "E01-005",
+              "value": 6.781716267267863
+            }
+          ]
+        },
+        "stripe_index": {
+          "mean": 2.6481844159012584,
+          "p90": 3.965279159769055,
+          "worst_two": [
+            {
+              "brief_id": "E01-004",
+              "value": 4.261516043136686
+            },
+            {
+              "brief_id": "E01-003",
+              "value": 3.932363950505985
+            }
+          ]
+        }
+      },
+      "g3": {
+        "cap_6_delta_e00": {
+          "mean": 11.839609030882517,
+          "p90": 13.662418405214945,
+          "worst_two": [
+            {
+              "brief_id": "E01-003",
+              "value": 17.107537428538006
+            },
+            {
+              "brief_id": "E01-009",
+              "value": 13.279627402623495
+            }
+          ]
+        },
+        "stripe_index": {
+          "mean": 1.7456871264276657,
+          "p90": 2.5239217927853397,
+          "worst_two": [
+            {
+              "brief_id": "E01-003",
+              "value": 3.6759438370294903
+            },
+            {
+              "brief_id": "E01-007",
+              "value": 2.395919343424879
+            }
+          ]
+        }
+      }
+    }
+  },
+  "stripe_sources_seed_42": {
+    "seed": 42,
+    "n": 10,
+    "methods": {
+      "c3": {
+        "mean_whole_stripe_index": 1.5979902216101705,
+        "mean_ring_only_box_floor": 1.2244084290991146,
+        "mean_cap_only_box_floor": 1.462268758550142,
+        "mean_ring_excess_at_max": 0.18354279819852548,
+        "mean_cap_excess_at_max": 0.414447423411645,
+        "mean_decrease_if_cap_ratios_are_one": 0.37358179251105583,
+        "mean_decrease_if_ring_ratios_are_one": 0.13572146306002855,
+        "controlling_folds": {
+          "B-R": 3,
+          "B-Btm": 4,
+          "F-T": 2,
+          "F-R": 1
+        },
+        "controlling_fold_larger_excess": {
+          "ring": 6,
+          "cap": 4
+        },
+        "cases": {
+          "E01-001": {
+            "whole_stripe_index": 1.068993754740803,
+            "controlling_fold": "B-R",
+            "ring_excess_at_max": 0.06899375474080316,
+            "cap_excess_at_max": 0.0,
+            "larger_excess": "ring",
+            "ring_only_box_floor": 1.068993754740803,
+            "cap_only_box_floor": 1.0
+          },
+          "E01-002": {
+            "whole_stripe_index": 1.8743768050991094,
+            "controlling_fold": "B-Btm",
+            "ring_excess_at_max": 0.0,
+            "cap_excess_at_max": 0.8743768050991094,
+            "larger_excess": "cap",
+            "ring_only_box_floor": 1.0969434046866113,
+            "cap_only_box_floor": 1.8743768050991094
+          },
+          "E01-003": {
+            "whole_stripe_index": 3.5421892123811918,
+            "controlling_fold": "B-Btm",
+            "ring_excess_at_max": 0.0,
+            "cap_excess_at_max": 2.5421892123811918,
+            "larger_excess": "cap",
+            "ring_only_box_floor": 1.21006000426002,
+            "cap_only_box_floor": 3.5421892123811918
+          },
+          "E01-004": {
+            "whole_stripe_index": 1.18231063970874,
+            "controlling_fold": "B-Btm",
+            "ring_excess_at_max": 0.0,
+            "cap_excess_at_max": 0.18231063970873995,
+            "larger_excess": "cap",
+            "ring_only_box_floor": 1.0496944919227131,
+            "cap_only_box_floor": 1.18231063970874
+          },
+          "E01-005": {
+            "whole_stripe_index": 1.0236824201099852,
+            "controlling_fold": "B-R",
+            "ring_excess_at_max": 0.023682420109985225,
+            "cap_excess_at_max": 0.0,
+            "larger_excess": "ring",
+            "ring_only_box_floor": 1.0236824201099852,
+            "cap_only_box_floor": 1.0
+          },
+          "E01-006": {
+            "whole_stripe_index": 1.5455975769274088,
+            "controlling_fold": "B-Btm",
+            "ring_excess_at_max": 0.0,
+            "cap_excess_at_max": 0.5455975769274088,
+            "larger_excess": "cap",
+            "ring_only_box_floor": 1.0519584081365472,
+            "cap_only_box_floor": 1.5455975769274088
+          },
+          "E01-007": {
+            "whole_stripe_index": 1.476384850806136,
+            "controlling_fold": "F-T",
+            "ring_excess_at_max": 0.4763848508061359,
+            "cap_excess_at_max": 0.0,
+            "larger_excess": "ring",
+            "ring_only_box_floor": 1.476384850806136,
+            "cap_only_box_floor": 1.234221262452144
+          },
+          "E01-008": {
+            "whole_stripe_index": 1.281214812292829,
+            "controlling_fold": "B-R",
+            "ring_excess_at_max": 0.2812148122928291,
+            "cap_excess_at_max": 0.0,
+            "larger_excess": "ring",
+            "ring_only_box_floor": 1.281214812292829,
+            "cap_only_box_floor": 1.1254792321061204
+          },
+          "E01-009": {
+            "whole_stripe_index": 1.703016155509602,
+            "controlling_fold": "F-T",
+            "ring_excess_at_max": 0.703016155509602,
+            "cap_excess_at_max": 0.0,
+            "larger_excess": "ring",
+            "ring_only_box_floor": 1.703016155509602,
+            "cap_only_box_floor": 1.0
+          },
+          "E01-010": {
+            "whole_stripe_index": 1.2821359885258994,
+            "controlling_fold": "F-R",
+            "ring_excess_at_max": 0.2821359885258994,
+            "cap_excess_at_max": 0.0,
+            "larger_excess": "ring",
+            "ring_only_box_floor": 1.2821359885258994,
+            "cap_only_box_floor": 1.1185128568267046
+          }
+        },
+        "ring_only_floor_exceeds_mean_limit": false
+      },
+      "g1": {
+        "mean_whole_stripe_index": 1.7715371394646802,
+        "mean_ring_only_box_floor": 1.2244084290991146,
+        "mean_cap_only_box_floor": 1.6633491910442246,
+        "mean_ring_excess_at_max": 0.13009363282449926,
+        "mean_cap_excess_at_max": 0.6414435066401809,
+        "mean_decrease_if_cap_ratios_are_one": 0.5471287103655657,
+        "mean_decrease_if_ring_ratios_are_one": 0.10818794842045562,
+        "controlling_folds": {
+          "B-R": 3,
+          "B-Btm": 5,
+          "F-T": 2
+        },
+        "controlling_fold_larger_excess": {
+          "ring": 4,
+          "cap": 6
+        },
+        "cases": {
+          "E01-001": {
+            "whole_stripe_index": 1.068993754740803,
+            "controlling_fold": "B-R",
+            "ring_excess_at_max": 0.06899375474080316,
+            "cap_excess_at_max": 0.0,
+            "larger_excess": "ring",
+            "ring_only_box_floor": 1.068993754740803,
+            "cap_only_box_floor": 1.0
+          },
+          "E01-002": {
+            "whole_stripe_index": 1.429646817694982,
+            "controlling_fold": "B-Btm",
+            "ring_excess_at_max": 0.0,
+            "cap_excess_at_max": 0.4296468176949819,
+            "larger_excess": "cap",
+            "ring_only_box_floor": 1.0969434046866113,
+            "cap_only_box_floor": 1.429646817694982
+          },
+          "E01-003": {
+            "whole_stripe_index": 3.7510131587263467,
+            "controlling_fold": "B-Btm",
+            "ring_excess_at_max": 0.0,
+            "cap_excess_at_max": 2.7510131587263467,
+            "larger_excess": "cap",
+            "ring_only_box_floor": 1.21006000426002,
+            "cap_only_box_floor": 3.7510131587263467
+          },
+          "E01-004": {
+            "whole_stripe_index": 1.459230940460261,
+            "controlling_fold": "B-Btm",
+            "ring_excess_at_max": 0.0,
+            "cap_excess_at_max": 0.4592309404602609,
+            "larger_excess": "cap",
+            "ring_only_box_floor": 1.0496944919227131,
+            "cap_only_box_floor": 1.459230940460261
+          },
+          "E01-005": {
+            "whole_stripe_index": 1.0236824201099852,
+            "controlling_fold": "B-R",
+            "ring_excess_at_max": 0.023682420109985225,
+            "cap_excess_at_max": 0.0,
+            "larger_excess": "ring",
+            "ring_only_box_floor": 1.0236824201099852,
+            "cap_only_box_floor": 1.0
+          },
+          "E01-006": {
+            "whole_stripe_index": 2.0549045126484753,
+            "controlling_fold": "B-Btm",
+            "ring_excess_at_max": 0.0,
+            "cap_excess_at_max": 1.054904512648475,
+            "larger_excess": "cap",
+            "ring_only_box_floor": 1.0519584081365472,
+            "cap_only_box_floor": 2.0549045126484753
+          },
+          "E01-007": {
+            "whole_stripe_index": 2.5226571123127224,
+            "controlling_fold": "B-Btm",
+            "ring_excess_at_max": 0.09573723521860922,
+            "cap_excess_at_max": 1.426919877094113,
+            "larger_excess": "cap",
+            "ring_only_box_floor": 1.476384850806136,
+            "cap_only_box_floor": 2.4269198770941127
+          },
+          "E01-008": {
+            "whole_stripe_index": 1.281214812292829,
+            "controlling_fold": "B-R",
+            "ring_excess_at_max": 0.2812148122928291,
+            "cap_excess_at_max": 0.0,
+            "larger_excess": "ring",
+            "ring_only_box_floor": 1.281214812292829,
+            "cap_only_box_floor": 1.2190568440404366
+          },
+          "E01-009": {
+            "whole_stripe_index": 1.703016155509602,
+            "controlling_fold": "F-T",
+            "ring_excess_at_max": 0.703016155509602,
+            "cap_excess_at_max": 0.0,
+            "larger_excess": "ring",
+            "ring_only_box_floor": 1.703016155509602,
+            "cap_only_box_floor": 1.0
+          },
+          "E01-010": {
+            "whole_stripe_index": 1.421011710150796,
+            "controlling_fold": "F-T",
+            "ring_excess_at_max": 0.12829195037316388,
+            "cap_excess_at_max": 0.2927197597776321,
+            "larger_excess": "cap",
+            "ring_only_box_floor": 1.2821359885258994,
+            "cap_only_box_floor": 1.292719759777632
+          }
+        },
+        "ring_only_floor_exceeds_mean_limit": false
+      },
+      "g2_075": {
+        "mean_whole_stripe_index": 2.0807116067189306,
+        "mean_ring_only_box_floor": 1.2244084290991146,
+        "mean_cap_only_box_floor": 1.9824334694122916,
+        "mean_ring_excess_at_max": 0.1248394761056541,
+        "mean_cap_excess_at_max": 0.9558721306132766,
+        "mean_decrease_if_cap_ratios_are_one": 0.856303177619816,
+        "mean_decrease_if_ring_ratios_are_one": 0.09827813730663901,
+        "controlling_folds": {
+          "B-R": 1,
+          "B-Btm": 6,
+          "F-T": 3
+        },
+        "controlling_fold_larger_excess": {
+          "ring": 3,
+          "cap": 7
+        },
+        "cases": {
+          "E01-001": {
+            "whole_stripe_index": 1.068993754740803,
+            "controlling_fold": "B-R",
+            "ring_excess_at_max": 0.06899375474080316,
+            "cap_excess_at_max": 0.0,
+            "larger_excess": "ring",
+            "ring_only_box_floor": 1.068993754740803,
+            "cap_only_box_floor": 1.0598107845033322
+          },
+          "E01-002": {
+            "whole_stripe_index": 2.7906430368997452,
+            "controlling_fold": "B-Btm",
+            "ring_excess_at_max": 0.0,
+            "cap_excess_at_max": 1.7906430368997452,
+            "larger_excess": "cap",
+            "ring_only_box_floor": 1.0969434046866113,
+            "cap_only_box_floor": 2.7906430368997452
+          },
+          "E01-003": {
+            "whole_stripe_index": 1.996790847338997,
+            "controlling_fold": "B-Btm",
+            "ring_excess_at_max": 0.0,
+            "cap_excess_at_max": 0.996790847338997,
+            "larger_excess": "cap",
+            "ring_only_box_floor": 1.21006000426002,
+            "cap_only_box_floor": 1.996790847338997
+          },
+          "E01-004": {
+            "whole_stripe_index": 4.1568959823155325,
+            "controlling_fold": "B-Btm",
+            "ring_excess_at_max": 0.0,
+            "cap_excess_at_max": 3.156895982315533,
+            "larger_excess": "cap",
+            "ring_only_box_floor": 1.0496944919227131,
+            "cap_only_box_floor": 4.1568959823155325
+          },
+          "E01-005": {
+            "whole_stripe_index": 1.2424725493675006,
+            "controlling_fold": "F-T",
+            "ring_excess_at_max": 0.0,
+            "cap_excess_at_max": 0.24247254936750062,
+            "larger_excess": "cap",
+            "ring_only_box_floor": 1.0236824201099852,
+            "cap_only_box_floor": 1.2424725493675006
+          },
+          "E01-006": {
+            "whole_stripe_index": 1.2548211651810255,
+            "controlling_fold": "B-Btm",
+            "ring_excess_at_max": 0.0,
+            "cap_excess_at_max": 0.2548211651810255,
+            "larger_excess": "cap",
+            "ring_only_box_floor": 1.0519584081365472,
+            "cap_only_box_floor": 1.2548211651810255
+          },
+          "E01-007": {
+            "whole_stripe_index": 1.9173248560387837,
+            "controlling_fold": "F-T",
+            "ring_excess_at_max": 0.4763848508061359,
+            "cap_excess_at_max": 0.44094000523264787,
+            "larger_excess": "ring",
+            "ring_only_box_floor": 1.476384850806136,
+            "cap_only_box_floor": 1.6467426087194663
+          },
+          "E01-008": {
+            "whole_stripe_index": 2.24112808552525,
+            "controlling_fold": "B-Btm",
+            "ring_excess_at_max": 0.0,
+            "cap_excess_at_max": 1.24112808552525,
+            "larger_excess": "cap",
+            "ring_only_box_floor": 1.281214812292829,
+            "cap_only_box_floor": 2.24112808552525
+          },
+          "E01-009": {
+            "whole_stripe_index": 1.9261502395034464,
+            "controlling_fold": "F-T",
+            "ring_excess_at_max": 0.703016155509602,
+            "cap_excess_at_max": 0.2231340839938445,
+            "larger_excess": "ring",
+            "ring_only_box_floor": 1.703016155509602,
+            "cap_only_box_floor": 1.2231340839938445
+          },
+          "E01-010": {
+            "whole_stripe_index": 2.2118955502782223,
+            "controlling_fold": "B-Btm",
+            "ring_excess_at_max": 0.0,
+            "cap_excess_at_max": 1.2118955502782225,
+            "larger_excess": "cap",
+            "ring_only_box_floor": 1.2821359885258994,
+            "cap_only_box_floor": 2.2118955502782223
+          }
+        },
+        "ring_only_floor_exceeds_mean_limit": false
+      },
+      "g2_085": {
+        "mean_whole_stripe_index": 2.6481844159012584,
+        "mean_ring_only_box_floor": 1.2244084290991146,
+        "mean_cap_only_box_floor": 2.5638520817938546,
+        "mean_ring_excess_at_max": 0.08433233410740396,
+        "mean_cap_excess_at_max": 1.5638520817938544,
+        "mean_decrease_if_cap_ratios_are_one": 1.4237759868021438,
+        "mean_decrease_if_ring_ratios_are_one": 0.08433233410740397,
+        "controlling_folds": {
+          "F-T": 3,
+          "B-Btm": 7
+        },
+        "controlling_fold_larger_excess": {
+          "cap": 9,
+          "ring": 1
+        },
+        "cases": {
+          "E01-001": {
+            "whole_stripe_index": 1.5263023604161505,
+            "controlling_fold": "F-T",
+            "ring_excess_at_max": 0.044569950345828335,
+            "cap_excess_at_max": 0.4817324100703223,
+            "larger_excess": "cap",
+            "ring_only_box_floor": 1.068993754740803,
+            "cap_only_box_floor": 1.4817324100703222
+          },
+          "E01-002": {
+            "whole_stripe_index": 2.6850654652298562,
+            "controlling_fold": "B-Btm",
+            "ring_excess_at_max": 0.0,
+            "cap_excess_at_max": 1.6850654652298562,
+            "larger_excess": "cap",
+            "ring_only_box_floor": 1.0969434046866113,
+            "cap_only_box_floor": 2.6850654652298562
+          },
+          "E01-003": {
+            "whole_stripe_index": 3.932363950505985,
+            "controlling_fold": "B-Btm",
+            "ring_excess_at_max": 0.0,
+            "cap_excess_at_max": 2.932363950505985,
+            "larger_excess": "cap",
+            "ring_only_box_floor": 1.21006000426002,
+            "cap_only_box_floor": 3.932363950505985
+          },
+          "E01-004": {
+            "whole_stripe_index": 4.261516043136686,
+            "controlling_fold": "B-Btm",
+            "ring_excess_at_max": 0.0,
+            "cap_excess_at_max": 3.2615160431366856,
+            "larger_excess": "cap",
+            "ring_only_box_floor": 1.0496944919227131,
+            "cap_only_box_floor": 4.261516043136686
+          },
+          "E01-005": {
+            "whole_stripe_index": 1.7728248904357602,
+            "controlling_fold": "F-T",
+            "ring_excess_at_max": 0.0,
+            "cap_excess_at_max": 0.7728248904357602,
+            "larger_excess": "cap",
+            "ring_only_box_floor": 1.0236824201099852,
+            "cap_only_box_floor": 1.7728248904357602
+          },
+          "E01-006": {
+            "whole_stripe_index": 1.9223598995928772,
+            "controlling_fold": "B-Btm",
+            "ring_excess_at_max": 0.0,
+            "cap_excess_at_max": 0.9223598995928772,
+            "larger_excess": "cap",
+            "ring_only_box_floor": 1.0519584081365472,
+            "cap_only_box_floor": 1.9223598995928772
+          },
+          "E01-007": {
+            "whole_stripe_index": 2.14103277639433,
+            "controlling_fold": "B-Btm",
+            "ring_excess_at_max": 0.09573723521860922,
+            "cap_excess_at_max": 1.045295541175721,
+            "larger_excess": "cap",
+            "ring_only_box_floor": 1.476384850806136,
+            "cap_only_box_floor": 2.045295541175721
+          },
+          "E01-008": {
+            "whole_stripe_index": 3.7385301782571068,
+            "controlling_fold": "B-Btm",
+            "ring_excess_at_max": 0.0,
+            "cap_excess_at_max": 2.7385301782571068,
+            "larger_excess": "cap",
+            "ring_only_box_floor": 1.281214812292829,
+            "cap_only_box_floor": 3.7385301782571068
+          },
+          "E01-009": {
+            "whole_stripe_index": 2.160280564500468,
+            "controlling_fold": "F-T",
+            "ring_excess_at_max": 0.703016155509602,
+            "cap_excess_at_max": 0.45726440899086573,
+            "larger_excess": "ring",
+            "ring_only_box_floor": 1.703016155509602,
+            "cap_only_box_floor": 1.4572644089908657
+          },
+          "E01-010": {
+            "whole_stripe_index": 2.341568030543364,
+            "controlling_fold": "B-Btm",
+            "ring_excess_at_max": 0.0,
+            "cap_excess_at_max": 1.3415680305433642,
+            "larger_excess": "cap",
+            "ring_only_box_floor": 1.2821359885258994,
+            "cap_only_box_floor": 2.341568030543364
+          }
+        },
+        "ring_only_floor_exceeds_mean_limit": false
+      },
+      "g3": {
+        "mean_whole_stripe_index": 1.7456871264276657,
+        "mean_ring_only_box_floor": 1.2244084290991146,
+        "mean_cap_only_box_floor": 1.6382021857874796,
+        "mean_ring_excess_at_max": 0.13009363282449926,
+        "mean_cap_excess_at_max": 0.6155934936031664,
+        "mean_decrease_if_cap_ratios_are_one": 0.521278697328551,
+        "mean_decrease_if_ring_ratios_are_one": 0.10748494064018617,
+        "controlling_folds": {
+          "B-R": 3,
+          "B-Btm": 5,
+          "F-T": 2
+        },
+        "controlling_fold_larger_excess": {
+          "ring": 4,
+          "cap": 6
+        },
+        "cases": {
+          "E01-001": {
+            "whole_stripe_index": 1.068993754740803,
+            "controlling_fold": "B-R",
+            "ring_excess_at_max": 0.06899375474080316,
+            "cap_excess_at_max": 0.0,
+            "larger_excess": "ring",
+            "ring_only_box_floor": 1.068993754740803,
+            "cap_only_box_floor": 1.0
+          },
+          "E01-002": {
+            "whole_stripe_index": 1.4001348644816223,
+            "controlling_fold": "B-Btm",
+            "ring_excess_at_max": 0.0,
+            "cap_excess_at_max": 0.4001348644816224,
+            "larger_excess": "cap",
+            "ring_only_box_floor": 1.0969434046866113,
+            "cap_only_box_floor": 1.4001348644816223
+          },
+          "E01-003": {
+            "whole_stripe_index": 3.6759438370294903,
+            "controlling_fold": "B-Btm",
+            "ring_excess_at_max": 0.0,
+            "cap_excess_at_max": 2.6759438370294903,
+            "larger_excess": "cap",
+            "ring_only_box_floor": 1.21006000426002,
+            "cap_only_box_floor": 3.6759438370294903
+          },
+          "E01-004": {
+            "whole_stripe_index": 1.4864042265823887,
+            "controlling_fold": "B-Btm",
+            "ring_excess_at_max": 0.0,
+            "cap_excess_at_max": 0.4864042265823887,
+            "larger_excess": "cap",
+            "ring_only_box_floor": 1.0496944919227131,
+            "cap_only_box_floor": 1.4864042265823887
+          },
+          "E01-005": {
+            "whole_stripe_index": 1.0236824201099852,
+            "controlling_fold": "B-R",
+            "ring_excess_at_max": 0.023682420109985225,
+            "cap_excess_at_max": 0.0,
+            "larger_excess": "ring",
+            "ring_only_box_floor": 1.0236824201099852,
+            "cap_only_box_floor": 1.0
+          },
+          "E01-006": {
+            "whole_stripe_index": 1.9930018299111878,
+            "controlling_fold": "B-Btm",
+            "ring_excess_at_max": 0.0,
+            "cap_excess_at_max": 0.9930018299111878,
+            "larger_excess": "cap",
+            "ring_only_box_floor": 1.0519584081365472,
+            "cap_only_box_floor": 1.9930018299111878
+          },
+          "E01-007": {
+            "whole_stripe_index": 2.395919343424879,
+            "controlling_fold": "B-Btm",
+            "ring_excess_at_max": 0.09573723521860922,
+            "cap_excess_at_max": 1.3001821082062694,
+            "larger_excess": "cap",
+            "ring_only_box_floor": 1.476384850806136,
+            "cap_only_box_floor": 2.3001821082062692
+          },
+          "E01-008": {
+            "whole_stripe_index": 1.281214812292829,
+            "controlling_fold": "B-R",
+            "ring_excess_at_max": 0.2812148122928291,
+            "cap_excess_at_max": 0.0,
+            "larger_excess": "ring",
+            "ring_only_box_floor": 1.281214812292829,
+            "cap_only_box_floor": 1.225886657332043
+          },
+          "E01-009": {
+            "whole_stripe_index": 1.703016155509602,
+            "controlling_fold": "F-T",
+            "ring_excess_at_max": 0.703016155509602,
+            "cap_excess_at_max": 0.0,
+            "larger_excess": "ring",
+            "ring_only_box_floor": 1.703016155509602,
+            "cap_only_box_floor": 1.0002002645110881
+          },
+          "E01-010": {
+            "whole_stripe_index": 1.428560020193869,
+            "controlling_fold": "F-T",
+            "ring_excess_at_max": 0.12829195037316388,
+            "cap_excess_at_max": 0.3002680698207052,
+            "larger_excess": "cap",
+            "ring_only_box_floor": 1.2821359885258994,
+            "cap_only_box_floor": 1.3002680698207052
+          }
+        },
+        "ring_only_floor_exceeds_mean_limit": false
+      }
+    },
+    "definition": "Per-fold stripe index is 1 + ring excess + cap excess. Each box takes the maximum across five folds. The ring-only and cap-only floors independently set the other side's ratio to one and then recompute the maximum."
+  },
+  "banner_review": {
+    "seed": 42,
+    "observational": true,
+    "groups": {
+      "present": {
+        "n": 1,
+        "brief_ids": [
+          "E01-001"
+        ],
+        "mean_stripe_index": 1.068993754740803,
+        "mean_ring_only_box_floor": 1.068993754740803,
+        "mean_image_reward": -2.250483751296997
+      },
+      "absent": {
+        "n": 9,
+        "brief_ids": [
+          "E01-002",
+          "E01-003",
+          "E01-004",
+          "E01-005",
+          "E01-006",
+          "E01-007",
+          "E01-008",
+          "E01-009",
+          "E01-010"
+        ],
+        "mean_stripe_index": 1.849597515545111,
+        "mean_ring_only_box_floor": 1.241676726250038,
+        "mean_image_reward": -1.5591247081756592
+      }
+    },
+    "present_minus_absent": {
+      "mean_stripe_index": -0.7806037608043079,
+      "mean_ring_only_box_floor": -0.17268297150923506,
+      "mean_image_reward": -0.6913590431213379
+    },
+    "review": {
+      "reviewer": "Codex",
+      "fingerprint": "048ecfd10576f70412bcef0b0df3e0669e31cfb2d97c476930308bd1f59e98a6",
+      "samples": {
+        "E01-001": {
+          "stacked_banner_white_line": true,
+          "notes": "三段横向山水上下堆叠，中间有两处浅白横向分隔，跨多个侧面。"
+        },
+        "E01-002": {
+          "stacked_banner_white_line": false,
+          "notes": "山体笔触连续，前后景没有独立的白色分栏线。"
+        },
+        "E01-003": {
+          "stacked_banner_white_line": false,
+          "notes": "连续的稻田和河道透视，顶部浅色属于天空。"
+        },
+        "E01-004": {
+          "stacked_banner_white_line": false,
+          "notes": "上缘远山与花田有景深过渡，未见白线把空间切成独立横幅。"
+        },
+        "E01-005": {
+          "stacked_banner_white_line": false,
+          "notes": "木刻、蘑菇图案连续分布，未见横幅分隔。"
+        },
+        "E01-006": {
+          "stacked_banner_white_line": false,
+          "notes": "田块在同一幅景观中交叠，浅色路径不构成分栏。"
+        },
+        "E01-007": {
+          "stacked_banner_white_line": false,
+          "notes": "山坡和田块沿景深相连，未见独立的白线分栏。"
+        },
+        "E01-008": {
+          "stacked_banner_white_line": false,
+          "notes": "枝叶与红果连续重复，未见横幅分隔。"
+        },
+        "E01-009": {
+          "stacked_banner_white_line": false,
+          "notes": "天空、远山和花田是一幅连续景观，分色是自然景深。"
+        },
+        "E01-010": {
+          "stacked_banner_white_line": false,
+          "notes": "叶片和果实图案连续，没有横向白线切分。"
+        }
+      }
+    }
+  },
+  "cross_seed_verification": {
+    "selected": "g1",
+    "n": 10,
+    "variants": {
+      "raw": {
+        "cap_6_delta_e00": {
+          "mean_seed_42": 11.497355703512827,
+          "mean_seed_1234": 14.95959173043569,
+          "mean_paired_delta_1234_minus_42": 3.4622360269228616,
+          "paired_deltas": {
+            "E01-001": -1.983349084854126,
+            "E01-002": 2.6594408353169765,
+            "E01-003": 2.4725777308146153,
+            "E01-004": 3.3773066202799473,
+            "E01-005": 3.6808764537175493,
+            "E01-006": 4.836813251177469,
+            "E01-007": 4.927649497985842,
+            "E01-008": 3.27405865987142,
+            "E01-009": 5.741127967834473,
+            "E01-010": 5.635858337084452
+          }
+        },
+        "cap_6_lpips": {
+          "mean_seed_42": 0.44254868278900783,
+          "mean_seed_1234": 0.46822749574979144,
+          "mean_paired_delta_1234_minus_42": 0.02567881296078365,
+          "paired_deltas": {
+            "E01-001": 0.03629958132902783,
+            "E01-002": 0.0050651083389918194,
+            "E01-003": 0.13857808709144592,
+            "E01-004": 0.011360347270965576,
+            "E01-005": -0.04373354713122046,
+            "E01-006": 0.03453018764654797,
+            "E01-007": 0.05588831007480621,
+            "E01-008": -0.003928045431772886,
+            "E01-009": 0.005993694067001343,
+            "E01-010": 0.016734406352043152
+          }
+        },
+        "non_native_7_sdr": {
+          "mean_seed_42": 3.8631723642349245,
+          "mean_seed_1234": 5.607198977470398,
+          "mean_paired_delta_1234_minus_42": 1.7440266132354736,
+          "paired_deltas": {
+            "E01-001": 1.4687247276306152,
+            "E01-002": -0.08242940902709961,
+            "E01-003": 3.635347843170166,
+            "E01-004": 0.9959588050842285,
+            "E01-005": 1.2646291255950928,
+            "E01-006": 1.935823678970337,
+            "E01-007": 3.219845771789551,
+            "E01-008": 1.2589025497436523,
+            "E01-009": 1.6387457847595215,
+            "E01-010": 2.104717254638672
+          }
+        },
+        "non_native_7_lpips": {
+          "mean_seed_42": 0.4030994207731315,
+          "mean_seed_1234": 0.43203029121671405,
+          "mean_paired_delta_1234_minus_42": 0.028930870443582536,
+          "paired_deltas": {
+            "E01-001": 0.045829930475779934,
+            "E01-002": 0.00753389298915863,
+            "E01-003": 0.12182182499340605,
+            "E01-004": 0.023063953433718032,
+            "E01-005": -0.02695974281855995,
+            "E01-006": 0.039284969014780846,
+            "E01-007": 0.05618672072887421,
+            "E01-008": -0.0017390251159667969,
+            "E01-009": 0.0049594683306557474,
+            "E01-010": 0.019326712403978652
+          }
+        },
+        "stripe_index": {
+          "mean_seed_42": 1.7715371394646802,
+          "mean_seed_1234": 1.3482531287790154,
+          "mean_paired_delta_1234_minus_42": -0.4232840106856649,
+          "paired_deltas": {
+            "E01-001": 0.7877630139097116,
+            "E01-002": -0.0961229389329814,
+            "E01-003": -2.5062358288207767,
+            "E01-004": -0.29545272896690356,
+            "E01-005": 0.4745295626890822,
+            "E01-006": -0.8973483172459287,
+            "E01-007": -1.1895355202459494,
+            "E01-008": -0.07370255096693668,
+            "E01-009": -0.5324245445856861,
+            "E01-010": 0.09568974630971994
+          }
+        },
+        "clip_score": {
+          "mean_seed_42": 0.6848931461572647,
+          "mean_seed_1234": 0.7091781087219715,
+          "mean_paired_delta_1234_minus_42": 0.024284962564706802,
+          "paired_deltas": {
+            "E01-001": 0.08586309850215912,
+            "E01-002": -0.06375689059495926,
+            "E01-003": 0.004839450120925903,
+            "E01-004": -0.00039421021938323975,
+            "E01-005": -0.023671388626098633,
+            "E01-006": 0.04393644630908966,
+            "E01-007": 0.01707702875137329,
+            "E01-008": 0.106605663895607,
+            "E01-009": 0.0030454248189926147,
+            "E01-010": 0.06930500268936157
+          }
+        },
+        "image_reward": {
+          "mean_seed_42": -1.628260612487793,
+          "mean_seed_1234": -1.3460326313972473,
+          "mean_paired_delta_1234_minus_42": 0.28222798109054564,
+          "paired_deltas": {
+            "E01-001": 0.9061201810836792,
+            "E01-002": -0.4966038465499878,
+            "E01-003": 0.2761366367340088,
+            "E01-004": 0.024582624435424805,
+            "E01-005": 0.12252843379974365,
+            "E01-006": 0.31647372245788574,
+            "E01-007": 0.6723743677139282,
+            "E01-008": 0.5480764508247375,
+            "E01-009": 0.2028631567955017,
+            "E01-010": 0.24972808361053467
+          }
+        },
+        "elapsed_seconds": {
+          "mean_seed_42": 44.83014238793403,
+          "mean_seed_1234": 44.744949124380945,
+          "mean_paired_delta_1234_minus_42": -0.08519326355308295,
+          "paired_deltas": {
+            "E01-001": -0.6057844590395689,
+            "E01-002": -0.43026801384985447,
+            "E01-003": 0.12749853543937206,
+            "E01-004": 0.03689214028418064,
+            "E01-005": 0.029699405655264854,
+            "E01-006": 0.0679189171642065,
+            "E01-007": 0.001261051744222641,
+            "E01-008": -0.09425952285528183,
+            "E01-009": 0.039752865210175514,
+            "E01-010": -0.024643555283546448
+          }
+        },
+        "bleed_fill_pct": {
+          "mean_seed_42": 52.35558793280768,
+          "mean_seed_1234": 48.10935893040795,
+          "mean_paired_delta_1234_minus_42": -4.246229002399727,
+          "paired_deltas": {
+            "E01-001": 9.384641755227975,
+            "E01-002": -7.190606787795687,
+            "E01-003": 3.548165923894409,
+            "E01-004": -8.287624271511831,
+            "E01-005": -8.934693177922533,
+            "E01-006": -11.390126842646552,
+            "E01-007": 0.3899554336647242,
+            "E01-008": -8.70329105245115,
+            "E01-009": -7.859101816935201,
+            "E01-010": -3.4196091875214236
+          }
+        },
+        "bleed_fill_v2_pct": {
+          "mean_seed_42": 47.8372471717518,
+          "mean_seed_1234": 38.803993829276656,
+          "mean_paired_delta_1234_minus_42": -9.033253342475145,
+          "paired_deltas": {
+            "E01-001": -20.29910867329448,
+            "E01-002": -16.703805279396633,
+            "E01-003": 1.5212547137469983,
+            "E01-004": -9.834590332533423,
+            "E01-005": -13.29705176551252,
+            "E01-006": -8.904696606102156,
+            "E01-007": -2.995371957490576,
+            "E01-008": -3.7195749057250573,
+            "E01-009": -15.272540281110736,
+            "E01-010": -0.8270483373328759
+          }
+        },
+        "hps_v2": {
+          "mean_seed_42": 0.23727743923664094,
+          "mean_seed_1234": 0.23693174123764038,
+          "mean_paired_delta_1234_minus_42": -0.00034569799900054934,
+          "paired_deltas": {
+            "E01-001": -0.003585219383239746,
+            "E01-002": -0.01386292278766632,
+            "E01-003": -0.008390828967094421,
+            "E01-004": 0.005578771233558655,
+            "E01-005": -0.0016464591026306152,
+            "E01-006": -0.003526061773300171,
+            "E01-007": 0.0016871988773345947,
+            "E01-008": 0.012537360191345215,
+            "E01-009": -0.004175588488578796,
+            "E01-010": 0.011926770210266113
+          }
+        },
+        "peak_memory_mib": {
+          "mean_seed_42": 10509.8515625,
+          "mean_seed_1234": 10511.6953125,
+          "mean_paired_delta_1234_minus_42": 1.84375,
+          "paired_deltas": {
+            "E01-001": 1.84375,
+            "E01-002": 1.84375,
+            "E01-003": 1.84375,
+            "E01-004": 1.84375,
+            "E01-005": 1.84375,
+            "E01-006": 1.84375,
+            "E01-007": 1.84375,
+            "E01-008": 1.84375,
+            "E01-009": 1.84375,
+            "E01-010": 1.84375
+          }
+        }
+      },
+      "preflight": {
+        "cap_6_delta_e00": {
+          "mean_seed_42": 11.497355703512827,
+          "mean_seed_1234": 14.95959173043569,
+          "mean_paired_delta_1234_minus_42": 3.4622360269228616,
+          "paired_deltas": {
+            "E01-001": -1.983349084854126,
+            "E01-002": 2.6594408353169765,
+            "E01-003": 2.4725777308146153,
+            "E01-004": 3.3773066202799473,
+            "E01-005": 3.6808764537175493,
+            "E01-006": 4.836813251177469,
+            "E01-007": 4.927649497985842,
+            "E01-008": 3.27405865987142,
+            "E01-009": 5.741127967834473,
+            "E01-010": 5.635858337084452
+          }
+        },
+        "cap_6_lpips": {
+          "mean_seed_42": 0.44254868278900783,
+          "mean_seed_1234": 0.46822749574979144,
+          "mean_paired_delta_1234_minus_42": 0.02567881296078365,
+          "paired_deltas": {
+            "E01-001": 0.03629958132902783,
+            "E01-002": 0.0050651083389918194,
+            "E01-003": 0.13857808709144592,
+            "E01-004": 0.011360347270965576,
+            "E01-005": -0.04373354713122046,
+            "E01-006": 0.03453018764654797,
+            "E01-007": 0.05588831007480621,
+            "E01-008": -0.003928045431772886,
+            "E01-009": 0.005993694067001343,
+            "E01-010": 0.016734406352043152
+          }
+        },
+        "non_native_7_sdr": {
+          "mean_seed_42": 3.8631723642349245,
+          "mean_seed_1234": 5.607198977470398,
+          "mean_paired_delta_1234_minus_42": 1.7440266132354736,
+          "paired_deltas": {
+            "E01-001": 1.4687247276306152,
+            "E01-002": -0.08242940902709961,
+            "E01-003": 3.635347843170166,
+            "E01-004": 0.9959588050842285,
+            "E01-005": 1.2646291255950928,
+            "E01-006": 1.935823678970337,
+            "E01-007": 3.219845771789551,
+            "E01-008": 1.2589025497436523,
+            "E01-009": 1.6387457847595215,
+            "E01-010": 2.104717254638672
+          }
+        },
+        "non_native_7_lpips": {
+          "mean_seed_42": 0.4030994207731315,
+          "mean_seed_1234": 0.43203029121671405,
+          "mean_paired_delta_1234_minus_42": 0.028930870443582536,
+          "paired_deltas": {
+            "E01-001": 0.045829930475779934,
+            "E01-002": 0.00753389298915863,
+            "E01-003": 0.12182182499340605,
+            "E01-004": 0.023063953433718032,
+            "E01-005": -0.02695974281855995,
+            "E01-006": 0.039284969014780846,
+            "E01-007": 0.05618672072887421,
+            "E01-008": -0.0017390251159667969,
+            "E01-009": 0.0049594683306557474,
+            "E01-010": 0.019326712403978652
+          }
+        },
+        "stripe_index": {
+          "mean_seed_42": 1.7715371394646802,
+          "mean_seed_1234": 1.3482531287790154,
+          "mean_paired_delta_1234_minus_42": -0.4232840106856649,
+          "paired_deltas": {
+            "E01-001": 0.7877630139097116,
+            "E01-002": -0.0961229389329814,
+            "E01-003": -2.5062358288207767,
+            "E01-004": -0.29545272896690356,
+            "E01-005": 0.4745295626890822,
+            "E01-006": -0.8973483172459287,
+            "E01-007": -1.1895355202459494,
+            "E01-008": -0.07370255096693668,
+            "E01-009": -0.5324245445856861,
+            "E01-010": 0.09568974630971994
+          }
+        },
+        "clip_score": {
+          "mean_seed_42": 0.6848931461572647,
+          "mean_seed_1234": 0.7091781087219715,
+          "mean_paired_delta_1234_minus_42": 0.024284962564706802,
+          "paired_deltas": {
+            "E01-001": 0.08586309850215912,
+            "E01-002": -0.06375689059495926,
+            "E01-003": 0.004839450120925903,
+            "E01-004": -0.00039421021938323975,
+            "E01-005": -0.023671388626098633,
+            "E01-006": 0.04393644630908966,
+            "E01-007": 0.01707702875137329,
+            "E01-008": 0.106605663895607,
+            "E01-009": 0.0030454248189926147,
+            "E01-010": 0.06930500268936157
+          }
+        },
+        "image_reward": {
+          "mean_seed_42": -1.628260612487793,
+          "mean_seed_1234": -1.3460326313972473,
+          "mean_paired_delta_1234_minus_42": 0.28222798109054564,
+          "paired_deltas": {
+            "E01-001": 0.9061201810836792,
+            "E01-002": -0.4966038465499878,
+            "E01-003": 0.2761366367340088,
+            "E01-004": 0.024582624435424805,
+            "E01-005": 0.12252843379974365,
+            "E01-006": 0.31647372245788574,
+            "E01-007": 0.6723743677139282,
+            "E01-008": 0.5480764508247375,
+            "E01-009": 0.2028631567955017,
+            "E01-010": 0.24972808361053467
+          }
+        },
+        "elapsed_seconds": {
+          "mean_seed_42": 44.83014238793403,
+          "mean_seed_1234": 44.744949124380945,
+          "mean_paired_delta_1234_minus_42": -0.08519326355308295,
+          "paired_deltas": {
+            "E01-001": -0.6057844590395689,
+            "E01-002": -0.43026801384985447,
+            "E01-003": 0.12749853543937206,
+            "E01-004": 0.03689214028418064,
+            "E01-005": 0.029699405655264854,
+            "E01-006": 0.0679189171642065,
+            "E01-007": 0.001261051744222641,
+            "E01-008": -0.09425952285528183,
+            "E01-009": 0.039752865210175514,
+            "E01-010": -0.024643555283546448
+          }
+        },
+        "bleed_fill_pct": {
+          "mean_seed_42": 52.35558793280768,
+          "mean_seed_1234": 48.10935893040795,
+          "mean_paired_delta_1234_minus_42": -4.246229002399727,
+          "paired_deltas": {
+            "E01-001": 9.384641755227975,
+            "E01-002": -7.190606787795687,
+            "E01-003": 3.548165923894409,
+            "E01-004": -8.287624271511831,
+            "E01-005": -8.934693177922533,
+            "E01-006": -11.390126842646552,
+            "E01-007": 0.3899554336647242,
+            "E01-008": -8.70329105245115,
+            "E01-009": -7.859101816935201,
+            "E01-010": -3.4196091875214236
+          }
+        },
+        "bleed_fill_v2_pct": {
+          "mean_seed_42": 47.8372471717518,
+          "mean_seed_1234": 38.803993829276656,
+          "mean_paired_delta_1234_minus_42": -9.033253342475145,
+          "paired_deltas": {
+            "E01-001": -20.29910867329448,
+            "E01-002": -16.703805279396633,
+            "E01-003": 1.5212547137469983,
+            "E01-004": -9.834590332533423,
+            "E01-005": -13.29705176551252,
+            "E01-006": -8.904696606102156,
+            "E01-007": -2.995371957490576,
+            "E01-008": -3.7195749057250573,
+            "E01-009": -15.272540281110736,
+            "E01-010": -0.8270483373328759
+          }
+        },
+        "hps_v2": {
+          "mean_seed_42": 0.23727743923664094,
+          "mean_seed_1234": 0.23693174123764038,
+          "mean_paired_delta_1234_minus_42": -0.00034569799900054934,
+          "paired_deltas": {
+            "E01-001": -0.003585219383239746,
+            "E01-002": -0.01386292278766632,
+            "E01-003": -0.008390828967094421,
+            "E01-004": 0.005578771233558655,
+            "E01-005": -0.0016464591026306152,
+            "E01-006": -0.003526061773300171,
+            "E01-007": 0.0016871988773345947,
+            "E01-008": 0.012537360191345215,
+            "E01-009": -0.004175588488578796,
+            "E01-010": 0.011926770210266113
+          }
+        },
+        "peak_memory_mib": {
+          "mean_seed_42": 10509.8515625,
+          "mean_seed_1234": 10511.6953125,
+          "mean_paired_delta_1234_minus_42": 1.84375,
+          "paired_deltas": {
+            "E01-001": 1.84375,
+            "E01-002": 1.84375,
+            "E01-003": 1.84375,
+            "E01-004": 1.84375,
+            "E01-005": 1.84375,
+            "E01-006": 1.84375,
+            "E01-007": 1.84375,
+            "E01-008": 1.84375,
+            "E01-009": 1.84375,
+            "E01-010": 1.84375
+          }
+        }
+      }
+    },
+    "seed_1234_tail": {
+      "seed": 1234,
+      "n": 10,
+      "variant": "preflight",
+      "p90_definition": "Hyndman–Fan type 7 (linear; at n=10, x[8] + 0.1 × (x[9]−x[8]) in zero-based ascending order)",
+      "methods": {
+        "g1": {
+          "cap_6_delta_e00": {
+            "mean": 14.95959173043569,
+            "p90": 17.591744923591612,
+            "worst_two": [
+              {
+                "brief_id": "E01-003",
+                "value": 18.4093918800354
+              },
+              {
+                "brief_id": "E01-009",
+                "value": 17.500895261764526
+              }
+            ]
+          },
+          "stripe_index": {
+            "mean": 1.3482531287790154,
+            "p90": 1.5507069876795156,
+            "worst_two": [
+              {
+                "brief_id": "E01-001",
+                "value": 1.8567567686505146
+              },
+              {
+                "brief_id": "E01-010",
+                "value": 1.516701456460516
+              }
+            ]
+          }
+        }
+      }
+    }
+  },
+  "stripe_sources_seed_1234": {
+    "seed": 1234,
+    "n": 10,
+    "methods": {
+      "g1": {
+        "mean_whole_stripe_index": 1.3482531287790154,
+        "mean_ring_only_box_floor": 1.2797767234291657,
+        "mean_cap_only_box_floor": 1.1490509486395966,
+        "mean_ring_excess_at_max": 0.22612162829621402,
+        "mean_cap_excess_at_max": 0.12213150048280136,
+        "mean_decrease_if_cap_ratios_are_one": 0.06847640534984978,
+        "mean_decrease_if_ring_ratios_are_one": 0.19920218013941893,
+        "controlling_folds": {
+          "F-T": 2,
+          "F-R": 4,
+          "B-R": 2,
+          "F-L": 1,
+          "B-Btm": 1
+        },
+        "controlling_fold_larger_excess": {
+          "cap": 2,
+          "ring": 8
+        },
+        "cases": {
+          "E01-001": {
+            "whole_stripe_index": 1.8567567686505146,
+            "controlling_fold": "F-T",
+            "ring_excess_at_max": 0.0,
+            "cap_excess_at_max": 0.8567567686505146,
+            "larger_excess": "cap",
+            "ring_only_box_floor": 1.4204408246354288,
+            "cap_only_box_floor": 1.8567567686505146
+          },
+          "E01-002": {
+            "whole_stripe_index": 1.3335238787620005,
+            "controlling_fold": "F-R",
+            "ring_excess_at_max": 0.3335238787620005,
+            "cap_excess_at_max": 0.0,
+            "larger_excess": "ring",
+            "ring_only_box_floor": 1.3335238787620005,
+            "cap_only_box_floor": 1.0525378562123748
+          },
+          "E01-003": {
+            "whole_stripe_index": 1.2447773299055702,
+            "controlling_fold": "F-R",
+            "ring_excess_at_max": 0.24477732990557022,
+            "cap_excess_at_max": 0.0,
+            "larger_excess": "ring",
+            "ring_only_box_floor": 1.2447773299055702,
+            "cap_only_box_floor": 1.0799876874104877
+          },
+          "E01-004": {
+            "whole_stripe_index": 1.1637782114933575,
+            "controlling_fold": "B-R",
+            "ring_excess_at_max": 0.16377821149335747,
+            "cap_excess_at_max": 0.0,
+            "larger_excess": "ring",
+            "ring_only_box_floor": 1.1637782114933575,
+            "cap_only_box_floor": 1.0870000327401588
+          },
+          "E01-005": {
+            "whole_stripe_index": 1.4982119827990674,
+            "controlling_fold": "F-R",
+            "ring_excess_at_max": 0.4982119827990673,
+            "cap_excess_at_max": 0.0,
+            "larger_excess": "ring",
+            "ring_only_box_floor": 1.4982119827990674,
+            "cap_only_box_floor": 1.0
+          },
+          "E01-006": {
+            "whole_stripe_index": 1.1575561954025466,
+            "controlling_fold": "F-R",
+            "ring_excess_at_max": 0.15755619540254673,
+            "cap_excess_at_max": 0.0,
+            "larger_excess": "ring",
+            "ring_only_box_floor": 1.1575561954025466,
+            "cap_only_box_floor": 1.0
+          },
+          "E01-007": {
+            "whole_stripe_index": 1.333121592066773,
+            "controlling_fold": "B-R",
+            "ring_excess_at_max": 0.33312159206677294,
+            "cap_excess_at_max": 0.0,
+            "larger_excess": "ring",
+            "ring_only_box_floor": 1.333121592066773,
+            "cap_only_box_floor": 1.0
+          },
+          "E01-008": {
+            "whole_stripe_index": 1.2075122613258924,
+            "controlling_fold": "F-T",
+            "ring_excess_at_max": 0.018090593691080903,
+            "cap_excess_at_max": 0.18942166763481139,
+            "larger_excess": "cap",
+            "ring_only_box_floor": 1.1342007203851683,
+            "cap_only_box_floor": 1.1894216676348113
+          },
+          "E01-009": {
+            "whole_stripe_index": 1.1705916109239158,
+            "controlling_fold": "F-L",
+            "ring_excess_at_max": 0.17059161092391584,
+            "cap_excess_at_max": 0.0,
+            "larger_excess": "ring",
+            "ring_only_box_floor": 1.1705916109239158,
+            "cap_only_box_floor": 1.04966890520493
+          },
+          "E01-010": {
+            "whole_stripe_index": 1.516701456460516,
+            "controlling_fold": "B-Btm",
+            "ring_excess_at_max": 0.34156488791782824,
+            "cap_excess_at_max": 0.17513656854268755,
+            "larger_excess": "ring",
+            "ring_only_box_floor": 1.3415648879178281,
+            "cap_only_box_floor": 1.1751365685426876
+          }
+        }
+      }
+    },
+    "definition": "Per-fold stripe index is 1 + ring excess + cap excess. Each box takes the maximum across five folds. The ring-only and cap-only floors independently set the other side's ratio to one and then recompute the maximum."
+  }
+}

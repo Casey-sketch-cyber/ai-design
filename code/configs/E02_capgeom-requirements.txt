@@ -1,0 +1,2 @@
+# AutoDL CPython 3.12 / Linux x86-64 wheel, pinned against upstream PyPI.
+pyamg==5.3.0 --hash=sha256:2a69c7974b26b1d5cd5bc0e371c565239199e9032b2ceb97190d492cd6498367
