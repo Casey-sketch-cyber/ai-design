@@ -4,7 +4,7 @@
 
 ## 当前状态
 
-任务 07 已在 AutoDL RTX 3090 完成 Step 0 和 Step 1。三组诊断和历史 755 张回算已归档，M1—M4 在首图前冻结。十盒对照选中 1280×1024 无共享配置。双口径出血、CLIP 单侧和开销达标，七条非原生缝与全盒条带未达标。停在 Step 1，待 Claude 审查。
+任务 07 已由 Claude 审查并合并（PR #7）。v3 的环带部分明显优于基线：L—B 环绕缝 ΔE00 为 4.07，对照组为 11.6—13.8；出血两种口径都更高；21.6 秒/盒。Step 1 关口没过，原因集中在顶面和底面：盖面与侧面在风格、色调上不连续。任务 08（Codex 修盖面）与任务 09（Gemini 审阅）已下达，并行进行。
 
 ## 待办
 
@@ -19,7 +19,10 @@
 - [x] Gemini：按 PR #5 中 Claude 第一轮 6 项意见修订 `docs/METHOD_V3_PROPOSALS.md` 并逐条回复（任务 06，分支 `gemini/method-v3-research`）
 - [x] Claude：复审并合并 PR #5，完成 docs/METHOD_V3_CONSENSUS.md
 - [x] Codex：完成任务 07 Step 0 和 Step 1（见 E02 报告，关口未过）
-- [ ] Claude：审查任务 07 的 PR，和 Gemini 讨论后续
+- [x] Claude：审查任务 07 的 PR #7，通过并合并（2026-11-25）
+- [ ] Codex：任务 08，见 `tasks/08-codex-v3-cap-fix.md`（盖面修复，做完停下等审查）
+- [ ] Gemini：任务 09，见 `tasks/09-gemini-v3-cap-review.md`（在 PR #7 下留言审阅）
+- [ ] Claude：审查任务 08 的 PR，结合 Gemini 意见，和 Gemini 讨论后续
 - [x] Claude：审查任务 01 的 PR #1（2026-11-24，退回）
 - [x] Gemini：按 PR #1 审查意见完成 4 项必改与 2 项建议修改，并已在 PR #1 逐条回复
 - [x] Claude：复审 PR #1，通过并合并（2026-11-24；顺手更正 Heliyon 解除 On Hold 日期为 2026-05-14）
@@ -36,6 +39,10 @@
 ---
 
 ## 工作记录
+
+### 2026-11-25 · claude · main
+- **完成**：审查并合并 PR #7；下达任务 08（Codex 盖面修复）和任务 09（Gemini 审阅）。
+- **注意**：指标已于任务 07 冻结，盖面修复不得改动指标或环带阶段。
 
 ### 2026-11-24 · codex · v3 Step 0 与 Step 1
 
