@@ -4,7 +4,7 @@
 
 ## 当前状态
 
-v3 方法经 Gemini 提案、Claude 两轮审查达成共识（PR #5 已合并），见 `docs/METHOD_V3_CONSENSUS.md`：四侧面环带用环形卷积单次生成，顶面、底面以冻结环带为条件顺序外扩，新增 B2-regional 基线，新指标 M1—M4 在生成前冻结。**等待作者确认共识方案**，确认后由 Codex 执行任务 07（Step 0 + Step 1）。
+任务 07 已在 AutoDL RTX 3090 完成 Step 0 和 Step 1。三组诊断和历史 755 张回算已归档，M1—M4 在首图前冻结。十盒对照选中 1280×1024 无共享配置。双口径出血、CLIP 单侧和开销达标，七条非原生缝与全盒条带未达标。停在 Step 1，待 Claude 审查。
 
 ## 待办
 
@@ -17,7 +17,9 @@ v3 方法经 Gemini 提案、Claude 两轮审查达成共识（PR #5 已合并�
 - [x] Codex：任务 05，见 `tasks/05-codex-e01b-bottom-frame.md`（做完停下等审查）
 - [x] Claude：审查任务 05 的 PR #6，通过并合并（2026-11-25）
 - [x] Gemini：按 PR #5 中 Claude 第一轮 6 项意见修订 `docs/METHOD_V3_PROPOSALS.md` 并逐条回复（任务 06，分支 `gemini/method-v3-research`）
-- [ ] Claude：复审 PR #5 并汇总成 `docs/METHOD_V3_CONSENSUS.md`，交作者确认后派给 Codex 实现
+- [x] Claude：复审并合并 PR #5，完成 docs/METHOD_V3_CONSENSUS.md
+- [x] Codex：完成任务 07 Step 0 和 Step 1（见 E02 报告，关口未过）
+- [ ] Claude：审查任务 07 的 PR，和 Gemini 讨论后续
 - [x] Claude：审查任务 01 的 PR #1（2026-11-24，退回）
 - [x] Gemini：按 PR #1 审查意见完成 4 项必改与 2 项建议修改，并已在 PR #1 逐条回复
 - [x] Claude：复审 PR #1，通过并合并（2026-11-24；顺手更正 Heliyon 解除 On Hold 日期为 2026-05-14）
@@ -34,6 +36,13 @@ v3 方法经 Gemini 提案、Claude 两轮审查达成共识（PR #5 已合并�
 ---
 
 ## 工作记录
+
+### 2026-11-24 · codex · v3 Step 0 与 Step 1
+
+- **Step 0**：拆分原生与非原生缝、分析出血失分，五盒重跑去 Outside 锚定实验。在同一 755 张历史原图完成新口径回算和反例健全性检查。生成前锁定指标提交与参数哈希。
+- **Step 1**：十盒 B2-regional、两档 v3 及共享注意力候选均已在 RTX 3090 运行。以六项规则选 1280×1024 无共享版，实测 21.57 秒/盒、峰值约 10.18 GiB。
+- **关口**：两套出血评分胜过 B2-regional 和 B2-post，CLIP 与开销通过。非原生缝和全盒条带未过。环绕缝改善，盖侧非原生缝是主要差距。
+- **交接**：停在 Step 1，提交 Claude 审查。[完整报告](experiments/E02/REPORT.md)
 
 ### 2026-11-25 · claude · main
 - **完成**：第二轮审查并合并 PR #5；写 `docs/METHOD_V3_CONSENSUS.md` 和任务 07。
