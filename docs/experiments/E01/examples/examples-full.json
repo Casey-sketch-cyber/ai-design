@@ -1,0 +1,33 @@
+{
+  "phase": "full",
+  "seed": 42,
+  "chosen_briefs": [
+    "E01-011",
+    "E01-012",
+    "E01-013"
+  ],
+  "figures": [
+    "example-full-E01-011-seed42.jpg",
+    "example-full-E01-012-seed42.jpg",
+    "example-full-E01-013-seed42.jpg"
+  ],
+  "expected_figure_count": 3,
+  "common_brief_count": 40,
+  "included_methods": [
+    "b2",
+    "b3",
+    "b4",
+    "ours",
+    "no_sync",
+    "no_projection"
+  ],
+  "missing_methods": [],
+  "available_brief_counts": {
+    "b2": 40,
+    "b3": 40,
+    "b4": 40,
+    "ours": 40,
+    "no_sync": 40,
+    "no_projection": 40
+  }
+}
