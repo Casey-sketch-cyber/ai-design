@@ -1,11 +1,11 @@
 # E02 · Step 0 指标冻结
 
-在生成任何 v3 图像之前完成历史试算、合成 sanity 检查和 Git 冻结。
+在生成任何 v3 图像之前完成历史试算、合成健全性检查和 Git 冻结。
 
-- 指标代码提交 \`33fe37229119c47f7aafdb0b5ee5f3116a2a57d1\`
-- 参数文件 \`code/configs/E02_metrics.yaml\` 的 SHA-256 \`76b23ea65839e95a60d3a0c3f9354b601a8d7daa8429eb2ff71a72560631577c\`
+- 指标代码提交 `33fe37229119c47f7aafdb0b5ee5f3116a2a57d1`
+- 参数文件 `code/configs/E02_metrics.yaml` 的 SHA-256 `76b23ea65839e95a60d3a0c3f9354b601a8d7daa8429eb2ff71a72560631577c`
 - 同一 755 张历史原图分别完成 M1—M3 与 M4，逐张核对了输入图像 SHA-256。含 B2、B2-post、SyncMVD、Paint3D、v1 各 150 张，以及任务 05 v2 的 5 张。
-- 模型使用本地校验的 DINOv2-S，官方修订 \`ed25f3a31f01632728cabb09d1542f84ab7b0056\`。[模型文件](https://huggingface.co/facebook/dinov2-small/tree/ed25f3a31f01632728cabb09d1542f84ab7b0056)
+- 模型使用本地校验的 DINOv2-S，官方修订 `ed25f3a31f01632728cabb09d1542f84ab7b0056`。[模型文件](https://huggingface.co/facebook/dinov2-small/tree/ed25f3a31f01632728cabb09d1542f84ab7b0056)
 - 入口按 Git 版本、参数文件、原物理口径与 DINOv2 文件验证冻结关系。[机器可读冻结记录](metrics-freeze.json)
 
 | 指标 | 冻结定义 | 合成检查 |

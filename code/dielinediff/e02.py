@@ -385,22 +385,44 @@ def summarize(experiment):
     write_json(experiment.output / "statistics.json", {"variants": variants, "cross_panel": cross_panel})
     review_path = experiment.output / "visual-review.json"
     review = read_json(review_path) if review_path.is_file() else None
+    from .e02_visual import render_examples, render_native_creases
+
     result = gate(experiment, groups, chosen, review)
     write_json(experiment.output / "gate.json", result)
+    render_examples(experiment, chosen)
+    render_native_creases(experiment, chosen)
     print(json.dumps(result, ensure_ascii=False))
+
+
+def record_review(experiment, path):
+    current = read_json(experiment.output / "gate.json")
+    document = read_json(path)
+    visual = document.get("visual_review", document) if isinstance(document, dict) else None
+    names = {brief["id"] for brief in experiment.briefs[:10]}
+    samples = visual.get("samples", {}) if isinstance(visual, dict) else {}
+    if (set(samples) != names or visual.get("fingerprint") != current["fingerprint"]
+            or any(not isinstance(item, dict) or not isinstance(item.get("visible_artifact"), bool)
+                   or not isinstance(item.get("notes"), str) or not item["notes"].strip()
+                   for item in samples.values())):
+        raise ValueError("Record ten explicit native-fold observations for the current gate fingerprint.")
+    write_json(experiment.output / "visual-review.json", visual)
+    summarize(experiment)
 
 
 def main():
     cli = argparse.ArgumentParser(description=__doc__)
     cli.add_argument("action", choices=("paths", "generate", "measure", "select-resolution", "select-final",
-                                       "summarize"))
+                                       "summarize", "review"))
     cli.add_argument("--root", type=Path, default=os.environ.get("DIELINEDIFF_ROOT"))
     cli.add_argument("--config", type=Path, default=DEFAULT_CONFIG)
     cli.add_argument("--device", default="cuda")
+    cli.add_argument("--review-file", type=Path)
     cli.add_argument("--methods", nargs="+", choices=(*GPU_METHODS, "b2", "b2_post", "b3", "b4", "v1", "v2"))
     args = cli.parse_args()
     if args.root is None:
         cli.error("source code/scripts/e01_env.sh or provide --root")
+    if args.action == "review" and args.review_file is None:
+        cli.error("review requires --review-file")
     experiment = Experiment(args.root, args.config)
     if args.action == "paths":
         print(json.dumps({"run": str(experiment.output), "config": str(args.config), "metrics": str(METRICS_CONFIG)}))
@@ -412,6 +434,8 @@ def main():
         select_resolution(experiment)
     elif args.action == "select-final":
         select_final(experiment)
+    elif args.action == "review":
+        record_review(experiment, args.review_file)
     else:
         summarize(experiment)
 
