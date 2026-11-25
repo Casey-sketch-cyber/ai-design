@@ -15,7 +15,16 @@
 
 网页版 Gemini 不能执行命令时：把 `tasks/01-gemini-literature-tree-opc-packaging.md` 和 findInnovation 的 `SKILL.md`、两个模板的内容一起粘贴给它，产出再由你或其他 AI 提交到本仓库。
 
-## 发给 Codex 的指令（任务 08，直接复制）
+## 发给 Codex 的指令（任务 10，直接复制）
+
+```
+请 pull 仓库 https://github.com/Casey-sketch-cyber/ai-design.git 的最新 main，
+先读 AGENTS.md、PR #9 里 Claude 的审查留言和 PR #7 里 Gemini 的审阅留言，
+然后执行 tasks/10-codex-v3-cap-geometry.md（去掉盖面 halos、加调和初始化 C5、修正共享注意力时间步，并诊断条带来源；只改盖面阶段，环带和已冻结的指标不动，做完就停）。
+必须能在 RTX 3090 24GB 上跑通。在分支 codex/v3-cap-geometry 上完成，推送并创建 PR，不要自己合并。全程用中文沟通。
+```
+
+## 发给 Codex 的指令（任务 08，已完成）
 
 ```
 请 pull 仓库 https://github.com/Casey-sketch-cyber/ai-design.git 的最新 main，
@@ -24,7 +33,7 @@
 必须能在 RTX 3090 24GB 上跑通。在分支 codex/v3-cap-fix 上完成，推送并创建 PR，不要自己合并。全程用中文沟通。
 ```
 
-## 发给 Gemini 的指令（任务 09，直接复制，与任务 08 并行）
+## 发给 Gemini 的指令（任务 09，已完成）
 
 ```
 请 pull 仓库 https://github.com/Casey-sketch-cyber/ai-design.git 的最新 main，
