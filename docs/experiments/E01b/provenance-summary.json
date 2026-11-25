@@ -1,0 +1,13 @@
+{
+  "atlases": 905,
+  "variant_rows": 1810,
+  "native_score_sources": {
+    "task03-matching-atlas-sha256": 25,
+    "E01-tracked-native-scores": 880
+  },
+  "image_reward_sources": {
+    "task03-matching-atlas-sha256": 25,
+    "measured": 880
+  },
+  "physical_implementation_sha256": "f64fc04feadd1f41277cda04ef38afeb65d5dc32819dec0637584a5167358325"
+}
