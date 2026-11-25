@@ -15,7 +15,24 @@
 
 网页版 Gemini 不能执行命令时：把 `tasks/01-gemini-literature-tree-opc-packaging.md` 和 findInnovation 的 `SKILL.md`、两个模板的内容一起粘贴给它，产出再由你或其他 AI 提交到本仓库。
 
-## 发给 Gemini 的指令（任务 11，直接复制）
+## 发给 Codex 的指令（任务 13，直接复制）
+
+```
+请 pull 仓库 https://github.com/Casey-sketch-cyber/ai-design.git 的最新 main，
+先读 AGENTS.md、PR #12 里 Claude 的审查留言（立场修正）和 PR #10 里 Gemini 的讨论留言，
+然后执行 tasks/13-codex-v3-cap-texture.md（盖面颜色对齐 + 纹理延续：ILVR 低频引导、纹理注入初始化、高强度 G2 对照；环带、冻结指标和关口不动，做完就停）。
+必须能在 RTX 3090 24GB 上跑通。在分支 codex/v3-cap-texture 上完成，推送并创建 PR，不要自己合并。全程用中文沟通。
+```
+
+## 发给 Gemini 的指令（任务 14，直接复制，与任务 13 并行）
+
+```
+请 pull 仓库 https://github.com/Casey-sketch-cyber/ai-design.git 的最新 main，
+阅读 tasks/14-gemini-respond-revised-stance.md、docs/experiments/E02/STRIPE-DIAG.md、PR #12 里 Claude 的审查留言和 tasks/13-codex-v3-cap-texture.md，
+然后在 PR #12 下用一条留言回答任务 14 的 4 个问题。全程用中文。
+```
+
+## 发给 Gemini 的指令（任务 11，已完成）
 
 ```
 请 pull 仓库 https://github.com/Casey-sketch-cyber/ai-design.git 的最新 main，
@@ -24,7 +41,7 @@
 Codex 的诊断结果（docs/experiments/E02/STRIPE-DIAG.md）出来后再补充一条留言。全程用中文。
 ```
 
-## 发给 Codex 的指令（任务 12，直接复制，与任务 11 并行）
+## 发给 Codex 的指令（任务 12，已完成）
 
 ```
 请 pull 仓库 https://github.com/Casey-sketch-cyber/ai-design.git 的最新 main，
