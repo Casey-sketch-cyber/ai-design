@@ -1,0 +1,41 @@
+{
+  "schema": 1,
+  "model_id": "diffusers/stable-diffusion-xl-1.0-inpainting-0.1",
+  "revision": "115134f363124c53c7d878647567d04daf26e41e",
+  "license": "CreativeML Open RAIL++-M",
+  "model_card_url": "https://huggingface.co/diffusers/stable-diffusion-xl-1.0-inpainting-0.1/blob/115134f363124c53c7d878647567d04daf26e41e/README.md",
+  "license_url": "https://huggingface.co/stabilityai/stable-diffusion-xl-base-1.0/blob/main/LICENSE.md",
+  "weight_url": "https://huggingface.co/diffusers/stable-diffusion-xl-1.0-inpainting-0.1/resolve/115134f363124c53c7d878647567d04daf26e41e/unet/diffusion_pytorch_model.fp16.safetensors",
+  "weight_bytes": 5135178560,
+  "weight_sha256": "6470840731e98cc16713ddf3ac7ee458c9fdbcb881a98c6727cd4a938f227d3f",
+  "unet_config_sha256": "aaedf41fbcb29d2d8725241413b8525bd97005dea3f86d8056199469032537e9",
+  "upstream_files_sha256": {
+    "unet/diffusion_pytorch_model.fp16.safetensors": "6470840731e98cc16713ddf3ac7ee458c9fdbcb881a98c6727cd4a938f227d3f",
+    "unet/config.json": "aaedf41fbcb29d2d8725241413b8525bd97005dea3f86d8056199469032537e9",
+    "upstream/README.md": "80f91748ac64a5f0a72d7b133fc6a2ff5291a35464ea341960b8c23ea59affa4",
+    "upstream/vae-config.json": "b822341e6125efedebffb8e3f35e7288aab06bb4c49853d50a16964bf104a727",
+    "upstream/scheduler-config.json": "a8e9a8517e8739938ea85819012bad195d41ccb3e11e2501cf196da64099b1f6"
+  },
+  "unet_channels": [
+    9,
+    4
+  ],
+  "reused_vae": {
+    "model_id": "madebyollin/sdxl-vae-fp16-fix",
+    "files_sha256": {
+      "vae/config.json": "f18b16fa4381c90ab44a3d7abd2e90afd05a2c31b8ca69998bc93c6453aeb7b7",
+      "vae/diffusion_pytorch_model.safetensors": "1b909373b28f2137098b0fd9dbc6f97f8410854f31f84ddc9fa04b077b0ace2c"
+    },
+    "latent_channels": 4,
+    "latent_factor": 8,
+    "scaling_factor": 0.13025
+  },
+  "scheduler": {
+    "sampler": "Task 07 DDIM",
+    "prediction_type": "epsilon",
+    "num_train_timesteps": 1000,
+    "beta_schedule": "scaled_linear",
+    "beta_start": 0.00085,
+    "beta_end": 0.012
+  }
+}
