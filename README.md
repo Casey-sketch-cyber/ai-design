@@ -15,7 +15,16 @@
 
 网页版 Gemini 不能执行命令时：把 `tasks/01-gemini-literature-tree-opc-packaging.md` 和 findInnovation 的 `SKILL.md`、两个模板的内容一起粘贴给它，产出再由你或其他 AI 提交到本仓库。
 
-## 发给 Codex 的指令（任务 02，直接复制）
+## 发给 Codex 的指令（任务 03，直接复制）
+
+```
+请 pull 仓库 https://github.com/Casey-sketch-cyber/ai-design.git 的最新 main，
+先读 AGENTS.md、PR #2 里 Claude 的审查留言和 docs/experiments/E01/REPORT.md 开头的审查注记，
+然后执行 tasks/03-codex-e01b-prototype-fix.md（E01b：修正原型并重跑，基线复用 E01 输出，做完就停）。
+必须能在 RTX 3090 24GB 上跑通。在分支 codex/e01b-prototype-fix 上完成，推送并创建 PR，不要自己合并。全程用中文沟通。
+```
+
+## 发给 Codex 的指令（任务 02，已完成）
 
 ```
 请先 clone 或 pull 仓库 https://github.com/Casey-sketch-cyber/ai-design.git ，
