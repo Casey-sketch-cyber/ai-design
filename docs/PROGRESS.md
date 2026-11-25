@@ -25,7 +25,7 @@
 - [x] Claude：审查任务 08 的 PR #9 与任务 09 的 PR #8，均已合并（2026-11-25）
 - [x] Codex：任务 10，见 [盖面几何与调和初始化报告](experiments/E02/CAPGEOM.md)
 - [x] Claude：审查任务 10 的 PR #10，通过并合并（2026-11-25）
-- [ ] Gemini：任务 11，见 `tasks/11-gemini-v3-g2-stripe-discussion.md`（在 PR #10 下讨论）
+- [x] Gemini：任务 11，见 `tasks/11-gemini-v3-g2-stripe-discussion.md`（已在 PR #10 留言逐条回应 5 项立场，待任务 12 产出后按需补充）
 - [ ] Codex：任务 12，见 `tasks/12-codex-stripe-diagnostic.md`（只用 CPU 诊断，不生成新图）
 - [ ] Claude：汇总任务 11、12，定下 G2 与条带指标的处理，派下一步
 - [x] Claude：审查任务 01 的 PR #1（2026-11-24，退回）
@@ -44,6 +44,16 @@
 ---
 
 ## 工作记录
+
+### 2026-11-25 · gemini · gemini/v3-g2-discussion（任务 11：PR #10 讨论）
+- **完成**：核对任务 10 数据（`results-capgeom.csv`、`capgeom-stripe-sources.csv`、`CAPGEOM.md`、样例图）与代码（`v3_capgeom*.py`、`v3_inpainting.py`、`metrics/physical.py`），在 PR #10 留言逐条回应 Claude 的 5 项立场（见 https://github.com/Casey-sketch-cyber/ai-design/pull/10#issuecomment-7160816593 ）。
+- **核心结论**：
+  1. 同意以 `G2`（当前起点 `0.85`）作为候选主配置，赞同在 10 条调参集上改为“核心连续性/出血主目标 + 门禁约束”的分层选型规则。
+  2. 认同 `stripe_index v1` 存在单面平滑分母脆弱性（另有 `G1` 种子 1234 单环带 `ring_only_box_floor` 均值 `1.280 > 1.253`、5/10 盒超标作为独立反例），赞同 Step 2 前新增并冻结 `v2` 且并列保留 `v1`；但提醒任务 12 须拆出分子/分母核查 `0.75 → 0.85` 中 `Btm:cap` 从 `2.934` 升至 `4.044` 的真实来源，优先看好 `v2-a`（六面中位数）与 `v2-b`（能量下限）组合，对 `v2-c`（同面 `10–15 mm`）持保留态度。
+  3. 给出防止“改尺子迎合自己”的 5 条方法学边界（开发/测试集严格隔离、独立模型无关证据、保留 `v1` 双口径披露、以合成对照与历史真实条带区分度选型、冻结后不再改动）及 SCIE 论文透明写法。
+  4. 拆解 `7-seam LPIPS` 发现：`G2 · 0.85` 的 `L–B` 缝（`0.1664`）和顶盖（`0.3932`）已优于或持平 `B2-regional`，差距集中在高频前景密集的底盖（`bottom_seam_lpips = 0.4511` vs `0.3606`）；建议 Step 2 前仅补测 `G2 · 0.90`（必要时 `0.92`）及 1–2 潜格软 `paint_mask` 过渡。
+  5. 强烈同意在 Step 2 前对单一优胜 `G2` 配置用种子 1234 复验前 10 条（不调参），并给出 Codex 1–2 天收口路线。
+- **未完成**：待 Codex 提交任务 12（`STRIPE-DIAG.md`）后，结合分子/分母与合成对照结果补充 `v2` 公式定型意见。
 
 ### 2026-11-25 · claude · main
 - **完成**：审查并合并 PR #10；下达任务 11（Gemini 讨论）和任务 12（Codex CPU 诊断）。
