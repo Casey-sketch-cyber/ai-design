@@ -1,0 +1,108 @@
+{
+  "enabled": [
+    "lpips",
+    "clip",
+    "hps",
+    "ocr"
+  ],
+  "checks": {
+    "seam_sdr": {
+      "good": 0.0,
+      "bad": 21.70478630065918,
+      "good_expected": "lower",
+      "passed": true
+    },
+    "glue_ink_pct": {
+      "good": 0.0,
+      "bad": 100.0,
+      "good_expected": "lower",
+      "passed": true
+    },
+    "flap_edge_pct": {
+      "good": 0.0,
+      "bad": 49.79968646577252,
+      "good_expected": "lower",
+      "passed": true
+    },
+    "bleed_fill_pct": {
+      "good": 100.0,
+      "bad": 0.0,
+      "good_expected": "higher",
+      "passed": true
+    },
+    "lighting_residual": {
+      "good": 7.975074428638133e-05,
+      "bad": 0.11798753341039021,
+      "good_expected": "lower",
+      "passed": true
+    },
+    "bleed_reject_copy": {
+      "good": 100.0,
+      "bad": 0.0,
+      "good_expected": "higher",
+      "passed": true
+    },
+    "oog_pct": {
+      "good": 0.0,
+      "bad": 84.3651149167844,
+      "good_expected": "lower",
+      "passed": true
+    },
+    "roundtrip_delta_e00": {
+      "good": 0.0,
+      "bad": 15.647754669189453,
+      "good_expected": "lower",
+      "passed": true
+    },
+    "lut_identity_and_grad": {
+      "passed": true
+    },
+    "telemetry_passthrough": {
+      "elapsed_seconds": 1.3220219425857067,
+      "passed": true
+    },
+    "seam_lpips": {
+      "good": 0.5100570395588875,
+      "bad": 0.5403904393315315,
+      "good_expected": "lower",
+      "passed": true
+    },
+    "upright_rate": {
+      "good": 1.0,
+      "bad": 0.8333333134651184,
+      "good_expected": "higher",
+      "passed": true
+    },
+    "clip_score": {
+      "good": 0.7821667194366455,
+      "bad": 0.5322057008743286,
+      "good_expected": "higher",
+      "passed": true
+    },
+    "hps_v2": {
+      "good": 0.2595357596874237,
+      "bad": 0.2248166799545288,
+      "good_expected": "higher",
+      "passed": true
+    },
+    "flap_ocr_count": {
+      "good": 0,
+      "bad": 1,
+      "good_expected": "lower",
+      "passed": true
+    },
+    "ocr_upright_rate": {
+      "good": 1.0,
+      "bad": 0.0,
+      "good_expected": "higher",
+      "passed": true
+    }
+  },
+  "diagnostics": {
+    "checkerboard_light": {
+      "base": 0.4957254081964493,
+      "with_shading": 0.36620867003997165,
+      "interpretation": "Darkening can mute large pre-existing design gradients."
+    }
+  }
+}

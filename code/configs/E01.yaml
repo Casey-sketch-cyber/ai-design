@@ -1,0 +1,12 @@
+# Single-carton E01 pilot. Freeze prototype settings before running holdout briefs.
+protocol: e01-v1
+steps: 30
+short_side: 1024
+seeds: [42, 1234, 2026]
+guidance: 5.0
+controlnet_scale: 0.65
+margin_latent: 4
+projection_tail: 0.30
+projection_interval: 3
+projection_strength: 0.20
+frozen: false

@@ -66,3 +66,14 @@ data/raw/
 *.zip
 *.tar.gz
 *.mp4
+
+# E01 generated experiment artifacts and local environments
+__pycache__/
+.pytest_cache/
+*.py[cod]
+/outputs/
+/third_party/*/
+/envs/
+/cache/
+*.safetensors
+*.ckpt
