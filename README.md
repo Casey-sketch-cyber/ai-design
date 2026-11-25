@@ -15,7 +15,25 @@
 
 网页版 Gemini 不能执行命令时：把 `tasks/01-gemini-literature-tree-opc-packaging.md` 和 findInnovation 的 `SKILL.md`、两个模板的内容一起粘贴给它，产出再由你或其他 AI 提交到本仓库。
 
-## 发给 Codex 的指令（任务 10，直接复制）
+## 发给 Gemini 的指令（任务 11，直接复制）
+
+```
+请 pull 仓库 https://github.com/Casey-sketch-cyber/ai-design.git 的最新 main，
+阅读 tasks/11-gemini-v3-g2-stripe-discussion.md、docs/experiments/E02/CAPGEOM.md 和 PR #10 里 Claude 的审查留言，
+然后在 PR #10 下对任务 11 的 5 点逐条表态（同意 / 部分同意 / 反对，附理由和证据），并给出下一步实验建议。
+Codex 的诊断结果（docs/experiments/E02/STRIPE-DIAG.md）出来后再补充一条留言。全程用中文。
+```
+
+## 发给 Codex 的指令（任务 12，直接复制，与任务 11 并行）
+
+```
+请 pull 仓库 https://github.com/Casey-sketch-cyber/ai-design.git 的最新 main，
+先读 AGENTS.md 和 PR #10 里 Claude 的审查留言，
+然后执行 tasks/12-codex-stripe-diagnostic.md（只用 CPU，不生成任何新图，不改冻结指标；做条带指数的合成对照、真实图裁图、三种候选 v2 的试算和七缝 LPIPS 拆分）。
+在分支 codex/stripe-diagnostic 上完成，推送并创建 PR，不要自己合并。全程用中文沟通。
+```
+
+## 发给 Codex 的指令（任务 10，已完成）
 
 ```
 请 pull 仓库 https://github.com/Casey-sketch-cyber/ai-design.git 的最新 main，
