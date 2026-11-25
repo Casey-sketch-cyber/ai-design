@@ -21,7 +21,7 @@
 - [x] Codex：完成任务 07 Step 0 和 Step 1（见 E02 报告，关口未过）
 - [x] Claude：审查任务 07 的 PR #7，通过并合并（2026-11-25）
 - [ ] Codex：任务 08，见 `tasks/08-codex-v3-cap-fix.md`（盖面修复，做完停下等审查）
-- [ ] Gemini：任务 09，见 `tasks/09-gemini-v3-cap-review.md`（在 PR #7 下留言审阅）
+- [x] Gemini：任务 09，见 `tasks/09-gemini-v3-cap-review.md`（已在 PR #7 留言审阅并补录 C5 相关 4 篇文献）
 - [ ] Claude：审查任务 08 的 PR，结合 Gemini 意见，和 Gemini 讨论后续
 - [x] Claude：审查任务 01 的 PR #1（2026-11-24，退回）
 - [x] Gemini：按 PR #1 审查意见完成 4 项必改与 2 项建议修改，并已在 PR #1 逐条回复
@@ -32,13 +32,22 @@
 
 ## 已知问题
 
-- `literature/papers.csv` 中共有 129 篇文献，其中 124 篇已核对官方摘要（`verified=yes, summary_source=abstract`，含任务 06 新增 22 篇）；5 篇标为 `verified=no`（2 篇未定位独立 DOI 的种子文献 + 3 篇 Elsevier 付费墙阻挡摘要的文献），均已单独标注且未作为核心论证依据。
+- `literature/papers.csv` 中共有 133 篇文献，其中 128 篇已核对官方摘要（`verified=yes, summary_source=abstract`，含任务 06 新增 22 篇与任务 09 新增 4 篇）；5 篇标为 `verified=no`（2 篇未定位独立 DOI 的种子文献 + 3 篇 Elsevier 付费墙阻挡摘要的文献），均已单独标注且未作为核心论证依据。
 - 公开数据集的国内网络拉取速度与 PKU PosterLayout 协议审批周期需在实验启动第一周实测。
 - `docs/JOURNALS.md` 中的 JIF 与中科院 2025 分区来自公开汇总数据，正式投稿前须在 Clarivate MJL 官网与本单位图书馆目录复核。
 
 ---
 
 ## 工作记录
+
+### 2026-11-25 · gemini · gemini/v3-cap-review（任务 09：v3 Step 1 审阅与盖面修复建议）
+- **完成**：
+  - 核查 E02 报告、示例图、`native-folds*.png`、`results.csv`、`v3.py` / `v3_geometry.py` / `v3_attention.py` 及留出集简报 `E01-011` 至 `E01-050`，已在 **PR #7 下完成 4 问审阅留言**（https://github.com/Casey-sketch-cyber/ai-design/pull/7#issuecomment-7156686175）：
+    1. 结合顶底不对称数据（`top_seam_lpips 0.600` vs `bottom 0.473`）与源码，指出盖面问题由提示词、基础 UNet 无重采样早期低频失配、`halos` 16–24 px 间隙和小画布尺度共同造成，并定位了 `v3.py:162` 仅缓存末步 $t \approx 0$ K/V 注入全部高噪步导致共享注意力变差的时间步错配 Bug；
+    2. 提出零新增权重、极低开销的 **C5（边界调和/Coons 插值初始化 + SDEdit 部分加噪 / ILVR 低频先验 + 可选 AdaIN 统计对齐）**，建议在任务 08 优先于 C4 叠加测试；
+    3. 给出论文中顶面徽章与侧面延续的取舍（优先 `顶面 C1b + 底面 C1a`，兜底 `C1a + S2 双轨矢量叠加` 并透明报告消融）；
+    4. 预警 Step 2 留出集 4 类风险（剪纸/窗棂/红果等高对比与 OOG% 回升、`E01-001` 暴露的环带纵向三横幅分裂、10 盒长尾过拟合与 `stripe_index` 窄容差、C2 双 UNet 显存与色温一致性）。
+  - 在分支 `gemini/v3-cap-review` 补充核对 4 篇文献（`Poisson image editing`、`AdaIN`、`ILVR`、`SDXL`，均 `verified=yes, abstract`）至 `literature/papers.csv`（总计 133 篇，128 篇已核对，0 违规）与 `literature/search-log.md`（Q42），并提交 PR 待 Claude 合并。
 
 ### 2026-11-25 · claude · main
 - **完成**：审查并合并 PR #7；下达任务 08（Codex 盖面修复）和任务 09（Gemini 审阅）。
