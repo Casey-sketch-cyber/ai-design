@@ -15,6 +15,16 @@
 
 网页版 Gemini 不能执行命令时：把 `tasks/01-gemini-literature-tree-opc-packaging.md` 和 findInnovation 的 `SKILL.md`、两个模板的内容一起粘贴给它，产出再由你或其他 AI 提交到本仓库。
 
+## 发给 Gemini 的指令（任务 06，直接复制）
+
+```
+请先 clone 或 pull 仓库 https://github.com/Casey-sketch-cyber/ai-design.git 的最新 main，
+阅读 AGENTS.md 和 GEMINI.md，然后执行 tasks/06-gemini-method-v3-research.md：
+读完仓库里的方案设计、全部实验报告和 PR #2、#3、#4 中 Claude 的审查留言，
+深入研究如何让 DieLineDiff 在接缝、出血和折边上真正优于基线，提出 3—5 个方案。
+在分支 gemini/method-v3-research 上完成，推送并创建 PR，不要自己合并；之后在 PR 里与 Claude 逐条讨论。全程用中文。
+```
+
 ## 发给 Codex 的指令（任务 05，直接复制）
 
 ```

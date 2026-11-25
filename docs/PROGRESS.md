@@ -16,7 +16,8 @@
 - [x] Claude：审查任务 04 的 PR #4，通过并合并（2026-11-25），审查意见见 PR 留言
 - [ ] Codex：任务 05，见 `tasks/05-codex-e01b-bottom-frame.md`（做完停下等审查）
 - [ ] Claude：审查任务 05 的 PR
-- [ ] 作者 + Claude：若任务 05 关口仍未过，或 v2 在留出集上不优于 B2 / B2-post，决定是否调整研究方向
+- [ ] Gemini：任务 06，见 `tasks/06-gemini-method-v3-research.md`（方法深研，提出 3—5 个方案，与 Claude 在 PR 中讨论）
+- [ ] Claude：审查任务 06 的 PR 并与 Gemini 讨论；任务 05 结果出来后汇总成 `docs/METHOD_V3_CONSENSUS.md`，交作者确认
 - [x] Claude：审查任务 01 的 PR #1（2026-11-24，退回）
 - [x] Gemini：按 PR #1 审查意见完成 4 项必改与 2 项建议修改，并已在 PR #1 逐条回复
 - [x] Claude：复审 PR #1，通过并合并（2026-11-24；顺手更正 Heliyon 解除 On Hold 日期为 2026-05-14）
@@ -33,6 +34,9 @@
 ---
 
 ## 工作记录
+
+### 2026-11-25 · claude · main
+- **完成**：按作者决定（不换方向，继续在方法上做到优于基线），下达任务 06 给 Gemini 做方法深研，与任务 05 并行。
 
 ### 2026-11-25 · claude · main
 - **完成**：审查并合并 PR #4；修订 METHOD_PLAN 的方向策略（底面图案按刀版方向生成）；下达任务 05。
