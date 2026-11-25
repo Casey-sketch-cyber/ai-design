@@ -77,7 +77,7 @@ def _aligned_strips(faces, seam, width):
     return first[first_indices], second[second_indices]
 
 
-def _sdr(faces, seams, width, floor):
+def _sdr_components(faces, seams, width, floor):
     inside = []
     for face in faces.values():
         inside.append(deltaE_ciede2000(face[:, 1:], face[:, :-1]).ravel())
@@ -88,7 +88,12 @@ def _sdr(faces, seams, width, floor):
         first, second = _aligned_strips(faces, seam, width)
         depth = min(first.shape[1], second.shape[1])
         means.append(deltaE_ciede2000(first[:, :depth], second[:, :depth]).mean())
-    return float(np.mean(means) / max(adjacent_mean, floor))
+    return np.asarray(means), max(adjacent_mean, floor)
+
+
+def _sdr(faces, seams, width, floor):
+    means, normalization = _sdr_components(faces, seams, width, floor)
+    return float(means.mean() / normalization)
 
 
 def _lpips_pairs(faces, seams, width):

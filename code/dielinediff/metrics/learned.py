@@ -61,7 +61,7 @@ class LearnedMetrics:
         import lpips
         return lpips.LPIPS(net="alex", version="0.1", verbose=False).to(self.device).eval()
 
-    def seam_lpips(self, pairs):
+    def seam_lpips(self, pairs, *, per_seam=False):
         import torch
         from torchvision.transforms.functional import to_tensor
 
@@ -77,7 +77,7 @@ class LearnedMetrics:
                 reference = torch.stack([strip_tensor(first), strip_tensor(second)]).to(self.device)
                 candidate = strip_tensor(patch).expand_as(reference).to(self.device)
                 distances.append(self._lpips(candidate, reference).mean().item())
-        return float(np.mean(distances))
+        return np.asarray(distances) if per_seam else float(np.mean(distances))
 
     @cached_property
     def _clip(self):

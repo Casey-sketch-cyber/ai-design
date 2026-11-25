@@ -64,3 +64,19 @@ E01b 分别用旧组的 1024 × 1160 与新版的 1592 × 1792 图集及各自�
 source code/scripts/e01_env.sh
 "$DIELINEDIFF_ROOT/envs/e01/bin/python" -m dielinediff.metrics.prepare_image_reward
 ```
+
+
+## E01b 毫米口径与折边条带
+
+折线与出血按统一的 4 px/mm 物理网格计算，默认 RTE 为 992 × 1120。各面先按原生 UV 矩形裁取，再在统一网格中双线性重采样。出血候选像素按设计的 3 mm 外轮廓和离外观面最远 3 mm 筛选。候选像素由两套刀版各自的毫米原点和比例配准，只从原生标签 10 读颜色。对掩码与掩码加权颜色使用相同的高斯抗混叠及双线性采样，采样后按有效权重归一化。没有原生出血支持的候选像素视为未填充。统一插值可能使被复制的颜色在印刷面与出血侧产生不同的局部平均，从而计入少量像素。旧分辨率自检图的原生逐像素复制对照由 0% 变为约 1.13%，纯白对照仍为 0%。C1 色差和 LPIPS 每边分别取 0.5 mm（2 px）与 5 mm（20 px）。顶面、底面指标分别汇总其各自的四条 3D 接缝。SDR 使用同一全盒面内色差作为分母。图文偏好与 CLIP 方向仍从原生 UV 正立面计算。色域指标沿用原生分辨率和同一 ICC。
+
+折边条带只评价原刀版上连接两块可见面的真实压痕。默认 RTE 有五条，两侧均从该面内部取 0–3 mm 窄带，同面参考取 9–12 mm，沿折线方向的长度和对齐相同。能量是沿折线方向 RGB 在 [0,1] 内一阶差分的平方均值。单侧分数为 `1 + max(E_edge - E_ref, 0) / (E_ref + (3/255)^2)`。能量下限用于避免近乎平坦区域把微小量化误差放大，同面参考吸收贯穿版面的高频图案。折线取两侧平均，整盒取五条折线的最大值。数值越高，越需要检查集中于折线附近的高频能量。另记录背面—底面一条用于排查。均匀沿折线延伸的纯色带和局部密集版面可能逃过指标或触发高值，因此同时审核原像素裁图。门槛仍是最好基线均值的 1.2 倍。
+
+印前复位仅改变标签 0、7、8、9，裁取的可见面和带掩码的出血采样与这些像素互斥。于是原图与复位版共用毫米接缝、条带、出血和方向值，色域往返按两套图分别计算。保留原像素口径可用 `E01bEvaluator(..., physical=False)`。
+
+```bash
+python -m dielinediff.metrics.physical_sanity \
+  --geometry "$DIELINEDIFF_ROOT/outputs/geometry" \
+  --atlas "$DIELINEDIFF_ROOT/outputs/geometry/selfcheck/selfcheck-atlas.png" \
+  --output "$DIELINEDIFF_ROOT/outputs/e01b/metric-checks/physical-sanity.json"
+```
