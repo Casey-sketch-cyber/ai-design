@@ -10,13 +10,16 @@ from .geometry import BoxSpec, build_geometry, write_geometry
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--output", type=Path, required=True)
-    parser.add_argument("--short-side", type=int, default=1024)
+    resolution = parser.add_mutually_exclusive_group()
+    resolution.add_argument("--short-side", type=int, default=1024)
+    resolution.add_argument("--pixels-per-mm", type=float)
     for field in fields(BoxSpec):
         parser.add_argument("--" + field.name.replace("_", "-"), type=float, default=field.default)
     args = vars(parser.parse_args())
     output = args.pop("output")
     short_side = args.pop("short_side")
-    write_geometry(build_geometry(BoxSpec(**args), short_side), output)
+    pixels_per_mm = args.pop("pixels_per_mm")
+    write_geometry(build_geometry(BoxSpec(**args), short_side, pixels_per_mm=pixels_per_mm), output)
 
 
 if __name__ == "__main__":

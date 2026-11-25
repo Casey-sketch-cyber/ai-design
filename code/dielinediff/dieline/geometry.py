@@ -96,10 +96,13 @@ def _adjacencies(positions):
     return adjacent
 
 
-def build_geometry(spec=BoxSpec(), short_side=1024):
+def build_geometry(spec=BoxSpec(), short_side=1024, *, pixels_per_mm=None):
     """Create a dieline whose atlas has square pixels and dimensions divisible by eight."""
-    if not isinstance(short_side, int) or short_side < 64 or short_side % 8:
-        raise ValueError("short_side must be an integer multiple of eight, at least 64")
+    if pixels_per_mm is None:
+        if not isinstance(short_side, int) or short_side < 64 or short_side % 8:
+            raise ValueError("short_side must be an integer multiple of eight, at least 64")
+    elif not math.isfinite(pixels_per_mm) or pixels_per_mm <= 0:
+        raise ValueError("pixels_per_mm must be finite and positive")
     length, width, height = spec.length, spec.width, spec.height
     top = width + max(spec.tuck_depth, spec.dust_depth - width)
     bottom = top + height
@@ -142,7 +145,7 @@ def build_geometry(spec=BoxSpec(), short_side=1024):
     bleed_outline = outline.buffer(spec.bleed, quad_segs=8)
     min_x, min_y, max_x, max_y = bleed_outline.bounds
     span_x, span_y = max_x - min_x, max_y - min_y
-    scale = short_side / min(span_x, span_y)
+    scale = short_side / min(span_x, span_y) if pixels_per_mm is None else pixels_per_mm
     image_width = 8 * math.ceil((span_x * scale - 1e-8) / 8)
     image_height = 8 * math.ceil((span_y * scale - 1e-8) / 8)
     origin_x = min_x - (image_width / scale - span_x) / 2

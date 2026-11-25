@@ -48,3 +48,19 @@ PYTHONPATH=code python -m dielinediff.metrics.sanity \
 检查使用棋盘格加上定向文字、错位、涂墨、空白出血、复制边缘、阴影和高饱和色。CLIPScore 和 HPS 使用匹配与不匹配描述。LUT 梯度以恒等映射及其雅可比检查。此脚本也验证成本字段可传到指标数据，实际 GPU 峰值与耗时由生成器采集。
 
 指标实现依据见 [LPIPS](https://github.com/richzhang/PerceptualSimilarity)、[OpenAI CLIP](https://github.com/openai/CLIP)、[CLIPScore](https://aclanthology.org/2021.emnlp-main.595/)、[HPS v2](https://github.com/tgxs002/HPSv2) 和 [PaddleOCR](https://www.paddleocr.ai/main/en/version3.x/pipeline_usage/OCR.html)。
+
+
+## E01b 原生刀版与印前复位
+
+E01b 分别用旧组的 1024 × 1160 与新版的 1592 × 1792 图集及各自几何进行评分，使用同一个 FOGRA39L ICC 文件。各图以已有分辨率读取。接缝 SDR 和 LPIPS 仍采用 2 px 和 32 px 条带，同一像素带宽在旧组约为 0.48 mm 和 7.75 mm，在新版约为 0.31 mm 和 5.00 mm。比较分数时应考虑这一尺度差异。
+
+`raw` 为已有图集，`preflight` 统一把粘口及刀版外置为纸白，把插舌和防尘翼置为简报中的 `main_color`。六个可见面和出血像素维持原值。按原图报告粘口油墨覆盖率。复位对印刷区域颜色的影响计入复位版 ICC 往返指标，固定区域之外的版面与图文质量使用相同分数。
+
+`image_reward` 使用官方 ImageReward v1.0 权重及官方 BLIP 推理头，在六个正立面上各评分一次，取均值。每面按 E01 的白底居中规则补成方图，交给官方图像预处理。提示词与 CLIPScore 和 HPS 一致，ImageReward 按官方 BERT 配置截到 35 token。模型使用 Apache-2.0 许可证。 [官方模型与权重](https://huggingface.co/zai-org/ImageReward) · [官方代码](https://github.com/zai-org/ImageReward/tree/78f8051059b34fef8e0032ccb40561c23a2ddbbb)
+
+在 E01 环境中运行以下命令准备 E01b 的额外评分依赖、固定修订的权重和 tokenizer。默认把资源放在 `$XDG_CACHE_HOME/image-reward`，可用 `E01B_IMAGE_REWARD_HOME` 覆盖。加上 `--check-only` 可离线核对资源和依赖。
+
+```bash
+source code/scripts/e01_env.sh
+"$DIELINEDIFF_ROOT/envs/e01/bin/python" -m dielinediff.metrics.prepare_image_reward
+```

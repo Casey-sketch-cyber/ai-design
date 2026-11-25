@@ -35,6 +35,23 @@ MODEL_METRICS = {
 }
 
 
+def rgb_atlas(texture):
+    """Read a native atlas, compositing transparency onto paper white."""
+    if isinstance(texture, (str, Path)):
+        with Image.open(texture) as image:
+            return rgb_atlas(image)
+    if isinstance(texture, Image.Image):
+        white = Image.new("RGBA", texture.size, "white")
+        return np.array(Image.alpha_composite(white, texture.convert("RGBA")).convert("RGB"))
+    return np.asarray(texture)
+
+
+def face_prompts(prompt):
+    if isinstance(prompt, dict):
+        return [prompt.get(name, prompt.get("F")) for name in FACES]
+    return [prompt] * len(FACES)
+
+
 def _oriented_strip(face, edge, width):
     """Return length by depth by channel with depth 0 on the edge."""
     if edge == "top":
@@ -165,6 +182,14 @@ class Evaluator:
             faces[name] = image[top:bottom, left:right]
         return faces
 
+    def _upright_images(self, faces):
+        return [
+            Image.fromarray(np.ascontiguousarray(np.rot90(
+                faces[name], self.topology["faces"][name]["upright_rotation"] // 90
+            )))
+            for name in FACES
+        ]
+
     def _bleed_fill(self, rgb, lab):
         if not len(self.bleed_y):
             return None
@@ -176,13 +201,12 @@ class Evaluator:
         not_copied = delta >= self.thresholds["bleed_change_delta_e"]
         return float(100 * np.mean(nonwhite & continuous & not_copied))
 
-    def measure(self, texture, prompt=None, *, elapsed_seconds=None, peak_memory_mib=None):
-        if isinstance(texture, (str, Path)):
-            texture = Image.open(texture)
-        if isinstance(texture, Image.Image):
-            white = Image.new("RGBA", texture.size, "white")
-            texture = np.array(Image.alpha_composite(white, texture.convert("RGBA")).convert("RGB"))
-        rgb = np.asarray(texture)
+    def measure(self, texture, prompt=None, *, elapsed_seconds=None, peak_memory_mib=None,
+                learned=None):
+        rgb = rgb_atlas(texture)
+        enabled = self.enabled if learned is None else set(learned)
+        if unknown := enabled.difference(MODEL_METRICS):
+            raise ValueError(f"Unknown learned metric groups: {sorted(unknown)}")
         if rgb.shape != (*self.labels.shape, 3) or rgb.dtype != np.uint8:
             raise ValueError(f"Expected uint8 RGB texture for label map {self.labels.shape}, got {rgb.shape}.")
         lab = rgb2lab(rgb.astype(np.float32) / 255)
@@ -211,20 +235,15 @@ class Evaluator:
             elapsed_seconds=elapsed_seconds,
             peak_memory_mib=peak_memory_mib,
         )
-        upright = [
-            Image.fromarray(np.ascontiguousarray(np.rot90(
-                rgb_faces[name], self.topology["faces"][name]["upright_rotation"] // 90
-            )))
-            for name in FACES
-        ]
-        prompts = [prompt.get(name, prompt.get("F")) for name in FACES] if isinstance(prompt, dict) else [prompt] * len(FACES)
-        if "lpips" in self.enabled:
+        upright = self._upright_images(rgb_faces)
+        prompts = face_prompts(prompt)
+        if "lpips" in enabled:
             result["seam_lpips"] = self.learned.seam_lpips(_lpips_pairs(rgb_faces, seams, t["lpips_width"]))
-        if "clip" in self.enabled:
+        if "clip" in enabled:
             result["upright_rate"], result["clip_score"] = self.learned.clip_scores(upright, prompts)
-        if "hps" in self.enabled and all(prompts):
+        if "hps" in enabled and all(prompts):
             result["hps_v2"] = self.learned.hps_score(upright, prompts)
-        if "ocr" in self.enabled:
+        if "ocr" in enabled:
             result["flap_ocr_count"] = sum(
                 len(self.learned.ocr_lines(crop)) for crop in _flap_crops(rgb, self.labels)
             )

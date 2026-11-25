@@ -1,0 +1,12 @@
+# Initial comparison settings. Holdout runs require a reviewed pilot and frozen settings.
+protocol: e01b-v2
+steps: 30
+seeds: [42, 1234, 2026]
+pixels_per_mm: 6.4
+window_stride: 512
+top_band: 16
+guidance: 5.0
+projection_strength: 0.20
+projection_tail: 0.30
+projection_interval: 3
+frozen: false
