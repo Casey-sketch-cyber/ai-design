@@ -1,0 +1,125 @@
+{
+  "config": {
+    "protocol": "e02-v3-captexture",
+    "selection_seed": 42,
+    "validation_seed": 1234,
+    "task10_reference": "7b2fcb2c668b",
+    "spatial_factors": [
+      4,
+      8
+    ],
+    "guided_fractions": [
+      1.0,
+      0.7
+    ],
+    "high_strengths": [
+      0.92,
+      0.95
+    ],
+    "texture_injection_strength": 0.85,
+    "gate": {
+      "stripe_factor": 1.2,
+      "clip_margin": 0.05,
+      "seconds": 60,
+      "peak_memory_mib": 20480
+    }
+  },
+  "metrics": "3acf4b16d925f133ca4aeba21cd14c44ce585ab045c69de75e03c2ad3ebbc170",
+  "ring": {
+    "commit": "b18ed8e775bf072fbcd3b32b9f381abdfbdb9728",
+    "ring_block_ast_sha256": "185fa28a74927e816ad38d585e4bbbd4fdb5a8ff3c61377e7e8aaf2dd2d5bbf1",
+    "unchanged_source_files": {
+      "v3_geometry.py": "a5d96d3614c376ffc429bc7844005adebeedeb427199fb678e124dbcd01f7801",
+      "v3_circular.py": "9ef30a3676024943228fc0f107228c5cbf471421094a40d286f161094b473ef6",
+      "v3_attention.py": "9fd3663c96e6b3fbfa66706a3aaa8f98c4a355443141f31e57650613b8f45ffa",
+      "ours_tf.py": "7f8cd89b0af065667fc93625d46bd28d7f605bdc22a975b4bf9c54f3c62a7969",
+      "sdxl.py": "e86d47a54703d5467d842331ce73ec64d0393631463308be48e5b0739c92b7bf",
+      "b2_controlnet.py": "25d7630521deb3b8eeba0fd09a84256279a344276e2db6fad30c28b9ea7c5808"
+    }
+  },
+  "task10_inputs_sha256": "e4b28ac6850761c43c7b64f08b71e72f3a619140f0268f81109b4bc4fbd46ae2",
+  "task10_selection_sha256": "77b1b4fce8144cd839ea91939656bd9347c8cd157ab1efac0dffa9204fc63eaa",
+  "registered_candidates": {
+    "g1": {
+      "prompt_mode": "plain",
+      "cap_scale": 2,
+      "inpaint": true,
+      "repaint": false,
+      "tight": true,
+      "strength": null,
+      "aligned_attention": false
+    },
+    "g2_092": {
+      "prompt_mode": "plain",
+      "cap_scale": 2,
+      "inpaint": true,
+      "repaint": false,
+      "tight": true,
+      "strength": 0.92,
+      "aligned_attention": false
+    },
+    "g2_095": {
+      "prompt_mode": "plain",
+      "cap_scale": 2,
+      "inpaint": true,
+      "repaint": false,
+      "tight": true,
+      "strength": 0.95,
+      "aligned_attention": false
+    },
+    "g5": {
+      "prompt_mode": "plain",
+      "cap_scale": 2,
+      "inpaint": true,
+      "repaint": false,
+      "tight": true,
+      "strength": 0.85,
+      "aligned_attention": false,
+      "inject_texture": true
+    },
+    "g4_f4_full": {
+      "prompt_mode": "plain",
+      "cap_scale": 2,
+      "inpaint": true,
+      "repaint": false,
+      "tight": true,
+      "strength": null,
+      "aligned_attention": false,
+      "ilvr_factor": 4,
+      "ilvr_fraction": 1.0
+    },
+    "g4_f4_70": {
+      "prompt_mode": "plain",
+      "cap_scale": 2,
+      "inpaint": true,
+      "repaint": false,
+      "tight": true,
+      "strength": null,
+      "aligned_attention": false,
+      "ilvr_factor": 4,
+      "ilvr_fraction": 0.7
+    },
+    "g4_f8_full": {
+      "prompt_mode": "plain",
+      "cap_scale": 2,
+      "inpaint": true,
+      "repaint": false,
+      "tight": true,
+      "strength": null,
+      "aligned_attention": false,
+      "ilvr_factor": 8,
+      "ilvr_fraction": 1.0
+    },
+    "g4_f8_70": {
+      "prompt_mode": "plain",
+      "cap_scale": 2,
+      "inpaint": true,
+      "repaint": false,
+      "tight": true,
+      "strength": null,
+      "aligned_attention": false,
+      "ilvr_factor": 8,
+      "ilvr_fraction": 0.7
+    }
+  }
+}
