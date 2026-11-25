@@ -80,3 +80,10 @@ python -m dielinediff.metrics.physical_sanity \
   --atlas "$DIELINEDIFF_ROOT/outputs/geometry/selfcheck/selfcheck-atlas.png" \
   --output "$DIELINEDIFF_ROOT/outputs/e01b/metric-checks/physical-sanity.json"
 ```
+
+
+### E01b B2-post 与指定折线关口
+
+B2-post 从 E01 归档 B2 的原尺寸图开始，使用 v2 加载的同一 `.npy` LUT 和同一三线性 RGB 投影函数全幅映射一次，量化为 8 位后得到 `raw`。对该结果执行共用印前复位得到 `preflight`。固定色块因此以复位配置为准，B2 原始归档字节保持原样。B2-post 图文、接缝与印刷指标均从映射后的图重新计算。
+
+任务 05 同时检查 `stripe_index` 与 `back_bottom_stripe_index`。前者取五条可见压痕的最大值，后者只取刀版上相连的背面—底面折线两侧平均。两者各自的上限为相应最好基线均值的 1.2 倍，基线包含 B2-post。两个指数均从可见面计算，印前复位保持其原值。原像素折线裁图仍需单独审阅。

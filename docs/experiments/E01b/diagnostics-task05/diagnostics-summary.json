@@ -1,0 +1,264 @@
+{
+  "brief": "E01-001",
+  "seed": 42,
+  "native_crop_xyxy": [
+    1054,
+    1368,
+    1486,
+    1448
+  ],
+  "fold_y_px": 1408,
+  "latent_crop_xyxy": [
+    131,
+    168,
+    185,
+    184
+  ],
+  "scores": {
+    "task04": {
+      "brief": "E01-001",
+      "seed": 42,
+      "name": "task04",
+      "baseline_commit": "f1ef63a",
+      "coverage": {
+        "covered": 29689,
+        "required": 29689,
+        "steps_checked": 30,
+        "windows": 12,
+        "minimum_weight": 0.060635458678007126,
+        "window_sizes_px": [
+          [
+            1024,
+            1024
+          ],
+          [
+            1024,
+            1024
+          ],
+          [
+            1024,
+            1024
+          ],
+          [
+            1024,
+            1024
+          ],
+          [
+            1024,
+            1024
+          ],
+          [
+            1024,
+            1024
+          ],
+          [
+            752,
+            592
+          ],
+          [
+            752,
+            592
+          ],
+          [
+            1024,
+            1024
+          ],
+          [
+            1024,
+            1024
+          ],
+          [
+            1024,
+            1024
+          ],
+          [
+            1024,
+            1024
+          ]
+        ]
+      },
+      "actual_coverage": 29689,
+      "removed_bottom_writes": 0,
+      "minutes": 1.5309186261457701,
+      "peak_mib": 7381.8408203125,
+      "stripe_index": 1.800127707709656,
+      "back_bottom_stripe_index": 1.1937683183695889,
+      "latent_fold_crossing_mean_absolute_step": 0.9721004366874695,
+      "latent_neighbor_steps_mean_absolute": 0.42217764258384705,
+      "native_8px_coherent_amplitude_rgb": {
+        "back_fold_8px": 16.863647732392355,
+        "bottom_fold_8px": 8.401705606186532,
+        "back_reference_8px": 0.6818971352657454,
+        "bottom_reference_8px": 1.2203479235461434
+      },
+      "sha256": {
+        "png": "6f6e35aaecbf97967e0a031ac35f2bc82a2e5ebfb3a6672ab9a5a7b0d8f385d8",
+        "npy": "5be4895a105ea7ec91a9e5201107a6ed5d75724769f4a7a3523dd010a0bf78bc"
+      },
+      "agrees_with_archived_pixels": true,
+      "max_difference_from_archived_pixels": 0
+    },
+    "task04-no-bottom-write": {
+      "brief": "E01-001",
+      "seed": 42,
+      "name": "task04-no-bottom-write",
+      "baseline_commit": "f1ef63a",
+      "coverage": {
+        "covered": 29577,
+        "required": 29577,
+        "steps_checked": 30,
+        "windows": 12,
+        "minimum_weight": 0.060635458678007126,
+        "window_sizes_px": [
+          [
+            1024,
+            1024
+          ],
+          [
+            1024,
+            1024
+          ],
+          [
+            1024,
+            1024
+          ],
+          [
+            1024,
+            1024
+          ],
+          [
+            1024,
+            1024
+          ],
+          [
+            1024,
+            1024
+          ],
+          [
+            752,
+            592
+          ],
+          [
+            752,
+            592
+          ],
+          [
+            1024,
+            1024
+          ],
+          [
+            1024,
+            1024
+          ],
+          [
+            1024,
+            1024
+          ],
+          [
+            1024,
+            1024
+          ]
+        ]
+      },
+      "actual_coverage": 29577,
+      "removed_bottom_writes": 112,
+      "minutes": 1.5288537722080946,
+      "peak_mib": 7381.8408203125,
+      "stripe_index": 37.687389418893744,
+      "back_bottom_stripe_index": 37.687389418893744,
+      "latent_fold_crossing_mean_absolute_step": 8.907387733459473,
+      "latent_neighbor_steps_mean_absolute": 2.6499266624450684,
+      "native_8px_coherent_amplitude_rgb": {
+        "back_fold_8px": 3.8140453300051913,
+        "bottom_fold_8px": 5.103322616469773,
+        "back_reference_8px": 0.2756029533373186,
+        "bottom_reference_8px": 0.3323375568674326
+      },
+      "sha256": {
+        "png": "88afc72f10faf249f0d333e51a74b1c491627ccc30918f34348822ff432690cc",
+        "npy": "5d9cb8e425acc61c95c34824985773fc79012addced2234ec23e59845221d4b4"
+      }
+    },
+    "task04-real-context": {
+      "brief": "E01-001",
+      "seed": 42,
+      "name": "task04-real-context",
+      "baseline_commit": "f1ef63a",
+      "coverage": {
+        "covered": 29689,
+        "required": 29689,
+        "steps_checked": 30,
+        "windows": 12,
+        "minimum_weight": 0.060635458678007126,
+        "window_sizes_px": [
+          [
+            1024,
+            1024
+          ],
+          [
+            1024,
+            1024
+          ],
+          [
+            1024,
+            1024
+          ],
+          [
+            1024,
+            1024
+          ],
+          [
+            1024,
+            1024
+          ],
+          [
+            1024,
+            1024
+          ],
+          [
+            752,
+            592
+          ],
+          [
+            752,
+            592
+          ],
+          [
+            1024,
+            1024
+          ],
+          [
+            1024,
+            1024
+          ],
+          [
+            1024,
+            1024
+          ],
+          [
+            1024,
+            1024
+          ]
+        ]
+      },
+      "actual_coverage": 29689,
+      "removed_bottom_writes": 0,
+      "minutes": 1.535370590351522,
+      "peak_mib": 7381.8408203125,
+      "stripe_index": 2.7032597204592768,
+      "back_bottom_stripe_index": 1.0,
+      "latent_fold_crossing_mean_absolute_step": 0.5686837434768677,
+      "latent_neighbor_steps_mean_absolute": 0.3947710394859314,
+      "native_8px_coherent_amplitude_rgb": {
+        "back_fold_8px": 0.06018422648855156,
+        "bottom_fold_8px": 0.11616359355905687,
+        "back_reference_8px": 0.5101326380353869,
+        "bottom_reference_8px": 0.7088369637979098
+      },
+      "sha256": {
+        "png": "72153aa8a0791b30522acd3b1ceb780b7489cb71015d942e9e00173a2f525da5",
+        "npy": "6f5db09bf2c889dcc4b81be3725a25b21560e57e0f4730df717f84b6a38a264b"
+      }
+    }
+  }
+}

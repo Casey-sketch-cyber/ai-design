@@ -75,15 +75,13 @@ def _get_neighbors(topology):
     return neighbors
 
 
-def _window(name, primary, faces, read, writes, device, rotation=0):
-    if rotation:
-        read, writes = np.rot90(read, rotation), np.rot90(writes, rotation)
+def _window(name, primary, faces, read, writes, device):
     height, width = read.shape
     if min(height, width) < MIN_WINDOW:
         raise ValueError(f"{name} is smaller than {MIN_WINDOW * SCALE} px on its short side")
     rows = 0.15 + 0.85 * np.sin(np.pi * (np.arange(height) + 0.5) / height)
     columns = 0.15 + 0.85 * np.sin(np.pi * (np.arange(width) + 0.5) / width)
-    sources = np.flatnonzero(writes)
+    sources = np.flatnonzero(writes > 0)
     if not len(sources):
         raise ValueError(f"{name} does not write to any latent cells")
     return Window(
@@ -91,7 +89,8 @@ def _window(name, primary, faces, read, writes, device, rotation=0):
         torch.as_tensor(read.flatten(), dtype=torch.long, device=device),
         torch.as_tensor(read.flatten()[sources], dtype=torch.long, device=device),
         torch.as_tensor(sources, dtype=torch.long, device=device),
-        torch.as_tensor((rows[:, None] * columns).ravel()[sources], dtype=torch.float32, device=device),
+        torch.as_tensor((rows[:, None] * columns * writes).ravel()[sources],
+                        dtype=torch.float32, device=device),
     )
 
 
@@ -101,7 +100,31 @@ def _atlas_grid(x, y, shape, fallback):
     return np.where(valid, y * width + x, fallback), valid
 
 
-def _ring_windows(rects, neighbors, labels, stride, pad, excluded, fallback, device):
+def _native_fold_weights(topology, labels, width_mm):
+    """Taper cross-panel predictions in physical space around the two attached lids."""
+    centers_y = (np.arange(labels.shape[0]) + 0.5) * SCALE
+    centers_x = (np.arange(labels.shape[1]) + 0.5) * SCALE
+    faces = topology["faces"]
+    extent = width_mm * topology["image"]["pixels_per_mm"]
+    weights = {}
+    for lid, side, endpoint in (("T", "F", 3), ("Btm", "B", 1)):
+        rect = faces[lid]["rect"]
+        opposite = faces[side]["rect"]
+        if rect[endpoint] != opposite[4 - endpoint]:
+            raise ValueError(f"{lid} and {side} must share an actual horizontal fold")
+        x0, x1 = max(rect[0], opposite[0]), min(rect[2], opposite[2])
+        across = (centers_x >= x0) & (centers_x < x1)
+        band_labels = np.isin(labels, [REGION_LABELS[lid], REGION_LABELS[side]])
+        distance = np.abs(centers_y - rect[endpoint]) / extent
+        taper = 0.5 * (1 + np.cos(np.pi * np.minimum(distance, 1)))
+        weighted = np.where(across[None, :] & band_labels, taper[:, None], 0).astype(np.float32)
+        if any(not np.any(weighted[labels == REGION_LABELS[face]]) for face in (lid, side)):
+            raise ValueError(f"transition_mm is too small to reach both sides of {lid}/{side}")
+        weights[lid] = weighted
+    return weights
+
+
+def _ring_windows(rects, neighbors, labels, stride, shift, transition, fallback, device):
     face = "F"
     columns, column_faces = [], []
     for _ in SIDES:
@@ -123,7 +146,7 @@ def _ring_windows(rects, neighbors, labels, stride, pad, excluded, fallback, dev
     column_faces = np.asarray(column_faces)
     circumference = len(columns)
     # Top- and bottom-shifted 1024-pixel windows include actual bleed while retaining the SDXL window size.
-    starts = (y0 - pad, y0 + pad)
+    starts = (y0 - shift, y0 + shift)
     windows = []
     flat_labels = labels.ravel()
     for offset in range(0, circumference, stride):
@@ -135,28 +158,25 @@ def _ring_windows(rects, neighbors, labels, stride, pad, excluded, fallback, dev
             x = columns[segment][None, :]
             read, valid = _atlas_grid(x, y, labels.shape, fallback)
             regions = flat_labels[read]
-            writes = valid & np.isin(regions, [BLEED, *(REGION_LABELS[name] for name in SIDES)])
-            writes &= ~excluded[read]
-            # Bottom-panel content appears upside down in these body-oriented tiles.
-            read = np.where(regions == REGION_LABELS["Btm"], fallback, read)
+            own = np.isin(regions, [BLEED, *(REGION_LABELS[name] for name in SIDES)])
+            # Sample the real attached lid rows; taper only the predictions contributed across the fold.
+            writes = np.where(own, 1.0, transition.ravel()[read]) * valid
             windows.append(_window(f"ring-{offset * SCALE}-{vertical}", primary, present,
                                    read, writes, device))
     return windows
 
 
-def _lid_window(name, faces, rects, neighbors, labels, band, pad, fallback, device):
+def _lid_window(name, rects, neighbors, labels, band, pad, shift, transition, fallback, device):
     x0, y0, x1, y1 = rects[name]
     width, height = x1 - x0, y1 - y0
-    margin = band + pad
+    margin = max(band + pad, shift)
     yy, xx = np.mgrid[-margin:height + margin, -margin:width + margin]
     native, valid = _atlas_grid(x0 + xx, y0 + yy, labels.shape, fallback)
     core = (0 <= xx) & (xx < width) & (0 <= yy) & (yy < height)
     regions = labels.ravel()[native]
     bleed = valid & (regions == BLEED)
-    printable_face = (regions >= 1) & (regions <= 6)
-    # Direct face reads outside the owned panel are added only through explicit edge contexts.
-    read = np.where(core | ~printable_face, native, fallback)
-    writes = core | bleed
+    read = native.copy()
+    writes = (core | bleed).astype(np.float32)
     atlas_width = labels.shape[1]
     adjacent = [name]
     for edge, (along, depth, length) in {
@@ -177,9 +197,8 @@ def _lid_window(name, faces, rects, neighbors, labels, band, pad, fallback, devi
         first = depth[strip] == 0
         x, y = strip_coordinates(rects[other], other_edge, corresponding[first], 0)
         if np.array_equal(native[strip][first], y * atlas_width + x):
-            # The same atlas crease already supplies a monotonic continuation of the full neighbor band.
-            read[strip] = native[strip]
-            writes[strip] = False
+            # Preserve native atlas orientation on both sides, so the ring and lid can share this band.
+            writes[strip] = transition.ravel()[native[strip]]
             continue
 
         # Reserve physically present bleed positions before assigning the virtual neighbor.
@@ -192,10 +211,10 @@ def _lid_window(name, faces, rects, neighbors, labels, band, pad, fallback, devi
         slots = np.flatnonzero(strip)[virtual]
         x, y = strip_coordinates(rects[other], other_edge, corresponding[virtual], advancing[virtual])
         read.flat[slots] = y * atlas_width + x
-        # The side ring owns side predictions. A lid sees folded/rotated context for these cells.
-        writes.flat[slots] = False
-    rotation = faces[name]["upright_rotation"] // 90
-    return _window(f"lid-{name}", name, adjacent, read, writes, device, rotation)
+        # Rotated virtual context remains read-only.
+        writes.flat[slots] = 0
+    window_name = "frame-Btm" if name == "Btm" else "lid-T"
+    return _window(window_name, name, adjacent, read, writes, device)
 
 
 def _nearest_faces(rects, shape):
@@ -216,7 +235,7 @@ def _coverage(windows, shape):
     return counts.reshape(shape)
 
 
-def _fill_hem_windows(windows, labels, owners, excluded, device):
+def _fill_hem_windows(windows, labels, owners, device):
     # A large flap can carry the cut contour beyond the body/lid windows. Such slots still
     # read and write their own atlas coordinates through standard spatial denoising windows.
     missing = (labels == BLEED) & (_coverage(windows, labels.shape) == 0)
@@ -233,17 +252,24 @@ def _fill_hem_windows(windows, labels, owners, excluded, device):
                 modal_region = np.bincount(owners[ys, xs][needs_coverage]).argmax()
                 primary = next(name for name in FACE_NAMES if REGION_LABELS[name] == modal_region)
                 # Blend across overlaps; every slot is the same physical pixel on read and write.
-                writes = (labels[ys, xs] == BLEED) & ~excluded.reshape(labels.shape)[ys, xs]
+                writes = labels[ys, xs] == BLEED
                 windows.append(_window(f"rim-{x0}-{y0}", primary, (primary,),
                                        area[ys, xs], writes, device))
                 missing[ys, xs] &= ~writes
     return windows
 
 
-def _independent_windows(faces, rects, labels, owners, fallback, device):
+def _reflected_axis(positions, start, end):
+    """Reflect into one panel without reusing a fixed canvas slot."""
+    last = end - start - 1
+    return start + last - np.abs((positions - start) % (2 * last) - last)
+
+
+def _independent_windows(rects, labels, owners, fallback, device):
     windows = []
     fixed = ~np.isin(labels, [BLEED, *(REGION_LABELS[name] for name in FACE_NAMES)])
-    for name, (x0, y0, x1, y1) in rects.items():
+    for name, rect in rects.items():
+        x0, y0, x1, y1 = rect
         own = (labels == REGION_LABELS[name]) | ((labels == BLEED) & (owners == REGION_LABELS[name]))
         ys, xs = np.nonzero(own)
         x0, y0 = min(x0, xs.min()), min(y0, ys.min())
@@ -254,19 +280,23 @@ def _independent_windows(faces, rects, labels, owners, fallback, device):
         yy, xx = np.mgrid[y0:y1, x0:x1]
         native, valid = _atlas_grid(xx, yy, labels.shape, fallback)
         writes = valid & own.ravel()[native]
-        # Padding never sees an independently generated exterior face or another owner's bleed.
-        read = np.where(writes | (valid & fixed.ravel()[native]), native, fallback)
-        rotation = faces[name]["upright_rotation"] // 90
-        windows.append(_window(f"face-{name}", name, (name,), read, writes, device, rotation))
+        # Reflect the owned face where the padding would reveal another independent output.
+        px0, py0, px1, py1 = rect
+        local = _reflected_axis(yy, py0, py1) * labels.shape[1] + _reflected_axis(xx, px0, px1)
+        read = np.where(writes | (valid & fixed.ravel()[native]), native, local)
+        windows.append(_window(f"face-{name}", name, (name,), read, writes, device))
     return windows
 
 
-def build_windows(topology, region_map, stride_px=512, lid_band_latent=16, synchronized=True, device="cuda"):
+def build_windows(topology, region_map, stride_px=512, lid_band_latent=16, synchronized=True,
+                  device="cuda", *, transition_mm=2.0):
     """Build the fixed E01b geometry's gather/scatter mappings."""
     if not isinstance(stride_px, int) or not SCALE <= stride_px <= 512 or stride_px % SCALE:
         raise ValueError("The ring stride must be a positive multiple of eight and at most 512 px")
     if not isinstance(lid_band_latent, int) or lid_band_latent < 16:
         raise ValueError("The lid neighbor bands must be at least sixteen latent cells")
+    if not np.isfinite(transition_mm) or transition_mm <= 0:
+        raise ValueError("transition_mm must be positive and finite")
     image = topology["image"]
     width, height = image["width"], image["height"]
     if (width % SCALE or height % SCALE or np.shape(region_map) != (height, width)):
@@ -279,16 +309,16 @@ def build_windows(topology, region_map, stride_px=512, lid_band_latent=16, synch
     pad = int(np.ceil(topology["box_mm"]["bleed"] * image["pixels_per_mm"] / SCALE))
     if synchronized:
         neighbors = _get_neighbors(topology)
-        lids = [_lid_window(name, faces, rects, neighbors, labels, lid_band_latent,
-                            pad, fallback, device) for name in ("T", "Btm")]
-        # Bottom-oriented writes are rotated relative to native atlas tiles. Reserve their slots.
-        excluded = np.zeros(labels.size, dtype=bool)
-        excluded[lids[1].write_ids.cpu().numpy()] = True
-        windows = _ring_windows(rects, neighbors, labels, stride_px // SCALE, pad, excluded, fallback, device)
-        windows.extend(lids)
-        _fill_hem_windows(windows, labels, owners, excluded, device)
+        transitions = _native_fold_weights(topology, labels, transition_mm)
+        shift = max(pad, *(np.any((weights > 0) & (labels == REGION_LABELS[name]), axis=1).sum()
+                           for name, weights in transitions.items()))
+        shared = np.maximum(transitions["T"], transitions["Btm"])
+        windows = _ring_windows(rects, neighbors, labels, stride_px // SCALE, shift, shared, fallback, device)
+        windows.extend(_lid_window(name, rects, neighbors, labels, lid_band_latent,
+                                   pad, shift, transitions[name], fallback, device) for name in ("T", "Btm"))
+        _fill_hem_windows(windows, labels, owners, device)
     else:
-        windows = _independent_windows(faces, rects, labels, owners, fallback, device)
+        windows = _independent_windows(rects, labels, owners, fallback, device)
     coverage = _coverage(windows, labels.shape)
     required = np.isin(labels, [BLEED, *(REGION_LABELS[name] for name in FACE_NAMES)])
     plan = WindowPlan(tuple(windows), labels.shape, labels,

@@ -4,7 +4,7 @@
 
 ## 当前状态
 
-任务 04 已由 Claude 审查并合并（PR #4）；任务 05（Codex，底面按刀版方向跨折线生成 + B2-post 基线）进行中；任务 06（Gemini，方法深研 v3）已完成提案 `docs/METHOD_V3_PROPOSALS.md` 及 22 篇新文献核对，已提交 PR 待 Claude 审查与讨论。
+任务 05 已由 Claude 审查并合并（PR #6），E01b 的 v2 路线到此结束：背面—底面条带已消除（1.0446），但其他折线仍有亮边（最大 1.8047）；B2-post 的色域外比例为 0%，色域不再是方法优势；接缝和出血仍是 B2 / B2-post 更好。方法进入 v3：Gemini 已按 PR #5 中 Claude 的第一轮 6 项审查意见完成 `docs/METHOD_V3_PROPOSALS.md` 修订并逐条回复，等待 Claude 复审并汇总成 `docs/METHOD_V3_CONSENSUS.md`。
 
 ## 待办
 
@@ -14,10 +14,10 @@
 - [x] Claude：审查任务 03 的 PR #3，通过并合并（2026-11-25），审查意见见 PR 留言
 - [x] Codex：任务 04，见 `tasks/04-codex-e01b-crease-fix.md`（做完停下等审查）
 - [x] Claude：审查任务 04 的 PR #4，通过并合并（2026-11-25），审查意见见 PR 留言
-- [ ] Codex：任务 05，见 `tasks/05-codex-e01b-bottom-frame.md`（做完停下等审查）
-- [ ] Claude：审查任务 05 的 PR
-- [x] Gemini：任务 06，见 `tasks/06-gemini-method-v3-research.md`（方法深研，交付 `docs/METHOD_V3_PROPOSALS.md` 与 22 篇核对文献，已开 PR 待与 Claude 讨论）
-- [ ] Claude：审查任务 06 的 PR 并与 Gemini 讨论；任务 05 结果出来后汇总成 `docs/METHOD_V3_CONSENSUS.md`，交作者确认
+- [x] Codex：任务 05，见 `tasks/05-codex-e01b-bottom-frame.md`（做完停下等审查）
+- [x] Claude：审查任务 05 的 PR #6，通过并合并（2026-11-25）
+- [x] Gemini：按 PR #5 中 Claude 第一轮 6 项意见修订 `docs/METHOD_V3_PROPOSALS.md` 并逐条回复（任务 06，分支 `gemini/method-v3-research`）
+- [ ] Claude：复审 PR #5 并汇总成 `docs/METHOD_V3_CONSENSUS.md`，交作者确认后派给 Codex 实现
 - [x] Claude：审查任务 01 的 PR #1（2026-11-24，退回）
 - [x] Gemini：按 PR #1 审查意见完成 4 项必改与 2 项建议修改，并已在 PR #1 逐条回复
 - [x] Claude：复审 PR #1，通过并合并（2026-11-24；顺手更正 Heliyon 解除 On Hold 日期为 2026-05-14）
@@ -35,16 +35,31 @@
 
 ## 工作记录
 
-### 2026-11-25 · gemini · gemini/method-v3-research（任务 06：方法深研 v3 提案）
+### 2026-11-25 · gemini · gemini/method-v3-research（PR #5 第一轮审查修订与逐条回应）
 - **完成**：
-  - 完整核读 E01/E01b 报告、PR #2/#3/#4 审查留言、`b2_controlnet.py` / `ours_tf_v2.py` / `windows_v2.py` / `metrics/` 源码及 `E01-001`–`003`、`E01-011`–`012`、`fold-edge-task04.png` 可视化样本，交付 [`docs/METHOD_V3_PROPOSALS.md`](METHOD_V3_PROPOSALS.md)：
-    1. **回答核心问题 1（机制归因 + 5 项可验证判别实验 D1–D5）**：定位 B2 在接缝 SDR 与出血填充率领先 v2 的 5 个叠加机制（B2 全画布均质壁纸退化放大 SDR 分母并掩盖 7 条非原生 3D 缝；v2 去噪期紧贴 3 mm 出血带的 `Outside` 纯白钳位引发白边侵蚀与画框效应；出血指标 $\Delta E_{00} \ge 0.8$ 下界误杀平滑纯色底出血；12 窗无注意力耦合的 MultiDiffusion 平均拼贴；顶底窗四角 `fallback` 挖空与单向只读引发 8 px 条带）。
-    2. **回答核心问题 2 与 5 个候选方案（P1–P5，从稳到激进）**：基于 `findInnovation` 难点—解法树提出 P1（无白墙单画布全局 + 7 条非原生 3D 缝 Differential Diffusion 局部软修补）、**P2（单次水平环形卷积四侧面环带 + 无白墙出血 + 跨面共享自注意力盖面，主推）**、P3（双展开拓扑重排 + SpotDiffusion 式时间交错同步，含 SyncDiffusion 在 SDXL/24 GB 上的显存与耗时临界分析）、P4（CubeDiff 式各向异性六面膨胀自注意力）与 P5（公开真实包装数据轻量 LoRA 边界评估与 `B2-post+LoRA` 公平对照协议），每个方案均附 3090 显存/耗时估算与 1–3 天最小验证实验及客观判定标准。
-    3. **评测偏差分析与 4 项补充指标（M1–M4）**：论证现有 `seam_sdr` 与 `bleed_fill_pct` 对 B2 的结构性偏好，提出拆缝 3D 指标（`native_5` vs `non_native_7` + 绝对 $\Delta E_{00}$）、跨折线结构延拓度（+ TexTile CVPR 2024）、双准则防复制出血率与分面职责遵循度（分面 CLIPScore + 背面信息区冷静度），并附健全性检查方案及 SCIE 审稿人认可的 5 项硬结果清单。
-    4. **推荐组合**：`P2 主干 + P1 盖面 6 条非原生 3D 缝局部软修补 + 通用无白墙出血缓冲`（免训练，3090 预计 30–42 s/盒、11–14 GiB 显存）。
-  - 新增并逐篇核对 **22 篇** v3 相关核心论文官方摘要与 DOI（`MultiDiffusion`、`SyncDiffusion`、`MVDiffusion`、`Diffusion360`、`PanFusion`、`StitchDiffusion`、`SpotDiffusion`、`CubeDiff`、`Tiled Diffusion`、`TexTile`、`StyleAligned`、`ConsiStory`、`StoryDiffusion`、`MasaCtrl`、`DenseDiffusion`、`SDEdit`、`RePaint`、`Blended Latent Diffusion`、`Differential Diffusion`、`DemoFusion`、`TexPainter`、`Mixture of Diffusers`），更新 `literature/papers.csv`（总计 129 篇：124 篇 `verified=yes, abstract`，5 篇 `verified=no`，0 违规）与 `literature/search-log.md`（新增 Q38–Q41）。
-- **未完成**：待 Claude 在 PR 中逐条审查与反驳，随后在同一分支回应并结合任务 05 结果收敛出 `docs/METHOD_V3_CONSENSUS.md`。
-- **注意 / 坑**：① SyncDiffusion 原版梯度反传迁移至 SDXL 极易在 24 GB 上 OOM 且耗时飙升，不宜照搬；② 新增评测指标须与旧物理口径并行保留，不可替换旧口径，以免审稿人质疑改尺子。
+  - 合并 `origin/main`（含已合并的 PR #6 任务 05 结果），逐条落实 Claude 在 PR #5 的 6 项审查意见并更新 [`docs/METHOD_V3_PROPOSALS.md`](METHOD_V3_PROPOSALS.md)：
+    1. **顶/底盖面改为顺序条件外扩，取消双向平均**：吸取任务 05 正面—顶面与背面—右面亮边教训，P2 修订版改为“阶段一环带完整生成并冻结 → 阶段二顶/底盖面居中、四周拼上冻结环带的 4 条对应 3D 邻边（只读不写回）、四角自由生成后丢弃，用 Blended Latent Diffusion（+ 可选 StyleAligned K/V 加分项）顺序生成”；评估后将 P1 盖面局部软修补移出默认必选，仅作残余退路。
+    2. **新增 `B2-regional` 受控基线**：同一刀版画布 + 相同分面提示词路由（Regional Prompting）+ 无白墙钳位 + 同源 LUT 与统一印前复位，剥离“提示词贡献”与“几何拓扑贡献”。
+    3. **补齐环形卷积 4 项实现细节**：给出任意管式盒宽度/高度按 64 px（8 潜格）整除的通用取整公式（将高分辨档修正为 `1472 × 1152`，与 `1280 × 1024` 两档同测并配 DINOv2 图内自相似度重复检测）；确认 UNet 全卷积（含 stride=2 下采样）与 VAE 解码器同步水平环形填充（且不沿 X 轴分块 tiling）；垂直 Y 轴弃用 `reflect` 改保留原生 `zeros` + 上下 10–12 mm 缓冲裁切。
+    4. **明确新指标 M1–M4 的冻结纪律与反例检查**：原物理口径永久保留在主表，主结论须在原/新口径同时成立；明确规定 T0（Step 0 阶段，v3 生成启动前）完成健全性检查（含 M3 有纹理边缘逐像素复制与重采样伪出血反例）并在历史图上定稿冻结，之后严禁改动。
+    5. **落实开放问题共识与标注规范**：记录 4 项开放问题共识（优先轻量 Regional Prompting、双档分辨率同测、统一 `preflight` 口径、继承任务 05 底面刀版方向）；全文耗时与显存均明确标为“估计”，待 Step 0 / Step 1 实测确认；P4 与 P5 明确留作后备不进首轮；保留 Step 0（D1–D3）在 v3 实现前执行。
+- **未完成**：待 Claude 复审 PR #5 并汇总成 `docs/METHOD_V3_CONSENSUS.md`，交作者确认后下达 Codex。
+
+### 2026-11-25 · claude · main
+- **完成**：合并 PR #6；对 PR #5（Gemini v3 方案）给出第一轮审查意见：盖面改为以环带为条件的顺序外扩生成；新增 B2-regional 基线；补充环形卷积实现细节；新指标需冻结定义并保留原口径。
+
+### 2026-11-25 · gemini · gemini/method-v3-research（任务 06：方法深研 v3 提案初版）
+- **完成**：
+  - 完整核读 E01/E01b 报告、PR #2/#3/#4 审查留言、`b2_controlnet.py` / `ours_tf_v2.py` / `windows_v2.py` / `metrics/` 源码及可视化样本，交付 `docs/METHOD_V3_PROPOSALS.md` 初版（机制归因 + 判别实验 D1–D5 + 5 个候选方案 P1–P5 + 评测偏差分析与 M1–M4）。
+  - 新增并逐篇核对 **22 篇** v3 相关核心论文官方摘要与 DOI，更新 `literature/papers.csv`（总计 129 篇：124 篇 `verified=yes, abstract`，5 篇 `verified=no`，0 违规）与 `literature/search-log.md`（新增 Q38–Q41）。
+- **注意 / 坑**：① SyncDiffusion 原版梯度反传迁移至 SDXL 极易在 24 GB 上 OOM 且耗时飙升，不宜照搬；② 新增评测指标须与旧物理口径并行保留，不可替换旧口径。
+
+### 2026-11-24 · codex · 底面刀版方向与 B2-post
+
+- **完成**：以任务 04 原版完成潜变量留存、关闭底窗局部写入和恢复真实上下文的三组对照。实现背底原生同向窗口与 ±2 mm 共享写入，并核对五条实折边。
+- **基线**：复用 150 张 B2 原图，执行同源 LUT 与统一印前复位，五盒试跑发布包含 B2-post 的 60 行双版本评分。
+- **关口**：背底指数 1.0446 通过，仍有可见横带。全盒最大均值 1.8047 高于 1.3020，CLIPScore 高于 B2 0.0551，超出 ±0.05 等效容差。
+- **交接**：未启动调参、消融或留出集检验。建议暂缓 S2，提交 Claude 审查。见 [试跑报告](experiments/E01b/REPORT.md)。
 
 ### 2026-11-25 · claude · main
 - **完成**：按作者决定（不换方向，继续在方法上做到优于基线），下达任务 06 给 Gemini 做方法深研，与任务 05 并行。

@@ -14,7 +14,11 @@ def window_prompt(brief, face):
     if face == "F":
         return prompt_for(brief)
     category = brief["category"].replace("_", " ")
-    description = brief["top_prompt"] if face in ("T", "Btm") else brief["side_prompt"]
+    description = brief["top_prompt"] if face == "T" else brief["side_prompt"]
+    if face == "Btm":
+        product_name = brief.get("product_name_zh")
+        if product_name:
+            description = description.replace(product_name, "")
     return prompt_for({**brief, "front_prompt": f"{category} packaging motifs, {description}"})
 
 
@@ -48,6 +52,7 @@ class DieLineDiffV2(DieLineDiff):
                 self.topology, self.labels, stride_px=self.config["window_stride"],
                 lid_band_latent=self.config["top_band"],
                 synchronized=synchronized, device=self.device,
+                transition_mm=self.config.get("transition_mm", 2.0),
             )
         return self.plans[synchronized]
 
