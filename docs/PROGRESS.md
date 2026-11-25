@@ -20,8 +20,8 @@
 - [x] Claude：复审并合并 PR #5，完成 docs/METHOD_V3_CONSENSUS.md
 - [x] Codex：完成任务 07 Step 0 和 Step 1（见 E02 报告，关口未过）
 - [x] Claude：审查任务 07 的 PR #7，通过并合并（2026-11-25）
-- [x] Codex：任务 08，见 `tasks/08-codex-v3-cap-fix.md`（盖面修复，做完停下等审查）
-- [ ] Gemini：任务 09，见 `tasks/09-gemini-v3-cap-review.md`（在 PR #7 下留言审阅）
+- [x] Codex：任务 08，见 `tasks/08-codex-v3-cap-fix.md`（盖面修复，已完成，关口未过）
+- [x] Gemini：任务 09，见 `tasks/09-gemini-v3-cap-review.md`（已在 PR #7 留言审阅并补录 C5 相关 4 篇文献）
 - [ ] Claude：审查任务 08 的 PR，结合 Gemini 意见，和 Gemini 讨论后续
 - [x] Claude：审查任务 01 的 PR #1（2026-11-24，退回）
 - [x] Gemini：按 PR #1 审查意见完成 4 项必改与 2 项建议修改，并已在 PR #1 逐条回复
@@ -32,7 +32,7 @@
 
 ## 已知问题
 
-- `literature/papers.csv` 中共有 129 篇文献，其中 124 篇已核对官方摘要（`verified=yes, summary_source=abstract`，含任务 06 新增 22 篇）；5 篇标为 `verified=no`（2 篇未定位独立 DOI 的种子文献 + 3 篇 Elsevier 付费墙阻挡摘要的文献），均已单独标注且未作为核心论证依据。
+- `literature/papers.csv` 中共有 133 篇文献，其中 128 篇已核对官方摘要（`verified=yes, summary_source=abstract`，含任务 06 新增 22 篇与任务 09 新增 4 篇）；5 篇标为 `verified=no`（2 篇未定位独立 DOI 的种子文献 + 3 篇 Elsevier 付费墙阻挡摘要的文献），均已单独标注且未作为核心论证依据。
 - 公开数据集的国内网络拉取速度与 PKU PosterLayout 协议审批周期需在实验启动第一周实测。
 - `docs/JOURNALS.md` 中的 JIF 与中科院 2025 分区来自公开汇总数据，正式投稿前须在 Clarivate MJL 官网与本单位图书馆目录复核。
 
@@ -40,12 +40,8 @@
 
 ## 工作记录
 
-### 2026-11-25 · codex · v3 盖面分项修复
-
-- **完成**：保持任务 07 的环带与冻结指标，逐盒校验侧面和受支持出血。核对官方 Inpainting UNet 许可、版本与权重 SHA-256，完成 C1–C4 的逐项十盒对照。
-- **选择**：保留 C1a、C2 与 C3，C4 虽降低条带但两项盖面分数退步。最终盖面六缝 ΔE00 21.292、LPIPS 0.4732，耗时 44.78 秒/盒，峰值分配 10.26 GiB。
-- **关口**：双口径出血、CLIPScore 与硬件过关，七条非原生缝和全盒条带未过。原像素仍有个别横带，顶盖三条非原生缝是主要差距。
-- **交接**：停在 Step 1，提交 Claude 审查。[报告](experiments/E02/CAPFIX.md)
+- [x] Codex：任务 08，见 `tasks/08-codex-v3-cap-fix.md`（盖面修复，已完成，关口未过）
+- [x] Gemini：任务 09，见 `tasks/09-gemini-v3-cap-review.md`（已在 PR #7 留言审阅并补录 C5 相关 4 篇文献）
 
 ### 2026-11-25 · claude · main
 - **完成**：审查并合并 PR #7；下达任务 08（Codex 盖面修复）和任务 09（Gemini 审阅）。
