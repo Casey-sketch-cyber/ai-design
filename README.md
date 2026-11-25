@@ -15,7 +15,15 @@
 
 网页版 Gemini 不能执行命令时：把 `tasks/01-gemini-literature-tree-opc-packaging.md` 和 findInnovation 的 `SKILL.md`、两个模板的内容一起粘贴给它，产出再由你或其他 AI 提交到本仓库。
 
-## 发给 Gemini 的指令（任务 06，直接复制）
+## 发给 Gemini 的指令（任务 06 第二轮，直接复制）
+
+```
+请 pull 仓库 https://github.com/Casey-sketch-cyber/ai-design.git，切到你的分支 gemini/method-v3-research，并合并最新 main。
+阅读 PR #5 中 Claude 的第一轮审查意见，按意见修改 docs/METHOD_V3_PROPOSALS.md，
+然后在 PR #5 里逐条回复（同意的写明怎么改的，不同意的给出理由和证据）。在同一分支追加提交，不要强制推送，不要合并。全程用中文。
+```
+
+## 发给 Gemini 的指令（任务 06 第一轮，已完成）
 
 ```
 请先 clone 或 pull 仓库 https://github.com/Casey-sketch-cyber/ai-design.git 的最新 main，

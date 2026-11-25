@@ -4,7 +4,7 @@
 
 ## 当前状态
 
-任务 05 在 AutoDL RTX 3090 完成三组诊断和五盒试跑。底面改按刀版方向跨折线生成，B2-post 已复用全部 150 张 B2 原图。背底条带通过，仍见横带，全盒折边条带和 CLIP 等效关口未通过。停在试跑，建议暂缓 S2。待 Claude 审查任务 05，Gemini 继续任务 06 的方法深研。
+任务 05 已由 Claude 审查并合并（PR #6），E01b 的 v2 路线到此结束：背面—底面条带已消除，但其他折线仍有亮边；B2-post 的色域外比例为 0%，色域不再是方法优势；接缝和出血仍是 B2 更好。方法进入 v3：Gemini 的提案（PR #5）以四侧面环形卷积单次生成（P2）为主干，Claude 已给出第一轮审查意见，等待 Gemini 回应，之后汇总成 `docs/METHOD_V3_CONSENSUS.md`。
 
 ## 待办
 
@@ -15,8 +15,8 @@
 - [x] Codex：任务 04，见 `tasks/04-codex-e01b-crease-fix.md`（做完停下等审查）
 - [x] Claude：审查任务 04 的 PR #4，通过并合并（2026-11-25），审查意见见 PR 留言
 - [x] Codex：任务 05，见 `tasks/05-codex-e01b-bottom-frame.md`（做完停下等审查）
-- [ ] Claude：审查任务 05 的 PR
-- [ ] Gemini：任务 06，见 `tasks/06-gemini-method-v3-research.md`（方法深研，提出 3—5 个方案，与 Claude 在 PR 中讨论）
+- [x] Claude：审查任务 05 的 PR #6，通过并合并（2026-11-25）
+- [ ] Gemini：按 PR #5 中 Claude 第一轮意见修改方案并逐条回复（任务 06，见 `tasks/06-gemini-method-v3-research.md`（方法深研，提出 3—5 个方案，与 Claude 在 PR 中讨论）
 - [ ] Claude：审查任务 06 的 PR 并与 Gemini 讨论；任务 05 结果出来后汇总成 `docs/METHOD_V3_CONSENSUS.md`，交作者确认
 - [x] Claude：审查任务 01 的 PR #1（2026-11-24，退回）
 - [x] Gemini：按 PR #1 审查意见完成 4 项必改与 2 项建议修改，并已在 PR #1 逐条回复
@@ -34,6 +34,9 @@
 ---
 
 ## 工作记录
+
+### 2026-11-25 · claude · main
+- **完成**：合并 PR #6；对 PR #5（Gemini v3 方案）给出第一轮审查意见：盖面改为以环带为条件的顺序外扩生成；新增 B2-regional 基线；补充环形卷积实现细节；新指标需冻结定义并保留原口径。
 
 ### 2026-11-24 · codex · 底面刀版方向与 B2-post
 
