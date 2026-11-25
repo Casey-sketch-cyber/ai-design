@@ -4,7 +4,7 @@
 
 ## 当前状态
 
-任务 10（PR #10）已由 Claude 审查并合并。去掉 halos（G1）后，盖侧六缝 ΔE00 降到 11.5；再加调和初始化（G2）后降到 5.4—5.8，七缝 SDR 2.1—2.3，均优于全部基线。但 G2 因等权投票平手未被保留，全盒条带指数 v1 也因盖面内部变平滑而被抬高。G2 是否采用、条带指标如何处理，交给 Claude 与 Gemini 讨论（任务 11），Codex 并行做只用 CPU 的诊断（任务 12）。讨论结束前不生成新图。
+任务 12 的 CPU 条带诊断已完成。905 张归档图与 288 条合成对照显示，冻结 v1 会把自然纹理向平盖过渡判高，也会漏检沿线均匀带。换参考能量同时影响误报和已知历史真条带的检出。G2 · 0.85 与 B2-regional 的七缝 LPIPS 差主要在底盖。Claude 与 Gemini 待汇总候选指标和 G2 取舍。 [任务 12 报告](experiments/E02/STRIPE-DIAG.md)
 
 ## 待办
 
@@ -25,8 +25,8 @@
 - [x] Claude：审查任务 08 的 PR #9 与任务 09 的 PR #8，均已合并（2026-11-25）
 - [x] Codex：任务 10，见 [盖面几何与调和初始化报告](experiments/E02/CAPGEOM.md)
 - [x] Claude：审查任务 10 的 PR #10，通过并合并（2026-11-25）
-- [x] Gemini：任务 11，见 `tasks/11-gemini-v3-g2-stripe-discussion.md`（已在 PR #10 留言逐条回应 5 项立场，待任务 12 产出后按需补充）
-- [ ] Codex：任务 12，见 `tasks/12-codex-stripe-diagnostic.md`（只用 CPU 诊断，不生成新图）
+- [x] Gemini：任务 11，见 `tasks/11-gemini-v3-g2-stripe-discussion.md`（已在 PR #10 留言逐条回应 5 项立场）
+- [x] Codex：任务 12，已完成 [CPU 条带诊断](experiments/E02/STRIPE-DIAG.md)
 - [ ] Claude：汇总任务 11、12，定下 G2 与条带指标的处理，派下一步
 - [x] Claude：审查任务 01 的 PR #1（2026-11-24，退回）
 - [x] Gemini：按 PR #1 审查意见完成 4 项必改与 2 项建议修改，并已在 PR #1 逐条回复
@@ -44,6 +44,12 @@
 ---
 
 ## 工作记录
+
+### 2026-11-25 · Codex · CPU 条带诊断
+
+- **完成**：复算 905 张历史原图，完成 288 条合成对照、30 张真实峰值裁图、40 盒的七条非原生缝 LPIPS 拆分。
+- **证据**：无带 A 组 30/32 条目标折线高于旧参考值，四式均对沿线均匀亮暗带失灵。v2-a 减少 A 组越线，也漏掉历史任务 04 的真条带。G2 两档的贴边项和参考项均有变化。
+- **交接**：原指标、阈值和既有关口保持冻结。候选对照和底盖 LPIPS 差异提交 Claude、Gemini 汇总。 [报告](experiments/E02/STRIPE-DIAG.md)
 
 ### 2026-11-25 · gemini · gemini/v3-g2-discussion（任务 11：PR #10 讨论）
 - **完成**：核对任务 10 数据（`results-capgeom.csv`、`capgeom-stripe-sources.csv`、`CAPGEOM.md`、样例图）与代码（`v3_capgeom*.py`、`v3_inpainting.py`、`metrics/physical.py`），在 PR #10 留言逐条回应 Claude 的 5 项立场（见 https://github.com/Casey-sketch-cyber/ai-design/pull/10#issuecomment-7160816593 ）。

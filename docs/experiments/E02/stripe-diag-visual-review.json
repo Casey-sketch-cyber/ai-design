@@ -1,0 +1,678 @@
+{
+  "peak_scope": "task10 seed 42 actual frozen-v1 maxima; original pixels",
+  "peak_reviews": [
+    {
+      "method": "g1",
+      "brief_id": "E01-001",
+      "seed": 42,
+      "fold": "B-R",
+      "visual_description": "画面内横幅",
+      "visible_old_periodic_bars": false,
+      "ambiguous_local_band_like_transition": false,
+      "notes": "B–R 山水横幅之间的浅色分隔穿过折线，纹样在折线两侧相接。浅分隔垂直于这条原生折线。",
+      "raw_sha256": "d6ed6a02a328cc9a96c061d09665b288cbf179e3c5aa424c83977b88f3c965c7"
+    },
+    {
+      "method": "g1",
+      "brief_id": "E01-002",
+      "seed": 42,
+      "fold": "B-Btm",
+      "visual_description": "纹理与色调转折",
+      "visible_old_periodic_bars": false,
+      "ambiguous_local_band_like_transition": false,
+      "notes": "B–Btm 植物和枝线延续入变灰、偏软的底盖画面，折线处是整体色调阶跃。",
+      "raw_sha256": "f7d71e1f4b77ab654a1f8e9912cf613ee72461b50075c75fd77f43c68cd90b7d"
+    },
+    {
+      "method": "g1",
+      "brief_id": "E01-003",
+      "seed": 42,
+      "fold": "B-Btm",
+      "visual_description": "纹理与色调转折",
+      "visible_old_periodic_bars": false,
+      "ambiguous_local_band_like_transition": false,
+      "notes": "B–Btm 草叶沿具体茎叶进入变暗变软的底盖。近边纹理较明显，纹样斜向交错。",
+      "raw_sha256": "e3c92767718f2c1dfe9dc3ed9d4dcd14abb33fb52a13833b8ca38e325cee5f25"
+    },
+    {
+      "method": "g1",
+      "brief_id": "E01-004",
+      "seed": 42,
+      "fold": "B-Btm",
+      "visual_description": "纹理与色调转折",
+      "visible_old_periodic_bars": false,
+      "ambiguous_local_band_like_transition": false,
+      "notes": "B–Btm 灰褐枝条及花形在局部延续，底盖整体更暖、边缘更软。",
+      "raw_sha256": "be5241b3dce1f32d531606f099c47a4d98d8dd4a3c4a5808a5b364760d4ceae7"
+    },
+    {
+      "method": "g1",
+      "brief_id": "E01-005",
+      "seed": 42,
+      "fold": "B-R",
+      "visual_description": "自然纹理",
+      "visible_old_periodic_bars": false,
+      "ambiguous_local_band_like_transition": false,
+      "notes": "B–R 木纹刻线和木截面跨折，连续纹理包含浅深不同的木头块。",
+      "raw_sha256": "618e03f963aac5f5b8f093480a9d5cb14a9c2f454c06ad234a5b513e3a4c4973"
+    },
+    {
+      "method": "g1",
+      "brief_id": "E01-006",
+      "seed": 42,
+      "fold": "B-Btm",
+      "visual_description": "图案形状与色调转折",
+      "visible_old_periodic_bars": false,
+      "ambiguous_local_band_like_transition": false,
+      "notes": "B–Btm 底盖右半橙粉图形向内部下弯，并连接圆形斑点。它不沿折线固定宽度延伸。",
+      "raw_sha256": "f5f05978ba5b5edd3efdb2c0146b8c472e423b195606d1acaacb63572270f9f9"
+    },
+    {
+      "method": "g1",
+      "brief_id": "E01-007",
+      "seed": 42,
+      "fold": "B-Btm",
+      "visual_description": "纹理与色调转折",
+      "visible_old_periodic_bars": false,
+      "ambiguous_local_band_like_transition": false,
+      "notes": "B–Btm 麦穗和细茎跨折，盖侧变冷棕且更软，左右区域过渡程度各异。",
+      "raw_sha256": "967a808588677713b8b43fcdd71438219b4c41e162f27da96b3438ed2e083def"
+    },
+    {
+      "method": "g1",
+      "brief_id": "E01-008",
+      "seed": 42,
+      "fold": "B-R",
+      "visual_description": "自然纹理",
+      "visible_old_periodic_bars": false,
+      "ambiguous_local_band_like_transition": false,
+      "notes": "B–R 红果轮廓、叶片和分叉的枝条完整跨过纵折线。",
+      "raw_sha256": "c528edd7bf062fa01402f8d843b79c7cb4453ccffb57712bd31356e1e60e6ada"
+    },
+    {
+      "method": "g1",
+      "brief_id": "E01-009",
+      "seed": 42,
+      "fold": "F-T",
+      "visual_description": "大面色调阶跃",
+      "visible_old_periodic_bars": false,
+      "ambiguous_local_band_like_transition": false,
+      "notes": "F–T 白云轮廓在两端延续，灰暖顶盖与浅蓝侧面色调阶跃贯穿空白处。",
+      "raw_sha256": "8025f7b09a27183644c3319a8594cf19fcaa6d978b0dfd94fd7852f15d41eb67"
+    },
+    {
+      "method": "g1",
+      "brief_id": "E01-010",
+      "seed": 42,
+      "fold": "F-T",
+      "visual_description": "图案错位与色调转折",
+      "visible_old_periodic_bars": false,
+      "ambiguous_local_band_like_transition": false,
+      "notes": "F–T 不少叶轮廓在折线两边接续，也有局部错位，盖侧灰褐明暗和锐度区别清楚。",
+      "raw_sha256": "e27aa5242c1a48dd7842f42fd52fdf0a3aa9bb6a808431056340852c453d4d4e"
+    },
+    {
+      "method": "g2_075",
+      "brief_id": "E01-001",
+      "seed": 42,
+      "fold": "B-R",
+      "visual_description": "画面内横幅",
+      "visible_old_periodic_bars": false,
+      "ambiguous_local_band_like_transition": false,
+      "notes": "B–R 与 G1 同一原生侧折图，浅色横幅分隔穿过纵折。",
+      "raw_sha256": "5cc8e4b768c01f8a40d6351dfd8330df6dac2578c4e3555be73a3dff07e5808f"
+    },
+    {
+      "method": "g2_075",
+      "brief_id": "E01-002",
+      "seed": 42,
+      "fold": "B-Btm",
+      "visual_description": "贴边纹样快速衰减",
+      "visible_old_periodic_bars": false,
+      "ambiguous_local_band_like_transition": true,
+      "notes": "B–Btm 左中部清楚可见叶和茎续入盖侧数毫米后转为大面橄榄棕。浅纹集中在贴边，仍能追踪到邻面具体结构。",
+      "raw_sha256": "ca8d25c4df7985469a38346f3cbd97283d23960b6d34344d56e288b869d5402a"
+    },
+    {
+      "method": "g2_075",
+      "brief_id": "E01-003",
+      "seed": 42,
+      "fold": "B-Btm",
+      "visual_description": "近边纹理进入平底",
+      "visible_old_periodic_bars": false,
+      "ambiguous_local_band_like_transition": false,
+      "notes": "B–Btm 草尖在盖边仅短距离延续，随即是大片近均匀的橄榄绿。",
+      "raw_sha256": "e8ee9dea74607eeb94b7eb24e83e4851f0795a93b30a38f0a4aeb70894222060"
+    },
+    {
+      "method": "g2_075",
+      "brief_id": "E01-004",
+      "seed": 42,
+      "fold": "B-Btm",
+      "visual_description": "近边纹理进入平底",
+      "visible_old_periodic_bars": false,
+      "ambiguous_local_band_like_transition": false,
+      "notes": "B–Btm 的浅枝叶和白花亮部在盖内沿原位置变淡，然后进入灰黄平底。",
+      "raw_sha256": "98328f44a32f7e021241f99d32924ffbffa7cd51325a65d2c78b821164ddfeae"
+    },
+    {
+      "method": "g2_075",
+      "brief_id": "E01-005",
+      "seed": 42,
+      "fold": "F-T",
+      "visual_description": "纹理到平底的硬过渡",
+      "visible_old_periodic_bars": false,
+      "ambiguous_local_band_like_transition": true,
+      "notes": "F–T 木纹线从侧面到盖边后很快进入米褐平底，沿画面末端有浅明暗过渡。",
+      "raw_sha256": "6803d3ffb2d270b40c058574f6326ee2bb84a2ef8dc7a8c142b222822fe31345"
+    },
+    {
+      "method": "g2_075",
+      "brief_id": "E01-006",
+      "seed": 42,
+      "fold": "B-Btm",
+      "visual_description": "平底与图案边界",
+      "visible_old_periodic_bars": false,
+      "ambiguous_local_band_like_transition": false,
+      "notes": "B–Btm 橙果和青绿叶形在数处接入灰绿底，盖内整体偏平，大部分折边并无独立亮边。",
+      "raw_sha256": "90d3f2b085115b546031bbe1875f54009da965556a79c8a717db94e2289403b3"
+    },
+    {
+      "method": "g2_075",
+      "brief_id": "E01-007",
+      "seed": 42,
+      "fold": "F-T",
+      "visual_description": "自然纹理进入平底",
+      "visible_old_periodic_bars": false,
+      "ambiguous_local_band_like_transition": false,
+      "notes": "F–T 为真峰，两端及中段的云轮廓向奶白顶盖延续，贴边变化沿云线。",
+      "raw_sha256": "3d6d317195642d723d6ebd08f8236583dbc36bde1347db03f5a78e2bdc5e1a03"
+    },
+    {
+      "method": "g2_075",
+      "brief_id": "E01-008",
+      "seed": 42,
+      "fold": "B-Btm",
+      "visual_description": "图形与波浪形边界",
+      "visible_old_periodic_bars": false,
+      "ambiguous_local_band_like_transition": false,
+      "notes": "B–Btm 叶/红果局部延续，底盖有一片灰绿近纯色区域，起伏轮廓离折线距离不等。",
+      "raw_sha256": "f585529954cba1875e1f58b7af41028916823331774e4524d808e2e8a54eab6a"
+    },
+    {
+      "method": "g2_075",
+      "brief_id": "E01-009",
+      "seed": 42,
+      "fold": "F-T",
+      "visual_description": "自然纹理进入平底",
+      "visible_old_periodic_bars": false,
+      "ambiguous_local_band_like_transition": false,
+      "notes": "F–T 左右白云接近原位跨折，浅蓝底色在空白段续接。",
+      "raw_sha256": "be42aa098ce6e77cd0efda01fff5e35a956170181e8d1a12fb1284729f856e48"
+    },
+    {
+      "method": "g2_075",
+      "brief_id": "E01-010",
+      "seed": 42,
+      "fold": "B-Btm",
+      "visual_description": "图案形状延续至平底",
+      "visible_old_periodic_bars": false,
+      "ambiguous_local_band_like_transition": false,
+      "notes": "B–Btm 深橙叶片和浅灰枝叶接入米褐底，中间橙形带有明显的局部块面轮廓。",
+      "raw_sha256": "62d5cc7bcaf2bf4754def4e14811cb26322b163e01b08a87774e16e1108a2c2c"
+    },
+    {
+      "method": "g2_085",
+      "brief_id": "E01-001",
+      "seed": 42,
+      "fold": "F-T",
+      "visual_description": "自然纹理进入平底",
+      "visible_old_periodic_bars": false,
+      "ambiguous_local_band_like_transition": false,
+      "notes": "F–T 左端山脊轮廓跨折，其他位置平面浅绿，未见孤立的贴折线条。",
+      "raw_sha256": "576f88e23b0ce9d397da75bc413d286755205219eb13485a279aabde9bea0211"
+    },
+    {
+      "method": "g2_085",
+      "brief_id": "E01-002",
+      "seed": 42,
+      "fold": "B-Btm",
+      "visual_description": "贴边纹样快速衰减",
+      "visible_old_periodic_bars": false,
+      "ambiguous_local_band_like_transition": true,
+      "notes": "B–Btm 植物细线在靠盖边的位置清楚，深入后成大面橄榄棕，右端尚有一块橙棕图纹。",
+      "raw_sha256": "bd7e1b645b555c206d522b6851ec8cd77691400f749dbea98b7d7b6a1e17ae0c"
+    },
+    {
+      "method": "g2_085",
+      "brief_id": "E01-003",
+      "seed": 42,
+      "fold": "B-Btm",
+      "visual_description": "近边纹理进入平底",
+      "visible_old_periodic_bars": false,
+      "ambiguous_local_band_like_transition": false,
+      "notes": "B–Btm 橄榄绿底盖近边能看到随邻侧草茎逐点变化的尖细轮廓，.85 比 .75 更深、更清楚。面内参考带近纯绿。",
+      "raw_sha256": "15b27dce120cdd5d6526a0c897ba962df52c633e38e903e6e8401cfa41435681"
+    },
+    {
+      "method": "g2_085",
+      "brief_id": "E01-004",
+      "seed": 42,
+      "fold": "B-Btm",
+      "visual_description": "近边纹理进入平底",
+      "visible_old_periodic_bars": false,
+      "ambiguous_local_band_like_transition": false,
+      "notes": "B–Btm 近边的明暗齿形对应邻侧的枝叶和花片，几像素后明显软化至浅灰黄底。面内参考带低纹理，近边未见独立同相栅条。",
+      "raw_sha256": "b2dce8f665f6b59a149df58a52ed8bc1269c48b28a1b31ece6c3cfdc89dc2e1c"
+    },
+    {
+      "method": "g2_085",
+      "brief_id": "E01-005",
+      "seed": 42,
+      "fold": "F-T",
+      "visual_description": "纹理到平底的硬过渡",
+      "visible_old_periodic_bars": false,
+      "ambiguous_local_band_like_transition": true,
+      "notes": "F–T 亮木刻纹理迅速转为大面灰褐，右端存在斜边开口。过渡形态近横向，难将其从上面的木纹衰减单列为亮边。",
+      "raw_sha256": "ab4a816599317583a9e2b8fc6230030a9083360a7f9a20936fdfc4d95b27fe91"
+    },
+    {
+      "method": "g2_085",
+      "brief_id": "E01-006",
+      "seed": 42,
+      "fold": "B-Btm",
+      "visual_description": "平底与图案边界",
+      "visible_old_periodic_bars": false,
+      "ambiguous_local_band_like_transition": false,
+      "notes": "B–Btm 左端暗叶和橙形跨折，中右部很快转为较平的黄绿色，转折轮廓随原图案弯曲。",
+      "raw_sha256": "4c0528bd103a736dcc38f27687acae44068b194f50c6f67719b199737bb25f9c"
+    },
+    {
+      "method": "g2_085",
+      "brief_id": "E01-007",
+      "seed": 42,
+      "fold": "B-Btm",
+      "visual_description": "近边纹理进入平底",
+      "visible_old_periodic_bars": false,
+      "ambiguous_local_band_like_transition": false,
+      "notes": "B–Btm 为真峰。麦穗和细茎短距离参差续入棕色底盖，然后迅速变平。参考带近纯棕，无连续白亮线。",
+      "raw_sha256": "2810d13404d67462c5ba9073025aacd0a6e08ae3bc859aff2503137051868190"
+    },
+    {
+      "method": "g2_085",
+      "brief_id": "E01-008",
+      "seed": 42,
+      "fold": "B-Btm",
+      "visual_description": "图形与波浪形边界",
+      "visible_old_periodic_bars": false,
+      "ambiguous_local_band_like_transition": false,
+      "notes": "B–Btm 红果和叶片向盖内续入，灰绿底的上缘呈多段波浪，.85 比 .75 更清且位置变化。参差纹理提高近边变化，参考带主要是灰绿底，局部留有果叶。",
+      "raw_sha256": "e5b64c7040f28461c3b8494ccdbdde3db52ce2552d091ff4bef235702617f5ee"
+    },
+    {
+      "method": "g2_085",
+      "brief_id": "E01-009",
+      "seed": 42,
+      "fold": "F-T",
+      "visual_description": "自然纹理进入平底",
+      "visible_old_periodic_bars": false,
+      "ambiguous_local_band_like_transition": false,
+      "notes": "F–T 浅蓝底色跨边连续，白云两端轮廓清楚，条状浅区跟随云形。",
+      "raw_sha256": "7e1f61f34c8120f96dee413688693fef5002ca1487cd2b0d6e05ec7fda1e7c8b"
+    },
+    {
+      "method": "g2_085",
+      "brief_id": "E01-010",
+      "seed": 42,
+      "fold": "B-Btm",
+      "visual_description": "图案形状延续至平底",
+      "visible_old_periodic_bars": false,
+      "ambiguous_local_band_like_transition": false,
+      "notes": "B–Btm 橙叶形和青灰枝纹跨折后局部截入平米褐底。边界围绕画中叶片弯折。",
+      "raw_sha256": "b72beb3b14670b8b9e8dc9774a379e3e1ec00ddb99fcac958fe299e51159809b"
+    }
+  ],
+  "historical_scores_used_for_labeling": false,
+  "historical_reviews": [
+    {
+      "method": "v2_task03",
+      "seed": 42,
+      "brief_id": "E01-001",
+      "fold": "B-Btm",
+      "atlas": "outputs/e01b/runs/4b57f6e33a53/v2/E01-001-42.png",
+      "raw_sha256": "18a7db951d3e28787c05e928aa07b2e63599f40cd49be0ec4c8b7d92102eb874",
+      "native_ppm": 6.4,
+      "fold_xyxy": [
+        1046,
+        1408,
+        1494,
+        1408
+      ],
+      "visible_train_of_bright_bars": true,
+      "notes": "彩色竖栏从背侧穿过折线，覆盖几乎整个接缝，蓝绿和白亮栏最醒目。"
+    },
+    {
+      "method": "v2_task04",
+      "seed": 42,
+      "brief_id": "E01-001",
+      "fold": "B-Btm",
+      "atlas": "outputs/e01b/crease-fix/runs/bc079eabca00/v2/E01-001-42.png",
+      "raw_sha256": "6f6e35aaecbf97967e0a031ac35f2bc82a2e5ebfb3a6672ab9a5a7b0d8f385d8",
+      "native_ppm": 6.4,
+      "fold_xyxy": [
+        1046,
+        1408,
+        1494,
+        1408
+      ],
+      "visible_train_of_bright_bars": true,
+      "notes": "背侧近全宽灰紫和淡白细亮栅。底盖色块与局部分割清楚。"
+    },
+    {
+      "method": "v2",
+      "seed": 42,
+      "brief_id": "E01-001",
+      "fold": "B-Btm",
+      "atlas": "outputs/e01b/bottom-frame/runs/b598a9650a8a/v2/E01-001-42.png",
+      "raw_sha256": "55836779c4ed9e99da226fc6fdb3051399a8d3dcbdeeba89db8fa6f0ac562e8a",
+      "native_ppm": 6.4,
+      "fold_xyxy": [
+        1046,
+        1408,
+        1494,
+        1408
+      ],
+      "visible_train_of_bright_bars": false,
+      "notes": "竖栅消退。背侧仍有宽灰区和薄横向过渡，保留为周期纹清除对照。"
+    },
+    {
+      "method": "b2_post",
+      "seed": 42,
+      "brief_id": "E01-001",
+      "fold": "B-Btm",
+      "atlas": "outputs/e01b/bottom-frame/baselines/553a10692ea7/b2_post/E01-001-42.png",
+      "raw_sha256": "6e9c4bd4b280d7e456878aa531100b46983126d9dcf5c2d0205e9c63929b8de7",
+      "native_ppm": 4.129032258064516,
+      "fold_xyxy": [
+        673,
+        910,
+        962,
+        910
+      ],
+      "visible_train_of_bright_bars": false,
+      "notes": "跨折背景有自然叶脉及浅色变换。未见成排竖栅。"
+    },
+    {
+      "method": "v2_task03",
+      "seed": 42,
+      "brief_id": "E01-002",
+      "fold": "B-Btm",
+      "atlas": "outputs/e01b/runs/4b57f6e33a53/v2/E01-002-42.png",
+      "raw_sha256": "6a76d4bd212e8e9aebafb8b8773cfa920d35365d6dfe0cbc827dfa48eb7a044f",
+      "native_ppm": 6.4,
+      "fold_xyxy": [
+        1046,
+        1408,
+        1494,
+        1408
+      ],
+      "visible_train_of_bright_bars": true,
+      "notes": "金黑白周期竖栏跨线，多处强反光。"
+    },
+    {
+      "method": "v2_task04",
+      "seed": 42,
+      "brief_id": "E01-002",
+      "fold": "B-Btm",
+      "atlas": "outputs/e01b/crease-fix/runs/bc079eabca00/v2/E01-002-42.png",
+      "raw_sha256": "9d8f24ebf1325712b7bc260d8327ff14b855a6873fbbd8170592712941a41103",
+      "native_ppm": 6.4,
+      "fold_xyxy": [
+        1046,
+        1408,
+        1494,
+        1408
+      ],
+      "visible_train_of_bright_bars": true,
+      "notes": "背侧一列细密金白竖亮条，底盖保留局部斜断。"
+    },
+    {
+      "method": "v2",
+      "seed": 42,
+      "brief_id": "E01-002",
+      "fold": "B-Btm",
+      "atlas": "outputs/e01b/bottom-frame/runs/b598a9650a8a/v2/E01-002-42.png",
+      "raw_sha256": "599b510135dc7900a66e58fc9bf647cc3f75288be22839a25d1bba6315201ca5",
+      "native_ppm": 6.4,
+      "fold_xyxy": [
+        1046,
+        1408,
+        1494,
+        1408
+      ],
+      "visible_train_of_bright_bars": null,
+      "notes": "灰蓝横带和右侧局部细纹可见。旧强周期竖栅减弱。"
+    },
+    {
+      "method": "b2_post",
+      "seed": 42,
+      "brief_id": "E01-002",
+      "fold": "B-Btm",
+      "atlas": "outputs/e01b/bottom-frame/baselines/553a10692ea7/b2_post/E01-002-42.png",
+      "raw_sha256": "492a680db97dc40db877ab2cfac0ac5649eceef953ec4b751d15e8968bda0a53",
+      "native_ppm": 4.129032258064516,
+      "fold_xyxy": [
+        673,
+        910,
+        962,
+        910
+      ],
+      "visible_train_of_bright_bars": false,
+      "notes": "纸面黄色草叶纹样越折，沿折实际题材跳变可辨。未见同型竖栅。"
+    },
+    {
+      "method": "v2_task03",
+      "seed": 42,
+      "brief_id": "E01-003",
+      "fold": "B-Btm",
+      "atlas": "outputs/e01b/runs/4b57f6e33a53/v2/E01-003-42.png",
+      "raw_sha256": "6cbae0456229c889c2f549ee491dd86730e2bad83ec0ec45807ddc423d29a25c",
+      "native_ppm": 6.4,
+      "fold_xyxy": [
+        1046,
+        1408,
+        1494,
+        1408
+      ],
+      "visible_train_of_bright_bars": true,
+      "notes": "背底出现深绿、白和青色重复亮栏，遮断稻田。"
+    },
+    {
+      "method": "v2_task04",
+      "seed": 42,
+      "brief_id": "E01-003",
+      "fold": "B-Btm",
+      "atlas": "outputs/e01b/crease-fix/runs/bc079eabca00/v2/E01-003-42.png",
+      "raw_sha256": "517550aa84c71f09492f4d5fb16af2e254131f2a981b6f51e917e9bc7ac66cc5",
+      "native_ppm": 6.4,
+      "fold_xyxy": [
+        1046,
+        1408,
+        1494,
+        1408
+      ],
+      "visible_train_of_bright_bars": true,
+      "notes": "背侧出现大片紫粉窄竖条，折线附近间距规则。"
+    },
+    {
+      "method": "v2",
+      "seed": 42,
+      "brief_id": "E01-003",
+      "fold": "B-Btm",
+      "atlas": "outputs/e01b/bottom-frame/runs/b598a9650a8a/v2/E01-003-42.png",
+      "raw_sha256": "1b0711b7a9a1f8f16400700a865f8ab406f5197291cd1795fba9cc0a7af82a49",
+      "native_ppm": 6.4,
+      "fold_xyxy": [
+        1046,
+        1408,
+        1494,
+        1408
+      ],
+      "visible_train_of_bright_bars": null,
+      "notes": "银白横带横贯折线中段至右侧，区别于旧周期竖栅，仍是可见缺陷。"
+    },
+    {
+      "method": "b2_post",
+      "seed": 42,
+      "brief_id": "E01-003",
+      "fold": "B-Btm",
+      "atlas": "outputs/e01b/bottom-frame/baselines/553a10692ea7/b2_post/E01-003-42.png",
+      "raw_sha256": "681e35a4c64355bedf5829176da60a450cfe997052a8806937cbbe33be13077f",
+      "native_ppm": 4.129032258064516,
+      "fold_xyxy": [
+        673,
+        910,
+        962,
+        910
+      ],
+      "visible_train_of_bright_bars": false,
+      "notes": "绿色草叶和折线两侧块面可见正常纹理变化，未见横向亮边或成排竖栅。"
+    },
+    {
+      "method": "v2_task03",
+      "seed": 42,
+      "brief_id": "E01-004",
+      "fold": "B-Btm",
+      "atlas": "outputs/e01b/runs/4b57f6e33a53/v2/E01-004-42.png",
+      "raw_sha256": "33b880a5e9e9c3bd6a9e53d1f97f5b9ca9b6396293bfe2b1b81d96ab8a6fbe50",
+      "native_ppm": 6.4,
+      "fold_xyxy": [
+        1046,
+        1408,
+        1494,
+        1408
+      ],
+      "visible_train_of_bright_bars": true,
+      "notes": "背底密集亮白、深色与局部蓝金竖条，越过折线干扰花图。"
+    },
+    {
+      "method": "v2_task04",
+      "seed": 42,
+      "brief_id": "E01-004",
+      "fold": "B-Btm",
+      "atlas": "outputs/e01b/crease-fix/runs/bc079eabca00/v2/E01-004-42.png",
+      "raw_sha256": "dc826d5b2f8402106dca6897b79f4d4a0f3c2a7a8d5433744a546c84feb919a5",
+      "native_ppm": 6.4,
+      "fold_xyxy": [
+        1046,
+        1408,
+        1494,
+        1408
+      ],
+      "visible_train_of_bright_bars": true,
+      "notes": "明亮白金细竖栅在背侧延伸，底盖局部有融合断口。"
+    },
+    {
+      "method": "v2",
+      "seed": 42,
+      "brief_id": "E01-004",
+      "fold": "B-Btm",
+      "atlas": "outputs/e01b/bottom-frame/runs/b598a9650a8a/v2/E01-004-42.png",
+      "raw_sha256": "48598eafde375d8f930c7afff687abc7cac72e5efc2c60894868cc9e9883c881",
+      "native_ppm": 6.4,
+      "fold_xyxy": [
+        1046,
+        1408,
+        1494,
+        1408
+      ],
+      "visible_train_of_bright_bars": null,
+      "notes": "细亮横边贴线，局部被版面细节打断，旧竖栅大幅退去。"
+    },
+    {
+      "method": "b2_post",
+      "seed": 42,
+      "brief_id": "E01-004",
+      "fold": "B-Btm",
+      "atlas": "outputs/e01b/bottom-frame/baselines/553a10692ea7/b2_post/E01-004-42.png",
+      "raw_sha256": "3ad4b97dbebbb5f3ddc8db13afb104d44858bd74b3efd5c1bd8cf33226554567",
+      "native_ppm": 4.129032258064516,
+      "fold_xyxy": [
+        673,
+        910,
+        962,
+        910
+      ],
+      "visible_train_of_bright_bars": false,
+      "notes": "花朵与枝叶横跨折线，有整体色差。未见同型竖栅。"
+    },
+    {
+      "method": "v2_task03",
+      "seed": 42,
+      "brief_id": "E01-005",
+      "fold": "B-Btm",
+      "atlas": "outputs/e01b/runs/4b57f6e33a53/v2/E01-005-42.png",
+      "raw_sha256": "3eb7aae2e9d04527094971ef6888900c92dbabfc4df632e72cff85777693b9c1",
+      "native_ppm": 6.4,
+      "fold_xyxy": [
+        1046,
+        1408,
+        1494,
+        1408
+      ],
+      "visible_train_of_bright_bars": true,
+      "notes": "背底棕黑、乳白及淡亮彩栏跨线，蘑菇图案中断。"
+    },
+    {
+      "method": "v2_task04",
+      "seed": 42,
+      "brief_id": "E01-005",
+      "fold": "B-Btm",
+      "atlas": "outputs/e01b/crease-fix/runs/bc079eabca00/v2/E01-005-42.png",
+      "raw_sha256": "29c905fa44915071cf5f3b7351de3f80b7d069e4e9a48d90c290f267073e5138",
+      "native_ppm": 6.4,
+      "fold_xyxy": [
+        1046,
+        1408,
+        1494,
+        1408
+      ],
+      "visible_train_of_bright_bars": true,
+      "notes": "近全宽灰褐乳白的细密竖亮纹，底盖局部白色竖缝。"
+    },
+    {
+      "method": "v2",
+      "seed": 42,
+      "brief_id": "E01-005",
+      "fold": "B-Btm",
+      "atlas": "outputs/e01b/bottom-frame/runs/b598a9650a8a/v2/E01-005-42.png",
+      "raw_sha256": "a250a03c155a232c5464f60e0c55bff375a651f801443e5e7c92330e8b308ca7",
+      "native_ppm": 6.4,
+      "fold_xyxy": [
+        1046,
+        1408,
+        1494,
+        1408
+      ],
+      "visible_train_of_bright_bars": false,
+      "notes": "浅标签边界、深底配色与木刻纹理可辨，未见独立贯通亮横带或旧周期竖栅。"
+    },
+    {
+      "method": "b2_post",
+      "seed": 42,
+      "brief_id": "E01-005",
+      "fold": "B-Btm",
+      "atlas": "outputs/e01b/bottom-frame/baselines/553a10692ea7/b2_post/E01-005-42.png",
+      "raw_sha256": "fc3d5d8ab5e5cc93d4db2f9be92ed473e840ca5eaf737d897f42b0ebfe7b835c",
+      "native_ppm": 4.129032258064516,
+      "fold_xyxy": [
+        673,
+        910,
+        962,
+        910
+      ],
+      "visible_train_of_bright_bars": false,
+      "notes": "褐色木刻在折线两侧换向，彩色竖栅缺席。"
+    }
+  ]
+}
