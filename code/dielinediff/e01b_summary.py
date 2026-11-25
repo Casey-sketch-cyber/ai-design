@@ -165,12 +165,59 @@ def render_examples(experiment, phase):
         panel.save(output, quality=87, optimize=True)
 
 
+def render_native_fold_reviews(experiment, destination):
+    """Show every real atlas crease at one source pixel per output pixel."""
+    from PIL import Image, ImageDraw, ImageFont
+
+    from .metrics.physical import _edges_on_sheet
+
+    topology = read_json(experiment.geometry / "topology.json")
+    faces = topology["faces"]
+    creases = []
+    for seam in topology["adjacencies"]:
+        a, b = seam["a"], seam["b"]
+        endpoints = _edges_on_sheet(faces[a["face"]]["rect"], a["edge"])
+        other = _edges_on_sheet(faces[b["face"]]["rect"], b["edge"])
+        if frozenset(endpoints) == frozenset(other):
+            creases.append((a["face"], b["face"], endpoints))
+
+    font = ImageFont.load_default(size=16)
+    ink, tick = (29, 43, 56), (25, 149, 162)
+    radius = 38
+    longest = max(max(abs(x1 - x0), abs(y1 - y0)) for _, _, ((x0, y0), (x1, y1)) in creases)
+    for brief in experiment.briefs[:5]:
+        path = experiment.pilot_run / "v2" / f"{brief['id']}-42.png"
+        if not path.is_file():
+            continue
+        with Image.open(path) as source:
+            atlas = source.convert("RGB")
+        panel = Image.new("RGB", (longest + 40, 60 + (radius * 2 + 26) * len(creases)), "white")
+        draw = ImageDraw.Draw(panel)
+        draw.text((20, 11), f"{brief['id']} / seed 42 / Native crease crops", fill=ink, font=font)
+        for index, (a, b, ((x0, y0), (x1, y1))) in enumerate(creases):
+            y = 54 + index * (radius * 2 + 26)
+            caption = f"{a} / {b}"
+            if y0 == y1:
+                crop = atlas.crop((x0, y0 - radius, x1, y0 + radius))
+            else:
+                crop = atlas.crop((x0 - radius, y0, x0 + radius, y1)).transpose(Image.Transpose.ROTATE_90)
+                caption += " (90-degree rotation for viewing)"
+            draw.text((20, y - 20), caption, font=font, fill=ink)
+            panel.paste(crop, (20, y))
+            for x in (7, 25 + crop.width):
+                draw.line((x, y + radius, x + 8, y + radius), fill=tick, width=2)
+        panel.save(destination / f"{brief['id']}-edges.png", optimize=True)
+
+
 def render_edge_reviews(experiment):
     import numpy as np
     from PIL import Image, ImageDraw, ImageFont
 
     destination = experiment.pilot_run / "edge-review"
     destination.mkdir(parents=True, exist_ok=True)
+    if experiment.bottom_frame:
+        render_native_fold_reviews(experiment, destination)
+        return
     with Image.open(experiment.geometry / "region_map.png") as labels:
         active = np.asarray(labels) > 0
     ys, xs = np.where(active)

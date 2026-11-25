@@ -80,12 +80,12 @@ def native_edges(plan, topology):
     width = plan.shape[1]
     details = {}
     for name, edge, adjacent in (("T", "bottom", "F"), ("Btm", "top", "B")):
-        window = next(window for window in plan.windows if window.name == f"lid-{name}")
+        window = next(window for window in plan.windows if window.name in (f"lid-{name}", f"frame-{name}"))
         read = window.read_ids.numpy().reshape(window.shape)
         write = np.zeros(read.size, dtype=bool)
         write[window.write_sources.numpy()] = True
         write = write.reshape(window.shape)
-        rotation = topology["faces"][name]["upright_rotation"] // 90
+        rotation = topology["faces"][name]["upright_rotation"] // 90 if window.name == "lid-Btm" else 0
         read, write = np.rot90(read, -rotation), np.rot90(write, -rotation)
         bounds = [(value + 3) // 8 for value in topology["faces"][name]["rect"]]
         panel_h, panel_w = bounds[3] - bounds[1], bounds[2] - bounds[0]
@@ -95,7 +95,16 @@ def native_edges(plan, topology):
                 else range(margin_y + panel_h, read.shape[0]))
         samples = [{"x": int(read[row, column] % width), "y": int(read[row, column] // width),
                     "write": bool(write[row, column])} for row in rows]
-        details[f"{name}-{adjacent}"] = {"native_outward_trace": samples, "upright_rotation": rotation}
+        ring_writes = np.unique(np.concatenate([ring.write_ids.numpy() for ring in plan.windows
+                                               if ring.name.startswith("ring-")]))
+        overlap = np.intersect1d(window.write_ids.numpy(), ring_writes)
+        regions = plan.labels.ravel()[overlap]
+        details[f"{name}-{adjacent}"] = {
+            "native_outward_trace": samples,
+            "window_rotation_degrees": rotation * 90,
+            "shared_lid_cells": int(np.count_nonzero(regions == REGION_LABELS[name])),
+            "shared_side_cells": int(np.count_nonzero(regions == REGION_LABELS[adjacent])),
+        }
     label = REGION_LABELS["Btm"]
     details["ring_bottom_context"] = {
         window.name: {
@@ -112,12 +121,14 @@ def main():
     parser.add_argument("--geometry", type=Path, required=True)
     parser.add_argument("--output", type=Path, required=True)
     parser.add_argument("--revision")
+    parser.add_argument("--transition-mm", type=float)
     parser.add_argument("--caption", default="E01b window mapping")
     args = parser.parse_args()
     module = window_module(args.revision)
     topology = json.loads((args.geometry / "topology.json").read_text(encoding="utf-8"))
     with Image.open(args.geometry / "region_map.png") as image:
-        plan = module.build_windows(topology, np.asarray(image), device="cpu")
+        options = {} if args.transition_mm is None else {"transition_mm": args.transition_mm}
+        plan = module.build_windows(topology, np.asarray(image), device="cpu", **options)
     args.output.parent.mkdir(parents=True, exist_ok=True)
     write_montage(plan, args.output, args.caption)
     args.output.with_suffix(".json").write_text(
