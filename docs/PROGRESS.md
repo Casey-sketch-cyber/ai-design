@@ -4,7 +4,7 @@
 
 ## 当前状态
 
-任务 05 已由 Claude 审查并合并（PR #6），E01b 的 v2 路线到此结束：背面—底面条带已消除，但其他折线仍有亮边；B2-post 的色域外比例为 0%，色域不再是方法优势；接缝和出血仍是 B2 更好。方法进入 v3：Gemini 的提案（PR #5）以四侧面环形卷积单次生成（P2）为主干，Claude 已给出第一轮审查意见，等待 Gemini 回应，之后汇总成 `docs/METHOD_V3_CONSENSUS.md`。
+任务 05 已由 Claude 审查并合并（PR #6），E01b 的 v2 路线到此结束：背面—底面条带已消除（1.0446），但其他折线仍有亮边（最大 1.8047）；B2-post 的色域外比例为 0%，色域不再是方法优势；接缝和出血仍是 B2 / B2-post 更好。方法进入 v3：Gemini 已按 PR #5 中 Claude 的第一轮 6 项审查意见完成 `docs/METHOD_V3_PROPOSALS.md` 修订并逐条回复，等待 Claude 复审并汇总成 `docs/METHOD_V3_CONSENSUS.md`。
 
 ## 待办
 
@@ -16,8 +16,8 @@
 - [x] Claude：审查任务 04 的 PR #4，通过并合并（2026-11-25），审查意见见 PR 留言
 - [x] Codex：任务 05，见 `tasks/05-codex-e01b-bottom-frame.md`（做完停下等审查）
 - [x] Claude：审查任务 05 的 PR #6，通过并合并（2026-11-25）
-- [ ] Gemini：按 PR #5 中 Claude 第一轮意见修改方案并逐条回复（任务 06，见 `tasks/06-gemini-method-v3-research.md`（方法深研，提出 3—5 个方案，与 Claude 在 PR 中讨论）
-- [ ] Claude：审查任务 06 的 PR 并与 Gemini 讨论；任务 05 结果出来后汇总成 `docs/METHOD_V3_CONSENSUS.md`，交作者确认
+- [x] Gemini：按 PR #5 中 Claude 第一轮 6 项意见修订 `docs/METHOD_V3_PROPOSALS.md` 并逐条回复（任务 06，分支 `gemini/method-v3-research`）
+- [ ] Claude：复审 PR #5 并汇总成 `docs/METHOD_V3_CONSENSUS.md`，交作者确认后派给 Codex 实现
 - [x] Claude：审查任务 01 的 PR #1（2026-11-24，退回）
 - [x] Gemini：按 PR #1 审查意见完成 4 项必改与 2 项建议修改，并已在 PR #1 逐条回复
 - [x] Claude：复审 PR #1，通过并合并（2026-11-24；顺手更正 Heliyon 解除 On Hold 日期为 2026-05-14）
@@ -27,7 +27,7 @@
 
 ## 已知问题
 
-- `literature/papers.csv` 中共有 5 篇标为 `verified=no`（2 篇未定位独立 DOI 的种子文献 + 3 篇 Elsevier 付费墙阻挡摘要的文献），均已单独标注且未作为核心论证依据；其余 102 篇均已核对官方摘要（`summary_source=abstract`）。
+- `literature/papers.csv` 中共有 129 篇文献，其中 124 篇已核对官方摘要（`verified=yes, summary_source=abstract`，含任务 06 新增 22 篇）；5 篇标为 `verified=no`（2 篇未定位独立 DOI 的种子文献 + 3 篇 Elsevier 付费墙阻挡摘要的文献），均已单独标注且未作为核心论证依据。
 - 公开数据集的国内网络拉取速度与 PKU PosterLayout 协议审批周期需在实验启动第一周实测。
 - `docs/JOURNALS.md` 中的 JIF 与中科院 2025 分区来自公开汇总数据，正式投稿前须在 Clarivate MJL 官网与本单位图书馆目录复核。
 
@@ -35,8 +35,24 @@
 
 ## 工作记录
 
+### 2026-11-25 · gemini · gemini/method-v3-research（PR #5 第一轮审查修订与逐条回应）
+- **完成**：
+  - 合并 `origin/main`（含已合并的 PR #6 任务 05 结果），逐条落实 Claude 在 PR #5 的 6 项审查意见并更新 [`docs/METHOD_V3_PROPOSALS.md`](METHOD_V3_PROPOSALS.md)：
+    1. **顶/底盖面改为顺序条件外扩，取消双向平均**：吸取任务 05 正面—顶面与背面—右面亮边教训，P2 修订版改为“阶段一环带完整生成并冻结 → 阶段二顶/底盖面居中、四周拼上冻结环带的 4 条对应 3D 邻边（只读不写回）、四角自由生成后丢弃，用 Blended Latent Diffusion（+ 可选 StyleAligned K/V 加分项）顺序生成”；评估后将 P1 盖面局部软修补移出默认必选，仅作残余退路。
+    2. **新增 `B2-regional` 受控基线**：同一刀版画布 + 相同分面提示词路由（Regional Prompting）+ 无白墙钳位 + 同源 LUT 与统一印前复位，剥离“提示词贡献”与“几何拓扑贡献”。
+    3. **补齐环形卷积 4 项实现细节**：给出任意管式盒宽度/高度按 64 px（8 潜格）整除的通用取整公式（将高分辨档修正为 `1472 × 1152`，与 `1280 × 1024` 两档同测并配 DINOv2 图内自相似度重复检测）；确认 UNet 全卷积（含 stride=2 下采样）与 VAE 解码器同步水平环形填充（且不沿 X 轴分块 tiling）；垂直 Y 轴弃用 `reflect` 改保留原生 `zeros` + 上下 10–12 mm 缓冲裁切。
+    4. **明确新指标 M1–M4 的冻结纪律与反例检查**：原物理口径永久保留在主表，主结论须在原/新口径同时成立；明确规定 T0（Step 0 阶段，v3 生成启动前）完成健全性检查（含 M3 有纹理边缘逐像素复制与重采样伪出血反例）并在历史图上定稿冻结，之后严禁改动。
+    5. **落实开放问题共识与标注规范**：记录 4 项开放问题共识（优先轻量 Regional Prompting、双档分辨率同测、统一 `preflight` 口径、继承任务 05 底面刀版方向）；全文耗时与显存均明确标为“估计”，待 Step 0 / Step 1 实测确认；P4 与 P5 明确留作后备不进首轮；保留 Step 0（D1–D3）在 v3 实现前执行。
+- **未完成**：待 Claude 复审 PR #5 并汇总成 `docs/METHOD_V3_CONSENSUS.md`，交作者确认后下达 Codex。
+
 ### 2026-11-25 · claude · main
 - **完成**：合并 PR #6；对 PR #5（Gemini v3 方案）给出第一轮审查意见：盖面改为以环带为条件的顺序外扩生成；新增 B2-regional 基线；补充环形卷积实现细节；新指标需冻结定义并保留原口径。
+
+### 2026-11-25 · gemini · gemini/method-v3-research（任务 06：方法深研 v3 提案初版）
+- **完成**：
+  - 完整核读 E01/E01b 报告、PR #2/#3/#4 审查留言、`b2_controlnet.py` / `ours_tf_v2.py` / `windows_v2.py` / `metrics/` 源码及可视化样本，交付 `docs/METHOD_V3_PROPOSALS.md` 初版（机制归因 + 判别实验 D1–D5 + 5 个候选方案 P1–P5 + 评测偏差分析与 M1–M4）。
+  - 新增并逐篇核对 **22 篇** v3 相关核心论文官方摘要与 DOI，更新 `literature/papers.csv`（总计 129 篇：124 篇 `verified=yes, abstract`，5 篇 `verified=no`，0 违规）与 `literature/search-log.md`（新增 Q38–Q41）。
+- **注意 / 坑**：① SyncDiffusion 原版梯度反传迁移至 SDXL 极易在 24 GB 上 OOM 且耗时飙升，不宜照搬；② 新增评测指标须与旧物理口径并行保留，不可替换旧口径。
 
 ### 2026-11-24 · codex · 底面刀版方向与 B2-post
 

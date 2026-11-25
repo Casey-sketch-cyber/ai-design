@@ -2,14 +2,14 @@
 
 - 课题：**用人工智能（深度学习等）做包装设计（乡村农产品包装为应用场景，OPC/方案交付为可选框架）**
 - 检索执行者：Gemini
-- 检索日期：2026-11-24（含初版 Q01–Q25 与按 2026-11-24 修订版任务书追加的深度学习/公开数据集/客观指标/DL 期刊专项检索 Q26–Q34）
+- 检索日期：2026-11-24 至 2026-11-25（含初版 Q01–Q25、修订版 Q26–Q34、PR #1 返修 Q35–Q37，以及任务 06 方法深研 v3 专项检索 Q38–Q41）
 - 数据来源约束：仅使用免费开放学术来源（OpenAlex API、Crossref API、arXiv、GitHub/HuggingFace 数据集公开页、出版社公开页、公开网页检索含知网/万方免费摘要线索），未使用 Scopus 或 Web of Science 付费权限。
 
 > **核心结论前置**：转向**“用深度学习等 AI 方法做包装设计”**且**只用纯客观指标（A 套，不招募专家/消费者）**后，本课题**完全具备发表纯开放获取（OA）SCIE 期刊论文的可行性**，甚至比纯设计实践类论文更容易通过客观定量对比与消融实验满足 SCIE 工程/计算机综合刊的审稿门槛。核心方法贡献应锚定在**深度学习包装设计尚未解决好的关键技术难点**（尤其是“**参数化刀版拓扑感知的多面一致生成 + 视觉艺术字/矢量法定标签双轨解耦 + 可印刷性/合规性客观引导**”），配套自建可开源合成刀版—3D 配对基准与 Open Food Facts/RPC/AnyWord-3M 公开数据，首选 OA SCIE 靶刊为 ***Applied Sciences***、***Scientific Reports***、***PLOS ONE***、***IEEE Access***、***Electronics*** 与 ***Symmetry***。
 
 ---
 
-## 一、系统检索记录表（中英文，共 34 组）
+## 一、系统检索记录表（中英文，共 41 组）
 
 ### 第一阶段：初始四脉络与种子文献检索（Q01–Q25）
 
@@ -57,6 +57,10 @@
 | Q35 | 2026-11-24 | Direct HTTP + OpenAlex API + arXiv 官方页 | PR #1 审查返修专项：逐条核对原 `papers.csv` 中全部 44 条 `snippet` 条目及 5 篇被标疑 2026 DOI（`10.1057/s41599-026-08755-y`、`10.1057/s41599-026-06948-z`、`10.1109/access.2026.3723820`、`10.1109/access.2026.3730226`、`10.3390/math14203759`） | 44 | 41 升级为 `abstract`；3 篇付费墙 Elsevier 改标 `verified=no` | 文献质量审计 | 5 篇被标疑 2026 论文全部确认官方 DOI 有效并获取 OpenAlex 官方摘要；`papers.csv` 彻底消除 `verified=yes` 且 `summary_source=snippet` 的违规记录 |
 | Q36 | 2026-11-24 | Crossref API + arXiv 官方页 | PR #1 审查返修专项：补全 3D 网格跨视角/跨接缝纹理生成脉络：`Text2Tex` (ICCV 2023)、`TexFusion` (ICCV 2023)、`Point-UV Diffusion` (ICCV 2023)、`SyncMVD` (SIGGRAPH Asia 2024)、`Meta 3D TextureGen` (2024)、`RoCoTex` (2024)、`MVPaint` (CVPR 2025) | 7 | 7（全部 `verified=yes, abstract`） | 脉络一子线 1B | 全部打开 arXiv 官方摘要页并核对正式会议 DOI，据此将 `DieLineDiff` 从情况 3 回调为情况 2 并新增纸盒网格 3D 纹理基线 |
 | Q37 | 2026-11-24 | Direct HTTP 核验 | 核实期刊风险出处链接：`ewl.fenqubiao.com`、南京财经大学/甘肃工职大/福建理工 2020–2025 预警公告、`retractionwatch.com` 2024-09-30 & 2026-08-07 *Heliyon* On Hold 报道 | 6 页 | 5 页返回 HTTP 200 | 期刊调研风险出处 | 修正 *IEEE Access* 预警史为“2020 年中档、2021 年移出”；确认 *Heliyon* On Hold 于 2026-08-07 报道解除；全部风险项补齐可点击出处 |
+| Q38 | 2026-11-25 | arXiv 官方页 + OpenAlex API | 任务 06（方法 v3 深研）：多窗扩散同步与 360° 无缝/环形填充脉络：`MultiDiffusion` (ICML 2023)、`Mixture of Diffusers` (2023)、`SyncDiffusion` (NeurIPS 2023)、`Diffusion360` (2023)、`PanFusion` (CVPR 2024)、`StitchDiffusion` (WACV 2024)、`SpotDiffusion` (WACV 2025)、`Tiled Diffusion` (CVPR 2025) | 8 | 8（全部 `verified=yes, abstract`） | 脉络一（v3 环带闭环与去滑窗路线） | 全部核对 arXiv 官方摘要与 OpenAlex 正式会议 DOI，证实 UNet/VAE 水平环形卷积与时间交错窗可替代高代价 MultiDiffusion/SyncDiffusion |
+| Q39 | 2026-11-25 | arXiv 官方页 + OpenAlex API | 任务 06（方法 v3 深研）：跨视角/六面共享自注意力与区域注意力路由：`MVDiffusion` (NeurIPS 2023)、`CubeDiff` (ICLR 2025)、`StyleAligned` (CVPR 2024)、`ConsiStory` (SIGGRAPH 2024)、`StoryDiffusion` (NeurIPS 2024)、`MasaCtrl` (ICCV 2023)、`DenseDiffusion` (ICCV 2023)、`TexPainter` (SIGGRAPH 2024) | 8 | 8（全部 `verified=yes, abstract`） | 脉络一（v3 跨面一致性与分面提示路由） | 全部核对官方摘要与 DOI，确立“水平环形卷积环带 + 跨面共享自注意力盖面 + 空间交叉注意力路由”的免训练核心架构 |
+| Q40 | 2026-11-25 | arXiv 官方页 + OpenAlex API | 任务 06（方法 v3 深研）：全局-局部软修补与高分辨率一致：`SDEdit` (ICLR 2022)、`RePaint` (CVPR 2022)、`Blended Latent Diffusion` (SIGGRAPH 2023)、`Differential Diffusion` (CGF 2025 / arXiv 2023)、`DemoFusion` (CVPR 2024) | 5 | 5（全部 `verified=yes, abstract`） | 脉络一（v3 局部 3D 接缝软修补） | 全部核对官方摘要与 DOI，支撑方案 P1 与 P2+P1 盖面 6 条非原生 3D 缝的逐像素软强度局部缝合 |
+| Q41 | 2026-11-25 | OpenAlex API | 任务 06（方法 v3 深研）：可微无缝拼接客观评测指标：`TexTile: A Differentiable Metric for Texture Tileability` (CVPR 2024) | 1 | 1（`verified=yes, abstract`） | 脉络四（v3 补充接缝客观指标） | 核对官方摘要与 CVPR 2024 DOI，为超越传统像素色差 SDR 的跨折线结构连贯性客观评测提供顶会依据 |
 
 ---
 
