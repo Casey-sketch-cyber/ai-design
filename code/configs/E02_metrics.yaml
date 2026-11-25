@@ -1,0 +1,34 @@
+physical:
+  m2_band_mm: 4.0
+  m2_blur_mm: 0.25
+  m2_salience_quantile: 0.75
+  m2_min_gradient_rgb: 2.0
+  m3_flat_std_rgb: 1.0
+  m3_guard_mm: 0.5
+  m3_min_normal_delta_rgb: 0.65
+  m3_min_normal_to_tangent: 0.12
+  m3_zero_delta_rgb: 0.35
+  m3_max_zero_fraction: 0.7
+m4:
+  model: facebook/dinov2-small
+  revision: ed25f3a31f01632728cabb09d1542f84ab7b0056
+  size_px: 224
+  image_mean:
+  - 0.485
+  - 0.456
+  - 0.406
+  image_std:
+  - 0.229
+  - 0.224
+  - 0.225
+  face_mean_weight: 0.5
+unchanged_physical:
+  pixels_per_mm: 4.0
+  sdr_mm: 0.5
+  lpips_mm: 5.0
+  stripe_mm: 3.0
+  stripe_reference_offset_mm: 9.0
+  sdr_floor_delta_e: 1.0
+  bleed_white_rgb: 250
+  bleed_match_delta_e: 9.0
+  bleed_change_delta_e: 0.8

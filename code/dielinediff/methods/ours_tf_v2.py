@@ -111,7 +111,7 @@ class DieLineDiffV2(DieLineDiff):
         return blended, minimum_weight
 
     @torch.inference_mode()
-    def generate(self, brief, seed, *, synchronized=True, project=True):
+    def generate(self, brief, seed, *, synchronized=True, project=True, anchor_outside=True):
         self.last_coverage = None
         plan = self.window_plan(synchronized)
         generator = torch.Generator(device=self.device).manual_seed(seed)
@@ -124,13 +124,18 @@ class DieLineDiffV2(DieLineDiff):
                             dtype=self.dtype)
         latent = noise * scheduler.init_noise_sigma
         anchor = self.reference(brief)
+        # The D3 control keeps the original window coverage and releases only Outside.
+        replace_mask = self.replace_mask
+        if not anchor_outside:
+            nonoutside = torch.as_tensor(plan.labels != 0, device=self.device)[None, None]
+            replace_mask = replace_mask & nonoutside
         conditions = {window.name: self.condition(brief, window) for window in plan.windows}
         first_projection = round(len(scheduler.timesteps) * (1 - self.config["projection_tail"]))
         minimum_weight = float("inf")
         steps_checked = 0
         for index, t in enumerate(scheduler.timesteps):
             anchor_at_t = scheduler.add_noise(anchor, noise, t[None])
-            latent = torch.where(self.replace_mask, anchor_at_t, latent)
+            latent = torch.where(replace_mask, anchor_at_t, latent)
             prediction, step_weight = self.predict(latent, t, plan, conditions)
             minimum_weight = min(minimum_weight, step_weight)
             steps_checked += 1
@@ -139,7 +144,7 @@ class DieLineDiffV2(DieLineDiff):
                 prediction = self.color_constraint(latent, prediction, t)
             latent = scheduler.step(prediction, t, latent, return_dict=False)[0]
 
-        latent = torch.where(self.replace_mask, anchor, latent)
+        latent = torch.where(replace_mask, anchor, latent)
         decoded = self.decode(latent)[0].permute(1, 2, 0)
         if not torch.isfinite(decoded).all():
             raise RuntimeError("E01b VAE decoded a nonfinite image")
