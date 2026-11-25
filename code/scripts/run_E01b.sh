@@ -14,8 +14,15 @@ phase=pilot
 case "${1:-}" in
     pilot|tune|full) phase="$1"; shift ;;
     paths|review) command="$1"; shift; exec "$run_python" -m dielinediff.e01b "$command" "$@" ;;
+    backfill)
+        shift
+        "$run_python" -m dielinediff.metrics.prepare_image_reward
+        export CUDA_VISIBLE_DEVICES=
+        export OMP_NUM_THREADS="${OMP_NUM_THREADS:-3}" MKL_NUM_THREADS="${MKL_NUM_THREADS:-3}"
+        export OPENBLAS_NUM_THREADS="${OPENBLAS_NUM_THREADS:-3}"
+        exec "$run_python" -m dielinediff.e01b_backfill all "$@" ;;
     -h|--help)
-        printf 'Usage: %s [pilot|tune|full|paths|review] [E01b options]\n' "$0"
+        printf 'Usage: %s [pilot|tune|full|paths|review|backfill] [E01b options]\n' "$0"
         "$run_python" -m dielinediff.e01b --help
         exit 0 ;;
     ""|-*) ;;
