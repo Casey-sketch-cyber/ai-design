@@ -185,7 +185,7 @@ class DieLineDiffV3(DieLineDiff):
         self.last_run["flat_size_px"] = list(self.atlas_size)
         return self._rgb(latent).crop((0, 0, width, height))
 
-    def _generate_ring(self, contexts, pooled, generator, size):
+    def _prepare_ring(self, contexts, pooled, generator, size):
         if self._controlnet is not None:
             self._controlnet.to("cpu")
         ring, routing, layouts = self._ring_layout(size)
@@ -196,6 +196,12 @@ class DieLineDiffV3(DieLineDiff):
                 frozen_ring = self._denoise((ring.width_px, ring.height_px), generator,
                                              contexts[0], pooled, capture_style=bank)
             ring_image = self._rgb(frozen_ring)
+
+        return ring, layouts, bank, frozen_ring, ring_image
+
+    def _generate_ring(self, contexts, pooled, generator, size):
+        ring, layouts, bank, frozen_ring, ring_image = self._prepare_ring(contexts, pooled, generator, size)
+        unet = self.pipe.unet
 
         generated_caps = {}
         cap_info = {}

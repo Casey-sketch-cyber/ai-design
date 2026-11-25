@@ -1,0 +1,12 @@
+# Task 08 changes only cap generation. Task 07 specifies the ring and final gate.
+protocol: e02-v3-capfix
+reference_run: c6bb770094d3
+seed: 42
+capfix_prompts:
+  outer_fraction: 0.25
+  continuation: "{style}, {side_prompt}, {main_color}, extend the adjacent artwork across the fold, same palette and brushwork, seamless background"
+  emblem: "{top_prompt}, tiny centered emblem, same palette and brushwork as adjacent artwork, {side_prompt}, {main_color}, {style}"
+optional_repaint:
+  enabled: true
+  maximum_parent_seconds: 45
+  step_index: 14
