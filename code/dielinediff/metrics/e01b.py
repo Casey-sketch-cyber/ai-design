@@ -7,6 +7,7 @@ from PIL import ImageColor
 
 from . import Evaluator, face_prompts, rgb_atlas
 from .image_reward import ImageRewardScorer
+from .physical import PhysicalEvaluator
 
 WHITE = (255, 255, 255)
 RESET_LABELS = (0, 7, 8, 9)
@@ -32,7 +33,7 @@ class E01bEvaluator:
     """Reuse metric models for two geometries and measure both output variants."""
 
     def __init__(self, legacy_geometry, new_geometry, lut_path, device="cpu",
-                 learned=("lpips", "clip", "hps", "image_reward")):
+                 learned=("lpips", "clip", "hps", "image_reward"), *, physical=False):
         self.device = device
         self.learned = set(learned)
         shared_backends = self.learned - {"image_reward"}
@@ -41,6 +42,10 @@ class E01bEvaluator:
             for key, path in (("legacy", legacy_geometry), ("new", new_geometry))
         }
         self.evaluators["new"].learned = self.evaluators["legacy"].learned
+        self.physical = {
+            key: PhysicalEvaluator(path, device, self.evaluators[key].learned)
+            for key, path in (("legacy", legacy_geometry), ("new", new_geometry))
+        } if physical else {}
         for key, evaluator in self.evaluators.items():
             fixed = np.isin(evaluator.labels, RESET_LABELS)
             if any(face.any() for face in evaluator._crop_faces(fixed).values()):
@@ -78,4 +83,11 @@ class E01bEvaluator:
             images = evaluator._upright_images(evaluator._crop_faces(original))
             raw["image_reward"] = self.image_reward.score(images, prompts)
         preflight["image_reward"] = raw["image_reward"]
+        if geometry in self.physical:
+            physical = self.physical[geometry]
+            fields = physical.measure(original, lpips="lpips" in self.learned)
+            if "clip" in self.learned:
+                fields.update(physical.top_bottom_orientation(original))
+            raw.update(fields)
+            preflight.update(fields)
         return {"raw": raw, "preflight": preflight}

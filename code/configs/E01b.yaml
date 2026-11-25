@@ -1,5 +1,5 @@
 # Initial comparison settings. Holdout runs require a reviewed pilot and frozen settings.
-protocol: e01b-v2
+protocol: e01b-v2-crease
 steps: 30
 seeds: [42, 1234, 2026]
 pixels_per_mm: 6.4

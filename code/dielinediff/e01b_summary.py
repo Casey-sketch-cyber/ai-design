@@ -16,9 +16,20 @@ MAIN = (
     ("elapsed_seconds", "单盒耗时 s"),
     ("peak_memory_mib", "峰值分配显存 MiB"),
 )
+STRIPE = ("stripe_index", "折边条带指数")
+LID = (
+    ("top_seam_sdr", "顶面接缝 SDR"),
+    ("top_seam_lpips", "顶面接缝 LPIPS"),
+    ("top_upright_rate", "顶面 CLIP 正立率"),
+    ("bottom_seam_sdr", "底面接缝 SDR"),
+    ("bottom_seam_lpips", "底面接缝 LPIPS"),
+    ("bottom_upright_rate", "底面 CLIP 正立率"),
+    ("back_bottom_stripe_index", "背面—底面压痕条带指数"),
+)
 SUPPLEMENT = (("lighting_residual", "低频亮度梯度"), ("upright_rate", "CLIP 正立率"))
 RAW_ONLY = ("glue_ink_pct", "粘口油墨覆盖率 %")
-METRIC_KEYS = tuple(key for key, _ in (RAW_ONLY, *MAIN, *SUPPLEMENT))
+NATIVE_METRIC_KEYS = tuple(key for key, _ in (RAW_ONLY, *MAIN, *SUPPLEMENT))
+METRIC_KEYS = NATIVE_METRIC_KEYS + tuple(key for key, _ in (STRIPE, *LID))
 
 
 def _number(value):
@@ -58,17 +69,19 @@ def _variant(rows, briefs, methods, seeds, phase, metrics):
     return result
 
 
-def build_summary(rows, briefs, methods, seeds, phase):
+def build_summary(rows, briefs, methods, seeds, phase, physical=False):
     selected = list(briefs[10:] if phase == "full" else briefs[:5 if phase == "pilot" else 10])
     population = {brief["id"] for brief in selected}
     variants = {}
     for variant in ("raw", "preflight"):
         table_metrics = (RAW_ONLY, *MAIN) if variant == "raw" else MAIN
+        if physical:
+            table_metrics = (*table_metrics, STRIPE, *LID)
         variants[variant] = _variant(
             [row for row in rows if row["variant"] == variant and row["brief_id"] in population],
             selected, methods, seeds, phase, (*table_metrics, *SUPPLEMENT),
         )
-    return {"phase": phase, "seeds": list(seeds), "variants": variants}
+    return {"phase": phase, "seeds": list(seeds), "physical": physical, "variants": variants}
 
 
 def _tables(metrics):
@@ -102,12 +115,19 @@ def format_tables(value):
             lines.extend((f"### {groups[subset]}", "", f"计划简报 {result['planned_n']} 份。", ""))
             metrics = result["metrics"]
             names = [key for key, _ in MAIN]
+            if value.get("physical"):
+                names.insert(2, STRIPE[0])
             if variant == "raw":
                 names.insert(0, RAW_ONLY[0])
             lines.extend(_tables([metrics[name] for name in names]))
             lines.extend(("", "#### 补充指标", "",
                           "大面积色彩变化可能触发亮度梯度。CLIP 方向判断也会漏检倒置。", ""))
             lines.extend(_tables([metrics[name] for name, _ in SUPPLEMENT]))
+            if value.get("physical"):
+                lines.extend(("", "#### 顶面与底面", "",
+                              "各盖面的接缝覆盖其四条三维邻边。接缝按物理尺度计算，"
+                              "正立率仍基于各原图裁面。背面—底面指数针对实际压痕。", ""))
+                lines.extend(_tables([metrics[name] for name, _ in LID]))
             lines.append("")
     return "\n".join(lines).rstrip() + "\n"
 

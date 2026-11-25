@@ -1,0 +1,30 @@
+{
+  "controls": {
+    "flat": {
+      "stripe_index": 1.0,
+      "back_bottom_stripe_index": 1.0
+    },
+    "gradual": {
+      "stripe_index": 1.0,
+      "back_bottom_stripe_index": 1.0
+    },
+    "natural_boundary": {
+      "stripe_index": 1.0,
+      "back_bottom_stripe_index": 1.0
+    },
+    "selfcheck": {
+      "stripe_index": 1.0739752914043859,
+      "back_bottom_stripe_index": 1.0
+    },
+    "selfcheck_with_stripe": {
+      "stripe_index": 10.006540558362982,
+      "back_bottom_stripe_index": 10.006540558362982
+    }
+  },
+  "checks": {
+    "flat_does_not_trigger": true,
+    "gradual_does_not_trigger": true,
+    "natural_boundary_does_not_trigger": true,
+    "injected_stripe_increases_index": true
+  }
+}

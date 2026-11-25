@@ -3,6 +3,7 @@
 import argparse
 import csv
 from dataclasses import dataclass
+from functools import lru_cache
 from hashlib import sha256
 import json
 import math
@@ -30,6 +31,8 @@ PHASES = {
     "full": (50, METHODS),
 }
 CLIP_TOLERANCE = 0.05
+PHYSICAL_PROTOCOL = "e01b-v2-crease"
+STRIPE_TOLERANCE_FACTOR = 1.20
 
 
 def file_hash(path):
@@ -71,6 +74,7 @@ class Job:
     seed: int
     image: Path
     measurement: Path
+    physical: bool = False
 
     @property
     def identifier(self):
@@ -89,8 +93,8 @@ class Experiment:
     def __init__(self, args):
         self.args = args
         self.root = args.root.resolve()
-        self.base = self.root / "outputs" / "e01b"
-        self.geometry = (args.geometry or self.base / "geometry").resolve()
+        e01b_root = self.root / "outputs" / "e01b"
+        self.geometry = (args.geometry or e01b_root / "geometry").resolve()
         self.legacy_geometry = (args.legacy_geometry or self.root / "outputs" / "geometry").resolve()
         self.legacy_outputs = (args.legacy_outputs or self.root / "outputs" / "e01"
                                / "full-52dd11c30fc1").resolve()
@@ -102,6 +106,10 @@ class Experiment:
         self.pilot_config = yaml.safe_load(args.pilot_config.read_text(encoding="utf-8"))
         validate_config(self.config)
         validate_config(self.pilot_config)
+        if self.config.get("protocol") != self.pilot_config.get("protocol"):
+            raise ValueError("Current and pilot configurations must use the same experiment protocol")
+        self.physical = self.config.get("protocol") == PHYSICAL_PROTOCOL
+        self.base = e01b_root / "crease-fix" if self.physical else e01b_root
         self.briefs = [json.loads(line) for line in self.briefs_path.read_text(encoding="utf-8").splitlines()
                        if line.strip()]
         validate_briefs(self.briefs)
@@ -165,7 +173,7 @@ class Experiment:
                     else:
                         image = run / method / f"{name}.png"
                         score = image.with_suffix(".metrics.json")
-                    yield Job(method, brief, seed, image, score)
+                    yield Job(method, brief, seed, image, score, self.physical)
 
     def check_legacy(self, jobs):
         missing = [str(job.image) for job in jobs if job.is_legacy
@@ -240,9 +248,19 @@ def generate(experiment, phase, device):
         print(f"{job.method} {job.identifier} {elapsed:.2f} s {peak:.0f} MiB", flush=True)
 
 
+@lru_cache(maxsize=1)
+def physical_implementation_hash():
+    from .metrics import physical
+
+    return file_hash(Path(physical.__file__))
+
+
 def measurement_input(job):
-    return {"atlas_sha256": file_hash(job.image), "run_sha256": file_hash(job.metadata),
-            "learned": list(LEARNED)}
+    record = {"atlas_sha256": file_hash(job.image), "run_sha256": file_hash(job.metadata),
+              "learned": list(LEARNED)}
+    if job.physical:
+        record["physical_implementation_sha256"] = physical_implementation_hash()
+    return record
 
 
 def score_for(job, verify=True):
@@ -270,16 +288,17 @@ def csv_rows(jobs, scores):
 
 
 def save_results(experiment, phase, jobs, scores):
-    from .e01b_summary import METRIC_KEYS
+    from .e01b_summary import METRIC_KEYS, NATIVE_METRIC_KEYS
 
+    metric_keys = METRIC_KEYS if experiment.physical else NATIVE_METRIC_KEYS
     rows = list(csv_rows(jobs, scores))
     path = experiment.run / phase / "results.csv"
     path.parent.mkdir(parents=True, exist_ok=True)
     fields = ("method", "variant", "brief_id", "seed", "split", "continuous")
-    extra = sorted({key for row in rows for key in row} - set(fields + METRIC_KEYS))
+    extra = sorted({key for row in rows for key in row} - set(fields + metric_keys))
     temp = path.with_suffix(f".{os.getpid()}.tmp")
     with temp.open("w", newline="", encoding="utf-8") as stream:
-        writer = csv.DictWriter(stream, fieldnames=fields + METRIC_KEYS + tuple(extra), lineterminator="\n")
+        writer = csv.DictWriter(stream, fieldnames=fields + metric_keys + tuple(extra), lineterminator="\n")
         writer.writeheader()
         writer.writerows(rows)
     temp.replace(path)
@@ -305,7 +324,7 @@ def measure(experiment, phase, device, follow_until):
     if not pending:
         return
     with E01bEvaluator(experiment.legacy_geometry, experiment.geometry, experiment.lut,
-                      device=device, learned=LEARNED) as evaluator:
+                      device=device, learned=LEARNED, physical=experiment.physical) as evaluator:
         while pending:
             waiting = []
             for job in pending:
@@ -333,8 +352,10 @@ def measure(experiment, phase, device, follow_until):
 
 
 def pilot_gate(experiment):
-    pilot_jobs = list(experiment.jobs("pilot", run=experiment.pilot_run, methods=("b2", "v2")))
-    comparisons = {"b2": {}, "v2": {}}
+    methods = ("b2", "b3", "b4", "v2") if experiment.physical else ("b2", "v2")
+    pilot_jobs = list(experiment.jobs("pilot", run=experiment.pilot_run, methods=methods))
+    clip_samples = {"b2": {}, "v2": {}}
+    stripe_samples = {method: {} for method in methods} if experiment.physical else {}
     coverage = {}
     evidence = {}
     missing = []
@@ -342,38 +363,67 @@ def pilot_gate(experiment):
         if not complete_image(job, experiment.pilot_config["steps"]):
             missing.append(f"{job.method}/{job.identifier}")
             continue
+        brief_id = job.brief["id"]
         if not job.is_legacy:
-            coverage[job.brief["id"]] = read_json(job.metadata)["coverage"]
+            coverage[brief_id] = read_json(job.metadata)["coverage"]
         score = score_for(job)
         if score is None:
             missing.append(f"{job.method}/{job.identifier} metrics")
             continue
-        clip = score["raw"].get("clip_score")
-        if clip is None or not math.isfinite(clip):
-            missing.append(f"{job.method}/{job.identifier} CLIP")
-            continue
-        comparisons[job.method][job.brief["id"]] = clip
+        raw = score["raw"]
+        if job.method in clip_samples:
+            clip = raw.get("clip_score")
+            if clip is None or not math.isfinite(clip):
+                missing.append(f"{job.method}/{job.identifier} CLIP")
+            else:
+                clip_samples[job.method][brief_id] = clip
+        if experiment.physical:
+            stripe = raw.get("stripe_index")
+            if stripe is None or not math.isfinite(stripe):
+                missing.append(f"{job.method}/{job.identifier} stripe index")
+            else:
+                stripe_samples[job.method][brief_id] = stripe
         evidence[f"{job.method}/{job.identifier}"] = [file_hash(job.image),
                                                       file_hash(job.metadata), file_hash(job.measurement)]
-    means = {method: sum(samples.values()) / len(samples) if len(samples) == 5 else None
-             for method, samples in comparisons.items()}
+
+    def means_for(samples):
+        return {method: sum(values.values()) / len(values) if len(values) == 5 else None
+                for method, values in samples.items()}
+
+    means = means_for(clip_samples)
     difference = means["v2"] - means["b2"] if all(value is not None for value in means.values()) else None
     heatmap = experiment.pilot_run / "coverage.png"
     coverage_ok = len(coverage) == 5 and heatmap.is_file()
     clip_ok = difference is not None and abs(difference) <= CLIP_TOLERANCE
+    stripe_report = {}
+    if experiment.physical:
+        stripe_means = means_for(stripe_samples)
+        best_method = threshold = delta = None
+        if all(stripe_means[method] is not None for method in ("b2", "b3", "b4")):
+            best_method = min(("b2", "b3", "b4"), key=stripe_means.__getitem__)
+            threshold = STRIPE_TOLERANCE_FACTOR * stripe_means[best_method]
+            if stripe_means["v2"] is not None:
+                delta = stripe_means["v2"] - threshold
+        stripe_report = {
+            "stripe_samples": stripe_samples, "stripe_means": stripe_means,
+            "stripe_baseline_method": best_method,
+            "stripe_baseline_mean": stripe_means[best_method] if best_method is not None else None,
+            "stripe_tolerance_factor": STRIPE_TOLERANCE_FACTOR, "stripe_threshold": threshold,
+            "stripe_difference_from_threshold": delta, "stripe_passed": delta is not None and delta <= 0,
+        }
     material = {"pilot_key": experiment.pilot_run.name, "samples": evidence,
                 "coverage_heatmap": file_hash(heatmap) if heatmap.is_file() else None}
     fingerprint = stable_hash(material) if not missing and coverage_ok else None
     review_path = experiment.pilot_run / "visual-review.json"
     review = read_json(review_path) if review_path.is_file() else None
-    visual_ok = (review_matches(review, fingerprint, set(coverage)) if fingerprint else False)
+    visual_ok = review_matches(review, fingerprint, set(coverage)) if fingerprint else False
     return {
         "ready_for_visual_review": fingerprint is not None,
-        "passed": not missing and coverage_ok and clip_ok and visual_ok,
+        "passed": not missing and coverage_ok and clip_ok and stripe_report.get("stripe_passed", True) and visual_ok,
         "fingerprint": fingerprint, "coverage_passed": coverage_ok, "coverage": coverage,
-        "clip_samples": comparisons, "clip_means": means, "clip_difference": difference,
+        "clip_samples": clip_samples, "clip_means": means, "clip_difference": difference,
         "clip_tolerance": CLIP_TOLERANCE, "clip_passed": clip_ok, "missing": missing,
-        "visual_review_passed": visual_ok, "visual_review": review,
+        "visual_review_passed": visual_ok, "visual_review": review, **stripe_report,
     }
 
 
@@ -451,7 +501,8 @@ def summarize(experiment, phase):
             scores[job.measurement] = score
     rows = save_results(experiment, phase, jobs, scores)
     result = build_summary(rows, experiment.briefs, PHASES[phase][1],
-                           SEEDS if phase == "full" else SEEDS[:1], phase)
+                           SEEDS if phase == "full" else SEEDS[:1], phase,
+                           physical=experiment.physical)
     destination = experiment.run / phase
     write_json(destination / "statistics.json", result)
     (destination / "TABLES.md").write_text(format_tables(result), encoding="utf-8")
@@ -461,20 +512,19 @@ def summarize(experiment, phase):
         render_edge_reviews(experiment)
         gate = pilot_gate(experiment)
         write_json(experiment.pilot_run / "pilot-gate.json", gate)
-        if gate["coverage_passed"] and gate["clip_passed"]:
+        if gate["coverage_passed"]:
             seconds = [read_json(job.metadata)["elapsed_seconds"] for job in jobs if job.method == "v2"]
             average = sum(seconds) / len(seconds)
             write_json(destination / "runtime-estimate.json",
                        {"mean_v2_seconds_per_box": average, "planning_boxes": 450,
                         "estimated_generation_hours_at_v2_rate": 450 * average / 3600})
-            if gate["passed"]:
-                print("The complete pilot gate passed.", flush=True)
-            elif gate["visual_review"] is not None:
-                raise ValueError(f"Pilot edge review failed. See {experiment.pilot_run / 'pilot-gate.json'}")
-            else:
-                print("Objective pilot checks passed. Record an actual visual review before tuning.", flush=True)
+        objective = gate["coverage_passed"] and gate["clip_passed"] and gate.get("stripe_passed", True)
+        if gate["passed"]:
+            print("The previously reviewed pilot passed.", flush=True)
+        elif objective and gate["visual_review"] is None:
+            print("Objective pilot checks passed. Record an actual visual review before tuning.", flush=True)
         else:
-            raise ValueError(f"Pilot objective checks failed. See {experiment.pilot_run / 'pilot-gate.json'}")
+            raise ValueError(f"Pilot checks did not pass. See {experiment.pilot_run / 'pilot-gate.json'}")
     if len(scores) != len(jobs):
         raise ValueError(f"Incomplete {phase} evaluation. See {destination / 'results.csv'}")
     if phase == "tune":
