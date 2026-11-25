@@ -2,7 +2,7 @@ import numpy as np
 import pytest
 from PIL import Image
 
-from dielinediff.metrics.e01b import preflight_atlas
+from dielinediff.metrics.e01b import b2_post_atlas, preflight_atlas
 
 
 def test_preflight_changes_only_fixed_labels_and_preserves_raw_pixels(tmp_path):
@@ -34,3 +34,24 @@ def test_preflight_rejects_resizing_and_transparent_brief_colors():
         preflight_atlas(rgb, np.zeros((2, 2)), "#447722")
     with pytest.raises(ValueError, match="opaque RGB"):
         preflight_atlas(rgb, np.zeros((4, 4)), "#44772280")
+
+def test_b2_post_applies_the_rgb_lut_once_before_shared_preflight(tmp_path):
+    labels = np.array([[1, 0, 7, 8, 9, 10]], dtype=np.uint8)
+    rgb = np.array([[[41, 66, 138], [90, 18, 133], [18, 37, 81],
+                     [100, 250, 20], [130, 77, 51], [134, 196, 52]]], dtype=np.uint8)
+    source = tmp_path / "b2.png"
+    Image.fromarray(rgb).save(source)
+    original_file = source.read_bytes()
+    lut = tmp_path / "color.npy"
+    axis = np.linspace(0, 1, 33, dtype=np.float32)
+    r, g, b = np.meshgrid(axis, axis, axis, indexing="ij")
+    np.save(lut, np.stack((g, b, r), axis=-1))
+
+    raw = b2_post_atlas(source, lut)
+    np.testing.assert_array_equal(raw, rgb[..., [1, 2, 0]])
+
+    prepared = preflight_atlas(raw, labels, "#123456")
+    np.testing.assert_array_equal(prepared[0, [0, 5]], raw[0, [0, 5]])
+    np.testing.assert_array_equal(prepared[0, 1:3], [[255, 255, 255]] * 2)
+    np.testing.assert_array_equal(prepared[0, 3:5], [[18, 52, 86]] * 2)
+    assert source.read_bytes() == original_file

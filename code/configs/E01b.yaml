@@ -1,9 +1,10 @@
 # Initial comparison settings. Holdout runs require a reviewed pilot and frozen settings.
-protocol: e01b-v2-crease
+protocol: e01b-v2-bottom-frame
 steps: 30
 seeds: [42, 1234, 2026]
 pixels_per_mm: 6.4
 window_stride: 512
+transition_mm: 2.0
 top_band: 16
 guidance: 5.0
 projection_strength: 0.20

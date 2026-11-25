@@ -13,7 +13,7 @@ fi
 phase=pilot
 case "${1:-}" in
     pilot|tune|full) phase="$1"; shift ;;
-    paths|review) command="$1"; shift; exec "$run_python" -m dielinediff.e01b "$command" "$@" ;;
+    paths|review|baseline) command="$1"; shift; exec "$run_python" -m dielinediff.e01b "$command" "$@" ;;
     backfill)
         shift
         "$run_python" -m dielinediff.metrics.prepare_image_reward
@@ -22,7 +22,7 @@ case "${1:-}" in
         export OPENBLAS_NUM_THREADS="${OPENBLAS_NUM_THREADS:-3}"
         exec "$run_python" -m dielinediff.e01b_backfill all "$@" ;;
     -h|--help)
-        printf 'Usage: %s [pilot|tune|full|paths|review|backfill] [E01b options]\n' "$0"
+        printf 'Usage: %s [pilot|tune|full|paths|review|baseline|backfill] [E01b options]\n' "$0"
         "$run_python" -m dielinediff.e01b --help
         exit 0 ;;
     ""|-*) ;;
@@ -35,6 +35,13 @@ runtime_dir="$(mktemp -d "$AD_ROOT/tmp/e01b-queue-XXXXXX")"
 generation_done="$runtime_dir/generation-finished"
 trap 'touch "$generation_done"' EXIT
 
+baseline_worker=
+if [[ "$phase" == pilot ]]; then
+    OMP_NUM_THREADS=2 MKL_NUM_THREADS=2 OPENBLAS_NUM_THREADS=2 CUDA_VISIBLE_DEVICES= \
+        "$run_python" -m dielinediff.e01b baseline "$@" --phase full &
+    baseline_worker="$!"
+fi
+
 OMP_NUM_THREADS=3 MKL_NUM_THREADS=3 OPENBLAS_NUM_THREADS=3 \
     "$run_python" -m dielinediff.e01b measure "$@" --phase "$phase" --device cpu \
         --follow-until "$generation_done" &
@@ -46,6 +53,9 @@ if ! flock "$AD_ROOT/tmp/e01-gpu.lock" "$run_python" -m dielinediff.e01b generat
 fi
 touch "$generation_done"
 if ! wait "$scorer"; then
+    status=1
+fi
+if [[ -n "$baseline_worker" ]] && ! wait "$baseline_worker"; then
     status=1
 fi
 if ! "$run_python" -m dielinediff.e01b summarize --phase "$phase" "$@"; then

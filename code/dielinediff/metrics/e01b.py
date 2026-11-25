@@ -5,6 +5,8 @@ from functools import cached_property
 import numpy as np
 from PIL import ImageColor
 
+from dielinediff.color import project_rgb
+
 from . import Evaluator, face_prompts, rgb_atlas
 from .image_reward import ImageRewardScorer
 from .physical import PhysicalEvaluator
@@ -12,6 +14,20 @@ from .physical import PhysicalEvaluator
 WHITE = (255, 255, 255)
 RESET_LABELS = (0, 7, 8, 9)
 FACE_SCORES = ("seam_lpips", "upright_rate", "clip_score", "hps_v2")
+
+
+def b2_post_atlas(texture, lut_path):
+    """Apply the generator's LUT once to an archived B2 atlas."""
+    import torch
+
+    atlas = rgb_atlas(texture)
+    if atlas.ndim != 3 or atlas.shape[-1] != 3 or atlas.dtype != np.uint8:
+        raise ValueError(f"Expected a native uint8 RGB atlas, got {atlas.shape} ({atlas.dtype}).")
+    lut = np.load(lut_path, allow_pickle=False)
+    with torch.inference_mode():
+        values = torch.from_numpy(atlas.astype(np.float32)).div_(255)
+        mapped = project_rgb(values, lut)
+        return mapped.clamp_(0, 1).mul_(255).round_().to(torch.uint8).numpy()
 
 
 def preflight_atlas(texture, labels, main_color):

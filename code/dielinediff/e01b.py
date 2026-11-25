@@ -24,6 +24,8 @@ METHODS = tuple(LEGACY_METHODS) + NEW_METHODS
 LEARNED = ("lpips", "clip", "hps", "image_reward")
 SEEDS = (42, 1234, 2026)
 TUNABLE = {"window_stride", "top_band", "guidance", "projection_strength"}
+BOTTOM_TUNABLE = (TUNABLE - {"top_band"}) | {"transition_mm"}
+B2_POST = "b2_post"
 GEOMETRY_FILES = ("topology.json", "region_map.png", "bleed_owner.png", "box.obj")
 PHASES = {
     "pilot": (5, (*LEGACY_METHODS, "v2")),
@@ -32,6 +34,7 @@ PHASES = {
 }
 CLIP_TOLERANCE = 0.05
 PHYSICAL_PROTOCOL = "e01b-v2-crease"
+BOTTOM_PROTOCOL = "e01b-v2-bottom-frame"
 STRIPE_TOLERANCE_FACTOR = 1.20
 
 
@@ -65,6 +68,10 @@ def validate_config(config):
         raise ValueError("Use an 8-pixel multiple up to 512 for the E01b wraparound stride")
     if type(config["top_band"]) is not int or config["top_band"] < 16:
         raise ValueError("The E01b top/bottom neighbor band must be at least 16 latent cells")
+    if config.get("protocol") == BOTTOM_PROTOCOL:
+        transition = config.get("transition_mm")
+        if type(transition) not in (int, float) or not math.isfinite(transition) or transition <= 0:
+            raise ValueError("The bottom-frame protocol requires a positive transition_mm")
 
 
 @dataclass(frozen=True)
@@ -75,6 +82,7 @@ class Job:
     image: Path
     measurement: Path
     physical: bool = False
+    source: Path | None = None
 
     @property
     def identifier(self):
@@ -87,6 +95,14 @@ class Job:
     @property
     def is_legacy(self):
         return self.method in LEGACY_METHODS
+
+    @property
+    def uses_legacy_geometry(self):
+        return self.is_legacy or self.method == B2_POST
+
+    @property
+    def needs_generation(self):
+        return self.method in NEW_METHODS
 
 
 class Experiment:
@@ -108,8 +124,14 @@ class Experiment:
         validate_config(self.pilot_config)
         if self.config.get("protocol") != self.pilot_config.get("protocol"):
             raise ValueError("Current and pilot configurations must use the same experiment protocol")
-        self.physical = self.config.get("protocol") == PHYSICAL_PROTOCOL
-        self.base = e01b_root / "crease-fix" if self.physical else e01b_root
+        protocol = self.config.get("protocol")
+        self.bottom_frame = protocol == BOTTOM_PROTOCOL
+        self.physical = protocol in (PHYSICAL_PROTOCOL, BOTTOM_PROTOCOL)
+        self.base = e01b_root / {
+            PHYSICAL_PROTOCOL: "crease-fix",
+            BOTTOM_PROTOCOL: "bottom-frame",
+        }.get(protocol, "")
+        self.tunable = BOTTOM_TUNABLE if self.bottom_frame else TUNABLE
         self.briefs = [json.loads(line) for line in self.briefs_path.read_text(encoding="utf-8").splitlines()
                        if line.strip()]
         validate_briefs(self.briefs)
@@ -158,22 +180,37 @@ class Experiment:
         if not metadata.exists():
             write_json(metadata, inputs)
 
+    @property
+    def b2_post_outputs(self):
+        return self.base / "baselines" / self.shared.name / B2_POST
+
+    def phase_methods(self, phase):
+        _, methods = PHASES[phase]
+        if self.bottom_frame and "b2" in methods:
+            return ("b2", B2_POST, *methods[1:])
+        return methods
+
     def jobs(self, phase, *, run=None, methods=None):
         run = self.run if run is None else run
-        count, default_methods = PHASES[phase]
-        methods = default_methods if methods is None else methods
+        count, _ = PHASES[phase]
+        methods = self.phase_methods(phase) if methods is None else methods
         seeds = SEEDS if phase == "full" else SEEDS[:1]
         for method in methods:
             for brief in self.briefs[:count]:
                 for seed in seeds:
                     name = f"{brief['id']}-{seed}"
+                    source = None
                     if method in LEGACY_METHODS:
                         image = self.legacy_outputs / LEGACY_METHODS[method] / f"{name}.png"
+                        score = self.shared / method / f"{name}.metrics.json"
+                    elif method == B2_POST:
+                        source = self.legacy_outputs / LEGACY_METHODS["b2"] / f"{name}.png"
+                        image = self.b2_post_outputs / f"{name}.png"
                         score = self.shared / method / f"{name}.metrics.json"
                     else:
                         image = run / method / f"{name}.png"
                         score = image.with_suffix(".metrics.json")
-                    yield Job(method, brief, seed, image, score, self.physical)
+                    yield Job(method, brief, seed, image, score, self.physical, source)
 
     def check_legacy(self, jobs):
         missing = [str(job.image) for job in jobs if job.is_legacy
@@ -198,21 +235,26 @@ def coverage_summary(record, steps):
 def complete_image(job, steps):
     if not job.image.is_file() or not job.metadata.is_file():
         return False
-    if not job.is_legacy:
+    if job.needs_generation:
         coverage_summary(read_json(job.metadata)["coverage"], steps)
+    if job.method == B2_POST and not job.image.with_suffix(".preflight.png").is_file():
+        return False
     return True
 
 
 def generate(experiment, phase, device):
     """Generate only the requested phase's v2 images; preserve completed outputs."""
-    import torch
-    from .methods.ours_tf_v2 import DieLineDiffV2
-
     config = experiment.config
-    jobs = [job for job in experiment.jobs(phase) if not job.is_legacy]
+    jobs = [job for job in experiment.jobs(phase) if job.needs_generation]
     pending = [job for job in jobs if not complete_image(job, config["steps"])]
     if not pending and (experiment.run / "coverage.png").is_file():
         return
+    if not experiment.bottom_frame:
+        raise ValueError("Generating missing archived E01b outputs requires the original protocol's Git revision.")
+
+    import torch
+    from .methods.ours_tf_v2 import DieLineDiffV2
+
     hardware = torch.device(device)
     if hardware.type != "cuda" or not torch.cuda.is_available():
         raise RuntimeError("E01b generation needs the NVIDIA GPU")
@@ -248,6 +290,72 @@ def generate(experiment, phase, device):
         print(f"{job.method} {job.identifier} {elapsed:.2f} s {peak:.0f} MiB", flush=True)
 
 
+def prepare_b2_post(experiment, phase):
+    """Materialize the baseline from archived B2 images without measuring it."""
+    if not experiment.bottom_frame or B2_POST not in experiment.phase_methods(phase):
+        return
+    import numpy as np
+    from filelock import FileLock
+    from PIL import Image
+
+    from . import color
+    from .metrics import e01b as metrics
+
+    jobs = list(experiment.jobs(phase, methods=(B2_POST,)))
+    pilot_ids = {brief["id"] for brief in experiment.briefs[:5]}
+    jobs.sort(key=lambda job: not (job.brief["id"] in pilot_ids and job.seed == SEEDS[0]))
+    label_file = experiment.legacy_geometry / "region_map.png"
+    with Image.open(label_file) as image:
+        labels = np.asarray(image).copy()
+    baseline_input = {
+        "lut_sha256": file_hash(experiment.lut),
+        "region_map_sha256": file_hash(label_file),
+        "transform_sha256": file_hash(Path(metrics.__file__)),
+        "color_implementation_sha256": file_hash(Path(color.__file__)),
+    }
+    locks = experiment.b2_post_outputs / ".locks"
+    locks.mkdir(parents=True, exist_ok=True)
+    produced = 0
+    for index, job in enumerate(jobs, 1):
+        source_run = job.source.with_suffix(".run.json")
+        preflight = job.image.with_suffix(".preflight.png")
+        with FileLock(locks / f"{job.identifier}.lock"):
+            source = {
+                **baseline_input,
+                "b2_atlas_sha256": file_hash(job.source),
+                "b2_run_sha256": file_hash(source_run),
+                "main_color": job.brief["main_color"],
+            }
+            saved = read_json(job.metadata) if job.metadata.is_file() else {}
+            if (saved.get("post_input") != source or not job.image.is_file() or not preflight.is_file()
+                    or saved.get("raw_sha256") != file_hash(job.image)
+                    or saved.get("preflight_sha256") != file_hash(preflight)):
+                performance = read_json(source_run)
+                started = time.perf_counter()
+                raw = metrics.b2_post_atlas(job.source, experiment.lut)
+                projected = time.perf_counter()
+                prepared = metrics.preflight_atlas(raw, labels, job.brief["main_color"])
+                finished = time.perf_counter()
+                for output, pixels in ((job.image, raw), (preflight, prepared)):
+                    temporary = output.with_suffix(f".{os.getpid()}.tmp.png")
+                    Image.fromarray(pixels).save(temporary)
+                    temporary.replace(output)
+                overhead = finished - started
+                write_json(job.metadata, {
+                    "elapsed_seconds": float(performance["elapsed_seconds"]) + overhead,
+                    "peak_memory_mib": performance["peak_memory_mib"],
+                    "b2_elapsed_seconds": performance["elapsed_seconds"],
+                    "post_lut_seconds": projected - started,
+                    "post_preflight_seconds": finished - projected,
+                    "post_input": source,
+                    "raw_sha256": file_hash(job.image),
+                    "preflight_sha256": file_hash(preflight),
+                })
+                produced += 1
+        if index == len(pilot_ids) or index == len(jobs) or index % 25 == 0:
+            print(f"B2-post {index}/{len(jobs)} ready, {produced} newly transformed", flush=True)
+
+
 @lru_cache(maxsize=1)
 def physical_implementation_hash():
     from .metrics import physical
@@ -260,11 +368,17 @@ def measurement_input(job):
               "learned": list(LEARNED)}
     if job.physical:
         record["physical_implementation_sha256"] = physical_implementation_hash()
+    if job.source is not None:
+        record["b2_atlas_sha256"] = file_hash(job.source)
+        record["b2_run_sha256"] = file_hash(job.source.with_suffix(".run.json"))
+        record["preflight_atlas_sha256"] = file_hash(job.image.with_suffix(".preflight.png"))
     return record
 
 
 def score_for(job, verify=True):
     if not job.measurement.is_file() or not job.image.is_file() or not job.metadata.is_file():
+        return None
+    if job.method == B2_POST and not job.image.with_suffix(".preflight.png").is_file():
         return None
     saved = read_json(job.measurement)
     if verify and saved["input"] != measurement_input(job):
@@ -306,16 +420,32 @@ def save_results(experiment, phase, jobs, scores):
     return rows
 
 
+def reuse_crease_score(experiment, job):
+    if not experiment.bottom_frame or not job.is_legacy:
+        return None
+    archive = (experiment.base.parent / "crease-fix" / "legacy-metrics" /
+               experiment.shared.name / job.method / job.measurement.name)
+    if not archive.is_file():
+        return None
+    saved = read_json(archive)
+    if saved["input"] != measurement_input(job) or set(saved["variants"]) != {"raw", "preflight"}:
+        return None
+    job.measurement.parent.mkdir(parents=True, exist_ok=True)
+    write_json(job.measurement, {**saved, "reused_from": str(archive)})
+    return saved["variants"]
+
+
 def measure(experiment, phase, device, follow_until):
     from .methods.sdxl import prompt_for
     from .metrics.e01b import E01bEvaluator
 
     jobs = list(experiment.jobs(phase))
     experiment.check_legacy(jobs)
+    prepare_b2_post(experiment, phase)
     scores = {}
     pending = []
     for job in jobs:
-        cached = score_for(job)
+        cached = score_for(job) or reuse_crease_score(experiment, job)
         if cached is None:
             pending.append(job)
         else:
@@ -334,7 +464,7 @@ def measure(experiment, phase, device, follow_until):
                 performance = read_json(job.metadata)
                 current_input = measurement_input(job)
                 metrics = evaluator.measure(job.image, job.brief,
-                                            geometry="legacy" if job.is_legacy else "new",
+                                            geometry="legacy" if job.uses_legacy_geometry else "new",
                                             prompt=prompt_for(job.brief),
                                             elapsed_seconds=performance["elapsed_seconds"],
                                             peak_memory_mib=performance["peak_memory_mib"])
@@ -351,66 +481,90 @@ def measure(experiment, phase, device, follow_until):
                 time.sleep(5)
 
 
+def pilot_means(samples):
+    return {method: sum(values.values()) / len(values) if len(values) == 5 else None
+            for method, values in samples.items()}
+
+
+def pilot_clip_check(samples):
+    means = pilot_means(samples)
+    difference = means["v2"] - means["b2"] if all(value is not None for value in means.values()) else None
+    return {"samples": samples, "means": means, "difference": difference, "tolerance": CLIP_TOLERANCE,
+            "passed": difference is not None and abs(difference) <= CLIP_TOLERANCE}
+
+
+def pilot_stripe_check(samples, baselines):
+    means = pilot_means(samples)
+    best_method = threshold = difference = None
+    if all(means[method] is not None for method in baselines):
+        best_method = min(baselines, key=means.__getitem__)
+        threshold = STRIPE_TOLERANCE_FACTOR * means[best_method]
+        if means["v2"] is not None:
+            difference = means["v2"] - threshold
+    return {"samples": samples, "means": means, "baseline_method": best_method,
+            "baseline_mean": means[best_method] if best_method is not None else None,
+            "tolerance_factor": STRIPE_TOLERANCE_FACTOR, "threshold": threshold,
+            "difference_from_threshold": difference, "passed": difference is not None and difference <= 0}
+
+
 def pilot_gate(experiment):
-    methods = ("b2", "b3", "b4", "v2") if experiment.physical else ("b2", "v2")
-    pilot_jobs = list(experiment.jobs("pilot", run=experiment.pilot_run, methods=methods))
-    clip_samples = {"b2": {}, "v2": {}}
-    stripe_samples = {method: {} for method in methods} if experiment.physical else {}
+    clip_methods = ("b2", "v2")
+    baselines = ("b2", "b3", "b4", B2_POST) if experiment.bottom_frame else ("b2", "b3", "b4")
+    methods = (*baselines, "v2") if experiment.physical else clip_methods
+    variants = ("raw", "preflight") if experiment.bottom_frame else ("raw",)
+    stripe_metrics = ("back_bottom_stripe_index", "stripe_index") if experiment.bottom_frame else ("stripe_index",)
+    clip_samples = {variant: {method: {} for method in clip_methods} for variant in variants}
+    stripe_samples = {
+        variant: {metric: {method: {} for method in methods} for metric in stripe_metrics}
+        for variant in variants
+    } if experiment.physical else {}
     coverage = {}
     evidence = {}
     missing = []
-    for job in pilot_jobs:
+
+    def record(samples, score, variant, metric, job):
+        value = score[variant].get(metric)
+        if value is None or not math.isfinite(value):
+            missing.append(f"{job.method}/{job.identifier} {variant} {metric}")
+        else:
+            samples[job.method][job.brief["id"]] = value
+
+    for job in experiment.jobs("pilot", run=experiment.pilot_run, methods=methods):
         if not complete_image(job, experiment.pilot_config["steps"]):
             missing.append(f"{job.method}/{job.identifier}")
             continue
-        brief_id = job.brief["id"]
-        if not job.is_legacy:
-            coverage[brief_id] = read_json(job.metadata)["coverage"]
+        if job.needs_generation:
+            coverage[job.brief["id"]] = read_json(job.metadata)["coverage"]
         score = score_for(job)
         if score is None:
             missing.append(f"{job.method}/{job.identifier} metrics")
             continue
-        raw = score["raw"]
-        if job.method in clip_samples:
-            clip = raw.get("clip_score")
-            if clip is None or not math.isfinite(clip):
-                missing.append(f"{job.method}/{job.identifier} CLIP")
-            else:
-                clip_samples[job.method][brief_id] = clip
-        if experiment.physical:
-            stripe = raw.get("stripe_index")
-            if stripe is None or not math.isfinite(stripe):
-                missing.append(f"{job.method}/{job.identifier} stripe index")
-            else:
-                stripe_samples[job.method][brief_id] = stripe
-        evidence[f"{job.method}/{job.identifier}"] = [file_hash(job.image),
-                                                      file_hash(job.metadata), file_hash(job.measurement)]
+        for variant in variants:
+            if job.method in clip_methods:
+                record(clip_samples[variant], score, variant, "clip_score", job)
+            if experiment.physical:
+                for metric in stripe_metrics:
+                    record(stripe_samples[variant][metric], score, variant, metric, job)
+        evidence[f"{job.method}/{job.identifier}"] = [file_hash(job.image), file_hash(job.metadata),
+                                                      file_hash(job.measurement)]
 
-    def means_for(samples):
-        return {method: sum(values.values()) / len(values) if len(values) == 5 else None
-                for method, values in samples.items()}
+    clip_checks = {variant: pilot_clip_check(samples) for variant, samples in clip_samples.items()}
+    clip_ok = all(check["passed"] for check in clip_checks.values())
+    clip_report = {f"clip_{key}": value for key, value in clip_checks["raw"].items()}
+    clip_report["clip_passed"] = clip_ok
 
-    means = means_for(clip_samples)
-    difference = means["v2"] - means["b2"] if all(value is not None for value in means.values()) else None
+    stripe_checks = {variant: {metric: pilot_stripe_check(samples, baselines) for metric, samples in metrics.items()}
+                     for variant, metrics in stripe_samples.items()}
+    stripe_ok = all(check["passed"] for metrics in stripe_checks.values() for check in metrics.values())
+    stripe_report = {}
+    if experiment.bottom_frame:
+        clip_report["clip_checks"] = clip_checks
+        stripe_report = {"stripe_checks": stripe_checks, "stripe_passed": stripe_ok}
+    elif experiment.physical:
+        stripe_report = {f"stripe_{key}": value for key, value in stripe_checks["raw"]["stripe_index"].items()}
+
     heatmap = experiment.pilot_run / "coverage.png"
     coverage_ok = len(coverage) == 5 and heatmap.is_file()
-    clip_ok = difference is not None and abs(difference) <= CLIP_TOLERANCE
-    stripe_report = {}
-    if experiment.physical:
-        stripe_means = means_for(stripe_samples)
-        best_method = threshold = delta = None
-        if all(stripe_means[method] is not None for method in ("b2", "b3", "b4")):
-            best_method = min(("b2", "b3", "b4"), key=stripe_means.__getitem__)
-            threshold = STRIPE_TOLERANCE_FACTOR * stripe_means[best_method]
-            if stripe_means["v2"] is not None:
-                delta = stripe_means["v2"] - threshold
-        stripe_report = {
-            "stripe_samples": stripe_samples, "stripe_means": stripe_means,
-            "stripe_baseline_method": best_method,
-            "stripe_baseline_mean": stripe_means[best_method] if best_method is not None else None,
-            "stripe_tolerance_factor": STRIPE_TOLERANCE_FACTOR, "stripe_threshold": threshold,
-            "stripe_difference_from_threshold": delta, "stripe_passed": delta is not None and delta <= 0,
-        }
     material = {"pilot_key": experiment.pilot_run.name, "samples": evidence,
                 "coverage_heatmap": file_hash(heatmap) if heatmap.is_file() else None}
     fingerprint = stable_hash(material) if not missing and coverage_ok else None
@@ -419,11 +573,10 @@ def pilot_gate(experiment):
     visual_ok = review_matches(review, fingerprint, set(coverage)) if fingerprint else False
     return {
         "ready_for_visual_review": fingerprint is not None,
-        "passed": not missing and coverage_ok and clip_ok and stripe_report.get("stripe_passed", True) and visual_ok,
+        "passed": not missing and coverage_ok and clip_ok and stripe_ok and visual_ok,
         "fingerprint": fingerprint, "coverage_passed": coverage_ok, "coverage": coverage,
-        "clip_samples": clip_samples, "clip_means": means, "clip_difference": difference,
-        "clip_tolerance": CLIP_TOLERANCE, "clip_passed": clip_ok, "missing": missing,
-        "visual_review_passed": visual_ok, "visual_review": review, **stripe_report,
+        "missing": missing, "visual_review_passed": visual_ok, "visual_review": review,
+        **clip_report, **stripe_report,
     }
 
 
@@ -467,8 +620,8 @@ def check_stage(experiment, phase):
             raise ValueError("Pilot uses the predeclared pilot configuration")
         return
     modified = {key for key in current.keys() | reference.keys() if current.get(key) != reference.get(key)}
-    if modified - TUNABLE:
-        raise ValueError(f"Only the four declared parameters may change: {sorted(modified - TUNABLE)}")
+    if modified - experiment.tunable:
+        raise ValueError(f"Only {sorted(experiment.tunable)} may change: {sorted(modified - experiment.tunable)}")
     gate = pilot_gate(experiment)
     if not gate["passed"]:
         raise ValueError("Pilot gate failed or awaits visual review; tuning and full generation are disabled")
@@ -500,7 +653,7 @@ def summarize(experiment, phase):
         if score is not None:
             scores[job.measurement] = score
     rows = save_results(experiment, phase, jobs, scores)
-    result = build_summary(rows, experiment.briefs, PHASES[phase][1],
+    result = build_summary(rows, experiment.briefs, experiment.phase_methods(phase),
                            SEEDS if phase == "full" else SEEDS[:1], phase,
                            physical=experiment.physical)
     destination = experiment.run / phase
@@ -529,7 +682,7 @@ def summarize(experiment, phase):
         raise ValueError(f"Incomplete {phase} evaluation. See {destination / 'results.csv'}")
     if phase == "tune":
         record = {"briefs": [row["id"] for row in experiment.briefs[:10]], "seed": SEEDS[0],
-                  "parameters": {key: experiment.config[key] for key in sorted(TUNABLE)},
+                  "parameters": {key: experiment.config[key] for key in sorted(experiment.tunable)},
                   "configuration_key": experiment.run.name,
                   "pilot_fingerprint": pilot_gate(experiment)["fingerprint"],
                   "results_sha256": file_hash(destination / "results.csv"),
@@ -542,7 +695,7 @@ def summarize(experiment, phase):
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("action", choices=("paths", "prepare", "check", "generate",
-                                            "measure", "summarize", "review"))
+                                            "measure", "summarize", "review", "baseline"))
     parser.add_argument("--phase", choices=tuple(PHASES), default="pilot")
     parser.add_argument("--root", type=Path, default=Path(os.environ.get(
         "DIELINEDIFF_ROOT", "/root/autodl-tmp/ai-design")))
@@ -558,7 +711,10 @@ def main():
     parser.add_argument("--review-file", type=Path)
     args = parser.parse_args()
     if args.config is None:
-        args.config = Path("code/configs/E01b.frozen.yaml") if args.phase == "full" else args.pilot_config
+        if args.phase == "full" and args.action != "baseline":
+            args.config = Path("code/configs/E01b.frozen.yaml")
+        else:
+            args.config = args.pilot_config
 
     experiment = Experiment(args)
     experiment.prepare()
@@ -568,7 +724,8 @@ def main():
                           "legacy_geometry": str(experiment.legacy_geometry),
                           "legacy_outputs": str(experiment.legacy_outputs),
                           "legacy_measurements": str(experiment.shared),
-                          "phase_results": str(experiment.run / args.phase / "results.csv")}))
+                          "phase_results": str(experiment.run / args.phase / "results.csv"),
+                          **({"b2_post_outputs": str(experiment.b2_post_outputs)} if experiment.bottom_frame else {})}))
         return
     if args.action == "prepare":
         experiment.check_legacy(list(experiment.jobs(args.phase)))
@@ -582,6 +739,9 @@ def main():
         if not gate["passed"]:
             raise ValueError("Visual findings recorded. The complete pilot gate did not pass.")
         print(f"Recorded visual approval for {gate['fingerprint']}", flush=True)
+        return
+    if args.action == "baseline":
+        prepare_b2_post(experiment, args.phase)
         return
     check_stage(experiment, args.phase)
     if args.action == "check":

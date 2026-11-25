@@ -52,3 +52,11 @@ def test_stripe_energy_is_sensitive_to_a_tangential_defect(tmp_path):
     whole, back_bottom = stripe_energy(faces, evaluator.creases)
     assert whole == back_bottom
     assert back_bottom > 20
+
+    # A stripe on the F/L crease must not affect the targeted B/Btm measurement.
+    faces["Btm"][:12] = faces["Btm"][12]
+    faces["F"][::2, :12] = (10, 220, 245)
+    faces["F"][1::2, :12] = (232, 50, 65)
+    whole, back_bottom = stripe_energy(faces, evaluator.creases)
+    assert whole > 20
+    assert back_bottom == 1
