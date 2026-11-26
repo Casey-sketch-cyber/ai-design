@@ -133,3 +133,21 @@ def test_two_by_two_average_suppresses_one_pixel_checkerboard():
     broad = np.repeat(((x // 4) % 2 * 255).astype(np.uint8)[..., None], 3, axis=2)
     assert _energy_at_half_size(checker) == 0
     assert _energy_at_half_size(broad) > 0
+
+
+def test_reviewed_cap_content_is_a_hard_constraint_before_e0_ranking(tmp_path):
+    groups, texture = _fixtures(tmp_path, {
+        "b2_regional": {},
+        "e0": {},
+        "e1": {"updates": IMPROVED},
+    })
+    appearance = {
+        "e0": {"passed": True, "flagged": [], "reviewed": 10},
+        "e1": {"passed": False, "flagged": [{"brief_id": "E01-003", "ghosting": True}], "reviewed": 10},
+    }
+    result = select_candidates(groups, ("e0", "e1"), LIMITS, texture=texture,
+                               incumbent_method="e0", content_guards=appearance)
+    assert result["selected"] == "e0"
+    assert result["methods"]["e1"]["win_count"] == 6
+    assert not result["methods"]["e1"]["eligible"]
+    assert result["methods"]["e1"]["hard_constraints"]["cap_content"] == appearance["e1"]
