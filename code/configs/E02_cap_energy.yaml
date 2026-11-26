@@ -1,0 +1,25 @@
+protocol: e02-v3-cap-energy
+seeds: [42, 1234]
+task17_reference: c5b232622150
+ring: r0
+candidates:
+  e0: {strength: 0.85, match_energy: false, differential: false}
+  e1: {strength: 0.85, match_energy: true, differential: false}
+  e2: {strength: 0.80, match_energy: true, differential: false}
+  e3: {strength: 0.75, match_energy: true, differential: false}
+  e4: {strength: 0.85, match_energy: true, differential: true}
+energy_match:
+  sigma_px_at_scale_1: 14.0
+  source_band_mm: 3.0
+  preserve_edge_mm: 3.0
+  transition_mm: 6.0
+  local_rms_sigma_mm: 3.0
+  distance_offset_mm: 1.0
+  max_gain: 4.0
+  rms_floor: 1.0e-6
+e4:
+  edge_mm: 3.0
+  interior_mm: 15.0
+  edge_strength: 0.85
+  interior_strength: 0.70
+  transition: smoothstep

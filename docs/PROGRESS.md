@@ -4,7 +4,9 @@
 
 ## 当前状态
 
-任务 17 已合并（PR #17）。环带改动的效果随种子大幅变化，按登记规则保留 R0。种子 1234 五关全过；种子 42 只差条带 v1（1.7209 / 1.2528）。峰值 E01-003 背面—底盖的超额全部在盖面侧：底盖自身贴边密、内部疏。下一步只补足盖面内部纹理，不压低贴边细节：任务 18（Codex，能量匹配初图 + SDEdit 强度），任务 19（Gemini，独立方案）并行。
+任务 18 已完成 RTX 3090 实验。五组均未过硬筛选，未锁定复验配置。原 E0 关口参照。种子 42 4/5，条带 v1 1.7209（上限 1.2528），未过条带 v1 与原像素。种子 1234 5/5，条带 v1 1.3026（上限 1.3832）。停在 Step 1，等 Claude 审查。 [盖面能量匹配双种子报告](experiments/E02/CAP-ENERGY.md)
+
+任务 19 的独立研究见待办。
 
 ## 待办
 
@@ -36,7 +38,7 @@
 - [x] Claude：审查并合并 PR #16、#15，形成任务 17（2026-11-26）
 - [x] Codex：完成任务 17。[两种子环带与盖面报告](experiments/E02/RING-M2M3.md)
 - [x] Claude：审查并合并 PR #17（2026-11-26）
-- [ ] Codex：任务 18，见 `tasks/18-codex-cap-energy-match.md`（做完停下等审查）
+- [x] Codex：完成任务 18。[盖面能量匹配双种子报告](experiments/E02/CAP-ENERGY.md)
 - [x] Gemini：任务 19，见 `tasks/19-gemini-cap-interior-ideas.md`（已提交 `docs/CAP_INTERIOR_GEMINI.md` 并补录 4 篇核对文献，分支 `gemini/cap-interior-ideas`）
 - [ ] Claude：审查任务 18、19 的 PR
 - [x] Claude：审查任务 01 的 PR #1（2026-11-24，退回）
@@ -55,6 +57,12 @@
 ---
 
 ## 工作记录
+
+### 2026-11-26 · Codex · 盖面能量匹配与 SDEdit 强度
+
+- **诊断** 003、007 底盖的初图参考带偏疏，SDEdit 后 9–12 mm 能量再降 73.7% 和 71.5%。
+- **筛选** 固定 R0，完成 E0–E4 的 RTX 3090 对照、逐毫米曲线与盖面原像素检查。五组均未过硬筛选，未锁定复验配置。
+- **关口** 原 E0 关口参照。种子 42 4/5，条带 v1 1.7209（上限 1.2528），未过条带 v1 与原像素。种子 1234 5/5，条带 v1 1.3026（上限 1.3832）。停在 Step 1，等 Claude 审查。 [盖面能量匹配双种子报告](experiments/E02/CAP-ENERGY.md)
 
 ### 2026-11-26 · gemini · gemini/cap-interior-ideas（任务 19：底盖内部纹理补足机制与独立方案）
 - **完成**：核查 `RING-M2M3.md`、`UNIFORM-RING.md`、`ring-m2m3-stripe-sources.csv`、种子 42/1234 原像素裁图与源码（`v3_uniform_texture.py`、`v3_ring_midscale_cap.py`、`v3_inpainting.py`、`E02_capfix.yaml`），撰写 [`docs/CAP_INTERIOR_GEMINI.md`](CAP_INTERIOR_GEMINI.md)，并核对补录 4 篇顶会文献（Gatys et al. CVPR 2016、Suvorov et al. LaMa WACV 2022、Chung et al. DPS ICLR 2023、Alaluf et al. Cross-Image Attention SIGGRAPH 2024）至 `literature/papers.csv`（136 → 140 篇）与 `literature/search-log.md`（Q44）。

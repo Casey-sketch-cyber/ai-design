@@ -1,0 +1,387 @@
+{
+  "e0": {
+    "fingerprint": "bfefb6be38402a564dcc65a4a0ca76e08dc7fd1932feb1cd20912ec5ab70f05a",
+    "samples": {
+      "E01-001": {
+        "raw_sha256": "e385fd3c59fb8b7face0b163952b9154faa4b1b15969e42dbc27ef5f85e26c1e",
+        "collage": false,
+        "ghosting": false,
+        "mirror_repeat": false,
+        "notes": "顶盖灰白山形线条接入浅底，底盖树影和绿色坡地延续。未见突兀拼接、双轮廓或对称复刻。"
+      },
+      "E01-002": {
+        "raw_sha256": "854481e7966d4eb6064e969ff1c31855c924f09ddaa748ba05d76efbd9aceee6",
+        "collage": false,
+        "ghosting": false,
+        "mirror_repeat": false,
+        "notes": "顶盖为连续灰描叶片，底盖棕青地貌的层理随轮廓转折，未发现独立贴片、重影或镜像规律。"
+      },
+      "E01-003": {
+        "raw_sha256": "0f09d6bbce374a5e8df6a15c11b601fd90d990f003a287d43cea85f4a7962b66",
+        "collage": false,
+        "ghosting": false,
+        "mirror_repeat": false,
+        "notes": "顶盖为一幅带浅边的水田插画，边缘颜色与周围浅青一致。底盖斜向草叶轮廓较密，未见重复双轮廓或成对镜像。"
+      },
+      "E01-004": {
+        "raw_sha256": "5341608d648e8ae9a77e2f023857b6096d3511a258dbfbfa5c771e726871384c",
+        "collage": true,
+        "ghosting": false,
+        "mirror_repeat": false,
+        "notes": "顶盖灰色花枝分布连续。底盖原像素放大复核见左上黄蓝小块以直边切入灰色花枝，突变在角内止住，标记明显拼贴。未见重影或镜像复制。"
+      },
+      "E01-005": {
+        "raw_sha256": "82301f22dc39a3cc17de8217c285356755230b7dcb184849af95d889f0b377e0",
+        "collage": false,
+        "ghosting": false,
+        "mirror_repeat": false,
+        "notes": "顶盖和底盖均有大小、方向各异的木截面，反复出现的年轮属于题材，局部轮廓没有成对复刻。"
+      },
+      "E01-006": {
+        "raw_sha256": "9131707d9ebff5c62f4e15bc6407796163bf1e3d27930d3a1739b6eb6618616d",
+        "collage": false,
+        "ghosting": false,
+        "mirror_repeat": false,
+        "notes": "顶盖有单个卡片式矩形版面及伪字。底盖绿色植被与橙花连贯，未见额外贴片接缝、叠影或镜像。"
+      },
+      "E01-007": {
+        "raw_sha256": "2de1ba1c8d46ba28a500643f9813a465b1e311f4243b5a8311d378fe46b65c73",
+        "collage": false,
+        "ghosting": false,
+        "mirror_repeat": false,
+        "notes": "顶盖灰调山景有手绘外框，底盖为连续棕调地貌和麦秆，未见两个分离图块的硬拼缝、双轮廓或镜像。"
+      },
+      "E01-008": {
+        "raw_sha256": "95aeee72081ae5ed0e47110766750a4ac851b052a2bc848582225741c1fb7064",
+        "collage": false,
+        "ghosting": false,
+        "mirror_repeat": false,
+        "notes": "两盖枝叶和红果的方向、枝干交接位置有变化，背景为同一浅底，没有可辨的对称复刻或半透明叠影。"
+      },
+      "E01-009": {
+        "raw_sha256": "f570fe878c4f56a6def3cfe2a5b2d05f6bc5efa8dbbd69c968ea4fb6fef74381",
+        "collage": true,
+        "ghosting": false,
+        "mirror_repeat": false,
+        "notes": "顶盖保留有外框的蓝灰层状山谷。底盖扩大查看可见浅绿色半透明矩形，其上横边和右竖边截断同一花田的花叶，矩形内外亮度突变，判为明显拼贴。未见偏移重影或镜像复刻。"
+      },
+      "E01-010": {
+        "raw_sha256": "5986a2ccd1308008377dec1ce8fb085d63f2384850838d8ed964f528f8ac8244",
+        "collage": false,
+        "ghosting": false,
+        "mirror_repeat": false,
+        "notes": "顶底灰叶和锈橙叶各有方向与细节变化，叶缘交叠可追踪，未见重影边或规则镜像铺排。"
+      }
+    }
+  },
+  "e1": {
+    "fingerprint": "645e7ed0da3240077ee54eceb348b4d1f73a1ea9dbfa011098695bc02add01d9",
+    "samples": {
+      "E01-001": {
+        "raw_sha256": "040208fbabe7262bccbac844cfb7d9fe4936c2e3423f251bd568ce998bce0fcb",
+        "collage": false,
+        "ghosting": false,
+        "mirror_repeat": false,
+        "notes": "顶盖为淡色群山与连续风线，山体笔触交叠但形状各异；底盖的林线、草坡与沟线自然相接。"
+      },
+      "E01-002": {
+        "raw_sha256": "46008f33ef13494f14ca09412b539922cdc0b9815e63207e8b96c8094d3941f4",
+        "collage": false,
+        "ghosting": false,
+        "mirror_repeat": false,
+        "notes": "顶盖两侧叶状山体在中部汇聚，左右轮廓和线序不同；底盖黄灰岩层和黄点纹样连续延展。"
+      },
+      "E01-003": {
+        "raw_sha256": "b8d035108dec179c356f13aa0850e7be2f37da95dd95f14bb2e9e0d858ad540a",
+        "collage": false,
+        "ghosting": false,
+        "mirror_repeat": false,
+        "notes": "顶盖中央是单幅青绿湖景，四周刷白边缘有笔触和色晕，按画中画边框记录；底盖直立草茎转为斜向草叶，叶形错开且色线互接。"
+      },
+      "E01-004": {
+        "raw_sha256": "f1227c80d02ef8da7e3121004ba66ed1f582debe7b9b8d36e1a8c3148369ad44",
+        "collage": false,
+        "ghosting": false,
+        "mirror_repeat": false,
+        "notes": "顶盖是淡灰花枝线稿；底盖前后枝条和黄花自然遮挡，浅线来自较远的枝叶。"
+      },
+      "E01-005": {
+        "raw_sha256": "3c4ae6c1cfa0b75e60248607dd305019a88aae196851dd103c2e49020895d321",
+        "collage": false,
+        "ghosting": false,
+        "mirror_repeat": false,
+        "notes": "顶盖的木节、木纹及局部直边随干段形状变化；底盖菌盖状木纹的大小、轮廓及遮挡各异。"
+      },
+      "E01-006": {
+        "raw_sha256": "26f82792a5c634f9c89f24d37a0a1ff81f59fcc4df7e23f8f33cbf54a20de598",
+        "collage": false,
+        "ghosting": false,
+        "mirror_repeat": false,
+        "notes": "顶盖为边框内的山纹与伪文字标签，外框和弧线是绘制元素；底盖黄绿田埂以连续深描线组织。"
+      },
+      "E01-007": {
+        "raw_sha256": "892b1ca53a2b5067d824dc899f5fda40674a718421bfbb366abc695adabcc641",
+        "collage": false,
+        "ghosting": false,
+        "mirror_repeat": false,
+        "notes": "顶盖有单幅灰铅笔风景框，边线有描绘笔触且与框外云形共用画风；底盖黄色密草与灰褐地貌连续，并无相同地貌的反向副本。"
+      },
+      "E01-008": {
+        "raw_sha256": "56b51f933e3abff94fcb26213056e56dae90abffe8b5ff3af349b2db7d594f4d",
+        "collage": false,
+        "ghosting": false,
+        "mirror_repeat": false,
+        "notes": "顶盖果枝和叶片在浅底上连续；底盖是带弧角描边的绘制标签，混有伪文字，旁边植物轮廓自然延续。"
+      },
+      "E01-009": {
+        "raw_sha256": "1c0192d2126792d14e413df6233df60f0116ac86cbefd32a309e8e180c60a4c6",
+        "collage": true,
+        "ghosting": false,
+        "mirror_repeat": false,
+        "notes": "顶盖浅蓝底含单幅风景画框。底盖另有无描边的明显矩形浅色叠层，原尺寸裁图约 y=35 处的平直顶界及 x=410 附近的竖向右界截断同一花田草叶和花簇的明暗，与图案自然边缘错开。未见同一图样的错位副本或镜像。"
+      },
+      "E01-010": {
+        "raw_sha256": "7f98335a22de6716a65852f39a6f8865f39a195e800d8eedda429e99210e1703",
+        "collage": false,
+        "ghosting": false,
+        "mirror_repeat": false,
+        "notes": "两盖均为灰叶、枝线与橙棕果实的散点纹；重复类别的轮廓、叶脉和相对方向不同。"
+      }
+    }
+  },
+  "e2": {
+    "fingerprint": "b9cef305cc1ac9380c7371b8d48714a00261eaecf99dddbf30e3ae230e5f64e6",
+    "samples": {
+      "E01-001": {
+        "collage": false,
+        "ghosting": false,
+        "mirror_repeat": false,
+        "notes": "顶盖淡墨山峰、水平云纹和留白构成一幅连续画面，底盖暗林与山坡顺坡过渡。局部云纹形态相似，未见明显拼贴、错位双轮廓或镜像重复。",
+        "raw_sha256": "1eebf7f93a13def778e82a4ddb1dd8b5e9ada483ac68f272b294e6c8545ef17b",
+        "review_view_sha256": "c10d3cfd3e32b59343815e3798dd24fa3822f62fdd96fc02736cf803434b3c00"
+      },
+      "E01-002": {
+        "collage": false,
+        "ghosting": false,
+        "mirror_repeat": false,
+        "notes": "顶盖雪峰轮廓相互遮挡，淡墨云线随山势变化。底盖金色坡地与灰青条层共同延伸，未见画块硬切、明显重影或镜像枢轴。",
+        "raw_sha256": "e4d4ed9588a66d75ef51603acc51ed026605d1f388c7585da99854cb9afedecb",
+        "review_view_sha256": "d320ca00a26b9a5a083ea517c2a8ec2844777304c47c12a56d731a147ca39a80"
+      },
+      "E01-003": {
+        "collage": false,
+        "ghosting": false,
+        "mirror_repeat": false,
+        "notes": "顶盖有带白色磨边的单幅矩形水景，任务 17 E0 已见同一内框。水面明淡层叠随横向光影与山岸展开。底盖草叶沿斜向连续生长，未见明显拼贴、重影或镜像重复。",
+        "raw_sha256": "65f2a26292d2acd3a660c2873b53954b05aa2dc362633205992d9bf916bab080",
+        "review_view_sha256": "73430f061b0462e9ce3395b4aa96f23abce65a7fb7da247e5418ccfe19bfdb19"
+      },
+      "E01-004": {
+        "collage": true,
+        "ghosting": false,
+        "mirror_repeat": false,
+        "notes": "底盖左上靠边保留一块黄蓝画片，与右侧灰色花枝之间有醒目的直竖拼接边。原像素扩看可见画片色块与灰花构图在此突变，同位置局部拼接在 E0 已可见。顶盖灰花藤轮廓自然交叠。未见可辨的同形错位副影或镜像重复。",
+        "raw_sha256": "531b87402b6f8654f22ed1fcca25e6aa1a728f63ddcd3278d8d442bc95379543",
+        "review_view_sha256": "f22ce8f3c6253bb572f7cb06a10e598af8a8367960d4eabe619ab4df14d39ad0"
+      },
+      "E01-005": {
+        "collage": false,
+        "ghosting": false,
+        "mirror_repeat": false,
+        "notes": "顶盖左缘有窄直分界，右侧直立木截面与横放木堆相邻。原像素放大可追到树皮、木纹和木块遮挡，仍构成同一堆木主体。底盖菌盖与木块叠放。未检出独立无关贴片、同形副影或镜像重复。",
+        "raw_sha256": "0213b881fea8bd20ebb6d1b54563e9fcef928364e9826e07791f3db1ab7b803a",
+        "review_view_sha256": "0b6196c7e827accc680b7eaac18f80b38f9a67c33373c75052f72d37502eb078"
+      },
+      "E01-006": {
+        "collage": false,
+        "ghosting": false,
+        "mirror_repeat": false,
+        "notes": "顶盖有单个图文标签和双线轮廓，带仿字并与果园图形并排，E0 亦有该版式。底盖果园深浅线顺丘陵和果簇展开。未见明显拼贴、重影或镜像重复。",
+        "raw_sha256": "e2ad4f412a839a8fb81798d11fd06b59629913d970f0ca4bc2c9f1757c0d57d9",
+        "review_view_sha256": "25a9687ea057586b2b10d27814c124e4922c582d6ce2157318f8a40d0d614202"
+      },
+      "E01-007": {
+        "collage": false,
+        "ghosting": false,
+        "mirror_repeat": false,
+        "notes": "顶盖单幅矩形山景连贯，框外云朵随包装插画延伸，E0 有同一内框。底盖稻穗与坡地多层叠接，未见独立画块突变、重影或左右镜像重复。",
+        "raw_sha256": "d8ad504a6212bce09cacad5e3665fbb851997461eb2813115ae3a3ade127ac42",
+        "review_view_sha256": "5ae77074b75daaf48ac27a5e4c3ae6333bf91571028f52d5c68e7966154f9762"
+      },
+      "E01-008": {
+        "collage": false,
+        "ghosting": false,
+        "mirror_repeat": false,
+        "notes": "顶盖蓝绿叶枝及红果自然穿插，底盖有一处具数字和仿字的标签，枝条围绕标签延续。未见同一轮廓叠出错位副本或镜像重复，也未见明显拼贴。",
+        "raw_sha256": "03ce2decfe8a5db3fd7a0badc9c840fa8a3e1451be1778a863cbcec8ed3c7b88",
+        "review_view_sha256": "813a734b8cccb963b61b60a487b93da1169eb19babd49a2f5206fb0770c81506"
+      },
+      "E01-009": {
+        "collage": true,
+        "ghosting": false,
+        "mirror_repeat": false,
+        "notes": "底盖中心有明显半透明矩形叠图，顶边和右竖边切断了花簇及叶片色调，在 E0 的同一位置也存在。顶盖另有分层山景和浅框。底盖矩形两层花簇形状不同，未能辨认明确的同形副影或镜像重复。",
+        "raw_sha256": "2ca301dd6fb693568e9ec7219ee353d030b1bf6cc64e4a95c45ef8fa3436e688",
+        "review_view_sha256": "5fc661da34a0cd9260ba90ece8c936167d9f086a0d7e3710ad402a0abd99f055"
+      },
+      "E01-010": {
+        "collage": false,
+        "ghosting": false,
+        "mirror_repeat": false,
+        "notes": "顶底盖灰叶和橙褐栗果以不同角度交叠，叶脉与果实轮廓可逐片追踪。未见形状沿同一轴镜像复制、成对错位或独立矩形贴片。",
+        "raw_sha256": "6b5dd38a25f0b3e894e96cd979c19fbfc30e56a711a061cc3aa18b70d3fd3434",
+        "review_view_sha256": "48c5509b5c8ddd943e0a3ca711b4a25466c2737d5b8dd0961524649b03eca995"
+      }
+    }
+  },
+  "e3": {
+    "fingerprint": "3f958bf0da61d4703caf225a36189d3ede74d767293767bd47fe150c4d359067",
+    "samples": {
+      "E01-001": {
+        "collage": false,
+        "ghosting": false,
+        "mirror_repeat": false,
+        "notes": "顶盖淡色山脊和云线逐层展开，线条方向随山体变化。底盖树林和坡面衔接，阴影边缘随地形弯曲。",
+        "raw_sha256": "415fb84567d6b0aa709afcef81b188f948acd890cf52260e9e673ba7cff2fcc3"
+      },
+      "E01-002": {
+        "collage": false,
+        "ghosting": false,
+        "mirror_repeat": false,
+        "notes": "顶盖的浅描线沿山脊和云形变化。底盖黄褐地表通过连续的灰青曲线分层，局部笔触有深浅。",
+        "raw_sha256": "1b9b06bd409287e0c1815a029b8e3751c493dfc2a776bbea1c236d75a1216b77"
+      },
+      "E01-003": {
+        "collage": true,
+        "ghosting": false,
+        "mirror_repeat": false,
+        "notes": "顶盖青色底中央出现近完整的直角水岸贴块，左右直边截断颜色和云线，内部又分成几条平直景物带。底盖草叶笔触随走势变化。",
+        "raw_sha256": "b85551b652db83830f91e440791eef8ab8b4f58906cf74871e073d5f2d8c25ce"
+      },
+      "E01-004": {
+        "collage": true,
+        "ghosting": false,
+        "mirror_repeat": false,
+        "notes": "底盖左上有蓝灰和橙黄矩形块，块的笔触在固定竖线处截断，与相邻的灰色枝叶无法接续。顶盖花枝的线条可逐段追踪。",
+        "raw_sha256": "841b2c70cd7ca208ae01eff6ca6b1d6459b4a9adaea0022553ea7b676b51f541"
+      },
+      "E01-005": {
+        "collage": true,
+        "ghosting": false,
+        "mirror_repeat": false,
+        "notes": "顶盖右侧竖向木纹块和中央横置木段之间有长直界，截断了多段木纹，左侧也有窄矩形纹块。底盖各木截面的轮廓与年轮细节各异。",
+        "raw_sha256": "8b18084a1c58ac22e149dd1a542f13669f1e03f772e0f349f75a00ff119617f8"
+      },
+      "E01-006": {
+        "collage": false,
+        "ghosting": false,
+        "mirror_repeat": false,
+        "notes": "顶盖有手绘矩形框和伪文字。左侧黄绿笔触穿过框缘，框内外的浅绿色底色延续。底盖植物与橙果沿弧线转接。",
+        "raw_sha256": "34ac2f748643f07c42b8984d5b88c0bd8722405a1ce0f379e6d21b42f7c987ea"
+      },
+      "E01-007": {
+        "collage": true,
+        "ghosting": false,
+        "mirror_repeat": false,
+        "notes": "顶盖有数段上下堆叠的横向山景贴片，平直的左边和水平分界截断山脊与云线。底盖为连续的麦穗、坡线和枝叶。",
+        "raw_sha256": "b8ef517e9b47e9a08f8cb19394bae6f1b18b05a7cf38f47159f4c15b516f49b9"
+      },
+      "E01-008": {
+        "collage": false,
+        "ghosting": false,
+        "mirror_repeat": false,
+        "notes": "两盖的青叶、浅色叶片、枝梗与果实在不同位置和角度交叠，轮廓可沿各自的叶脉与枝梗追踪。",
+        "raw_sha256": "bfca35a166e3edd39c06de2a0acc0397d07324db6aa4f36b1647a340396bc3d7"
+      },
+      "E01-009": {
+        "collage": true,
+        "ghosting": false,
+        "mirror_repeat": false,
+        "notes": "底盖中央较暗的花卉块有直的上缘和左、右边界，粉花轮廓被矩形边截断。顶盖为蓝灰云层和浅色水岸的层叠。",
+        "raw_sha256": "3568d7ee117805f826427f33b42847653a6e19363aa4ce79bab786290270c152"
+      },
+      "E01-010": {
+        "collage": false,
+        "ghosting": false,
+        "mirror_repeat": false,
+        "notes": "两盖灰叶和橙叶随枝梗转向，各叶形的叶脉、尺度和角度有明显变化。",
+        "raw_sha256": "fca0162855e8b4bd548dacc79f79e4ac6cd83cb5a5f3ffb9efe90ed98c6533aa"
+      }
+    }
+  },
+  "e4": {
+    "fingerprint": "394f2a78edc017a41eeed5f0606b079bbc98f8c53b5fb0d721473919bbf51a14",
+    "samples": {
+      "E01-001": {
+        "raw_sha256": "e864351fb1ea1fabca94ccd9ef4e9a4bfbb196dff99f414517999feafe2940ec",
+        "collage": false,
+        "ghosting": false,
+        "mirror_repeat": false,
+        "notes": "顶盖为连续淡色群山与空白天空，浅笔触顺着山形；底盖是连贯林坡与沟线，局部明暗随地形。"
+      },
+      "E01-002": {
+        "raw_sha256": "0cdda9d68d03229164bb9a788070f4cf500024703e52cd58257589d6a7fd25c4",
+        "collage": false,
+        "ghosting": false,
+        "mirror_repeat": false,
+        "notes": "顶盖山峰轮廓向两侧展开，阴影与分支各异；底盖黄灰岩层连贯，叠层来自山势与纹理。"
+      },
+      "E01-003": {
+        "raw_sha256": "564207ba3d59549e17c05f6654c6a86813be8866223bdd8a0305535516bd7e96",
+        "collage": false,
+        "ghosting": false,
+        "mirror_repeat": false,
+        "notes": "顶盖为周围带刷白笔触的单幅湖景，湖面有分层反光，山形与云的位置和轮廓在各层不同；底盖直立草茎与斜叶连接，叶流朝向相近但形状不重复。"
+      },
+      "E01-004": {
+        "raw_sha256": "792c91d408215c59aa82178bc46fbb072d5fa1490bb75c8d3aa7ed118c82e7f5",
+        "collage": false,
+        "ghosting": false,
+        "mirror_repeat": false,
+        "notes": "顶盖淡灰花枝线稿，花瓣和枝条分别可追踪；底盖黄花和不同景深灰枝交错，细线来自花叶自然遮挡。"
+      },
+      "E01-005": {
+        "raw_sha256": "fa90c2b0fb9a78842c0423fdbc6a43b8a33e5975d1cd8c08f482f5cbbf84db5b",
+        "collage": false,
+        "ghosting": false,
+        "mirror_repeat": false,
+        "notes": "顶盖木节与横竖原木形状相接；底盖深浅起伏木纹顺着各个木片，圆心、凹口和轮廓不具镜像对应。"
+      },
+      "E01-006": {
+        "raw_sha256": "b422c431791aac24e9090ebfb98c0abd6463816ef2f7e83d96b6deac3245343e",
+        "collage": false,
+        "ghosting": false,
+        "mirror_repeat": false,
+        "notes": "顶盖为画在薄荷色底上的标签，内有抽象群山与伪文字，黑边沿标签；底盖黄绿田埂与橙色花丛连贯。"
+      },
+      "E01-007": {
+        "raw_sha256": "12f2e081775d37284e3ef9410cfc644ce7b60765b7f2474d069f66eb910386b5",
+        "collage": false,
+        "ghosting": false,
+        "mirror_repeat": false,
+        "notes": "顶盖有一幅手绘灰色景框，外侧云团和框内共用画风；底盖灰褐山丘及金黄禾穗错落，未见硬切或同形反向副本。"
+      },
+      "E01-008": {
+        "raw_sha256": "1b8969bbe5037659eb10c73344b75783f50a58ce214dc86e9e55ce767f9ea67d",
+        "collage": false,
+        "ghosting": false,
+        "mirror_repeat": false,
+        "notes": "两盖的红果与墨蓝、灰色枝叶长在同一浅底；底盖中心仍有枝叶延展，无独立标签或不自然复制。"
+      },
+      "E01-009": {
+        "raw_sha256": "ab2d73a2c36f8917bde5f78af4822bf21df349814f8be86ed3ca08d26fb7291c",
+        "collage": true,
+        "ghosting": false,
+        "mirror_repeat": false,
+        "notes": "顶盖浅蓝湖纹呈多层水平笔触，形态不同；底盖无损裁图有 无描边的矩形浅色叠层，距盖顶约 35 像素处的平直上界和距左约 410 像素的右界截断花簇和草叶明暗，和花纹轮廓错开。未见可辨的错位图样副本或镜像。"
+      },
+      "E01-010": {
+        "raw_sha256": "e215c8c3c6508d935c4cb29d241fcb3d833cfd8b9b55b30e03f1dc68425cb0f8",
+        "collage": false,
+        "ghosting": false,
+        "mirror_repeat": false,
+        "notes": "两盖为连续灰叶和棕果散点纹，各叶脉和果形不同，叶面交叠符合绘画结构。"
+      }
+    }
+  }
+}

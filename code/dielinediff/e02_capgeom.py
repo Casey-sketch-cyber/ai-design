@@ -238,7 +238,7 @@ def _style_record(engine, brief, seed, layer, frozen):
 
 
 def generate(experiment, candidate, parameters, device, *, seed=42, source=None, bound_g3=False,
-             engine_factory=_engine, implementation=None, ring_loader=ring):
+             engine_factory=_engine, implementation=None, ring_loader=ring, capture=None):
     import torch
     from .methods.v3_capgeom_attention import inject_aligned_bank
     from .methods.v3_inpainting import verify_inpaint_model
@@ -316,6 +316,8 @@ def generate(experiment, candidate, parameters, device, *, seed=42, source=None,
         temporary = item.path.with_suffix(f".{os.getpid()}.tmp.png")
         image.save(temporary)
         temporary.replace(item.path)
+        if capture is not None:
+            details = {**details, "initial_images": capture(engine, item)}
         metadata = {
             "method": candidate, "brief_id": item.brief["id"], "seed": seed,
             "raw_sha256": file_hash(item.path), "gpu": torch.cuda.get_device_name(hardware),
@@ -361,10 +363,10 @@ def _check_generation(experiment, jobs, *, seed):
 
 
 def trial(experiment, name, params, device, *, seed=42, source=None, engine_factory=_engine,
-          implementation=None, ring_loader=ring):
+          implementation=None, ring_loader=ring, capture=None):
     jobs, rejected = generate(experiment, name, params, device, seed=seed, source=source,
                                bound_g3=name == "g3", engine_factory=engine_factory,
-                               implementation=implementation, ring_loader=ring_loader)
+                               implementation=implementation, ring_loader=ring_loader, capture=capture)
     if rejected is not None:
         return rejected
     _check_generation(experiment, jobs, seed=seed)
