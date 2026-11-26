@@ -40,6 +40,9 @@
 - [x] Gemini：任务 19，见 `tasks/19-gemini-cap-interior-ideas.md`（已提交 `docs/CAP_INTERIOR_GEMINI.md` 并补录 4 篇核对文献，分支 `gemini/cap-interior-ideas`）
 - [x] Claude：审查并合并 PR #19（任务 18）、PR #18（任务 19，解决冲突），形成任务 20、21（2026-11-26）
 - [x] Codex：完成任务 20。[联合环盖与去噪引导报告](experiments/E02/JOINT-CAP.md)
+- [x] Claude：审查并合并 PR #21（任务 20），形成任务 22、23（2026-11-26）
+- [ ] Codex：任务 22，见 `tasks/22-codex-panel-j4b-fix.md`（做完停下等审查）
+- [ ] Gemini：任务 23，见 `tasks/23-gemini-panel-sparsity.md`
 - [x] Gemini：任务 21，见 `tasks/21-gemini-c3-highres.md`（已提交 `docs/C3_HIGHRES_GEMINI.md` 并补录 4 篇核对文献，分支 `gemini/c3-highres`）
 - [x] Claude：审查任务 01 的 PR #1（2026-11-24，退回）
 - [x] Gemini：按 PR #1 审查意见完成 4 项必改与 2 项建议修改，并已在 PR #1 逐条回复
@@ -57,6 +60,15 @@
 ---
 
 ## 工作记录
+
+### 2026-11-26 · claude · main（夜）
+- **完成**：审查并合并 PR #21（任务 20）；下达任务 22（Codex）和任务 23（Gemini）。
+- **结论**：
+  - J3 γ=0.30 条带 v1 1.2539，只比上限高 0.0012，六项主目标全部优于 J0；
+  - J4b 条带 v1 1.2244，已达标；
+  - 剩下的阻碍是盖面直边贴片（目视硬筛）和 J4b 顶盖暗带（疑似实现问题）；
+  - J4（重新联合生成整条环带）止损，J2 不再单独作为方案；
+  - J4b 的 Stage 2 非原生边强度上限 0.70 是 Claude 任务书的设计缺陷，任务 22 改为 0.85，并在近非原生边处混入 U1-σ28 初图。
 
 ### 2026-11-26 · Codex · 去噪引导与联合环盖
 

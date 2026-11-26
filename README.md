@@ -15,7 +15,25 @@
 
 网页版 Gemini 不能执行命令时：把 `tasks/01-gemini-literature-tree-opc-packaging.md` 和 findInnovation 的 `SKILL.md`、两个模板的内容一起粘贴给它，产出再由你或其他 AI 提交到本仓库。
 
-## 发给 Codex 的指令（任务 20，直接复制）
+## 发给 Codex 的指令（任务 22，直接复制）
+
+```
+请 pull 仓库 https://github.com/Casey-sketch-cyber/ai-design.git 的最新 main，
+先读 AGENTS.md 和 PR #21 里 Claude 的审查留言，
+然后执行 tasks/22-codex-panel-j4b-fix.md（先用 CPU 诊断盖面直边贴片是几何还是语义原因，再查清并修复 J4b 顶盖暗带；然后测 K1 去版式化提示词、K2 γ=0.40、K3 修复后的 J4b-v2（混合初图 + 非原生边强度 0.85）、K4 K3 加环内上托；环带固定 R0，冻结指标和关口不动，只能补足内部纹理，不得压低贴边细节；两个种子都报告关口，做完就停）。
+必须能在 RTX 3090 24GB 上跑通。在分支 codex/panel-j4b-fix 上完成，推送并创建 PR，不要自己合并。全程用中文沟通。
+```
+
+## 发给 Gemini 的指令（任务 23，直接复制，与任务 22 并行）
+
+```
+请 pull 仓库 https://github.com/Casey-sketch-cyber/ai-design.git 的最新 main，
+阅读 AGENTS.md、tasks/23-gemini-panel-sparsity.md、PR #21 里 Claude 的留言、docs/experiments/E02/JOINT-CAP.md 和 tasks/22-codex-panel-j4b-fix.md，
+分析盖面直边贴片的成因、原生联合生成下盖面仍然稀疏的原因，评估任务 22 的 K1—K4，并提出至少 1 个补救新方法，写入 docs/PANEL_SPARSITY_GEMINI.md。
+在分支 gemini/panel-sparsity 上完成，推送并创建 PR，不要自己合并。全程用中文。
+```
+
+## 发给 Codex 的指令（任务 20，已完成）
 
 ```
 请 pull 仓库 https://github.com/Casey-sketch-cyber/ai-design.git 的最新 main，
