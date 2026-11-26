@@ -1,0 +1,918 @@
+{
+  "task15_run": "35493b7f5869",
+  "task07_source": {
+    "commit": "b18ed8e775bf072fbcd3b32b9f381abdfbdb9728",
+    "ring_block_ast_sha256": "185fa28a74927e816ad38d585e4bbbd4fdb5a8ff3c61377e7e8aaf2dd2d5bbf1",
+    "unchanged_source_files": {
+      "v3_geometry.py": "a5d96d3614c376ffc429bc7844005adebeedeb427199fb678e124dbcd01f7801",
+      "v3_circular.py": "9ef30a3676024943228fc0f107228c5cbf471421094a40d286f161094b473ef6",
+      "v3_attention.py": "9fd3663c96e6b3fbfa66706a3aaa8f98c4a355443141f31e57650613b8f45ffa",
+      "ours_tf.py": "7f8cd89b0af065667fc93625d46bd28d7f605bdc22a975b4bf9c54f3c62a7969",
+      "sdxl.py": "e86d47a54703d5467d842331ce73ec64d0393631463308be48e5b0739c92b7bf",
+      "b2_controlnet.py": "25d7630521deb3b8eeba0fd09a84256279a344276e2db6fad30c28b9ea7c5808"
+    }
+  },
+  "proof_policy": {
+    "archive_positive_prompt": "Reconstructed from frozen Task 07 code and matching brief, prior sidecars did not log prompts.",
+    "new_positive_prompt": "Exact positive prompt list hashes recorded during actual encode_prompt calls."
+  },
+  "source_counts": {
+    "ring_pairs": 20,
+    "baseline_pngs": {
+      "b2_regional": 20,
+      "b2_regional_r1": 20
+    }
+  },
+  "baseline_registration_sha256": "99a79ce6b5b1e16734b51d7b2a4fd6406c5d2013c62b5565d046859123476a6b",
+  "flat_render_settings": {
+    "method": "b2_regional",
+    "steps": 30,
+    "atlas_size_px": [
+      1592,
+      1792
+    ],
+    "regional_weight": 1.0,
+    "projection_strength": 0.2,
+    "projection_tail": 0.3,
+    "projection_interval": 3,
+    "share_attention": false,
+    "flat_size_px": [
+      1600,
+      1792
+    ]
+  },
+  "tokenizer_checks": {
+    "b2_regional": {
+      "tokenizer_1": {
+        "tokens": 21,
+        "capacity": 77,
+        "input_ids_sha256": "18925c528ae59763f0ff9401ab2e4483d118b383cc50b2520341711bf18db7dc"
+      },
+      "tokenizer_2": {
+        "tokens": 21,
+        "capacity": 77,
+        "input_ids_sha256": "18925c528ae59763f0ff9401ab2e4483d118b383cc50b2520341711bf18db7dc"
+      }
+    },
+    "b2_regional_r1": {
+      "tokenizer_1": {
+        "tokens": 45,
+        "capacity": 77,
+        "input_ids_sha256": "b206013ed7c3b9a664d7762f78c984dd33efd68162eb7e5becbe3b1aa2a5cf25"
+      },
+      "tokenizer_2": {
+        "tokens": 45,
+        "capacity": 77,
+        "input_ids_sha256": "b206013ed7c3b9a664d7762f78c984dd33efd68162eb7e5becbe3b1aa2a5cf25"
+      }
+    }
+  },
+  "model_pins": {
+    "sdxl": {
+      "repository": "stabilityai/stable-diffusion-xl-base-1.0",
+      "revision": "462165984030d82259a11f4367a4eed129e94a7b",
+      "weights": {
+        "unet/diffusion_pytorch_model.fp16.safetensors": "83e012a805b84c7ca28e5646747c90a243c65c8ba4f070e2d7ddc9d74661e139",
+        "text_encoder/model.fp16.safetensors": "660c6f5b1abae9dc498ac2d21e1347d2abdb0cf6c0c0c8576cd796491d9a6cdd",
+        "text_encoder_2/model.fp16.safetensors": "ec310df2af79c318e24d20511b601a591ca8cd4f1fce1d8dff822a356bcdb1f4"
+      }
+    },
+    "vae": {
+      "repository": "madebyollin/sdxl-vae-fp16-fix",
+      "revision": "207b116dae70ace3637169f1ddd2434b91b3a8cd",
+      "weights": {
+        "diffusion_pytorch_model.safetensors": "1b909373b28f2137098b0fd9dbc6f97f8410854f31f84ddc9fa04b077b0ace2c"
+      }
+    },
+    "controlnet": {
+      "repository": "diffusers/controlnet-canny-sdxl-1.0",
+      "revision": "eb115a19a10d14909256db740ed109532ab1483c",
+      "weights": {
+        "diffusion_pytorch_model.fp16.safetensors": "b2e7d3921058a442cc80430d1ec8847f42599c705e2451c95e77cf4dcf8d6c25"
+      }
+    }
+  },
+  "ring_support": {
+    "support_map_sha256": "5ac586ffbb41dc85960391179099d6df47bcdd4c5a2c2b657f3a17bea2d669af",
+    "side_pixels": 1507328,
+    "ring_supported_pixels": 1720910,
+    "counts_by_region_and_bleed_owner": {
+      "regions": {
+        "Outside": {
+          "supported": 0,
+          "total": 684310
+        },
+        "F": {
+          "supported": 458752,
+          "total": 458752
+        },
+        "B": {
+          "supported": 458752,
+          "total": 458752
+        },
+        "L": {
+          "supported": 294912,
+          "total": 294912
+        },
+        "R": {
+          "supported": 294912,
+          "total": 294912
+        },
+        "T": {
+          "supported": 0,
+          "total": 129024
+        },
+        "Btm": {
+          "supported": 0,
+          "total": 129024
+        },
+        "Glue": {
+          "supported": 74936,
+          "total": 74936
+        },
+        "Tuck": {
+          "supported": 0,
+          "total": 64594
+        },
+        "Dust": {
+          "supported": 72490,
+          "total": 129024
+        },
+        "Bleed": {
+          "supported": 66156,
+          "total": 134624
+        }
+      },
+      "bleed_owners": {
+        "L": {
+          "supported": 24166,
+          "total": 34599
+        },
+        "F": {
+          "supported": 9270,
+          "total": 9270
+        },
+        "R": {
+          "supported": 1498,
+          "total": 8619
+        },
+        "B": {
+          "supported": 31222,
+          "total": 31222
+        },
+        "T": {
+          "supported": 0,
+          "total": 26394
+        },
+        "Btm": {
+          "supported": 0,
+          "total": 24520
+        }
+      }
+    }
+  },
+  "ring_cases": {
+    "E01-001-42": {
+      "seed": 42,
+      "brief": "E01-001",
+      "positive_sha256": "fc320c618fb7ad7dc7fdb77b26608dddcd508ba3afa70f9371accd783c6b18da",
+      "clip_query_sha256": "a08d8d046b78a161825ee0fccf3a547b7b3372cdd503f10bdb22c88344464445",
+      "common_rng_state_sha256": "a74dafa0d9664c13c356885986b5087a6c8e62d78244b58e334db4c3ca063b0b",
+      "r0": {
+        "cache_sha256": "fe8206a1420d09067988e9872118437f7bd7fdb3057df896bd46bd2ce4d46b7d",
+        "body_rgb_sha256": "cdf2dd297717a6217b9fd244690014d6367bb3e771a6ac6ec77ec1d758f99cc3",
+        "ring_supported_rgb_sha256": "635922b214a6b6f3f3cd66fd65f68f503d43fbac6ed46cfeea7fa388b7be98ef"
+      },
+      "r1": {
+        "cache_sha256": "11916b1c82e20a50b30a9e10df771bd979313014b7606da2262bd1b92ef19930",
+        "body_rgb_sha256": "014081a4155e6722553769977b74033a0bac88048121ec1927318f86588ac85c",
+        "ring_supported_rgb_sha256": "8914416490242e43c639bb89969335a157a1ab37bd9c6fa22acf1b9716ebd3d7"
+      },
+      "r0_task07_raw_support_pixel_exact": true,
+      "pixels_changed_in_ring_support": 1720490
+    },
+    "E01-002-42": {
+      "seed": 42,
+      "brief": "E01-002",
+      "positive_sha256": "42c394f26c71b0719f3396ef10351dae3b0d87024a3b21230e551ee18eebab02",
+      "clip_query_sha256": "ad64e605419b2a8aa0f73bd04d6e264692f151cfeaa4f62e6e079230d7368528",
+      "common_rng_state_sha256": "a74dafa0d9664c13c356885986b5087a6c8e62d78244b58e334db4c3ca063b0b",
+      "r0": {
+        "cache_sha256": "0065db7fe2cc5cac0007246f17e4a0307c29fc54d2ae477adc0eade81d741282",
+        "body_rgb_sha256": "7160ca56f58d523a64601f246e25b13441e13fbb6d14ba6350089c2709799510",
+        "ring_supported_rgb_sha256": "28ab4a25aa915eba2afe8ec4bc16b73babcbae7b3a82e0933ce15b44410f7709"
+      },
+      "r1": {
+        "cache_sha256": "27f409c116b099d8c9a376057c779dc0c3c0e24504181abea812ba8c5077f7e8",
+        "body_rgb_sha256": "4c6637e6b080495ddf9aafd4907878340bd7b032b50d9d5cacf5b7f554486a1a",
+        "ring_supported_rgb_sha256": "1d060d8ca005de9ccd99b9701491037d7f0f02d37c68c9297c607a22f71367b5"
+      },
+      "r0_task07_raw_support_pixel_exact": true,
+      "pixels_changed_in_ring_support": 1720892
+    },
+    "E01-003-42": {
+      "seed": 42,
+      "brief": "E01-003",
+      "positive_sha256": "1bda150485e1f107305cb94246376b16b16d6f830b80e09b7c81347684237471",
+      "clip_query_sha256": "04baddf3d74fc39543d8e3ba35732d4502ce73b396a5519b111698a5a80991cf",
+      "common_rng_state_sha256": "a74dafa0d9664c13c356885986b5087a6c8e62d78244b58e334db4c3ca063b0b",
+      "r0": {
+        "cache_sha256": "6b2b14dc11e52ba3c8d93b4740d6898c214ad1a506a6bbf9f5bc304879fb8548",
+        "body_rgb_sha256": "d4b09fc75b1af1b1f7ec5f8d8c3928376af389f3b11fe628c70c50e0c83631a4",
+        "ring_supported_rgb_sha256": "d568a0d36637913ba2c0f968359bd84129e655c11db0036e1a661f92278347be"
+      },
+      "r1": {
+        "cache_sha256": "2821e0540acd4a0dedd4982dfbc1f0d00d388505fa6264d72583d5c14f4112a6",
+        "body_rgb_sha256": "ec745a5fe36ca53c56e9367baf7d4821973a140f73dc171b0301530ca3db6f6c",
+        "ring_supported_rgb_sha256": "346152e309d004e4311ea00be4eecbed7f4d3a41ef03d48f957379f33dde0f69"
+      },
+      "r0_task07_raw_support_pixel_exact": true,
+      "pixels_changed_in_ring_support": 1720809
+    },
+    "E01-004-42": {
+      "seed": 42,
+      "brief": "E01-004",
+      "positive_sha256": "1cceee93611fc09fa6d4932d17c1319bf8c88c53041681ebcdf07afe23be068b",
+      "clip_query_sha256": "661c1c00055efc6b5008f9c0a4143ae4432b9ba6b8a1ef2836f80db9e70248ad",
+      "common_rng_state_sha256": "a74dafa0d9664c13c356885986b5087a6c8e62d78244b58e334db4c3ca063b0b",
+      "r0": {
+        "cache_sha256": "565c091a522589ede335028f54cd9ecbe6974eca726f88f60dc52d58f04e4b38",
+        "body_rgb_sha256": "55647184904c0c1533b12c5ea6f3fd49cd3720fef68a1499e721dbc668d7d578",
+        "ring_supported_rgb_sha256": "d1b14a6b0ae9aa9bc752e7f261339c0f8f5b4557eec9f09a99a034382f5c6006"
+      },
+      "r1": {
+        "cache_sha256": "a572571ebc6fc6829e0ef4fa7568402c8b2b4081889d4042f5630bb887a26716",
+        "body_rgb_sha256": "d7bde83cd8d857e82a5fcd29f6d8c9c83b3ebce9b7f15396475c3cb6976b6082",
+        "ring_supported_rgb_sha256": "ca6bdd85ff28c7be42e455d70eb37cce55be8fc05bac4bf025258137f5b9477a"
+      },
+      "r0_task07_raw_support_pixel_exact": true,
+      "pixels_changed_in_ring_support": 1720852
+    },
+    "E01-005-42": {
+      "seed": 42,
+      "brief": "E01-005",
+      "positive_sha256": "d3428ffd183ba6d9e5e3b02053f2a058e5c4797859d557bcc1d5ee4153f2c82b",
+      "clip_query_sha256": "5d5990912c970a024916e0643eb8926b61695210023780028ab329ac1f167684",
+      "common_rng_state_sha256": "a74dafa0d9664c13c356885986b5087a6c8e62d78244b58e334db4c3ca063b0b",
+      "r0": {
+        "cache_sha256": "18c5387d2508350e66f36c81c381096887da047aea5804c746d82278d8cf34fa",
+        "body_rgb_sha256": "5b3afff23474bc22972af9b482001368f9d9eff9187851438b539691861d5379",
+        "ring_supported_rgb_sha256": "951e315fdf7b38e233ba42409608022bc31848110aff7adb8fe47ab76240880f"
+      },
+      "r1": {
+        "cache_sha256": "6e0e70d4fe384f16e931cc7a73b2d492ac757626439753c5fd9a0558dd8456a8",
+        "body_rgb_sha256": "58532103a5d4a972eba90b108513c0bba9883a76b11c5fd675fad4aed1d05617",
+        "ring_supported_rgb_sha256": "b2fda7a32c35bcf1d133b06924c16cade12110356961e7809707ce790fbeca63"
+      },
+      "r0_task07_raw_support_pixel_exact": true,
+      "pixels_changed_in_ring_support": 1720898
+    },
+    "E01-006-42": {
+      "seed": 42,
+      "brief": "E01-006",
+      "positive_sha256": "57415a727feab9bf38b034c5990f57c2aa543f1530339182269be1ce16ea97d4",
+      "clip_query_sha256": "f81c4dc89a3613a6ac683bfb0c23482c9c1e7e4e0c06d07e47472656936d4b13",
+      "common_rng_state_sha256": "a74dafa0d9664c13c356885986b5087a6c8e62d78244b58e334db4c3ca063b0b",
+      "r0": {
+        "cache_sha256": "c1d1dbf4113f7e03023bd281fe752c91d199ff48ffb82367ef4321cf82f50fef",
+        "body_rgb_sha256": "377e5a28df21285f4f4dec6da9d754131e880059b62f226440686b3787889c20",
+        "ring_supported_rgb_sha256": "bb2dcf7476b7068701f4a2ff6180e4abed3b88bd22e6071646b3526f6f097618"
+      },
+      "r1": {
+        "cache_sha256": "7345632f2d3a5db766b7ad83501b5771f9789f99a519ad82ebed5bc69bcaf2f9",
+        "body_rgb_sha256": "9b90f3de8a273f1af7c68f1be9dd1488dce284f1e51dc5d10a07a029cd688342",
+        "ring_supported_rgb_sha256": "358ae2a1f7ab428ef15a4c59ad8970e664030c3a464c991ee1e6f60860d5a5c6"
+      },
+      "r0_task07_raw_support_pixel_exact": true,
+      "pixels_changed_in_ring_support": 1720886
+    },
+    "E01-007-42": {
+      "seed": 42,
+      "brief": "E01-007",
+      "positive_sha256": "9052cbe04d71f9485f5349e45c96f6f9e25c1144cef1d2cdff8a60dbb6924463",
+      "clip_query_sha256": "aeb51a535d5905dd79d22b7ea81ba282b8536686346dfb81e556f8f4f8b1d049",
+      "common_rng_state_sha256": "a74dafa0d9664c13c356885986b5087a6c8e62d78244b58e334db4c3ca063b0b",
+      "r0": {
+        "cache_sha256": "92842c215739ecf5499a864182b2b35e37539304f7129dcb5c4d3443d59addd9",
+        "body_rgb_sha256": "3ac9f0e76539ee7765f3dcec1ff8ee829f530ca0658eecd1eec2c2548cc1eaec",
+        "ring_supported_rgb_sha256": "b144cfc34aa5190642ebbb784abf6f5616f49375db33dc750a6554208d9dfac3"
+      },
+      "r1": {
+        "cache_sha256": "4361ac6822ced9bd3712debd065d63cd0643ff0d4351c16d69edf0cf91ee8e14",
+        "body_rgb_sha256": "1ad0be1c29deb733c9885928ccf5c02306ddbfcbb3dbf0a385dac3cabce2344e",
+        "ring_supported_rgb_sha256": "e74ae29cde582fab916d4049b1584ce7a6c8fa923597cc6575257f4e564cccd9"
+      },
+      "r0_task07_raw_support_pixel_exact": true,
+      "pixels_changed_in_ring_support": 1720881
+    },
+    "E01-008-42": {
+      "seed": 42,
+      "brief": "E01-008",
+      "positive_sha256": "c64992c46c97a227e846d37b8d28ac7f6854de3e0f6d09499f6b5714720bfa61",
+      "clip_query_sha256": "0228cbff16456d6ac99021577c300a0b468e99af2deb4fee81ac1a2be994a7e1",
+      "common_rng_state_sha256": "a74dafa0d9664c13c356885986b5087a6c8e62d78244b58e334db4c3ca063b0b",
+      "r0": {
+        "cache_sha256": "15e303cbd3230d03daeda46d68be5c0521b5f19c814a4b26a55a89ef8fb499f4",
+        "body_rgb_sha256": "d232d1fe501bf4c03d846c16f14d8c594c88036c49a31195c570687b0a0811a5",
+        "ring_supported_rgb_sha256": "018f0ace903367cc858ab40dfad71357ffdf56a384f51310baa62ac95b2f6e54"
+      },
+      "r1": {
+        "cache_sha256": "9c9e60e58fda664a534530582961986548feba58f713088ac777d77341269d4b",
+        "body_rgb_sha256": "2cf8b6fe67b6de9e51ecf5dc757bbb9f72410750b15e45f7687e9ec720afb971",
+        "ring_supported_rgb_sha256": "f8a81a91fd58a6e50444e6898c4b29143a7fdcfd9cecb6b0d1a83bc03abf3e57"
+      },
+      "r0_task07_raw_support_pixel_exact": true,
+      "pixels_changed_in_ring_support": 1720893
+    },
+    "E01-009-42": {
+      "seed": 42,
+      "brief": "E01-009",
+      "positive_sha256": "e4afc4c3eb9327622ad22f0c44aef889a32513f84cea6c7c5c6d240ae1fb87e8",
+      "clip_query_sha256": "923d1fe1205407cefc354e3795e99a10f24fa62438fa27c584263b8f8fa6ca4f",
+      "common_rng_state_sha256": "a74dafa0d9664c13c356885986b5087a6c8e62d78244b58e334db4c3ca063b0b",
+      "r0": {
+        "cache_sha256": "6e770d709d6eb2b98c2f94182f44e44652926f0f6f0e117363fc11dd4eb85ce6",
+        "body_rgb_sha256": "ad69dc74183e2ada968b45bceaf7344e2f64d2e9cffa19893088d59cd70b9afe",
+        "ring_supported_rgb_sha256": "b2e3f6653e9f4c47d4badf6ccd38f105c6fd9fa40e03ff6957d289c196492028"
+      },
+      "r1": {
+        "cache_sha256": "1c1ec4f429cf6a1199a2eb538dd0d12874c724391c3909c337ee370f9f341aca",
+        "body_rgb_sha256": "6e7129ea951ce38ba803f25b8c69e63cc47da8446ded542a8659e647d552398a",
+        "ring_supported_rgb_sha256": "dc82b92c2d071ae35287d432f137a29064860d3e003adb1022229184174eaf3b"
+      },
+      "r0_task07_raw_support_pixel_exact": true,
+      "pixels_changed_in_ring_support": 1720708
+    },
+    "E01-010-42": {
+      "seed": 42,
+      "brief": "E01-010",
+      "positive_sha256": "61b14c675751b3e47246ce8db351cbf15f66d642aa8bdc16229c610f240c1d11",
+      "clip_query_sha256": "5cdb2ce2c8b3320f88c7345766642f18ca901fe0cf1f6e5dede71043f9a19266",
+      "common_rng_state_sha256": "a74dafa0d9664c13c356885986b5087a6c8e62d78244b58e334db4c3ca063b0b",
+      "r0": {
+        "cache_sha256": "b000782cb6c84be7958a8b6333e90fc4fe182f108850d16b368463b5b228a51d",
+        "body_rgb_sha256": "d6de0e0525ae3ec7faed53a7a79614ea34b5aa9ddbf83638a8cd51e0373e9c27",
+        "ring_supported_rgb_sha256": "9338149845b97247674651e2832beeed8992088b13d9e7d4fd105189714c0fee"
+      },
+      "r1": {
+        "cache_sha256": "df982c7dba62d2dfa8fbc9cba257f32a3e832d59b676af7fbc24c2547817d15d",
+        "body_rgb_sha256": "49a35ae28a7efdb3738bc222248c9a374a8f0f29d7f4553477103c9e8c0c9325",
+        "ring_supported_rgb_sha256": "a5dabf5764ee530d240d2786fdf0fcdc665ae5b80e4bb924ee9e2b7142927175"
+      },
+      "r0_task07_raw_support_pixel_exact": true,
+      "pixels_changed_in_ring_support": 1720906
+    },
+    "E01-001-1234": {
+      "seed": 1234,
+      "brief": "E01-001",
+      "positive_sha256": "fc320c618fb7ad7dc7fdb77b26608dddcd508ba3afa70f9371accd783c6b18da",
+      "clip_query_sha256": "a08d8d046b78a161825ee0fccf3a547b7b3372cdd503f10bdb22c88344464445",
+      "common_rng_state_sha256": "b6e1dab5771a21bf07168d45290accbad8867cf3c187edabec3b9fce8235c547",
+      "r0": {
+        "cache_sha256": "bd42591e451df4c1975cfdf598508a886995fc0f253c5aa46fd77863c0e80bba",
+        "body_rgb_sha256": "6087e8c0776821d3534041645dab721377fac3a3101422380a87293157e65e64",
+        "ring_supported_rgb_sha256": "5781db62178aea10a8dd816b304e4e943f2a5b982446a471716de9671200cb9a"
+      },
+      "r1": {
+        "cache_sha256": "1e7bae8bfe3b38819b66a79068980975406965dc91879543dd01fbd398d1cca5",
+        "body_rgb_sha256": "af74d513561d40528a7dc8f90d6e1d1b3629fa8cf33048b365f24cc8e60708e6",
+        "ring_supported_rgb_sha256": "ef1d0abe66e979689d511d5e6b7825b7056cfb49e31a7409e6e54f25bd410a80"
+      },
+      "r0_task07_raw_support_pixel_exact": null,
+      "pixels_changed_in_ring_support": 1720883
+    },
+    "E01-002-1234": {
+      "seed": 1234,
+      "brief": "E01-002",
+      "positive_sha256": "42c394f26c71b0719f3396ef10351dae3b0d87024a3b21230e551ee18eebab02",
+      "clip_query_sha256": "ad64e605419b2a8aa0f73bd04d6e264692f151cfeaa4f62e6e079230d7368528",
+      "common_rng_state_sha256": "b6e1dab5771a21bf07168d45290accbad8867cf3c187edabec3b9fce8235c547",
+      "r0": {
+        "cache_sha256": "223771de874586bfef2f2b6575e74304f47bc697255d3aae42795098664fbefa",
+        "body_rgb_sha256": "7b07a75c060ffeaa624344665496a6c5d8b6bd56a75fdffee5d5a1afaa63ffb8",
+        "ring_supported_rgb_sha256": "edcb5640827bb1a37783e15217f59d65979d8271dd79ceb51f2056b23631a50b"
+      },
+      "r1": {
+        "cache_sha256": "cc40fd12bc48a7d7b54c6f410e270e7b2bf7b11586fef8594973483c31636513",
+        "body_rgb_sha256": "3c0d23b95793d93e2aa369a6a03b465be3ccfcdc44208a1f68ff1cf72aac8d74",
+        "ring_supported_rgb_sha256": "51dfbce5ee14e4b7c6b20a08ecdacfd5181edde2a2a3491465b2dd329722fa79"
+      },
+      "r0_task07_raw_support_pixel_exact": null,
+      "pixels_changed_in_ring_support": 1720884
+    },
+    "E01-003-1234": {
+      "seed": 1234,
+      "brief": "E01-003",
+      "positive_sha256": "1bda150485e1f107305cb94246376b16b16d6f830b80e09b7c81347684237471",
+      "clip_query_sha256": "04baddf3d74fc39543d8e3ba35732d4502ce73b396a5519b111698a5a80991cf",
+      "common_rng_state_sha256": "b6e1dab5771a21bf07168d45290accbad8867cf3c187edabec3b9fce8235c547",
+      "r0": {
+        "cache_sha256": "483fac2d8f03b71c71c9bbc64e9fa970059f23928ce2acfd5f1f1effcc480906",
+        "body_rgb_sha256": "3f94f7cedd10d4ec26d70fa252c5bff073ab12824d72e070447e6875ca115d00",
+        "ring_supported_rgb_sha256": "1fb09953f67c9edac72bd244668c98fa4fdf561a1fdbd2cf3078bbc089687fd9"
+      },
+      "r1": {
+        "cache_sha256": "8cb49b48a373a2ffd5c272a7072257a904b7bc977aade50f4569432790395279",
+        "body_rgb_sha256": "2f8e316f3b2955d1ef6e6853703a86f8dc15e4e548d2fb303dceb89b5ef31a34",
+        "ring_supported_rgb_sha256": "af15e75849c544c3fb82510658216c86c89d86f0263cdad3c967004389ba26ff"
+      },
+      "r0_task07_raw_support_pixel_exact": null,
+      "pixels_changed_in_ring_support": 1720903
+    },
+    "E01-004-1234": {
+      "seed": 1234,
+      "brief": "E01-004",
+      "positive_sha256": "1cceee93611fc09fa6d4932d17c1319bf8c88c53041681ebcdf07afe23be068b",
+      "clip_query_sha256": "661c1c00055efc6b5008f9c0a4143ae4432b9ba6b8a1ef2836f80db9e70248ad",
+      "common_rng_state_sha256": "b6e1dab5771a21bf07168d45290accbad8867cf3c187edabec3b9fce8235c547",
+      "r0": {
+        "cache_sha256": "6cbe44cdd2458b2469f5c7b7de0eb259fcee0cdcb345dccf0c0f8e5f79704731",
+        "body_rgb_sha256": "68c4ffa40415e341f78653fb36ea42b6f19cb8702c45e12c893cb5ac36b46afc",
+        "ring_supported_rgb_sha256": "ba3c98a626ee0b48c117e1b1bfd7bfe47890602485405bdb4debe476d4e50fc3"
+      },
+      "r1": {
+        "cache_sha256": "e55e23a93daa429b9c92ebf7ea7b1675f414107d20388ffd7bf54124e12f28e5",
+        "body_rgb_sha256": "a5e1bbdb3b2a35e21a5bfcd8eb262f9d547cbb31ef952a936d58814c254e711f",
+        "ring_supported_rgb_sha256": "21f064f9b4db9866d7fb56e1dc4e56bf1a3be4776a39b019fbf496c443bc31aa"
+      },
+      "r0_task07_raw_support_pixel_exact": null,
+      "pixels_changed_in_ring_support": 1720895
+    },
+    "E01-005-1234": {
+      "seed": 1234,
+      "brief": "E01-005",
+      "positive_sha256": "d3428ffd183ba6d9e5e3b02053f2a058e5c4797859d557bcc1d5ee4153f2c82b",
+      "clip_query_sha256": "5d5990912c970a024916e0643eb8926b61695210023780028ab329ac1f167684",
+      "common_rng_state_sha256": "b6e1dab5771a21bf07168d45290accbad8867cf3c187edabec3b9fce8235c547",
+      "r0": {
+        "cache_sha256": "a33a3c4ec30450f44048ee2da9ee5fc3bf03ee68fb9bfd452972071080e50fec",
+        "body_rgb_sha256": "3de280a42d7a17cef0f6b3df4677dfb208251dbb018c26a9b3876b97771c8223",
+        "ring_supported_rgb_sha256": "3cb30d989d49de99c7e78cc067f66e9d6e3c8a4cbbf9d49717811728720f2016"
+      },
+      "r1": {
+        "cache_sha256": "a6b4485a42736c1468c6d21e8f3e4b9975795a0a2ee217008ae04b10bbbc817a",
+        "body_rgb_sha256": "c916664c8a3908fa82aedf5813b70bd74d7e37d82f4fc208cc9b4b3f22f83dda",
+        "ring_supported_rgb_sha256": "3f95cf90f56e5358ea00980bf34c042491ff556f9b454fb14375710c93ee66ef"
+      },
+      "r0_task07_raw_support_pixel_exact": null,
+      "pixels_changed_in_ring_support": 1720897
+    },
+    "E01-006-1234": {
+      "seed": 1234,
+      "brief": "E01-006",
+      "positive_sha256": "57415a727feab9bf38b034c5990f57c2aa543f1530339182269be1ce16ea97d4",
+      "clip_query_sha256": "f81c4dc89a3613a6ac683bfb0c23482c9c1e7e4e0c06d07e47472656936d4b13",
+      "common_rng_state_sha256": "b6e1dab5771a21bf07168d45290accbad8867cf3c187edabec3b9fce8235c547",
+      "r0": {
+        "cache_sha256": "3d8f899920bac1404bd3ac2ec74c33cbbed607122eb46e83fa3687f8ce3739d5",
+        "body_rgb_sha256": "8c4e609e5ce797b64b3ee9b207450043860332981dd20321896feb608e7d2d66",
+        "ring_supported_rgb_sha256": "80bbd8ea039bc6b388086cc58ab82fc929c5425a52951c86367a4fc78f57e970"
+      },
+      "r1": {
+        "cache_sha256": "040f2c07a2406724b62b773ebdc317a4b5bcd0960a18dbf5b507aede5373cde9",
+        "body_rgb_sha256": "796f52cddef1e846ffa486f03439c4e1c892384790f85762acbb3f65c4e20d72",
+        "ring_supported_rgb_sha256": "1a4594e034d9f3d0726a46630f8879b086d94150c396a6d52e67448fc65afd03"
+      },
+      "r0_task07_raw_support_pixel_exact": null,
+      "pixels_changed_in_ring_support": 1720896
+    },
+    "E01-007-1234": {
+      "seed": 1234,
+      "brief": "E01-007",
+      "positive_sha256": "9052cbe04d71f9485f5349e45c96f6f9e25c1144cef1d2cdff8a60dbb6924463",
+      "clip_query_sha256": "aeb51a535d5905dd79d22b7ea81ba282b8536686346dfb81e556f8f4f8b1d049",
+      "common_rng_state_sha256": "b6e1dab5771a21bf07168d45290accbad8867cf3c187edabec3b9fce8235c547",
+      "r0": {
+        "cache_sha256": "1dc118123fab93f76fa987a8abc4fbb477b4eaa31dd502fdf1a226639ab7885f",
+        "body_rgb_sha256": "9e4790fc642310efb213d77aa4c11375f270458d203dc3c05c8b79b0fd2eae9d",
+        "ring_supported_rgb_sha256": "2ce4d6a33adede4996eeabfef87dce0981547fd7f3357383f629e2bb945768e0"
+      },
+      "r1": {
+        "cache_sha256": "74dfe77b98f4e65d97cba03ce77124122619d00b585fa011c78fcab124495d08",
+        "body_rgb_sha256": "8b0626e1af8cfaba521bde503895c3cb34342f4630aed0dc9b32b456da194f8d",
+        "ring_supported_rgb_sha256": "2c583052cb48ea4612abf9ce47b830f90aa0fefa16dce2ebd7dc6d0a10ee9f0d"
+      },
+      "r0_task07_raw_support_pixel_exact": null,
+      "pixels_changed_in_ring_support": 1720880
+    },
+    "E01-008-1234": {
+      "seed": 1234,
+      "brief": "E01-008",
+      "positive_sha256": "c64992c46c97a227e846d37b8d28ac7f6854de3e0f6d09499f6b5714720bfa61",
+      "clip_query_sha256": "0228cbff16456d6ac99021577c300a0b468e99af2deb4fee81ac1a2be994a7e1",
+      "common_rng_state_sha256": "b6e1dab5771a21bf07168d45290accbad8867cf3c187edabec3b9fce8235c547",
+      "r0": {
+        "cache_sha256": "c3acf54de26e1c2d0f19c7c2e5497d4d50ce3fd859c57c971c3b3c3cae38eb07",
+        "body_rgb_sha256": "f8e88e4e2706033d86ac4dec4759971ba90bc221d51abd676e8dd66005d6b76e",
+        "ring_supported_rgb_sha256": "0d6cd5669485e0a02c62a0687cae90d75d4c9bfb212f8f4393a7fc5821988dca"
+      },
+      "r1": {
+        "cache_sha256": "eb1896e576c81a0683016a3f51b3c951a4b5f3935350ee0a1d36ba9d108a5ab9",
+        "body_rgb_sha256": "01540633ac933381fd4ee1a3748349e6c1259046779434e4fddd4adcb23c0275",
+        "ring_supported_rgb_sha256": "b1ca0b402c6faac6ae8e3a17b98378611f01256051b895e130f480d67ae4faf2"
+      },
+      "r0_task07_raw_support_pixel_exact": null,
+      "pixels_changed_in_ring_support": 1720899
+    },
+    "E01-009-1234": {
+      "seed": 1234,
+      "brief": "E01-009",
+      "positive_sha256": "e4afc4c3eb9327622ad22f0c44aef889a32513f84cea6c7c5c6d240ae1fb87e8",
+      "clip_query_sha256": "923d1fe1205407cefc354e3795e99a10f24fa62438fa27c584263b8f8fa6ca4f",
+      "common_rng_state_sha256": "b6e1dab5771a21bf07168d45290accbad8867cf3c187edabec3b9fce8235c547",
+      "r0": {
+        "cache_sha256": "4cfe9e6aa0d412a04d7dc80d7b843ced2a83048bc8e52ec4b8c97fd107519710",
+        "body_rgb_sha256": "e584c9849bc95372b4d105635a08921f0b12f9e270981b52d5dc585901dc9a7a",
+        "ring_supported_rgb_sha256": "c128c7d722105fb028a14ddb0afa06c225503474411c03e8257d71977cad4592"
+      },
+      "r1": {
+        "cache_sha256": "d591f72e3041c2263a312f0a52c482a473cff5dd38646c66ea00e3fa763d03ca",
+        "body_rgb_sha256": "a87cb060363938e4753a3d0ab511d5e48e680c48a318793cfd756737b42f0627",
+        "ring_supported_rgb_sha256": "071c0a297a18c03f0476aed22f2cd0585fc2a7b38243144914ddc22dbe3821ff"
+      },
+      "r0_task07_raw_support_pixel_exact": null,
+      "pixels_changed_in_ring_support": 1720788
+    },
+    "E01-010-1234": {
+      "seed": 1234,
+      "brief": "E01-010",
+      "positive_sha256": "61b14c675751b3e47246ce8db351cbf15f66d642aa8bdc16229c610f240c1d11",
+      "clip_query_sha256": "5cdb2ce2c8b3320f88c7345766642f18ca901fe0cf1f6e5dede71043f9a19266",
+      "common_rng_state_sha256": "b6e1dab5771a21bf07168d45290accbad8867cf3c187edabec3b9fce8235c547",
+      "r0": {
+        "cache_sha256": "16b95e92f2a01a6c73957295ba30ec03cc032119a3d0e475c6910055d3d07448",
+        "body_rgb_sha256": "f82fc619203e71744f7931569b82452349a91bf632b35a8c1083c9ff35701966",
+        "ring_supported_rgb_sha256": "161a50b580092d083cedcc84e02039a738737345f2bd71c9254f8494db0be10d"
+      },
+      "r1": {
+        "cache_sha256": "600c597fe56af2f539218486b8485ebc9df2b652f3eea54ecaa0b9d6203752ad",
+        "body_rgb_sha256": "799ffb5d6b17bd0c7b203a11157be1fd3bd9e266c5915324cf43d4b3d923ebff",
+        "ring_supported_rgb_sha256": "d32eb7dbbf96a4ef4b0e47fe3281c70126baef06f88bc3b90b9da1b48d7546fd"
+      },
+      "r0_task07_raw_support_pixel_exact": null,
+      "pixels_changed_in_ring_support": 1720854
+    }
+  },
+  "baseline_cases": {
+    "b2_regional/E01-001-42": {
+      "raw_sha256": "9024cf4a61f051a05bb3094e838eb0dac85c921b44a9353e5668ade618af2840",
+      "run_sha256": "647109fc2aab3eb20ad0b2a70011d533b988d013ecb73060e5073ff6a171b543",
+      "positive_sha256": "fc320c618fb7ad7dc7fdb77b26608dddcd508ba3afa70f9371accd783c6b18da",
+      "positive_prompt_provenance": "reconstructed from Task 07 source",
+      "elapsed_seconds": 43.98291308991611,
+      "peak_memory_mib": 10454.4736328125,
+      "gpu": "NVIDIA GeForce RTX 3090"
+    },
+    "b2_regional/E01-002-42": {
+      "raw_sha256": "11e82d335e2f7728fd9e557aa3055a36e16c7948ebd3de0c6fb8ad2479c7166d",
+      "run_sha256": "6acac8f8b9b969da562fe20d76f3e62d233586ceb1dd6498eb012214f7e121eb",
+      "positive_sha256": "42c394f26c71b0719f3396ef10351dae3b0d87024a3b21230e551ee18eebab02",
+      "positive_prompt_provenance": "reconstructed from Task 07 source",
+      "elapsed_seconds": 42.77471379376948,
+      "peak_memory_mib": 10453.5654296875,
+      "gpu": "NVIDIA GeForce RTX 3090"
+    },
+    "b2_regional/E01-003-42": {
+      "raw_sha256": "ee204e998acd358995a875c41a8faba3cef05b1d74026c8f900a9e760e741180",
+      "run_sha256": "52acce1aa9aafa50528c1a5915c9b6cd5a505b514de6b62843b17da3913e8c5d",
+      "positive_sha256": "1bda150485e1f107305cb94246376b16b16d6f830b80e09b7c81347684237471",
+      "positive_prompt_provenance": "reconstructed from Task 07 source",
+      "elapsed_seconds": 43.00098504126072,
+      "peak_memory_mib": 10453.5654296875,
+      "gpu": "NVIDIA GeForce RTX 3090"
+    },
+    "b2_regional/E01-004-42": {
+      "raw_sha256": "29182111d76cf61dcfcc19c503b0399d7d7bfff350a9eb4d23efb2a8a61b37d5",
+      "run_sha256": "79f18e64bd2cb3ae2f0b152370f6d7b81fe00cb0d97269ea2e0008e7d547b1a0",
+      "positive_sha256": "1cceee93611fc09fa6d4932d17c1319bf8c88c53041681ebcdf07afe23be068b",
+      "positive_prompt_provenance": "reconstructed from Task 07 source",
+      "elapsed_seconds": 43.050214760005474,
+      "peak_memory_mib": 10453.5654296875,
+      "gpu": "NVIDIA GeForce RTX 3090"
+    },
+    "b2_regional/E01-005-42": {
+      "raw_sha256": "71371b3c0072aae118f855f3ae1749ad79fdfdfc1e658afdef39a2ec1f497f77",
+      "run_sha256": "e23b64a307cdb70f5cd5dbbc9e6bb60860b884e52891e8ceaa15cb3e197c2f99",
+      "positive_sha256": "d3428ffd183ba6d9e5e3b02053f2a058e5c4797859d557bcc1d5ee4153f2c82b",
+      "positive_prompt_provenance": "reconstructed from Task 07 source",
+      "elapsed_seconds": 42.9926986284554,
+      "peak_memory_mib": 10453.5654296875,
+      "gpu": "NVIDIA GeForce RTX 3090"
+    },
+    "b2_regional/E01-006-42": {
+      "raw_sha256": "1b49b7e6458cac9ecb95563fd9c9e00a2a0b156b0895de05399ae6b0c6344c5c",
+      "run_sha256": "e3a983b5fafb9ee6a9e436593a93c047b2697d14605452f6bcb8e1df30884656",
+      "positive_sha256": "57415a727feab9bf38b034c5990f57c2aa543f1530339182269be1ce16ea97d4",
+      "positive_prompt_provenance": "reconstructed from Task 07 source",
+      "elapsed_seconds": 43.10361154191196,
+      "peak_memory_mib": 10453.5654296875,
+      "gpu": "NVIDIA GeForce RTX 3090"
+    },
+    "b2_regional/E01-007-42": {
+      "raw_sha256": "fce190b6fe55bc4fe7c56bbe6a71a76868fd0ab231492ed7d691fd9cb66420b4",
+      "run_sha256": "98f9fe5c94e5544403bc41061705af07c87418148313d7628696eeadf7f0a4b9",
+      "positive_sha256": "9052cbe04d71f9485f5349e45c96f6f9e25c1144cef1d2cdff8a60dbb6924463",
+      "positive_prompt_provenance": "reconstructed from Task 07 source",
+      "elapsed_seconds": 43.17122084647417,
+      "peak_memory_mib": 10453.5654296875,
+      "gpu": "NVIDIA GeForce RTX 3090"
+    },
+    "b2_regional/E01-008-42": {
+      "raw_sha256": "e8334cc7532c9ab2b1823bf4dac5794c188e7bc1844ac3c45556f42a2af83301",
+      "run_sha256": "787a79c8389d79e9313a52901b8dac119a41fc242f677cc119c3e9543347ba9a",
+      "positive_sha256": "c64992c46c97a227e846d37b8d28ac7f6854de3e0f6d09499f6b5714720bfa61",
+      "positive_prompt_provenance": "reconstructed from Task 07 source",
+      "elapsed_seconds": 42.96022750250995,
+      "peak_memory_mib": 10453.5654296875,
+      "gpu": "NVIDIA GeForce RTX 3090"
+    },
+    "b2_regional/E01-009-42": {
+      "raw_sha256": "f21d6c4bac497dc481f8a973f6cc583a87e726eb7f040c533281379445c4df0e",
+      "run_sha256": "0d0bba560d905ed4c0cf9b20e12ac61d4dc6e113013600565b2d60c615956d33",
+      "positive_sha256": "e4afc4c3eb9327622ad22f0c44aef889a32513f84cea6c7c5c6d240ae1fb87e8",
+      "positive_prompt_provenance": "reconstructed from Task 07 source",
+      "elapsed_seconds": 43.06445967964828,
+      "peak_memory_mib": 10453.5654296875,
+      "gpu": "NVIDIA GeForce RTX 3090"
+    },
+    "b2_regional/E01-010-42": {
+      "raw_sha256": "9cde974170f266c988d1ddc5d0cdb07f8f094593f45b46963647189d6f40c1da",
+      "run_sha256": "7d6bcb5c81e8448dd5d77695bb40e1c5e2323f911b9920e910908f2cd706cfa3",
+      "positive_sha256": "61b14c675751b3e47246ce8db351cbf15f66d642aa8bdc16229c610f240c1d11",
+      "positive_prompt_provenance": "reconstructed from Task 07 source",
+      "elapsed_seconds": 43.06324657611549,
+      "peak_memory_mib": 10453.5654296875,
+      "gpu": "NVIDIA GeForce RTX 3090"
+    },
+    "b2_regional/E01-001-1234": {
+      "raw_sha256": "33fc3df65295c36b670cc256f977e95d103a1ce2fcf02eacbea38b3cf629e293",
+      "run_sha256": "ad542a280f5a07a97350f0898a185c8c7baeba6301668a693035bd0265eb0f56",
+      "positive_sha256": "fc320c618fb7ad7dc7fdb77b26608dddcd508ba3afa70f9371accd783c6b18da",
+      "positive_prompt_provenance": "recorded while encoding and verified against Task 07 source",
+      "elapsed_seconds": 43.266868863254786,
+      "peak_memory_mib": 10456.7236328125,
+      "gpu": "NVIDIA GeForce RTX 3090"
+    },
+    "b2_regional/E01-002-1234": {
+      "raw_sha256": "13d6f5011aa3e4c36338a2b19877185085106882f1cc5c9ca8faf762c98e99ff",
+      "run_sha256": "abb1c574641f78648279d3a15acf687da76c2846018d67c1910355fa2ce649f5",
+      "positive_sha256": "42c394f26c71b0719f3396ef10351dae3b0d87024a3b21230e551ee18eebab02",
+      "positive_prompt_provenance": "recorded while encoding and verified against Task 07 source",
+      "elapsed_seconds": 42.91847879998386,
+      "peak_memory_mib": 10455.8154296875,
+      "gpu": "NVIDIA GeForce RTX 3090"
+    },
+    "b2_regional/E01-003-1234": {
+      "raw_sha256": "eb1e511589c0798900e9eaf9dd55a91a4c08026ed9dd61b79c0f96f1eea6424b",
+      "run_sha256": "42237b5ad66390492aab95819290526e4530148699262ebe0fc87fb8d087b3c5",
+      "positive_sha256": "1bda150485e1f107305cb94246376b16b16d6f830b80e09b7c81347684237471",
+      "positive_prompt_provenance": "recorded while encoding and verified against Task 07 source",
+      "elapsed_seconds": 42.89330259338021,
+      "peak_memory_mib": 10455.8154296875,
+      "gpu": "NVIDIA GeForce RTX 3090"
+    },
+    "b2_regional/E01-004-1234": {
+      "raw_sha256": "0141b2e3e47b0d2a3951649f5046f86ce3577fc41e7ffb58a6cec1530cbede68",
+      "run_sha256": "17d8fcf1a9566c1e2c11efb6aca9d98281b9776212b8f2c9025309bc91f06230",
+      "positive_sha256": "1cceee93611fc09fa6d4932d17c1319bf8c88c53041681ebcdf07afe23be068b",
+      "positive_prompt_provenance": "recorded while encoding and verified against Task 07 source",
+      "elapsed_seconds": 43.07473509572446,
+      "peak_memory_mib": 10455.8154296875,
+      "gpu": "NVIDIA GeForce RTX 3090"
+    },
+    "b2_regional/E01-005-1234": {
+      "raw_sha256": "0de80f277eb5deb3d849875972cc3ee0f546c5018664a849ab0fb14f64c7c3bb",
+      "run_sha256": "1266814110e87f33e8ca7345efa05a63f5e9d78bf286b64fd9113dd2d62645c8",
+      "positive_sha256": "d3428ffd183ba6d9e5e3b02053f2a058e5c4797859d557bcc1d5ee4153f2c82b",
+      "positive_prompt_provenance": "recorded while encoding and verified against Task 07 source",
+      "elapsed_seconds": 42.95231001265347,
+      "peak_memory_mib": 10455.8154296875,
+      "gpu": "NVIDIA GeForce RTX 3090"
+    },
+    "b2_regional/E01-006-1234": {
+      "raw_sha256": "0d3282243ddafe7ebcbfc06e42c1ad99e7543a7f0ea6a649f20297e6da0129b5",
+      "run_sha256": "a3ab7abf89d7dbbe0a6f1cae7734747d715a221cf3a03288d789fc4bee0b9928",
+      "positive_sha256": "57415a727feab9bf38b034c5990f57c2aa543f1530339182269be1ce16ea97d4",
+      "positive_prompt_provenance": "recorded while encoding and verified against Task 07 source",
+      "elapsed_seconds": 43.00330130942166,
+      "peak_memory_mib": 10455.8154296875,
+      "gpu": "NVIDIA GeForce RTX 3090"
+    },
+    "b2_regional/E01-007-1234": {
+      "raw_sha256": "68584dfff4b93d4512cdccb13128ac7cab4d6f4d1fc34c9b26ca292c4369fe0c",
+      "run_sha256": "ae8fc48d4c1a81e1f8d6ff23f00c6a2d33a391a5ab863d8e7bf9d82a8df7a270",
+      "positive_sha256": "9052cbe04d71f9485f5349e45c96f6f9e25c1144cef1d2cdff8a60dbb6924463",
+      "positive_prompt_provenance": "recorded while encoding and verified against Task 07 source",
+      "elapsed_seconds": 43.01388133689761,
+      "peak_memory_mib": 10455.8154296875,
+      "gpu": "NVIDIA GeForce RTX 3090"
+    },
+    "b2_regional/E01-008-1234": {
+      "raw_sha256": "a81321bd3bc4c74a0e79aca27d6f1730125345cf15ccee7272aadeaf7bf2fbae",
+      "run_sha256": "5dc1a6cfaaf6290f3050783e4cef24325ef1cb23c0cea2474e6faaf7837a7f91",
+      "positive_sha256": "c64992c46c97a227e846d37b8d28ac7f6854de3e0f6d09499f6b5714720bfa61",
+      "positive_prompt_provenance": "recorded while encoding and verified against Task 07 source",
+      "elapsed_seconds": 43.16469776071608,
+      "peak_memory_mib": 10455.8154296875,
+      "gpu": "NVIDIA GeForce RTX 3090"
+    },
+    "b2_regional/E01-009-1234": {
+      "raw_sha256": "643a474cfdc76fb154e6b382b140b63a28e0ff0860b5d0dd227f71417f36e212",
+      "run_sha256": "f5e995f98a7bd74847698991ae75d5e13845649dbefc1b75dddabde7680efb72",
+      "positive_sha256": "e4afc4c3eb9327622ad22f0c44aef889a32513f84cea6c7c5c6d240ae1fb87e8",
+      "positive_prompt_provenance": "recorded while encoding and verified against Task 07 source",
+      "elapsed_seconds": 43.224842093884945,
+      "peak_memory_mib": 10455.8154296875,
+      "gpu": "NVIDIA GeForce RTX 3090"
+    },
+    "b2_regional/E01-010-1234": {
+      "raw_sha256": "3bf687226cba186a7aea38dd8dd0e102837572d5cf955cc0d55f0b916167c194",
+      "run_sha256": "664b132491b79e62b983dd2afc10f6f5c096c23858bd6be485638830e1dfe649",
+      "positive_sha256": "61b14c675751b3e47246ce8db351cbf15f66d642aa8bdc16229c610f240c1d11",
+      "positive_prompt_provenance": "recorded while encoding and verified against Task 07 source",
+      "elapsed_seconds": 42.749541845172644,
+      "peak_memory_mib": 10455.8154296875,
+      "gpu": "NVIDIA GeForce RTX 3090"
+    },
+    "b2_regional_r1/E01-001-42": {
+      "raw_sha256": "6148f4ff099938fdfe3c1632e4d5f562878dd826a170871de621bc11f19d2249",
+      "run_sha256": "353fa1243912f2653d1c3d79e5d7a5ef9cd60535cdaec71d74c5ec3634d251d6",
+      "positive_sha256": "fc320c618fb7ad7dc7fdb77b26608dddcd508ba3afa70f9371accd783c6b18da",
+      "positive_prompt_provenance": "recorded while encoding and verified against Task 07 source",
+      "elapsed_seconds": 42.978176379576325,
+      "peak_memory_mib": 10455.8154296875,
+      "gpu": "NVIDIA GeForce RTX 3090"
+    },
+    "b2_regional_r1/E01-002-42": {
+      "raw_sha256": "a7e4e5b5a36f1e15da56024fff4dd617fe3ac54950483a8b07c5a82f0e93f466",
+      "run_sha256": "3002d58a83f7e4aa3d11cd96eeae849572af3ff27b08dd90207d47e28946deaa",
+      "positive_sha256": "42c394f26c71b0719f3396ef10351dae3b0d87024a3b21230e551ee18eebab02",
+      "positive_prompt_provenance": "recorded while encoding and verified against Task 07 source",
+      "elapsed_seconds": 42.95867023430765,
+      "peak_memory_mib": 10455.8154296875,
+      "gpu": "NVIDIA GeForce RTX 3090"
+    },
+    "b2_regional_r1/E01-003-42": {
+      "raw_sha256": "e17c03dc6e9b15ef8c30142b1e7ef1939bc43f1f25c1ffb27ef19c3fa68707dc",
+      "run_sha256": "d8380229f63627686c22d34a788da8ffd32eeae39ceb26c4ef4be460bf51ab31",
+      "positive_sha256": "1bda150485e1f107305cb94246376b16b16d6f830b80e09b7c81347684237471",
+      "positive_prompt_provenance": "recorded while encoding and verified against Task 07 source",
+      "elapsed_seconds": 42.991474671289325,
+      "peak_memory_mib": 10455.8154296875,
+      "gpu": "NVIDIA GeForce RTX 3090"
+    },
+    "b2_regional_r1/E01-004-42": {
+      "raw_sha256": "ec548bcc824b086eaf9075b1a890cf8d6ad2dd5f3c7bb7d34a6a3815f548f043",
+      "run_sha256": "f81079d5c1a90d60803e7c1574b6d6d4761a85d970013ff4abcee74b8378572f",
+      "positive_sha256": "1cceee93611fc09fa6d4932d17c1319bf8c88c53041681ebcdf07afe23be068b",
+      "positive_prompt_provenance": "recorded while encoding and verified against Task 07 source",
+      "elapsed_seconds": 43.078880950808525,
+      "peak_memory_mib": 10455.8154296875,
+      "gpu": "NVIDIA GeForce RTX 3090"
+    },
+    "b2_regional_r1/E01-005-42": {
+      "raw_sha256": "3810d3b1d15a65997d85f18ea609828c362d91caf8e804a82ca24b23040cbef4",
+      "run_sha256": "dd70b76b8dd1dd9bfee06aba6bf2dd626e12b1179a11b06b40b80c4c745920ea",
+      "positive_sha256": "d3428ffd183ba6d9e5e3b02053f2a058e5c4797859d557bcc1d5ee4153f2c82b",
+      "positive_prompt_provenance": "recorded while encoding and verified against Task 07 source",
+      "elapsed_seconds": 42.93067522905767,
+      "peak_memory_mib": 10455.8154296875,
+      "gpu": "NVIDIA GeForce RTX 3090"
+    },
+    "b2_regional_r1/E01-006-42": {
+      "raw_sha256": "a223c501304c336f238002f885a99a15aa37f56fe8c98f221d0592fe77da15db",
+      "run_sha256": "6096d567d372336188bc49fd6b6317539a1a57aa3e5c2f3dd367ff90b5605cc8",
+      "positive_sha256": "57415a727feab9bf38b034c5990f57c2aa543f1530339182269be1ce16ea97d4",
+      "positive_prompt_provenance": "recorded while encoding and verified against Task 07 source",
+      "elapsed_seconds": 43.043112937361,
+      "peak_memory_mib": 10455.8154296875,
+      "gpu": "NVIDIA GeForce RTX 3090"
+    },
+    "b2_regional_r1/E01-007-42": {
+      "raw_sha256": "1316f75472cdc195b007b2c73d9696917e8da0271caf38454a2879f127466fac",
+      "run_sha256": "0ed3b64cb66a20928f6bc3a10f96be1ab11d7491c62a7adf5aa205f99334fe86",
+      "positive_sha256": "9052cbe04d71f9485f5349e45c96f6f9e25c1144cef1d2cdff8a60dbb6924463",
+      "positive_prompt_provenance": "recorded while encoding and verified against Task 07 source",
+      "elapsed_seconds": 43.10136188194156,
+      "peak_memory_mib": 10455.8154296875,
+      "gpu": "NVIDIA GeForce RTX 3090"
+    },
+    "b2_regional_r1/E01-008-42": {
+      "raw_sha256": "6127b4f0c9b3060f6fb47a9c673d099e34042b0eafdc88d555eac715acbccf7b",
+      "run_sha256": "eaeb0e84081bb2bf13bb5a88f47d7ba28200644d07aa52625c0ba610bd12729d",
+      "positive_sha256": "c64992c46c97a227e846d37b8d28ac7f6854de3e0f6d09499f6b5714720bfa61",
+      "positive_prompt_provenance": "recorded while encoding and verified against Task 07 source",
+      "elapsed_seconds": 43.033634036779404,
+      "peak_memory_mib": 10455.8154296875,
+      "gpu": "NVIDIA GeForce RTX 3090"
+    },
+    "b2_regional_r1/E01-009-42": {
+      "raw_sha256": "38439ca413f0683910c8660e6658ddcc1361a0d586fe93b874e5709ceb8f7801",
+      "run_sha256": "7313b2c3fc2baa22626c2f0e63d23afbb35a2a12ec5c2044ac0bf7f714d7deca",
+      "positive_sha256": "e4afc4c3eb9327622ad22f0c44aef889a32513f84cea6c7c5c6d240ae1fb87e8",
+      "positive_prompt_provenance": "recorded while encoding and verified against Task 07 source",
+      "elapsed_seconds": 42.95541395805776,
+      "peak_memory_mib": 10455.8154296875,
+      "gpu": "NVIDIA GeForce RTX 3090"
+    },
+    "b2_regional_r1/E01-010-42": {
+      "raw_sha256": "2e14e13dc9f6a2b42b160c5e2406c9f3e87462720a34a6e5030699cdb43d719c",
+      "run_sha256": "b70ead4f174727d6bd46fdafba98b6df6c97b3dfec2a36317bfea8d0c5521296",
+      "positive_sha256": "61b14c675751b3e47246ce8db351cbf15f66d642aa8bdc16229c610f240c1d11",
+      "positive_prompt_provenance": "recorded while encoding and verified against Task 07 source",
+      "elapsed_seconds": 43.00119257159531,
+      "peak_memory_mib": 10455.8154296875,
+      "gpu": "NVIDIA GeForce RTX 3090"
+    },
+    "b2_regional_r1/E01-001-1234": {
+      "raw_sha256": "65a69572b8861b5292b383ece369f3b810ff6c0d1b1f15ceb448966472eacac6",
+      "run_sha256": "4beca6170832a65cecf8e882eac7cc4dde5afe3d8b00b67321efb72d827e5d35",
+      "positive_sha256": "fc320c618fb7ad7dc7fdb77b26608dddcd508ba3afa70f9371accd783c6b18da",
+      "positive_prompt_provenance": "recorded while encoding and verified against Task 07 source",
+      "elapsed_seconds": 42.91249360702932,
+      "peak_memory_mib": 10455.8154296875,
+      "gpu": "NVIDIA GeForce RTX 3090"
+    },
+    "b2_regional_r1/E01-002-1234": {
+      "raw_sha256": "21d414379d2959594dcbbbb92d5523a89c39dd2d292776be801c0015a8c64659",
+      "run_sha256": "a7068c8913b265d72aa2f08fdc95ba9b626e6a8c60c0ffb25222a2905fd9ab8e",
+      "positive_sha256": "42c394f26c71b0719f3396ef10351dae3b0d87024a3b21230e551ee18eebab02",
+      "positive_prompt_provenance": "recorded while encoding and verified against Task 07 source",
+      "elapsed_seconds": 43.00963701494038,
+      "peak_memory_mib": 10455.8154296875,
+      "gpu": "NVIDIA GeForce RTX 3090"
+    },
+    "b2_regional_r1/E01-003-1234": {
+      "raw_sha256": "6a3a622a18e0769eb5f1ad0ebe36127899dbc3b582f27b7211b4a28673673cca",
+      "run_sha256": "8548e247eb115cb7e6ce3adcdc033b8ac107acac486aa372c3e45a7839577ede",
+      "positive_sha256": "1bda150485e1f107305cb94246376b16b16d6f830b80e09b7c81347684237471",
+      "positive_prompt_provenance": "recorded while encoding and verified against Task 07 source",
+      "elapsed_seconds": 42.988888036459684,
+      "peak_memory_mib": 10455.8154296875,
+      "gpu": "NVIDIA GeForce RTX 3090"
+    },
+    "b2_regional_r1/E01-004-1234": {
+      "raw_sha256": "438a0e635fa415d4bb1418fba8b323372a5c2153390be28ec2ffbd8983d7e9b6",
+      "run_sha256": "4778c09e541ba4a232f03cb8565bbca982c2273bbe4b11342d850a5211aab18e",
+      "positive_sha256": "1cceee93611fc09fa6d4932d17c1319bf8c88c53041681ebcdf07afe23be068b",
+      "positive_prompt_provenance": "recorded while encoding and verified against Task 07 source",
+      "elapsed_seconds": 42.95575390011072,
+      "peak_memory_mib": 10455.8154296875,
+      "gpu": "NVIDIA GeForce RTX 3090"
+    },
+    "b2_regional_r1/E01-005-1234": {
+      "raw_sha256": "29e3d65fe0f069ae973ff36e28b59bf78cbb5301d56ca61d85cd000a76fdd5a0",
+      "run_sha256": "d5ad0fd0dab88ce52569ac6aa4700c021a50d9424cecb949b6b972655d6dfa36",
+      "positive_sha256": "d3428ffd183ba6d9e5e3b02053f2a058e5c4797859d557bcc1d5ee4153f2c82b",
+      "positive_prompt_provenance": "recorded while encoding and verified against Task 07 source",
+      "elapsed_seconds": 42.96046695485711,
+      "peak_memory_mib": 10455.8154296875,
+      "gpu": "NVIDIA GeForce RTX 3090"
+    },
+    "b2_regional_r1/E01-006-1234": {
+      "raw_sha256": "ee10a471009ed0800242a915a785cbffd85432c6918c6a4adfd773138b21e7fd",
+      "run_sha256": "1c8dcd5ad6701f6a357f7f789b5a9517c9015dd1bc324ff2d38e37077f2feb9f",
+      "positive_sha256": "57415a727feab9bf38b034c5990f57c2aa543f1530339182269be1ce16ea97d4",
+      "positive_prompt_provenance": "recorded while encoding and verified against Task 07 source",
+      "elapsed_seconds": 43.020200656726956,
+      "peak_memory_mib": 10455.8154296875,
+      "gpu": "NVIDIA GeForce RTX 3090"
+    },
+    "b2_regional_r1/E01-007-1234": {
+      "raw_sha256": "2d3fa78a9756d7cfd9d822f1f3ca929ab5ab04f4e745e8582c8b246bae1a04b3",
+      "run_sha256": "64d7a1a2121cb3b16e988bc35b805311883fe780ec6df1fa5d922983871c407a",
+      "positive_sha256": "9052cbe04d71f9485f5349e45c96f6f9e25c1144cef1d2cdff8a60dbb6924463",
+      "positive_prompt_provenance": "recorded while encoding and verified against Task 07 source",
+      "elapsed_seconds": 42.98233491182327,
+      "peak_memory_mib": 10455.8154296875,
+      "gpu": "NVIDIA GeForce RTX 3090"
+    },
+    "b2_regional_r1/E01-008-1234": {
+      "raw_sha256": "40c778a093bfb84c3aa9ca5811f381b7bc05a78f3248f9450cf762ead919774d",
+      "run_sha256": "4a61b3bc47f786cf6d812834f6923bd294629374316d2f93503408fdbf6f6645",
+      "positive_sha256": "c64992c46c97a227e846d37b8d28ac7f6854de3e0f6d09499f6b5714720bfa61",
+      "positive_prompt_provenance": "recorded while encoding and verified against Task 07 source",
+      "elapsed_seconds": 43.005172342062,
+      "peak_memory_mib": 10455.8154296875,
+      "gpu": "NVIDIA GeForce RTX 3090"
+    },
+    "b2_regional_r1/E01-009-1234": {
+      "raw_sha256": "7830dc4bc528cab9d32cd083ce5ad53d16cefab4a224d13ef00e71b4a108fbcb",
+      "run_sha256": "75805be07b30e3f0d5fda9eabafb3f54b13a11b09a108be4f1bd934eca5f5a62",
+      "positive_sha256": "e4afc4c3eb9327622ad22f0c44aef889a32513f84cea6c7c5c6d240ae1fb87e8",
+      "positive_prompt_provenance": "recorded while encoding and verified against Task 07 source",
+      "elapsed_seconds": 43.001630928367376,
+      "peak_memory_mib": 10455.8154296875,
+      "gpu": "NVIDIA GeForce RTX 3090"
+    },
+    "b2_regional_r1/E01-010-1234": {
+      "raw_sha256": "dfc3602995c4adc908d232ea51c6c6adf174bd1a2899dfce67753e7589afdf2c",
+      "run_sha256": "d450266297708e4701eff7a7512c07d8e3d34e2c8a415dbbf67de99ab2b56779",
+      "positive_sha256": "61b14c675751b3e47246ce8db351cbf15f66d642aa8bdc16229c610f240c1d11",
+      "positive_prompt_provenance": "recorded while encoding and verified against Task 07 source",
+      "elapsed_seconds": 43.046358028426766,
+      "peak_memory_mib": 10455.8154296875,
+      "gpu": "NVIDIA GeForce RTX 3090"
+    }
+  }
+}

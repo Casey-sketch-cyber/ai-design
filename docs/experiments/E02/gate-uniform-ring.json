@@ -1,0 +1,301 @@
+{
+  "selected": "u1",
+  "seeds": {
+    "42": {
+      "selected": "u1",
+      "n": 10,
+      "fingerprint": "90e99c480c272011995004ae8478478d64f38659324f14b97db8e015c1033a95",
+      "checks": {
+        "seven_folded_seams": {
+          "passed": true,
+          "metrics": {
+            "non_native_7_sdr": {
+              "v3": 1.5884507894515991,
+              "baselines": {
+                "b2_regional": 4.417501974105835,
+                "b2_post": 4.619852018356323
+              },
+              "passed": true
+            },
+            "non_native_7_lpips": {
+              "v3": 0.3485704133553164,
+              "baselines": {
+                "b2_regional": 0.36460329634802685,
+                "b2_post": 0.41345378288200924
+              },
+              "passed": true
+            }
+          }
+        },
+        "bleed": {
+          "passed": true,
+          "metrics": {
+            "bleed_fill_pct": {
+              "v3": 67.393726431265,
+              "baselines": {
+                "b2_regional": 52.99622900239973,
+                "b2_post": 52.847103188207065
+              },
+              "passed": true
+            },
+            "bleed_fill_v2_pct": {
+              "v3": 58.4401782653411,
+              "baselines": {
+                "b2_regional": 28.46074734316078,
+                "b2_post": 47.38472745971889
+              },
+              "passed": true
+            }
+          }
+        },
+        "fold_stripe": {
+          "passed": false,
+          "objective_passed": false,
+          "baseline": "b4",
+          "threshold": 1.252775233689771,
+          "means": {
+            "u1": 1.6840798444802805,
+            "b2": 1.2270549828093935,
+            "b2_post": 1.2288052747297844,
+            "b2_regional": 1.1399088085999431,
+            "b3": 1.2732381419603758,
+            "b4": 1.0439793614081425
+          },
+          "visual_passed": true,
+          "ready_for_visual_review": true
+        },
+        "clip": {
+          "passed": true,
+          "means": {
+            "u1": 0.6891461908817291,
+            "b2": 0.6862232200801373
+          },
+          "minimum": 0.6362232200801372
+        },
+        "runtime": {
+          "passed": true,
+          "mean_seconds": 51.119194712676105,
+          "mean_peak_mib": 10529.544921875,
+          "highest_sample_peak_mib": 10529.544921875,
+          "seconds_limit": 60,
+          "peak_mib_limit": 20480,
+          "highest_sample_seconds": 53.88520065136254,
+          "over_limit": []
+        }
+      },
+      "visual_review": {
+        "fingerprint": "90e99c480c272011995004ae8478478d64f38659324f14b97db8e015c1033a95",
+        "samples": {
+          "E01-001": {
+            "visible_artifact": false,
+            "notes": "正顶淡绿色接续，左端山脊和云描线跨折。背底暗林延续入灰绿且稍柔的盖面。三条纵折均与同种子 G5 逐字节相同。环带浅色横幅分隔横穿纵折。未检出沿折独立窄带或亮边。",
+            "raw_sha256": "ffb7f4bb68314892d1b847b65536e456c8fc9c5e787971e6a61d7b17d52ab5ea"
+          },
+          "E01-002": {
+            "visible_artifact": false,
+            "notes": "正顶米白底连续，左端枝勾跨过折线。背底黄褐植物和灰青形状延续到盖侧，盖内笔触较软。三纵折与 G5 逐字节相同。未检出沿折独立窄带或亮边。",
+            "raw_sha256": "dda47b1fd3a51b63a14f3064111054c880987e57ac06787ece1e6c0442530227"
+          },
+          "E01-003": {
+            "visible_artifact": false,
+            "notes": "正顶浅青天空有轻微面间色调阶跃，旧盖内灰带未重现。背底草茎向盖内继续，盖侧局部草叶转向。三纵折与 G5 逐字节相同。未检出沿折独立窄带或亮边。",
+            "raw_sha256": "bca038a8baebf8a09ddcf43412760b45b1b381b80cabdf3a954f2a8fd5f32709"
+          },
+          "E01-004": {
+            "visible_artifact": false,
+            "notes": "正顶灰枝和浅底衔接。背底灰枝及花形延续，局部轮廓被盖侧原有纹样软化。三纵折与 G5 逐字节相同。未检出沿折独立窄带或亮边。",
+            "raw_sha256": "a205c742cce6f732accfd1f999ffe66f5b93c088fc9a4f2886623ceaa7de13ae"
+          },
+          "E01-005": {
+            "visible_artifact": false,
+            "notes": "正顶木刻纤维与大轮廓衔接。背底圆形木截面跨折，盖侧年轮转入新纹理。三纵折与 G5 逐字节相同。未检出沿折独立窄带或亮边。",
+            "raw_sha256": "3a4251b12599cb18e392379cd6d49f52bbc237201e9ffae1f47e8dc93f496ee0"
+          },
+          "E01-006": {
+            "visible_artifact": false,
+            "notes": "正顶左侧青绿描线转弯，浅绿底逐渐衔接。背底橙果和绿叶跨折，盖侧有不规则色块。三纵折与 G5 逐字节相同。未检出沿折独立窄带或亮边。",
+            "raw_sha256": "0c288de363d1a5f3f26777886d05f2964808b142e2439e481e708942625f188d"
+          },
+          "E01-007": {
+            "visible_artifact": false,
+            "notes": "正顶两端白云轮廓跨折，盖侧有新云线。背底麦穗和细茎跨折并延伸，盖侧稍淡。三纵折与 G5 逐字节相同。未检出沿折独立窄带或亮边。",
+            "raw_sha256": "f6b7c5160ef4986fbb4ed9d0056cd3da2ed062b5aa6bde0f7fe3eaac6dd747e1"
+          },
+          "E01-008": {
+            "visible_artifact": false,
+            "notes": "正顶及背底的青叶、红果和奶白底纹能接续，个别枝形有局部变软。三纵折与 G5 逐字节相同。未检出沿折独立窄带或亮边。",
+            "raw_sha256": "c9dde7aa8c0b1a46c39468a5a683e80fa6938bbb372bd49212bbb1b13e9e406f"
+          },
+          "E01-009": {
+            "visible_artifact": false,
+            "notes": "正顶云轮廓跨折，蓝天有浅青面间阶跃。背底粉花和绿色茎叶仍可追踪到盖侧。三纵折与 G5 逐字节相同。未检出沿折独立窄带或亮边。",
+            "raw_sha256": "68f04f96a08b61438e644eaf05bdbced7ae895d73950c8f8a43a7f4e2b63a8b8"
+          },
+          "E01-010": {
+            "visible_artifact": false,
+            "notes": "正顶灰叶局部错位。背底锈红叶块和灰枝跨过折线，盖侧明暗笔触略软。三纵折与 G5 逐字节相同。未检出沿折独立窄带或亮边。",
+            "raw_sha256": "1cea20459f25041784c0ae6d83dff296d751146de719d7d02878a9e5f69f97bc"
+          }
+        }
+      },
+      "passed": false,
+      "seed": 42
+    },
+    "1234": {
+      "selected": "u1",
+      "n": 10,
+      "fingerprint": "03a630c7bc0a145be1062ea927f17925886efe30538f91a574fb22be00ee3aac",
+      "checks": {
+        "seven_folded_seams": {
+          "passed": true,
+          "metrics": {
+            "non_native_7_sdr": {
+              "v3": 2.0798524975776673,
+              "baselines": {
+                "b2_regional": 4.604819679260254,
+                "b2_post": 5.79405403137207
+              },
+              "passed": true
+            },
+            "non_native_7_lpips": {
+              "v3": 0.3572786343416997,
+              "baselines": {
+                "b2_regional": 0.36944125997168675,
+                "b2_post": 0.44225763508251736
+              },
+              "passed": true
+            }
+          }
+        },
+        "bleed": {
+          "passed": true,
+          "metrics": {
+            "bleed_fill_pct": {
+              "v3": 62.21674665752486,
+              "baselines": {
+                "b2_regional": 51.83150497086048,
+                "b2_post": 52.826534110387385
+              },
+              "passed": true
+            },
+            "bleed_fill_v2_pct": {
+              "v3": 51.05845046280425,
+              "baselines": {
+                "b2_regional": 48.95783339046966,
+                "b2_post": 50.52836818649297
+              },
+              "passed": true
+            }
+          }
+        },
+        "fold_stripe": {
+          "passed": true,
+          "objective_passed": true,
+          "baseline": "b4",
+          "threshold": 1.383200725749475,
+          "means": {
+            "u1": 1.303174446983793,
+            "b2": 1.2654525706151123,
+            "b2_post": 1.2630464623527078,
+            "b2_regional": 1.2256891956809892,
+            "b3": 1.1654311061439013,
+            "b4": 1.1526672714578958
+          },
+          "visual_passed": true,
+          "ready_for_visual_review": true
+        },
+        "clip": {
+          "passed": true,
+          "means": {
+            "u1": 0.7014658898115158,
+            "b2": 0.6959682777523994
+          },
+          "minimum": 0.6459682777523994
+        },
+        "runtime": {
+          "passed": true,
+          "mean_seconds": 50.87984318099916,
+          "mean_peak_mib": 10529.544921875,
+          "highest_sample_peak_mib": 10529.544921875,
+          "seconds_limit": 60,
+          "peak_mib_limit": 20480,
+          "highest_sample_seconds": 51.61648233793676,
+          "over_limit": []
+        }
+      },
+      "visual_review": {
+        "fingerprint": "03a630c7bc0a145be1062ea927f17925886efe30538f91a574fb22be00ee3aac",
+        "samples": {
+          "E01-001": {
+            "visible_artifact": false,
+            "notes": "三条体侧折保留原有灰底、绿色包装轮廓及横幅分隔，浅色分隔横穿体侧折线。正顶和背底均为大面灰调过渡，在折线位置未见独立的窄带或亮边。",
+            "raw_sha256": "5d8496e1473b23cd3f126b260ed723df72bc01b3d957d77c0e0b123d942ee0ad",
+            "native_crops_sha256": "5f884ad6ad5aacecbdbead89b1e9228295af41a4a8b572cae14157f307cc40fe"
+          },
+          "E01-002": {
+            "visible_artifact": false,
+            "notes": "正顶橙底上的深色曲线随图案弯折，米白轮廓穿过折线。背底青灰色块略变调，米白山脊可跨折追踪。原像素对照未见附着在实体折上的独立窄带或亮边。",
+            "raw_sha256": "fe180b49261614565e34dea13dfb8915e049e2c0f12ae385892201380c0d1875",
+            "native_crops_sha256": "1c7401023004b0b58868fb2c6fd364840520bc03638b7b7a38fab7a6bced0d43"
+          },
+          "E01-003": {
+            "visible_artifact": false,
+            "notes": "体侧折处可见稻草及绿、赭色印刷色块。正顶为大面米色。背底距折线约 15 像素的暗线是旧环带赭色色块下沿，在任务 13 G5 的同一位置同形，折线本身只见米色底纹接续。",
+            "raw_sha256": "d60bdeed930edc2c229463caa5df36acf0b038764c7b67e09b6011c5644ac3db",
+            "native_crops_sha256": "dfa262037b74b1214a6a9abcaf57b8aec27e090b301ea2be67aaa986e1ac4c37"
+          },
+          "E01-004": {
+            "visible_artifact": false,
+            "notes": "正顶橙花和粉花轮廓跨折，背底的绿茎、枝叶及花瓣在盖侧较柔。三条体侧折处花叶仍跨线延展。五折未见独立窄带或亮边。",
+            "raw_sha256": "3fbab2927a988766d4d861bb692b03163f390e49000b0f0faaedd74494e1254d",
+            "native_crops_sha256": "737f845940b3d3e94a43b0090e2745e13ca28e1e4b4a201f5fa4f5ce20bb29e7"
+          },
+          "E01-005": {
+            "visible_artifact": false,
+            "notes": "三条体侧折以木截面、青底相接，正顶米白木纹边缘随年轮弯曲，背底浅色木纹沿自身轮廓展开。五折未见沿折线持续的独立窄带或亮边。",
+            "raw_sha256": "11e264522d79e81aff1832aaee155c8dd5702b1f4cd47c50451992c10e26a090",
+            "native_crops_sha256": "c08ac9c12cdef0a11a1e3c617d759867c4ce8d46c3fc48e00435db74c1f37b8a"
+          },
+          "E01-006": {
+            "visible_artifact": false,
+            "notes": "正顶浅色曲线和短深色笔触在橙底中弯曲或终止，背底深线随绿叶轮廓走向，三条体侧折处仍可追踪枝叶和橙果。未见独立贴折窄带或亮边。",
+            "raw_sha256": "19ce60d3f2ab8d8d39f6814fd6deba40c2ce9fffc37a3a33a2a2f986b09c2641",
+            "native_crops_sha256": "2af14f755927bc19b748da9f0fff979b4ab1d53d6b7d9ed4bd0d573ca5a44332"
+          },
+          "E01-007": {
+            "visible_artifact": false,
+            "notes": "背底距折线约 12 至 13 像素可见细直暗线。任务 13 G5 与任务 15 U1 的原环带同处都有它，放回完整环带和展开图能见其沿桌面延续至其他侧面，并与更远处木板线及纹理相呼应，故按画面中的木板接缝登记。正顶浅木纹和其余体侧折未见独立贴折窄带或亮边。",
+            "raw_sha256": "8d8945f2bf90e68004aeef292b14dec788c88ba7f34e0b6400b4b73f958c2ce2",
+            "native_crops_sha256": "cf2b61428aed4ea4fd1c592e109f47b90bbcb3fb33bf0741c887ee95bd51acec"
+          },
+          "E01-008": {
+            "visible_artifact": false,
+            "notes": "正顶红果、枝条跨折，背底底色接续并可见绿叶与分叉枝线。三条体侧折中的红果边缘随图案起伏。未见独立贴折窄带或亮边。",
+            "raw_sha256": "4705b9ababb7825e94925d6c8744cb73a8ddd44e13384f69feb7deb73c6f96bd",
+            "native_crops_sha256": "6b814dc3da0da425bb8816653911317ea7f01e03e9f1a18a2189c95108c8f1d1"
+          },
+          "E01-009": {
+            "visible_artifact": false,
+            "notes": "正顶浅边弯随橙色色块上沿，任务 13 G5 的同一色块与浅边已同形。背底折两侧花茎及花瓣延展，盖侧有明暗和柔化阶跃，原像素对照未见处在两侧之间的独立窄带或亮边。",
+            "raw_sha256": "c3ead6d9cc17ae5df571edf163585d3d822b264230cd823a03be3f6ee7bf2dea",
+            "native_crops_sha256": "456de017f67581f13fa5444575bdd2c95df208fd251407a37de5b40abf56e828"
+          },
+          "E01-010": {
+            "visible_artifact": false,
+            "notes": "栗果、橙叶和浅底轮廓跨越体侧及盖侧折线，正顶右侧和背底局部的阴影随果实与枝叶范围变化。五折未见沿折独立的窄带或亮边。",
+            "raw_sha256": "7f6d2c606064fdd1b1178dee42922aa1b934cae3f372f900a7240a7bf277b986",
+            "native_crops_sha256": "5ea8b3b336e44f41543ccea89ef88d1b716f8705d310b39c882bd506e393d95b"
+          }
+        },
+        "seed": 1234,
+        "selected": "u1",
+        "reviewer": "Codex",
+        "reviewed_native_folds_per_case": 5
+      },
+      "passed": true,
+      "seed": 1234
+    }
+  },
+  "complete": true,
+  "passed": false
+}

@@ -4,7 +4,9 @@
 
 ## 当前状态
 
-任务 13、14 已合并（PR #14、#13）。G5（边带纹理注入）在 Step 1 五条关口中通过四条：盖侧 ΔE00 4.19，七缝 LPIPS 0.334（首次低于 B2-regional），出血 67.5%，原像素 10/10 无伪影，种子 1234 复验稳定。唯一未过的是条带 v1（1.59 > 1.2528），来源有二：盖面纹理“边缘密、中心疏”，以及环带自身的横幅分隔（种子 1234 下环带单侧下界已达 1.28）。任务 15 已下达给 Codex，同时处理这两点。
+任务 15 已完成 RTX 3090 双种子实验，保留 U1 + R0。种子 42 4/5，条带 v1 1.6841（上限 1.2528），未过 条带 v1 与原像素。种子 1234 5/5，条带 v1 1.3032（上限 1.3832）。停在 Step 1，等 Claude 审查。 [盖面均匀化与环带横幅报告](experiments/E02/UNIFORM-RING.md)
+
+任务 16 由 Gemini 独立研究，Claude 汇总两项结果后决定下一轮方案。
 
 ## 待办
 
@@ -31,8 +33,8 @@
 - [x] Codex：任务 13，见 [盖面颜色与纹理延续报告](experiments/E02/CAPTEXTURE.md)
 - [x] Gemini：任务 14，见 `tasks/14-gemini-respond-revised-stance.md`（已在 PR #12 留言回应立场修正并审阅任务 13 设计）
 - [x] Claude：审查任务 13 的 PR #14 与任务 14 的 PR #13，均已合并（2026-11-26）
-- [ ] Codex：任务 15，见 `tasks/15-codex-v3-texture-uniform-ring.md`（做完停下等审查）
-- [x] Gemini：任务 16，见 `tasks/16-gemini-beat-all-baselines.md`（已提交 `docs/BEAT_BASELINES_GEMINI.md` 并补录 3 篇核对文献，分支 `gemini/beat-all-baselines`）
+- [x] Codex：完成任务 15。[盖面均匀化与环带横幅报告](experiments/E02/UNIFORM-RING.md)
+- [x] Gemini：任务 16，见 `tasks/16-gemini-beat-all-baselines.md`（已提交 `docs/BEAT_BASELINES_GEMINI.md`）
 - [ ] Claude：审查任务 15 的 PR 与任务 16 的 PR，形成下一轮方案
 - [x] Claude：审查任务 01 的 PR #1（2026-11-24，退回）
 - [x] Gemini：按 PR #1 审查意见完成 4 项必改与 2 项建议修改，并已在 PR #1 逐条回复
@@ -50,6 +52,12 @@
 ---
 
 ## 工作记录
+
+### 2026-11-25 · Codex · 盖面纹理均匀化与环带横幅抑制
+
+- **环带** R1 相对 R0 的单侧下界变化为 +0.0635 / -0.0070（42 / 1234）。保留 R0，两种子均另测 B2-regional-R1。
+- **盖面** 种子 42 比较同环带 G5、U1、U2，锁定 U1 后用种子 1234 复验。
+- **关口** 种子 42 4/5，条带 v1 1.6841（上限 1.2528），未过 条带 v1 与原像素。种子 1234 5/5，条带 v1 1.3032（上限 1.3832）。停在 Step 1，等 Claude 审查。 [盖面均匀化与环带横幅报告](experiments/E02/UNIFORM-RING.md)
 
 ### 2026-11-26 · gemini · gemini/beat-all-baselines（任务 16：全关口超越对手方案研究）
 - **完成**：核查 `stripe-diag.csv`（905 张归档图）、`captexture-stripe-sources.csv`、`results-captexture.csv`、任务 13 样例图与源码（`v3.py`、`v3_attention.py`、`sdxl.py`、`v3_captexture_inject.py`、`b2_controlnet.py`、`b4_paint3d.py`），撰写 [`docs/BEAT_BASELINES_GEMINI.md`](BEAT_BASELINES_GEMINI.md)，并核对补录 3 篇顶会/顶刊文献（Heitz & Neyret 2018、Efros & Freeman 2001、Hertz et al. 2023 Prompt-to-Prompt）至 `literature/papers.csv` 与 `literature/search-log.md`（Q43）。

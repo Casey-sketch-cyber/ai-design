@@ -1,0 +1,27 @@
+protocol: e02-v3-uniform-ring
+seeds: [42, 1234]
+task13_reference: 372fd0ca6170
+negative_suffix: "split panels, stacked horizontal bands, horizontal divider lines, white stripes, frames, borders, collage, grid layout"
+ring_quality_guard:
+  wrap_lb_delta_e00_increase: 1.0
+  wrap_lb_lpips_increase: 0.02
+  clip_score_decrease: 0.02
+  image_reward_decrease: 0.10
+cap_strengths:
+  g5: 0.85
+  u1: 0.85
+  u2: 0.92
+uniform_texture:
+  highpass_sigma_px_at_scale_1: 4.0
+  distance_offset_px: 1.0
+  center_envelope_floor: 0.60
+  phase_lock_px_at_scale_1: 8
+  phase_seed: 15
+  phase_shift_fraction_min: 0.18
+  phase_shift_fraction_max: 0.32
+  coarse_sigma_multiplier: 2.0
+  normal_extension: reflect
+  tangential_extension: reflect_bilinear
+  blend: inverse_distance_l2
+  per_pixel_bound: max_abs_sample
+  envelope: floor_plus_cosine_squared
