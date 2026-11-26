@@ -1,0 +1,171 @@
+{
+  "recipe": "coarse_055",
+  "criterion": "Two or more independent vertically stacked panels separated by a pale or white straight separator.",
+  "seeds": {
+    "42": {
+      "E01-001": {
+        "raw_sha256": "33e46fbd0ccafeddac662c67d8f9d3177e06130f5376e6a62ef037501dbd9a3a",
+        "ring_sha256": "547c7b533a3a32ba3eb6b562d87f88d82d77d259b89d3ee6d5e1179df5ed725f",
+        "run_sha256": "3071b46b41d91cf9f33dae093398d4018512078492ee8349ba548999d74ef6d7",
+        "source_sha256": "83698ca5672a4e18453d11a23cf92b579a64c9364be269fad003ef90ae8a86fb",
+        "review_view": "seed-42/E01-001-42-body.png",
+        "review_view_sha256": "1ca1662d682fa908c022c6b60440b83b42114c8219678c0e688035920536971a"
+      },
+      "E01-002": {
+        "raw_sha256": "75d79dd561d0bf0e85734e3ffa5f74d1b658322f948ef9ef60351cfa9ace809d",
+        "ring_sha256": "af95cc1344e09858ff6506fcbbd5df2b5a6aa2a15171b7b6ff0a33dfe42089f2",
+        "run_sha256": "fd32c9d78c49ae15c90cae71d51eab1523e5f3d3b43f633a729cedc64be1e5a5",
+        "source_sha256": "828f65086ef919ee60d681fcf7c74d0ab5682e99114f3257b2acd062d1d62029",
+        "review_view": "seed-42/E01-002-42-body.png",
+        "review_view_sha256": "fa90176997944ebdb86d01343031a3246bed47bde2261b16c6a37ceded0ac24f"
+      },
+      "E01-003": {
+        "raw_sha256": "ad5953dbe3d602fcd4610e965ce3f8aa6f9eef701147c734cc569a26b5b14d60",
+        "ring_sha256": "e6e29f20bd41d79217f73ac6c2b83d4dfb2ca8ef021c2d3b98bbdcac7b328bd7",
+        "run_sha256": "b23a9baaf7997a62ed21134dff2fdca63caeaf0b7dbd62e6b631333be241d94d",
+        "source_sha256": "7178ce1da5d41d13fa5e78553a8949b6b33363f3b0bf1bc5293fadb587d20a27",
+        "review_view": "seed-42/E01-003-42-body.png",
+        "review_view_sha256": "3b289bd661611c0ebef9545a35de8c2d1792fec806ed9066ff9fd8c7d96a714d"
+      },
+      "E01-004": {
+        "raw_sha256": "4ce631370a96adeaebf999d37170f480ef27d856d583c0efa990e8008ddae9b4",
+        "ring_sha256": "887fc2dc58ad8cd5b5178088fd5a02a1ee426ecfeab7b7734152db75ea6afa26",
+        "run_sha256": "612213d8d381ffa3ed1f1996c79aed0d2e81627894c9d2c57a8f8718c292e9ff",
+        "source_sha256": "1e63943c9b08d89433d70478219ec2415042b712014acb8ee277b8922e1f8d11",
+        "review_view": "seed-42/E01-004-42-body.png",
+        "review_view_sha256": "dd7de5470ea4d2a32996649afa5990bfa0d91da6b272097a127c2e83077b4548"
+      },
+      "E01-005": {
+        "raw_sha256": "a981d03bc2f0fd1b454fa52f3d43c50ed5baac5898d762bc8fdb50b9b1c4c57d",
+        "ring_sha256": "d223d74f1383f1ceb90ce1fcb6ecc30e6278e8124ec371ffd8715768c4e94b7b",
+        "run_sha256": "6f5e5a29118ab98c9cdab68a224bf173763e28e04a8e92cfd82ea07c51c0a812",
+        "source_sha256": "0487d6c03df31c490cfa5c4917436e8fb7637687ca0b5ff8b7e0224b3e8d240e",
+        "review_view": "seed-42/E01-005-42-body.png",
+        "review_view_sha256": "3b51f61a1f11a65bcc7f06603aed4df09417f120a0dd87846f2c302215d9a4dc"
+      },
+      "E01-006": {
+        "raw_sha256": "f08efc6233bfd03a27ed195dd0d26a96964040a49ad321164436cd149051f0b9",
+        "ring_sha256": "567df641e04c60ed57e1c4c82b025c0b214f7f62141a32757c713b8a732481d1",
+        "run_sha256": "ca11993665052458a717f8b6cbc2b68b3c5bacce083cce89285fe87bcd8c7412",
+        "source_sha256": "d3b7fcc186d5e524ecbf42a7dfca71c0ece8e679e8250ab939a2b933d7080fde",
+        "review_view": "seed-42/E01-006-42-body.png",
+        "review_view_sha256": "5b0254d672a93063222f490136af03fb284265a1f0a6f64e9a15d9eda114f235"
+      },
+      "E01-007": {
+        "raw_sha256": "10ad8c660afc23f627a91a209cd27c9a54f56eb066ab5d8d7c72a3d5f664478c",
+        "ring_sha256": "9879eff86658c047c18be0b2f587cbb0b84b820b54f7fb9870349c0552c756d6",
+        "run_sha256": "86d3dcbf4846cf82b45e80ad4c56f5f8ed59c1caeeaed28455ad1f6ba07f076e",
+        "source_sha256": "185f7c9eb4aa4d405fe798b2b89d8da87f26e157e291229329031416cb70217f",
+        "review_view": "seed-42/E01-007-42-body.png",
+        "review_view_sha256": "7db034c41e62fa8a9f7232f4af230bc9db3284bff724b4f1edc17093d6b579f1"
+      },
+      "E01-008": {
+        "raw_sha256": "0082a865faf16c7fbd96c8e73f885c6a7de34f8c41437819797524c5cb16069e",
+        "ring_sha256": "9272be5255463bd8fd2fc625f25ab43389161f2866f6cbec28974ea15ade38a3",
+        "run_sha256": "73d688619d96c1d01e05029b36295a9ecb7e9ad7af4252cdb661d11ccdfcb9c5",
+        "source_sha256": "cddf1745ff1100a429ab6483eb706c4e23f385b09981b908cbdb9b5827f4857c",
+        "review_view": "seed-42/E01-008-42-body.png",
+        "review_view_sha256": "5c50254723134d8106fbb2fe6620a27562ac4a4e62d2bc9ca42363e676218b2b"
+      },
+      "E01-009": {
+        "raw_sha256": "b07415968d3dd0f6b456ca316e105fc3d63497d089a73c05b0a279a101118b28",
+        "ring_sha256": "53513da2499b37a6b03eab832119244689ef3124844de6ebd8410abdfb6fcb83",
+        "run_sha256": "37fbcb71b57eca32fa6450c30bb261cf3378462a8a5278690d32d6312a6d76a1",
+        "source_sha256": "c32b27e761ee46fd877774d46dade79d685dfb66ad6b430644926794a9042ef2",
+        "review_view": "seed-42/E01-009-42-body.png",
+        "review_view_sha256": "a502677d7d00ca76998cacd07962adcb9e0de82282b7932b124cc387d979dfc3"
+      },
+      "E01-010": {
+        "raw_sha256": "1e55c84856317c24659d36210c2c0d1fdd5d448b555e4469b52f63c6d5e00d5e",
+        "ring_sha256": "1514354a6cc099185c220d5b79e8103a7117a94eb03ce463747609e8933f4305",
+        "run_sha256": "38b98c2129e114639943e1aca6cc5af8c1acdebf6a92716aa1bf2448e9852b54",
+        "source_sha256": "710506dfeb7416c52cdde72af6cadfbb1072a0cacfe032fca4be4c07f4d035e1",
+        "review_view": "seed-42/E01-010-42-body.png",
+        "review_view_sha256": "4db01eb82966495448a3006d369c24cb5986dc5089925078b1b3de276342cb5f"
+      }
+    },
+    "1234": {
+      "E01-001": {
+        "raw_sha256": "1592b22c750206745cbcc6fabf8ad07adc811721c3ea55266f17d6be2fb20998",
+        "ring_sha256": "08742c9df5779a50137616f2d46be02b63e648a5cb0b438c167ba77d833891df",
+        "run_sha256": "de80b252cfec0937e9ca23a2a6f3f37937231e497de47c2575e860107505a062",
+        "source_sha256": "47632de9ff28461b3be2050b5a4ea4182b6313cad801e9e4804190e96d21b355",
+        "review_view": "seed-1234/E01-001-1234-body.png",
+        "review_view_sha256": "94cbe02e2d90dd2dbac54433d7e7cc2333c80c2c6e8218a45249c711e8c788cd"
+      },
+      "E01-002": {
+        "raw_sha256": "42843669f7cba7aabf9c5563129ff9636cfbaf4d9bdbb614a2611de1a19cdacc",
+        "ring_sha256": "ef3a1e28ba6cd677c9af24307a0ecb98d7f5ece2d20afb732148d8edecb45096",
+        "run_sha256": "d3566c41e40abf331f8f2f87be30995d45c76ec798214dff46ef038bb95571e8",
+        "source_sha256": "a4ff00517a6ca8168f3265118c108ff9582d8da87de0a5867f16629726634e2e",
+        "review_view": "seed-1234/E01-002-1234-body.png",
+        "review_view_sha256": "150c62670dc42070e20b5ceb870c474c45ac254cdfebf219bdfe70e968be83d3"
+      },
+      "E01-003": {
+        "raw_sha256": "75722e91e484518f8308a528f9a392dfe979179c8aa1c04dd7f5549b553ea04c",
+        "ring_sha256": "e27f7da301118c238be14e64fe84b32b974202dd075686cb1d962bce6142e5e6",
+        "run_sha256": "ee0d5387f58963dac762a4e6e51f285eb43b049b74c9bd7e15e006d35b3b6dfd",
+        "source_sha256": "c1cc5dd15a4529cbbee3be4b34f8abadb83f64aeebf786e3497d63d1b08f5963",
+        "review_view": "seed-1234/E01-003-1234-body.png",
+        "review_view_sha256": "a49058e00a74befc97a442bdf2795bdb995e3a85d632a4474c96c6dcab6ce244"
+      },
+      "E01-004": {
+        "raw_sha256": "be6e79bbf206abd593ad927d73160f41cac2afefe331230e962117653fd7c0c3",
+        "ring_sha256": "1199d88a8083dc59f076a8d88bd584ea01052ecfc510ea4b66afe756f3f5ed47",
+        "run_sha256": "1ea513e1f9e5ef9b0e75713cf6ce3de9103a29735400a2393ee829750e6452f8",
+        "source_sha256": "7980acb4c898dbd723615e9baa4a61ab46ed815915e4f5a438a230e92b4f92a8",
+        "review_view": "seed-1234/E01-004-1234-body.png",
+        "review_view_sha256": "356cba8f88a4c59168ca4f1e66ce47ec5491aee90aa9be0b806a1d5ce220e737"
+      },
+      "E01-005": {
+        "raw_sha256": "42339ce8a9ba63abfbdd2bf480a7fe0560f07b8bc71d199f310b33271f5ff4c7",
+        "ring_sha256": "64bc6d36e192151c47c97dd9fbfd63c64eff50f84970c09334f38e131c982976",
+        "run_sha256": "2821714a63477f9085c65edc2f8613b650ca037243bd7fdc95c5f9c0d3b5dcc5",
+        "source_sha256": "eb1042618762030dae324b3f9e191da87edc9295a582364ef1b4cf2c452d3b7c",
+        "review_view": "seed-1234/E01-005-1234-body.png",
+        "review_view_sha256": "506a8442620cd1701d6a6bc158ca4e43a9641339c1658d14bfbe63009eead7b1"
+      },
+      "E01-006": {
+        "raw_sha256": "eecc5db48345643276c8afffa519c950a3d7e0ed30a79eb379537f21a964b6ff",
+        "ring_sha256": "7601a5ad4372a4a728efc4a66f8ddd1eb749759e5117c50a678833fec6be21f9",
+        "run_sha256": "5496c5a6062e4069268703ff3165dfd3392b1036d94fb8fa957af1444326c20d",
+        "source_sha256": "471718a2f3584ac798084d41631bfc81832373cacccb2e531223800e3517387d",
+        "review_view": "seed-1234/E01-006-1234-body.png",
+        "review_view_sha256": "32b14f4f61f85995bd14b26468a34c9561785003878c8a7b476428129838c54e"
+      },
+      "E01-007": {
+        "raw_sha256": "b007cbeccf92e09fa86b33e21c8e3a25ec1215e7132dc905e4636870e12dcc74",
+        "ring_sha256": "cc811ea7fb315274c30ead3714a4173a44bce4415a780f095519e3dbc4fa5bcb",
+        "run_sha256": "d6bd13f418c3dd0374fe029ccadae8d059efc1cf73498d4db0d18bbc459a1033",
+        "source_sha256": "14dc8b6f58ed97a2b611c8eee422179704aa8f59358d456bc78828490aba6429",
+        "review_view": "seed-1234/E01-007-1234-body.png",
+        "review_view_sha256": "730edf3ce320af12a3069e92ad140baa966a6ff2dd582b2ffae6897f58cee286"
+      },
+      "E01-008": {
+        "raw_sha256": "5398d81c3cae9a4e70a0d9a09bd349728d3933261562036feb8c36140e13c38f",
+        "ring_sha256": "aeb8024f50ba4a290c5615818cfbaa0d0e98e2d2020d5781fe55e5e7039ef48e",
+        "run_sha256": "7e68e52cafd32495fcffb324f7d290597b2f4059ae327849c270bcee913bc18d",
+        "source_sha256": "7434e64b10943c843f9d56665d6150cf5b9babf26463a9e76fb57df87e4f9d4f",
+        "review_view": "seed-1234/E01-008-1234-body.png",
+        "review_view_sha256": "8a5df19d5bd3b22acd4c5a4c48fc5240721493a877d2bf0d8057d34497915ca1"
+      },
+      "E01-009": {
+        "raw_sha256": "ecb509b6f6713ef49f79bd06fe5601d32487a52067284560f7f477651edadb5a",
+        "ring_sha256": "13866a618b587e5c230090aaba744de624ed6c5a14f29b6d8b4406d4ab4439a2",
+        "run_sha256": "ff72ee49ed714138b008dd1cc2ba85c92ec55c5191f139fcaf963149dca0eada",
+        "source_sha256": "57861020da1af1dc4e9ecacf853a8c5abbccfed0a2a9113030b8116569d1b9ae",
+        "review_view": "seed-1234/E01-009-1234-body.png",
+        "review_view_sha256": "470b622deb1e0d8b089044abe621b7014816a2086de739c160a95a5705e3cc28"
+      },
+      "E01-010": {
+        "raw_sha256": "aedd0d8d6b45b1c0cf00052f5e92fe8f77b2f6db99492af5c6d3c3311c0b091e",
+        "ring_sha256": "8c426444ade1183d0016dc79f270826d3bc75f44f776afb81ba9c8983eee08d5",
+        "run_sha256": "4d131f5df0a81b8497740be76899efc180ba645d33433dc22db86f3e4f3ee2e9",
+        "source_sha256": "61c396e81b68b78d3293b8a8768ad382cfc0317980085ada3562996553102fa0",
+        "review_view": "seed-1234/E01-010-1234-body.png",
+        "review_view_sha256": "c4d9209d9cb804d0a46a1aeecbc590dbd456a09547bca6a6647dee23e64a9d44"
+      }
+    }
+  },
+  "fingerprint": "27ad327872bb80773237c609af100b7ebfbf0054fe7f9217fad11c8450f7c8b9"
+}

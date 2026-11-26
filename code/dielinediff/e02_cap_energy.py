@@ -24,7 +24,7 @@ TASK17_METHOD = "u1_sigma28"
 
 
 class Experiment:
-    def __init__(self, root, config=CONFIG):
+    def __init__(self, root, config=CONFIG, *, namespace="cap-energy", identity_extra=None):
         self.root = Path(root).resolve()
         self.config = yaml.safe_load(config.read_text(encoding="utf-8"))
         if (self.config["protocol"] != "e02-v3-cap-energy" or self.config["seeds"] != list(SEEDS)
@@ -75,7 +75,8 @@ class Experiment:
                     "original_inputs_sha256": file_hash(self.original / "inputs.json"),
                     "task17_inputs_sha256": file_hash(self.previous17 / "inputs.json"),
                     "task17_selection_sha256": file_hash(old)}
-        self.output = e02 / "cap-energy/runs" / stable_hash(identity)[:12]
+        identity.update(identity_extra or {})
+        self.output = e02 / namespace / "runs" / stable_hash(identity)[:12]
         self.output.mkdir(parents=True, exist_ok=True)
         write_json(self.output / "inputs.json", identity)
         self.samples = partial(sample_caps, self)

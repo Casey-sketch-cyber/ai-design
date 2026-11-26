@@ -1,0 +1,131 @@
+{
+  "comparative_candidate": "j3_g030",
+  "selected": null,
+  "comparative_titles": [
+    "B2-regional",
+    "J0 / Task 17",
+    "J3_G030 (rejected)"
+  ],
+  "seeds": {
+    "42": {
+      "comparisons": {
+        "E01-003": {
+          "file": "seed-42/E01-003-comparison.jpg",
+          "lids": "seed-42/E01-003-lids.png",
+          "lids_sha256": "7d2c618f3d2f5d560db39b25f82e92aa995cd51b7f9a050ae66a867b34f345af",
+          "sources": [
+            {
+              "raw_source": "/root/autodl-tmp/ai-design/outputs/e02/step1/c6bb770094d3/b2_regional/E01-003-42.png",
+              "raw_sha256": "ee204e998acd358995a875c41a8faba3cef05b1d74026c8f900a9e760e741180",
+              "preflight_source": "/root/autodl-tmp/ai-design/outputs/e02/step1/c6bb770094d3/evaluation/b2_regional/E01-003-42.preflight.png",
+              "preflight_sha256": "d028fff04b149d8671f2127a0add1e8bbc686113ac354b8d7926999d9d14bc70",
+              "score_sha256": "e15fa958e4c3b152701d7310052cb535e8657b5172e53fd8b6ce515e7bf0b858"
+            },
+            {
+              "raw_source": "/root/autodl-tmp/ai-design/outputs/e02/ring-m2m3/runs/c5b232622150/u1_sigma28/E01-003-42.png",
+              "raw_sha256": "0f09d6bbce374a5e8df6a15c11b601fd90d990f003a287d43cea85f4a7962b66",
+              "preflight_source": "/root/autodl-tmp/ai-design/outputs/e02/ring-m2m3/runs/c5b232622150/evaluation/u1_sigma28/E01-003-42.preflight.png",
+              "preflight_sha256": "56ff93dbf6bc714a04226925b1b26304f6823740a2109ffea34848f09b6aba8c",
+              "score_sha256": "3a495af57b058b0953f273c754310ae2f7a5e7dd4a93807ea9adcf138180fb4b"
+            },
+            {
+              "raw_source": "/root/autodl-tmp/ai-design/outputs/e02/joint-cap/runs/3411a058f0e6/j3_g030/E01-003-42.png",
+              "raw_sha256": "e7bdf9ce426e6d52df37be084c5d318af4560f82121c8975aa54ca87210bc1bb",
+              "preflight_source": "/root/autodl-tmp/ai-design/outputs/e02/joint-cap/runs/3411a058f0e6/evaluation/j3_g030/E01-003-42.preflight.png",
+              "preflight_sha256": "b2ae9de2134c8c3645b8c2788b633d9635454a0eb62c3716d9a17e18cb143a32",
+              "score_sha256": "bc29ef78397c6350c849c28043925b6e068dd47cad5af1ca79dee63201360596"
+            }
+          ]
+        },
+        "E01-007": {
+          "file": "seed-42/E01-007-comparison.jpg",
+          "lids": "seed-42/E01-007-lids.png",
+          "lids_sha256": "03df99bc92b259158b5d6e372619dd3c233283ca363f32b934d722939920bd32",
+          "sources": [
+            {
+              "raw_source": "/root/autodl-tmp/ai-design/outputs/e02/step1/c6bb770094d3/b2_regional/E01-007-42.png",
+              "raw_sha256": "fce190b6fe55bc4fe7c56bbe6a71a76868fd0ab231492ed7d691fd9cb66420b4",
+              "preflight_source": "/root/autodl-tmp/ai-design/outputs/e02/step1/c6bb770094d3/evaluation/b2_regional/E01-007-42.preflight.png",
+              "preflight_sha256": "ec3dac8af6e7e28217ade84e2189bd7ad5fbdcb593a867b7baea4f4d585354ff",
+              "score_sha256": "290c498b7713097e34d3c05996a4d973b6ee99d6bac30ee35c7f62423602f9b1"
+            },
+            {
+              "raw_source": "/root/autodl-tmp/ai-design/outputs/e02/ring-m2m3/runs/c5b232622150/u1_sigma28/E01-007-42.png",
+              "raw_sha256": "2de1ba1c8d46ba28a500643f9813a465b1e311f4243b5a8311d378fe46b65c73",
+              "preflight_source": "/root/autodl-tmp/ai-design/outputs/e02/ring-m2m3/runs/c5b232622150/evaluation/u1_sigma28/E01-007-42.preflight.png",
+              "preflight_sha256": "34320be129e5b3153d6148697c50ac9ff2c9a5a664af9f13e4ac696317e9ef1e",
+              "score_sha256": "b034c26159ce5ef06118584d1c095b32431303d4415510da782b9b85d1fcca23"
+            },
+            {
+              "raw_source": "/root/autodl-tmp/ai-design/outputs/e02/joint-cap/runs/3411a058f0e6/j3_g030/E01-007-42.png",
+              "raw_sha256": "8d144e4f7a8e0114c536e264790fa16de1bab980c8d87685e90793aa473d1fc2",
+              "preflight_source": "/root/autodl-tmp/ai-design/outputs/e02/joint-cap/runs/3411a058f0e6/evaluation/j3_g030/E01-007-42.preflight.png",
+              "preflight_sha256": "01d6e91e6a703a0a60bcb82c3843d26f4eff530a6d9138a60e1559d63874ae41",
+              "score_sha256": "1d3b0c733b427d9a608bc8ea50afba4858ac384da5cf24378ef45d6254622b4f"
+            }
+          ]
+        },
+        "E01-009": {
+          "file": "seed-42/E01-009-comparison.jpg",
+          "lids": "seed-42/E01-009-lids.png",
+          "lids_sha256": "c96a218af052cd9c8b1b5d42a640884656d27b82b28794ddd3256f00466cd1eb",
+          "sources": [
+            {
+              "raw_source": "/root/autodl-tmp/ai-design/outputs/e02/step1/c6bb770094d3/b2_regional/E01-009-42.png",
+              "raw_sha256": "f21d6c4bac497dc481f8a973f6cc583a87e726eb7f040c533281379445c4df0e",
+              "preflight_source": "/root/autodl-tmp/ai-design/outputs/e02/step1/c6bb770094d3/evaluation/b2_regional/E01-009-42.preflight.png",
+              "preflight_sha256": "906597dfd186d5d90f17db795cde20e063794a3441f4f409824e5e32511d1cd8",
+              "score_sha256": "4eec8ead4edc37ca7d86df44df5ac41f8291dd8db102038cc337ff39948ee543"
+            },
+            {
+              "raw_source": "/root/autodl-tmp/ai-design/outputs/e02/ring-m2m3/runs/c5b232622150/u1_sigma28/E01-009-42.png",
+              "raw_sha256": "f570fe878c4f56a6def3cfe2a5b2d05f6bc5efa8dbbd69c968ea4fb6fef74381",
+              "preflight_source": "/root/autodl-tmp/ai-design/outputs/e02/ring-m2m3/runs/c5b232622150/evaluation/u1_sigma28/E01-009-42.preflight.png",
+              "preflight_sha256": "238b552a2940f7cfc6bdfa9b981042d1c9b0404e4f6a0232009180be1a0b4b75",
+              "score_sha256": "25f174e81a56a42cd8a2c2acf160da8566444e20ac696c0c46269439910f1b9b"
+            },
+            {
+              "raw_source": "/root/autodl-tmp/ai-design/outputs/e02/joint-cap/runs/3411a058f0e6/j3_g030/E01-009-42.png",
+              "raw_sha256": "f8b1fe22ce3f6816f068e389f54e2d1070884bf7875ed0630f6f9ed8474de43c",
+              "preflight_source": "/root/autodl-tmp/ai-design/outputs/e02/joint-cap/runs/3411a058f0e6/evaluation/j3_g030/E01-009-42.preflight.png",
+              "preflight_sha256": "8aa592cc4dbe303ee28c301aea29622f900a40006a94da989421befcacceae08",
+              "score_sha256": "3ef0e6633d80ae0bffde5f77c8ace374ec6c1efb477f6ce66a9ca87d7bfcd0f7"
+            }
+          ]
+        }
+      },
+      "native_folds": {
+        "E01-003": {
+          "file": "seed-42/E01-003-folds.png",
+          "sha256": "7fae037dbdb911f5e0d4582cdedfaabcd1b25c6b0add8708d02b7c4dd0543513"
+        },
+        "E01-007": {
+          "file": "seed-42/E01-007-folds.png",
+          "sha256": "51f1953044e86daf732baf1ae919c9ecd158f3d451e999bc601d81ae1a4d9e69"
+        },
+        "E01-009": {
+          "file": "seed-42/E01-009-folds.png",
+          "sha256": "d45f7044ff497cdc2f163ecc95fed56791e18a08e4188b2645bd457cda61083a"
+        }
+      }
+    },
+    "1234": {
+      "comparisons": {},
+      "native_folds": {
+        "E01-003": {
+          "file": "seed-1234/E01-003-folds.png",
+          "sha256": "2d511e2ebaee3b22bb7376dd41e7ca6b6278d1e5e6a8313a3c4b031c25a07767"
+        },
+        "E01-007": {
+          "file": "seed-1234/E01-007-folds.png",
+          "sha256": "f928838bafcd9e098491accaafe66d55de74bfb98222993706d11ca1de429d76"
+        },
+        "E01-009": {
+          "file": "seed-1234/E01-009-folds.png",
+          "sha256": "89cb1423cb454123172ce8d09fdf593da6e40b9ae9387a7a987f35d1199e95ec"
+        }
+      }
+    }
+  },
+  "geometry_sha256": "d09c45f26f91b6374e40d708fc0748e7194eb41293ed7274c29fb74b4dd0b616"
+}

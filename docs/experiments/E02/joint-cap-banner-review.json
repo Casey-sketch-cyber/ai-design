@@ -1,0 +1,329 @@
+{
+  "coarse_047": {
+    "fingerprint": "f809ce02f4a5a7b820f3f5274c1a7ea632fe8084843352ddccfe3bf913628a2b",
+    "seeds": {
+      "42": {
+        "E01-001": {
+          "stacked_banner_white_line": true,
+          "notes": "数段红橙山景与青绿山景垂直堆叠，近中高位置有沿直线延伸的浅灰绿分隔，另一侧的山缘和植被原本连续的笔触明显被切断。",
+          "ring_sha256": "bcc4c5c07c6dfc965327a86e4de129cb7a4019aa40700c9d0324f7c3f525d075"
+        },
+        "E01-002": {
+          "stacked_banner_white_line": false,
+          "notes": "橙色和蓝绿色山体随坡线交错跨越画面，浅色山脊随轮廓起伏。",
+          "ring_sha256": "f23cc9621e33b3d10290d528bbb2532f0e575ee487415c5a4f4beb375a36cf21"
+        },
+        "E01-003": {
+          "stacked_banner_white_line": false,
+          "notes": "若干水平边界较直，主要由深青线分开。浅青水面和米白滩形宽窄不一并随地貌弯折。",
+          "ring_sha256": "fa102d046284df32df9efaa04a5fae49d614a49b8769813ea295bda581ed0d44"
+        },
+        "E01-004": {
+          "stacked_banner_white_line": true,
+          "notes": "上部与下部花卉由数段平直的奶白色分隔相接，画框边截断花梗和叶片，横向叠置不同花幅清晰。",
+          "ring_sha256": "025555f110c68871526e94694eb36753e66aadc726b3ad954b69a17312bff7fc"
+        },
+        "E01-005": {
+          "stacked_banner_white_line": false,
+          "notes": "木段在统一浅灰底上分行排列，有细深描线与局部网格框，浅色间隔延续原背景。",
+          "ring_sha256": "523d579b91dd52ad2858b505dfbea7c542a97df01d2ef63d54f950afe9fb6e3b"
+        },
+        "E01-006": {
+          "stacked_banner_white_line": false,
+          "notes": "黄绿坡线和树丛上下交错，浅色块的边缘随地形斜行、出入画面。",
+          "ring_sha256": "9abe800c1517e9307df5f7645e1178c9eaac6bcbb38bab76268b108840b410d7"
+        },
+        "E01-007": {
+          "stacked_banner_white_line": false,
+          "notes": "山脊以连续的波形交错，米白色集中在不规则的山体亮面。",
+          "ring_sha256": "8d3c512ca64125bc204697abe559688fced630e71bd62d1a72cecc8b8b4e06b7"
+        },
+        "E01-008": {
+          "stacked_banner_white_line": true,
+          "notes": "红色枝叶与青色山景分成多个上下矩形段，右半部的奶白横带与两条近水平切边清楚地截断景物。",
+          "ring_sha256": "833e89ac751e28cc47aa2d13304378a140f3563f4de06558c239f5b7dc9da7e6"
+        },
+        "E01-009": {
+          "stacked_banner_white_line": false,
+          "notes": "橙青坡地和林线从一处连续伸至另一处，白色区域属于起伏的山坡。",
+          "ring_sha256": "942bf22fe669b0e4e6c1e7bc11db808ad6cc9520af89aedab2ff968ffbb3cbdc"
+        },
+        "E01-010": {
+          "stacked_banner_white_line": false,
+          "notes": "粉色底上有分散的树、建筑、食物轮廓和小型描线框，浅色附着于图案边缘。",
+          "ring_sha256": "a89ffecf1aeba2b22fcff931962a5d53e1ab9e565edef151786f775cfbe32dae"
+        }
+      },
+      "1234": {
+        "E01-001": {
+          "stacked_banner_white_line": false,
+          "notes": "环带上缘只保留一条被裁截的花纹片，下方是较宽的浅灰绿色陈列底及错列图文卡片。原像素中浅底是一段宽留白，未隔开两幅完整横向画面。",
+          "ring_sha256": "74a90d0b8ef76987cd760859542425f3d0705d5011e10b5a5becff6d1f49e69b"
+        },
+        "E01-002": {
+          "stacked_banner_white_line": false,
+          "notes": "谷穗标签和山景以高低不齐的竖幅卡片陈列，上缘有被截断的另一排卡片。浅蓝灰空隙环绕各卡并转入竖向空隙，未形成带浅直线分隔的完整上下横幅。",
+          "ring_sha256": "4a123d348f6d9a82529adb7927609457472d999524f5274293a42330c967e304"
+        },
+        "E01-003": {
+          "stacked_banner_white_line": false,
+          "notes": "顶缘裁下一小段花纹，中间宽浅绿色带带有仿字，下方是稻田、水面及大小不同的竖向裁片。原像素复核确认浅带上方只是画面残边，未出现独立完整的第二段横幅。",
+          "ring_sha256": "1aeee9c0fcc4729d6963e474f79025b32279e4db9eb02a127d0c2433f7522f63"
+        },
+        "E01-004": {
+          "stacked_banner_white_line": false,
+          "notes": "带阴影的竖向花卉图卡陈列在同一灰底上。中部看似横向的空隙在右侧被高卡截断，原像素可见间隙与竖向卡间留白相通，未隔开两张独立横向画幅。",
+          "ring_sha256": "d68bf9283fef1da20c34afb8b876f48bbf82fa186dd39535c6b9667da99dd3a5"
+        },
+        "E01-005": {
+          "stacked_banner_white_line": false,
+          "notes": "菌菇、木料和圆柱包装样机分散于同一浅色背景上，有个别重叠与对象重复。空隙绕物件变化，未见浅直线分隔上下独立横幅。",
+          "ring_sha256": "01beafef168e733fa885b5deb6a34db773dcb32480dfcda929a6bd7a2dadd04f"
+        },
+        "E01-006": {
+          "stacked_banner_white_line": false,
+          "notes": "果实、花枝和文案标签成错位的竖向窄幅拼版，图块在不同高度交界。未见贯通浅直线隔开独立上下画幅。",
+          "ring_sha256": "bca9b395604cc5e992b3016c36d24171bc9409088d0f1d3c369f96ddd8ca54f0"
+        },
+        "E01-007": {
+          "stacked_banner_white_line": false,
+          "notes": "谷物包装图卡分组陈列在灰底上。原像素中横向空隙沿各图卡外缘改变宽度，较高的右侧图卡跨过左右卡群的排间，不构成上下完整横幅的浅直分隔。",
+          "ring_sha256": "3830ac48000aba87eb4cdf6758f15a868dc995c1facc81db12940189a9dea4eb"
+        },
+        "E01-008": {
+          "stacked_banner_white_line": false,
+          "notes": "红果簇、白花和蓝绿叶枝在同幅浅底中彼此穿插，纹理连续越过不同高度。未见独立横幅或浅色直分隔。",
+          "ring_sha256": "578e71bd6fcd7aa0e46a4c34d083872fbdcc46d6bf89557933ec7e9516ccf867"
+        },
+        "E01-009": {
+          "stacked_banner_white_line": true,
+          "notes": "环带中上部和中下部各有独立花田横幅，横跨多侧的浅绿及白色直线将两幅花田分开。原像素复核见连续白线位于盒身裁片 y 约 445–455 像素，且下方还有一处浅绿横向分隔。",
+          "ring_sha256": "b9ad8268d9c4fda8f4510ed76c6325f111d66834e26b0d783c17d5379fc939ff"
+        },
+        "E01-010": {
+          "stacked_banner_white_line": false,
+          "notes": "橙叶树冠、鸟类和林间印刷图卡在同一灰底上错落陈列，卡片轮廓按各自内容终止。未见浅直线分隔两幅完整上下横画。",
+          "ring_sha256": "301c1e14a8f684ae4dc46667b8ea0c7b2f124af61f8d0062b3248e7d1acc0fd9"
+        }
+      }
+    }
+  },
+  "coarse_055": {
+    "fingerprint": "27ad327872bb80773237c609af100b7ebfbf0054fe7f9217fad11c8450f7c8b9",
+    "seeds": {
+      "42": {
+        "E01-001": {
+          "stacked_banner_white_line": true,
+          "notes": "暖色山体、青绿色山景和下一层红松景物在平行高度截开，浅灰绿色沿上下画幅交界横贯。",
+          "ring_sha256": "547c7b533a3a32ba3eb6b562d87f88d82d77d259b89d3ee6d5e1179df5ed725f"
+        },
+        "E01-002": {
+          "stacked_banner_white_line": false,
+          "notes": "红橙与青色山峰层层衔接，白色沿弧状山脊和不同高度的坡面走。",
+          "ring_sha256": "af95cc1344e09858ff6506fcbbd5df2b5a6aa2a15171b7b6ff0a33dfe42089f2"
+        },
+        "E01-003": {
+          "stacked_banner_white_line": false,
+          "notes": "环带有暗青色平直分段。分段附近的浅水面和白色沙洲仍随地貌曲线演变。",
+          "ring_sha256": "e6e29f20bd41d79217f73ac6c2b83d4dfb2ca8ef021c2d3b98bbdcac7b328bd7"
+        },
+        "E01-004": {
+          "stacked_banner_white_line": true,
+          "notes": "上下花卉画片由近水平的乳白空带相隔，花梗和几处画框被同一高度的浅色间隔截断。",
+          "ring_sha256": "887fc2dc58ad8cd5b5178088fd5a02a1ee426ecfeab7b7734152db75ea6afa26"
+        },
+        "E01-005": {
+          "stacked_banner_white_line": false,
+          "notes": "木材个体在统一米灰底上按行分布，横界表现为深色细描线，灰底贯通其上下。",
+          "ring_sha256": "d223d74f1383f1ceb90ce1fcb6ecc30e6278e8124ec371ffd8715768c4e94b7b"
+        },
+        "E01-006": {
+          "stacked_banner_white_line": false,
+          "notes": "黄绿色丘陵及橙色草地上下交错，白亮块沿坡面形成深浅有变的曲线。",
+          "ring_sha256": "567df641e04c60ed57e1c4c82b025c0b214f7f62141a32757c713b8a732481d1"
+        },
+        "E01-007": {
+          "stacked_banner_white_line": false,
+          "notes": "成组山脊呈波状或折曲相连，浅亮区域高度随山势变化。",
+          "ring_sha256": "9879eff86658c047c18be0b2f587cbb0b84b820b54f7fb9870349c0552c756d6"
+        },
+        "E01-008": {
+          "stacked_banner_white_line": true,
+          "notes": "花枝与蓝绿远山各成横向矩形画幅，右半部分别被两个较平直的浅色带分开，图形在同一高度截断。",
+          "ring_sha256": "9272be5255463bd8fd2fc625f25ab43389161f2866f6cbec28974ea15ade38a3"
+        },
+        "E01-009": {
+          "stacked_banner_white_line": false,
+          "notes": "平缓的橙绿丘陵从左向右穿过不同区域，亮处与树群、坡线连接。",
+          "ring_sha256": "53513da2499b37a6b03eab832119244689ef3124844de6ebd8410abdfb6fcb83"
+        },
+        "E01-010": {
+          "stacked_banner_white_line": false,
+          "notes": "粉色底上树、建筑与小物轮廓散排，白亮块随图形描边分布。",
+          "ring_sha256": "1514354a6cc099185c220d5b79e8103a7117a94eb03ce463747609e8933f4305"
+        }
+      },
+      "1234": {
+        "E01-001": {
+          "stacked_banner_white_line": false,
+          "notes": "上沿下约42原像素结束第一条裁剩花片，其下为宽而平的浅青背景横槽。上方只有截剩的花叶及边缘，下方是山形和文字卡拼排，未形成两幅完整上下横幅。已查上沿原像素。",
+          "ring_sha256": "08742c9df5779a50137616f2d46be02b63e648a5cb0b438c167ba77d833891df"
+        },
+        "E01-002": {
+          "stacked_banner_white_line": false,
+          "notes": "山形与谷物卡片错列，顶部横槽上只有被裁掉的大张印件底端，局部卡片之间有浅色间隙，未见独立上下画幅及贯通分隔线。",
+          "ring_sha256": "ef3a1e28ba6cd677c9af24307a0ecb98d7f5ece2d20afb732148d8edecb45096"
+        },
+        "E01-003": {
+          "stacked_banner_white_line": false,
+          "notes": "上沿只有花色残片和浅青字带，主体稻田、水面与花卡由错位竖向边界区分，未见另一完整横排画面。",
+          "ring_sha256": "e27f7da301118c238be14e64fe84b32b974202dd075686cb1d962bce6142e5e6"
+        },
+        "E01-004": {
+          "stacked_banner_white_line": false,
+          "notes": "多张植物画印件像卡片墙一样拼排，底行的浅色空隙在大张前景卡处中断，顶部仍是裁剩卡片，未见两幅独立上下横幅。",
+          "ring_sha256": "1199d88a8083dc59f076a8d88bd584ea01052ecfc510ea4b66afe756f3f5ed47"
+        },
+        "E01-005": {
+          "stacked_banner_white_line": false,
+          "notes": "插画主体是浅底上散排的圆木、坚果和圆筒，物件疏密有变化，未见浅色直线分隔的独立上下画面。",
+          "ring_sha256": "64bc6d36e192151c47c97dd9fbfd63c64eff50f84970c09334f38e131c982976"
+        },
+        "E01-006": {
+          "stacked_banner_white_line": false,
+          "notes": "柑橘、花叶和标贴为竖向错落拼排，局部浅色横边属于文字标块或卡片轮廓，未形成横跨独立上下画幅的分隔线。",
+          "ring_sha256": "7601a5ad4372a4a728efc4a66f8ddd1eb749759e5117c50a678833fec6be21f9"
+        },
+        "E01-007": {
+          "stacked_banner_white_line": false,
+          "notes": "谷物题材各印件有清晰边缘和浅灰间隔，上行上沿被裁，较低的卡片横缝被右侧较长卡片截断。未见浅直线隔开两幅独立完整横幅。",
+          "ring_sha256": "cc811ea7fb315274c30ead3714a4173a44bce4415a780f095519e3dbc4fa5bcb"
+        },
+        "E01-008": {
+          "stacked_banner_white_line": false,
+          "notes": "红果与白花生长在连续浅底上，叶茎斜向穿过多处留白，未见独立分层或浅色水平直分隔。",
+          "ring_sha256": "aeb8024f50ba4a290c5615818cfbaa0d0e98e2d2020d5781fe55e5e7039ef48e"
+        },
+        "E01-009": {
+          "stacked_banner_white_line": true,
+          "notes": "两套横贯主体宽度的分隔带把黄白花田、另一幅山坡花田及下方粉花画面分开。核对原生环带 y约427–454 的浅绿/白直带及 y约749–779 的浅青直带，二者均左右贯通，属于独立横幅分隔。",
+          "ring_sha256": "13866a618b587e5c230090aaba744de624ed6c5a14f29b6d8b4406d4ab4439a2"
+        },
+        "E01-010": {
+          "stacked_banner_white_line": false,
+          "notes": "枝叶大图和多张鸟类印件在相互错落的高度交叠，浅色边缘沿物件或单张印件走向，未见贯通的水平直分隔形成独立上下横幅。",
+          "ring_sha256": "8c426444ade1183d0016dc79f270826d3bc75f44f776afb81ba9c8983eee08d5"
+        }
+      }
+    }
+  },
+  "redilation": {
+    "fingerprint": "edd2956c29586ad201e174a532c0008c0ce97ac2038e980394434d2d440b0879",
+    "seeds": {
+      "42": {
+        "E01-001": {
+          "stacked_banner_white_line": false,
+          "notes": "浅灰绿谷地的宽度和高度随坡面变化，局部树、村舍和雪线跨过边界，上下景物相接。",
+          "ring_sha256": "e6ee5712808c8ba7f92a73e17700b295c2e9c5c3aad380368a250c22ae9cb44d"
+        },
+        "E01-002": {
+          "stacked_banner_white_line": false,
+          "notes": "米橙色山脊和青绿色坡地连续交错，白色随峰形和雪线高低变化。",
+          "ring_sha256": "442ce1b9a2c4e2251506a6d856983b939dda0d7a51cb1c4d430ccfad3e3daf18"
+        },
+        "E01-003": {
+          "stacked_banner_white_line": false,
+          "notes": "蓝绿色河段与白色滩地沿河湾共同延伸，右侧村屋和树丛连续覆盖河岸。",
+          "ring_sha256": "ecf6a82ee979aa499b25697581d94d6b27308bbe5c05d3bfdd4886d45e0766c6"
+        },
+        "E01-004": {
+          "stacked_banner_white_line": false,
+          "notes": "橙花、白花和叶脉由多个高低位置连通，花朵之间的浅地块边沿不规则。",
+          "ring_sha256": "d898d61da1c55ad295aa017c9526bc9ba2612182efe04ff34ea5036632c85104"
+        },
+        "E01-005": {
+          "stacked_banner_white_line": false,
+          "notes": "木节、根茎、木纹与灰石块相互嵌入，浅色由木材截面和地面曲线形成。",
+          "ring_sha256": "b8811599688a979fe993cec93f134119ce53ceeecc11ce3072bf66881a2c079d"
+        },
+        "E01-006": {
+          "stacked_banner_white_line": false,
+          "notes": "米白路径曲折穿过黄绿丘陵与树丛，两侧地物随路径起伏衔接。",
+          "ring_sha256": "2f3a6b52b8fe0c74fa8b568094849b6f551ef81b24ffd5550a818ce136f328a9"
+        },
+        "E01-007": {
+          "stacked_banner_white_line": false,
+          "notes": "浅色山坡和云白面贯穿曲折蓝绿色谷地，向左右随山脊发生斜向变化。",
+          "ring_sha256": "e3e5f8aac708ef18fcede6187b143afb3d9010da6874e1271641bee792045b9e"
+        },
+        "E01-008": {
+          "stacked_banner_white_line": false,
+          "notes": "红果、青叶及灰色枝条连续贯通，奶白空间散布在不规则叶缘之间。",
+          "ring_sha256": "ee69e8b9249a2e09b8637615fb0541b385b2bcac2bdd19bdfbcb931248b713aa"
+        },
+        "E01-009": {
+          "stacked_banner_white_line": false,
+          "notes": "白色水路的不规则边缘穿过粉花与青绿坡地，花群沿其两侧连续分布。",
+          "ring_sha256": "cf777b32b73f8ecdff85f822d1d3f05d84d1261dba6ef945c48ccdbb0a1b78b3"
+        },
+        "E01-010": {
+          "stacked_banner_white_line": false,
+          "notes": "橙树和灰绿灌木沿浅底错落分布，浅色空隙随树冠和枝条曲折。",
+          "ring_sha256": "4f73809eac1b8b312a6547012d86515fbf7bdb9f9a0bc6953248e43478f80caf"
+        }
+      },
+      "1234": {
+        "E01-001": {
+          "stacked_banner_white_line": false,
+          "notes": "青灰山峰、珊瑚色树冠与白云在同一画面里前后交叠。白色云缘弯曲、分段，未见浅色水平直线分隔独立画幅。",
+          "ring_sha256": "4bd8094f177cb34fc9b8b6580009809a49535fcf032eb9c8be8ff4a43cacb8ab"
+        },
+        "E01-002": {
+          "stacked_banner_white_line": false,
+          "notes": "深色山峰与浅色山谷错落，两处宽浅色景物均沿山脊弯曲，未切断上下景物构成横幅。",
+          "ring_sha256": "2f9b585cbb231e7616f7b47b4bd0451b75a440d6a2f5a279c0d769bed8705815"
+        },
+        "E01-003": {
+          "stacked_banner_white_line": false,
+          "notes": "纵横水道间穿插岩石、红树和草叶，局部浅色水面与岩面沿自然曲线互通，未见贯通直线或独立上下层。",
+          "ring_sha256": "d93d6e37796759a00c5b8cf4c69d4d2863e6d5022bfcfbd4509864592767b816"
+        },
+        "E01-004": {
+          "stacked_banner_white_line": false,
+          "notes": "橙花、白花和枝叶遍布四周，浅色留白被不规则花枝穿过，未见上下画幅或水平直分隔。",
+          "ring_sha256": "92d40d5c563639eb7733bd5a46c87ec9949838622ee1f1045b948c9bc56c108e"
+        },
+        "E01-005": {
+          "stacked_banner_white_line": false,
+          "notes": "橙灰岩台与木质纹理上下交错，左上和中央的浅色岩缘不齐高且随轮廓转折，未见通栏直分隔。",
+          "ring_sha256": "fd4e46b4d34ff853e385ce57a603c81fb99855eecfea703c790b4d25e5e3102a"
+        },
+        "E01-006": {
+          "stacked_banner_white_line": false,
+          "notes": "田坡、红屋顶、树丛及右上水面连续错落。浅绿坡沿斜向起伏，连续枝树穿过过渡处，未见横幅。",
+          "ring_sha256": "5b920aa57ce7346bde8da73555d521163a49d01e31c850dc75eb7dd3dcad68ce"
+        },
+        "E01-007": {
+          "stacked_banner_white_line": false,
+          "notes": "水流、白色岩面、树丛和起伏坡面连续分布。浅块边缘呈不规则岩形，未见浅色直线分隔两幅上下独立图案。",
+          "ring_sha256": "7f88ee51bb9aeb60721a421a669a447c8f0f5a426adb4905257a0cfe3592704a"
+        },
+        "E01-008": {
+          "stacked_banner_white_line": false,
+          "notes": "红果、斜枝及右下鸟跨越浅底，浅白间隙随枝叶分布，未见人工横向直边或分开的上下横幅。",
+          "ring_sha256": "37135674cac52de19dd6f2dc76e43305c93f880ddee54ae42b8158e36a06eec4"
+        },
+        "E01-009": {
+          "stacked_banner_white_line": false,
+          "notes": "红、白、粉花及下方蓝叶构成连续花田。复核先前 0.55 两道直带所在的原像素水平区间 y=397–478、715–810，叶茎和花瓣连续穿过，各处浅色形状属于花瓣，无横幅分隔。",
+          "ring_sha256": "6bf581354324b1cf51e171b812e9fa218b5fc42bbb198246d30e23ec1038adaa"
+        },
+        "E01-010": {
+          "stacked_banner_white_line": false,
+          "notes": "橙叶、细树干与深色鸟类在同一画面错落分布，右上浅叶与水纹是局部不规则纹理，未见浅色水平直线切分独立画面。",
+          "ring_sha256": "be6069f0bd25aa0b2cd390f0d869c9f8d55b1d6f3147fe0d4f7ecd821d88be74"
+        }
+      }
+    }
+  }
+}

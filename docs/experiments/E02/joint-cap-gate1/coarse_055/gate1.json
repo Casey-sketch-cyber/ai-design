@@ -1,0 +1,739 @@
+{
+  "seeds": {
+    "42": {
+      "n": 10,
+      "checks": {
+        "ring_delta_e00": {
+          "r0": 4.240053915977478,
+          "value": 3.133718264102936,
+          "limit": 4.452056611776353,
+          "passed": true
+        },
+        "ring_lpips": {
+          "r0": 0.18306450359523296,
+          "value": 0.16971311941742898,
+          "limit": 0.19221772877499463,
+          "passed": true
+        },
+        "ring_only_box_floor": {
+          "r0": 1.2244084290991146,
+          "value": 1.3088603878242007,
+          "limit": 1.2244084290991146,
+          "passed": false
+        },
+        "m4_repeat_score": {
+          "r0": 0.849220997095108,
+          "value": 0.8485389769077301,
+          "limit": 0.869220997095108,
+          "passed": true
+        },
+        "cap_ft_stripe": {
+          "value": 2.889840105518834,
+          "limit": 1.15,
+          "passed": false,
+          "mean": 1.417744699020711,
+          "failed_briefs": [
+            "E01-001",
+            "E01-004",
+            "E01-005",
+            "E01-010"
+          ]
+        },
+        "cap_bbtm_stripe": {
+          "value": 3.5199190512204543,
+          "limit": 1.15,
+          "passed": false,
+          "mean": 1.3896062870654107,
+          "failed_briefs": [
+            "E01-004",
+            "E01-005",
+            "E01-008"
+          ]
+        },
+        "elapsed_seconds": {
+          "value": 21.51679734699428,
+          "limit": 60,
+          "passed": true,
+          "mean": 21.147035798057914,
+          "failed_briefs": []
+        },
+        "peak_allocated_mib": {
+          "value": 12267.0615234375,
+          "limit": 20480,
+          "passed": true,
+          "mean": 12267.0615234375,
+          "failed_briefs": []
+        },
+        "banner_count": {
+          "r0": 1,
+          "value": 3,
+          "limit": 1,
+          "passed": false
+        }
+      },
+      "per_case": {
+        "E01-001": {
+          "cap_ft_stripe": {
+            "value": 2.0062343077784863,
+            "limit": 1.15,
+            "passed": false
+          },
+          "cap_bbtm_stripe": {
+            "value": 1.0225778594464616,
+            "limit": 1.15,
+            "passed": true
+          },
+          "elapsed_seconds": {
+            "value": 21.51679734699428,
+            "limit": 60,
+            "passed": true
+          },
+          "peak_allocated_mib": {
+            "value": 12267.0615234375,
+            "limit": 20480,
+            "passed": true
+          },
+          "stage2_remaining_seconds": 38.48320265300572
+        },
+        "E01-002": {
+          "cap_ft_stripe": {
+            "value": 1.0,
+            "limit": 1.15,
+            "passed": true
+          },
+          "cap_bbtm_stripe": {
+            "value": 1.0,
+            "limit": 1.15,
+            "passed": true
+          },
+          "elapsed_seconds": {
+            "value": 21.058785622939467,
+            "limit": 60,
+            "passed": true
+          },
+          "peak_allocated_mib": {
+            "value": 12267.0615234375,
+            "limit": 20480,
+            "passed": true
+          },
+          "stage2_remaining_seconds": 38.94121437706053
+        },
+        "E01-003": {
+          "cap_ft_stripe": {
+            "value": 1.07667020440766,
+            "limit": 1.15,
+            "passed": true
+          },
+          "cap_bbtm_stripe": {
+            "value": 1.0704466468045688,
+            "limit": 1.15,
+            "passed": true
+          },
+          "elapsed_seconds": {
+            "value": 20.939667271450162,
+            "limit": 60,
+            "passed": true
+          },
+          "peak_allocated_mib": {
+            "value": 12267.0615234375,
+            "limit": 20480,
+            "passed": true
+          },
+          "stage2_remaining_seconds": 39.06033272854984
+        },
+        "E01-004": {
+          "cap_ft_stripe": {
+            "value": 1.3475554516102712,
+            "limit": 1.15,
+            "passed": false
+          },
+          "cap_bbtm_stripe": {
+            "value": 1.8410431327117274,
+            "limit": 1.15,
+            "passed": false
+          },
+          "elapsed_seconds": {
+            "value": 21.006690196692944,
+            "limit": 60,
+            "passed": true
+          },
+          "peak_allocated_mib": {
+            "value": 12267.0615234375,
+            "limit": 20480,
+            "passed": true
+          },
+          "stage2_remaining_seconds": 38.993309803307056
+        },
+        "E01-005": {
+          "cap_ft_stripe": {
+            "value": 2.889840105518834,
+            "limit": 1.15,
+            "passed": false
+          },
+          "cap_bbtm_stripe": {
+            "value": 3.5199190512204543,
+            "limit": 1.15,
+            "passed": false
+          },
+          "elapsed_seconds": {
+            "value": 21.123581912368536,
+            "limit": 60,
+            "passed": true
+          },
+          "peak_allocated_mib": {
+            "value": 12267.0615234375,
+            "limit": 20480,
+            "passed": true
+          },
+          "stage2_remaining_seconds": 38.876418087631464
+        },
+        "E01-006": {
+          "cap_ft_stripe": {
+            "value": 1.0,
+            "limit": 1.15,
+            "passed": true
+          },
+          "cap_bbtm_stripe": {
+            "value": 1.0,
+            "limit": 1.15,
+            "passed": true
+          },
+          "elapsed_seconds": {
+            "value": 21.160780431702733,
+            "limit": 60,
+            "passed": true
+          },
+          "peak_allocated_mib": {
+            "value": 12267.0615234375,
+            "limit": 20480,
+            "passed": true
+          },
+          "stage2_remaining_seconds": 38.83921956829727
+        },
+        "E01-007": {
+          "cap_ft_stripe": {
+            "value": 1.1162459582496362,
+            "limit": 1.15,
+            "passed": true
+          },
+          "cap_bbtm_stripe": {
+            "value": 1.0,
+            "limit": 1.15,
+            "passed": true
+          },
+          "elapsed_seconds": {
+            "value": 21.14092074520886,
+            "limit": 60,
+            "passed": true
+          },
+          "peak_allocated_mib": {
+            "value": 12267.0615234375,
+            "limit": 20480,
+            "passed": true
+          },
+          "stage2_remaining_seconds": 38.85907925479114
+        },
+        "E01-008": {
+          "cap_ft_stripe": {
+            "value": 1.0,
+            "limit": 1.15,
+            "passed": true
+          },
+          "cap_bbtm_stripe": {
+            "value": 1.442076180470894,
+            "limit": 1.15,
+            "passed": false
+          },
+          "elapsed_seconds": {
+            "value": 21.165900073945522,
+            "limit": 60,
+            "passed": true
+          },
+          "peak_allocated_mib": {
+            "value": 12267.0615234375,
+            "limit": 20480,
+            "passed": true
+          },
+          "stage2_remaining_seconds": 38.83409992605448
+        },
+        "E01-009": {
+          "cap_ft_stripe": {
+            "value": 1.0,
+            "limit": 1.15,
+            "passed": true
+          },
+          "cap_bbtm_stripe": {
+            "value": 1.0,
+            "limit": 1.15,
+            "passed": true
+          },
+          "elapsed_seconds": {
+            "value": 21.218090498819947,
+            "limit": 60,
+            "passed": true
+          },
+          "peak_allocated_mib": {
+            "value": 12267.0615234375,
+            "limit": 20480,
+            "passed": true
+          },
+          "stage2_remaining_seconds": 38.78190950118005
+        },
+        "E01-010": {
+          "cap_ft_stripe": {
+            "value": 1.740900962642221,
+            "limit": 1.15,
+            "passed": false
+          },
+          "cap_bbtm_stripe": {
+            "value": 1.0,
+            "limit": 1.15,
+            "passed": true
+          },
+          "elapsed_seconds": {
+            "value": 21.139143880456686,
+            "limit": 60,
+            "passed": true
+          },
+          "peak_allocated_mib": {
+            "value": 12267.0615234375,
+            "limit": 20480,
+            "passed": true
+          },
+          "stage2_remaining_seconds": 38.860856119543314
+        }
+      },
+      "objective_passed": false,
+      "passed": false,
+      "diagnostics": {
+        "r0": {
+          "side_clip_score": 0.7067669853568077,
+          "front_clip_score": 0.7216920405626297,
+          "ring_sharpness_energy": 0.002515443367883563,
+          "ring_sharpness_energy_2x": 0.0049042298924177885,
+          "ring_sharpness_retention_2x": 1.9309436632969206,
+          "L_sharpness_energy": 0.0024866898078471423,
+          "L_sharpness_energy_2x": 0.004779681726358831,
+          "L_sharpness_retention_2x": 1.9031266100531794,
+          "F_sharpness_energy": 0.002530770481098443,
+          "F_sharpness_energy_2x": 0.004977884097024798,
+          "F_sharpness_retention_2x": 1.9463802632819192,
+          "R_sharpness_energy": 0.0025028357631526887,
+          "R_sharpness_energy_2x": 0.004865822731517255,
+          "R_sharpness_retention_2x": 1.9317535146291003,
+          "B_sharpness_energy": 0.002541477419435978,
+          "B_sharpness_energy_2x": 0.004993531014770269,
+          "B_sharpness_retention_2x": 1.941861838350058
+        },
+        "coarse_055": {
+          "side_clip_score": 0.6483389288187027,
+          "front_clip_score": 0.6377655230462551,
+          "ring_sharpness_energy": 0.0015974719033692963,
+          "ring_sharpness_energy_2x": 0.0036340535269118847,
+          "ring_sharpness_retention_2x": 2.253523162085897,
+          "L_sharpness_energy": 0.0015945929568260907,
+          "L_sharpness_energy_2x": 0.0036058361176401375,
+          "L_sharpness_retention_2x": 2.2401669104487687,
+          "F_sharpness_energy": 0.0016148999391589313,
+          "F_sharpness_energy_2x": 0.003700953908264637,
+          "F_sharpness_retention_2x": 2.2785439039489366,
+          "R_sharpness_energy": 0.001596514746779576,
+          "R_sharpness_energy_2x": 0.003676943201571703,
+          "R_sharpness_retention_2x": 2.277052917824332,
+          "B_sharpness_energy": 0.0015838799707125872,
+          "B_sharpness_energy_2x": 0.0035524808801710604,
+          "B_sharpness_retention_2x": 2.2214839313597303,
+          "T_sharpness_energy": 0.0013087262981571258,
+          "T_sharpness_energy_2x": 0.00314222841989249,
+          "T_sharpness_retention_2x": 2.3332241069324495,
+          "Btm_sharpness_energy": 0.0018080228590406477,
+          "Btm_sharpness_energy_2x": 0.00405381505843252,
+          "Btm_sharpness_retention_2x": 2.211082418098692
+        }
+      },
+      "softness_diagnostic": {
+        "r0_ring_absolute_energy": 0.002515443367883563,
+        "candidate_ring_absolute_energy": 0.0015974719033692963,
+        "relative_energy_vs_r0": 0.6350657398076797,
+        "failed_cap_folds": [
+          "F-T",
+          "B-Btm"
+        ],
+        "retry_for_softness": true
+      }
+    },
+    "1234": {
+      "n": 10,
+      "checks": {
+        "ring_delta_e00": {
+          "r0": 3.6177742779254913,
+          "value": 2.903660199046135,
+          "limit": 3.7986629918217663,
+          "passed": true
+        },
+        "ring_lpips": {
+          "r0": 0.21149659603834153,
+          "value": 0.24578994251787661,
+          "limit": 0.22207142584025863,
+          "passed": false
+        },
+        "ring_only_box_floor": {
+          "r0": 1.2797767234291657,
+          "value": 3.2556466762042438,
+          "limit": 1.2797767234291657,
+          "passed": false
+        },
+        "m4_repeat_score": {
+          "r0": 0.788507878780365,
+          "value": 0.720667165517807,
+          "limit": 0.808507878780365,
+          "passed": true
+        },
+        "cap_ft_stripe": {
+          "value": 1.702047059925622,
+          "limit": 1.15,
+          "passed": false,
+          "mean": 1.1424449443868547,
+          "failed_briefs": [
+            "E01-004",
+            "E01-005",
+            "E01-009"
+          ]
+        },
+        "cap_bbtm_stripe": {
+          "value": 1.3883620400206163,
+          "limit": 1.15,
+          "passed": false,
+          "mean": 1.1892303452257544,
+          "failed_briefs": [
+            "E01-001",
+            "E01-002",
+            "E01-003",
+            "E01-004",
+            "E01-007",
+            "E01-008"
+          ]
+        },
+        "elapsed_seconds": {
+          "value": 21.1982212793082,
+          "limit": 60,
+          "passed": true,
+          "mean": 21.131858129240573,
+          "failed_briefs": []
+        },
+        "peak_allocated_mib": {
+          "value": 12268.3896484375,
+          "limit": 20480,
+          "passed": true,
+          "mean": 12268.3896484375,
+          "failed_briefs": []
+        },
+        "banner_count": {
+          "r0": 0,
+          "value": 1,
+          "limit": 0,
+          "passed": false
+        }
+      },
+      "per_case": {
+        "E01-001": {
+          "cap_ft_stripe": {
+            "value": 1.0,
+            "limit": 1.15,
+            "passed": true
+          },
+          "cap_bbtm_stripe": {
+            "value": 1.1798360954661318,
+            "limit": 1.15,
+            "passed": false
+          },
+          "elapsed_seconds": {
+            "value": 21.09742738120258,
+            "limit": 60,
+            "passed": true
+          },
+          "peak_allocated_mib": {
+            "value": 12268.3896484375,
+            "limit": 20480,
+            "passed": true
+          },
+          "stage2_remaining_seconds": 38.90257261879742
+        },
+        "E01-002": {
+          "cap_ft_stripe": {
+            "value": 1.0,
+            "limit": 1.15,
+            "passed": true
+          },
+          "cap_bbtm_stripe": {
+            "value": 1.3883620400206163,
+            "limit": 1.15,
+            "passed": false
+          },
+          "elapsed_seconds": {
+            "value": 21.096703251823783,
+            "limit": 60,
+            "passed": true
+          },
+          "peak_allocated_mib": {
+            "value": 12268.3896484375,
+            "limit": 20480,
+            "passed": true
+          },
+          "stage2_remaining_seconds": 38.90329674817622
+        },
+        "E01-003": {
+          "cap_ft_stripe": {
+            "value": 1.0,
+            "limit": 1.15,
+            "passed": true
+          },
+          "cap_bbtm_stripe": {
+            "value": 1.3251661030827326,
+            "limit": 1.15,
+            "passed": false
+          },
+          "elapsed_seconds": {
+            "value": 21.1982212793082,
+            "limit": 60,
+            "passed": true
+          },
+          "peak_allocated_mib": {
+            "value": 12268.3896484375,
+            "limit": 20480,
+            "passed": true
+          },
+          "stage2_remaining_seconds": 38.8017787206918
+        },
+        "E01-004": {
+          "cap_ft_stripe": {
+            "value": 1.3437055698609033,
+            "limit": 1.15,
+            "passed": false
+          },
+          "cap_bbtm_stripe": {
+            "value": 1.3347109729001294,
+            "limit": 1.15,
+            "passed": false
+          },
+          "elapsed_seconds": {
+            "value": 21.13659643009305,
+            "limit": 60,
+            "passed": true
+          },
+          "peak_allocated_mib": {
+            "value": 12268.3896484375,
+            "limit": 20480,
+            "passed": true
+          },
+          "stage2_remaining_seconds": 38.86340356990695
+        },
+        "E01-005": {
+          "cap_ft_stripe": {
+            "value": 1.2543338672243254,
+            "limit": 1.15,
+            "passed": false
+          },
+          "cap_bbtm_stripe": {
+            "value": 1.0,
+            "limit": 1.15,
+            "passed": true
+          },
+          "elapsed_seconds": {
+            "value": 21.096743799746037,
+            "limit": 60,
+            "passed": true
+          },
+          "peak_allocated_mib": {
+            "value": 12268.3896484375,
+            "limit": 20480,
+            "passed": true
+          },
+          "stage2_remaining_seconds": 38.90325620025396
+        },
+        "E01-006": {
+          "cap_ft_stripe": {
+            "value": 1.0832478439875428,
+            "limit": 1.15,
+            "passed": true
+          },
+          "cap_bbtm_stripe": {
+            "value": 1.0,
+            "limit": 1.15,
+            "passed": true
+          },
+          "elapsed_seconds": {
+            "value": 21.144117955118418,
+            "limit": 60,
+            "passed": true
+          },
+          "peak_allocated_mib": {
+            "value": 12268.3896484375,
+            "limit": 20480,
+            "passed": true
+          },
+          "stage2_remaining_seconds": 38.85588204488158
+        },
+        "E01-007": {
+          "cap_ft_stripe": {
+            "value": 1.0,
+            "limit": 1.15,
+            "passed": true
+          },
+          "cap_bbtm_stripe": {
+            "value": 1.1535162935161891,
+            "limit": 1.15,
+            "passed": false
+          },
+          "elapsed_seconds": {
+            "value": 21.11122497357428,
+            "limit": 60,
+            "passed": true
+          },
+          "peak_allocated_mib": {
+            "value": 12268.3896484375,
+            "limit": 20480,
+            "passed": true
+          },
+          "stage2_remaining_seconds": 38.88877502642572
+        },
+        "E01-008": {
+          "cap_ft_stripe": {
+            "value": 1.0411151028701549,
+            "limit": 1.15,
+            "passed": true
+          },
+          "cap_bbtm_stripe": {
+            "value": 1.30334427660229,
+            "limit": 1.15,
+            "passed": false
+          },
+          "elapsed_seconds": {
+            "value": 21.168955236673355,
+            "limit": 60,
+            "passed": true
+          },
+          "peak_allocated_mib": {
+            "value": 12268.3896484375,
+            "limit": 20480,
+            "passed": true
+          },
+          "stage2_remaining_seconds": 38.831044763326645
+        },
+        "E01-009": {
+          "cap_ft_stripe": {
+            "value": 1.702047059925622,
+            "limit": 1.15,
+            "passed": false
+          },
+          "cap_bbtm_stripe": {
+            "value": 1.062520198743555,
+            "limit": 1.15,
+            "passed": true
+          },
+          "elapsed_seconds": {
+            "value": 21.15562627464533,
+            "limit": 60,
+            "passed": true
+          },
+          "peak_allocated_mib": {
+            "value": 12268.3896484375,
+            "limit": 20480,
+            "passed": true
+          },
+          "stage2_remaining_seconds": 38.84437372535467
+        },
+        "E01-010": {
+          "cap_ft_stripe": {
+            "value": 1.0,
+            "limit": 1.15,
+            "passed": true
+          },
+          "cap_bbtm_stripe": {
+            "value": 1.1448474719258999,
+            "limit": 1.15,
+            "passed": true
+          },
+          "elapsed_seconds": {
+            "value": 21.112964710220695,
+            "limit": 60,
+            "passed": true
+          },
+          "peak_allocated_mib": {
+            "value": 12268.3896484375,
+            "limit": 20480,
+            "passed": true
+          },
+          "stage2_remaining_seconds": 38.887035289779305
+        }
+      },
+      "objective_passed": false,
+      "passed": false,
+      "diagnostics": {
+        "r0": {
+          "side_clip_score": 0.7313041649758816,
+          "front_clip_score": 0.7311064302921295,
+          "ring_sharpness_energy": 0.0024879088610759935,
+          "ring_sharpness_energy_2x": 0.005357218856806867,
+          "ring_sharpness_retention_2x": 2.149692738033854,
+          "L_sharpness_energy": 0.0025411411363165824,
+          "L_sharpness_energy_2x": 0.005405979708302766,
+          "L_sharpness_retention_2x": 2.12567027274153,
+          "F_sharpness_energy": 0.0024681931710802017,
+          "F_sharpness_energy_2x": 0.00541493643540889,
+          "F_sharpness_retention_2x": 2.1938821788944955,
+          "R_sharpness_energy": 0.0024395943502895532,
+          "R_sharpness_energy_2x": 0.005297886941116303,
+          "R_sharpness_retention_2x": 2.145781949516208,
+          "B_sharpness_energy": 0.002502706786617637,
+          "B_sharpness_energy_2x": 0.005310072342399508,
+          "B_sharpness_retention_2x": 2.135462897278456
+        },
+        "coarse_055": {
+          "side_clip_score": 0.7189843729138374,
+          "front_clip_score": 0.7390219941735268,
+          "ring_sharpness_energy": 0.0005931977200816618,
+          "ring_sharpness_energy_2x": 0.0015479755456908606,
+          "ring_sharpness_retention_2x": 2.5993581765506546,
+          "L_sharpness_energy": 0.000493593180726748,
+          "L_sharpness_energy_2x": 0.001305478671565652,
+          "L_sharpness_retention_2x": 2.6327322927709345,
+          "F_sharpness_energy": 0.0007102849573129788,
+          "F_sharpness_energy_2x": 0.0018218131968751549,
+          "F_sharpness_retention_2x": 2.545921248896837,
+          "R_sharpness_energy": 0.0005355774716008455,
+          "R_sharpness_energy_2x": 0.001402443862752989,
+          "R_sharpness_retention_2x": 2.599690124358435,
+          "B_sharpness_energy": 0.0006333352706860751,
+          "B_sharpness_energy_2x": 0.0016621664515696466,
+          "B_sharpness_retention_2x": 2.6230832564548088,
+          "T_sharpness_energy": 0.001123072352493182,
+          "T_sharpness_energy_2x": 0.0030056859308388085,
+          "T_sharpness_retention_2x": 2.6506329876946464,
+          "Btm_sharpness_energy": 0.0006492524640634656,
+          "Btm_sharpness_energy_2x": 0.00165734012844041,
+          "Btm_sharpness_retention_2x": 2.549763351424256
+        }
+      },
+      "softness_diagnostic": {
+        "r0_ring_absolute_energy": 0.0024879088610759935,
+        "candidate_ring_absolute_energy": 0.0005931977200816618,
+        "relative_energy_vs_r0": 0.23843225504052837,
+        "failed_cap_folds": [
+          "F-T",
+          "B-Btm"
+        ],
+        "retry_for_softness": true
+      }
+    }
+  },
+  "complete": true,
+  "objective_passed": false,
+  "passed": false,
+  "recipe": "coarse_055",
+  "retry_for_softness": true,
+  "banner_request_sha256": "9037ef183fe0e17bc0169c3e8eb0814c549c73d324434e8c90816f6a0b46c5b2",
+  "r0_banner_sha256": "68e0762840a15f4826ce5ec3aef3ca6e82a998bbbdcf108a7db8928d5c8fdf97",
+  "banner_review_pending": false,
+  "frozen_metric_source_sha256": "9417ddca644da5fec757d8b06f69e9db76f79e70091140e5b037b53ab22ff1fc"
+}

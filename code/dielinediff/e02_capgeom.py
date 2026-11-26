@@ -268,8 +268,12 @@ def generate(experiment, candidate, parameters, device, *, seed=42, source=None,
     hardware = _hardware(device)
     engine = engine_factory(experiment, hardware)
     models = experiment.root / "cache/models"
-    identity = verify_inpaint_model(models)
-    engine._open_inpaint()
+    if parameters["inpaint"]:
+        identity = verify_inpaint_model(models)
+        engine._open_inpaint()
+    else:
+        identity = None
+        engine._base_unet()
     torch.cuda.synchronize(hardware)
     for job in pending:
         item = job.atlas
