@@ -1,0 +1,8 @@
+protocol: e02-v3-captexture
+selection_seed: 42
+validation_seed: 1234
+task10_reference: 7b2fcb2c668b
+spatial_factors: [4, 8]
+guided_fractions: [1.0, 0.70]
+high_strengths: [0.92, 0.95]
+texture_injection_strength: 0.85
