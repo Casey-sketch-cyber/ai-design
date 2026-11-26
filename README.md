@@ -15,7 +15,25 @@
 
 网页版 Gemini 不能执行命令时：把 `tasks/01-gemini-literature-tree-opc-packaging.md` 和 findInnovation 的 `SKILL.md`、两个模板的内容一起粘贴给它，产出再由你或其他 AI 提交到本仓库。
 
-## 发给 Codex 的指令（任务 17，直接复制）
+## 发给 Codex 的指令（任务 18，直接复制）
+
+```
+请 pull 仓库 https://github.com/Casey-sketch-cyber/ai-design.git 的最新 main，
+先读 AGENTS.md 和 PR #17 里 Claude 的审查留言，
+然后执行 tasks/18-codex-cap-energy-match.md（先做盖面逐毫米能量诊断，再测 E1—E4：能量匹配初图与 SDEdit 强度；环带固定 R0，冻结指标和关口不动，只能补足内部纹理，不得压低贴边细节；两个种子都报告关口，做完就停）。
+必须能在 RTX 3090 24GB 上跑通。在分支 codex/cap-energy-match 上完成，推送并创建 PR，不要自己合并。全程用中文沟通。
+```
+
+## 发给 Gemini 的指令（任务 19，直接复制，与任务 18 并行）
+
+```
+请 pull 仓库 https://github.com/Casey-sketch-cyber/ai-design.git 的最新 main，
+阅读 AGENTS.md、tasks/19-gemini-cap-interior-ideas.md、docs/experiments/E02/RING-M2M3.md、PR #17 里 Claude 的审查留言和 tasks/18-codex-cap-energy-match.md，
+解释底盖“贴边密、内部疏”的机制，评估任务 18 的方案，并提出至少 2 个新方法，写入 docs/CAP_INTERIOR_GEMINI.md。
+在分支 gemini/cap-interior-ideas 上完成，推送并创建 PR，不要自己合并。全程用中文。
+```
+
+## 发给 Codex 的指令（任务 17，已完成）
 
 ```
 请 pull 仓库 https://github.com/Casey-sketch-cyber/ai-design.git 的最新 main，
