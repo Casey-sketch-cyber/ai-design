@@ -1,0 +1,536 @@
+{
+  "run_id": "35493b7f5869",
+  "criterion": "至少两段可独立读作完整横向画幅的内容上下堆叠，同时有近水平浅色或白线分隔。单幅外框、普通地貌层次、云线、并列样机和重复图案不计。",
+  "reviewer": "Codex",
+  "evidence": "/root/autodl-tmp/ai-design/tmp/task15-ring-review/35493b7f5869",
+  "seeds": {
+    "42": {
+      "r0": {
+        "positive": 1,
+        "total": 10,
+        "samples": {
+          "E01-001": {
+            "stacked_banner_white_line": true,
+            "notes": "三段相对独立的山水画幅上下堆叠。原像素 y=202–238 和 y=527–551 两处横向浅色分隔均跨多面。",
+            "cache_sha256": "fe8206a1420d09067988e9872118437f7bd7fdb3057df896bd46bd2ce4d46b7d",
+            "ring_rgb_sha256": "d94e4892b471f1bcad2d9830a006334979b4daabb5863689e3c32769878eae4e",
+            "ring_body_raw_sha256": "b24b4fcfb696ed100da1e8451eebf3e4bed1ef7b6576ef9f57d03b31d14347ec",
+            "native_cropped_png": "/root/autodl-tmp/ai-design/tmp/task15-ring-review/35493b7f5869/42/r0-E01-001-42.png",
+            "body_rows": [
+              64,
+              960
+            ]
+          },
+          "E01-002": {
+            "stacked_banner_white_line": false,
+            "notes": "远山、坡面和谷地形态相连，浅色来自山石与水汽。",
+            "cache_sha256": "0065db7fe2cc5cac0007246f17e4a0307c29fc54d2ae477adc0eade81d741282",
+            "ring_rgb_sha256": "5f5e0857d4b6600c76b9b85b212e39ce007be7c7d914997d3becccebfb315aae",
+            "ring_body_raw_sha256": "7108c43e624ae1b88e223da62d6f47ec4ef5dc035731ebe1d368dd99d2987ef6",
+            "native_cropped_png": "/root/autodl-tmp/ai-design/tmp/task15-ring-review/35493b7f5869/42/r0-E01-002-42.png",
+            "body_rows": [
+              64,
+              960
+            ]
+          },
+          "E01-003": {
+            "stacked_banner_white_line": false,
+            "notes": "草叶、河道和不同深度的稻田沿同一景深相连。",
+            "cache_sha256": "6b2b14dc11e52ba3c8d93b4740d6898c214ad1a506a6bbf9f5bc304879fb8548",
+            "ring_rgb_sha256": "8735b28e7d42a5a1ac0f8cbd6af17b535861b4f828f8247dbdb1fbb569418651",
+            "ring_body_raw_sha256": "48aaa57714aeee4a2d960da4ed9f2b8687037b64de323d02b4bbc26b2f6e679d",
+            "native_cropped_png": "/root/autodl-tmp/ai-design/tmp/task15-ring-review/35493b7f5869/42/r0-E01-003-42.png",
+            "body_rows": [
+              64,
+              960
+            ]
+          },
+          "E01-004": {
+            "stacked_banner_white_line": false,
+            "notes": "远山和近处花田由景深过渡相连，花枝连在同一画幅。",
+            "cache_sha256": "565c091a522589ede335028f54cd9ecbe6974eca726f88f60dc52d58f04e4b38",
+            "ring_rgb_sha256": "7f9333e319774a9fd488153901314acea2f94541bac9dc6b72bf7100008af232",
+            "ring_body_raw_sha256": "d67322939dddb4fd1c3977733bac0ea7706ea2a5b36ce540fc9f5e61c2f568bd",
+            "native_cropped_png": "/root/autodl-tmp/ai-design/tmp/task15-ring-review/35493b7f5869/42/r0-E01-004-42.png",
+            "body_rows": [
+              64,
+              960
+            ]
+          },
+          "E01-005": {
+            "stacked_banner_white_line": false,
+            "notes": "木刻截面与蘑菇交错分布。",
+            "cache_sha256": "18c5387d2508350e66f36c81c381096887da047aea5804c746d82278d8cf34fa",
+            "ring_rgb_sha256": "c6c49f668fb59f25aa0424ff375c3277a450638d51c4ec6ccd07b36003f68ee3",
+            "ring_body_raw_sha256": "30e0e8f86dc138d61dac66b5f97dd44dcb5dee22bd2f9576befad69ffe972fdf",
+            "native_cropped_png": "/root/autodl-tmp/ai-design/tmp/task15-ring-review/35493b7f5869/42/r0-E01-005-42.png",
+            "body_rows": [
+              64,
+              960
+            ]
+          },
+          "E01-006": {
+            "stacked_banner_white_line": false,
+            "notes": "田块和浅色田埂随起伏弯曲，延续在同一地貌。",
+            "cache_sha256": "c1d1dbf4113f7e03023bd281fe752c91d199ff48ffb82367ef4321cf82f50fef",
+            "ring_rgb_sha256": "33d6645dbc24c61dea2c845063f4a50c7a075c8e75156ec318af84420776f891",
+            "ring_body_raw_sha256": "c86ee6d8e2a9bd586a813edc3f9e66e42f59009fd96e5b972dc330eb683b8257",
+            "native_cropped_png": "/root/autodl-tmp/ai-design/tmp/task15-ring-review/35493b7f5869/42/r0-E01-006-42.png",
+            "body_rows": [
+              64,
+              960
+            ]
+          },
+          "E01-007": {
+            "stacked_banner_white_line": false,
+            "notes": "田野、树丛和近处麦穗形成连续地貌。",
+            "cache_sha256": "92842c215739ecf5499a864182b2b35e37539304f7129dcb5c4d3443d59addd9",
+            "ring_rgb_sha256": "23b7f3ba755d7a2fcb534b9ebb14498179504528388ab0472e4547ccdf560a22",
+            "ring_body_raw_sha256": "8c72dfe77ca68ca035c366d10eed1dae1bda6b3452ac07ffde900b7814c1285b",
+            "native_cropped_png": "/root/autodl-tmp/ai-design/tmp/task15-ring-review/35493b7f5869/42/r0-E01-007-42.png",
+            "body_rows": [
+              64,
+              960
+            ]
+          },
+          "E01-008": {
+            "stacked_banner_white_line": false,
+            "notes": "青叶红果连续铺成散点纹样。",
+            "cache_sha256": "15e303cbd3230d03daeda46d68be5c0521b5f19c814a4b26a55a89ef8fb499f4",
+            "ring_rgb_sha256": "d92478da40eefcc2e342eb04e930df3832527668d0065987d470e60aa715853e",
+            "ring_body_raw_sha256": "275cb031a13a071871a2a408269cace3cb891b7371d6d2a4eeec203dd4e611a2",
+            "native_cropped_png": "/root/autodl-tmp/ai-design/tmp/task15-ring-review/35493b7f5869/42/r0-E01-008-42.png",
+            "body_rows": [
+              64,
+              960
+            ]
+          },
+          "E01-009": {
+            "stacked_banner_white_line": false,
+            "notes": "浅色天空、山脊和花田按自然景深衔接。",
+            "cache_sha256": "6e770d709d6eb2b98c2f94182f44e44652926f0f6f0e117363fc11dd4eb85ce6",
+            "ring_rgb_sha256": "7d7a10844d1cf562f93434c4a847e63c12a35c255c492ceaa34c31d9570b9953",
+            "ring_body_raw_sha256": "a11f61d23629683be7a1610aefdb0be3981f663ea2b7d58b9a52431a335dde0b",
+            "native_cropped_png": "/root/autodl-tmp/ai-design/tmp/task15-ring-review/35493b7f5869/42/r0-E01-009-42.png",
+            "body_rows": [
+              64,
+              960
+            ]
+          },
+          "E01-010": {
+            "stacked_banner_white_line": false,
+            "notes": "浅底上的锈色及灰色叶片以同一散布纹样跨整个环带。",
+            "cache_sha256": "b000782cb6c84be7958a8b6333e90fc4fe182f108850d16b368463b5b228a51d",
+            "ring_rgb_sha256": "43a9ac2726259d2519fd4fb9fc52d1687594dde2fef939210f9023cb1b4f0a27",
+            "ring_body_raw_sha256": "77a4368733c3e715eed5ca3a0dead084eb491592e2277e0d62d0c8597cc17b36",
+            "native_cropped_png": "/root/autodl-tmp/ai-design/tmp/task15-ring-review/35493b7f5869/42/r0-E01-010-42.png",
+            "body_rows": [
+              64,
+              960
+            ]
+          }
+        }
+      },
+      "r1": {
+        "positive": 0,
+        "total": 10,
+        "samples": {
+          "E01-001": {
+            "stacked_banner_white_line": false,
+            "notes": "仍有上下多组山峦。原图同两段位置是弯曲山脊、云雾与连贯谷地，浅色云雾宽窄、方向随景变化。",
+            "cache_sha256": "11916b1c82e20a50b30a9e10df771bd979313014b7606da2262bd1b92ef19930",
+            "ring_rgb_sha256": "e2b701272aee43d4cb4861cd244916dafbc14438d72046dd4552793aba06613e",
+            "ring_body_raw_sha256": "f2889b8c30e0a2f089ca235c318b99aef7da9baff92e71b921f5f8207834fe11",
+            "native_cropped_png": "/root/autodl-tmp/ai-design/tmp/task15-ring-review/35493b7f5869/42/r1-E01-001-42.png",
+            "body_rows": [
+              64,
+              960
+            ],
+            "r0_cache_sha256": "fe8206a1420d09067988e9872118437f7bd7fdb3057df896bd46bd2ce4d46b7d"
+          },
+          "E01-002": {
+            "stacked_banner_white_line": false,
+            "notes": "连贯的山脊与褐色谷地延展，浅色来自远处天空和山石。",
+            "cache_sha256": "27f409c116b099d8c9a376057c779dc0c3c0e24504181abea812ba8c5077f7e8",
+            "ring_rgb_sha256": "f1fd7448ae166e239ffc6439de026779e02e8a44ddf48504361fbc68c6ef4480",
+            "ring_body_raw_sha256": "92d709959b14d1df88c56d739bef1bb8744909ff24d49331f991399983d40678",
+            "native_cropped_png": "/root/autodl-tmp/ai-design/tmp/task15-ring-review/35493b7f5869/42/r1-E01-002-42.png",
+            "body_rows": [
+              64,
+              960
+            ],
+            "r0_cache_sha256": "0065db7fe2cc5cac0007246f17e4a0307c29fc54d2ae477adc0eade81d741282"
+          },
+          "E01-003": {
+            "stacked_banner_white_line": false,
+            "notes": "连续的绿色稻田、弯曲河道和鸟群延伸在同一画幅。",
+            "cache_sha256": "2821e0540acd4a0dedd4982dfbc1f0d00d388505fa6264d72583d5c14f4112a6",
+            "ring_rgb_sha256": "b29e3885de9b1c1aadf526c13537ccdbf240e4c6220e5bd6dad321599347688f",
+            "ring_body_raw_sha256": "046a2fe77cbfe5cba57993622a37a828d12aa5a970c40eacc976ff47a2284147",
+            "native_cropped_png": "/root/autodl-tmp/ai-design/tmp/task15-ring-review/35493b7f5869/42/r1-E01-003-42.png",
+            "body_rows": [
+              64,
+              960
+            ],
+            "r0_cache_sha256": "6b2b14dc11e52ba3c8d93b4740d6898c214ad1a506a6bbf9f5bc304879fb8548"
+          },
+          "E01-004": {
+            "stacked_banner_white_line": false,
+            "notes": "以自然远山和成簇花朵组成连续景深。",
+            "cache_sha256": "a572571ebc6fc6829e0ef4fa7568402c8b2b4081889d4042f5630bb887a26716",
+            "ring_rgb_sha256": "b2c27ea0e50e5e49499c48926e97e41758a5b40545fed5fbc67ddbd5b16b38c7",
+            "ring_body_raw_sha256": "cb7af89972c9e23a771141370f3ea741ac1f33f743d71d3c4721d63362c94516",
+            "native_cropped_png": "/root/autodl-tmp/ai-design/tmp/task15-ring-review/35493b7f5869/42/r1-E01-004-42.png",
+            "body_rows": [
+              64,
+              960
+            ],
+            "r0_cache_sha256": "565c091a522589ede335028f54cd9ecbe6974eca726f88f60dc52d58f04e4b38"
+          },
+          "E01-005": {
+            "stacked_banner_white_line": false,
+            "notes": "蘑菇柄、林地、木截面和树根是同一场景。",
+            "cache_sha256": "6e0e70d4fe384f16e931cc7a73b2d492ac757626439753c5fd9a0558dd8456a8",
+            "ring_rgb_sha256": "3463511d08af266104fc73363125a950eba2b2591b9efdd56e5094b02b1430be",
+            "ring_body_raw_sha256": "f859233ddeed0f6f30f092cf857d35274ce486e99008a88978ca6428f2fe5f4a",
+            "native_cropped_png": "/root/autodl-tmp/ai-design/tmp/task15-ring-review/35493b7f5869/42/r1-E01-005-42.png",
+            "body_rows": [
+              64,
+              960
+            ],
+            "r0_cache_sha256": "18c5387d2508350e66f36c81c381096887da047aea5804c746d82278d8cf34fa"
+          },
+          "E01-006": {
+            "stacked_banner_white_line": false,
+            "notes": "浅黄田块、斜田埂及树丛沿地势延续。",
+            "cache_sha256": "7345632f2d3a5db766b7ad83501b5771f9789f99a519ad82ebed5bc69bcaf2f9",
+            "ring_rgb_sha256": "6cd6d843c9312faf5f950f6208ad3cb95c5c64846c350c217be2109e12f7720b",
+            "ring_body_raw_sha256": "97bf1efbc0fed354e8454bd41f56b1b76cc0bbbbaa04a67f26bc596f731fb390",
+            "native_cropped_png": "/root/autodl-tmp/ai-design/tmp/task15-ring-review/35493b7f5869/42/r1-E01-006-42.png",
+            "body_rows": [
+              64,
+              960
+            ],
+            "r0_cache_sha256": "c1d1dbf4113f7e03023bd281fe752c91d199ff48ffb82367ef4321cf82f50fef"
+          },
+          "E01-007": {
+            "stacked_banner_white_line": false,
+            "notes": "暖黄田地和麦穗疏密连贯，浅色路径随田块弯曲。",
+            "cache_sha256": "4361ac6822ced9bd3712debd065d63cd0643ff0d4351c16d69edf0cf91ee8e14",
+            "ring_rgb_sha256": "071b9080418610637a7090a57385cb5d36c05eb860139dfba8f0acdfe898c323",
+            "ring_body_raw_sha256": "3238992c181219506c37f120e8e92cb17d92d539313c87bb4c336d53d527b55c",
+            "native_cropped_png": "/root/autodl-tmp/ai-design/tmp/task15-ring-review/35493b7f5869/42/r1-E01-007-42.png",
+            "body_rows": [
+              64,
+              960
+            ],
+            "r0_cache_sha256": "92842c215739ecf5499a864182b2b35e37539304f7129dcb5c4d3443d59addd9"
+          },
+          "E01-008": {
+            "stacked_banner_white_line": false,
+            "notes": "红果与灰青枝叶在无分割背景上延伸。",
+            "cache_sha256": "9c9e60e58fda664a534530582961986548feba58f713088ac777d77341269d4b",
+            "ring_rgb_sha256": "52960470e1c53ce8fbd530a7d2c525875c6dc014416fad53ba17caeb5c04e6e7",
+            "ring_body_raw_sha256": "826fece06cb1b887024d3c3ed1b099a89f3279961ac838356b0694a4e57d455f",
+            "native_cropped_png": "/root/autodl-tmp/ai-design/tmp/task15-ring-review/35493b7f5869/42/r1-E01-008-42.png",
+            "body_rows": [
+              64,
+              960
+            ],
+            "r0_cache_sha256": "15e303cbd3230d03daeda46d68be5c0521b5f19c814a4b26a55a89ef8fb499f4"
+          },
+          "E01-009": {
+            "stacked_banner_white_line": false,
+            "notes": "橙色、粉色花田连续，浅云在上缘天空内。",
+            "cache_sha256": "1c1ec4f429cf6a1199a2eb538dd0d12874c724391c3909c337ee370f9f341aca",
+            "ring_rgb_sha256": "aab955a5cc3a28075a8d72a182897266c12f6cb254eddd9af76151d7fa102f15",
+            "ring_body_raw_sha256": "99e04e7ef7bdc4cb8c61a6e3772791a425610b3d74a11546d4057339a8708f86",
+            "native_cropped_png": "/root/autodl-tmp/ai-design/tmp/task15-ring-review/35493b7f5869/42/r1-E01-009-42.png",
+            "body_rows": [
+              64,
+              960
+            ],
+            "r0_cache_sha256": "6e770d709d6eb2b98c2f94182f44e44652926f0f6f0e117363fc11dd4eb85ce6"
+          },
+          "E01-010": {
+            "stacked_banner_white_line": false,
+            "notes": "锈橙叶片和棕色叶脉按同一花样铺开。",
+            "cache_sha256": "df982c7dba62d2dfa8fbc9cba257f32a3e832d59b676af7fbc24c2547817d15d",
+            "ring_rgb_sha256": "fcfd73ccfc8af60be6306dfda4104cc532a20df61eae41c1a74c5d018f42a3ab",
+            "ring_body_raw_sha256": "68c49094b2c205682f553923b785eaa33a909b76713733efa0eb9ec55123c90c",
+            "native_cropped_png": "/root/autodl-tmp/ai-design/tmp/task15-ring-review/35493b7f5869/42/r1-E01-010-42.png",
+            "body_rows": [
+              64,
+              960
+            ],
+            "r0_cache_sha256": "b000782cb6c84be7958a8b6333e90fc4fe182f108850d16b368463b5b228a51d"
+          }
+        }
+      }
+    },
+    "1234": {
+      "r0": {
+        "positive": 0,
+        "total": 10,
+        "samples": {
+          "E01-001": {
+            "stacked_banner_white_line": false,
+            "notes": "多枚绿白立体包装袋在同一灰底并排，袋上的山形是包装图案。",
+            "cache_sha256": "bd42591e451df4c1975cfdf598508a886995fc0f253c5aa46fd77863c0e80bba",
+            "ring_rgb_sha256": "e3e3c0d5c2951bb6dfe0f2825d8c7fa60f031b1e5126912b041ebe9cd0639c21",
+            "ring_body_raw_sha256": "0366127fcfbd6ea1dd327d03a2d744d7ebedd597a3617917715dc6226eeb82f8",
+            "native_cropped_png": "/root/autodl-tmp/ai-design/tmp/task15-ring-review/35493b7f5869/1234/r0-E01-001-1234.png",
+            "body_rows": [
+              64,
+              960
+            ]
+          },
+          "E01-002": {
+            "stacked_banner_white_line": false,
+            "notes": "橙、青蓝山浪多次出现，浅色轮廓随同一插画的云浪起伏。",
+            "cache_sha256": "223771de874586bfef2f2b6575e74304f47bc697255d3aae42795098664fbefa",
+            "ring_rgb_sha256": "a383e776fd8cbf45335f940483eb36a0d865a9ce437b709764ccee12284f69fa",
+            "ring_body_raw_sha256": "6e04323999f08fc7997c1922550750457c234f9d6bcdbba1d27b92602320672a",
+            "native_cropped_png": "/root/autodl-tmp/ai-design/tmp/task15-ring-review/35493b7f5869/1234/r0-E01-002-1234.png",
+            "body_rows": [
+              64,
+              960
+            ]
+          },
+          "E01-003": {
+            "stacked_banner_white_line": false,
+            "notes": "单一稻田插画有上下浅色直外框。原像素 y=49–74 和 y=824–849 可见窄线，内部仍是同一画幅。",
+            "cache_sha256": "483fac2d8f03b71c71c9bbc64e9fa970059f23928ce2acfd5f1f1effcc480906",
+            "ring_rgb_sha256": "d6b889218d18734684dcf1d72f5b0145c90f81ae05aecc787a6573eed40546b4",
+            "ring_body_raw_sha256": "af8f8e83d6e86ec1c3b1f731e657948ca1455057032b00be6e955e6b62b087ae",
+            "native_cropped_png": "/root/autodl-tmp/ai-design/tmp/task15-ring-review/35493b7f5869/1234/r0-E01-003-1234.png",
+            "body_rows": [
+              64,
+              960
+            ]
+          },
+          "E01-004": {
+            "stacked_banner_white_line": false,
+            "notes": "橙、白、粉色花叶在浅绿底上连续。",
+            "cache_sha256": "6cbe44cdd2458b2469f5c7b7de0eb259fcee0cdcb345dccf0c0f8e5f79704731",
+            "ring_rgb_sha256": "c5426bdddf7b3d95201af2cfc6468daca07455ebf98bc7a9736512ebee97f3c6",
+            "ring_body_raw_sha256": "7cd26099c099fc9e9d19d0afa3431a3318883aa2b60f517073031f75aaaf491b",
+            "native_cropped_png": "/root/autodl-tmp/ai-design/tmp/task15-ring-review/35493b7f5869/1234/r0-E01-004-1234.png",
+            "body_rows": [
+              64,
+              960
+            ]
+          },
+          "E01-005": {
+            "stacked_banner_white_line": false,
+            "notes": "截面和菌形按照同一浅蓝散点图案分布。",
+            "cache_sha256": "a33a3c4ec30450f44048ee2da9ee5fc3bf03ee68fb9bfd452972071080e50fec",
+            "ring_rgb_sha256": "8b9c66274a93f46d270b28dcd0d9ab2463aa1afdf0c2e513cefa1e077c9256ef",
+            "ring_body_raw_sha256": "89d36800fab0394a6c4e48a431c4c8ecaa01aa55db7beacb07fcd673a2dc0639",
+            "native_cropped_png": "/root/autodl-tmp/ai-design/tmp/task15-ring-review/35493b7f5869/1234/r0-E01-005-1234.png",
+            "body_rows": [
+              64,
+              960
+            ]
+          },
+          "E01-006": {
+            "stacked_banner_white_line": false,
+            "notes": "浅白缝隙随丘陵轮廓弯折。田块、果树和植被为连续一景。",
+            "cache_sha256": "3d8f899920bac1404bd3ac2ec74c33cbbed607122eb46e83fa3687f8ce3739d5",
+            "ring_rgb_sha256": "162401f52197d0ba7e2e23367c10d6c55969264951457acc26c5baf21b832931",
+            "ring_body_raw_sha256": "1944603362fa084852889d5fb26cb27058bf22d92807e73ac7e1f79119f1dc02",
+            "native_cropped_png": "/root/autodl-tmp/ai-design/tmp/task15-ring-review/35493b7f5869/1234/r0-E01-006-1234.png",
+            "body_rows": [
+              64,
+              960
+            ]
+          },
+          "E01-007": {
+            "stacked_banner_white_line": false,
+            "notes": "有大型圆形包装、花样与画面化地形混合，物件并列。背景上缘有浅色条纹。",
+            "cache_sha256": "1dc118123fab93f76fa987a8abc4fbb477b4eaa31dd502fdf1a226639ab7885f",
+            "ring_rgb_sha256": "d1066a76c855ffc2bb516a087f00aab224e8a65e0c3e9062cd4e3e6e0cfef639",
+            "ring_body_raw_sha256": "acf1541f77e9afa3aa645dbf833ac00f25ab2cf1401e79a2a4ec55a2ababb401",
+            "native_cropped_png": "/root/autodl-tmp/ai-design/tmp/task15-ring-review/35493b7f5869/1234/r0-E01-007-1234.png",
+            "body_rows": [
+              64,
+              960
+            ]
+          },
+          "E01-008": {
+            "stacked_banner_white_line": false,
+            "notes": "青绿叶片和小红果在统一浅底上连续分布。",
+            "cache_sha256": "c3acf54de26e1c2d0f19c7c2e5497d4d50ce3fd859c57c971c3b3c3cae38eb07",
+            "ring_rgb_sha256": "c02984d98cb8024018791091e472be8fa9edda7c10620b2ce8536e3ad9a2d40b",
+            "ring_body_raw_sha256": "056ef54065cfc6cb84fb3d0156d9e7b58077ec8b95c9ca94e698628b5c37a045",
+            "native_cropped_png": "/root/autodl-tmp/ai-design/tmp/task15-ring-review/35493b7f5869/1234/r0-E01-008-1234.png",
+            "body_rows": [
+              64,
+              960
+            ]
+          },
+          "E01-009": {
+            "stacked_banner_white_line": false,
+            "notes": "顶部的浅白线条属于云层，山脊、花田保持自然景深。",
+            "cache_sha256": "4cfe9e6aa0d412a04d7dc80d7b843ced2a83048bc8e52ec4b8c97fd107519710",
+            "ring_rgb_sha256": "c2f6c1a687393054963967ea00778a04dd640723c5bb6b8f6056d2df0192c225",
+            "ring_body_raw_sha256": "705c07b31e71a429dd3e0f341c5f5bdf2f5fb15d5f776f2ebb1b70802c2688f4",
+            "native_cropped_png": "/root/autodl-tmp/ai-design/tmp/task15-ring-review/35493b7f5869/1234/r0-E01-009-1234.png",
+            "body_rows": [
+              64,
+              960
+            ]
+          },
+          "E01-010": {
+            "stacked_banner_white_line": false,
+            "notes": "棕果、绿叶的纹样以不规则散点连续铺开。",
+            "cache_sha256": "16b95e92f2a01a6c73957295ba30ec03cc032119a3d0e475c6910055d3d07448",
+            "ring_rgb_sha256": "1b18fbe4709083ff7eda8b3cd68f21f8ace6d4831022393fff869be9581e96c0",
+            "ring_body_raw_sha256": "fdbf8d5235c7b9ddf370f1dbc9834b1dbed38adc484b763933e235fbb720c54b",
+            "native_cropped_png": "/root/autodl-tmp/ai-design/tmp/task15-ring-review/35493b7f5869/1234/r0-E01-010-1234.png",
+            "body_rows": [
+              64,
+              960
+            ]
+          }
+        }
+      },
+      "r1": {
+        "positive": 0,
+        "total": 10,
+        "samples": {
+          "E01-001": {
+            "stacked_banner_white_line": false,
+            "notes": "多个绿色立体包装袋并置。中央有醒目伪字，未形成上下画幅。",
+            "cache_sha256": "1e7bae8bfe3b38819b66a79068980975406965dc91879543dd01fbd398d1cca5",
+            "ring_rgb_sha256": "5fb757fed585e1b04003bcb1bfb0c0e963484d9ffa264b273c5044f6618b3d85",
+            "ring_body_raw_sha256": "2ec82f8ea58ee73dcf4a7a3f24ce63d8c69e27a16e4d05171d8119c3c353c3da",
+            "native_cropped_png": "/root/autodl-tmp/ai-design/tmp/task15-ring-review/35493b7f5869/1234/r1-E01-001-1234.png",
+            "body_rows": [
+              64,
+              960
+            ],
+            "r0_cache_sha256": "bd42591e451df4c1975cfdf598508a886995fc0f253c5aa46fd77863c0e80bba"
+          },
+          "E01-002": {
+            "stacked_banner_white_line": false,
+            "notes": "橙色天空、青绿山体和波浪状山地连成同一场景。",
+            "cache_sha256": "cc40fd12bc48a7d7b54c6f410e270e7b2bf7b11586fef8594973483c31636513",
+            "ring_rgb_sha256": "46a8599e6a9b3af04be23f18540099de3797038bf01b4418549650fee147a1b2",
+            "ring_body_raw_sha256": "5e5ae4d9ab1e89a98ce6b751258be2477967296be8e56ae2c8f9a07d478ae016",
+            "native_cropped_png": "/root/autodl-tmp/ai-design/tmp/task15-ring-review/35493b7f5869/1234/r1-E01-002-1234.png",
+            "body_rows": [
+              64,
+              960
+            ],
+            "r0_cache_sha256": "223771de874586bfef2f2b6575e74304f47bc697255d3aae42795098664fbefa"
+          },
+          "E01-003": {
+            "stacked_banner_white_line": false,
+            "notes": "改为三枚立体包装袋样机，见伪字、碗和投影，原单幅平面稻田消失。",
+            "cache_sha256": "8cb49b48a373a2ffd5c272a7072257a904b7bc977aade50f4569432790395279",
+            "ring_rgb_sha256": "3e35b34002941e7e60a847f4cbf64a4adbec083fc88e31564bac8c6cd8f5eabc",
+            "ring_body_raw_sha256": "31793a7b7463de747ec034bda275d213a87f97c61718f1f3ac14f68eb8f7b896",
+            "native_cropped_png": "/root/autodl-tmp/ai-design/tmp/task15-ring-review/35493b7f5869/1234/r1-E01-003-1234.png",
+            "body_rows": [
+              64,
+              960
+            ],
+            "r0_cache_sha256": "483fac2d8f03b71c71c9bbc64e9fa970059f23928ce2acfd5f1f1effcc480906"
+          },
+          "E01-004": {
+            "stacked_banner_white_line": false,
+            "notes": "橙白花朵和枝叶在浅绿底上跨整个环带连续。",
+            "cache_sha256": "e55e23a93daa429b9c92ebf7ea7b1675f414107d20388ffd7bf54124e12f28e5",
+            "ring_rgb_sha256": "ac4323e556162766b34164dd9bf6b8a56b21e3ac9a612f17c847d220184123a7",
+            "ring_body_raw_sha256": "a2b5b662c75eccaa8eada7e7ab8264f5aaf9cd9f2ca2c8bbd5a9d5f583bad378",
+            "native_cropped_png": "/root/autodl-tmp/ai-design/tmp/task15-ring-review/35493b7f5869/1234/r1-E01-004-1234.png",
+            "body_rows": [
+              64,
+              960
+            ],
+            "r0_cache_sha256": "6cbe44cdd2458b2469f5c7b7de0eb259fcee0cdcb345dccf0c0f8e5f79704731"
+          },
+          "E01-005": {
+            "stacked_banner_white_line": false,
+            "notes": "棕色木截面、菌形及蓝绿土壤块面均属同一底纹。",
+            "cache_sha256": "a6b4485a42736c1468c6d21e8f3e4b9975795a0a2ee217008ae04b10bbbc817a",
+            "ring_rgb_sha256": "b87f8a76bdf987302076e73c59276805caf2cf7d5de047a6158165630e0e6937",
+            "ring_body_raw_sha256": "af23a5946e07c1f90e3c8c334e4c6353f6beb7f4048881050f666c39fc290541",
+            "native_cropped_png": "/root/autodl-tmp/ai-design/tmp/task15-ring-review/35493b7f5869/1234/r1-E01-005-1234.png",
+            "body_rows": [
+              64,
+              960
+            ],
+            "r0_cache_sha256": "a33a3c4ec30450f44048ee2da9ee5fc3bf03ee68fb9bfd452972071080e50fec"
+          },
+          "E01-006": {
+            "stacked_banner_white_line": false,
+            "notes": "青绿、橙色起伏丘陵与树木处于同一画幅。",
+            "cache_sha256": "040f2c07a2406724b62b773ebdc317a4b5bcd0960a18dbf5b507aede5373cde9",
+            "ring_rgb_sha256": "babf2ca53dd0f37f887aca40b9c82c3bc98f239651864810152cd590200b6cfb",
+            "ring_body_raw_sha256": "886505d43554b5d2f48c725838977d7871b8c5b8192014ed9bdfcff1e3761d3e",
+            "native_cropped_png": "/root/autodl-tmp/ai-design/tmp/task15-ring-review/35493b7f5869/1234/r1-E01-006-1234.png",
+            "body_rows": [
+              64,
+              960
+            ],
+            "r0_cache_sha256": "3d8f899920bac1404bd3ac2ec74c33cbbed607122eb46e83fa3687f8ce3739d5"
+          },
+          "E01-007": {
+            "stacked_banner_white_line": false,
+            "notes": "更清楚的三枚立体袋状样机并排，有明显文字、边缘立体和投影。",
+            "cache_sha256": "74dfe77b98f4e65d97cba03ce77124122619d00b585fa011c78fcab124495d08",
+            "ring_rgb_sha256": "7fad76ab524763646245f4a2ccb225826eeb3deb48c3fdebc3206a9ff530a0f8",
+            "ring_body_raw_sha256": "18e98f166b4a841f39e68a5e54d3e69867368ad95ea79dd64d662f1828deefb1",
+            "native_cropped_png": "/root/autodl-tmp/ai-design/tmp/task15-ring-review/35493b7f5869/1234/r1-E01-007-1234.png",
+            "body_rows": [
+              64,
+              960
+            ],
+            "r0_cache_sha256": "1dc118123fab93f76fa987a8abc4fbb477b4eaa31dd502fdf1a226639ab7885f"
+          },
+          "E01-008": {
+            "stacked_banner_white_line": false,
+            "notes": "红果和青绿枝叶保持连续散布，同一浅底。",
+            "cache_sha256": "eb1896e576c81a0683016a3f51b3c951a4b5f3935350ee0a1d36ba9d108a5ab9",
+            "ring_rgb_sha256": "fd1d58bb2ebcfb714240c00386176f432afd627fb12670a5a36f5109695e4d0f",
+            "ring_body_raw_sha256": "825f47e487dfbe1d48a37c2b19fa675c6dc007034caf3f4d63a7b6f8d8c0799c",
+            "native_cropped_png": "/root/autodl-tmp/ai-design/tmp/task15-ring-review/35493b7f5869/1234/r1-E01-008-1234.png",
+            "body_rows": [
+              64,
+              960
+            ],
+            "r0_cache_sha256": "c3acf54de26e1c2d0f19c7c2e5497d4d50ce3fd859c57c971c3b3c3cae38eb07"
+          },
+          "E01-009": {
+            "stacked_banner_white_line": false,
+            "notes": "白云随轮廓起伏，橙天、山脊与花田自然过渡。",
+            "cache_sha256": "d591f72e3041c2263a312f0a52c482a473cff5dd38646c66ea00e3fa763d03ca",
+            "ring_rgb_sha256": "c922f7ddc4d4c155b2acc6eaeabcf4d166dfdadd943efaff0cecaace59a95446",
+            "ring_body_raw_sha256": "abbdf97411a6cc3b6425f67c7359ef823be0db7c79ce0d96199a71ec91198c18",
+            "native_cropped_png": "/root/autodl-tmp/ai-design/tmp/task15-ring-review/35493b7f5869/1234/r1-E01-009-1234.png",
+            "body_rows": [
+              64,
+              960
+            ],
+            "r0_cache_sha256": "4cfe9e6aa0d412a04d7dc80d7b843ced2a83048bc8e52ec4b8c97fd107519710"
+          },
+          "E01-010": {
+            "stacked_banner_white_line": false,
+            "notes": "橙棕果实、叶片和浅青底纹以不规则散点铺开。",
+            "cache_sha256": "600c597fe56af2f539218486b8485ebc9df2b652f3eea54ecaa0b9d6203752ad",
+            "ring_rgb_sha256": "c8bf38b9851d0731a7c048d174966a97c21258f811d3b0f3fff78b0e7cb24a2e",
+            "ring_body_raw_sha256": "31cc2b34d1549f1904daebb99bf9f253d44bda7df26f1a1797afa367b6538e75",
+            "native_cropped_png": "/root/autodl-tmp/ai-design/tmp/task15-ring-review/35493b7f5869/1234/r1-E01-010-1234.png",
+            "body_rows": [
+              64,
+              960
+            ],
+            "r0_cache_sha256": "16b95e92f2a01a6c73957295ba30ec03cc032119a3d0e475c6910055d3d07448"
+          }
+        }
+      }
+    }
+  }
+}

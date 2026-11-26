@@ -1,0 +1,146 @@
+{
+  "selected": "r0",
+  "seeds": {
+    "42": {
+      "n": 10,
+      "means": {
+        "r0": {
+          "ring_only_box_floor": 1.2244084290991146,
+          "wrap_lb_delta_e00": 4.064546370506287,
+          "wrap_lb_lpips": 0.1664038486778736,
+          "clip_score": 0.7067669779062271,
+          "image_reward": -1.5612417340278626,
+          "side_bleed_fill_pct": 65.74255433324389,
+          "side_bleed_fill_v2_pct": 61.16179232626778,
+          "m4_repeat_score": 0.849220997095108,
+          "ring_elapsed_seconds": 12.407945991121233,
+          "ring_peak_memory_mib": 10422.250146484375
+        },
+        "r1": {
+          "ring_only_box_floor": 1.2878663907223986,
+          "wrap_lb_delta_e00": 3.880139946937561,
+          "wrap_lb_lpips": 0.17095848470926284,
+          "clip_score": 0.7218636572360992,
+          "image_reward": -1.5439067602157592,
+          "side_bleed_fill_pct": 64.63844915481621,
+          "side_bleed_fill_v2_pct": 58.38341829889992,
+          "m4_repeat_score": 0.8346992909908295,
+          "ring_elapsed_seconds": 12.349560015276074,
+          "ring_peak_memory_mib": 10422.250146484375
+        }
+      },
+      "paired_delta_r1_minus_r0": {
+        "ring_only_box_floor": 0.06345796162328403,
+        "wrap_lb_delta_e00": -0.18440642356872558,
+        "wrap_lb_lpips": 0.004554636031389237,
+        "clip_score": 0.015096679329872131,
+        "image_reward": 0.01733497381210327,
+        "side_bleed_fill_pct": -1.1041051784276867,
+        "side_bleed_fill_v2_pct": -2.778374027367858,
+        "m4_repeat_score": -0.014521706104278564,
+        "ring_elapsed_seconds": -0.0583859758451581,
+        "ring_peak_memory_mib": 0.0
+      },
+      "stripe_floor": {
+        "r0": 1.2244084290991146,
+        "r1": 1.2878663907223986,
+        "r1_minus_r0": 0.06345796162328403,
+        "passed": false
+      },
+      "quality_guards": {
+        "wrap_lb_delta_e00": {
+          "r1_minus_r0": -0.18440642356872558,
+          "adverse_margin": 1.0,
+          "passed": true
+        },
+        "wrap_lb_lpips": {
+          "r1_minus_r0": 0.004554636031389237,
+          "adverse_margin": 0.02,
+          "passed": true
+        },
+        "clip_score": {
+          "r1_minus_r0": 0.015096679329872131,
+          "adverse_margin": 0.02,
+          "passed": true
+        },
+        "image_reward": {
+          "r1_minus_r0": 0.01733497381210327,
+          "adverse_margin": 0.1,
+          "passed": true
+        }
+      },
+      "passed": false
+    },
+    "1234": {
+      "n": 10,
+      "means": {
+        "r0": {
+          "ring_only_box_floor": 1.2797767234291657,
+          "wrap_lb_delta_e00": 3.2358056545257567,
+          "wrap_lb_lpips": 0.21484706401824952,
+          "clip_score": 0.731304157525301,
+          "image_reward": -1.2458144962787627,
+          "side_bleed_fill_pct": 61.60249530453448,
+          "side_bleed_fill_v2_pct": 51.202709954386904,
+          "m4_repeat_score": 0.788507878780365,
+          "ring_elapsed_seconds": 12.340846554748714,
+          "ring_peak_memory_mib": 10423.578271484375
+        },
+        "r1": {
+          "ring_only_box_floor": 1.2728055724099563,
+          "wrap_lb_delta_e00": 3.509626531600952,
+          "wrap_lb_lpips": 0.22162146419286727,
+          "clip_score": 0.7350105196237564,
+          "image_reward": -0.9955864459276199,
+          "side_bleed_fill_pct": 59.39093104373491,
+          "side_bleed_fill_v2_pct": 43.89388247920579,
+          "m4_repeat_score": 0.7527597635984421,
+          "ring_elapsed_seconds": 12.396785372495652,
+          "ring_peak_memory_mib": 10422.250146484375
+        }
+      },
+      "paired_delta_r1_minus_r0": {
+        "ring_only_box_floor": -0.006971151019209421,
+        "wrap_lb_delta_e00": 0.2738208770751953,
+        "wrap_lb_lpips": 0.006774400174617767,
+        "clip_score": 0.003706362098455429,
+        "image_reward": 0.25022805035114287,
+        "side_bleed_fill_pct": -2.2115642607995682,
+        "side_bleed_fill_v2_pct": -7.308827475181112,
+        "m4_repeat_score": -0.03574811518192291,
+        "ring_elapsed_seconds": 0.05593881774693728,
+        "ring_peak_memory_mib": -1.328125
+      },
+      "stripe_floor": {
+        "r0": 1.2797767234291657,
+        "r1": 1.2728055724099563,
+        "r1_minus_r0": -0.006971151019209421,
+        "passed": true
+      },
+      "quality_guards": {
+        "wrap_lb_delta_e00": {
+          "r1_minus_r0": 0.2738208770751953,
+          "adverse_margin": 1.0,
+          "passed": true
+        },
+        "wrap_lb_lpips": {
+          "r1_minus_r0": 0.006774400174617767,
+          "adverse_margin": 0.02,
+          "passed": true
+        },
+        "clip_score": {
+          "r1_minus_r0": 0.003706362098455429,
+          "adverse_margin": 0.02,
+          "passed": true
+        },
+        "image_reward": {
+          "r1_minus_r0": 0.25022805035114287,
+          "adverse_margin": 0.1,
+          "passed": true
+        }
+      },
+      "passed": true
+    }
+  },
+  "reason": "one_or_more_ring_checks_failed"
+}

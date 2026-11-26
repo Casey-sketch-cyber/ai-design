@@ -1,0 +1,81 @@
+{
+  "config": {
+    "protocol": "e02-v3-uniform-ring",
+    "seeds": [
+      42,
+      1234
+    ],
+    "task13_reference": "372fd0ca6170",
+    "negative_suffix": "split panels, stacked horizontal bands, horizontal divider lines, white stripes, frames, borders, collage, grid layout",
+    "ring_quality_guard": {
+      "wrap_lb_delta_e00_increase": 1.0,
+      "wrap_lb_lpips_increase": 0.02,
+      "clip_score_decrease": 0.02,
+      "image_reward_decrease": 0.1
+    },
+    "cap_strengths": {
+      "g5": 0.85,
+      "u1": 0.85,
+      "u2": 0.92
+    },
+    "uniform_texture": {
+      "highpass_sigma_px_at_scale_1": 4.0,
+      "distance_offset_px": 1.0,
+      "center_envelope_floor": 0.6,
+      "phase_lock_px_at_scale_1": 8,
+      "phase_seed": 15,
+      "phase_shift_fraction_min": 0.18,
+      "phase_shift_fraction_max": 0.32,
+      "coarse_sigma_multiplier": 2.0,
+      "normal_extension": "reflect",
+      "tangential_extension": "reflect_bilinear",
+      "blend": "inverse_distance_l2",
+      "per_pixel_bound": "max_abs_sample",
+      "envelope": "floor_plus_cosine_squared"
+    },
+    "gate": {
+      "stripe_factor": 1.2,
+      "clip_margin": 0.05,
+      "seconds": 60,
+      "peak_memory_mib": 20480
+    }
+  },
+  "frozen_metrics": "3acf4b16d925f133ca4aeba21cd14c44ce585ab045c69de75e03c2ad3ebbc170",
+  "frozen_ring_sampler": {
+    "commit": "b18ed8e775bf072fbcd3b32b9f381abdfbdb9728",
+    "ring_block_ast_sha256": "185fa28a74927e816ad38d585e4bbbd4fdb5a8ff3c61377e7e8aaf2dd2d5bbf1",
+    "unchanged_source_files": {
+      "v3_geometry.py": "a5d96d3614c376ffc429bc7844005adebeedeb427199fb678e124dbcd01f7801",
+      "v3_circular.py": "9ef30a3676024943228fc0f107228c5cbf471421094a40d286f161094b473ef6",
+      "v3_attention.py": "9fd3663c96e6b3fbfa66706a3aaa8f98c4a355443141f31e57650613b8f45ffa",
+      "ours_tf.py": "7f8cd89b0af065667fc93625d46bd28d7f605bdc22a975b4bf9c54f3c62a7969",
+      "sdxl.py": "e86d47a54703d5467d842331ce73ec64d0393631463308be48e5b0739c92b7bf",
+      "b2_controlnet.py": "25d7630521deb3b8eeba0fd09a84256279a344276e2db6fad30c28b9ea7c5808"
+    }
+  },
+  "original_ring_caches": {
+    "E01-001-42": "fe8206a1420d09067988e9872118437f7bd7fdb3057df896bd46bd2ce4d46b7d",
+    "E01-002-42": "0065db7fe2cc5cac0007246f17e4a0307c29fc54d2ae477adc0eade81d741282",
+    "E01-003-42": "6b2b14dc11e52ba3c8d93b4740d6898c214ad1a506a6bbf9f5bc304879fb8548",
+    "E01-004-42": "565c091a522589ede335028f54cd9ecbe6974eca726f88f60dc52d58f04e4b38",
+    "E01-005-42": "18c5387d2508350e66f36c81c381096887da047aea5804c746d82278d8cf34fa",
+    "E01-006-42": "c1d1dbf4113f7e03023bd281fe752c91d199ff48ffb82367ef4321cf82f50fef",
+    "E01-007-42": "92842c215739ecf5499a864182b2b35e37539304f7129dcb5c4d3443d59addd9",
+    "E01-008-42": "15e303cbd3230d03daeda46d68be5c0521b5f19c814a4b26a55a89ef8fb499f4",
+    "E01-009-42": "6e770d709d6eb2b98c2f94182f44e44652926f0f6f0e117363fc11dd4eb85ce6",
+    "E01-010-42": "b000782cb6c84be7958a8b6333e90fc4fe182f108850d16b368463b5b228a51d",
+    "E01-001-1234": "bd42591e451df4c1975cfdf598508a886995fc0f253c5aa46fd77863c0e80bba",
+    "E01-002-1234": "223771de874586bfef2f2b6575e74304f47bc697255d3aae42795098664fbefa",
+    "E01-003-1234": "483fac2d8f03b71c71c9bbc64e9fa970059f23928ce2acfd5f1f1effcc480906",
+    "E01-004-1234": "6cbe44cdd2458b2469f5c7b7de0eb259fcee0cdcb345dccf0c0f8e5f79704731",
+    "E01-005-1234": "a33a3c4ec30450f44048ee2da9ee5fc3bf03ee68fb9bfd452972071080e50fec",
+    "E01-006-1234": "3d8f899920bac1404bd3ac2ec74c33cbbed607122eb46e83fa3687f8ce3739d5",
+    "E01-007-1234": "1dc118123fab93f76fa987a8abc4fbb477b4eaa31dd502fdf1a226639ab7885f",
+    "E01-008-1234": "c3acf54de26e1c2d0f19c7c2e5497d4d50ce3fd859c57c971c3b3c3cae38eb07",
+    "E01-009-1234": "4cfe9e6aa0d412a04d7dc80d7b843ced2a83048bc8e52ec4b8c97fd107519710",
+    "E01-010-1234": "16b95e92f2a01a6c73957295ba30ec03cc032119a3d0e475c6910055d3d07448"
+  },
+  "task07_inputs_sha256": "7bef0a64c01d60981d9ab88524eedffec76a5cbf1d60059a8bfd82b20b32ba7e",
+  "task13_inputs_sha256": "5cfd3426a28df6c18acc1249cd583ca80ce0f951f22348730f75ba6683ee714f",
+  "task13_selection_sha256": "733f5850b515ad62972d9c360cc6e272ea83897480b0c99d18049c19b384e2a4"
+}

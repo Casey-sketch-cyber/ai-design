@@ -1,0 +1,89 @@
+{
+  "task07_run": "c6bb770094d3",
+  "task07_manifest_sha256": "7bef0a64c01d60981d9ab88524eedffec76a5cbf1d60059a8bfd82b20b32ba7e",
+  "baseline_implementation_sha256": "13679fd0c8dddbbb4d95622c97fec328ab8cfd85e4c3fd28455a31b71394ec7f",
+  "settings": {
+    "steps": 30,
+    "guidance": 5.0,
+    "regional_weight": 1.0,
+    "cap_band": 16,
+    "share_attention": false,
+    "projection_strength": 0.2,
+    "projection_tail": 0.3,
+    "projection_interval": 3,
+    "controlnet_scale": 0.65
+  },
+  "geometry": {
+    "bleed_owner.png": "d722b166dc94e5e4822f6a174de910ee0d06de5c6759129b9a7b5a085809afe6",
+    "region_map.png": "4e28b4559880d8715f178733707e2ec795f60b587a916b6429162533fcf2b220",
+    "topology.json": "d09c45f26f91b6374e40d708fc0748e7194eb41293ed7274c29fb74b4dd0b616"
+  },
+  "lut_sha256": "4f641d7417f866ba6e20badc60af6f9824aad9215edd67680babceed73896e20",
+  "models": {
+    "sdxl": {
+      "repository": "stabilityai/stable-diffusion-xl-base-1.0",
+      "revision": "462165984030d82259a11f4367a4eed129e94a7b",
+      "weights": {
+        "unet/diffusion_pytorch_model.fp16.safetensors": "83e012a805b84c7ca28e5646747c90a243c65c8ba4f070e2d7ddc9d74661e139",
+        "text_encoder/model.fp16.safetensors": "660c6f5b1abae9dc498ac2d21e1347d2abdb0cf6c0c0c8576cd796491d9a6cdd",
+        "text_encoder_2/model.fp16.safetensors": "ec310df2af79c318e24d20511b601a591ca8cd4f1fce1d8dff822a356bcdb1f4"
+      }
+    },
+    "vae": {
+      "repository": "madebyollin/sdxl-vae-fp16-fix",
+      "revision": "207b116dae70ace3637169f1ddd2434b91b3a8cd",
+      "weights": {
+        "diffusion_pytorch_model.safetensors": "1b909373b28f2137098b0fd9dbc6f97f8410854f31f84ddc9fa04b077b0ace2c"
+      }
+    },
+    "controlnet": {
+      "repository": "diffusers/controlnet-canny-sdxl-1.0",
+      "revision": "eb115a19a10d14909256db740ed109532ab1483c",
+      "weights": {
+        "diffusion_pytorch_model.fp16.safetensors": "b2e7d3921058a442cc80430d1ec8847f42599c705e2451c95e77cf4dcf8d6c25"
+      }
+    }
+  },
+  "generation_source": {
+    "commit": "b18ed8e775bf072fbcd3b32b9f381abdfbdb9728",
+    "ring_block_ast_sha256": "185fa28a74927e816ad38d585e4bbbd4fdb5a8ff3c61377e7e8aaf2dd2d5bbf1",
+    "unchanged_source_files": {
+      "v3_geometry.py": "a5d96d3614c376ffc429bc7844005adebeedeb427199fb678e124dbcd01f7801",
+      "v3_circular.py": "9ef30a3676024943228fc0f107228c5cbf471421094a40d286f161094b473ef6",
+      "v3_attention.py": "9fd3663c96e6b3fbfa66706a3aaa8f98c4a355443141f31e57650613b8f45ffa",
+      "ours_tf.py": "7f8cd89b0af065667fc93625d46bd28d7f605bdc22a975b4bf9c54f3c62a7969",
+      "sdxl.py": "e86d47a54703d5467d842331ce73ec64d0393631463308be48e5b0739c92b7bf",
+      "b2_controlnet.py": "25d7630521deb3b8eeba0fd09a84256279a344276e2db6fad30c28b9ea7c5808"
+    }
+  },
+  "negative_prompts": {
+    "b2_regional": "photo of a box, perspective, cast shadow, highlights, watermark, grid, mockup",
+    "b2_regional_r1": "photo of a box, perspective, cast shadow, highlights, watermark, grid, mockup, split panels, stacked horizontal bands, horizontal divider lines, white stripes, frames, borders, collage, grid layout"
+  },
+  "tokenizer_checks": {
+    "b2_regional": {
+      "tokenizer_1": {
+        "tokens": 21,
+        "capacity": 77,
+        "input_ids_sha256": "18925c528ae59763f0ff9401ab2e4483d118b383cc50b2520341711bf18db7dc"
+      },
+      "tokenizer_2": {
+        "tokens": 21,
+        "capacity": 77,
+        "input_ids_sha256": "18925c528ae59763f0ff9401ab2e4483d118b383cc50b2520341711bf18db7dc"
+      }
+    },
+    "b2_regional_r1": {
+      "tokenizer_1": {
+        "tokens": 45,
+        "capacity": 77,
+        "input_ids_sha256": "b206013ed7c3b9a664d7762f78c984dd33efd68162eb7e5becbe3b1aa2a5cf25"
+      },
+      "tokenizer_2": {
+        "tokens": 45,
+        "capacity": 77,
+        "input_ids_sha256": "b206013ed7c3b9a664d7762f78c984dd33efd68162eb7e5becbe3b1aa2a5cf25"
+      }
+    }
+  }
+}
