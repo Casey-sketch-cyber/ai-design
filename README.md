@@ -15,7 +15,16 @@
 
 网页版 Gemini 不能执行命令时：把 `tasks/01-gemini-literature-tree-opc-packaging.md` 和 findInnovation 的 `SKILL.md`、两个模板的内容一起粘贴给它，产出再由你或其他 AI 提交到本仓库。
 
-## 发给 Gemini 的指令（任务 16，直接复制，与任务 15 并行）
+## 发给 Codex 的指令（任务 17，直接复制）
+
+```
+请 pull 仓库 https://github.com/Casey-sketch-cyber/ai-design.git 的最新 main，
+先读 AGENTS.md、PR #16 里 Claude 的审查留言、docs/BEAT_BASELINES_GEMINI.md 第 2 节和 PR #15 里 Claude 的回应，
+然后执行 tasks/17-codex-v3-ring-m2-m3.md（环带 R0/M3b/M3/M2/M2+M3 按登记规则选择，盖面比较 U1 与 U1-σ28，B2-regional-M2 作对照；冻结指标和关口不动；两个种子都报告关口，做完就停）。
+必须能在 RTX 3090 24GB 上跑通。在分支 codex/v3-ring-m2-m3 上完成，推送并创建 PR，不要自己合并。全程用中文沟通。
+```
+
+## 发给 Gemini 的指令（任务 16，已完成）
 
 ```
 请 pull 仓库 https://github.com/Casey-sketch-cyber/ai-design.git 的最新 main，
@@ -24,7 +33,7 @@
 在分支 gemini/beat-all-baselines 上完成，推送并创建 PR，不要自己合并。全程用中文。
 ```
 
-## 发给 Codex 的指令（任务 15，直接复制）
+## 发给 Codex 的指令（任务 15，已完成）
 
 ```
 请 pull 仓库 https://github.com/Casey-sketch-cyber/ai-design.git 的最新 main，
