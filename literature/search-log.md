@@ -2,14 +2,14 @@
 
 - 课题：**用人工智能（深度学习等）做包装设计（乡村农产品包装为应用场景，OPC/方案交付为可选框架）**
 - 检索执行者：Gemini
-- 检索日期：2026-11-24 至 2026-11-26（含初版 Q01–Q25、修订版 Q26–Q34、PR #1 返修 Q35–Q37、任务 06 方法深研 v3 专项检索 Q38–Q41、任务 09 盖面修复 C5 文献核对 Q42、任务 16 全关口超越基线方法文献核对 Q43、任务 19 盖面内部纹理补足方案文献核对 Q44，以及任务 21 高分辨率去重复文献核对 Q45）
+- 检索日期：2026-11-24 至 2026-11-26（含初版 Q01–Q25、修订版 Q26–Q34、PR #1 返修 Q35–Q37、任务 06 方法深研 v3 专项检索 Q38–Q41、任务 09 盖面修复 C5 文献核对 Q42、任务 16 全关口超越基线方法文献核对 Q43、任务 19 盖面内部纹理补足方案文献核对 Q44、任务 21 高分辨率去重复文献核对 Q45，以及任务 23 盖面去贴片引导与多频融合文献核对 Q46）
 - 数据来源约束：仅使用免费开放学术来源（OpenAlex API、Crossref API、arXiv、GitHub/HuggingFace 数据集公开页、出版社公开页、公开网页检索含知网/万方免费摘要线索），未使用 Scopus 或 Web of Science 付费权限。
 
 > **核心结论前置**：转向**“用深度学习等 AI 方法做包装设计”**且**只用纯客观指标（A 套，不招募专家/消费者）**后，本课题**完全具备发表纯开放获取（OA）SCIE 期刊论文的可行性**，甚至比纯设计实践类论文更容易通过客观定量对比与消融实验满足 SCIE 工程/计算机综合刊的审稿门槛。核心方法贡献应锚定在**深度学习包装设计尚未解决好的关键技术难点**（尤其是“**参数化刀版拓扑感知的多面一致生成 + 视觉艺术字/矢量法定标签双轨解耦 + 可印刷性/合规性客观引导**”），配套自建可开源合成刀版—3D 配对基准与 Open Food Facts/RPC/AnyWord-3M 公开数据，首选 OA SCIE 靶刊为 ***Applied Sciences***、***Scientific Reports***、***PLOS ONE***、***IEEE Access***、***Electronics*** 与 ***Symmetry***。
 
 ---
 
-## 一、系统检索记录表（中英文，共 45 组）
+## 一、系统检索记录表（中英文，共 46 组）
 
 ### 第一阶段：初始四脉络与种子文献检索（Q01–Q25）
 
@@ -65,6 +65,7 @@
 | Q43 | 2026-11-26 | OpenAlex API + arXiv 官方 API | 任务 16（全关口超越对手方法依据）：`High-Performance By-Example Noise using a Histogram-Preserving Blending Operator` (PACMCGIT/HPG 2018)、`Image quilting for texture synthesis and transfer` (SIGGRAPH 2001)、`Prompt-to-Prompt Image Editing with Cross Attention Control` (ICLR 2023)（并复核 `DenseDiffusion`、`SpotDiffusion`、`Diffusion360` 已在库） | 3 | 3（全部 `verified=yes, abstract`） | 脉络一（v3 盖面方差保持纹理混合与环带时间步解耦） | 全部核对 OpenAlex/arXiv 官方摘要与 DOI，支撑任务 16 方法 M1a/M1b（方差保持多边混合与块拼贴）与 M2（时间步粗到细交叉注意力调度） |
 | Q44 | 2026-11-26 | OpenAlex API | 任务 19（底盖内部纹理补足机制与方案依据）：`Image Style Transfer Using Convolutional Neural Networks` (CVPR 2016)、`Resolution-robust Large Mask Inpainting with Fourier Convolutions` (LaMa, WACV 2022)、`Diffusion Posterior Sampling for General Noisy Inverse Problems` (DPS, ICLR 2023)、`Cross-Image Attention for Zero-Shot Appearance Transfer` (SIGGRAPH 2024) | 4 | 4（全部 `verified=yes, abstract`） | 脉络一（v3 大掩码内部纹理退化机制与环内统计/跨图注意力引导） | 全部核对 OpenAlex 官方摘要与正式 DOI，支撑任务 19 大掩码感受野退化机制解释及 C2 环内局部统计引导与高分辨解码 K/V 注入方案 |
 | Q45 | 2026-11-26 | OpenAlex API + arXiv 官方摘要页 | 任务 21（C3 约 2 MP 高分辨率联合环盖画布去重复方案对比）：`ScaleCrafter` (ICLR 2024)、`HiDiffusion` (ECCV 2024, `arXiv:2311.17528`)、`FouriScale` (ECCV 2024, `arXiv:2403.12963`)、`DiffuseHigh` (AAAI 2025)（并复核 `DemoFusion`、`MultiDiffusion`、`SyncDiffusion` 已在库） | 4 | 4（全部 `verified=yes, abstract`） | 脉络一（v3 高分辨率联合环盖生成去重复与稳态） | 全部核对 OpenAlex/arXiv 官方摘要与正式 DOI，确立两段式 `896×1088 → 1280×1536` 为首选设置、ScaleCrafter 早步各向异性重膨胀 `dilation=(2,1)` 为备选设置 |
+| Q46 | 2026-11-26 | OpenAlex API + arXiv 官方摘要页 | 任务 23（盖面直边贴片去噪引导、零耗时频谱微调与 K3 混合初图无硬缝融合）：`FreeU` (CVPR 2024, `arXiv:2309.11497`)、`SEGA` (NeurIPS 2023, `arXiv:2301.12247`)、`Perturbed-Attention Guidance (PAG)` (ECCV 2024, `arXiv:2403.17377`)、`A multiresolution spline with application to image mosaics` (ACM TOG 1983)（并复核 `Poisson image editing`、`SDEdit`、`Prompt-to-Prompt`、`DPS` 已在库） | 4 | 4（全部 `verified=yes, abstract`） | 脉络一（v3 盖面去贴片与混合初图频带融合） | 全部核对 OpenAlex/arXiv 官方摘要与正式 DOI，支撑任务 23 中 K3 拉普拉斯金字塔频带融合建议及补救方法 N1（折线锚定上限裁剪 J3 + 早期隔步 SEGA/PAG）与 N2（空间门控 FreeU） |
 
 ---
 

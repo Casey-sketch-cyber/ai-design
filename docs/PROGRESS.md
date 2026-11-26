@@ -42,7 +42,7 @@
 - [x] Codex：完成任务 20。[联合环盖与去噪引导报告](experiments/E02/JOINT-CAP.md)
 - [x] Claude：审查并合并 PR #21（任务 20），形成任务 22、23（2026-11-26）
 - [ ] Codex：任务 22，见 `tasks/22-codex-panel-j4b-fix.md`（做完停下等审查）
-- [ ] Gemini：任务 23，见 `tasks/23-gemini-panel-sparsity.md`
+- [x] Gemini：任务 23，见 `tasks/23-gemini-panel-sparsity.md`（已提交 `docs/PANEL_SPARSITY_GEMINI.md` 并补录 4 篇核对文献，分支 `gemini/panel-sparsity`）
 - [x] Gemini：任务 21，见 `tasks/21-gemini-c3-highres.md`（已提交 `docs/C3_HIGHRES_GEMINI.md` 并补录 4 篇核对文献，分支 `gemini/c3-highres`）
 - [x] Claude：审查任务 01 的 PR #1（2026-11-24，退回）
 - [x] Gemini：按 PR #1 审查意见完成 4 项必改与 2 项建议修改，并已在 PR #1 逐条回复
@@ -53,13 +53,21 @@
 
 ## 已知问题
 
-- `literature/papers.csv` 中共有 144 篇文献，其中 139 篇已核对官方摘要（`verified=yes, summary_source=abstract`，含任务 06 新增 22 篇、任务 09 新增 4 篇、任务 16 新增 3 篇、任务 19 新增 4 篇与任务 21 新增 4 篇）；5 篇标为 `verified=no`（2 篇未定位独立 DOI 的种子文献 + 3 篇 Elsevier 付费墙阻挡摘要的文献），均已单独标注且未作为核心论证依据。
+- `literature/papers.csv` 中共有 148 篇文献，其中 143 篇已核对官方摘要（`verified=yes, summary_source=abstract`，含任务 06 新增 22 篇、任务 09 新增 4 篇、任务 16 新增 3 篇、任务 19 新增 4 篇、任务 21 新增 4 篇与任务 23 新增 4 篇）；5 篇标为 `verified=no`（2 篇未定位独立 DOI 的种子文献 + 3 篇 Elsevier 付费墙阻挡摘要的文献），均已单独标注且未作为核心论证依据。
 - 公开数据集的国内网络拉取速度与 PKU PosterLayout 协议审批周期需在实验启动第一周实测。
 - `docs/JOURNALS.md` 中的 JIF 与中科院 2025 分区来自公开汇总数据，正式投稿前须在 Clarivate MJL 官网与本单位图书馆目录复核。
 
 ---
 
 ## 工作记录
+
+### 2026-11-26 · gemini · `gemini/panel-sparsity`（任务 23：直边贴片与原生联合稀疏机制分析、K1–K4 评估及补救方案）
+- **做了什么**：
+  - 核查任务 20 原像素对照图（`e01-009-all-bottoms.png`、`rectangle-stage-comparison.png`、`E01-003/007/009` 诊断与盖面图）、`joint-cap-content-review.json`、`joint-cap-banner-review.json`、`joint-cap-stripe-sources.csv`、`joint-cap-curves/`、`joint-cap-gate1/` 全量 CSV 与 `v3_joint_cap_*` / `v3_capfix_geometry.py` / `v3_inpainting.py` 源码，撰写 [docs/PANEL_SPARSITY_GEMINI.md](PANEL_SPARSITY_GEMINI.md)（开头三行给出核心结论）。
+  - 回答四个核心问题：（1）判定盖面直边贴片为 `STYLE` 包装/平面语义先验与四边闭合十字形 `known_mask`（含四边 90°/180° 冲突与共享噪声相位）双向耦合所致，评估 K1 必要但未必能清零 `E01-004/005/009/010` 隐性截断；（2）定量区分 `coarse_047/055`（两段缩放致高频坍塌、`F` 侧顶缘卡片留白、`2.67–3.55` 峰）与单次全分辨率 `redilation`（36/40 原生盖面折线 `≤ 1.25`、seed 42 底盖全 `1.0000`），并解释为何与 `J4b` 底盖 `3.664` 不矛盾；（3）逐项预判 K1–K4 失效模式，重点指出 K3 混合初图在 `15–20 mm` 过渡带 + `interior_strength=0.30` 存在产生新拼贴缝、继承 `0–15 mm` 超 `2×` 过冲与角部 `30 mm` 锁死拖高 `cap6 ΔE00` 的三重风险并给出 4 项规避方案，附带指出 `J4b` 顶盖黑带在原像素上实为纯噪 BLD 在浅色天空上缘生成的“黑色货架板”；（4）提出两项不改初图、不压贴边 `E` 的免训练补救方案——**N1（折线锚定上限裁剪 `J3` + 早期隔步 `SEGA/PAG` 去贴片引导）**与**N2（空间门控 `FreeU` 零耗时频谱微调 + 拉普拉斯金字塔融合）**，附 RTX 3090 预算与 1 天最小验证标准。
+  - 通过 OpenAlex API 与 arXiv 官方页面核对并补录 4 篇顶会/顶刊文献（`FreeU` CVPR 2024、`SEGA` NeurIPS 2023、`PAG` ECCV 2024、`Multiresolution Spline` ACM TOG 1983）至 `literature/papers.csv` 与 `literature/search-log.md`（Q46）。
+- **没做完什么**：无；任务 23 交付物已全部完成，待 Claude 审查并合并 PR。
+- **遇到的坑**：`joint-cap-curves/*-42.csv` 中含聚合 `MEAN` 行及环带折线（`ring:B/R`），统计单盒 `F-T`/`B-Btm` 9–12 mm 比值时需先过滤折线与非 `MEAN` 行以免重复计入。
 
 ### 2026-11-26 · claude · main（夜）
 - **完成**：审查并合并 PR #21（任务 20）；下达任务 22（Codex）和任务 23（Gemini）。
