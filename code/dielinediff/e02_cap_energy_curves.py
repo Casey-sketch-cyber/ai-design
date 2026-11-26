@@ -311,12 +311,9 @@ def run_initial_diagnosis(experiment):
 
 
 def _candidate_case(analyzer, job, ring_path, method, seed):
-    from .e02 import score_input
-    from .e02_ring_m2m3_ring_eval import fold_normal_profile
-
     raw_path = job.atlas.path
     metadata = read_json(raw_path.with_suffix(".run.json"))
-    archive = method.lower() == "e0" and metadata["method"] == "u1_sigma28"
+    archive = method.lower() in ("e0", "j0") and metadata["method"] == "u1_sigma28"
     if metadata["seed"] != seed or (not archive and metadata["method"] != method):
         raise ValueError(f"Unexpected candidate source for {method}/{job.atlas.identifier}")
     initial_paths = None
@@ -335,6 +332,13 @@ def _candidate_case(analyzer, job, ring_path, method, seed):
             shape = list(np.load(path, mmap_mode="r", allow_pickle=False).shape)
             if shape != metadata["details"]["initial_images"][face]["shape"]:
                 raise ValueError(f"Initial-image shape differs for {raw_path}/{face}")
+    return _summarize_case(analyzer, job, initial, final, folded, proof)
+
+
+def _summarize_case(analyzer, job, initial, final, folded, proof):
+    from .e02 import score_input
+    from .e02_ring_m2m3_ring_eval import fold_normal_profile
+
     score = read_json(job.score)
     if score["input"] != score_input(job):
         raise ValueError(f"Stale frozen score for {job.atlas.identifier}")
@@ -352,7 +356,7 @@ def _candidate_case(analyzer, job, ring_path, method, seed):
     return stats, profiles
 
 
-def _candidate_cache(path, folder, analyzer, method, seed, jobs, ring_dir):
+def _candidate_cache(path, folder, analyzer, method, seed, jobs, ring_dir, stage1_source):
     if not path.is_file():
         return None
     saved = read_json(path)
@@ -367,12 +371,16 @@ def _candidate_cache(path, folder, analyzer, method, seed, jobs, ring_dir):
         brief = job.atlas.brief["id"]
         proof = saved["cases"][brief]["source"]
         raw_path = job.atlas.path
-        ring = Path(ring_dir) / f"{brief}-{seed}.npz"
-        paths = {"raw": raw_path, "run": raw_path.with_suffix(".run.json"), "ring": ring,
-                 "ring_proof": ring.with_suffix(".json"), "score": job.score}
+        paths = {"raw": raw_path, "run": raw_path.with_suffix(".run.json"), "score": job.score}
+        if stage1_source:
+            prior = Path(proof["stage1_path"])
+            paths.update(stage1=prior, stage1_run=prior.with_suffix(".run.json"))
+        else:
+            ring = Path(ring_dir) / f"{brief}-{seed}.npz"
+            paths.update(ring=ring, ring_proof=ring.with_suffix(".json"))
         if any(not file.is_file() or proof[f"{key}_sha256"] != file_hash(file) for key, file in paths.items()):
             return None
-        for face, init in proof["initial_caps"].items():
+        for face, init in proof.get("initial_caps", {}).items():
             source = raw_path.with_suffix(f".init-{face}.npy")
             if "file_sha256" in init and (not source.is_file()
                     or init["file_sha256"] != file_hash(source)):
@@ -380,7 +388,32 @@ def _candidate_cache(path, folder, analyzer, method, seed, jobs, ring_dir):
     return saved
 
 
-def write_candidate_curves(experiment, method, *, seed=42, output=None):
+def _staged_case(analyzer, job, method, seed):
+    raw = job.atlas.path
+    run = raw.with_suffix(".run.json")
+    metadata = read_json(run)
+    details = metadata["details"]
+    before = Path(details["stage1_raw_path"])
+    prior = before.with_suffix(".run.json")
+    before_hash = file_hash(before)
+    raw_hash = file_hash(raw)
+    if (metadata["method"] != method or metadata["seed"] != seed or raw_hash != metadata["raw_sha256"]
+            or before_hash != details["stage1_raw_sha256"] or file_hash(prior) != details["stage1_run_sha256"]
+            or before_hash != read_json(prior)["raw_sha256"]):
+        raise ValueError(f"Stage 1 and final atlas provenance mismatch for {raw}")
+    after = analyzer.evaluator._native_atlas(raw)
+    sources = analyzer.evaluator._native_atlas(before)
+    if not np.array_equal(after[analyzer.side_mask], sources[analyzer.side_mask]):
+        raise ValueError(f"Stage 2 altered the shared ring for {raw}")
+    initial = analyzer.evaluator._physical_faces(sources)
+    final = analyzer.evaluator._physical_faces(after)
+    folded = {row["fold"]: row for row in _crease_rows(analyzer.evaluator, final)}
+    proof = {"raw_path": str(raw), "raw_sha256": raw_hash, "run_sha256": file_hash(run),
+             "stage1_path": str(before), "stage1_sha256": before_hash, "stage1_run_sha256": file_hash(prior)}
+    return _summarize_case(analyzer, job, initial, final, folded, proof)
+
+
+def write_candidate_curves(experiment, method, *, seed=42, output=None, stage1_source=False):
     """Export ten paired cap curves, cohort means and two worst frozen v1 cases."""
     root = Path(experiment.root)
     os.environ.setdefault("MPLCONFIGDIR", str(root / "cache/mpl"))
@@ -396,14 +429,17 @@ def write_candidate_curves(experiment, method, *, seed=42, output=None):
         raise ValueError(f"{method}/{seed} curves require exactly the registered first ten briefs")
     prefix = f"{method}-{seed}"
     metadata = folder / f"{prefix}.json"
-    cached = _candidate_cache(metadata, folder, analyzer, method, seed, jobs, ring_dir)
+    cached = _candidate_cache(metadata, folder, analyzer, method, seed, jobs, ring_dir, stage1_source)
     if cached is not None:
         return cached
     rows, profiles, cases = [], {}, {}
     for job in jobs:
         brief = job.atlas.brief["id"]
-        cases[brief], profiles[brief] = _candidate_case(
-            analyzer, job, Path(ring_dir) / f"{brief}-{seed}.npz", method, seed)
+        if stage1_source:
+            cases[brief], profiles[brief] = _staged_case(analyzer, job, method, seed)
+        else:
+            cases[brief], profiles[brief] = _candidate_case(
+                analyzer, job, Path(ring_dir) / f"{brief}-{seed}.npz", method, seed)
         for fold, stages in profiles[brief].items():
             rows.extend(_records(method, seed, brief, fold, stages))
     means = {fold: {stage: np.mean([profiles[brief][fold][stage] for brief in expected], axis=0)

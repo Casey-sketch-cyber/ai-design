@@ -1,0 +1,56 @@
+protocol: e02-v3-joint-cap
+seeds: [42, 1234]
+ring: r0
+cap_prompt:
+  positive: "{style}, {side_prompt}, {main_color}, continue the same pattern and brushwork evenly over the whole surface, uniform detail density, same stroke direction as the adjacent artwork"
+  negative: "plain background, empty area, blank space, blurry"
+blended:
+  strength: 0.85
+  feather_steps: 3
+  feather_latents: 1
+guidance:
+  first_step: 6
+  last_step: 22
+  stride: 2
+  protected_mm: 3.0
+  reference_mm: [9.0, 12.0]
+  gamma: [0.20, 0.30]
+joint_stage1:
+  modes: [coarse_047, coarse_055, redilation]
+  target_width_px: 1280
+  cap_buffer_px: 64
+  stage1a_scale: 0.70
+  stage1a_steps: 28
+  stage1a_guidance: 5.0
+  stage1b_total_steps: 30
+  stage1b_strength: 0.47
+  stage1b_extra_strength: 0.55
+  stage1b_guidance: 5.0
+  stage1b_projection_tail: 0.30
+  stage1b_projection_interval: 3
+  central_fraction: 0.60
+  feather_latent_rows: 6
+  resize_wrap_px: 16
+  redilation:
+    dilation_hw: [2, 1]
+    apply_steps: [0, 9]
+    target_blocks: [down_blocks.2, mid_block, up_blocks.0]
+  orientation: {T: above_F, Btm: below_B}
+joint_outpaint:
+  strip_height_px: 320
+  cap_buffer_px: 64
+  steps: 22
+  guidance: 5.0
+  feather_last: 3
+  orientation: {T: above_F, Btm: below_B}
+joint_stage2:
+  native_lock_mm: 15.0
+  edge_transition_mm: 15.0
+  edge_strength: 0.70
+  interior_strength: 0.30
+  strength_at_fold: 0.0
+  native_unlock_mm: 3.0
+  steps: 30
+  cap_scale: 1
+  feather_last: 3
+  bleed_mm: 3.0

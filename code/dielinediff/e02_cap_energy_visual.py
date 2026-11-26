@@ -51,12 +51,12 @@ def export_content(experiment, method, *, seed=42):
     return {"method": method, "seed": seed, "fingerprint": fingerprint, "samples": records}
 
 
-def verify_content(experiment, path):
-    content = read_json(path)
-    if set(content) != set(CAPS):
-        raise ValueError("Provide one review for each of E0–E4")
+def verify_content(experiment, path, *, methods=CAPS):
+    content = path if isinstance(path, dict) else read_json(path)
+    if set(content) != set(methods):
+        raise ValueError("Provide one review for each registered method")
     guards = {}
-    for method in CAPS:
+    for method in methods:
         item = content[method]
         request = read_json(experiment.output / "cap-content" / method / "seed-42/request.json")
         actual = {job.atlas.brief["id"]: file_hash(job.atlas.path)
