@@ -29,7 +29,7 @@
 - [x] Codex：任务 12，已完成 [CPU 条带诊断](experiments/E02/STRIPE-DIAG.md)
 - [x] Claude：汇总任务 11、12，修正立场（暂不引入条带 v2），合并 PR #11、#12（2026-11-25）
 - [x] Codex：任务 13，见 [盖面颜色与纹理延续报告](experiments/E02/CAPTEXTURE.md)
-- [ ] Gemini：任务 14，见 `tasks/14-gemini-respond-revised-stance.md`（在 PR #12 下留言）
+- [x] Gemini：任务 14，见 `tasks/14-gemini-respond-revised-stance.md`（已在 PR #12 留言回应立场修正并审阅任务 13 设计）
 - [ ] Claude：审查任务 13 的 PR，结合 Gemini 意见
 - [x] Claude：审查任务 01 的 PR #1（2026-11-24，退回）
 - [x] Gemini：按 PR #1 审查意见完成 4 项必改与 2 项建议修改，并已在 PR #1 逐条回复
@@ -53,6 +53,18 @@
 - **完成**：实测四组 ILVR、纹理注入及两档高强度 SDEdit，比对 30 步原日程和冻结环带。
 - **选型**：保留 G5。顶盖和底盖面内纹理硬约束通过，结果同时登记整盒条带、逐折拆解及长尾。
 - **关口与交接**：客观条带 v1 仍未达标，原生折线目视通过。种子 1234 的盖侧 ΔE00 为 5.346，条带 v1 为 1.3455。停在 Step 1，待 Claude 审查。 [报告](experiments/E02/CAPTEXTURE.md)
+
+### 2026-11-25 · gemini · gemini/v3-cap-texture-review（任务 14：PR #12 立场回应与任务 13 审阅）
+- **完成**：核对任务 12 诊断报告（`STRIPE-DIAG.md`）、`stripe-diag-texture.csv`、`stripe-diag-lpips.csv` 及原像素裁图，结合 `v3_geometry.py`、`v3_capfix_geometry.py`、`v3_capgeom.py`、`v3_inpainting.py` 在 PR #12 留言逐条回应任务 14 的 4 个问题（见 https://github.com/Casey-sketch-cyber/ai-design/pull/12#issuecomment-7166031174 ）。
+- **核心结论**：
+  1. **同意修正此前判断**：原像素裁图（`E01-003/004/007` 底盖）与 `stripe-diag-texture.csv` 证实 `G2 · 0.85` 盖面已退化为近似平涂色块（纹理能量约 `B2-regional` 的 1/34–1/53），其低 ΔE00 优势很大程度上来自平涂，且底盖三缝 LPIPS 0/10 盒优于 `B2-regional`。
+  2. **同意暂不引入条带 v2**：维持 `v1` 冻结作为关口，避免掩盖真实的纹理中断缺陷；同意在论文中如实披露 `v1` 对沿折线均匀亮暗带不敏感（`AUC = 0.500`）并保留原像素目视核查，同时建议种子 1234 复验继续附带 `ring_only_box_floor / cap_only_box_floor` 拆解。
+  3. **任务 13 审阅与防踩坑提醒**：
+     - 核算 2× 盖面潜空间（`176 × 144`，核心 `98 × 64`，每潜格约 `0.71 mm`）：`N = 4` 等效 `32×`（约 `2.8 mm/格`，偏紧），`N = 8` 等效 `64×`（约 `5.7 mm/格`，更匹配），预期“前 70% 步数”优于“全程”（必要时可备选 `N = 16` 或前 50% 步数）。
+     - 提醒 Codex 在 G4 实现中注意 `q(z_harm, prev_timestep)` 时间步对齐、确定性 DDIM 噪声一致性（复用固定 `ε_0` 或在 `x̂_0` 空间替换）及 `area` 下采样 + 仅写回 `~known_mask`。
+     - 认同 `0.5 × B2-regional` 十盒均值下限（不宜再抬高或逐盒卡顶盖），并提出 3 条防“加噪点凑能量”补充护栏：面内能量上界 `≤ 2.0 × 环带均值` + 底三缝跨缝纹理能量差改善、`ImageReward ≥ -1.855`、`2×` 下采样能量留存率诊断。
+  4. **论文贡献定位**：提炼“折叠纸盒四边非原生拓扑边界下的频域解耦盖面合成”，明确相对 Blended Latent Diffusion、SDEdit 与 ILVR 的增量（由四边冻结环带 PDE 调和场合成无现成参考图的低频先验 `z_harm`，与全步四边上下文修复解耦高频纹理生成），将 `G1 → G2 → G4` 组织为因果完整的消融主线。
+- **未完成**：待 Codex 完成任务 13 并提交 PR 后，按 Claude 安排跟进。
 
 ### 2026-11-25 · claude · main
 - **完成**：审查并合并 PR #12、#11（解决冲突）；修正立场，下达任务 13、14。
