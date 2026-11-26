@@ -174,7 +174,7 @@ def _review_counts(groups, tied, config, reviews):
     return counts
 
 
-def select_candidates(groups42, candidates, gate_config, *, texture=None, visual_reviews=None, incumbent_method=G5):
+def select_candidates(groups42, candidates, gate_config, *, texture=None, visual_reviews=None, incumbent_method=G5, content_guards=None):
     """Select a same-ring candidate using the registered layered cap policy."""
     methods = tuple(dict.fromkeys((incumbent_method, *candidates)))
     if REFERENCE in methods:
@@ -186,12 +186,18 @@ def select_candidates(groups42, candidates, gate_config, *, texture=None, visual
     reference = data[REFERENCE]
     incumbent = data[incumbent_method]
     results = {}
+    if content_guards is not None and set(content_guards) != set(methods):
+        raise ValueError("A cap content result is required for every registered candidate")
     wins_field, delta_field = f"wins_vs_{incumbent_method}", f"delta_vs_{incumbent_method}"
     for method in methods:
         averages = data[method]
         delta = {key: averages[key] - incumbent[key] for key in PRIMARY_DIRECTIONS}
         wins = [key for key, direction in PRIMARY_DIRECTIONS.items() if direction * delta[key] > 0]
         guards = _hard_constraints(groups42[method], averages, texture[method], reference, gate_config, seed=42)
+        if content_guards is not None:
+            content = content_guards[method]
+            guards["cap_content"] = content
+            guards["passed"] = guards["passed"] and content["passed"]
         results[method] = {"means": averages, wins_field: wins, delta_field: delta,
                            "win_count": len(wins), "hard_constraints": guards, "eligible": guards["passed"]}
     eligible = [method for method in methods if results[method]["eligible"]]

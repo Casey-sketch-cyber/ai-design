@@ -1,0 +1,348 @@
+{
+  "methods": {
+    "e1": {
+      "curve_sha256": "630b4861d8613c29c4350e49fd4ae435f1c291e55f55ef97e495362e1c6de84a",
+      "folds": {
+        "F-T": {
+          "mean_cap_abs_near_minus_reference_Lstar": 2.480144020489287,
+          "mean_ring_abs_near_minus_reference_Lstar": 5.264403440271112,
+          "mean_abs_boundary_jump_Lstar": 0.5415991170065766,
+          "max_abs_boundary_jump_Lstar": 1.4526229722159343,
+          "n": 10
+        },
+        "B-Btm": {
+          "mean_cap_abs_near_minus_reference_Lstar": 2.764290608337947,
+          "mean_ring_abs_near_minus_reference_Lstar": 3.276696442592711,
+          "mean_abs_boundary_jump_Lstar": 2.0333525507790697,
+          "max_abs_boundary_jump_Lstar": 2.946361623491555,
+          "n": 10
+        }
+      }
+    },
+    "e2": {
+      "curve_sha256": "1adb50c06d8f6a7c276f9b5441b69c7d33ece0b258cd169054c9da73cfe3840e",
+      "folds": {
+        "F-T": {
+          "mean_cap_abs_near_minus_reference_Lstar": 2.54504257548423,
+          "mean_ring_abs_near_minus_reference_Lstar": 5.264403440271112,
+          "mean_abs_boundary_jump_Lstar": 0.5787329115186438,
+          "max_abs_boundary_jump_Lstar": 1.5533567292349773,
+          "n": 10
+        },
+        "B-Btm": {
+          "mean_cap_abs_near_minus_reference_Lstar": 2.6439909944080178,
+          "mean_ring_abs_near_minus_reference_Lstar": 3.276696442592711,
+          "mean_abs_boundary_jump_Lstar": 1.8965376826695022,
+          "max_abs_boundary_jump_Lstar": 2.9177967071533146,
+          "n": 10
+        }
+      }
+    },
+    "e3": {
+      "curve_sha256": "3e3ce510f206d22864b38bcec0e6b4cb2ea04044264b654e1f6dc1e0123af70e",
+      "folds": {
+        "F-T": {
+          "mean_cap_abs_near_minus_reference_Lstar": 2.609765502952385,
+          "mean_ring_abs_near_minus_reference_Lstar": 5.264403440271112,
+          "mean_abs_boundary_jump_Lstar": 0.5458496529715433,
+          "max_abs_boundary_jump_Lstar": 1.388887528010784,
+          "n": 10
+        },
+        "B-Btm": {
+          "mean_cap_abs_near_minus_reference_Lstar": 2.5977814644858936,
+          "mean_ring_abs_near_minus_reference_Lstar": 3.276696442592711,
+          "mean_abs_boundary_jump_Lstar": 1.8205596051897317,
+          "max_abs_boundary_jump_Lstar": 2.736058017185755,
+          "n": 10
+        }
+      }
+    },
+    "e4": {
+      "curve_sha256": "4f348835b2c2d75a81ea539ddc277eb041d3885e2036f4999d885d0a294f9760",
+      "folds": {
+        "F-T": {
+          "mean_cap_abs_near_minus_reference_Lstar": 2.5575252045903922,
+          "mean_ring_abs_near_minus_reference_Lstar": 5.264403440271112,
+          "mean_abs_boundary_jump_Lstar": 0.6365992845807782,
+          "max_abs_boundary_jump_Lstar": 1.5293538911002145,
+          "n": 10
+        },
+        "B-Btm": {
+          "mean_cap_abs_near_minus_reference_Lstar": 2.674893960044494,
+          "mean_ring_abs_near_minus_reference_Lstar": 3.276696442592711,
+          "mean_abs_boundary_jump_Lstar": 1.995878186907086,
+          "max_abs_boundary_jump_Lstar": 2.906900024414057,
+          "n": 10
+        }
+      }
+    }
+  },
+  "focus": {
+    "E01-009": {
+      "e1": {
+        "ring": {
+          "near_minus_reference_Lstar": 1.0747195209775668,
+          "across_boundary_jump_Lstar": 0.49048301151820795,
+          "normal_peak_Lstar_per_mm": 14.20402047293527,
+          "normal_peak_inward_mm": 8.25
+        },
+        "cap": {
+          "near_minus_reference_Lstar": 0.8145396981920499,
+          "across_boundary_jump_Lstar": 0.49048301151820795,
+          "normal_peak_Lstar_per_mm": 5.096276855468773,
+          "normal_peak_inward_mm": 8.5
+        }
+      },
+      "e2": {
+        "ring": {
+          "near_minus_reference_Lstar": 1.0747195209775668,
+          "across_boundary_jump_Lstar": 0.6064071927751797,
+          "normal_peak_Lstar_per_mm": 14.20402047293527,
+          "normal_peak_inward_mm": 8.25
+        },
+        "cap": {
+          "near_minus_reference_Lstar": 0.4979207175118745,
+          "across_boundary_jump_Lstar": 0.6064071927751797,
+          "normal_peak_Lstar_per_mm": 5.339239501953102,
+          "normal_peak_inward_mm": 7.75
+        }
+      },
+      "e3": {
+        "ring": {
+          "near_minus_reference_Lstar": 1.0747195209775668,
+          "across_boundary_jump_Lstar": 0.6053995949881426,
+          "normal_peak_Lstar_per_mm": 14.20402047293527,
+          "normal_peak_inward_mm": 8.25
+        },
+        "cap": {
+          "near_minus_reference_Lstar": 1.4872158288955575,
+          "across_boundary_jump_Lstar": 0.6053995949881426,
+          "normal_peak_Lstar_per_mm": 7.10414483206614,
+          "normal_peak_inward_mm": 7.75
+        }
+      },
+      "e4": {
+        "ring": {
+          "near_minus_reference_Lstar": 1.0747195209775668,
+          "across_boundary_jump_Lstar": 0.6036931991577177,
+          "normal_peak_Lstar_per_mm": 14.20402047293527,
+          "normal_peak_inward_mm": 8.25
+        },
+        "cap": {
+          "near_minus_reference_Lstar": 0.7715866111573604,
+          "across_boundary_jump_Lstar": 0.6036931991577177,
+          "normal_peak_Lstar_per_mm": 5.289907618931352,
+          "normal_peak_inward_mm": 7.75
+        }
+      }
+    },
+    "E01-003": {
+      "e1": {
+        "ring": {
+          "near_minus_reference_Lstar": -2.813188255968541,
+          "across_boundary_jump_Lstar": 2.9031033652169356,
+          "normal_peak_Lstar_per_mm": 2.532395444597512,
+          "normal_peak_inward_mm": 7.75
+        },
+        "cap": {
+          "near_minus_reference_Lstar": -2.109590761434468,
+          "across_boundary_jump_Lstar": 2.9031033652169356,
+          "normal_peak_Lstar_per_mm": 6.4579853602818105,
+          "normal_peak_inward_mm": 5.0
+        }
+      },
+      "e2": {
+        "ring": {
+          "near_minus_reference_Lstar": -2.813188255968541,
+          "across_boundary_jump_Lstar": 2.5274317332676475,
+          "normal_peak_Lstar_per_mm": 2.532395444597512,
+          "normal_peak_inward_mm": 7.75
+        },
+        "cap": {
+          "near_minus_reference_Lstar": -1.6887923013596264,
+          "across_boundary_jump_Lstar": 2.5274317332676475,
+          "normal_peak_Lstar_per_mm": 6.124447086879201,
+          "normal_peak_inward_mm": 5.25
+        }
+      },
+      "e3": {
+        "ring": {
+          "near_minus_reference_Lstar": -2.813188255968541,
+          "across_boundary_jump_Lstar": 2.2716238975524874,
+          "normal_peak_Lstar_per_mm": 2.532395444597512,
+          "normal_peak_inward_mm": 7.75
+        },
+        "cap": {
+          "near_minus_reference_Lstar": -1.752348576273235,
+          "across_boundary_jump_Lstar": 2.2716238975524874,
+          "normal_peak_Lstar_per_mm": 5.478708049229226,
+          "normal_peak_inward_mm": 5.25
+        }
+      },
+      "e4": {
+        "ring": {
+          "near_minus_reference_Lstar": -2.813188255968541,
+          "across_boundary_jump_Lstar": 2.8783911432538716,
+          "normal_peak_Lstar_per_mm": 2.532395444597512,
+          "normal_peak_inward_mm": 7.75
+        },
+        "cap": {
+          "near_minus_reference_Lstar": -1.926154452278503,
+          "across_boundary_jump_Lstar": 2.8783911432538716,
+          "normal_peak_Lstar_per_mm": 6.771894073486351,
+          "normal_peak_inward_mm": 5.0
+        }
+      }
+    },
+    "E01-007": {
+      "e1": {
+        "ring": {
+          "near_minus_reference_Lstar": -2.7186122712635026,
+          "across_boundary_jump_Lstar": 1.77969368525914,
+          "normal_peak_Lstar_per_mm": 3.0488584245954087,
+          "normal_peak_inward_mm": 6.0
+        },
+        "cap": {
+          "near_minus_reference_Lstar": -4.356804247697184,
+          "across_boundary_jump_Lstar": 1.77969368525914,
+          "normal_peak_Lstar_per_mm": 4.29735265459334,
+          "normal_peak_inward_mm": 8.5
+        }
+      },
+      "e2": {
+        "ring": {
+          "near_minus_reference_Lstar": -2.7186122712635026,
+          "across_boundary_jump_Lstar": 1.687767505645752,
+          "normal_peak_Lstar_per_mm": 3.0488584245954087,
+          "normal_peak_inward_mm": 6.0
+        },
+        "cap": {
+          "near_minus_reference_Lstar": -4.1397351162774285,
+          "across_boundary_jump_Lstar": 1.687767505645752,
+          "normal_peak_Lstar_per_mm": 4.10538433619908,
+          "normal_peak_inward_mm": 8.5
+        }
+      },
+      "e3": {
+        "ring": {
+          "near_minus_reference_Lstar": -2.7186122712635026,
+          "across_boundary_jump_Lstar": 1.684384591238846,
+          "normal_peak_Lstar_per_mm": 3.0488584245954087,
+          "normal_peak_inward_mm": 6.0
+        },
+        "cap": {
+          "near_minus_reference_Lstar": -3.5696129066603532,
+          "across_boundary_jump_Lstar": 1.684384591238846,
+          "normal_peak_Lstar_per_mm": 4.010739571707575,
+          "normal_peak_inward_mm": 8.5
+        }
+      },
+      "e4": {
+        "ring": {
+          "near_minus_reference_Lstar": -2.7186122712635026,
+          "across_boundary_jump_Lstar": 1.6830873216901523,
+          "normal_peak_Lstar_per_mm": 3.0488584245954087,
+          "normal_peak_inward_mm": 6.0
+        },
+        "cap": {
+          "near_minus_reference_Lstar": -4.0702461906841805,
+          "across_boundary_jump_Lstar": 1.6830873216901523,
+          "normal_peak_Lstar_per_mm": 4.0759477887834805,
+          "normal_peak_inward_mm": 8.5
+        }
+      }
+    }
+  },
+  "native_crops": {
+    "E01-001": {
+      "raw_sha256": {
+        "e1": "040208fbabe7262bccbac844cfb7d9fe4936c2e3423f251bd568ce998bce0fcb",
+        "e2": "1eebf7f93a13def778e82a4ddb1dd8b5e9ada483ac68f272b294e6c8545ef17b",
+        "e3": "415fb84567d6b0aa709afcef81b188f948acd890cf52260e9e673ba7cff2fcc3",
+        "e4": "e864351fb1ea1fabca94ccd9ef4e9a4bfbb196dff99f414517999feafe2940ec"
+      },
+      "paired_fold_sheet_sha256": "ce0cee07f4a99160533bc8ccb047f0bf59a7aa7f479d10f012509b27e6b9c6bc"
+    },
+    "E01-002": {
+      "raw_sha256": {
+        "e1": "46008f33ef13494f14ca09412b539922cdc0b9815e63207e8b96c8094d3941f4",
+        "e2": "e4d4ed9588a66d75ef51603acc51ed026605d1f388c7585da99854cb9afedecb",
+        "e3": "1b9b06bd409287e0c1815a029b8e3751c493dfc2a776bbea1c236d75a1216b77",
+        "e4": "0cdda9d68d03229164bb9a788070f4cf500024703e52cd58257589d6a7fd25c4"
+      },
+      "paired_fold_sheet_sha256": "95a59783fa6a629c3893738569244cad27d89a2816efddf3580f697136da47d2"
+    },
+    "E01-003": {
+      "raw_sha256": {
+        "e1": "b8d035108dec179c356f13aa0850e7be2f37da95dd95f14bb2e9e0d858ad540a",
+        "e2": "65f2a26292d2acd3a660c2873b53954b05aa2dc362633205992d9bf916bab080",
+        "e3": "b85551b652db83830f91e440791eef8ab8b4f58906cf74871e073d5f2d8c25ce",
+        "e4": "564207ba3d59549e17c05f6654c6a86813be8866223bdd8a0305535516bd7e96"
+      },
+      "paired_fold_sheet_sha256": "a6a069588d618db64086e04a53640b8cbd361518ebb07c9f00707c0bb7ae48bb"
+    },
+    "E01-004": {
+      "raw_sha256": {
+        "e1": "f1227c80d02ef8da7e3121004ba66ed1f582debe7b9b8d36e1a8c3148369ad44",
+        "e2": "531b87402b6f8654f22ed1fcca25e6aa1a728f63ddcd3278d8d442bc95379543",
+        "e3": "841b2c70cd7ca208ae01eff6ca6b1d6459b4a9adaea0022553ea7b676b51f541",
+        "e4": "792c91d408215c59aa82178bc46fbb072d5fa1490bb75c8d3aa7ed118c82e7f5"
+      },
+      "paired_fold_sheet_sha256": "c0aab5b60954117e74e1c8337975099f23bd92619882fca11606025d642960e4"
+    },
+    "E01-005": {
+      "raw_sha256": {
+        "e1": "3c4ae6c1cfa0b75e60248607dd305019a88aae196851dd103c2e49020895d321",
+        "e2": "0213b881fea8bd20ebb6d1b54563e9fcef928364e9826e07791f3db1ab7b803a",
+        "e3": "8b18084a1c58ac22e149dd1a542f13669f1e03f772e0f349f75a00ff119617f8",
+        "e4": "fa90c2b0fb9a78842c0423fdbc6a43b8a33e5975d1cd8c08f482f5cbbf84db5b"
+      },
+      "paired_fold_sheet_sha256": "9101f61d6aaad8f9fc3728406b801e98ee9911570a13706e4f85af0b443fc616"
+    },
+    "E01-006": {
+      "raw_sha256": {
+        "e1": "26f82792a5c634f9c89f24d37a0a1ff81f59fcc4df7e23f8f33cbf54a20de598",
+        "e2": "e2ad4f412a839a8fb81798d11fd06b59629913d970f0ca4bc2c9f1757c0d57d9",
+        "e3": "34ac2f748643f07c42b8984d5b88c0bd8722405a1ce0f379e6d21b42f7c987ea",
+        "e4": "b422c431791aac24e9090ebfb98c0abd6463816ef2f7e83d96b6deac3245343e"
+      },
+      "paired_fold_sheet_sha256": "d05b66e66e590cd530981b4b9a35cd00070adeecff13a9e53d49caae868de3f1"
+    },
+    "E01-007": {
+      "raw_sha256": {
+        "e1": "892b1ca53a2b5067d824dc899f5fda40674a718421bfbb366abc695adabcc641",
+        "e2": "d8ad504a6212bce09cacad5e3665fbb851997461eb2813115ae3a3ade127ac42",
+        "e3": "b8ef517e9b47e9a08f8cb19394bae6f1b18b05a7cf38f47159f4c15b516f49b9",
+        "e4": "12f2e081775d37284e3ef9410cfc644ce7b60765b7f2474d069f66eb910386b5"
+      },
+      "paired_fold_sheet_sha256": "b68ac7a81f9b09eafab92dbce99f9c397023dd52754c4717e6d2b237ddc9c082"
+    },
+    "E01-008": {
+      "raw_sha256": {
+        "e1": "56b51f933e3abff94fcb26213056e56dae90abffe8b5ff3af349b2db7d594f4d",
+        "e2": "03ce2decfe8a5db3fd7a0badc9c840fa8a3e1451be1778a863cbcec8ed3c7b88",
+        "e3": "bfca35a166e3edd39c06de2a0acc0397d07324db6aa4f36b1647a340396bc3d7",
+        "e4": "1b8969bbe5037659eb10c73344b75783f50a58ce214dc86e9e55ce767f9ea67d"
+      },
+      "paired_fold_sheet_sha256": "e3cf6ea4f120465bc0e7c55ee669359b9b23d6771f95674b15e7efd0c394c784"
+    },
+    "E01-009": {
+      "raw_sha256": {
+        "e1": "1c0192d2126792d14e413df6233df60f0116ac86cbefd32a309e8e180c60a4c6",
+        "e2": "2ca301dd6fb693568e9ec7219ee353d030b1bf6cc64e4a95c45ef8fa3436e688",
+        "e3": "3568d7ee117805f826427f33b42847653a6e19363aa4ce79bab786290270c152",
+        "e4": "ab2d73a2c36f8917bde5f78af4822bf21df349814f8be86ed3ca08d26fb7291c"
+      },
+      "paired_fold_sheet_sha256": "b765dd007cb843c5daa344c3d11b0d26aaec770b16783b344346a3b38b53419e"
+    },
+    "E01-010": {
+      "raw_sha256": {
+        "e1": "7f98335a22de6716a65852f39a6f8865f39a195e800d8eedda429e99210e1703",
+        "e2": "6b5dd38a25f0b3e894e96cd979c19fbfc30e56a711a061cc3aa18b70d3fd3434",
+        "e3": "fca0162855e8b4bd548dacc79f79e4ac6cd83cb5a5f3ffb9efe90ed98c6533aa",
+        "e4": "e215c8c3c6508d935c4cb29d241fcb3d833cfd8b9b55b30e03f1dc68425cb0f8"
+      },
+      "paired_fold_sheet_sha256": "2412b8ae7df7412a2c0188377ba381679df9aa4dd4fc2741dcc75129fd83f226"
+    }
+  }
+}

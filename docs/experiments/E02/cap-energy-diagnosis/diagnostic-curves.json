@@ -1,0 +1,447 @@
+{
+  "source_task17_inputs": "dc8826cd88199f69744276c1eb3a807f94bab94dfd3994f7971804b05f5295ca",
+  "geometry_sha256": "d09c45f26f91b6374e40d708fc0748e7194eb41293ed7274c29fb74b4dd0b616",
+  "physical_source_sha256": "f64fc04feadd1f41277cda04ef38afeb65d5dc32819dec0637584a5167358325",
+  "implementation": {
+    "v3_capgeom_geometry.py": "06013a7f1b7207876f4dbd1a49b4334c504da2350665400df94cb8cd28c274af",
+    "v3_capgeom_init.py": "c38f68d4d6132663e32709297f555ef8c1a6a873813f02cd24026fadf43edf26",
+    "v3_ring_midscale_cap.py": "06908265ab3e9b06ae661ddbadbb6fa66478a548b44a4b1e2c4583c0a22c5b14"
+  },
+  "cases": {
+    "E01-003-42": {
+      "source": {
+        "raw_path": "/root/autodl-tmp/ai-design/outputs/e02/ring-m2m3/runs/c5b232622150/u1_sigma28/E01-003-42.png",
+        "raw_sha256": "0f09d6bbce374a5e8df6a15c11b601fd90d990f003a287d43cea85f4a7962b66",
+        "run_sha256": "bf3adf688e7f88577746c7309eff6e76b90f7ff6d4fc79d6c92349256afb09d1",
+        "ring_path": "/root/autodl-tmp/ai-design/outputs/e02/capfix/rings/0979bc4c77ef/E01-003-42.npz",
+        "ring_sha256": "6b2b14dc11e52ba3c8d93b4740d6898c214ad1a506a6bbf9f5bc304879fb8548",
+        "ring_proof_sha256": "7cf8a60eae787522edc3d63d87dee061bf693af4ad1366ca2624b31c63667567",
+        "projected_initial_rgb_sha256": "bee9689aa05c4aa35810e01a81115f6d270c46b29847bdb94d3e614ff2b5805f",
+        "initial_caps": {
+          "T": {
+            "float32_rgb_sha256": "88c5c79fdb1a0d53c6077b031f7ed1253f84951e09e5b8b78a96335e2cb56aa8",
+            "harmonic_iterations": [
+              9,
+              9,
+              9
+            ]
+          },
+          "Btm": {
+            "float32_rgb_sha256": "4bbcbbc53038893df7a2bd93145e3a24e2864b13e2064e6636e4d73868c92ff5",
+            "harmonic_iterations": [
+              10,
+              10,
+              10
+            ]
+          }
+        },
+        "score_sha256": "3a495af57b058b0953f273c754310ae2f7a5e7dd4a93807ea9adcf138180fb4b"
+      },
+      "whole_box_peak": {
+        "fold": "B-Btm",
+        "a_face": "B",
+        "a_edge": "bottom",
+        "a_role": "ring",
+        "a_ratio": 1.0,
+        "b_face": "Btm",
+        "b_edge": "top",
+        "b_role": "cap",
+        "b_ratio": 5.215554433951875,
+        "fold_stripe_index": 3.1077772169759377,
+        "ring_excess": 0.0,
+        "cap_excess": 2.1077772169759377,
+        "ring_only_fold_floor": 1.0,
+        "cap_only_fold_floor": 3.1077772169759377
+      },
+      "folds": {
+        "B-Btm": {
+          "v1": {
+            "fold": "B-Btm",
+            "a_face": "B",
+            "a_edge": "bottom",
+            "a_role": "ring",
+            "a_ratio": 1.0,
+            "b_face": "Btm",
+            "b_edge": "top",
+            "b_role": "cap",
+            "b_ratio": 5.215554433951875,
+            "fold_stripe_index": 3.1077772169759377,
+            "ring_excess": 0.0,
+            "cap_excess": 2.1077772169759377,
+            "ring_only_fold_floor": 1.0,
+            "cap_only_fold_floor": 3.1077772169759377
+          },
+          "phases": {
+            "ring": {
+              "energy_0_3mm": 0.004265913274139166,
+              "energy_9_12mm": 0.0043053473345935345,
+              "reference_over_near": 1.0092439901892583,
+              "v1_side_reconstruction": 1.0,
+              "first_3mm_below_80pct_near_mm": 14
+            },
+            "initial": {
+              "energy_0_3mm": 0.0039550671353936195,
+              "energy_9_12mm": 0.001690369681455195,
+              "reference_over_near": 0.4273934230668791,
+              "v1_side_reconstruction": 2.2383665329160696,
+              "first_3mm_below_80pct_near_mm": 3
+            },
+            "final": {
+              "energy_0_3mm": 0.0029008009005337954,
+              "energy_9_12mm": 0.0004443118814378977,
+              "reference_over_near": 0.15316869260352786,
+              "v1_side_reconstruction": 5.215555044055033,
+              "first_3mm_below_80pct_near_mm": 5
+            }
+          }
+        }
+      }
+    },
+    "E01-007-42": {
+      "source": {
+        "raw_path": "/root/autodl-tmp/ai-design/outputs/e02/ring-m2m3/runs/c5b232622150/u1_sigma28/E01-007-42.png",
+        "raw_sha256": "2de1ba1c8d46ba28a500643f9813a465b1e311f4243b5a8311d378fe46b65c73",
+        "run_sha256": "26062d430e9f0e9083d7f9c894c249eb5c2aa43c46857064d41477e0fb8c1c19",
+        "ring_path": "/root/autodl-tmp/ai-design/outputs/e02/capfix/rings/0979bc4c77ef/E01-007-42.npz",
+        "ring_sha256": "92842c215739ecf5499a864182b2b35e37539304f7129dcb5c4d3443d59addd9",
+        "ring_proof_sha256": "16f1047307bc839ea9c51591dca9c5702cccfb989e2474ee8b0c60529754b590",
+        "projected_initial_rgb_sha256": "689d9d23ccee183a5f9a83425c454174a2f71c5357652cc01bb12d606036cdb5",
+        "initial_caps": {
+          "T": {
+            "float32_rgb_sha256": "1e77b412f075adba56258655b4a995bc90d7cc62daef0ab8538d04af9c86aca3",
+            "harmonic_iterations": [
+              9,
+              9,
+              9
+            ]
+          },
+          "Btm": {
+            "float32_rgb_sha256": "042a9a082306fbcb5bbed9932faf095d5c27acdb69fda8a1a60e8be1f849b60c",
+            "harmonic_iterations": [
+              10,
+              10,
+              10
+            ]
+          }
+        },
+        "score_sha256": "b034c26159ce5ef06118584d1c095b32431303d4415510da782b9b85d1fcca23"
+      },
+      "whole_box_peak": {
+        "fold": "B-Btm",
+        "a_face": "B",
+        "a_edge": "bottom",
+        "a_role": "ring",
+        "a_ratio": 1.1914744704372184,
+        "b_face": "Btm",
+        "b_edge": "top",
+        "b_role": "cap",
+        "b_ratio": 4.086452465062171,
+        "fold_stripe_index": 2.638963467749695,
+        "ring_excess": 0.09573723521860922,
+        "cap_excess": 1.5432262325310857,
+        "ring_only_fold_floor": 1.0957372352186092,
+        "cap_only_fold_floor": 2.5432262325310857
+      },
+      "folds": {
+        "B-Btm": {
+          "v1": {
+            "fold": "B-Btm",
+            "a_face": "B",
+            "a_edge": "bottom",
+            "a_role": "ring",
+            "a_ratio": 1.1914744704372184,
+            "b_face": "Btm",
+            "b_edge": "top",
+            "b_role": "cap",
+            "b_ratio": 4.086452465062171,
+            "fold_stripe_index": 2.638963467749695,
+            "ring_excess": 0.09573723521860922,
+            "cap_excess": 1.5432262325310857,
+            "ring_only_fold_floor": 1.0957372352186092,
+            "cap_only_fold_floor": 2.5432262325310857
+          },
+          "phases": {
+            "ring": {
+              "energy_0_3mm": 0.002362367231398821,
+              "energy_9_12mm": 0.0019604829140007496,
+              "reference_over_near": 0.829880675596696,
+              "v1_side_reconstruction": 1.1914745813675236,
+              "first_3mm_below_80pct_near_mm": 11
+            },
+            "initial": {
+              "energy_0_3mm": 0.0019465464865788817,
+              "energy_9_12mm": 0.0007706975447945297,
+              "reference_over_near": 0.39593071632676774,
+              "v1_side_reconstruction": 2.2934125797332117,
+              "first_3mm_below_80pct_near_mm": 3
+            },
+            "final": {
+              "energy_0_3mm": 0.001325275399722159,
+              "energy_9_12mm": 0.00021977121650706977,
+              "reference_over_near": 0.16583060136266342,
+              "v1_side_reconstruction": 4.086452793593994,
+              "first_3mm_below_80pct_near_mm": 5
+            }
+          }
+        }
+      }
+    },
+    "E01-009-42": {
+      "source": {
+        "raw_path": "/root/autodl-tmp/ai-design/outputs/e02/ring-m2m3/runs/c5b232622150/u1_sigma28/E01-009-42.png",
+        "raw_sha256": "f570fe878c4f56a6def3cfe2a5b2d05f6bc5efa8dbbd69c968ea4fb6fef74381",
+        "run_sha256": "5941aa7f3b631bfaea45c951174668e2b64f1c6827cac6efbaec4b2af815ccf7",
+        "ring_path": "/root/autodl-tmp/ai-design/outputs/e02/capfix/rings/0979bc4c77ef/E01-009-42.npz",
+        "ring_sha256": "6e770d709d6eb2b98c2f94182f44e44652926f0f6f0e117363fc11dd4eb85ce6",
+        "ring_proof_sha256": "8cf3c5fc048f355da46541ced7f290ecf0d75288f1b2f706a3727d8e33b6d69a",
+        "projected_initial_rgb_sha256": "f74a41708f803f8fe7b0906abc1eabc0b1c61813382e8a2387dbe014e06abe6a",
+        "initial_caps": {
+          "T": {
+            "float32_rgb_sha256": "64ce3f3de5eaad26931c4bb58f7883332629e47aae4da63e2c94ff9d6a9ce9a8",
+            "harmonic_iterations": [
+              9,
+              9,
+              9
+            ]
+          },
+          "Btm": {
+            "float32_rgb_sha256": "2f03aa321efb27378c254feacfe0f6c14c2f044b82f766e443666d37075b0c85",
+            "harmonic_iterations": [
+              10,
+              10,
+              10
+            ]
+          }
+        },
+        "score_sha256": "25f174e81a56a42cd8a2c2acf160da8566444e20ac696c0c46269439910f1b9b"
+      },
+      "whole_box_peak": {
+        "fold": "F-T",
+        "a_face": "F",
+        "a_edge": "top",
+        "a_role": "ring",
+        "a_ratio": 2.406032311019204,
+        "b_face": "T",
+        "b_edge": "bottom",
+        "b_role": "cap",
+        "b_ratio": 1.962370486188966,
+        "fold_stripe_index": 2.1842013986040847,
+        "ring_excess": 0.703016155509602,
+        "cap_excess": 0.48118524309448296,
+        "ring_only_fold_floor": 1.703016155509602,
+        "cap_only_fold_floor": 1.481185243094483
+      },
+      "folds": {
+        "F-T": {
+          "v1": {
+            "fold": "F-T",
+            "a_face": "F",
+            "a_edge": "top",
+            "a_role": "ring",
+            "a_ratio": 2.406032311019204,
+            "b_face": "T",
+            "b_edge": "bottom",
+            "b_role": "cap",
+            "b_ratio": 1.962370486188966,
+            "fold_stripe_index": 2.1842013986040847,
+            "ring_excess": 0.703016155509602,
+            "cap_excess": 0.48118524309448296,
+            "ring_only_fold_floor": 1.703016155509602,
+            "cap_only_fold_floor": 1.481185243094483
+          },
+          "phases": {
+            "ring": {
+              "energy_0_3mm": 0.00045065986341796815,
+              "energy_9_12mm": 0.0001064213938661851,
+              "reference_over_near": 0.23614571100041298,
+              "v1_side_reconstruction": 2.406032323085852,
+              "first_3mm_below_80pct_near_mm": 4
+            },
+            "initial": {
+              "energy_0_3mm": 0.0004499249334912747,
+              "energy_9_12mm": 0.0004603902343660593,
+              "reference_over_near": 1.0232601042880134,
+              "v1_side_reconstruction": 1.0,
+              "first_3mm_below_80pct_near_mm": 5
+            },
+            "final": {
+              "energy_0_3mm": 0.00019144518591929227,
+              "energy_9_12mm": 2.9681012165383436e-05,
+              "reference_over_near": 0.15503660759532542,
+              "v1_side_reconstruction": 1.9623703455086257,
+              "first_3mm_below_80pct_near_mm": 4
+            }
+          }
+        }
+      }
+    },
+    "E01-005-1234": {
+      "source": {
+        "raw_path": "/root/autodl-tmp/ai-design/outputs/e02/ring-m2m3/runs/c5b232622150/validation/u1_sigma28/E01-005-1234.png",
+        "raw_sha256": "57eeeeca937b8b1b9c4b5677f25c689398711d1d161ecf37222b5b76005ffa63",
+        "run_sha256": "31c182b9e9a623f669e76aa7f8f3b1ed4b85eb1ed0f8535f358a73d6e8b116a3",
+        "ring_path": "/root/autodl-tmp/ai-design/outputs/e02/capgeom/runs/7b2fcb2c668b/ring-validation/E01-005-1234.npz",
+        "ring_sha256": "a33a3c4ec30450f44048ee2da9ee5fc3bf03ee68fb9bfd452972071080e50fec",
+        "ring_proof_sha256": "442ee6063f5b6f056c0249552ecbafb331d20b8cac0c805521212965dbc0d1a1",
+        "projected_initial_rgb_sha256": "a425a1c011dcb882c508872ab760507f0071aab6802fe6838060af36a8f22fbb",
+        "initial_caps": {
+          "T": {
+            "float32_rgb_sha256": "7f7a74fb04748a9b8f1af03a166330433430b5286c20a3617104706827b2e099",
+            "harmonic_iterations": [
+              9,
+              9,
+              9
+            ]
+          },
+          "Btm": {
+            "float32_rgb_sha256": "94f00c2bc51bd62125e6a061debfc18a3af66913832037028c95256e970a8291",
+            "harmonic_iterations": [
+              9,
+              10,
+              10
+            ]
+          }
+        },
+        "score_sha256": "c933edf41a458b95f0b381f1c88abc2bdce88d5013165fc0376da77c23bc5205"
+      },
+      "whole_box_peak": {
+        "fold": "F-R",
+        "a_face": "F",
+        "a_edge": "right",
+        "a_role": "ring",
+        "a_ratio": 1.3890822640551919,
+        "b_face": "R",
+        "b_edge": "left",
+        "b_role": "ring",
+        "b_ratio": 1.6073417015429428,
+        "fold_stripe_index": 1.4982119827990674,
+        "ring_excess": 0.4982119827990673,
+        "cap_excess": 0.0,
+        "ring_only_fold_floor": 1.4982119827990674,
+        "cap_only_fold_floor": 1.0
+      },
+      "folds": {
+        "B-Btm": {
+          "v1": {
+            "fold": "B-Btm",
+            "a_face": "B",
+            "a_edge": "bottom",
+            "a_role": "ring",
+            "a_ratio": 1.6617894507989353,
+            "b_face": "Btm",
+            "b_edge": "top",
+            "b_role": "cap",
+            "b_ratio": 1.0,
+            "fold_stripe_index": 1.3308947253994676,
+            "ring_excess": 0.3308947253994676,
+            "cap_excess": 0.0,
+            "ring_only_fold_floor": 1.3308947253994676,
+            "cap_only_fold_floor": 1.0
+          },
+          "phases": {
+            "ring": {
+              "energy_0_3mm": 0.0015112393302842975,
+              "energy_9_12mm": 0.000854285026434809,
+              "reference_over_near": 0.5652877140737854,
+              "v1_side_reconstruction": 1.6617897827841621,
+              "first_3mm_below_80pct_near_mm": 9
+            },
+            "initial": {
+              "energy_0_3mm": 0.0015322401886805892,
+              "energy_9_12mm": 0.0010236497037112713,
+              "reference_over_near": 0.6680739163960548,
+              "v1_side_reconstruction": 1.4376635945678276,
+              "first_3mm_below_80pct_near_mm": 10
+            },
+            "final": {
+              "energy_0_3mm": 0.0008091717027127743,
+              "energy_9_12mm": 0.0008457780349999666,
+              "reference_over_near": 1.0452392640084527,
+              "v1_side_reconstruction": 1.0,
+              "first_3mm_below_80pct_near_mm": null
+            }
+          }
+        },
+        "F-T": {
+          "v1": {
+            "fold": "F-T",
+            "a_face": "F",
+            "a_edge": "top",
+            "a_role": "ring",
+            "a_ratio": 1.0,
+            "b_face": "T",
+            "b_edge": "bottom",
+            "b_role": "cap",
+            "b_ratio": 1.0,
+            "fold_stripe_index": 1.0,
+            "ring_excess": 0.0,
+            "cap_excess": 0.0,
+            "ring_only_fold_floor": 1.0,
+            "cap_only_fold_floor": 1.0
+          },
+          "phases": {
+            "ring": {
+              "energy_0_3mm": 0.0012529416708275676,
+              "energy_9_12mm": 0.002095556352287531,
+              "reference_over_near": 1.672509104835995,
+              "v1_side_reconstruction": 1.0,
+              "first_3mm_below_80pct_near_mm": null
+            },
+            "initial": {
+              "energy_0_3mm": 0.0011703582713380456,
+              "energy_9_12mm": 0.001544277765788138,
+              "reference_over_near": 1.3194914784706038,
+              "v1_side_reconstruction": 1.0,
+              "first_3mm_below_80pct_near_mm": null
+            },
+            "final": {
+              "energy_0_3mm": 0.0007463784422725439,
+              "energy_9_12mm": 0.0018287455895915627,
+              "reference_over_near": 2.4501586407338745,
+              "v1_side_reconstruction": 1.0,
+              "first_3mm_below_80pct_near_mm": null
+            }
+          }
+        },
+        "F-R": {
+          "v1": {
+            "fold": "F-R",
+            "a_face": "F",
+            "a_edge": "right",
+            "a_role": "ring",
+            "a_ratio": 1.3890822640551919,
+            "b_face": "R",
+            "b_edge": "left",
+            "b_role": "ring",
+            "b_ratio": 1.6073417015429428,
+            "fold_stripe_index": 1.4982119827990674,
+            "ring_excess": 0.4982119827990673,
+            "cap_excess": 0.0,
+            "ring_only_fold_floor": 1.4982119827990674,
+            "cap_only_fold_floor": 1.0
+          },
+          "phases": {
+            "ring:F": {
+              "energy_0_3mm": 0.007291598245501518,
+              "energy_9_12mm": 0.005210453178733587,
+              "reference_over_near": 0.714583141212988,
+              "v1_side_reconstruction": 1.3890818771980002,
+              "first_3mm_below_80pct_near_mm": 7
+            },
+            "ring:R": {
+              "energy_0_3mm": 0.007861481048166752,
+              "energy_9_12mm": 0.004838681314140558,
+              "reference_over_near": 0.6154923333776793,
+              "v1_side_reconstruction": 1.6073428380124068,
+              "first_3mm_below_80pct_near_mm": 8
+            }
+          }
+        }
+      }
+    }
+  },
+  "artifact_sha256": {
+    "diagnostic-curves.csv": "771db28bed5581521262a4e3bcf0aff95da01befaae61ac472be765d25d2688e",
+    "diagnostic-curves.png": "3db576034e6c233e15bfc6a3f7d74c7e719c09f5c2fba05c70303fa3e4bdf32e"
+  }
+}
