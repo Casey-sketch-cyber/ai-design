@@ -2,14 +2,14 @@
 
 - 课题：**用人工智能（深度学习等）做包装设计（乡村农产品包装为应用场景，OPC/方案交付为可选框架）**
 - 检索执行者：Gemini
-- 检索日期：2026-11-24 至 2026-11-25（含初版 Q01–Q25、修订版 Q26–Q34、PR #1 返修 Q35–Q37、任务 06 方法深研 v3 专项检索 Q38–Q41，以及任务 09 盖面修复 C5 文献核对 Q42）
+- 检索日期：2026-11-24 至 2026-11-26（含初版 Q01–Q25、修订版 Q26–Q34、PR #1 返修 Q35–Q37、任务 06 方法深研 v3 专项检索 Q38–Q41、任务 09 盖面修复 C5 文献核对 Q42，以及任务 16 全关口超越基线方法文献核对 Q43）
 - 数据来源约束：仅使用免费开放学术来源（OpenAlex API、Crossref API、arXiv、GitHub/HuggingFace 数据集公开页、出版社公开页、公开网页检索含知网/万方免费摘要线索），未使用 Scopus 或 Web of Science 付费权限。
 
 > **核心结论前置**：转向**“用深度学习等 AI 方法做包装设计”**且**只用纯客观指标（A 套，不招募专家/消费者）**后，本课题**完全具备发表纯开放获取（OA）SCIE 期刊论文的可行性**，甚至比纯设计实践类论文更容易通过客观定量对比与消融实验满足 SCIE 工程/计算机综合刊的审稿门槛。核心方法贡献应锚定在**深度学习包装设计尚未解决好的关键技术难点**（尤其是“**参数化刀版拓扑感知的多面一致生成 + 视觉艺术字/矢量法定标签双轨解耦 + 可印刷性/合规性客观引导**”），配套自建可开源合成刀版—3D 配对基准与 Open Food Facts/RPC/AnyWord-3M 公开数据，首选 OA SCIE 靶刊为 ***Applied Sciences***、***Scientific Reports***、***PLOS ONE***、***IEEE Access***、***Electronics*** 与 ***Symmetry***。
 
 ---
 
-## 一、系统检索记录表（中英文，共 42 组）
+## 一、系统检索记录表（中英文，共 43 组）
 
 ### 第一阶段：初始四脉络与种子文献检索（Q01–Q25）
 
@@ -62,6 +62,7 @@
 | Q40 | 2026-11-25 | arXiv 官方页 + OpenAlex API | 任务 06（方法 v3 深研）：全局-局部软修补与高分辨率一致：`SDEdit` (ICLR 2022)、`RePaint` (CVPR 2022)、`Blended Latent Diffusion` (SIGGRAPH 2023)、`Differential Diffusion` (CGF 2025 / arXiv 2023)、`DemoFusion` (CVPR 2024) | 5 | 5（全部 `verified=yes, abstract`） | 脉络一（v3 局部 3D 接缝软修补） | 全部核对官方摘要与 DOI，支撑方案 P1 与 P2+P1 盖面 6 条非原生 3D 缝的逐像素软强度局部缝合 |
 | Q41 | 2026-11-25 | OpenAlex API | 任务 06（方法 v3 深研）：可微无缝拼接客观评测指标：`TexTile: A Differentiable Metric for Texture Tileability` (CVPR 2024) | 1 | 1（`verified=yes, abstract`） | 脉络四（v3 补充接缝客观指标） | 核对官方摘要与 CVPR 2024 DOI，为超越传统像素色差 SDR 的跨折线结构连贯性客观评测提供顶会依据 |
 | Q42 | 2026-11-25 | OpenAlex API | 任务 09（v3 盖面审阅与 C5 方案依据）：`Poisson image editing` (SIGGRAPH 2003)、`AdaIN` (ICCV 2017)、`ILVR` (ICCV 2021)、`SDXL` (ICLR 2024) | 4 | 4（全部 `verified=yes, abstract`） | 脉络一（v3 盖面低频初始化与统计对齐） | 全部核对 OpenAlex 官方摘要与 DOI，支撑 C5 边界调和插值初始化 + SDEdit/ILVR 低频先验及 SDXL 尺寸微条件分析 |
+| Q43 | 2026-11-26 | OpenAlex API + arXiv 官方 API | 任务 16（全关口超越对手方法依据）：`High-Performance By-Example Noise using a Histogram-Preserving Blending Operator` (PACMCGIT/HPG 2018)、`Image quilting for texture synthesis and transfer` (SIGGRAPH 2001)、`Prompt-to-Prompt Image Editing with Cross Attention Control` (ICLR 2023)（并复核 `DenseDiffusion`、`SpotDiffusion`、`Diffusion360` 已在库） | 3 | 3（全部 `verified=yes, abstract`） | 脉络一（v3 盖面方差保持纹理混合与环带时间步解耦） | 全部核对 OpenAlex/arXiv 官方摘要与 DOI，支撑任务 16 方法 M1a/M1b（方差保持多边混合与块拼贴）与 M2（时间步粗到细交叉注意力调度） |
 
 ---
 

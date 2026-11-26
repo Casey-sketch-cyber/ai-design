@@ -32,7 +32,7 @@
 - [x] Gemini：任务 14，见 `tasks/14-gemini-respond-revised-stance.md`（已在 PR #12 留言回应立场修正并审阅任务 13 设计）
 - [x] Claude：审查任务 13 的 PR #14 与任务 14 的 PR #13，均已合并（2026-11-26）
 - [ ] Codex：任务 15，见 `tasks/15-codex-v3-texture-uniform-ring.md`（做完停下等审查）
-- [ ] Gemini：任务 16，见 `tasks/16-gemini-beat-all-baselines.md`（独立研究如何在全部五条关口上超过对手）
+- [x] Gemini：任务 16，见 `tasks/16-gemini-beat-all-baselines.md`（已提交 `docs/BEAT_BASELINES_GEMINI.md` 并补录 3 篇核对文献，分支 `gemini/beat-all-baselines`）
 - [ ] Claude：审查任务 15 的 PR 与任务 16 的 PR，形成下一轮方案
 - [x] Claude：审查任务 01 的 PR #1（2026-11-24，退回）
 - [x] Gemini：按 PR #1 审查意见完成 4 项必改与 2 项建议修改，并已在 PR #1 逐条回复
@@ -43,13 +43,22 @@
 
 ## 已知问题
 
-- `literature/papers.csv` 中共有 133 篇文献，其中 128 篇已核对官方摘要（`verified=yes, summary_source=abstract`，含任务 06 新增 22 篇与任务 09 新增 4 篇）；5 篇标为 `verified=no`（2 篇未定位独立 DOI 的种子文献 + 3 篇 Elsevier 付费墙阻挡摘要的文献），均已单独标注且未作为核心论证依据。
+- `literature/papers.csv` 中共有 136 篇文献，其中 131 篇已核对官方摘要（`verified=yes, summary_source=abstract`，含任务 06 新增 22 篇、任务 09 新增 4 篇与任务 16 新增 3 篇）；5 篇标为 `verified=no`（2 篇未定位独立 DOI 的种子文献 + 3 篇 Elsevier 付费墙阻挡摘要的文献），均已单独标注且未作为核心论证依据。
 - 公开数据集的国内网络拉取速度与 PKU PosterLayout 协议审批周期需在实验启动第一周实测。
 - `docs/JOURNALS.md` 中的 JIF 与中科院 2025 分区来自公开汇总数据，正式投稿前须在 Clarivate MJL 官网与本单位图书馆目录复核。
 
 ---
 
 ## 工作记录
+
+### 2026-11-26 · gemini · gemini/beat-all-baselines（任务 16：全关口超越对手方案研究）
+- **完成**：核查 `stripe-diag.csv`（905 张归档图）、`captexture-stripe-sources.csv`、`results-captexture.csv`、任务 13 样例图与源码（`v3.py`、`v3_attention.py`、`sdxl.py`、`v3_captexture_inject.py`、`b2_controlnet.py`、`b4_paint3d.py`），撰写 [`docs/BEAT_BASELINES_GEMINI.md`](BEAT_BASELINES_GEMINI.md)，并核对补录 3 篇顶会/顶刊文献（Heitz & Neyret 2018、Efros & Freeman 2001、Hertz et al. 2023 Prompt-to-Prompt）至 `literature/papers.csv` 与 `literature/search-log.md`（Q43）。
+- **核心发现与方案**：
+  1. **揭示 `Paint3D` 与 `B2-regional` 条带 v1 低的真实机制**：两者并非全盒纹理均匀，而是在折线 `0–3 mm` 存在结构性 `E ≤ R` 负向偏移（`Paint3D` `med(a_E/a_R) = 0.07`、`89.3%` 至少一侧 `E ≤ R`；`B2-regional` 因 ControlNet 1 px 折线框 + `"clear margins"` 使 `10/10` 盒 `a_v1 = 1.000`），触发单侧截断 `max(0, E-R)=0`。我们应消除 `v3` 的 `E > R` 正向偏置而非模糊折线。
+  2. **检验 H1–H4 并定位两处隐藏源码根因**：① 盖面 `v3_captexture_inject.py` 采用 L1 凸归一叠加四边独立高频，数学上必然引起 50%–75% 方差坍塌（即使任务 15 的 U1 取消余弦衰减也受此影响），且 `σ = 8 px`（`0.71 mm`）滤掉了 `1–3 mm` 中频纹理；② 环带 `sdxl.py:33` 强加 `"centered graphic elements with clear margins"`、背面加 `"calm background"`，叠加第 1 步起的 0 px 硬切分（`regional_weight = 1.0`）和 `11.5 mm` 窄缓冲。
+  3. **提出 3 个免训练新方法（均适配 RTX 3090）**：**M1**（方差保持 L2 归一 + `σ=24–32 px` 多尺度盖面纹理注入，备选 M1b Image Quilting + Poisson）、**M2**（时间步粗到细全局—局部提示词调度 + 去边距净化 + H1 羽化）、**M3**（环带步间水平循环潜变量滚动 + H2 扩缓冲至 `1280×1152` 约 `22 mm`）。
+  4. **评估 H4（折线安全区）**：直接做 `±3 mm` 高频衰减会被审稿人视为针对 `v1` 的定向优化且落入 `AUC = 0.500` 盲区，建议排最后暂不启用；给出若未来启用时的 4 条正当设计边界与 4 项反作弊检查。
+- **交接**：提交 PR 待 Claude 审查，并结合任务 15 实测结果定夺下一轮交给 Codex 的组合。
 
 ### 2026-11-26 · claude · main
 - **完成**：按作者要求（全部关口都要超过对手）分析条带来源，下达任务 16 给 Gemini。
