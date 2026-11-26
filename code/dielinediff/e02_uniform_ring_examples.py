@@ -53,7 +53,7 @@ def _save_image(image, destination, **options):
     temporary.replace(destination)
 
 
-def _comparison(jobs, brief_id, seed, chosen, output):
+def _comparison(jobs, brief_id, seed, chosen, output, *, titles=None):
     width, height = 310, 295
     image = Image.new("RGB", (3 * width + 74, 2 * height + 78), "white")
     draw = ImageDraw.Draw(image)
@@ -63,7 +63,7 @@ def _comparison(jobs, brief_id, seed, chosen, output):
     for row, title in enumerate(("Raw\natlas", "Folded\npreflight")):
         draw.multiline_text((12, 62 + row * height + height // 2 - 14), title,
                             fill=INK, font=small, spacing=4)
-    titles = (*COLUMNS[:2], f"Task 15 final {chosen.upper()}")
+    titles = titles or (*COLUMNS[:2], f"Task 15 final {chosen.upper()}")
     for column, (job, title) in enumerate(zip(jobs, titles, strict=True)):
         x = 69 + column * width
         draw.text((x + width // 2, 50), title, anchor="mm", fill=INK, font=small)

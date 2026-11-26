@@ -174,9 +174,9 @@ def _review_counts(groups, tied, config, reviews):
     return counts
 
 
-def select_candidates(groups42, candidates, gate_config, *, texture=None, visual_reviews=None):
-    """Select one same-ring G5/U candidate using the registered Task 15 policy."""
-    methods = tuple(dict.fromkeys((G5, *candidates)))
+def select_candidates(groups42, candidates, gate_config, *, texture=None, visual_reviews=None, incumbent_method=G5):
+    """Select a same-ring candidate using the registered layered cap policy."""
+    methods = tuple(dict.fromkeys((incumbent_method, *candidates)))
     if REFERENCE in methods:
         raise ValueError("B2-regional is a guard reference, outside the same-ring candidate set.")
     names = (REFERENCE, *methods)
@@ -184,14 +184,15 @@ def select_candidates(groups42, candidates, gate_config, *, texture=None, visual
         texture = textures({method: groups42[method] for method in names})
     data = {method: _method_mean(groups42[method], texture[method]) for method in names}
     reference = data[REFERENCE]
-    incumbent = data[G5]
+    incumbent = data[incumbent_method]
     results = {}
+    wins_field, delta_field = f"wins_vs_{incumbent_method}", f"delta_vs_{incumbent_method}"
     for method in methods:
         averages = data[method]
         delta = {key: averages[key] - incumbent[key] for key in PRIMARY_DIRECTIONS}
         wins = [key for key, direction in PRIMARY_DIRECTIONS.items() if direction * delta[key] > 0]
         guards = _hard_constraints(groups42[method], averages, texture[method], reference, gate_config, seed=42)
-        results[method] = {"means": averages, "wins_vs_g5": wins, "delta_vs_g5": delta,
+        results[method] = {"means": averages, wins_field: wins, delta_field: delta,
                            "win_count": len(wins), "hard_constraints": guards, "eligible": guards["passed"]}
     eligible = [method for method in methods if results[method]["eligible"]]
     highest = max((results[method]["win_count"] for method in eligible), default=None)
@@ -210,7 +211,7 @@ def select_candidates(groups42, candidates, gate_config, *, texture=None, visual
     elif len(primary_ties) > 1:
         selected, reason = stripe_ties[0], "lowest_frozen_stripe_v1"
     else:
-        selected, reason = stripe_ties[0], "most_primary_wins_vs_g5"
+        selected, reason = stripe_ties[0], f"most_primary_wins_vs_{incumbent_method}"
     return {"selected": selected, "reason": reason, "method_order": list(methods),
             "eligible": eligible, "primary_ties": primary_ties, "stripe_ties": stripe_ties,
             "requires_tie_visual_review": pending, "native_artifact_counts": counts,
@@ -232,7 +233,7 @@ def _paired_final(groups, texture, chosen):
     return {"selected": chosen, "variant": "preflight", "metrics": changes}
 
 
-def write_results(experiment, groups_by_seed, chosen, visual=None, *, selection=None, texture_by_seed=None):
+def write_results(experiment, groups_by_seed, chosen, visual=None, *, selection=None, texture_by_seed=None, results_file="results-uniform-ring.csv"):
     """Publish seed-local original gates and the supplemental texture diagnostics."""
     if 42 not in groups_by_seed or set(groups_by_seed) - set(SEEDS):
         raise ValueError("Publish seed 42, optionally followed by the seed 1234 validation.")
@@ -270,7 +271,7 @@ def write_results(experiment, groups_by_seed, chosen, visual=None, *, selection=
     if complete:
         summary["cross_seed_verification"] = _paired_final(groups_by_seed, texture_by_seed, chosen)
     output = Path(experiment.output)
-    _write_csv(output / "results-uniform-ring.csv", metric_rows)
+    _write_csv(output / results_file, metric_rows)
     _write_csv(output / "stripe-sources.csv", fold_rows)
     write_json(output / "evaluation-summary.json", summary)
     write_json(output / "gate.json", verdict)

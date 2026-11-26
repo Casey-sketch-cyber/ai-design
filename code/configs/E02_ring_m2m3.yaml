@@ -1,0 +1,31 @@
+protocol: e02-v3-ring-m2m3
+seeds: [42, 1234]
+task15_reference: 35493b7f5869
+ring_candidate_order: [r0, m3b, m3, m2, m2_m3]
+ring_candidates:
+  r0: {size_px: [1280, 1024], m2: false, roll: false}
+  m3b: {size_px: [1280, 1152], m2: false, roll: false}
+  m3: {size_px: [1280, 1152], m2: false, roll: true}
+  m2: {size_px: [1280, 1024], m2: true, roll: false}
+  m2_m3: {size_px: [1280, 1152], m2: true, roll: true}
+m2:
+  global_only_steps: 9
+  final_regional_weight: 0.60
+  feather_mm: 7.0
+  global_prompt: "{style}, seamless wraparound packaging illustration, {theme}, color accent {main_color}"
+  regional_template: "continuous edge-to-edge packaging illustration with balanced visual density"
+  back_suffix: "slightly lower visual density, softer details"
+m3:
+  roll_stride: 37
+  extra_buffer_latents_per_side: 8
+ring_quality_guard:
+  wrap_lb_delta_e00_increase: 1.0
+  wrap_lb_lpips_increase: 0.02
+  clip_score_decrease: 0.02
+  image_reward_decrease: 0.10
+  m4_repeat_score_increase: 0.03
+  side_bleed_fill_pct_decrease: 3.0
+  side_bleed_fill_v2_pct_decrease: 3.0
+caps:
+  strength: 0.85
+  sigma_px_at_scale_2: {u1: 8.0, u1_sigma28: 28.0}
