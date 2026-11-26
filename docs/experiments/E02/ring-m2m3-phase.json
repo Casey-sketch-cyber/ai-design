@@ -1,0 +1,53 @@
+{
+  "inputs": {
+    "inputs_sha256": "dc8826cd88199f69744276c1eb3a807f94bab94dfd3994f7971804b05f5295ca",
+    "code": {
+      "e02_ring_phase.py": "d2699dd88cc2a1d98dc9c23951723db1bec6b7430526991f529a87d7cd202ee3",
+      "v3_ring_roll.py": "65b285c320bef466338ef99391b6279df4f7cec4c41f1b3177fe16036a3f68ab",
+      "v3_ring_m3.py": "814d577d3a4388b0eb8509471e9663aa38bdc34267703b34ab070ed5aa77733a"
+    }
+  },
+  "brief_id": "E01-003",
+  "seed": 42,
+  "step_index": 1,
+  "timestep": 925,
+  "gpu": "NVIDIA GeForce RTX 3090",
+  "dtype": "torch.float16",
+  "ring_size_px": [
+    1280,
+    1152
+  ],
+  "latent_shape": [
+    1,
+    4,
+    144,
+    160
+  ],
+  "downsample_phase_stride": 4,
+  "m3_shift": 37,
+  "matching_reference_shift": 1,
+  "aligned_control_shift": 36,
+  "difference_m3_vs_native": {
+    "rmse": 0.005994223058223724,
+    "mae": 0.004593533929437399,
+    "max_abs": 0.03515625
+  },
+  "difference_reference_phase_vs_native": {
+    "rmse": 0.006276281550526619,
+    "mae": 0.004817514214664698,
+    "max_abs": 0.03515625
+  },
+  "difference_m3_vs_matching_phase": {
+    "rmse": 0.001556333270855248,
+    "mae": 0.0007444564253091812,
+    "max_abs": 0.017578125
+  },
+  "difference_aligned_control_vs_native": {
+    "rmse": 0.0012726201675832272,
+    "mae": 0.0005379921058192849,
+    "max_abs": 0.017578125
+  },
+  "m3_to_reference_phase_rmse_ratio": 0.9550596177000332,
+  "same_order_as_downsample_phase": true,
+  "restored_prediction_coordinates": true
+}
