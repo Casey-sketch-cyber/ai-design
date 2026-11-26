@@ -1,0 +1,79 @@
+{
+  "E01-001-42": {
+    "max_full_width_fraction_3_6mm": 0.012755102040816327,
+    "rows_at_80pct_3_6mm": 0
+  },
+  "E01-002-42": {
+    "max_full_width_fraction_3_6mm": 0.0,
+    "rows_at_80pct_3_6mm": 0
+  },
+  "E01-003-42": {
+    "max_full_width_fraction_3_6mm": 0.00510204081632653,
+    "rows_at_80pct_3_6mm": 0
+  },
+  "E01-004-42": {
+    "max_full_width_fraction_3_6mm": 0.6454081632653061,
+    "rows_at_80pct_3_6mm": 0
+  },
+  "E01-005-42": {
+    "max_full_width_fraction_3_6mm": 0.0,
+    "rows_at_80pct_3_6mm": 0
+  },
+  "E01-006-42": {
+    "max_full_width_fraction_3_6mm": 0.03571428571428571,
+    "rows_at_80pct_3_6mm": 0
+  },
+  "E01-007-42": {
+    "max_full_width_fraction_3_6mm": 0.11224489795918367,
+    "rows_at_80pct_3_6mm": 0,
+    "raw_2p8125mm": [
+      {
+        "y_px": 229,
+        "depth_mm": 3.3568548387096775,
+        "coverage_fraction": 0.0663265306122449
+      },
+      {
+        "y_px": 230,
+        "depth_mm": 3.1754032258064515,
+        "coverage_fraction": 0.08673469387755102
+      },
+      {
+        "y_px": 231,
+        "depth_mm": 2.993951612903226,
+        "coverage_fraction": 0.5688775510204082
+      },
+      {
+        "y_px": 232,
+        "depth_mm": 2.8125,
+        "coverage_fraction": 0.8443877551020408
+      },
+      {
+        "y_px": 233,
+        "depth_mm": 2.631048387096774,
+        "coverage_fraction": 0.0
+      },
+      {
+        "y_px": 234,
+        "depth_mm": 2.4495967741935485,
+        "coverage_fraction": 0.0
+      },
+      {
+        "y_px": 235,
+        "depth_mm": 2.2681451612903225,
+        "coverage_fraction": 0.0
+      }
+    ]
+  },
+  "E01-008-42": {
+    "max_full_width_fraction_3_6mm": 0.007653061224489796,
+    "rows_at_80pct_3_6mm": 0
+  },
+  "E01-009-42": {
+    "max_full_width_fraction_3_6mm": 0.0,
+    "rows_at_80pct_3_6mm": 0
+  },
+  "E01-010-42": {
+    "max_full_width_fraction_3_6mm": 0.0,
+    "rows_at_80pct_3_6mm": 0
+  }
+}

@@ -1,0 +1,139 @@
+{
+  "task20_selection_sha256": "49aecc50eb3f52da3ec84354b929ee04d5af483c09bef32859c422c9624487a9",
+  "panels": {
+    "assessment": "semantic",
+    "geometry_repair": null,
+    "conclusion": "两例盖面贴片的贯通直边在去噪中形成，21 段硬边未与固定几何边界持续重合。"
+  },
+  "dark_band": {
+    "repaired": true,
+    "options": {
+      "repair": "per_brief_face_noise",
+      "noise_domain": "e02-panel-fix-outpaint-v1"
+    },
+    "conclusion": "J4b 的整行顶盖暗带由十盒反复使用的首个噪声实现触发，按盒和盖派生的固定噪声移除了这条系统性暗带。"
+  },
+  "deliverables": [
+    {
+      "source": "/root/autodl-tmp/ai-design/tmp/task22-diagnosis-publish/j0-E01-004-Btm-geometry-2x.jpg",
+      "name": "overlay/j0-E01-004-Btm-geometry-2x.jpg",
+      "sha256": "75529fd4f3fcf129c102f0e0a56966d5afe135452d1b2d3aff762d36e4234b36",
+      "original_overlay_sha256": "241f3e2e902afe5061114a54a6cd9f9810e7ff2276a70c110cc6120829919065"
+    },
+    {
+      "source": "/root/autodl-tmp/ai-design/tmp/task22-diagnosis-publish/j0-E01-009-Btm-geometry-2x.jpg",
+      "name": "overlay/j0-E01-009-Btm-geometry-2x.jpg",
+      "sha256": "67e5f777b1f6c2e9864192c0242c3d9e3d6962687e4289e0c053f5915eafbe84",
+      "original_overlay_sha256": "08a8fbb9af38f3793e7d02faf989c5a97dea4d66149b5a8f56924c49a2a01547"
+    },
+    {
+      "source": "/root/autodl-tmp/ai-design/tmp/task22-diagnosis-publish/j1-E01-004-Btm-geometry-2x.jpg",
+      "name": "overlay/j1-E01-004-Btm-geometry-2x.jpg",
+      "sha256": "484031b279601e10e635d948a749c9b4cc87b792cc972fffbb3ac4c5c4ef3e93",
+      "original_overlay_sha256": "54229a9343d964a070272c964a23820977bf566e582ea2d2f505374260459faa"
+    },
+    {
+      "source": "/root/autodl-tmp/ai-design/tmp/task22-diagnosis-publish/j1-E01-005-T-geometry-2x.jpg",
+      "name": "overlay/j1-E01-005-T-geometry-2x.jpg",
+      "sha256": "da0fb4da67a274fb4f37e606cd2188e417632efb2c6631a176a060df9557fc06",
+      "original_overlay_sha256": "0d8f5192ac25d4d6fe471f49fbc7b8f0f9b08288a3209e033b896f1a1db83055"
+    },
+    {
+      "source": "/root/autodl-tmp/ai-design/tmp/task22-diagnosis-publish/j1-E01-007-T-geometry-2x.jpg",
+      "name": "overlay/j1-E01-007-T-geometry-2x.jpg",
+      "sha256": "2eca2dee3391f197dccae43a53f04e59c901ec446225af33d53cb78ff9b27b3b",
+      "original_overlay_sha256": "d4fd98ee0b11e911c5ffcf8ca8aa258ff0f8d558d687fa540a4ad9ba512642d3"
+    },
+    {
+      "source": "/root/autodl-tmp/ai-design/tmp/task22-diagnosis-publish/j1-E01-009-Btm-geometry-2x.jpg",
+      "name": "overlay/j1-E01-009-Btm-geometry-2x.jpg",
+      "sha256": "0aaf5dfb25261779dabc8d9dc2c8fbedc6b584b2bdcf31b7f089271c10dcb153",
+      "original_overlay_sha256": "7c6deedc307bca9c656fafef56fc5c09467a9238ee2caf140eb55e91efe5aeb3"
+    },
+    {
+      "source": "/root/autodl-tmp/ai-design/tmp/task22-diagnosis-publish/j1-E01-010-T-geometry-2x.jpg",
+      "name": "overlay/j1-E01-010-T-geometry-2x.jpg",
+      "sha256": "1dc4ff7adea96a2a9725fe3a90290aac7bd36bcc44781bb3699c5d879b39ae70",
+      "original_overlay_sha256": "f753925d618887809f6d51b294c3e54746d3869415781f33cd5586ce6c197876"
+    },
+    {
+      "source": "/root/autodl-tmp/ai-design/tmp/task22-diagnosis-publish/j3_g030-E01-004-Btm-geometry-2x.jpg",
+      "name": "overlay/j3_g030-E01-004-Btm-geometry-2x.jpg",
+      "sha256": "560096c52a353a360c3e5304363d7544f067dcd1d6096863ddadfd57c313833c",
+      "original_overlay_sha256": "7fc806fe3683e63bf86af9d1b58d75ea09bf7ac2072194c8a7c8eabd212564e6"
+    },
+    {
+      "source": "/root/autodl-tmp/ai-design/tmp/task22-diagnosis-publish/j3_g030-E01-005-T-geometry-2x.jpg",
+      "name": "overlay/j3_g030-E01-005-T-geometry-2x.jpg",
+      "sha256": "6c23f6face546326c844429895b0785f893900ef7c7adf683305a72663e5c0fe",
+      "original_overlay_sha256": "1916322e2c37bb94e0537ecd81605d6ae1ab2c474f01ea5de66704aee2e86b47"
+    },
+    {
+      "source": "/root/autodl-tmp/ai-design/tmp/task22-diagnosis-publish/j3_g030-E01-009-Btm-geometry-2x.jpg",
+      "name": "overlay/j3_g030-E01-009-Btm-geometry-2x.jpg",
+      "sha256": "881fcaa18840106f232f3dc9017aa1a657f032efe53a142e0059e3d5ff579e45",
+      "original_overlay_sha256": "2193cb763a4573f0332197fc7932ec8e48c20da92ceb656c0b749246aedd4db5"
+    },
+    {
+      "source": "/root/autodl-tmp/ai-design/tmp/task22-diagnosis-publish/j3_g030-E01-010-T-geometry-2x.jpg",
+      "name": "overlay/j3_g030-E01-010-T-geometry-2x.jpg",
+      "sha256": "faed90c63c9a64ede5261c9e78d0f002bc65f9b373acbc6ca7c3a10e12daaa31",
+      "original_overlay_sha256": "fc3ef702bacdb65762d8ead9c53a1d9df56be6e0884d35f39546513db8a848b9"
+    },
+    {
+      "source": "/root/autodl-tmp/ai-design/tmp/task22-panel-overlay/panel-edges.csv",
+      "name": "panel-edges.csv",
+      "sha256": "959db3f69069a0f0c2d89b66a10adad38b6a313da1df9121779eecd4d71137ad"
+    },
+    {
+      "source": "/root/autodl-tmp/ai-design/tmp/task22-panel-overlay/panel-geometry.json",
+      "name": "panel-geometry.json",
+      "sha256": "1bd482a3474ff8768fe8518b3f32ac90971f856807300d28ec10df47978cfa01"
+    },
+    {
+      "source": "/root/autodl-tmp/ai-design/tmp/task22-panel-x0/panel-x0-profiles.csv",
+      "name": "panel-x0-profiles.csv",
+      "sha256": "e5e9eb8e5a510f1f36d17cb1eac53586d911b774720153ee9688a2c4ae897ed3"
+    },
+    {
+      "source": "/root/autodl-tmp/ai-design/tmp/task22-panel-x0/panel-x0-contact.png",
+      "name": "panel-x0-contact.png",
+      "sha256": "a84d4cd716008ce9bdde502270e9148c1fddef19ef5789efb0d403ade3bf3af5"
+    },
+    {
+      "source": "/root/autodl-tmp/ai-design/tmp/task22-panel-x0/panel-x0-proof.json",
+      "name": "panel-x0-proof.json",
+      "sha256": "8bbaf159cc1e69521400b92db1e5756845b89c3ac30bb1c2f1c8dc63c7f59d18"
+    },
+    {
+      "source": "/root/autodl-tmp/ai-design/tmp/task22-dark-diagnostic-float/registration-rows.json",
+      "name": "dark/registration-rows.json",
+      "sha256": "d51a03773bd68a51ec2909a583e27bfcfe74eb0134a8ef5412d5b642297882c9"
+    },
+    {
+      "source": "/root/autodl-tmp/ai-design/tmp/task22-dark-diagnostic-float/E01-003/trace.json",
+      "name": "dark/trace.json",
+      "sha256": "b88a015a5e8580a4fa3d60fa6aa0953ed51ca38132f407b5821588cf3e49c6b4"
+    },
+    {
+      "source": "/root/autodl-tmp/ai-design/tmp/task22-dark-diagnostic-float/E01-003/x0-T-control-strips.png",
+      "name": "dark/x0-T-control-strips.png",
+      "sha256": "45a28f9e74230f42da93cc09a3c5c1a0347b302eebe35393811fdab6128c65f4"
+    },
+    {
+      "source": "/root/autodl-tmp/ai-design/tmp/task22-dark-diagnostic/stage1-precheck/precheck-42.json",
+      "name": "dark/precheck-42.json",
+      "sha256": "15684cdc5d9e66702496191557e0c4e1eb37d24c949db973a2a08181e5f6cb8f"
+    },
+    {
+      "source": "/root/autodl-tmp/ai-design/tmp/task22-dark-diagnostic/stage1-precheck/historical-depth-window-42.json",
+      "name": "dark/historical-depth-window-42.json",
+      "sha256": "3bfc58cac031116c175e8b0904245e80eb05919c271eef9beece4748336a844c"
+    },
+    {
+      "source": "/root/autodl-tmp/ai-design/tmp/task22-dark-diagnostic/stage1-precheck/E01-007-row-232.png",
+      "name": "dark/E01-007-row-232.png",
+      "sha256": "eff080b3163a6e0f1035c0d32f9c873be6ae79e8d0c6fea0250b8eb2b8d42990"
+    }
+  ]
+}

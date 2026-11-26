@@ -1,0 +1,10 @@
+{
+  "replays": {
+    "j0/E01-009/Btm": "60675768073772fdccdc215bd58c0f5315d543e08abc8a520bd20dc65cdbcff3",
+    "j3_g030/E01-004/Btm": "b85a1d9bf704cdb85e86fc212bc424dfa03c256dd0b7ca1d857ef245d7b1a87e"
+  },
+  "profiles_sha256": "e5e9eb8e5a510f1f36d17cb1eac53586d911b774720153ee9688a2c4ae897ed3",
+  "contact_sha256": "a84d4cd716008ce9bdde502270e9148c1fddef19ef5789efb0d403ade3bf3af5",
+  "rows": 33,
+  "vertical_edge_tiles_rotated_90_degrees": true
+}

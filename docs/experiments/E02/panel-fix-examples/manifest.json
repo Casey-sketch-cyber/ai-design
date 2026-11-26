@@ -1,0 +1,203 @@
+{
+  "selected": null,
+  "illustrative": "k2",
+  "seed_42_columns": [
+    "B2-regional",
+    "K0 / Task 20",
+    "K2 (rejected)"
+  ],
+  "geometry_sha256": "d09c45f26f91b6374e40d708fc0748e7194eb41293ed7274c29fb74b4dd0b616",
+  "seeds": {
+    "42": {
+      "comparisons": {
+        "E01-003": {
+          "file": "seed-42/E01-003-comparison.jpg",
+          "lids": "seed-42/E01-003-lids.png",
+          "lids_sha256": "bce64fdaf72e0a1d698820b73a12586b96e53ddd03e82606fae7fe7bff44f9c7",
+          "sources": [
+            {
+              "raw_source": "/root/autodl-tmp/ai-design/outputs/e02/step1/c6bb770094d3/b2_regional/E01-003-42.png",
+              "raw_sha256": "ee204e998acd358995a875c41a8faba3cef05b1d74026c8f900a9e760e741180",
+              "preflight_source": "/root/autodl-tmp/ai-design/outputs/e02/step1/c6bb770094d3/evaluation/b2_regional/E01-003-42.preflight.png",
+              "preflight_sha256": "d028fff04b149d8671f2127a0add1e8bbc686113ac354b8d7926999d9d14bc70",
+              "score_sha256": "e15fa958e4c3b152701d7310052cb535e8657b5172e53fd8b6ce515e7bf0b858"
+            },
+            {
+              "raw_source": "/root/autodl-tmp/ai-design/outputs/e02/joint-cap/runs/3411a058f0e6/j3_g030/E01-003-42.png",
+              "raw_sha256": "e7bdf9ce426e6d52df37be084c5d318af4560f82121c8975aa54ca87210bc1bb",
+              "preflight_source": "/root/autodl-tmp/ai-design/outputs/e02/joint-cap/runs/3411a058f0e6/evaluation/j3_g030/E01-003-42.preflight.png",
+              "preflight_sha256": "b2ae9de2134c8c3645b8c2788b633d9635454a0eb62c3716d9a17e18cb143a32",
+              "score_sha256": "bc29ef78397c6350c849c28043925b6e068dd47cad5af1ca79dee63201360596"
+            },
+            {
+              "raw_source": "/root/autodl-tmp/ai-design/outputs/e02/panel-fix/runs/1b14af47ba2d/k2/E01-003-42.png",
+              "raw_sha256": "2b726f1cc07b941048e83a19a8c30b62a4b18e7037ec61fe28a0bf771a3ba4ff",
+              "preflight_source": "/root/autodl-tmp/ai-design/outputs/e02/panel-fix/runs/1b14af47ba2d/evaluation/k2/E01-003-42.preflight.png",
+              "preflight_sha256": "22c0182c4610c7fc4c9c713dae7cd695be4b370774cec5f6d82a415b4ab2cc2b",
+              "score_sha256": "3d5812e4ca3be4f27dc1d937760d34676d7e5b180d92acee85e4c99d84b8d05f"
+            }
+          ]
+        },
+        "E01-004": {
+          "file": "seed-42/E01-004-comparison.jpg",
+          "lids": "seed-42/E01-004-lids.png",
+          "lids_sha256": "c0696520e95e29a9b7de13c11d53c70cfb62f432e09721fce959f38afd336048",
+          "sources": [
+            {
+              "raw_source": "/root/autodl-tmp/ai-design/outputs/e02/step1/c6bb770094d3/b2_regional/E01-004-42.png",
+              "raw_sha256": "29182111d76cf61dcfcc19c503b0399d7d7bfff350a9eb4d23efb2a8a61b37d5",
+              "preflight_source": "/root/autodl-tmp/ai-design/outputs/e02/step1/c6bb770094d3/evaluation/b2_regional/E01-004-42.preflight.png",
+              "preflight_sha256": "8d4c880bbe11ce6b979b50e7ac0787b5ab20971b5573fd1d9599aba1a73246f8",
+              "score_sha256": "ea1e373a0ff600c7c240d9b4cc21c7cfcb6dfc7d4e9cecf338cf7c819f8a0124"
+            },
+            {
+              "raw_source": "/root/autodl-tmp/ai-design/outputs/e02/joint-cap/runs/3411a058f0e6/j3_g030/E01-004-42.png",
+              "raw_sha256": "8b4bfa898eb2f0279408ef54f4dc3c66e893ed9ef8d83d87a34eb658137806a2",
+              "preflight_source": "/root/autodl-tmp/ai-design/outputs/e02/joint-cap/runs/3411a058f0e6/evaluation/j3_g030/E01-004-42.preflight.png",
+              "preflight_sha256": "fc144d82f67bf7de9f8c24c4afc01977a16f1f5dcf80dd30fca52ad7b8f7d7a5",
+              "score_sha256": "bf259d66a6f1c6dc48204a032dec0b2d28e5bf8e893dbd4855649563bdc2a860"
+            },
+            {
+              "raw_source": "/root/autodl-tmp/ai-design/outputs/e02/panel-fix/runs/1b14af47ba2d/k2/E01-004-42.png",
+              "raw_sha256": "f3a019d3ffc8fa307c90d67c0ba78d6a6ff0c598f3e83543b9f0f97c1f46e48b",
+              "preflight_source": "/root/autodl-tmp/ai-design/outputs/e02/panel-fix/runs/1b14af47ba2d/evaluation/k2/E01-004-42.preflight.png",
+              "preflight_sha256": "b79b34580a07e8ac342c7b843cc3123775c2a4aba0fd28af9a122fd5f7de3790",
+              "score_sha256": "d80befe3df94700a058dcfd17c27a22a76c621f553fd1ce14983d062b3ad9402"
+            }
+          ]
+        },
+        "E01-005": {
+          "file": "seed-42/E01-005-comparison.jpg",
+          "lids": "seed-42/E01-005-lids.png",
+          "lids_sha256": "6ed8299c7470c7d96d67147ba4c22b06c7e30a6eb3ad2640c76d90306157758f",
+          "sources": [
+            {
+              "raw_source": "/root/autodl-tmp/ai-design/outputs/e02/step1/c6bb770094d3/b2_regional/E01-005-42.png",
+              "raw_sha256": "71371b3c0072aae118f855f3ae1749ad79fdfdfc1e658afdef39a2ec1f497f77",
+              "preflight_source": "/root/autodl-tmp/ai-design/outputs/e02/step1/c6bb770094d3/evaluation/b2_regional/E01-005-42.preflight.png",
+              "preflight_sha256": "6a2b8cc217050304d0b0bf18d7ed1a2eecb16339c1f17ec80d747cce9b26b955",
+              "score_sha256": "de18650ad18b5b4d303dd15ffa398bcae31b6990ad3f9ff23de681a370982151"
+            },
+            {
+              "raw_source": "/root/autodl-tmp/ai-design/outputs/e02/joint-cap/runs/3411a058f0e6/j3_g030/E01-005-42.png",
+              "raw_sha256": "17868ee1a9e49d6711173e94482093fbe13d2f38345049ec15b162e615866930",
+              "preflight_source": "/root/autodl-tmp/ai-design/outputs/e02/joint-cap/runs/3411a058f0e6/evaluation/j3_g030/E01-005-42.preflight.png",
+              "preflight_sha256": "3dfe4b134fc3ffe24db4c6f05b895d3b2c8c9392f55fa456e84eb4c2ba739f6b",
+              "score_sha256": "1d567240e1550c366da4bb4041eb471d5499aad4851a7be841fb2b0e92258201"
+            },
+            {
+              "raw_source": "/root/autodl-tmp/ai-design/outputs/e02/panel-fix/runs/1b14af47ba2d/k2/E01-005-42.png",
+              "raw_sha256": "984631580d2a22ef80c5fa41e2783708cabf841e3aa91d80cb41ad5fca925594",
+              "preflight_source": "/root/autodl-tmp/ai-design/outputs/e02/panel-fix/runs/1b14af47ba2d/evaluation/k2/E01-005-42.preflight.png",
+              "preflight_sha256": "0d78a8a41bf72f85b150f6d527d7b446c9725ef2badd077fb84f3a1615b51f8e",
+              "score_sha256": "b9534ab1fe1ad8ce85cf9c117ae2bed168a08f27b5a24e2dab13453b0080cf5f"
+            }
+          ]
+        },
+        "E01-009": {
+          "file": "seed-42/E01-009-comparison.jpg",
+          "lids": "seed-42/E01-009-lids.png",
+          "lids_sha256": "43d9f3dd5a83a425ded5a6fdde5f6168bd3c4a88304a4cd84eb26164bc1da378",
+          "sources": [
+            {
+              "raw_source": "/root/autodl-tmp/ai-design/outputs/e02/step1/c6bb770094d3/b2_regional/E01-009-42.png",
+              "raw_sha256": "f21d6c4bac497dc481f8a973f6cc583a87e726eb7f040c533281379445c4df0e",
+              "preflight_source": "/root/autodl-tmp/ai-design/outputs/e02/step1/c6bb770094d3/evaluation/b2_regional/E01-009-42.preflight.png",
+              "preflight_sha256": "906597dfd186d5d90f17db795cde20e063794a3441f4f409824e5e32511d1cd8",
+              "score_sha256": "4eec8ead4edc37ca7d86df44df5ac41f8291dd8db102038cc337ff39948ee543"
+            },
+            {
+              "raw_source": "/root/autodl-tmp/ai-design/outputs/e02/joint-cap/runs/3411a058f0e6/j3_g030/E01-009-42.png",
+              "raw_sha256": "f8b1fe22ce3f6816f068e389f54e2d1070884bf7875ed0630f6f9ed8474de43c",
+              "preflight_source": "/root/autodl-tmp/ai-design/outputs/e02/joint-cap/runs/3411a058f0e6/evaluation/j3_g030/E01-009-42.preflight.png",
+              "preflight_sha256": "8aa592cc4dbe303ee28c301aea29622f900a40006a94da989421befcacceae08",
+              "score_sha256": "3ef0e6633d80ae0bffde5f77c8ace374ec6c1efb477f6ce66a9ca87d7bfcd0f7"
+            },
+            {
+              "raw_source": "/root/autodl-tmp/ai-design/outputs/e02/panel-fix/runs/1b14af47ba2d/k2/E01-009-42.png",
+              "raw_sha256": "f45aeed210c8e6ed212f244eeffc45f529a43d1441f7fe454356ab58ad3e6fd2",
+              "preflight_source": "/root/autodl-tmp/ai-design/outputs/e02/panel-fix/runs/1b14af47ba2d/evaluation/k2/E01-009-42.preflight.png",
+              "preflight_sha256": "bd6867505b58f8706147c1543825ccbcc93dd321b148b418627409652acffa75",
+              "score_sha256": "a7028566e529b06bf7feab1762a8d0de16a39368b7b5a1f3460682c55aa80280"
+            }
+          ]
+        },
+        "E01-010": {
+          "file": "seed-42/E01-010-comparison.jpg",
+          "lids": "seed-42/E01-010-lids.png",
+          "lids_sha256": "16343f303247712ffcb445b205e5b98fc2395176e8359100bb3cc7ecb2218021",
+          "sources": [
+            {
+              "raw_source": "/root/autodl-tmp/ai-design/outputs/e02/step1/c6bb770094d3/b2_regional/E01-010-42.png",
+              "raw_sha256": "9cde974170f266c988d1ddc5d0cdb07f8f094593f45b46963647189d6f40c1da",
+              "preflight_source": "/root/autodl-tmp/ai-design/outputs/e02/step1/c6bb770094d3/evaluation/b2_regional/E01-010-42.preflight.png",
+              "preflight_sha256": "0f08aafbd99d8e54a773b89c68d4fda3a13453dc14d3b75d3e74da99c5c8d039",
+              "score_sha256": "4d720786c034c80fd572a16e0d815146a304f529afb9342f0fe2e52209c75a99"
+            },
+            {
+              "raw_source": "/root/autodl-tmp/ai-design/outputs/e02/joint-cap/runs/3411a058f0e6/j3_g030/E01-010-42.png",
+              "raw_sha256": "fa3ef6ef4ad34de51c5f3cee30c64cd8637d41d1850da0070cfc64486994d627",
+              "preflight_source": "/root/autodl-tmp/ai-design/outputs/e02/joint-cap/runs/3411a058f0e6/evaluation/j3_g030/E01-010-42.preflight.png",
+              "preflight_sha256": "4ecf61ac93d2f0b003a017f4d1ddcc4a076a7f7d35a8a602312a42f29bfaa261",
+              "score_sha256": "c16f65f3c10ff6f22eb7bee5e90b510aa415d266b666c94fae0db2a42616535b"
+            },
+            {
+              "raw_source": "/root/autodl-tmp/ai-design/outputs/e02/panel-fix/runs/1b14af47ba2d/k2/E01-010-42.png",
+              "raw_sha256": "06cdcff446336d1d5cad7374ba72531d379f27b63436d142809555b17ae02db5",
+              "preflight_source": "/root/autodl-tmp/ai-design/outputs/e02/panel-fix/runs/1b14af47ba2d/evaluation/k2/E01-010-42.preflight.png",
+              "preflight_sha256": "5bb8a4bd49cd6ff8b3eed16c9408011f1da6cfba3852f9ccba62483b8e3cd2b8",
+              "score_sha256": "eb0e8045504f2feb51b07f0508b3e00eb6b648b5a2d8332002dc61944f4e5d27"
+            }
+          ]
+        }
+      },
+      "native_folds": {
+        "E01-003": {
+          "file": "seed-42/E01-003-folds.png",
+          "sha256": "7fae037dbdb911f5e0d4582cdedfaabcd1b25c6b0add8708d02b7c4dd0543513"
+        },
+        "E01-004": {
+          "file": "seed-42/E01-004-folds.png",
+          "sha256": "c69a329d6457aba13046b26b32b3f8401e6d9a3c0e6282c4e7a83a622ce543a4"
+        },
+        "E01-005": {
+          "file": "seed-42/E01-005-folds.png",
+          "sha256": "81032f08559006e43855158e0ec3c6c9ab8e48abf53c04357445ff1ca3119d49"
+        },
+        "E01-009": {
+          "file": "seed-42/E01-009-folds.png",
+          "sha256": "d45f7044ff497cdc2f163ecc95fed56791e18a08e4188b2645bd457cda61083a"
+        },
+        "E01-010": {
+          "file": "seed-42/E01-010-folds.png",
+          "sha256": "3de69f53aedb474835a7182757c53fdea5ea64e69933f4f53456218832e522ba"
+        }
+      }
+    },
+    "1234": {
+      "comparisons": {},
+      "native_folds": {
+        "E01-003": {
+          "file": "seed-1234/E01-003-folds.png",
+          "sha256": "2d511e2ebaee3b22bb7376dd41e7ca6b6278d1e5e6a8313a3c4b031c25a07767"
+        },
+        "E01-004": {
+          "file": "seed-1234/E01-004-folds.png",
+          "sha256": "8c8109b8af018229f9ca029c21e8e85b37cf49e5c2f12bce27dddbdf41d3dc28"
+        },
+        "E01-005": {
+          "file": "seed-1234/E01-005-folds.png",
+          "sha256": "8227ff45a414f717dd36d282d68ad67b151988350eea72042793c849fd0f2ca1"
+        },
+        "E01-009": {
+          "file": "seed-1234/E01-009-folds.png",
+          "sha256": "89cb1423cb454123172ce8d09fdf593da6e40b9ae9387a7a987f35d1199e95ec"
+        },
+        "E01-010": {
+          "file": "seed-1234/E01-010-folds.png",
+          "sha256": "736ae8838e3efb1c5cfa4ba98605fb2bcdfd18471ee4609e54071ea8fd2fea42"
+        }
+      }
+    }
+  }
+}

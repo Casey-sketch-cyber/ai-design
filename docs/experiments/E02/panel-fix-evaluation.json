@@ -1,0 +1,3672 @@
+{
+  "selection": null,
+  "methods_by_seed": {
+    "42": {
+      "b2": {
+        "raw": {
+          "cap_6_delta_e00": 14.290806897481282,
+          "cap_6_lpips": 0.4243381361166636,
+          "non_native_7_sdr": 4.615584659576416,
+          "non_native_7_lpips": 0.4133970447949001,
+          "bleed_fill_pct": 52.75197120329105,
+          "bleed_fill_v2_pct": 47.33930407953377,
+          "stripe_index": 1.2270549828093935,
+          "clip_score": 0.6862232200801373,
+          "image_reward": -1.6015116095542907,
+          "elapsed_seconds": 14.054480017349125,
+          "peak_memory_mib": 9928.94111328125,
+          "top_interior_texture_energy": 0.0033275296940701083,
+          "bottom_interior_texture_energy": 0.0028792192111723124,
+          "top_near_seam_energy_gap": 0.000861345565499505,
+          "bottom_near_seam_energy_gap": 0.0008053036935355825,
+          "cap_6_near_seam_energy_gap": 0.0008333246295175438,
+          "wrap_lb_near_seam_energy_gap": 0.0004733563488116488,
+          "F_interior_texture_energy": 0.0028278137819143013,
+          "L_interior_texture_energy": 0.00290307727700565,
+          "B_interior_texture_energy": 0.0035361710644792764,
+          "R_interior_texture_energy": 0.0031244278303347527,
+          "ring_interior_texture_energy": 0.0030978724884334953,
+          "top_cap_to_ring_texture_ratio": 1.0215764394945257,
+          "bottom_cap_to_ring_texture_ratio": 1.0925848157443427,
+          "top_texture_energy_2x": 0.004405396540823859,
+          "bottom_texture_energy_2x": 0.004182660905644298,
+          "top_texture_retention_2x": 1.4092986529327594,
+          "bottom_texture_retention_2x": 1.512478306834643
+        },
+        "preflight": {
+          "cap_6_delta_e00": 14.290806897481282,
+          "cap_6_lpips": 0.4243381361166636,
+          "non_native_7_sdr": 4.615584659576416,
+          "non_native_7_lpips": 0.4133970447949001,
+          "bleed_fill_pct": 52.75197120329105,
+          "bleed_fill_v2_pct": 47.33930407953377,
+          "stripe_index": 1.2270549828093935,
+          "clip_score": 0.6862232200801373,
+          "image_reward": -1.6015116095542907,
+          "elapsed_seconds": 14.054480017349125,
+          "peak_memory_mib": 9928.94111328125,
+          "top_interior_texture_energy": 0.0033275296940701083,
+          "bottom_interior_texture_energy": 0.0028792192111723124,
+          "top_near_seam_energy_gap": 0.000861345565499505,
+          "bottom_near_seam_energy_gap": 0.0008053036935355825,
+          "cap_6_near_seam_energy_gap": 0.0008333246295175438,
+          "wrap_lb_near_seam_energy_gap": 0.0004733563488116488,
+          "F_interior_texture_energy": 0.0028278137819143013,
+          "L_interior_texture_energy": 0.00290307727700565,
+          "B_interior_texture_energy": 0.0035361710644792764,
+          "R_interior_texture_energy": 0.0031244278303347527,
+          "ring_interior_texture_energy": 0.0030978724884334953,
+          "top_cap_to_ring_texture_ratio": 1.0215764394945257,
+          "bottom_cap_to_ring_texture_ratio": 1.0925848157443427,
+          "top_texture_energy_2x": 0.004405396540823859,
+          "bottom_texture_energy_2x": 0.004182660905644298,
+          "top_texture_retention_2x": 1.4092986529327594,
+          "bottom_texture_retention_2x": 1.512478306834643
+        }
+      },
+      "b2_post": {
+        "raw": {
+          "cap_6_delta_e00": 14.26031858921051,
+          "cap_6_lpips": 0.4244471336404483,
+          "non_native_7_sdr": 4.619852018356323,
+          "non_native_7_lpips": 0.41345378288200924,
+          "bleed_fill_pct": 52.847103188207065,
+          "bleed_fill_v2_pct": 47.38472745971889,
+          "stripe_index": 1.2288052747297844,
+          "clip_score": 0.6856288649141788,
+          "image_reward": -1.6005217671394347,
+          "elapsed_seconds": 14.250465910881758,
+          "peak_memory_mib": 9928.94111328125,
+          "top_interior_texture_energy": 0.003321940448950045,
+          "bottom_interior_texture_energy": 0.0028709597885608674,
+          "top_near_seam_energy_gap": 0.0008574590126954718,
+          "bottom_near_seam_energy_gap": 0.0008041296615071285,
+          "cap_6_near_seam_energy_gap": 0.0008307943371013,
+          "wrap_lb_near_seam_energy_gap": 0.00047808074014028535,
+          "F_interior_texture_energy": 0.00281594319967553,
+          "L_interior_texture_energy": 0.0028895123105030507,
+          "B_interior_texture_energy": 0.003521958121564239,
+          "R_interior_texture_energy": 0.0031096140679437666,
+          "ring_interior_texture_energy": 0.0030842569249216467,
+          "top_cap_to_ring_texture_ratio": 1.0247567063120926,
+          "bottom_cap_to_ring_texture_ratio": 1.0925568380449044,
+          "top_texture_energy_2x": 0.004392063186969608,
+          "bottom_texture_energy_2x": 0.004165586421731859,
+          "top_texture_retention_2x": 1.4081543050221992,
+          "bottom_texture_retention_2x": 1.5114470200788022
+        },
+        "preflight": {
+          "cap_6_delta_e00": 14.26031858921051,
+          "cap_6_lpips": 0.4244471336404483,
+          "non_native_7_sdr": 4.619852018356323,
+          "non_native_7_lpips": 0.41345378288200924,
+          "bleed_fill_pct": 52.847103188207065,
+          "bleed_fill_v2_pct": 47.38472745971889,
+          "stripe_index": 1.2288052747297844,
+          "clip_score": 0.6856288649141788,
+          "image_reward": -1.6005217671394347,
+          "elapsed_seconds": 14.250465910881758,
+          "peak_memory_mib": 9928.94111328125,
+          "top_interior_texture_energy": 0.003321940448950045,
+          "bottom_interior_texture_energy": 0.0028709597885608674,
+          "top_near_seam_energy_gap": 0.0008574590126954718,
+          "bottom_near_seam_energy_gap": 0.0008041296615071285,
+          "cap_6_near_seam_energy_gap": 0.0008307943371013,
+          "wrap_lb_near_seam_energy_gap": 0.00047808074014028535,
+          "F_interior_texture_energy": 0.00281594319967553,
+          "L_interior_texture_energy": 0.0028895123105030507,
+          "B_interior_texture_energy": 0.003521958121564239,
+          "R_interior_texture_energy": 0.0031096140679437666,
+          "ring_interior_texture_energy": 0.0030842569249216467,
+          "top_cap_to_ring_texture_ratio": 1.0247567063120926,
+          "bottom_cap_to_ring_texture_ratio": 1.0925568380449044,
+          "top_texture_energy_2x": 0.004392063186969608,
+          "bottom_texture_energy_2x": 0.004165586421731859,
+          "top_texture_retention_2x": 1.4081543050221992,
+          "bottom_texture_retention_2x": 1.5114470200788022
+        }
+      },
+      "b3": {
+        "raw": {
+          "cap_6_delta_e00": 15.880752499898275,
+          "cap_6_lpips": 0.4562871479739745,
+          "non_native_7_sdr": 18.78353500366211,
+          "non_native_7_lpips": 0.4889107426362378,
+          "bleed_fill_pct": 11.898354473774425,
+          "bleed_fill_v2_pct": 5.980887898525882,
+          "stripe_index": 1.2732381419603758,
+          "clip_score": 0.6664096713066101,
+          "image_reward": -1.8155154943466187,
+          "elapsed_seconds": 110.7240350311622,
+          "peak_memory_mib": 5011.111376953125,
+          "top_interior_texture_energy": 4.6126062200357866e-05,
+          "bottom_interior_texture_energy": 0.0002059680794143759,
+          "top_near_seam_energy_gap": 0.002992307581280329,
+          "bottom_near_seam_energy_gap": 0.002021041827068378,
+          "cap_6_near_seam_energy_gap": 0.0025066747041743533,
+          "wrap_lb_near_seam_energy_gap": 0.007591736357716173,
+          "F_interior_texture_energy": 0.0010645439455402085,
+          "L_interior_texture_energy": 0.001727923449652735,
+          "B_interior_texture_energy": 0.0007742288371446193,
+          "R_interior_texture_energy": 0.0015665088052628563,
+          "ring_interior_texture_energy": 0.0012833012594001048,
+          "top_cap_to_ring_texture_ratio": 0.05415546134609443,
+          "bottom_cap_to_ring_texture_ratio": 0.36078058701323784,
+          "top_texture_energy_2x": 4.279278244112561e-05,
+          "bottom_texture_energy_2x": 0.00029386627392860023,
+          "top_texture_retention_2x": 0.7263142058300005,
+          "bottom_texture_retention_2x": 1.0669168826451725
+        },
+        "preflight": {
+          "cap_6_delta_e00": 15.880752499898275,
+          "cap_6_lpips": 0.4562871479739745,
+          "non_native_7_sdr": 18.78353500366211,
+          "non_native_7_lpips": 0.4889107426362378,
+          "bleed_fill_pct": 11.898354473774425,
+          "bleed_fill_v2_pct": 5.980887898525882,
+          "stripe_index": 1.2732381419603758,
+          "clip_score": 0.6664096713066101,
+          "image_reward": -1.8155154943466187,
+          "elapsed_seconds": 110.7240350311622,
+          "peak_memory_mib": 5011.111376953125,
+          "top_interior_texture_energy": 4.6126062200357866e-05,
+          "bottom_interior_texture_energy": 0.0002059680794143759,
+          "top_near_seam_energy_gap": 0.002992307581280329,
+          "bottom_near_seam_energy_gap": 0.002021041827068378,
+          "cap_6_near_seam_energy_gap": 0.0025066747041743533,
+          "wrap_lb_near_seam_energy_gap": 0.007591736357716173,
+          "F_interior_texture_energy": 0.0010645439455402085,
+          "L_interior_texture_energy": 0.001727923449652735,
+          "B_interior_texture_energy": 0.0007742288371446193,
+          "R_interior_texture_energy": 0.0015665088052628563,
+          "ring_interior_texture_energy": 0.0012833012594001048,
+          "top_cap_to_ring_texture_ratio": 0.05415546134609443,
+          "bottom_cap_to_ring_texture_ratio": 0.36078058701323784,
+          "top_texture_energy_2x": 4.279278244112561e-05,
+          "bottom_texture_energy_2x": 0.00029386627392860023,
+          "top_texture_retention_2x": 0.7263142058300005,
+          "bottom_texture_retention_2x": 1.0669168826451725
+        }
+      },
+      "b4": {
+        "raw": {
+          "cap_6_delta_e00": 11.572795736789704,
+          "cap_6_lpips": 0.3586783913973098,
+          "non_native_7_sdr": 8.004058623313904,
+          "non_native_7_lpips": 0.387180369939389,
+          "bleed_fill_pct": 18.993829276654097,
+          "bleed_fill_v2_pct": 20.894326362701406,
+          "stripe_index": 1.0439793614081425,
+          "clip_score": 0.6828617230057716,
+          "image_reward": -1.714665311574936,
+          "elapsed_seconds": 106.0799080600962,
+          "peak_memory_mib": 4224.31435546875,
+          "top_interior_texture_energy": 9.837214383878745e-06,
+          "bottom_interior_texture_energy": 0.0011826704285340384,
+          "top_near_seam_energy_gap": 0.0001337099356381562,
+          "bottom_near_seam_energy_gap": 0.0009390992226599338,
+          "cap_6_near_seam_energy_gap": 0.000536404579149045,
+          "wrap_lb_near_seam_energy_gap": 0.001304420386441052,
+          "F_interior_texture_energy": 0.002597873896593228,
+          "L_interior_texture_energy": 0.0010133780684554949,
+          "B_interior_texture_energy": 0.003054013580549508,
+          "R_interior_texture_energy": 0.0008150888494128594,
+          "ring_interior_texture_energy": 0.0018700885987527726,
+          "top_cap_to_ring_texture_ratio": 0.014701109171625358,
+          "bottom_cap_to_ring_texture_ratio": 0.5363677136933352,
+          "top_texture_energy_2x": 1.2276864845262026e-05,
+          "bottom_texture_energy_2x": 0.003242821431194898,
+          "top_texture_retention_2x": 1.1030785849078566,
+          "bottom_texture_retention_2x": 2.283217389678451
+        },
+        "preflight": {
+          "cap_6_delta_e00": 11.572795736789704,
+          "cap_6_lpips": 0.3586783913973098,
+          "non_native_7_sdr": 8.004058623313904,
+          "non_native_7_lpips": 0.387180369939389,
+          "bleed_fill_pct": 18.993829276654097,
+          "bleed_fill_v2_pct": 20.894326362701406,
+          "stripe_index": 1.0439793614081425,
+          "clip_score": 0.6828617230057716,
+          "image_reward": -1.714665311574936,
+          "elapsed_seconds": 106.0799080600962,
+          "peak_memory_mib": 4224.31435546875,
+          "top_interior_texture_energy": 9.837214383878745e-06,
+          "bottom_interior_texture_energy": 0.0011826704285340384,
+          "top_near_seam_energy_gap": 0.0001337099356381562,
+          "bottom_near_seam_energy_gap": 0.0009390992226599338,
+          "cap_6_near_seam_energy_gap": 0.000536404579149045,
+          "wrap_lb_near_seam_energy_gap": 0.001304420386441052,
+          "F_interior_texture_energy": 0.002597873896593228,
+          "L_interior_texture_energy": 0.0010133780684554949,
+          "B_interior_texture_energy": 0.003054013580549508,
+          "R_interior_texture_energy": 0.0008150888494128594,
+          "ring_interior_texture_energy": 0.0018700885987527726,
+          "top_cap_to_ring_texture_ratio": 0.014701109171625358,
+          "bottom_cap_to_ring_texture_ratio": 0.5363677136933352,
+          "top_texture_energy_2x": 1.2276864845262026e-05,
+          "bottom_texture_energy_2x": 0.003242821431194898,
+          "top_texture_retention_2x": 1.1030785849078566,
+          "bottom_texture_retention_2x": 2.283217389678451
+        }
+      },
+      "b2_regional": {
+        "raw": {
+          "cap_6_delta_e00": 9.493489535649617,
+          "cap_6_lpips": 0.3741687337557475,
+          "non_native_7_sdr": 4.417501974105835,
+          "non_native_7_lpips": 0.3646032963480268,
+          "bleed_fill_pct": 52.99622900239972,
+          "bleed_fill_v2_pct": 28.460747343160783,
+          "stripe_index": 1.1399088085999431,
+          "clip_score": 0.6571861021220684,
+          "image_reward": -1.7549812078475953,
+          "elapsed_seconds": 43.1164291460067,
+          "peak_memory_mib": 10453.65625,
+          "top_interior_texture_energy": 0.0012271111831068993,
+          "bottom_interior_texture_energy": 0.0012491258792579174,
+          "top_near_seam_energy_gap": 0.0006739898861875796,
+          "bottom_near_seam_energy_gap": 0.0008208852528089968,
+          "cap_6_near_seam_energy_gap": 0.0007474375694982883,
+          "wrap_lb_near_seam_energy_gap": 0.00034645373816601934,
+          "F_interior_texture_energy": 0.001635121722938493,
+          "L_interior_texture_energy": 0.0017237349937204271,
+          "B_interior_texture_energy": 0.0014162790612317622,
+          "R_interior_texture_energy": 0.0019294565136078745,
+          "ring_interior_texture_energy": 0.0016761480728746392,
+          "top_cap_to_ring_texture_ratio": 0.72601811349906,
+          "bottom_cap_to_ring_texture_ratio": 0.7036022680518794,
+          "top_texture_energy_2x": 0.0014804001722950489,
+          "bottom_texture_energy_2x": 0.0016391779470723122,
+          "top_texture_retention_2x": 1.1935541232200413,
+          "bottom_texture_retention_2x": 1.3401888674767972
+        },
+        "preflight": {
+          "cap_6_delta_e00": 9.493489535649617,
+          "cap_6_lpips": 0.3741687337557475,
+          "non_native_7_sdr": 4.417501974105835,
+          "non_native_7_lpips": 0.3646032963480268,
+          "bleed_fill_pct": 52.99622900239972,
+          "bleed_fill_v2_pct": 28.460747343160783,
+          "stripe_index": 1.1399088085999431,
+          "clip_score": 0.6571861021220684,
+          "image_reward": -1.7549812078475953,
+          "elapsed_seconds": 43.1164291460067,
+          "peak_memory_mib": 10453.65625,
+          "top_interior_texture_energy": 0.0012271111831068993,
+          "bottom_interior_texture_energy": 0.0012491258792579174,
+          "top_near_seam_energy_gap": 0.0006739898861875796,
+          "bottom_near_seam_energy_gap": 0.0008208852528089968,
+          "cap_6_near_seam_energy_gap": 0.0007474375694982883,
+          "wrap_lb_near_seam_energy_gap": 0.00034645373816601934,
+          "F_interior_texture_energy": 0.001635121722938493,
+          "L_interior_texture_energy": 0.0017237349937204271,
+          "B_interior_texture_energy": 0.0014162790612317622,
+          "R_interior_texture_energy": 0.0019294565136078745,
+          "ring_interior_texture_energy": 0.0016761480728746392,
+          "top_cap_to_ring_texture_ratio": 0.72601811349906,
+          "bottom_cap_to_ring_texture_ratio": 0.7036022680518794,
+          "top_texture_energy_2x": 0.0014804001722950489,
+          "bottom_texture_energy_2x": 0.0016391779470723122,
+          "top_texture_retention_2x": 1.1935541232200413,
+          "bottom_texture_retention_2x": 1.3401888674767972
+        }
+      },
+      "k0": {
+        "raw": {
+          "cap_6_delta_e00": 4.051311198870341,
+          "cap_6_lpips": 0.37016014034549394,
+          "non_native_7_sdr": 1.499894666671753,
+          "non_native_7_lpips": 0.341052098678691,
+          "bleed_fill_pct": 67.51371271854646,
+          "bleed_fill_v2_pct": 58.57644840589647,
+          "stripe_index": 1.253929033208974,
+          "clip_score": 0.6724426671862602,
+          "image_reward": -1.6754133462905885,
+          "elapsed_seconds": 54.52613473068923,
+          "peak_memory_mib": 10521.20361328125,
+          "top_interior_texture_energy": 0.003005440183915198,
+          "bottom_interior_texture_energy": 0.0022152845980599523,
+          "top_near_seam_energy_gap": 0.0005872188737763887,
+          "bottom_near_seam_energy_gap": 0.001095110365228417,
+          "cap_6_near_seam_energy_gap": 0.0008411646195024029,
+          "wrap_lb_near_seam_energy_gap": 0.00038936074706725777,
+          "F_interior_texture_energy": 0.002530770481098443,
+          "L_interior_texture_energy": 0.0024866898078471423,
+          "B_interior_texture_energy": 0.002541477419435978,
+          "R_interior_texture_energy": 0.0025028357631526887,
+          "ring_interior_texture_energy": 0.002515443367883563,
+          "top_cap_to_ring_texture_ratio": 1.253519271476197,
+          "bottom_cap_to_ring_texture_ratio": 0.8745275338814456,
+          "top_texture_energy_2x": 0.006622107699513435,
+          "bottom_texture_energy_2x": 0.004965170135255903,
+          "top_texture_retention_2x": 2.176356598494099,
+          "bottom_texture_retention_2x": 2.22210642539196
+        },
+        "preflight": {
+          "cap_6_delta_e00": 4.051311198870341,
+          "cap_6_lpips": 0.37016014034549394,
+          "non_native_7_sdr": 1.499894666671753,
+          "non_native_7_lpips": 0.341052098678691,
+          "bleed_fill_pct": 67.51371271854646,
+          "bleed_fill_v2_pct": 58.57644840589647,
+          "stripe_index": 1.253929033208974,
+          "clip_score": 0.6724426671862602,
+          "image_reward": -1.6754133462905885,
+          "elapsed_seconds": 54.52613473068923,
+          "peak_memory_mib": 10521.20361328125,
+          "top_interior_texture_energy": 0.003005440183915198,
+          "bottom_interior_texture_energy": 0.0022152845980599523,
+          "top_near_seam_energy_gap": 0.0005872188737763887,
+          "bottom_near_seam_energy_gap": 0.001095110365228417,
+          "cap_6_near_seam_energy_gap": 0.0008411646195024029,
+          "wrap_lb_near_seam_energy_gap": 0.00038936074706725777,
+          "F_interior_texture_energy": 0.002530770481098443,
+          "L_interior_texture_energy": 0.0024866898078471423,
+          "B_interior_texture_energy": 0.002541477419435978,
+          "R_interior_texture_energy": 0.0025028357631526887,
+          "ring_interior_texture_energy": 0.002515443367883563,
+          "top_cap_to_ring_texture_ratio": 1.253519271476197,
+          "bottom_cap_to_ring_texture_ratio": 0.8745275338814456,
+          "top_texture_energy_2x": 0.006622107699513435,
+          "bottom_texture_energy_2x": 0.004965170135255903,
+          "top_texture_retention_2x": 2.176356598494099,
+          "bottom_texture_retention_2x": 2.22210642539196
+        }
+      },
+      "k1": {
+        "raw": {
+          "cap_6_delta_e00": 3.9146241307258607,
+          "cap_6_lpips": 0.36262181599934895,
+          "non_native_7_sdr": 1.4666447758674621,
+          "non_native_7_lpips": 0.3345906778105668,
+          "bleed_fill_pct": 67.23731573534454,
+          "bleed_fill_v2_pct": 58.390469660610215,
+          "stripe_index": 1.2375843505088673,
+          "clip_score": 0.6666164845228195,
+          "image_reward": -1.7076924443244934,
+          "elapsed_seconds": 55.964886852353814,
+          "peak_memory_mib": 10519.35986328125,
+          "top_interior_texture_energy": 0.0026678713620640337,
+          "bottom_interior_texture_energy": 0.0020297016948461533,
+          "top_near_seam_energy_gap": 0.000551897549333565,
+          "bottom_near_seam_energy_gap": 0.0012121456228972724,
+          "cap_6_near_seam_energy_gap": 0.0008820215861154187,
+          "wrap_lb_near_seam_energy_gap": 0.00038936074706725777,
+          "F_interior_texture_energy": 0.002530770481098443,
+          "L_interior_texture_energy": 0.0024866898078471423,
+          "B_interior_texture_energy": 0.002541477419435978,
+          "R_interior_texture_energy": 0.0025028357631526887,
+          "ring_interior_texture_energy": 0.002515443367883563,
+          "top_cap_to_ring_texture_ratio": 1.0927934548792113,
+          "bottom_cap_to_ring_texture_ratio": 0.7892619679412883,
+          "top_texture_energy_2x": 0.006055092252790928,
+          "bottom_texture_energy_2x": 0.004694828740321099,
+          "top_texture_retention_2x": 2.2147469793435475,
+          "bottom_texture_retention_2x": 2.291561909955282
+        },
+        "preflight": {
+          "cap_6_delta_e00": 3.9146241307258607,
+          "cap_6_lpips": 0.36262181599934895,
+          "non_native_7_sdr": 1.4666447758674621,
+          "non_native_7_lpips": 0.3345906778105668,
+          "bleed_fill_pct": 67.23731573534454,
+          "bleed_fill_v2_pct": 58.390469660610215,
+          "stripe_index": 1.2375843505088673,
+          "clip_score": 0.6666164845228195,
+          "image_reward": -1.7076924443244934,
+          "elapsed_seconds": 55.964886852353814,
+          "peak_memory_mib": 10519.35986328125,
+          "top_interior_texture_energy": 0.0026678713620640337,
+          "bottom_interior_texture_energy": 0.0020297016948461533,
+          "top_near_seam_energy_gap": 0.000551897549333565,
+          "bottom_near_seam_energy_gap": 0.0012121456228972724,
+          "cap_6_near_seam_energy_gap": 0.0008820215861154187,
+          "wrap_lb_near_seam_energy_gap": 0.00038936074706725777,
+          "F_interior_texture_energy": 0.002530770481098443,
+          "L_interior_texture_energy": 0.0024866898078471423,
+          "B_interior_texture_energy": 0.002541477419435978,
+          "R_interior_texture_energy": 0.0025028357631526887,
+          "ring_interior_texture_energy": 0.002515443367883563,
+          "top_cap_to_ring_texture_ratio": 1.0927934548792113,
+          "bottom_cap_to_ring_texture_ratio": 0.7892619679412883,
+          "top_texture_energy_2x": 0.006055092252790928,
+          "bottom_texture_energy_2x": 0.004694828740321099,
+          "top_texture_retention_2x": 2.2147469793435475,
+          "bottom_texture_retention_2x": 2.291561909955282
+        }
+      },
+      "k2": {
+        "raw": {
+          "cap_6_delta_e00": 3.923106857140859,
+          "cap_6_lpips": 0.3629282171527545,
+          "non_native_7_sdr": 1.461490225791931,
+          "non_native_7_lpips": 0.33485330737062863,
+          "bleed_fill_pct": 67.20046280425095,
+          "bleed_fill_v2_pct": 58.30347960233116,
+          "stripe_index": 1.2262979137882162,
+          "clip_score": 0.6659718975424767,
+          "image_reward": -1.7072741270065308,
+          "elapsed_seconds": 55.50135478340089,
+          "peak_memory_mib": 10521.20361328125,
+          "top_interior_texture_energy": 0.002867283718660474,
+          "bottom_interior_texture_energy": 0.002252052305266261,
+          "top_near_seam_energy_gap": 0.0005409216996061636,
+          "bottom_near_seam_energy_gap": 0.0011455781170904326,
+          "cap_6_near_seam_energy_gap": 0.0008432499083482981,
+          "wrap_lb_near_seam_energy_gap": 0.00038936074706725777,
+          "F_interior_texture_energy": 0.002530770481098443,
+          "L_interior_texture_energy": 0.0024866898078471423,
+          "B_interior_texture_energy": 0.002541477419435978,
+          "R_interior_texture_energy": 0.0025028357631526887,
+          "ring_interior_texture_energy": 0.002515443367883563,
+          "top_cap_to_ring_texture_ratio": 1.1760737212759258,
+          "bottom_cap_to_ring_texture_ratio": 0.884694362010901,
+          "top_texture_energy_2x": 0.0064566679764539005,
+          "bottom_texture_energy_2x": 0.005140009406022728,
+          "top_texture_retention_2x": 2.199171564827336,
+          "bottom_texture_retention_2x": 2.260875978292824
+        },
+        "preflight": {
+          "cap_6_delta_e00": 3.923106857140859,
+          "cap_6_lpips": 0.3629282171527545,
+          "non_native_7_sdr": 1.461490225791931,
+          "non_native_7_lpips": 0.33485330737062863,
+          "bleed_fill_pct": 67.20046280425095,
+          "bleed_fill_v2_pct": 58.30347960233116,
+          "stripe_index": 1.2262979137882162,
+          "clip_score": 0.6659718975424767,
+          "image_reward": -1.7072741270065308,
+          "elapsed_seconds": 55.50135478340089,
+          "peak_memory_mib": 10521.20361328125,
+          "top_interior_texture_energy": 0.002867283718660474,
+          "bottom_interior_texture_energy": 0.002252052305266261,
+          "top_near_seam_energy_gap": 0.0005409216996061636,
+          "bottom_near_seam_energy_gap": 0.0011455781170904326,
+          "cap_6_near_seam_energy_gap": 0.0008432499083482981,
+          "wrap_lb_near_seam_energy_gap": 0.00038936074706725777,
+          "F_interior_texture_energy": 0.002530770481098443,
+          "L_interior_texture_energy": 0.0024866898078471423,
+          "B_interior_texture_energy": 0.002541477419435978,
+          "R_interior_texture_energy": 0.0025028357631526887,
+          "ring_interior_texture_energy": 0.002515443367883563,
+          "top_cap_to_ring_texture_ratio": 1.1760737212759258,
+          "bottom_cap_to_ring_texture_ratio": 0.884694362010901,
+          "top_texture_energy_2x": 0.0064566679764539005,
+          "bottom_texture_energy_2x": 0.005140009406022728,
+          "top_texture_retention_2x": 2.199171564827336,
+          "bottom_texture_retention_2x": 2.260875978292824
+        }
+      },
+      "k3": {
+        "raw": {
+          "cap_6_delta_e00": 10.513219916820526,
+          "cap_6_lpips": 0.4392061839501063,
+          "non_native_7_sdr": 3.5228217124938963,
+          "non_native_7_lpips": 0.4002344217683588,
+          "bleed_fill_pct": 59.80330819334933,
+          "bleed_fill_v2_pct": 52.525282824820025,
+          "stripe_index": 1.2551861755541027,
+          "clip_score": 0.653623528778553,
+          "image_reward": -1.663428747653961,
+          "elapsed_seconds": 50.23065377566964,
+          "peak_memory_mib": 10422.250146484375,
+          "top_interior_texture_energy": 0.00303535393322818,
+          "bottom_interior_texture_energy": 0.002887828554958105,
+          "top_near_seam_energy_gap": 0.0007630404091287346,
+          "bottom_near_seam_energy_gap": 0.0013434271143826968,
+          "cap_6_near_seam_energy_gap": 0.0010532337617557156,
+          "wrap_lb_near_seam_energy_gap": 0.00038936074706725777,
+          "F_interior_texture_energy": 0.002530770481098443,
+          "L_interior_texture_energy": 0.0024866898078471423,
+          "B_interior_texture_energy": 0.002541477419435978,
+          "R_interior_texture_energy": 0.0025028357631526887,
+          "ring_interior_texture_energy": 0.002515443367883563,
+          "top_cap_to_ring_texture_ratio": 1.2467182664775365,
+          "bottom_cap_to_ring_texture_ratio": 1.1744685831774737,
+          "top_texture_energy_2x": 0.006387890328187496,
+          "bottom_texture_energy_2x": 0.00639975059311837,
+          "top_texture_retention_2x": 2.1198626508708425,
+          "bottom_texture_retention_2x": 2.214395370434155
+        },
+        "preflight": {
+          "cap_6_delta_e00": 10.513219916820526,
+          "cap_6_lpips": 0.4392061839501063,
+          "non_native_7_sdr": 3.5228217124938963,
+          "non_native_7_lpips": 0.4002344217683588,
+          "bleed_fill_pct": 59.80330819334933,
+          "bleed_fill_v2_pct": 52.525282824820025,
+          "stripe_index": 1.2551861755541027,
+          "clip_score": 0.653623528778553,
+          "image_reward": -1.663428747653961,
+          "elapsed_seconds": 50.23065377566964,
+          "peak_memory_mib": 10422.250146484375,
+          "top_interior_texture_energy": 0.00303535393322818,
+          "bottom_interior_texture_energy": 0.002887828554958105,
+          "top_near_seam_energy_gap": 0.0007630404091287346,
+          "bottom_near_seam_energy_gap": 0.0013434271143826968,
+          "cap_6_near_seam_energy_gap": 0.0010532337617557156,
+          "wrap_lb_near_seam_energy_gap": 0.00038936074706725777,
+          "F_interior_texture_energy": 0.002530770481098443,
+          "L_interior_texture_energy": 0.0024866898078471423,
+          "B_interior_texture_energy": 0.002541477419435978,
+          "R_interior_texture_energy": 0.0025028357631526887,
+          "ring_interior_texture_energy": 0.002515443367883563,
+          "top_cap_to_ring_texture_ratio": 1.2467182664775365,
+          "bottom_cap_to_ring_texture_ratio": 1.1744685831774737,
+          "top_texture_energy_2x": 0.006387890328187496,
+          "bottom_texture_energy_2x": 0.00639975059311837,
+          "top_texture_retention_2x": 2.1198626508708425,
+          "bottom_texture_retention_2x": 2.214395370434155
+        }
+      },
+      "k4": {
+        "raw": {
+          "cap_6_delta_e00": 10.557917312781017,
+          "cap_6_lpips": 0.4393332779407501,
+          "non_native_7_sdr": 3.52769992351532,
+          "non_native_7_lpips": 0.4003433594746249,
+          "bleed_fill_pct": 59.824734316078164,
+          "bleed_fill_v2_pct": 52.39972574562907,
+          "stripe_index": 1.2551861755541027,
+          "clip_score": 0.6528684012591839,
+          "image_reward": -1.6756452918052673,
+          "elapsed_seconds": 49.52348368298262,
+          "peak_memory_mib": 10422.250146484375,
+          "top_interior_texture_energy": 0.0030773163365665824,
+          "bottom_interior_texture_energy": 0.0030052852351218464,
+          "top_near_seam_energy_gap": 0.00075491527389507,
+          "bottom_near_seam_energy_gap": 0.0014420821932920565,
+          "cap_6_near_seam_energy_gap": 0.0010984987335935633,
+          "wrap_lb_near_seam_energy_gap": 0.00038936074706725777,
+          "F_interior_texture_energy": 0.002530770481098443,
+          "L_interior_texture_energy": 0.0024866898078471423,
+          "B_interior_texture_energy": 0.002541477419435978,
+          "R_interior_texture_energy": 0.0025028357631526887,
+          "ring_interior_texture_energy": 0.002515443367883563,
+          "top_cap_to_ring_texture_ratio": 1.2617108011540843,
+          "bottom_cap_to_ring_texture_ratio": 1.2277342313051234,
+          "top_texture_energy_2x": 0.00649944597389549,
+          "bottom_texture_energy_2x": 0.0066538536688312885,
+          "top_texture_retention_2x": 2.129028241686457,
+          "bottom_texture_retention_2x": 2.2151281104935268
+        },
+        "preflight": {
+          "cap_6_delta_e00": 10.557917312781017,
+          "cap_6_lpips": 0.4393332779407501,
+          "non_native_7_sdr": 3.52769992351532,
+          "non_native_7_lpips": 0.4003433594746249,
+          "bleed_fill_pct": 59.824734316078164,
+          "bleed_fill_v2_pct": 52.39972574562907,
+          "stripe_index": 1.2551861755541027,
+          "clip_score": 0.6528684012591839,
+          "image_reward": -1.6756452918052673,
+          "elapsed_seconds": 49.52348368298262,
+          "peak_memory_mib": 10422.250146484375,
+          "top_interior_texture_energy": 0.0030773163365665824,
+          "bottom_interior_texture_energy": 0.0030052852351218464,
+          "top_near_seam_energy_gap": 0.00075491527389507,
+          "bottom_near_seam_energy_gap": 0.0014420821932920565,
+          "cap_6_near_seam_energy_gap": 0.0010984987335935633,
+          "wrap_lb_near_seam_energy_gap": 0.00038936074706725777,
+          "F_interior_texture_energy": 0.002530770481098443,
+          "L_interior_texture_energy": 0.0024866898078471423,
+          "B_interior_texture_energy": 0.002541477419435978,
+          "R_interior_texture_energy": 0.0025028357631526887,
+          "ring_interior_texture_energy": 0.002515443367883563,
+          "top_cap_to_ring_texture_ratio": 1.2617108011540843,
+          "bottom_cap_to_ring_texture_ratio": 1.2277342313051234,
+          "top_texture_energy_2x": 0.00649944597389549,
+          "bottom_texture_energy_2x": 0.0066538536688312885,
+          "top_texture_retention_2x": 2.129028241686457,
+          "bottom_texture_retention_2x": 2.2151281104935268
+        }
+      },
+      "j0": {
+        "raw": {
+          "cap_6_delta_e00": 4.104541639486949,
+          "cap_6_lpips": 0.37468159819642705,
+          "non_native_7_sdr": 1.5629969477653503,
+          "non_native_7_lpips": 0.34492763397949083,
+          "bleed_fill_pct": 67.46014741172438,
+          "bleed_fill_v2_pct": 58.522454576619815,
+          "stripe_index": 1.7208844875631943,
+          "clip_score": 0.6873757988214493,
+          "image_reward": -1.6541299104690552,
+          "elapsed_seconds": 54.89987895339728,
+          "peak_memory_mib": 10529.544921875,
+          "top_interior_texture_energy": 0.001592333780718036,
+          "bottom_interior_texture_energy": 0.0013414909830316902,
+          "top_near_seam_energy_gap": 0.0007729367718335803,
+          "bottom_near_seam_energy_gap": 0.001340606999292504,
+          "cap_6_near_seam_energy_gap": 0.0010567718855630421,
+          "wrap_lb_near_seam_energy_gap": 0.00038936074706725777,
+          "F_interior_texture_energy": 0.002530770481098443,
+          "L_interior_texture_energy": 0.0024866898078471423,
+          "B_interior_texture_energy": 0.002541477419435978,
+          "R_interior_texture_energy": 0.0025028357631526887,
+          "ring_interior_texture_energy": 0.002515443367883563,
+          "top_cap_to_ring_texture_ratio": 0.5640447176564679,
+          "bottom_cap_to_ring_texture_ratio": 0.49188537311835173,
+          "top_texture_energy_2x": 0.0036011130665428936,
+          "bottom_texture_energy_2x": 0.003189446299802512,
+          "top_texture_retention_2x": 2.2297583473827416,
+          "bottom_texture_retention_2x": 2.3243265873365933
+        },
+        "preflight": {
+          "cap_6_delta_e00": 4.104541639486949,
+          "cap_6_lpips": 0.37468159819642705,
+          "non_native_7_sdr": 1.5629969477653503,
+          "non_native_7_lpips": 0.34492763397949083,
+          "bleed_fill_pct": 67.46014741172438,
+          "bleed_fill_v2_pct": 58.522454576619815,
+          "stripe_index": 1.7208844875631943,
+          "clip_score": 0.6873757988214493,
+          "image_reward": -1.6541299104690552,
+          "elapsed_seconds": 54.89987895339728,
+          "peak_memory_mib": 10529.544921875,
+          "top_interior_texture_energy": 0.001592333780718036,
+          "bottom_interior_texture_energy": 0.0013414909830316902,
+          "top_near_seam_energy_gap": 0.0007729367718335803,
+          "bottom_near_seam_energy_gap": 0.001340606999292504,
+          "cap_6_near_seam_energy_gap": 0.0010567718855630421,
+          "wrap_lb_near_seam_energy_gap": 0.00038936074706725777,
+          "F_interior_texture_energy": 0.002530770481098443,
+          "L_interior_texture_energy": 0.0024866898078471423,
+          "B_interior_texture_energy": 0.002541477419435978,
+          "R_interior_texture_energy": 0.0025028357631526887,
+          "ring_interior_texture_energy": 0.002515443367883563,
+          "top_cap_to_ring_texture_ratio": 0.5640447176564679,
+          "bottom_cap_to_ring_texture_ratio": 0.49188537311835173,
+          "top_texture_energy_2x": 0.0036011130665428936,
+          "bottom_texture_energy_2x": 0.003189446299802512,
+          "top_texture_retention_2x": 2.2297583473827416,
+          "bottom_texture_retention_2x": 2.3243265873365933
+        }
+      }
+    },
+    "1234": {
+      "b2": {
+        "raw": {
+          "cap_6_delta_e00": 10.251811218261718,
+          "cap_6_lpips": 0.45199794818957645,
+          "non_native_7_sdr": 5.722103714942932,
+          "non_native_7_lpips": 0.4413109234401158,
+          "bleed_fill_pct": 52.00462804250943,
+          "bleed_fill_v2_pct": 49.87615701062735,
+          "stripe_index": 1.2654525706151123,
+          "clip_score": 0.6959682777523994,
+          "image_reward": -1.4799091935157775,
+          "elapsed_seconds": 14.013216076418757,
+          "peak_memory_mib": 9928.96142578125,
+          "top_interior_texture_energy": 0.0010764956241473556,
+          "bottom_interior_texture_energy": 0.0013030570989940315,
+          "top_near_seam_energy_gap": 0.0004892705449795661,
+          "bottom_near_seam_energy_gap": 0.0003859581245099738,
+          "cap_6_near_seam_energy_gap": 0.00043761433474476995,
+          "wrap_lb_near_seam_energy_gap": 0.0004698563789133914,
+          "F_interior_texture_energy": 0.0012585493619553744,
+          "L_interior_texture_energy": 0.0016519055468961596,
+          "B_interior_texture_energy": 0.0012204557831864804,
+          "R_interior_texture_energy": 0.001409419596893713,
+          "ring_interior_texture_energy": 0.0013850825722329318,
+          "top_cap_to_ring_texture_ratio": 0.7469575833505862,
+          "bottom_cap_to_ring_texture_ratio": 0.9667649412444512,
+          "top_texture_energy_2x": 0.002380373585037887,
+          "bottom_texture_energy_2x": 0.0027243761578574777,
+          "top_texture_retention_2x": 2.1199837146750844,
+          "bottom_texture_retention_2x": 2.035374961959383
+        },
+        "preflight": {
+          "cap_6_delta_e00": 10.251811218261718,
+          "cap_6_lpips": 0.45199794818957645,
+          "non_native_7_sdr": 5.722103714942932,
+          "non_native_7_lpips": 0.4413109234401158,
+          "bleed_fill_pct": 52.00462804250943,
+          "bleed_fill_v2_pct": 49.87615701062735,
+          "stripe_index": 1.2654525706151123,
+          "clip_score": 0.6959682777523994,
+          "image_reward": -1.4799091935157775,
+          "elapsed_seconds": 14.013216076418757,
+          "peak_memory_mib": 9928.96142578125,
+          "top_interior_texture_energy": 0.0010764956241473556,
+          "bottom_interior_texture_energy": 0.0013030570989940315,
+          "top_near_seam_energy_gap": 0.0004892705449795661,
+          "bottom_near_seam_energy_gap": 0.0003859581245099738,
+          "cap_6_near_seam_energy_gap": 0.00043761433474476995,
+          "wrap_lb_near_seam_energy_gap": 0.0004698563789133914,
+          "F_interior_texture_energy": 0.0012585493619553744,
+          "L_interior_texture_energy": 0.0016519055468961596,
+          "B_interior_texture_energy": 0.0012204557831864804,
+          "R_interior_texture_energy": 0.001409419596893713,
+          "ring_interior_texture_energy": 0.0013850825722329318,
+          "top_cap_to_ring_texture_ratio": 0.7469575833505862,
+          "bottom_cap_to_ring_texture_ratio": 0.9667649412444512,
+          "top_texture_energy_2x": 0.002380373585037887,
+          "bottom_texture_energy_2x": 0.0027243761578574777,
+          "top_texture_retention_2x": 2.1199837146750844,
+          "bottom_texture_retention_2x": 2.035374961959383
+        }
+      },
+      "b2_post": {
+        "raw": {
+          "cap_6_delta_e00": 10.20190867582957,
+          "cap_6_lpips": 0.45307725767294565,
+          "non_native_7_sdr": 5.79405403137207,
+          "non_native_7_lpips": 0.44225763508251736,
+          "bleed_fill_pct": 52.826534110387385,
+          "bleed_fill_v2_pct": 50.52836818649297,
+          "stripe_index": 1.2630464623527078,
+          "clip_score": 0.6958786025643349,
+          "image_reward": -1.4887591421604156,
+          "elapsed_seconds": 14.229628285579384,
+          "peak_memory_mib": 9928.96142578125,
+          "top_interior_texture_energy": 0.001054473133990541,
+          "bottom_interior_texture_energy": 0.001270928035955876,
+          "top_near_seam_energy_gap": 0.00047020831019229563,
+          "bottom_near_seam_energy_gap": 0.00037650964344114376,
+          "cap_6_near_seam_energy_gap": 0.0004233589768167197,
+          "wrap_lb_near_seam_energy_gap": 0.0004689060697273817,
+          "F_interior_texture_energy": 0.0012312625243794174,
+          "L_interior_texture_energy": 0.001616797741735354,
+          "B_interior_texture_energy": 0.001191052352078259,
+          "R_interior_texture_energy": 0.001374815875897184,
+          "ring_interior_texture_energy": 0.0013534821235225535,
+          "top_cap_to_ring_texture_ratio": 0.7482230380643495,
+          "bottom_cap_to_ring_texture_ratio": 0.962151348668548,
+          "top_texture_energy_2x": 0.0023333720164373517,
+          "bottom_texture_energy_2x": 0.002657581609673798,
+          "top_texture_retention_2x": 2.1245339987538947,
+          "bottom_texture_retention_2x": 2.0441642745925286
+        },
+        "preflight": {
+          "cap_6_delta_e00": 10.20190867582957,
+          "cap_6_lpips": 0.45307725767294565,
+          "non_native_7_sdr": 5.79405403137207,
+          "non_native_7_lpips": 0.44225763508251736,
+          "bleed_fill_pct": 52.826534110387385,
+          "bleed_fill_v2_pct": 50.52836818649297,
+          "stripe_index": 1.2630464623527078,
+          "clip_score": 0.6958786025643349,
+          "image_reward": -1.4887591421604156,
+          "elapsed_seconds": 14.229628285579384,
+          "peak_memory_mib": 9928.96142578125,
+          "top_interior_texture_energy": 0.001054473133990541,
+          "bottom_interior_texture_energy": 0.001270928035955876,
+          "top_near_seam_energy_gap": 0.00047020831019229563,
+          "bottom_near_seam_energy_gap": 0.00037650964344114376,
+          "cap_6_near_seam_energy_gap": 0.0004233589768167197,
+          "wrap_lb_near_seam_energy_gap": 0.0004689060697273817,
+          "F_interior_texture_energy": 0.0012312625243794174,
+          "L_interior_texture_energy": 0.001616797741735354,
+          "B_interior_texture_energy": 0.001191052352078259,
+          "R_interior_texture_energy": 0.001374815875897184,
+          "ring_interior_texture_energy": 0.0013534821235225535,
+          "top_cap_to_ring_texture_ratio": 0.7482230380643495,
+          "bottom_cap_to_ring_texture_ratio": 0.962151348668548,
+          "top_texture_energy_2x": 0.0023333720164373517,
+          "bottom_texture_energy_2x": 0.002657581609673798,
+          "top_texture_retention_2x": 2.1245339987538947,
+          "bottom_texture_retention_2x": 2.0441642745925286
+        }
+      },
+      "b3": {
+        "raw": {
+          "cap_6_delta_e00": 11.94112458229065,
+          "cap_6_lpips": 0.4318602496758103,
+          "non_native_7_sdr": 9.268271207809448,
+          "non_native_7_lpips": 0.4466518972069025,
+          "bleed_fill_pct": 7.209033253342475,
+          "bleed_fill_v2_pct": 10.341960918752143,
+          "stripe_index": 1.1654311061439013,
+          "clip_score": 0.661031037569046,
+          "image_reward": -1.8374639987945556,
+          "elapsed_seconds": 110.61137978732586,
+          "peak_memory_mib": 5011.41943359375,
+          "top_interior_texture_energy": 7.807836453679328e-05,
+          "bottom_interior_texture_energy": 0.00026193069878104324,
+          "top_near_seam_energy_gap": 0.0012717075023137643,
+          "bottom_near_seam_energy_gap": 0.0015965406787169438,
+          "cap_6_near_seam_energy_gap": 0.001434124090515354,
+          "wrap_lb_near_seam_energy_gap": 0.0008105290955882083,
+          "F_interior_texture_energy": 0.0009542197498376481,
+          "L_interior_texture_energy": 0.0016125969312270172,
+          "B_interior_texture_energy": 0.0006564022820384708,
+          "R_interior_texture_energy": 0.0019392018730286509,
+          "ring_interior_texture_energy": 0.0012906052090329468,
+          "top_cap_to_ring_texture_ratio": 0.07259239226640365,
+          "bottom_cap_to_ring_texture_ratio": 0.22928879507484212,
+          "top_texture_energy_2x": 0.0002445099078851598,
+          "bottom_texture_energy_2x": 0.000577577144292718,
+          "top_texture_retention_2x": 0.9527057113591294,
+          "bottom_texture_retention_2x": 1.6331668315907824
+        },
+        "preflight": {
+          "cap_6_delta_e00": 11.94112458229065,
+          "cap_6_lpips": 0.4318602496758103,
+          "non_native_7_sdr": 9.268271207809448,
+          "non_native_7_lpips": 0.4466518972069025,
+          "bleed_fill_pct": 7.209033253342475,
+          "bleed_fill_v2_pct": 10.341960918752143,
+          "stripe_index": 1.1654311061439013,
+          "clip_score": 0.661031037569046,
+          "image_reward": -1.8374639987945556,
+          "elapsed_seconds": 110.61137978732586,
+          "peak_memory_mib": 5011.41943359375,
+          "top_interior_texture_energy": 7.807836453679328e-05,
+          "bottom_interior_texture_energy": 0.00026193069878104324,
+          "top_near_seam_energy_gap": 0.0012717075023137643,
+          "bottom_near_seam_energy_gap": 0.0015965406787169438,
+          "cap_6_near_seam_energy_gap": 0.001434124090515354,
+          "wrap_lb_near_seam_energy_gap": 0.0008105290955882083,
+          "F_interior_texture_energy": 0.0009542197498376481,
+          "L_interior_texture_energy": 0.0016125969312270172,
+          "B_interior_texture_energy": 0.0006564022820384708,
+          "R_interior_texture_energy": 0.0019392018730286509,
+          "ring_interior_texture_energy": 0.0012906052090329468,
+          "top_cap_to_ring_texture_ratio": 0.07259239226640365,
+          "bottom_cap_to_ring_texture_ratio": 0.22928879507484212,
+          "top_texture_energy_2x": 0.0002445099078851598,
+          "bottom_texture_energy_2x": 0.000577577144292718,
+          "top_texture_retention_2x": 0.9527057113591294,
+          "bottom_texture_retention_2x": 1.6331668315907824
+        }
+      },
+      "b4": {
+        "raw": {
+          "cap_6_delta_e00": 15.956262083848317,
+          "cap_6_lpips": 0.4369261510670185,
+          "non_native_7_sdr": 9.020752692222596,
+          "non_native_7_lpips": 0.44655889890023637,
+          "bleed_fill_pct": 42.23988687007199,
+          "bleed_fill_v2_pct": 40.31924922865958,
+          "stripe_index": 1.1526672714578958,
+          "clip_score": 0.6954880803823471,
+          "image_reward": -1.5541323840618133,
+          "elapsed_seconds": 104.91725370567292,
+          "peak_memory_mib": 4224.21982421875,
+          "top_interior_texture_energy": 1.0719906913436717e-05,
+          "bottom_interior_texture_energy": 0.0011041834684419882,
+          "top_near_seam_energy_gap": 0.0006034461280326771,
+          "bottom_near_seam_energy_gap": 0.0012818709448386774,
+          "cap_6_near_seam_energy_gap": 0.0009426585364356772,
+          "wrap_lb_near_seam_energy_gap": 0.002066613274860174,
+          "F_interior_texture_energy": 0.004557967497385107,
+          "L_interior_texture_energy": 0.0010931526878266596,
+          "B_interior_texture_energy": 0.003886493016034365,
+          "R_interior_texture_energy": 0.0008519438684743364,
+          "ring_interior_texture_energy": 0.002597389267430117,
+          "top_cap_to_ring_texture_ratio": 0.009340216150836337,
+          "bottom_cap_to_ring_texture_ratio": 0.4321301810371821,
+          "top_texture_energy_2x": 1.4268826794250344e-05,
+          "bottom_texture_energy_2x": 0.003343372327299221,
+          "top_texture_retention_2x": 1.227038854060452,
+          "bottom_texture_retention_2x": 2.0917364098351303
+        },
+        "preflight": {
+          "cap_6_delta_e00": 15.956262083848317,
+          "cap_6_lpips": 0.4369261510670185,
+          "non_native_7_sdr": 9.020752692222596,
+          "non_native_7_lpips": 0.44655889890023637,
+          "bleed_fill_pct": 42.23988687007199,
+          "bleed_fill_v2_pct": 40.31924922865958,
+          "stripe_index": 1.1526672714578958,
+          "clip_score": 0.6954880803823471,
+          "image_reward": -1.5541323840618133,
+          "elapsed_seconds": 104.91725370567292,
+          "peak_memory_mib": 4224.21982421875,
+          "top_interior_texture_energy": 1.0719906913436717e-05,
+          "bottom_interior_texture_energy": 0.0011041834684419882,
+          "top_near_seam_energy_gap": 0.0006034461280326771,
+          "bottom_near_seam_energy_gap": 0.0012818709448386774,
+          "cap_6_near_seam_energy_gap": 0.0009426585364356772,
+          "wrap_lb_near_seam_energy_gap": 0.002066613274860174,
+          "F_interior_texture_energy": 0.004557967497385107,
+          "L_interior_texture_energy": 0.0010931526878266596,
+          "B_interior_texture_energy": 0.003886493016034365,
+          "R_interior_texture_energy": 0.0008519438684743364,
+          "ring_interior_texture_energy": 0.002597389267430117,
+          "top_cap_to_ring_texture_ratio": 0.009340216150836337,
+          "bottom_cap_to_ring_texture_ratio": 0.4321301810371821,
+          "top_texture_energy_2x": 1.4268826794250344e-05,
+          "bottom_texture_energy_2x": 0.003343372327299221,
+          "top_texture_retention_2x": 1.227038854060452,
+          "bottom_texture_retention_2x": 2.0917364098351303
+        }
+      },
+      "b2_regional": {
+        "raw": {
+          "cap_6_delta_e00": 13.014244723320008,
+          "cap_6_lpips": 0.3794055740038554,
+          "non_native_7_sdr": 4.604819679260254,
+          "non_native_7_lpips": 0.36944125997168675,
+          "bleed_fill_pct": 51.83150497086047,
+          "bleed_fill_v2_pct": 48.95783339046966,
+          "stripe_index": 1.2256891956809894,
+          "clip_score": 0.6534147001802921,
+          "image_reward": -1.8001776456832885,
+          "elapsed_seconds": 43.026195971108976,
+          "peak_memory_mib": 10455.90625,
+          "top_interior_texture_energy": 0.003050230094231665,
+          "bottom_interior_texture_energy": 0.002792013599537313,
+          "top_near_seam_energy_gap": 0.0005472344322091279,
+          "bottom_near_seam_energy_gap": 0.0006118963133000459,
+          "cap_6_near_seam_energy_gap": 0.0005795653727545868,
+          "wrap_lb_near_seam_energy_gap": 0.00034276656224392356,
+          "F_interior_texture_energy": 0.002040574955753982,
+          "L_interior_texture_energy": 0.0016415894846431912,
+          "B_interior_texture_energy": 0.0019659574492834507,
+          "R_interior_texture_energy": 0.001976683153770864,
+          "ring_interior_texture_energy": 0.001906201260862872,
+          "top_cap_to_ring_texture_ratio": 1.6390490541308265,
+          "bottom_cap_to_ring_texture_ratio": 1.507926211745125,
+          "top_texture_energy_2x": 0.004502799082547426,
+          "bottom_texture_energy_2x": 0.004225819930434227,
+          "top_texture_retention_2x": 1.4518624160533626,
+          "bottom_texture_retention_2x": 1.4925081490078167
+        },
+        "preflight": {
+          "cap_6_delta_e00": 13.014244723320008,
+          "cap_6_lpips": 0.3794055740038554,
+          "non_native_7_sdr": 4.604819679260254,
+          "non_native_7_lpips": 0.36944125997168675,
+          "bleed_fill_pct": 51.83150497086047,
+          "bleed_fill_v2_pct": 48.95783339046966,
+          "stripe_index": 1.2256891956809894,
+          "clip_score": 0.6534147001802921,
+          "image_reward": -1.8001776456832885,
+          "elapsed_seconds": 43.026195971108976,
+          "peak_memory_mib": 10455.90625,
+          "top_interior_texture_energy": 0.003050230094231665,
+          "bottom_interior_texture_energy": 0.002792013599537313,
+          "top_near_seam_energy_gap": 0.0005472344322091279,
+          "bottom_near_seam_energy_gap": 0.0006118963133000459,
+          "cap_6_near_seam_energy_gap": 0.0005795653727545868,
+          "wrap_lb_near_seam_energy_gap": 0.00034276656224392356,
+          "F_interior_texture_energy": 0.002040574955753982,
+          "L_interior_texture_energy": 0.0016415894846431912,
+          "B_interior_texture_energy": 0.0019659574492834507,
+          "R_interior_texture_energy": 0.001976683153770864,
+          "ring_interior_texture_energy": 0.001906201260862872,
+          "top_cap_to_ring_texture_ratio": 1.6390490541308265,
+          "bottom_cap_to_ring_texture_ratio": 1.507926211745125,
+          "top_texture_energy_2x": 0.004502799082547426,
+          "bottom_texture_energy_2x": 0.004225819930434227,
+          "top_texture_retention_2x": 1.4518624160533626,
+          "bottom_texture_retention_2x": 1.4925081490078167
+        }
+      },
+      "j0": {
+        "raw": {
+          "cap_6_delta_e00": 5.144699422518412,
+          "cap_6_lpips": 0.37724299542605877,
+          "non_native_7_sdr": 2.0241040229797362,
+          "non_native_7_lpips": 0.3540435766535146,
+          "bleed_fill_pct": 62.3478745286253,
+          "bleed_fill_v2_pct": 51.24400068563593,
+          "stripe_index": 1.3025627084118672,
+          "clip_score": 0.7035919018089771,
+          "image_reward": -1.3773022592067719,
+          "elapsed_seconds": 54.50593482963741,
+          "peak_memory_mib": 10529.076171875,
+          "top_interior_texture_energy": 0.001361331831139978,
+          "bottom_interior_texture_energy": 0.0013969865802209824,
+          "top_near_seam_energy_gap": 0.0015812256519438961,
+          "bottom_near_seam_energy_gap": 0.0016552344684896525,
+          "cap_6_near_seam_energy_gap": 0.0016182300602167743,
+          "wrap_lb_near_seam_energy_gap": 0.0002247471857117489,
+          "F_interior_texture_energy": 0.0024681931710802017,
+          "L_interior_texture_energy": 0.0025411411363165824,
+          "B_interior_texture_energy": 0.002502706786617637,
+          "R_interior_texture_energy": 0.0024395943502895532,
+          "ring_interior_texture_energy": 0.0024879088610759935,
+          "top_cap_to_ring_texture_ratio": 0.5081514304221723,
+          "bottom_cap_to_ring_texture_ratio": 0.5323982668692895,
+          "top_texture_energy_2x": 0.0032214610313531012,
+          "bottom_texture_energy_2x": 0.0034751464787404983,
+          "top_texture_retention_2x": 2.357465695145019,
+          "bottom_texture_retention_2x": 2.4738647541421255
+        },
+        "preflight": {
+          "cap_6_delta_e00": 5.144699422518412,
+          "cap_6_lpips": 0.37724299542605877,
+          "non_native_7_sdr": 2.0241040229797362,
+          "non_native_7_lpips": 0.3540435766535146,
+          "bleed_fill_pct": 62.3478745286253,
+          "bleed_fill_v2_pct": 51.24400068563593,
+          "stripe_index": 1.3025627084118672,
+          "clip_score": 0.7035919018089771,
+          "image_reward": -1.3773022592067719,
+          "elapsed_seconds": 54.50593482963741,
+          "peak_memory_mib": 10529.076171875,
+          "top_interior_texture_energy": 0.001361331831139978,
+          "bottom_interior_texture_energy": 0.0013969865802209824,
+          "top_near_seam_energy_gap": 0.0015812256519438961,
+          "bottom_near_seam_energy_gap": 0.0016552344684896525,
+          "cap_6_near_seam_energy_gap": 0.0016182300602167743,
+          "wrap_lb_near_seam_energy_gap": 0.0002247471857117489,
+          "F_interior_texture_energy": 0.0024681931710802017,
+          "L_interior_texture_energy": 0.0025411411363165824,
+          "B_interior_texture_energy": 0.002502706786617637,
+          "R_interior_texture_energy": 0.0024395943502895532,
+          "ring_interior_texture_energy": 0.0024879088610759935,
+          "top_cap_to_ring_texture_ratio": 0.5081514304221723,
+          "bottom_cap_to_ring_texture_ratio": 0.5323982668692895,
+          "top_texture_energy_2x": 0.0032214610313531012,
+          "bottom_texture_energy_2x": 0.0034751464787404983,
+          "top_texture_retention_2x": 2.357465695145019,
+          "bottom_texture_retention_2x": 2.4738647541421255
+        }
+      }
+    }
+  },
+  "tail_by_seed": {
+    "42": {
+      "seed": 42,
+      "n": 10,
+      "variant": "preflight",
+      "p90_definition": "Hyndman–Fan type 7 (linear; at n=10, x[8] + 0.1 × (x[9]−x[8]) in zero-based ascending order)",
+      "methods": {
+        "b2": {
+          "cap_6_delta_e00": {
+            "mean": 14.290806897481282,
+            "p90": 19.230387465159097,
+            "worst_two": [
+              {
+                "brief_id": "E01-006",
+                "value": 22.469595591227215
+              },
+              {
+                "brief_id": "E01-008",
+                "value": 18.87047545115153
+              }
+            ]
+          },
+          "stripe_index": {
+            "mean": 1.2270549828093935,
+            "p90": 1.3474239409968205,
+            "worst_two": [
+              {
+                "brief_id": "E01-007",
+                "value": 1.857886017183279
+              },
+              {
+                "brief_id": "E01-009",
+                "value": 1.2907059325316586
+              }
+            ]
+          }
+        },
+        "b2_post": {
+          "cap_6_delta_e00": {
+            "mean": 14.26031858921051,
+            "p90": 19.216800371805824,
+            "worst_two": [
+              {
+                "brief_id": "E01-006",
+                "value": 22.470035235087078
+              },
+              {
+                "brief_id": "E01-008",
+                "value": 18.855329831441242
+              }
+            ]
+          },
+          "stripe_index": {
+            "mean": 1.2288052747297844,
+            "p90": 1.3489949204921676,
+            "worst_two": [
+              {
+                "brief_id": "E01-007",
+                "value": 1.8593867140403901
+              },
+              {
+                "brief_id": "E01-009",
+                "value": 1.292284721209032
+              }
+            ]
+          }
+        },
+        "b3": {
+          "cap_6_delta_e00": {
+            "mean": 15.880752499898275,
+            "p90": 20.99776309331258,
+            "worst_two": [
+              {
+                "brief_id": "E01-002",
+                "value": 24.176068623860676
+              },
+              {
+                "brief_id": "E01-008",
+                "value": 20.644618034362793
+              }
+            ]
+          },
+          "stripe_index": {
+            "mean": 1.2732381419603758,
+            "p90": 1.5976193533802707,
+            "worst_two": [
+              {
+                "brief_id": "E01-010",
+                "value": 2.7259098681704064
+              },
+              {
+                "brief_id": "E01-005",
+                "value": 1.4722537406258116
+              }
+            ]
+          }
+        },
+        "b4": {
+          "cap_6_delta_e00": {
+            "mean": 11.572795736789704,
+            "p90": 26.958961486816406,
+            "worst_two": [
+              {
+                "brief_id": "E01-001",
+                "value": 29.94217300415039
+              },
+              {
+                "brief_id": "E01-008",
+                "value": 26.627493540445965
+              }
+            ]
+          },
+          "stripe_index": {
+            "mean": 1.0439793614081425,
+            "p90": 1.1170060808427615,
+            "worst_two": [
+              {
+                "brief_id": "E01-001",
+                "value": 1.2553187143323619
+              },
+              {
+                "brief_id": "E01-005",
+                "value": 1.1016380104550283
+              }
+            ]
+          }
+        },
+        "b2_regional": {
+          "cap_6_delta_e00": {
+            "mean": 9.493489535649617,
+            "p90": 12.429644346237183,
+            "worst_two": [
+              {
+                "brief_id": "E01-001",
+                "value": 13.275798320770264
+              },
+              {
+                "brief_id": "E01-009",
+                "value": 12.335627237955729
+              }
+            ]
+          },
+          "stripe_index": {
+            "mean": 1.1399088085999431,
+            "p90": 1.2330049694554168,
+            "worst_two": [
+              {
+                "brief_id": "E01-002",
+                "value": 1.302709019914825
+              },
+              {
+                "brief_id": "E01-007",
+                "value": 1.2252600749599272
+              }
+            ]
+          }
+        },
+        "k0": {
+          "cap_6_delta_e00": {
+            "mean": 4.051311198870341,
+            "p90": 4.7493749777476,
+            "worst_two": [
+              {
+                "brief_id": "E01-005",
+                "value": 5.027779261271159
+              },
+              {
+                "brief_id": "E01-008",
+                "value": 4.718441168467204
+              }
+            ]
+          },
+          "stripe_index": {
+            "mean": 1.253929033208974,
+            "p90": 1.4990479812764825,
+            "worst_two": [
+              {
+                "brief_id": "E01-009",
+                "value": 1.703016155509602
+              },
+              {
+                "brief_id": "E01-007",
+                "value": 1.476384850806136
+              }
+            ]
+          }
+        },
+        "k1": {
+          "cap_6_delta_e00": {
+            "mean": 3.9146241307258607,
+            "p90": 4.553794511159261,
+            "worst_two": [
+              {
+                "brief_id": "E01-005",
+                "value": 4.796363194783528
+              },
+              {
+                "brief_id": "E01-008",
+                "value": 4.526842435201009
+              }
+            ]
+          },
+          "stripe_index": {
+            "mean": 1.2375843505088673,
+            "p90": 1.4990479812764825,
+            "worst_two": [
+              {
+                "brief_id": "E01-009",
+                "value": 1.703016155509602
+              },
+              {
+                "brief_id": "E01-007",
+                "value": 1.476384850806136
+              }
+            ]
+          }
+        },
+        "k2": {
+          "cap_6_delta_e00": {
+            "mean": 3.923106857140859,
+            "p90": 4.567260603109996,
+            "worst_two": [
+              {
+                "brief_id": "E01-005",
+                "value": 4.822360674540202
+              },
+              {
+                "brief_id": "E01-006",
+                "value": 4.538916150728862
+              }
+            ]
+          },
+          "stripe_index": {
+            "mean": 1.2262979137882162,
+            "p90": 1.4990479812764825,
+            "worst_two": [
+              {
+                "brief_id": "E01-009",
+                "value": 1.703016155509602
+              },
+              {
+                "brief_id": "E01-007",
+                "value": 1.476384850806136
+              }
+            ]
+          }
+        },
+        "k3": {
+          "cap_6_delta_e00": {
+            "mean": 10.513219916820526,
+            "p90": 11.986702350775401,
+            "worst_two": [
+              {
+                "brief_id": "E01-003",
+                "value": 12.104001681009928
+              },
+              {
+                "brief_id": "E01-006",
+                "value": 11.973669091860453
+              }
+            ]
+          },
+          "stripe_index": {
+            "mean": 1.2551861755541027,
+            "p90": 1.4990479812764825,
+            "worst_two": [
+              {
+                "brief_id": "E01-009",
+                "value": 1.703016155509602
+              },
+              {
+                "brief_id": "E01-007",
+                "value": 1.476384850806136
+              }
+            ]
+          }
+        },
+        "k4": {
+          "cap_6_delta_e00": {
+            "mean": 10.557917312781017,
+            "p90": 11.991732728481292,
+            "worst_two": [
+              {
+                "brief_id": "E01-003",
+                "value": 12.089247226715088
+              },
+              {
+                "brief_id": "E01-006",
+                "value": 11.980897784233093
+              }
+            ]
+          },
+          "stripe_index": {
+            "mean": 1.2551861755541027,
+            "p90": 1.4990479812764825,
+            "worst_two": [
+              {
+                "brief_id": "E01-009",
+                "value": 1.703016155509602
+              },
+              {
+                "brief_id": "E01-007",
+                "value": 1.476384850806136
+              }
+            ]
+          }
+        },
+        "j0": {
+          "cap_6_delta_e00": {
+            "mean": 4.104541639486949,
+            "p90": 4.818210494518279,
+            "worst_two": [
+              {
+                "brief_id": "E01-005",
+                "value": 5.12984824180603
+              },
+              {
+                "brief_id": "E01-006",
+                "value": 4.783584078152974
+              }
+            ]
+          },
+          "stripe_index": {
+            "mean": 1.7208844875631943,
+            "p90": 2.685844842672319,
+            "worst_two": [
+              {
+                "brief_id": "E01-003",
+                "value": 3.1077772169759377
+              },
+              {
+                "brief_id": "E01-007",
+                "value": 2.638963467749695
+              }
+            ]
+          }
+        }
+      }
+    },
+    "1234": {
+      "seed": 1234,
+      "n": 10,
+      "variant": "preflight",
+      "p90_definition": "Hyndman–Fan type 7 (linear; at n=10, x[8] + 0.1 × (x[9]−x[8]) in zero-based ascending order)",
+      "methods": {
+        "b2": {
+          "cap_6_delta_e00": {
+            "mean": 10.251811218261718,
+            "p90": 12.392001581192016,
+            "worst_two": [
+              {
+                "brief_id": "E01-006",
+                "value": 12.460790157318115
+              },
+              {
+                "brief_id": "E01-004",
+                "value": 12.384358406066895
+              }
+            ]
+          },
+          "stripe_index": {
+            "mean": 1.2654525706151123,
+            "p90": 1.8755196316480958,
+            "worst_two": [
+              {
+                "brief_id": "E01-005",
+                "value": 2.3405318156876014
+              },
+              {
+                "brief_id": "E01-002",
+                "value": 1.823851611199262
+              }
+            ]
+          }
+        },
+        "b2_post": {
+          "cap_6_delta_e00": {
+            "mean": 10.20190867582957,
+            "p90": 12.358790302276612,
+            "worst_two": [
+              {
+                "brief_id": "E01-006",
+                "value": 12.391912937164307
+              },
+              {
+                "brief_id": "E01-004",
+                "value": 12.355110009511312
+              }
+            ]
+          },
+          "stripe_index": {
+            "mean": 1.2630464623527078,
+            "p90": 1.8713673660662775,
+            "worst_two": [
+              {
+                "brief_id": "E01-005",
+                "value": 2.3338045999812933
+              },
+              {
+                "brief_id": "E01-002",
+                "value": 1.8199854511868316
+              }
+            ]
+          }
+        },
+        "b3": {
+          "cap_6_delta_e00": {
+            "mean": 11.94112458229065,
+            "p90": 19.251923553148906,
+            "worst_two": [
+              {
+                "brief_id": "E01-007",
+                "value": 20.24788562456767
+              },
+              {
+                "brief_id": "E01-008",
+                "value": 19.141261100769043
+              }
+            ]
+          },
+          "stripe_index": {
+            "mean": 1.1654311061439013,
+            "p90": 1.2000708394580775,
+            "worst_two": [
+              {
+                "brief_id": "E01-010",
+                "value": 2.5653094219464023
+              },
+              {
+                "brief_id": "E01-002",
+                "value": 1.048377663626042
+              }
+            ]
+          }
+        },
+        "b4": {
+          "cap_6_delta_e00": {
+            "mean": 15.956262083848317,
+            "p90": 22.16419389247894,
+            "worst_two": [
+              {
+                "brief_id": "E01-005",
+                "value": 23.802894353866577
+              },
+              {
+                "brief_id": "E01-007",
+                "value": 21.98211606343587
+              }
+            ]
+          },
+          "stripe_index": {
+            "mean": 1.1526672714578958,
+            "p90": 1.4435619862652769,
+            "worst_two": [
+              {
+                "brief_id": "E01-002",
+                "value": 1.4577265616568797
+              },
+              {
+                "brief_id": "E01-001",
+                "value": 1.4419881445550988
+              }
+            ]
+          }
+        },
+        "b2_regional": {
+          "cap_6_delta_e00": {
+            "mean": 13.014244723320008,
+            "p90": 17.171678606669108,
+            "worst_two": [
+              {
+                "brief_id": "E01-006",
+                "value": 19.31580988566081
+              },
+              {
+                "brief_id": "E01-008",
+                "value": 16.933441797892254
+              }
+            ]
+          },
+          "stripe_index": {
+            "mean": 1.2256891956809894,
+            "p90": 1.3444986845818867,
+            "worst_two": [
+              {
+                "brief_id": "E01-002",
+                "value": 1.751553509184848
+              },
+              {
+                "brief_id": "E01-007",
+                "value": 1.2992703707371134
+              }
+            ]
+          }
+        },
+        "j0": {
+          "cap_6_delta_e00": {
+            "mean": 5.144699422518412,
+            "p90": 7.499334685007731,
+            "worst_two": [
+              {
+                "brief_id": "E01-002",
+                "value": 8.119391600290934
+              },
+              {
+                "brief_id": "E01-009",
+                "value": 7.430439472198486
+              }
+            ]
+          },
+          "stripe_index": {
+            "mean": 1.3025627084118672,
+            "p90": 1.4282179404517925,
+            "worst_two": [
+              {
+                "brief_id": "E01-005",
+                "value": 1.4982119827990674
+              },
+              {
+                "brief_id": "E01-001",
+                "value": 1.4204408246354288
+              }
+            ]
+          }
+        }
+      }
+    }
+  },
+  "stripe_sources_by_seed": {
+    "42": {
+      "seed": 42,
+      "n": 10,
+      "methods": {
+        "b2": {
+          "mean_whole_stripe_index": 1.2270549828093935,
+          "mean_ring_only_box_floor": 1.2170944391245415,
+          "mean_cap_only_box_floor": 1.0124914919245798,
+          "mean_ring_excess_at_max": 0.21599262710607367,
+          "mean_cap_excess_at_max": 0.011062355703319936,
+          "mean_decrease_if_cap_ratios_are_one": 0.009960543684852042,
+          "mean_decrease_if_ring_ratios_are_one": 0.21456349088481388,
+          "controlling_folds": {
+            "F-R": 1,
+            "B-R": 2,
+            "F-L": 4,
+            "F-T": 2,
+            "B-Btm": 1
+          },
+          "controlling_fold_larger_excess": {
+            "ring": 8,
+            "cap": 1,
+            "tie": 1
+          },
+          "cases": {
+            "E01-001": {
+              "whole_stripe_index": 1.06410877180282,
+              "controlling_fold": "F-R",
+              "ring_excess_at_max": 0.06410877180281993,
+              "cap_excess_at_max": 0.0,
+              "larger_excess": "ring",
+              "ring_only_box_floor": 1.06410877180282,
+              "cap_only_box_floor": 1.0
+            },
+            "E01-002": {
+              "whole_stripe_index": 1.2871822133615056,
+              "controlling_fold": "B-R",
+              "ring_excess_at_max": 0.2871822133615056,
+              "cap_excess_at_max": 0.0,
+              "larger_excess": "ring",
+              "ring_only_box_floor": 1.2871822133615056,
+              "cap_only_box_floor": 1.0
+            },
+            "E01-003": {
+              "whole_stripe_index": 1.1981041498857787,
+              "controlling_fold": "F-L",
+              "ring_excess_at_max": 0.19810414988577885,
+              "cap_excess_at_max": 0.0,
+              "larger_excess": "ring",
+              "ring_only_box_floor": 1.1981041498857787,
+              "cap_only_box_floor": 1.0
+            },
+            "E01-004": {
+              "whole_stripe_index": 1.0810481664496894,
+              "controlling_fold": "F-L",
+              "ring_excess_at_max": 0.08104816644968937,
+              "cap_excess_at_max": 0.0,
+              "larger_excess": "ring",
+              "ring_only_box_floor": 1.0810481664496894,
+              "cap_only_box_floor": 1.0
+            },
+            "E01-005": {
+              "whole_stripe_index": 1.2633223344302091,
+              "controlling_fold": "F-T",
+              "ring_excess_at_max": 0.26332233443020914,
+              "cap_excess_at_max": 0.0,
+              "larger_excess": "ring",
+              "ring_only_box_floor": 1.2633223344302091,
+              "cap_only_box_floor": 1.0
+            },
+            "E01-006": {
+              "whole_stripe_index": 1.1106235570331995,
+              "controlling_fold": "B-Btm",
+              "ring_excess_at_max": 0.0,
+              "cap_excess_at_max": 0.11062355703319937,
+              "larger_excess": "cap",
+              "ring_only_box_floor": 1.011018120184679,
+              "cap_only_box_floor": 1.1106235570331995
+            },
+            "E01-007": {
+              "whole_stripe_index": 1.857886017183279,
+              "controlling_fold": "B-R",
+              "ring_excess_at_max": 0.857886017183279,
+              "cap_excess_at_max": 0.0,
+              "larger_excess": "ring",
+              "ring_only_box_floor": 1.857886017183279,
+              "cap_only_box_floor": 1.0
+            },
+            "E01-008": {
+              "whole_stripe_index": 1.0,
+              "controlling_fold": "F-L",
+              "ring_excess_at_max": 0.0,
+              "cap_excess_at_max": 0.0,
+              "larger_excess": "tie",
+              "ring_only_box_floor": 1.0,
+              "cap_only_box_floor": 1.0
+            },
+            "E01-009": {
+              "whole_stripe_index": 1.2907059325316586,
+              "controlling_fold": "F-L",
+              "ring_excess_at_max": 0.29070593253165866,
+              "cap_excess_at_max": 0.0,
+              "larger_excess": "ring",
+              "ring_only_box_floor": 1.2907059325316586,
+              "cap_only_box_floor": 1.0142913622125977
+            },
+            "E01-010": {
+              "whole_stripe_index": 1.1175686854157962,
+              "controlling_fold": "F-T",
+              "ring_excess_at_max": 0.11756868541579624,
+              "cap_excess_at_max": 0.0,
+              "larger_excess": "ring",
+              "ring_only_box_floor": 1.1175686854157962,
+              "cap_only_box_floor": 1.0
+            }
+          }
+        },
+        "b2_post": {
+          "mean_whole_stripe_index": 1.2288052747297844,
+          "mean_ring_only_box_floor": 1.2191977725498218,
+          "mean_cap_only_box_floor": 1.0119939381605543,
+          "mean_ring_excess_at_max": 0.2181115551960826,
+          "mean_cap_excess_at_max": 0.010693719533701861,
+          "mean_decrease_if_cap_ratios_are_one": 0.009607502179962623,
+          "mean_decrease_if_ring_ratios_are_one": 0.21681133656923016,
+          "controlling_folds": {
+            "F-R": 1,
+            "B-R": 2,
+            "F-L": 4,
+            "F-T": 2,
+            "B-Btm": 1
+          },
+          "controlling_fold_larger_excess": {
+            "ring": 8,
+            "cap": 1,
+            "tie": 1
+          },
+          "cases": {
+            "E01-001": {
+              "whole_stripe_index": 1.0619069869567044,
+              "controlling_fold": "F-R",
+              "ring_excess_at_max": 0.06190698695670449,
+              "cap_excess_at_max": 0.0,
+              "larger_excess": "ring",
+              "ring_only_box_floor": 1.0619069869567044,
+              "cap_only_box_floor": 1.0
+            },
+            "E01-002": {
+              "whole_stripe_index": 1.2876179231548366,
+              "controlling_fold": "B-R",
+              "ring_excess_at_max": 0.2876179231548366,
+              "cap_excess_at_max": 0.0,
+              "larger_excess": "ring",
+              "ring_only_box_floor": 1.2876179231548366,
+              "cap_only_box_floor": 1.0
+            },
+            "E01-003": {
+              "whole_stripe_index": 1.2161738889476967,
+              "controlling_fold": "F-L",
+              "ring_excess_at_max": 0.21617388894769674,
+              "cap_excess_at_max": 0.0,
+              "larger_excess": "ring",
+              "ring_only_box_floor": 1.2161738889476967,
+              "cap_only_box_floor": 1.0
+            },
+            "E01-004": {
+              "whole_stripe_index": 1.07963567843083,
+              "controlling_fold": "F-L",
+              "ring_excess_at_max": 0.07963567843083008,
+              "cap_excess_at_max": 0.0,
+              "larger_excess": "ring",
+              "ring_only_box_floor": 1.07963567843083,
+              "cap_only_box_floor": 1.0
+            },
+            "E01-005": {
+              "whole_stripe_index": 1.2653900234383695,
+              "controlling_fold": "F-T",
+              "ring_excess_at_max": 0.2653900234383696,
+              "cap_excess_at_max": 0.0,
+              "larger_excess": "ring",
+              "ring_only_box_floor": 1.2653900234383695,
+              "cap_only_box_floor": 1.0
+            },
+            "E01-006": {
+              "whole_stripe_index": 1.1069371953370186,
+              "controlling_fold": "B-Btm",
+              "ring_excess_at_max": 0.0,
+              "cap_excess_at_max": 0.10693719533701862,
+              "larger_excess": "cap",
+              "ring_only_box_floor": 1.0108621735373924,
+              "cap_only_box_floor": 1.1069371953370186
+            },
+            "E01-007": {
+              "whole_stripe_index": 1.8593867140403901,
+              "controlling_fold": "B-R",
+              "ring_excess_at_max": 0.8593867140403901,
+              "cap_excess_at_max": 0.0,
+              "larger_excess": "ring",
+              "ring_only_box_floor": 1.8593867140403901,
+              "cap_only_box_floor": 1.0
+            },
+            "E01-008": {
+              "whole_stripe_index": 1.0,
+              "controlling_fold": "F-L",
+              "ring_excess_at_max": 0.0,
+              "cap_excess_at_max": 0.0,
+              "larger_excess": "tie",
+              "ring_only_box_floor": 1.0,
+              "cap_only_box_floor": 1.0
+            },
+            "E01-009": {
+              "whole_stripe_index": 1.292284721209032,
+              "controlling_fold": "F-L",
+              "ring_excess_at_max": 0.29228472120903215,
+              "cap_excess_at_max": 0.0,
+              "larger_excess": "ring",
+              "ring_only_box_floor": 1.292284721209032,
+              "cap_only_box_floor": 1.0130021862685243
+            },
+            "E01-010": {
+              "whole_stripe_index": 1.1187196157829664,
+              "controlling_fold": "F-T",
+              "ring_excess_at_max": 0.11871961578296641,
+              "cap_excess_at_max": 0.0,
+              "larger_excess": "ring",
+              "ring_only_box_floor": 1.1187196157829664,
+              "cap_only_box_floor": 1.0
+            }
+          }
+        },
+        "b3": {
+          "mean_whole_stripe_index": 1.2732381419603758,
+          "mean_ring_only_box_floor": 1.266432376143631,
+          "mean_cap_only_box_floor": 1.0068118027457642,
+          "mean_ring_excess_at_max": 0.26643237614363086,
+          "mean_cap_excess_at_max": 0.006805765816744969,
+          "mean_decrease_if_cap_ratios_are_one": 0.006805765816744969,
+          "mean_decrease_if_ring_ratios_are_one": 0.2664263392146116,
+          "controlling_folds": {
+            "B-Btm": 7,
+            "F-L": 2,
+            "F-T": 1
+          },
+          "controlling_fold_larger_excess": {
+            "ring": 8,
+            "tie": 2
+          },
+          "cases": {
+            "E01-001": {
+              "whole_stripe_index": 1.0918567542836557,
+              "controlling_fold": "B-Btm",
+              "ring_excess_at_max": 0.0918567542836557,
+              "cap_excess_at_max": 0.0,
+              "larger_excess": "ring",
+              "ring_only_box_floor": 1.0918567542836557,
+              "cap_only_box_floor": 1.0
+            },
+            "E01-002": {
+              "whole_stripe_index": 1.0392819444342638,
+              "controlling_fold": "B-Btm",
+              "ring_excess_at_max": 0.039281944434263805,
+              "cap_excess_at_max": 0.0,
+              "larger_excess": "ring",
+              "ring_only_box_floor": 1.0392819444342638,
+              "cap_only_box_floor": 1.0
+            },
+            "E01-003": {
+              "whole_stripe_index": 1.0,
+              "controlling_fold": "F-L",
+              "ring_excess_at_max": 0.0,
+              "cap_excess_at_max": 0.0,
+              "larger_excess": "tie",
+              "ring_only_box_floor": 1.0,
+              "cap_only_box_floor": 1.0
+            },
+            "E01-004": {
+              "whole_stripe_index": 1.0391434621792797,
+              "controlling_fold": "B-Btm",
+              "ring_excess_at_max": 0.039143462179279664,
+              "cap_excess_at_max": 0.0,
+              "larger_excess": "ring",
+              "ring_only_box_floor": 1.0391434621792797,
+              "cap_only_box_floor": 1.0
+            },
+            "E01-005": {
+              "whole_stripe_index": 1.4722537406258116,
+              "controlling_fold": "B-Btm",
+              "ring_excess_at_max": 0.4722537406258116,
+              "cap_excess_at_max": 0.0,
+              "larger_excess": "ring",
+              "ring_only_box_floor": 1.4722537406258116,
+              "cap_only_box_floor": 1.0
+            },
+            "E01-006": {
+              "whole_stripe_index": 1.0027364609642118,
+              "controlling_fold": "B-Btm",
+              "ring_excess_at_max": 0.002736460964211651,
+              "cap_excess_at_max": 0.0,
+              "larger_excess": "ring",
+              "ring_only_box_floor": 1.0027364609642118,
+              "cap_only_box_floor": 1.0000603692901926
+            },
+            "E01-007": {
+              "whole_stripe_index": 1.0,
+              "controlling_fold": "F-L",
+              "ring_excess_at_max": 0.0,
+              "cap_excess_at_max": 0.0,
+              "larger_excess": "tie",
+              "ring_only_box_floor": 1.0,
+              "cap_only_box_floor": 1.0
+            },
+            "E01-008": {
+              "whole_stripe_index": 1.3198735263112926,
+              "controlling_fold": "F-T",
+              "ring_excess_at_max": 0.25181586814384294,
+              "cap_excess_at_max": 0.06805765816744969,
+              "larger_excess": "ring",
+              "ring_only_box_floor": 1.251815868143843,
+              "cap_only_box_floor": 1.0680576581674497
+            },
+            "E01-009": {
+              "whole_stripe_index": 1.041325662634837,
+              "controlling_fold": "B-Btm",
+              "ring_excess_at_max": 0.04132566263483706,
+              "cap_excess_at_max": 0.0,
+              "larger_excess": "ring",
+              "ring_only_box_floor": 1.041325662634837,
+              "cap_only_box_floor": 1.0
+            },
+            "E01-010": {
+              "whole_stripe_index": 2.7259098681704064,
+              "controlling_fold": "B-Btm",
+              "ring_excess_at_max": 1.7259098681704064,
+              "cap_excess_at_max": 0.0,
+              "larger_excess": "ring",
+              "ring_only_box_floor": 2.7259098681704064,
+              "cap_only_box_floor": 1.0
+            }
+          }
+        },
+        "b4": {
+          "mean_whole_stripe_index": 1.0439793614081425,
+          "mean_ring_only_box_floor": 1.0358851475027995,
+          "mean_cap_only_box_floor": 1.0165185707449669,
+          "mean_ring_excess_at_max": 0.03147101263970355,
+          "mean_cap_excess_at_max": 0.012508348768439037,
+          "mean_decrease_if_cap_ratios_are_one": 0.008094213905343196,
+          "mean_decrease_if_ring_ratios_are_one": 0.027460790663175617,
+          "controlling_folds": {
+            "B-R": 2,
+            "F-R": 1,
+            "F-T": 3,
+            "F-L": 4
+          },
+          "controlling_fold_larger_excess": {
+            "ring": 4,
+            "cap": 3,
+            "tie": 3
+          },
+          "cases": {
+            "E01-001": {
+              "whole_stripe_index": 1.2553187143323619,
+              "controlling_fold": "B-R",
+              "ring_excess_at_max": 0.25531871433236186,
+              "cap_excess_at_max": 0.0,
+              "larger_excess": "ring",
+              "ring_only_box_floor": 1.2553187143323619,
+              "cap_only_box_floor": 1.0401022197652794
+            },
+            "E01-002": {
+              "whole_stripe_index": 1.0345855583666086,
+              "controlling_fold": "F-R",
+              "ring_excess_at_max": 0.03458555836660859,
+              "cap_excess_at_max": 0.0,
+              "larger_excess": "ring",
+              "ring_only_box_floor": 1.0345855583666086,
+              "cap_only_box_floor": 1.0
+            },
+            "E01-003": {
+              "whole_stripe_index": 1.0275421826833369,
+              "controlling_fold": "F-T",
+              "ring_excess_at_max": 0.0076019539619985865,
+              "cap_excess_at_max": 0.019940228721338382,
+              "larger_excess": "cap",
+              "ring_only_box_floor": 1.0076019539619985,
+              "cap_only_box_floor": 1.0199402287213384
+            },
+            "E01-004": {
+              "whole_stripe_index": 1.0058567014138544,
+              "controlling_fold": "F-T",
+              "ring_excess_at_max": 0.00235145290583072,
+              "cap_excess_at_max": 0.003505248508023695,
+              "larger_excess": "cap",
+              "ring_only_box_floor": 1.0023514529058306,
+              "cap_only_box_floor": 1.0035052485080236
+            },
+            "E01-005": {
+              "whole_stripe_index": 1.1016380104550283,
+              "controlling_fold": "F-T",
+              "ring_excess_at_max": 0.0,
+              "cap_excess_at_max": 0.1016380104550283,
+              "larger_excess": "cap",
+              "ring_only_box_floor": 1.0441413486309585,
+              "cap_only_box_floor": 1.1016380104550283
+            },
+            "E01-006": {
+              "whole_stripe_index": 1.0,
+              "controlling_fold": "F-L",
+              "ring_excess_at_max": 0.0,
+              "cap_excess_at_max": 0.0,
+              "larger_excess": "tie",
+              "ring_only_box_floor": 1.0,
+              "cap_only_box_floor": 1.0
+            },
+            "E01-007": {
+              "whole_stripe_index": 1.0036399071947044,
+              "controlling_fold": "B-R",
+              "ring_excess_at_max": 0.003639907194704417,
+              "cap_excess_at_max": 0.0,
+              "larger_excess": "ring",
+              "ring_only_box_floor": 1.0036399071947044,
+              "cap_only_box_floor": 1.0
+            },
+            "E01-008": {
+              "whole_stripe_index": 1.0112125396355314,
+              "controlling_fold": "F-L",
+              "ring_excess_at_max": 0.01121253963553126,
+              "cap_excess_at_max": 0.0,
+              "larger_excess": "ring",
+              "ring_only_box_floor": 1.0112125396355314,
+              "cap_only_box_floor": 1.0
+            },
+            "E01-009": {
+              "whole_stripe_index": 1.0,
+              "controlling_fold": "F-L",
+              "ring_excess_at_max": 0.0,
+              "cap_excess_at_max": 0.0,
+              "larger_excess": "tie",
+              "ring_only_box_floor": 1.0,
+              "cap_only_box_floor": 1.0
+            },
+            "E01-010": {
+              "whole_stripe_index": 1.0,
+              "controlling_fold": "F-L",
+              "ring_excess_at_max": 0.0,
+              "cap_excess_at_max": 0.0,
+              "larger_excess": "tie",
+              "ring_only_box_floor": 1.0,
+              "cap_only_box_floor": 1.0
+            }
+          }
+        },
+        "b2_regional": {
+          "mean_whole_stripe_index": 1.1399088085999431,
+          "mean_ring_only_box_floor": 1.0458846051307251,
+          "mean_cap_only_box_floor": 1.132049723530447,
+          "mean_ring_excess_at_max": 0.007859085069496164,
+          "mean_cap_excess_at_max": 0.1320497235304469,
+          "mean_decrease_if_cap_ratios_are_one": 0.09402420346921803,
+          "mean_decrease_if_ring_ratios_are_one": 0.007859085069496174,
+          "controlling_folds": {
+            "F-T": 7,
+            "F-L": 2,
+            "B-Btm": 1
+          },
+          "controlling_fold_larger_excess": {
+            "cap": 8,
+            "ring": 1,
+            "tie": 1
+          },
+          "cases": {
+            "E01-001": {
+              "whole_stripe_index": 1.0840075187418492,
+              "controlling_fold": "F-T",
+              "ring_excess_at_max": 0.0,
+              "cap_excess_at_max": 0.08400751874184931,
+              "larger_excess": "cap",
+              "ring_only_box_floor": 1.0606584529025471,
+              "cap_only_box_floor": 1.0840075187418492
+            },
+            "E01-002": {
+              "whole_stripe_index": 1.302709019914825,
+              "controlling_fold": "F-T",
+              "ring_excess_at_max": 0.0,
+              "cap_excess_at_max": 0.3027090199148249,
+              "larger_excess": "cap",
+              "ring_only_box_floor": 1.0595589023593888,
+              "cap_only_box_floor": 1.302709019914825
+            },
+            "E01-003": {
+              "whole_stripe_index": 1.0785908506949617,
+              "controlling_fold": "F-L",
+              "ring_excess_at_max": 0.07859085069496163,
+              "cap_excess_at_max": 0.0,
+              "larger_excess": "ring",
+              "ring_only_box_floor": 1.0785908506949617,
+              "cap_only_box_floor": 1.0
+            },
+            "E01-004": {
+              "whole_stripe_index": 1.0260528955523562,
+              "controlling_fold": "F-T",
+              "ring_excess_at_max": 0.0,
+              "cap_excess_at_max": 0.026052895552356237,
+              "larger_excess": "cap",
+              "ring_only_box_floor": 1.0,
+              "cap_only_box_floor": 1.0260528955523562
+            },
+            "E01-005": {
+              "whole_stripe_index": 1.1430604148372914,
+              "controlling_fold": "F-T",
+              "ring_excess_at_max": 0.0,
+              "cap_excess_at_max": 0.14306041483729137,
+              "larger_excess": "cap",
+              "ring_only_box_floor": 1.0104240912769333,
+              "cap_only_box_floor": 1.1430604148372914
+            },
+            "E01-006": {
+              "whole_stripe_index": 1.1809062108217478,
+              "controlling_fold": "B-Btm",
+              "ring_excess_at_max": 0.0,
+              "cap_excess_at_max": 0.18090621082174785,
+              "larger_excess": "cap",
+              "ring_only_box_floor": 1.0492919357098143,
+              "cap_only_box_floor": 1.1809062108217478
+            },
+            "E01-007": {
+              "whole_stripe_index": 1.2252600749599272,
+              "controlling_fold": "F-T",
+              "ring_excess_at_max": 0.0,
+              "cap_excess_at_max": 0.22526007495992728,
+              "larger_excess": "cap",
+              "ring_only_box_floor": 1.0636739876116221,
+              "cap_only_box_floor": 1.2252600749599272
+            },
+            "E01-008": {
+              "whole_stripe_index": 1.1394728701585797,
+              "controlling_fold": "F-T",
+              "ring_excess_at_max": 0.0,
+              "cap_excess_at_max": 0.13947287015857968,
+              "larger_excess": "cap",
+              "ring_only_box_floor": 1.0,
+              "cap_only_box_floor": 1.1394728701585797
+            },
+            "E01-009": {
+              "whole_stripe_index": 1.219028230317892,
+              "controlling_fold": "F-T",
+              "ring_excess_at_max": 0.0,
+              "cap_excess_at_max": 0.2190282303178922,
+              "larger_excess": "cap",
+              "ring_only_box_floor": 1.1366478307519827,
+              "cap_only_box_floor": 1.219028230317892
+            },
+            "E01-010": {
+              "whole_stripe_index": 1.0,
+              "controlling_fold": "F-L",
+              "ring_excess_at_max": 0.0,
+              "cap_excess_at_max": 0.0,
+              "larger_excess": "tie",
+              "ring_only_box_floor": 1.0,
+              "cap_only_box_floor": 1.0
+            }
+          }
+        },
+        "k0": {
+          "mean_whole_stripe_index": 1.253929033208974,
+          "mean_ring_only_box_floor": 1.2244084290991146,
+          "mean_cap_only_box_floor": 1.1186754700828438,
+          "mean_ring_excess_at_max": 0.17021938062825137,
+          "mean_cap_excess_at_max": 0.08370965258072267,
+          "mean_decrease_if_cap_ratios_are_one": 0.029520604109859416,
+          "mean_decrease_if_ring_ratios_are_one": 0.1352535631261301,
+          "controlling_folds": {
+            "B-R": 4,
+            "F-T": 3,
+            "B-Btm": 3
+          },
+          "controlling_fold_larger_excess": {
+            "ring": 7,
+            "cap": 3
+          },
+          "cases": {
+            "E01-001": {
+              "whole_stripe_index": 1.068993754740803,
+              "controlling_fold": "B-R",
+              "ring_excess_at_max": 0.06899375474080316,
+              "cap_excess_at_max": 0.0,
+              "larger_excess": "ring",
+              "ring_only_box_floor": 1.068993754740803,
+              "cap_only_box_floor": 1.0
+            },
+            "E01-002": {
+              "whole_stripe_index": 1.0969434046866113,
+              "controlling_fold": "F-T",
+              "ring_excess_at_max": 0.09694340468661122,
+              "cap_excess_at_max": 0.0,
+              "larger_excess": "ring",
+              "ring_only_box_floor": 1.0969434046866113,
+              "cap_only_box_floor": 1.0747076345360709
+            },
+            "E01-003": {
+              "whole_stripe_index": 1.385233010660527,
+              "controlling_fold": "B-Btm",
+              "ring_excess_at_max": 0.0,
+              "cap_excess_at_max": 0.38523301066052706,
+              "larger_excess": "cap",
+              "ring_only_box_floor": 1.21006000426002,
+              "cap_only_box_floor": 1.385233010660527
+            },
+            "E01-004": {
+              "whole_stripe_index": 1.0679853948593971,
+              "controlling_fold": "B-Btm",
+              "ring_excess_at_max": 0.0,
+              "cap_excess_at_max": 0.06798539485939714,
+              "larger_excess": "cap",
+              "ring_only_box_floor": 1.0496944919227131,
+              "cap_only_box_floor": 1.0679853948593971
+            },
+            "E01-005": {
+              "whole_stripe_index": 1.0236824201099852,
+              "controlling_fold": "B-R",
+              "ring_excess_at_max": 0.023682420109985225,
+              "cap_excess_at_max": 0.0,
+              "larger_excess": "ring",
+              "ring_only_box_floor": 1.0236824201099852,
+              "cap_only_box_floor": 1.0
+            },
+            "E01-006": {
+              "whole_stripe_index": 1.0519584081365472,
+              "controlling_fold": "B-R",
+              "ring_excess_at_max": 0.051958408136547285,
+              "cap_excess_at_max": 0.0,
+              "larger_excess": "ring",
+              "ring_only_box_floor": 1.0519584081365472,
+              "cap_only_box_floor": 1.0
+            },
+            "E01-007": {
+              "whole_stripe_index": 1.476384850806136,
+              "controlling_fold": "F-T",
+              "ring_excess_at_max": 0.4763848508061359,
+              "cap_excess_at_max": 0.0,
+              "larger_excess": "ring",
+              "ring_only_box_floor": 1.476384850806136,
+              "cap_only_box_floor": 1.2074239037225047
+            },
+            "E01-008": {
+              "whole_stripe_index": 1.281214812292829,
+              "controlling_fold": "B-R",
+              "ring_excess_at_max": 0.2812148122928291,
+              "cap_excess_at_max": 0.0,
+              "larger_excess": "ring",
+              "ring_only_box_floor": 1.281214812292829,
+              "cap_only_box_floor": 1.067526636762637
+            },
+            "E01-009": {
+              "whole_stripe_index": 1.703016155509602,
+              "controlling_fold": "F-T",
+              "ring_excess_at_max": 0.703016155509602,
+              "cap_excess_at_max": 0.0,
+              "larger_excess": "ring",
+              "ring_only_box_floor": 1.703016155509602,
+              "cap_only_box_floor": 1.0
+            },
+            "E01-010": {
+              "whole_stripe_index": 1.3838781202873025,
+              "controlling_fold": "B-Btm",
+              "ring_excess_at_max": 0.0,
+              "cap_excess_at_max": 0.3838781202873025,
+              "larger_excess": "cap",
+              "ring_only_box_floor": 1.2821359885258994,
+              "cap_only_box_floor": 1.3838781202873025
+            }
+          }
+        },
+        "k1": {
+          "mean_whole_stripe_index": 1.2375843505088673,
+          "mean_ring_only_box_floor": 1.2244084290991146,
+          "mean_cap_only_box_floor": 1.0854424405774175,
+          "mean_ring_excess_at_max": 0.20454879862452746,
+          "mean_cap_excess_at_max": 0.03303555188433973,
+          "mean_decrease_if_cap_ratios_are_one": 0.013175921409752545,
+          "mean_decrease_if_ring_ratios_are_one": 0.15214190993144963,
+          "controlling_folds": {
+            "B-R": 4,
+            "B-Btm": 3,
+            "F-T": 2,
+            "F-R": 1
+          },
+          "controlling_fold_larger_excess": {
+            "ring": 7,
+            "cap": 3
+          },
+          "cases": {
+            "E01-001": {
+              "whole_stripe_index": 1.068993754740803,
+              "controlling_fold": "B-R",
+              "ring_excess_at_max": 0.06899375474080316,
+              "cap_excess_at_max": 0.0,
+              "larger_excess": "ring",
+              "ring_only_box_floor": 1.068993754740803,
+              "cap_only_box_floor": 1.0
+            },
+            "E01-002": {
+              "whole_stripe_index": 1.1558679114063888,
+              "controlling_fold": "B-Btm",
+              "ring_excess_at_max": 0.0,
+              "cap_excess_at_max": 0.15586791140638878,
+              "larger_excess": "cap",
+              "ring_only_box_floor": 1.0969434046866113,
+              "cap_only_box_floor": 1.1558679114063888
+            },
+            "E01-003": {
+              "whole_stripe_index": 1.21006000426002,
+              "controlling_fold": "B-R",
+              "ring_excess_at_max": 0.21006000426002003,
+              "cap_excess_at_max": 0.0,
+              "larger_excess": "ring",
+              "ring_only_box_floor": 1.21006000426002,
+              "cap_only_box_floor": 1.183345697486177
+            },
+            "E01-004": {
+              "whole_stripe_index": 1.1189143540596493,
+              "controlling_fold": "B-Btm",
+              "ring_excess_at_max": 0.0,
+              "cap_excess_at_max": 0.11891435405964945,
+              "larger_excess": "cap",
+              "ring_only_box_floor": 1.0496944919227131,
+              "cap_only_box_floor": 1.1189143540596493
+            },
+            "E01-005": {
+              "whole_stripe_index": 1.0236824201099852,
+              "controlling_fold": "B-R",
+              "ring_excess_at_max": 0.023682420109985225,
+              "cap_excess_at_max": 0.0,
+              "larger_excess": "ring",
+              "ring_only_box_floor": 1.0236824201099852,
+              "cap_only_box_floor": 1.0
+            },
+            "E01-006": {
+              "whole_stripe_index": 1.055573253377359,
+              "controlling_fold": "B-Btm",
+              "ring_excess_at_max": 0.0,
+              "cap_excess_at_max": 0.05557325337735908,
+              "larger_excess": "cap",
+              "ring_only_box_floor": 1.0519584081365472,
+              "cap_only_box_floor": 1.055573253377359
+            },
+            "E01-007": {
+              "whole_stripe_index": 1.476384850806136,
+              "controlling_fold": "F-T",
+              "ring_excess_at_max": 0.4763848508061359,
+              "cap_excess_at_max": 0.0,
+              "larger_excess": "ring",
+              "ring_only_box_floor": 1.476384850806136,
+              "cap_only_box_floor": 1.1656607981792275
+            },
+            "E01-008": {
+              "whole_stripe_index": 1.281214812292829,
+              "controlling_fold": "B-R",
+              "ring_excess_at_max": 0.2812148122928291,
+              "cap_excess_at_max": 0.0,
+              "larger_excess": "ring",
+              "ring_only_box_floor": 1.281214812292829,
+              "cap_only_box_floor": 1.0
+            },
+            "E01-009": {
+              "whole_stripe_index": 1.703016155509602,
+              "controlling_fold": "F-T",
+              "ring_excess_at_max": 0.703016155509602,
+              "cap_excess_at_max": 0.0,
+              "larger_excess": "ring",
+              "ring_only_box_floor": 1.703016155509602,
+              "cap_only_box_floor": 1.0
+            },
+            "E01-010": {
+              "whole_stripe_index": 1.2821359885258994,
+              "controlling_fold": "F-R",
+              "ring_excess_at_max": 0.2821359885258994,
+              "cap_excess_at_max": 0.0,
+              "larger_excess": "ring",
+              "ring_only_box_floor": 1.2821359885258994,
+              "cap_only_box_floor": 1.175062391265374
+            }
+          }
+        },
+        "k2": {
+          "mean_whole_stripe_index": 1.2262979137882162,
+          "mean_ring_only_box_floor": 1.2244084290991146,
+          "mean_cap_only_box_floor": 1.0479637341852897,
+          "mean_ring_excess_at_max": 0.2097446394381822,
+          "mean_cap_excess_at_max": 0.01655327435003392,
+          "mean_decrease_if_cap_ratios_are_one": 0.0018894846891014839,
+          "mean_decrease_if_ring_ratios_are_one": 0.17833417960292647,
+          "controlling_folds": {
+            "B-R": 5,
+            "B-Btm": 2,
+            "F-T": 2,
+            "F-R": 1
+          },
+          "controlling_fold_larger_excess": {
+            "ring": 8,
+            "cap": 2
+          },
+          "cases": {
+            "E01-001": {
+              "whole_stripe_index": 1.068993754740803,
+              "controlling_fold": "B-R",
+              "ring_excess_at_max": 0.06899375474080316,
+              "cap_excess_at_max": 0.0,
+              "larger_excess": "ring",
+              "ring_only_box_floor": 1.068993754740803,
+              "cap_only_box_floor": 1.0
+            },
+            "E01-002": {
+              "whole_stripe_index": 1.107792309069354,
+              "controlling_fold": "B-Btm",
+              "ring_excess_at_max": 0.0,
+              "cap_excess_at_max": 0.107792309069354,
+              "larger_excess": "cap",
+              "ring_only_box_floor": 1.0969434046866113,
+              "cap_only_box_floor": 1.107792309069354
+            },
+            "E01-003": {
+              "whole_stripe_index": 1.21006000426002,
+              "controlling_fold": "B-R",
+              "ring_excess_at_max": 0.21006000426002003,
+              "cap_excess_at_max": 0.0,
+              "larger_excess": "ring",
+              "ring_only_box_floor": 1.21006000426002,
+              "cap_only_box_floor": 1.1176827038865254
+            },
+            "E01-004": {
+              "whole_stripe_index": 1.0577404344309853,
+              "controlling_fold": "B-Btm",
+              "ring_excess_at_max": 0.0,
+              "cap_excess_at_max": 0.0577404344309852,
+              "larger_excess": "cap",
+              "ring_only_box_floor": 1.0496944919227131,
+              "cap_only_box_floor": 1.0577404344309853
+            },
+            "E01-005": {
+              "whole_stripe_index": 1.0236824201099852,
+              "controlling_fold": "B-R",
+              "ring_excess_at_max": 0.023682420109985225,
+              "cap_excess_at_max": 0.0,
+              "larger_excess": "ring",
+              "ring_only_box_floor": 1.0236824201099852,
+              "cap_only_box_floor": 1.0
+            },
+            "E01-006": {
+              "whole_stripe_index": 1.0519584081365472,
+              "controlling_fold": "B-R",
+              "ring_excess_at_max": 0.051958408136547285,
+              "cap_excess_at_max": 0.0,
+              "larger_excess": "ring",
+              "ring_only_box_floor": 1.0519584081365472,
+              "cap_only_box_floor": 1.0
+            },
+            "E01-007": {
+              "whole_stripe_index": 1.476384850806136,
+              "controlling_fold": "F-T",
+              "ring_excess_at_max": 0.4763848508061359,
+              "cap_excess_at_max": 0.0,
+              "larger_excess": "ring",
+              "ring_only_box_floor": 1.476384850806136,
+              "cap_only_box_floor": 1.0845972454714627
+            },
+            "E01-008": {
+              "whole_stripe_index": 1.281214812292829,
+              "controlling_fold": "B-R",
+              "ring_excess_at_max": 0.2812148122928291,
+              "cap_excess_at_max": 0.0,
+              "larger_excess": "ring",
+              "ring_only_box_floor": 1.281214812292829,
+              "cap_only_box_floor": 1.0
+            },
+            "E01-009": {
+              "whole_stripe_index": 1.703016155509602,
+              "controlling_fold": "F-T",
+              "ring_excess_at_max": 0.703016155509602,
+              "cap_excess_at_max": 0.0,
+              "larger_excess": "ring",
+              "ring_only_box_floor": 1.703016155509602,
+              "cap_only_box_floor": 1.0
+            },
+            "E01-010": {
+              "whole_stripe_index": 1.2821359885258994,
+              "controlling_fold": "F-R",
+              "ring_excess_at_max": 0.2821359885258994,
+              "cap_excess_at_max": 0.0,
+              "larger_excess": "ring",
+              "ring_only_box_floor": 1.2821359885258994,
+              "cap_only_box_floor": 1.1118246489945691
+            }
+          }
+        },
+        "k3": {
+          "mean_whole_stripe_index": 1.2551861755541027,
+          "mean_ring_only_box_floor": 1.2244084290991146,
+          "mean_cap_only_box_floor": 1.0694099013889726,
+          "mean_ring_excess_at_max": 0.2175090536250343,
+          "mean_cap_excess_at_max": 0.03767712192906849,
+          "mean_decrease_if_cap_ratios_are_one": 0.030777746454988188,
+          "mean_decrease_if_ring_ratios_are_one": 0.1857762741651301,
+          "controlling_folds": {
+            "B-Btm": 1,
+            "F-T": 3,
+            "B-R": 5,
+            "F-R": 1
+          },
+          "controlling_fold_larger_excess": {
+            "cap": 1,
+            "ring": 9
+          },
+          "cases": {
+            "E01-001": {
+              "whole_stripe_index": 1.376771219290685,
+              "controlling_fold": "B-Btm",
+              "ring_excess_at_max": 0.0,
+              "cap_excess_at_max": 0.3767712192906849,
+              "larger_excess": "cap",
+              "ring_only_box_floor": 1.068993754740803,
+              "cap_only_box_floor": 1.376771219290685
+            },
+            "E01-002": {
+              "whole_stripe_index": 1.0969434046866113,
+              "controlling_fold": "F-T",
+              "ring_excess_at_max": 0.09694340468661122,
+              "cap_excess_at_max": 0.0,
+              "larger_excess": "ring",
+              "ring_only_box_floor": 1.0969434046866113,
+              "cap_only_box_floor": 1.0
+            },
+            "E01-003": {
+              "whole_stripe_index": 1.21006000426002,
+              "controlling_fold": "B-R",
+              "ring_excess_at_max": 0.21006000426002003,
+              "cap_excess_at_max": 0.0,
+              "larger_excess": "ring",
+              "ring_only_box_floor": 1.21006000426002,
+              "cap_only_box_floor": 1.0773329946111683
+            },
+            "E01-004": {
+              "whole_stripe_index": 1.0496944919227131,
+              "controlling_fold": "B-R",
+              "ring_excess_at_max": 0.049694491922713135,
+              "cap_excess_at_max": 0.0,
+              "larger_excess": "ring",
+              "ring_only_box_floor": 1.0496944919227131,
+              "cap_only_box_floor": 1.0
+            },
+            "E01-005": {
+              "whole_stripe_index": 1.0236824201099852,
+              "controlling_fold": "B-R",
+              "ring_excess_at_max": 0.023682420109985225,
+              "cap_excess_at_max": 0.0,
+              "larger_excess": "ring",
+              "ring_only_box_floor": 1.0236824201099852,
+              "cap_only_box_floor": 1.0160932263645863
+            },
+            "E01-006": {
+              "whole_stripe_index": 1.0519584081365472,
+              "controlling_fold": "B-R",
+              "ring_excess_at_max": 0.051958408136547285,
+              "cap_excess_at_max": 0.0,
+              "larger_excess": "ring",
+              "ring_only_box_floor": 1.0519584081365472,
+              "cap_only_box_floor": 1.0
+            },
+            "E01-007": {
+              "whole_stripe_index": 1.476384850806136,
+              "controlling_fold": "F-T",
+              "ring_excess_at_max": 0.4763848508061359,
+              "cap_excess_at_max": 0.0,
+              "larger_excess": "ring",
+              "ring_only_box_floor": 1.476384850806136,
+              "cap_only_box_floor": 1.0
+            },
+            "E01-008": {
+              "whole_stripe_index": 1.281214812292829,
+              "controlling_fold": "B-R",
+              "ring_excess_at_max": 0.2812148122928291,
+              "cap_excess_at_max": 0.0,
+              "larger_excess": "ring",
+              "ring_only_box_floor": 1.281214812292829,
+              "cap_only_box_floor": 1.0
+            },
+            "E01-009": {
+              "whole_stripe_index": 1.703016155509602,
+              "controlling_fold": "F-T",
+              "ring_excess_at_max": 0.703016155509602,
+              "cap_excess_at_max": 0.0,
+              "larger_excess": "ring",
+              "ring_only_box_floor": 1.703016155509602,
+              "cap_only_box_floor": 1.1053802986078505
+            },
+            "E01-010": {
+              "whole_stripe_index": 1.2821359885258994,
+              "controlling_fold": "F-R",
+              "ring_excess_at_max": 0.2821359885258994,
+              "cap_excess_at_max": 0.0,
+              "larger_excess": "ring",
+              "ring_only_box_floor": 1.2821359885258994,
+              "cap_only_box_floor": 1.1185212750154372
+            }
+          }
+        },
+        "k4": {
+          "mean_whole_stripe_index": 1.2551861755541027,
+          "mean_ring_only_box_floor": 1.2244084290991146,
+          "mean_cap_only_box_floor": 1.0694099013889726,
+          "mean_ring_excess_at_max": 0.2175090536250343,
+          "mean_cap_excess_at_max": 0.03767712192906849,
+          "mean_decrease_if_cap_ratios_are_one": 0.030777746454988188,
+          "mean_decrease_if_ring_ratios_are_one": 0.1857762741651301,
+          "controlling_folds": {
+            "B-Btm": 1,
+            "F-T": 3,
+            "B-R": 5,
+            "F-R": 1
+          },
+          "controlling_fold_larger_excess": {
+            "cap": 1,
+            "ring": 9
+          },
+          "cases": {
+            "E01-001": {
+              "whole_stripe_index": 1.376771219290685,
+              "controlling_fold": "B-Btm",
+              "ring_excess_at_max": 0.0,
+              "cap_excess_at_max": 0.3767712192906849,
+              "larger_excess": "cap",
+              "ring_only_box_floor": 1.068993754740803,
+              "cap_only_box_floor": 1.376771219290685
+            },
+            "E01-002": {
+              "whole_stripe_index": 1.0969434046866113,
+              "controlling_fold": "F-T",
+              "ring_excess_at_max": 0.09694340468661122,
+              "cap_excess_at_max": 0.0,
+              "larger_excess": "ring",
+              "ring_only_box_floor": 1.0969434046866113,
+              "cap_only_box_floor": 1.0
+            },
+            "E01-003": {
+              "whole_stripe_index": 1.21006000426002,
+              "controlling_fold": "B-R",
+              "ring_excess_at_max": 0.21006000426002003,
+              "cap_excess_at_max": 0.0,
+              "larger_excess": "ring",
+              "ring_only_box_floor": 1.21006000426002,
+              "cap_only_box_floor": 1.0773329946111683
+            },
+            "E01-004": {
+              "whole_stripe_index": 1.0496944919227131,
+              "controlling_fold": "B-R",
+              "ring_excess_at_max": 0.049694491922713135,
+              "cap_excess_at_max": 0.0,
+              "larger_excess": "ring",
+              "ring_only_box_floor": 1.0496944919227131,
+              "cap_only_box_floor": 1.0
+            },
+            "E01-005": {
+              "whole_stripe_index": 1.0236824201099852,
+              "controlling_fold": "B-R",
+              "ring_excess_at_max": 0.023682420109985225,
+              "cap_excess_at_max": 0.0,
+              "larger_excess": "ring",
+              "ring_only_box_floor": 1.0236824201099852,
+              "cap_only_box_floor": 1.0160932263645863
+            },
+            "E01-006": {
+              "whole_stripe_index": 1.0519584081365472,
+              "controlling_fold": "B-R",
+              "ring_excess_at_max": 0.051958408136547285,
+              "cap_excess_at_max": 0.0,
+              "larger_excess": "ring",
+              "ring_only_box_floor": 1.0519584081365472,
+              "cap_only_box_floor": 1.0
+            },
+            "E01-007": {
+              "whole_stripe_index": 1.476384850806136,
+              "controlling_fold": "F-T",
+              "ring_excess_at_max": 0.4763848508061359,
+              "cap_excess_at_max": 0.0,
+              "larger_excess": "ring",
+              "ring_only_box_floor": 1.476384850806136,
+              "cap_only_box_floor": 1.0
+            },
+            "E01-008": {
+              "whole_stripe_index": 1.281214812292829,
+              "controlling_fold": "B-R",
+              "ring_excess_at_max": 0.2812148122928291,
+              "cap_excess_at_max": 0.0,
+              "larger_excess": "ring",
+              "ring_only_box_floor": 1.281214812292829,
+              "cap_only_box_floor": 1.0
+            },
+            "E01-009": {
+              "whole_stripe_index": 1.703016155509602,
+              "controlling_fold": "F-T",
+              "ring_excess_at_max": 0.703016155509602,
+              "cap_excess_at_max": 0.0,
+              "larger_excess": "ring",
+              "ring_only_box_floor": 1.703016155509602,
+              "cap_only_box_floor": 1.1053802986078505
+            },
+            "E01-010": {
+              "whole_stripe_index": 1.2821359885258994,
+              "controlling_fold": "F-R",
+              "ring_excess_at_max": 0.2821359885258994,
+              "cap_excess_at_max": 0.0,
+              "larger_excess": "ring",
+              "ring_only_box_floor": 1.2821359885258994,
+              "cap_only_box_floor": 1.1185212750154372
+            }
+          }
+        },
+        "j0": {
+          "mean_whole_stripe_index": 1.7208844875631943,
+          "mean_ring_only_box_floor": 1.2244084290991146,
+          "mean_cap_only_box_floor": 1.615653680119629,
+          "mean_ring_excess_at_max": 0.11726443778718286,
+          "mean_cap_excess_at_max": 0.6036200497760115,
+          "mean_decrease_if_cap_ratios_are_one": 0.49647605846407966,
+          "mean_decrease_if_ring_ratios_are_one": 0.10523080744356512,
+          "controlling_folds": {
+            "B-R": 3,
+            "B-Btm": 6,
+            "F-T": 1
+          },
+          "controlling_fold_larger_excess": {
+            "ring": 4,
+            "cap": 6
+          },
+          "cases": {
+            "E01-001": {
+              "whole_stripe_index": 1.068993754740803,
+              "controlling_fold": "B-R",
+              "ring_excess_at_max": 0.06899375474080316,
+              "cap_excess_at_max": 0.0,
+              "larger_excess": "ring",
+              "ring_only_box_floor": 1.068993754740803,
+              "cap_only_box_floor": 1.0
+            },
+            "E01-002": {
+              "whole_stripe_index": 1.5635135185214497,
+              "controlling_fold": "B-Btm",
+              "ring_excess_at_max": 0.0,
+              "cap_excess_at_max": 0.5635135185214497,
+              "larger_excess": "cap",
+              "ring_only_box_floor": 1.0969434046866113,
+              "cap_only_box_floor": 1.5635135185214497
+            },
+            "E01-003": {
+              "whole_stripe_index": 3.1077772169759377,
+              "controlling_fold": "B-Btm",
+              "ring_excess_at_max": 0.0,
+              "cap_excess_at_max": 2.1077772169759377,
+              "larger_excess": "cap",
+              "ring_only_box_floor": 1.21006000426002,
+              "cap_only_box_floor": 3.1077772169759377
+            },
+            "E01-004": {
+              "whole_stripe_index": 1.454983863592032,
+              "controlling_fold": "B-Btm",
+              "ring_excess_at_max": 0.0,
+              "cap_excess_at_max": 0.45498386359203213,
+              "larger_excess": "cap",
+              "ring_only_box_floor": 1.0496944919227131,
+              "cap_only_box_floor": 1.454983863592032
+            },
+            "E01-005": {
+              "whole_stripe_index": 1.0236824201099852,
+              "controlling_fold": "B-R",
+              "ring_excess_at_max": 0.023682420109985225,
+              "cap_excess_at_max": 0.0,
+              "larger_excess": "ring",
+              "ring_only_box_floor": 1.0236824201099852,
+              "cap_only_box_floor": 1.0
+            },
+            "E01-006": {
+              "whole_stripe_index": 1.3732305489426424,
+              "controlling_fold": "B-Btm",
+              "ring_excess_at_max": 0.0,
+              "cap_excess_at_max": 0.3732305489426423,
+              "larger_excess": "cap",
+              "ring_only_box_floor": 1.0519584081365472,
+              "cap_only_box_floor": 1.3732305489426424
+            },
+            "E01-007": {
+              "whole_stripe_index": 2.638963467749695,
+              "controlling_fold": "B-Btm",
+              "ring_excess_at_max": 0.09573723521860922,
+              "cap_excess_at_max": 1.5432262325310857,
+              "larger_excess": "cap",
+              "ring_only_box_floor": 1.476384850806136,
+              "cap_only_box_floor": 2.5432262325310857
+            },
+            "E01-008": {
+              "whole_stripe_index": 1.281214812292829,
+              "controlling_fold": "B-R",
+              "ring_excess_at_max": 0.2812148122928291,
+              "cap_excess_at_max": 0.0,
+              "larger_excess": "ring",
+              "ring_only_box_floor": 1.281214812292829,
+              "cap_only_box_floor": 1.120336303436177
+            },
+            "E01-009": {
+              "whole_stripe_index": 2.1842013986040847,
+              "controlling_fold": "F-T",
+              "ring_excess_at_max": 0.703016155509602,
+              "cap_excess_at_max": 0.48118524309448296,
+              "larger_excess": "ring",
+              "ring_only_box_floor": 1.703016155509602,
+              "cap_only_box_floor": 1.481185243094483
+            },
+            "E01-010": {
+              "whole_stripe_index": 1.5122838741024842,
+              "controlling_fold": "B-Btm",
+              "ring_excess_at_max": 0.0,
+              "cap_excess_at_max": 0.5122838741024842,
+              "larger_excess": "cap",
+              "ring_only_box_floor": 1.2821359885258994,
+              "cap_only_box_floor": 1.5122838741024842
+            }
+          }
+        }
+      },
+      "definition": "Per-fold stripe index is 1 + ring excess + cap excess. Each box takes the maximum across five folds. The ring-only and cap-only floors independently set the other side's ratio to one and then recompute the maximum."
+    },
+    "1234": {
+      "seed": 1234,
+      "n": 10,
+      "methods": {
+        "b2": {
+          "mean_whole_stripe_index": 1.2654525706151123,
+          "mean_ring_only_box_floor": 1.1131690848925182,
+          "mean_cap_only_box_floor": 1.161079886658048,
+          "mean_ring_excess_at_max": 0.1043726839570642,
+          "mean_cap_excess_at_max": 0.161079886658048,
+          "mean_decrease_if_cap_ratios_are_one": 0.15228348572259412,
+          "mean_decrease_if_ring_ratios_are_one": 0.10437268395706426,
+          "controlling_folds": {
+            "B-Btm": 2,
+            "F-T": 3,
+            "F-R": 1,
+            "F-L": 3,
+            "B-R": 1
+          },
+          "controlling_fold_larger_excess": {
+            "ring": 6,
+            "tie": 3,
+            "cap": 1
+          },
+          "cases": {
+            "E01-001": {
+              "whole_stripe_index": 1.0967012649682366,
+              "controlling_fold": "B-Btm",
+              "ring_excess_at_max": 0.09670126496823661,
+              "cap_excess_at_max": 0.0,
+              "larger_excess": "ring",
+              "ring_only_box_floor": 1.0967012649682366,
+              "cap_only_box_floor": 1.0
+            },
+            "E01-002": {
+              "whole_stripe_index": 1.823851611199262,
+              "controlling_fold": "F-T",
+              "ring_excess_at_max": 0.5081668675757047,
+              "cap_excess_at_max": 0.31568474362355725,
+              "larger_excess": "ring",
+              "ring_only_box_floor": 1.5081668675757047,
+              "cap_only_box_floor": 1.3156847436235573
+            },
+            "E01-003": {
+              "whole_stripe_index": 1.0425345007416351,
+              "controlling_fold": "F-R",
+              "ring_excess_at_max": 0.042534500741635006,
+              "cap_excess_at_max": 0.0,
+              "larger_excess": "ring",
+              "ring_only_box_floor": 1.0425345007416351,
+              "cap_only_box_floor": 1.0
+            },
+            "E01-004": {
+              "whole_stripe_index": 1.0,
+              "controlling_fold": "F-L",
+              "ring_excess_at_max": 0.0,
+              "cap_excess_at_max": 0.0,
+              "larger_excess": "tie",
+              "ring_only_box_floor": 1.0,
+              "cap_only_box_floor": 1.0
+            },
+            "E01-005": {
+              "whole_stripe_index": 2.3405318156876014,
+              "controlling_fold": "F-T",
+              "ring_excess_at_max": 0.045417692730678305,
+              "cap_excess_at_max": 1.295114122956923,
+              "larger_excess": "cap",
+              "ring_only_box_floor": 1.1333817020852175,
+              "cap_only_box_floor": 2.2951141229569227
+            },
+            "E01-006": {
+              "whole_stripe_index": 1.2372816354917489,
+              "controlling_fold": "B-Btm",
+              "ring_excess_at_max": 0.23728163549174874,
+              "cap_excess_at_max": 0.0,
+              "larger_excess": "ring",
+              "ring_only_box_floor": 1.2372816354917489,
+              "cap_only_box_floor": 1.0
+            },
+            "E01-007": {
+              "whole_stripe_index": 1.1039513664455871,
+              "controlling_fold": "F-T",
+              "ring_excess_at_max": 0.10395136644558722,
+              "cap_excess_at_max": 0.0,
+              "larger_excess": "ring",
+              "ring_only_box_floor": 1.1039513664455871,
+              "cap_only_box_floor": 1.0
+            },
+            "E01-008": {
+              "whole_stripe_index": 1.0,
+              "controlling_fold": "F-L",
+              "ring_excess_at_max": 0.0,
+              "cap_excess_at_max": 0.0,
+              "larger_excess": "tie",
+              "ring_only_box_floor": 1.0,
+              "cap_only_box_floor": 1.0
+            },
+            "E01-009": {
+              "whole_stripe_index": 1.0,
+              "controlling_fold": "F-L",
+              "ring_excess_at_max": 0.0,
+              "cap_excess_at_max": 0.0,
+              "larger_excess": "tie",
+              "ring_only_box_floor": 1.0,
+              "cap_only_box_floor": 1.0
+            },
+            "E01-010": {
+              "whole_stripe_index": 1.0096735116170514,
+              "controlling_fold": "B-R",
+              "ring_excess_at_max": 0.009673511617051433,
+              "cap_excess_at_max": 0.0,
+              "larger_excess": "ring",
+              "ring_only_box_floor": 1.0096735116170514,
+              "cap_only_box_floor": 1.0
+            }
+          }
+        },
+        "b2_post": {
+          "mean_whole_stripe_index": 1.2630464623527078,
+          "mean_ring_only_box_floor": 1.1111073796116864,
+          "mean_cap_only_box_floor": 1.1605531764967618,
+          "mean_ring_excess_at_max": 0.10249328585594583,
+          "mean_cap_excess_at_max": 0.1605531764967619,
+          "mean_decrease_if_cap_ratios_are_one": 0.15193908274102128,
+          "mean_decrease_if_ring_ratios_are_one": 0.10249328585594582,
+          "controlling_folds": {
+            "B-Btm": 2,
+            "F-T": 4,
+            "F-L": 3,
+            "B-R": 1
+          },
+          "controlling_fold_larger_excess": {
+            "ring": 6,
+            "tie": 3,
+            "cap": 1
+          },
+          "cases": {
+            "E01-001": {
+              "whole_stripe_index": 1.095907516151477,
+              "controlling_fold": "B-Btm",
+              "ring_excess_at_max": 0.09590751615147697,
+              "cap_excess_at_max": 0.0,
+              "larger_excess": "ring",
+              "ring_only_box_floor": 1.095907516151477,
+              "cap_only_box_floor": 1.0
+            },
+            "E01-002": {
+              "whole_stripe_index": 1.8199854511868316,
+              "controlling_fold": "F-T",
+              "ring_excess_at_max": 0.502550482589633,
+              "cap_excess_at_max": 0.31743496859719866,
+              "larger_excess": "ring",
+              "ring_only_box_floor": 1.502550482589633,
+              "cap_only_box_floor": 1.3174349685971987
+            },
+            "E01-003": {
+              "whole_stripe_index": 1.03111940077512,
+              "controlling_fold": "F-T",
+              "ring_excess_at_max": 0.0311194007751201,
+              "cap_excess_at_max": 0.0,
+              "larger_excess": "ring",
+              "ring_only_box_floor": 1.03111940077512,
+              "cap_only_box_floor": 1.0
+            },
+            "E01-004": {
+              "whole_stripe_index": 1.0,
+              "controlling_fold": "F-L",
+              "ring_excess_at_max": 0.0,
+              "cap_excess_at_max": 0.0,
+              "larger_excess": "tie",
+              "ring_only_box_floor": 1.0,
+              "cap_only_box_floor": 1.0
+            },
+            "E01-005": {
+              "whole_stripe_index": 2.3338045999812933,
+              "controlling_fold": "F-T",
+              "ring_excess_at_max": 0.04570780361087301,
+              "cap_excess_at_max": 1.2880967963704204,
+              "larger_excess": "cap",
+              "ring_only_box_floor": 1.1318487411682792,
+              "cap_only_box_floor": 2.2880967963704206
+            },
+            "E01-006": {
+              "whole_stripe_index": 1.2382338712058212,
+              "controlling_fold": "B-Btm",
+              "ring_excess_at_max": 0.23823387120582118,
+              "cap_excess_at_max": 0.0,
+              "larger_excess": "ring",
+              "ring_only_box_floor": 1.2382338712058212,
+              "cap_only_box_floor": 1.0
+            },
+            "E01-007": {
+              "whole_stripe_index": 1.1016730833963297,
+              "controlling_fold": "F-T",
+              "ring_excess_at_max": 0.10167308339632963,
+              "cap_excess_at_max": 0.0,
+              "larger_excess": "ring",
+              "ring_only_box_floor": 1.1016730833963297,
+              "cap_only_box_floor": 1.0
+            },
+            "E01-008": {
+              "whole_stripe_index": 1.0,
+              "controlling_fold": "F-L",
+              "ring_excess_at_max": 0.0,
+              "cap_excess_at_max": 0.0,
+              "larger_excess": "tie",
+              "ring_only_box_floor": 1.0,
+              "cap_only_box_floor": 1.0
+            },
+            "E01-009": {
+              "whole_stripe_index": 1.0,
+              "controlling_fold": "F-L",
+              "ring_excess_at_max": 0.0,
+              "cap_excess_at_max": 0.0,
+              "larger_excess": "tie",
+              "ring_only_box_floor": 1.0,
+              "cap_only_box_floor": 1.0
+            },
+            "E01-010": {
+              "whole_stripe_index": 1.0097407008302044,
+              "controlling_fold": "B-R",
+              "ring_excess_at_max": 0.009740700830204396,
+              "cap_excess_at_max": 0.0,
+              "larger_excess": "ring",
+              "ring_only_box_floor": 1.0097407008302044,
+              "cap_only_box_floor": 1.0
+            }
+          }
+        },
+        "b3": {
+          "mean_whole_stripe_index": 1.1654311061439013,
+          "mean_ring_only_box_floor": 1.0082830424112856,
+          "mean_cap_only_box_floor": 1.1587724264119246,
+          "mean_ring_excess_at_max": 0.008283042411285723,
+          "mean_cap_excess_at_max": 0.15714806373261558,
+          "mean_decrease_if_cap_ratios_are_one": 0.1571480637326156,
+          "mean_decrease_if_ring_ratios_are_one": 0.006658679731976713,
+          "controlling_folds": {
+            "F-L": 4,
+            "B-Btm": 3,
+            "F-T": 3
+          },
+          "controlling_fold_larger_excess": {
+            "tie": 4,
+            "ring": 3,
+            "cap": 3
+          },
+          "cases": {
+            "E01-001": {
+              "whole_stripe_index": 1.0,
+              "controlling_fold": "F-L",
+              "ring_excess_at_max": 0.0,
+              "cap_excess_at_max": 0.0,
+              "larger_excess": "tie",
+              "ring_only_box_floor": 1.0,
+              "cap_only_box_floor": 1.0
+            },
+            "E01-002": {
+              "whole_stripe_index": 1.048377663626042,
+              "controlling_fold": "B-Btm",
+              "ring_excess_at_max": 0.0483776636260419,
+              "cap_excess_at_max": 0.0,
+              "larger_excess": "ring",
+              "ring_only_box_floor": 1.048377663626042,
+              "cap_only_box_floor": 1.0
+            },
+            "E01-003": {
+              "whole_stripe_index": 1.0,
+              "controlling_fold": "F-L",
+              "ring_excess_at_max": 0.0,
+              "cap_excess_at_max": 0.0,
+              "larger_excess": "tie",
+              "ring_only_box_floor": 1.0,
+              "cap_only_box_floor": 1.0
+            },
+            "E01-004": {
+              "whole_stripe_index": 1.0019574849634663,
+              "controlling_fold": "F-T",
+              "ring_excess_at_max": 0.0,
+              "cap_excess_at_max": 0.0019574849634661495,
+              "larger_excess": "cap",
+              "ring_only_box_floor": 1.0,
+              "cap_only_box_floor": 1.0019574849634663
+            },
+            "E01-005": {
+              "whole_stripe_index": 1.0,
+              "controlling_fold": "F-L",
+              "ring_excess_at_max": 0.0,
+              "cap_excess_at_max": 0.0,
+              "larger_excess": "tie",
+              "ring_only_box_floor": 1.0,
+              "cap_only_box_floor": 1.0
+            },
+            "E01-006": {
+              "whole_stripe_index": 1.0,
+              "controlling_fold": "F-L",
+              "ring_excess_at_max": 0.0,
+              "cap_excess_at_max": 0.0,
+              "larger_excess": "tie",
+              "ring_only_box_floor": 1.0,
+              "cap_only_box_floor": 1.0
+            },
+            "E01-007": {
+              "whole_stripe_index": 1.0029926037356014,
+              "controlling_fold": "B-Btm",
+              "ring_excess_at_max": 0.0029926037356015067,
+              "cap_excess_at_max": 0.0,
+              "larger_excess": "ring",
+              "ring_only_box_floor": 1.0029926037356014,
+              "cap_only_box_floor": 1.0
+            },
+            "E01-008": {
+              "whole_stripe_index": 1.0314601567512138,
+              "controlling_fold": "B-Btm",
+              "ring_excess_at_max": 0.03146015675121383,
+              "cap_excess_at_max": 0.0,
+              "larger_excess": "ring",
+              "ring_only_box_floor": 1.0314601567512138,
+              "cap_only_box_floor": 1.01624362679309
+            },
+            "E01-009": {
+              "whole_stripe_index": 1.0042137304162875,
+              "controlling_fold": "F-T",
+              "ring_excess_at_max": 0.0,
+              "cap_excess_at_max": 0.0042137304162873646,
+              "larger_excess": "cap",
+              "ring_only_box_floor": 1.0,
+              "cap_only_box_floor": 1.0042137304162875
+            },
+            "E01-010": {
+              "whole_stripe_index": 2.5653094219464023,
+              "controlling_fold": "F-T",
+              "ring_excess_at_max": 0.0,
+              "cap_excess_at_max": 1.5653094219464023,
+              "larger_excess": "cap",
+              "ring_only_box_floor": 1.0,
+              "cap_only_box_floor": 2.5653094219464023
+            }
+          }
+        },
+        "b4": {
+          "mean_whole_stripe_index": 1.1526672714578958,
+          "mean_ring_only_box_floor": 1.0419669629997417,
+          "mean_cap_only_box_floor": 1.116291757895754,
+          "mean_ring_excess_at_max": 0.039127486062300355,
+          "mean_cap_excess_at_max": 0.11353978539559537,
+          "mean_decrease_if_cap_ratios_are_one": 0.11070030845815418,
+          "mean_decrease_if_ring_ratios_are_one": 0.036375513562141706,
+          "controlling_folds": {
+            "F-T": 5,
+            "B-R": 1,
+            "F-L": 4
+          },
+          "controlling_fold_larger_excess": {
+            "cap": 5,
+            "ring": 2,
+            "tie": 3
+          },
+          "cases": {
+            "E01-001": {
+              "whole_stripe_index": 1.4419881445550988,
+              "controlling_fold": "F-T",
+              "ring_excess_at_max": 0.06406184546930205,
+              "cap_excess_at_max": 0.37792629908579667,
+              "larger_excess": "cap",
+              "ring_only_box_floor": 1.064061845469302,
+              "cap_only_box_floor": 1.3779262990857966
+            },
+            "E01-002": {
+              "whole_stripe_index": 1.4577265616568797,
+              "controlling_fold": "F-T",
+              "ring_excess_at_max": 0.03696532811527997,
+              "cap_excess_at_max": 0.4207612335415999,
+              "larger_excess": "cap",
+              "ring_only_box_floor": 1.0396173362369092,
+              "cap_only_box_floor": 1.4207612335416
+            },
+            "E01-003": {
+              "whole_stripe_index": 1.0211839051561595,
+              "controlling_fold": "B-R",
+              "ring_excess_at_max": 0.02118390515615942,
+              "cap_excess_at_max": 0.0,
+              "larger_excess": "ring",
+              "ring_only_box_floor": 1.0211839051561595,
+              "cap_only_box_floor": 1.0
+            },
+            "E01-004": {
+              "whole_stripe_index": 1.116936571519174,
+              "controlling_fold": "F-T",
+              "ring_excess_at_max": 0.006083452482719909,
+              "cap_excess_at_max": 0.110853119036454,
+              "larger_excess": "cap",
+              "ring_only_box_floor": 1.00608345248272,
+              "cap_only_box_floor": 1.1108531190364541
+            },
+            "E01-005": {
+              "whole_stripe_index": 1.0,
+              "controlling_fold": "F-L",
+              "ring_excess_at_max": 0.0,
+              "cap_excess_at_max": 0.0,
+              "larger_excess": "tie",
+              "ring_only_box_floor": 1.0,
+              "cap_only_box_floor": 1.0
+            },
+            "E01-006": {
+              "whole_stripe_index": 1.0,
+              "controlling_fold": "F-L",
+              "ring_excess_at_max": 0.0,
+              "cap_excess_at_max": 0.0,
+              "larger_excess": "tie",
+              "ring_only_box_floor": 1.0,
+              "cap_only_box_floor": 1.0
+            },
+            "E01-007": {
+              "whole_stripe_index": 1.1205057580703306,
+              "controlling_fold": "F-T",
+              "ring_excess_at_max": 0.004437033008284574,
+              "cap_excess_at_max": 0.11606872506204602,
+              "larger_excess": "cap",
+              "ring_only_box_floor": 1.030179794261067,
+              "cap_only_box_floor": 1.116068725062046
+            },
+            "E01-008": {
+              "whole_stripe_index": 1.109788477230057,
+              "controlling_fold": "F-T",
+              "ring_excess_at_max": 0.0,
+              "cap_excess_at_max": 0.10978847723005702,
+              "larger_excess": "cap",
+              "ring_only_box_floor": 1.0,
+              "cap_only_box_floor": 1.109788477230057
+            },
+            "E01-009": {
+              "whole_stripe_index": 1.2585432963912577,
+              "controlling_fold": "F-L",
+              "ring_excess_at_max": 0.2585432963912576,
+              "cap_excess_at_max": 0.0,
+              "larger_excess": "ring",
+              "ring_only_box_floor": 1.2585432963912577,
+              "cap_only_box_floor": 1.0275197250015866
+            },
+            "E01-010": {
+              "whole_stripe_index": 1.0,
+              "controlling_fold": "F-L",
+              "ring_excess_at_max": 0.0,
+              "cap_excess_at_max": 0.0,
+              "larger_excess": "tie",
+              "ring_only_box_floor": 1.0,
+              "cap_only_box_floor": 1.0
+            }
+          }
+        },
+        "b2_regional": {
+          "mean_whole_stripe_index": 1.2256891956809894,
+          "mean_ring_only_box_floor": 1.2106079650165764,
+          "mean_cap_only_box_floor": 1.015081230664413,
+          "mean_ring_excess_at_max": 0.2106079650165764,
+          "mean_cap_excess_at_max": 0.01508123066441296,
+          "mean_decrease_if_cap_ratios_are_one": 0.01508123066441296,
+          "mean_decrease_if_ring_ratios_are_one": 0.2106079650165764,
+          "controlling_folds": {
+            "B-Btm": 9,
+            "F-L": 1
+          },
+          "controlling_fold_larger_excess": {
+            "ring": 8,
+            "cap": 1,
+            "tie": 1
+          },
+          "cases": {
+            "E01-001": {
+              "whole_stripe_index": 1.2422623927842746,
+              "controlling_fold": "B-Btm",
+              "ring_excess_at_max": 0.24226239278427453,
+              "cap_excess_at_max": 0.0,
+              "larger_excess": "ring",
+              "ring_only_box_floor": 1.2422623927842746,
+              "cap_only_box_floor": 1.0
+            },
+            "E01-002": {
+              "whole_stripe_index": 1.751553509184848,
+              "controlling_fold": "B-Btm",
+              "ring_excess_at_max": 0.751553509184848,
+              "cap_excess_at_max": 0.0,
+              "larger_excess": "ring",
+              "ring_only_box_floor": 1.751553509184848,
+              "cap_only_box_floor": 1.0
+            },
+            "E01-003": {
+              "whole_stripe_index": 1.2384993382228213,
+              "controlling_fold": "B-Btm",
+              "ring_excess_at_max": 0.2089672337362184,
+              "cap_excess_at_max": 0.029532104486602817,
+              "larger_excess": "ring",
+              "ring_only_box_floor": 1.2089672337362183,
+              "cap_only_box_floor": 1.0295321044866028
+            },
+            "E01-004": {
+              "whole_stripe_index": 1.240504738336329,
+              "controlling_fold": "B-Btm",
+              "ring_excess_at_max": 0.24050473833632902,
+              "cap_excess_at_max": 0.0,
+              "larger_excess": "ring",
+              "ring_only_box_floor": 1.240504738336329,
+              "cap_only_box_floor": 1.0
+            },
+            "E01-005": {
+              "whole_stripe_index": 1.1762605211405184,
+              "controlling_fold": "B-Btm",
+              "ring_excess_at_max": 0.08009563606774672,
+              "cap_excess_at_max": 0.09616488507277177,
+              "larger_excess": "cap",
+              "ring_only_box_floor": 1.0800956360677467,
+              "cap_only_box_floor": 1.0961648850727719
+            },
+            "E01-006": {
+              "whole_stripe_index": 1.233613481829968,
+              "controlling_fold": "B-Btm",
+              "ring_excess_at_max": 0.2084981647452131,
+              "cap_excess_at_max": 0.025115317084755007,
+              "larger_excess": "ring",
+              "ring_only_box_floor": 1.208498164745213,
+              "cap_only_box_floor": 1.025115317084755
+            },
+            "E01-007": {
+              "whole_stripe_index": 1.2992703707371134,
+              "controlling_fold": "B-Btm",
+              "ring_excess_at_max": 0.29927037073711327,
+              "cap_excess_at_max": 0.0,
+              "larger_excess": "ring",
+              "ring_only_box_floor": 1.2992703707371134,
+              "cap_only_box_floor": 1.0
+            },
+            "E01-008": {
+              "whole_stripe_index": 1.0,
+              "controlling_fold": "F-L",
+              "ring_excess_at_max": 0.0,
+              "cap_excess_at_max": 0.0,
+              "larger_excess": "tie",
+              "ring_only_box_floor": 1.0,
+              "cap_only_box_floor": 1.0
+            },
+            "E01-009": {
+              "whole_stripe_index": 1.069201570893781,
+              "controlling_fold": "B-Btm",
+              "ring_excess_at_max": 0.06920157089378098,
+              "cap_excess_at_max": 0.0,
+              "larger_excess": "ring",
+              "ring_only_box_floor": 1.069201570893781,
+              "cap_only_box_floor": 1.0
+            },
+            "E01-010": {
+              "whole_stripe_index": 1.0057260336802398,
+              "controlling_fold": "B-Btm",
+              "ring_excess_at_max": 0.005726033680239828,
+              "cap_excess_at_max": 0.0,
+              "larger_excess": "ring",
+              "ring_only_box_floor": 1.0057260336802398,
+              "cap_only_box_floor": 1.0
+            }
+          }
+        },
+        "j0": {
+          "mean_whole_stripe_index": 1.3025627084118672,
+          "mean_ring_only_box_floor": 1.2797767234291657,
+          "mean_cap_only_box_floor": 1.0904557264264787,
+          "mean_ring_excess_at_max": 0.2463397411874383,
+          "mean_cap_excess_at_max": 0.0562229672244289,
+          "mean_decrease_if_cap_ratios_are_one": 0.02278598498270159,
+          "mean_decrease_if_ring_ratios_are_one": 0.21210698198538858,
+          "controlling_folds": {
+            "F-L": 1,
+            "F-R": 5,
+            "B-Btm": 3,
+            "B-R": 1
+          },
+          "controlling_fold_larger_excess": {
+            "ring": 8,
+            "cap": 2
+          },
+          "cases": {
+            "E01-001": {
+              "whole_stripe_index": 1.4204408246354288,
+              "controlling_fold": "F-L",
+              "ring_excess_at_max": 0.42044082463542876,
+              "cap_excess_at_max": 0.0,
+              "larger_excess": "ring",
+              "ring_only_box_floor": 1.4204408246354288,
+              "cap_only_box_floor": 1.0
+            },
+            "E01-002": {
+              "whole_stripe_index": 1.3335238787620005,
+              "controlling_fold": "F-R",
+              "ring_excess_at_max": 0.3335238787620005,
+              "cap_excess_at_max": 0.0,
+              "larger_excess": "ring",
+              "ring_only_box_floor": 1.3335238787620005,
+              "cap_only_box_floor": 1.17906930513344
+            },
+            "E01-003": {
+              "whole_stripe_index": 1.2447773299055702,
+              "controlling_fold": "F-R",
+              "ring_excess_at_max": 0.24477732990557022,
+              "cap_excess_at_max": 0.0,
+              "larger_excess": "ring",
+              "ring_only_box_floor": 1.2447773299055702,
+              "cap_only_box_floor": 1.0687452705432547
+            },
+            "E01-004": {
+              "whole_stripe_index": 1.25071694255035,
+              "controlling_fold": "B-Btm",
+              "ring_excess_at_max": 0.0,
+              "cap_excess_at_max": 0.25071694255034993,
+              "larger_excess": "cap",
+              "ring_only_box_floor": 1.1637782114933575,
+              "cap_only_box_floor": 1.25071694255035
+            },
+            "E01-005": {
+              "whole_stripe_index": 1.4982119827990674,
+              "controlling_fold": "F-R",
+              "ring_excess_at_max": 0.4982119827990673,
+              "cap_excess_at_max": 0.0,
+              "larger_excess": "ring",
+              "ring_only_box_floor": 1.4982119827990674,
+              "cap_only_box_floor": 1.0
+            },
+            "E01-006": {
+              "whole_stripe_index": 1.1575561954025466,
+              "controlling_fold": "F-R",
+              "ring_excess_at_max": 0.15755619540254673,
+              "cap_excess_at_max": 0.0,
+              "larger_excess": "ring",
+              "ring_only_box_floor": 1.1575561954025466,
+              "cap_only_box_floor": 1.0
+            },
+            "E01-007": {
+              "whole_stripe_index": 1.333121592066773,
+              "controlling_fold": "B-R",
+              "ring_excess_at_max": 0.33312159206677294,
+              "cap_excess_at_max": 0.0,
+              "larger_excess": "ring",
+              "ring_only_box_floor": 1.333121592066773,
+              "cap_only_box_floor": 1.0
+            },
+            "E01-008": {
+              "whole_stripe_index": 1.1342007203851683,
+              "controlling_fold": "F-R",
+              "ring_excess_at_max": 0.13420072038516817,
+              "cap_excess_at_max": 0.0,
+              "larger_excess": "ring",
+              "ring_only_box_floor": 1.1342007203851683,
+              "cap_only_box_floor": 1.0945130163438026
+            },
+            "E01-009": {
+              "whole_stripe_index": 1.2378715501932194,
+              "controlling_fold": "B-Btm",
+              "ring_excess_at_max": 0.0,
+              "cap_excess_at_max": 0.23787155019321937,
+              "larger_excess": "cap",
+              "ring_only_box_floor": 1.1705916109239158,
+              "cap_only_box_floor": 1.2378715501932194
+            },
+            "E01-010": {
+              "whole_stripe_index": 1.415206067418548,
+              "controlling_fold": "B-Btm",
+              "ring_excess_at_max": 0.34156488791782824,
+              "cap_excess_at_max": 0.07364117950071969,
+              "larger_excess": "ring",
+              "ring_only_box_floor": 1.3415648879178281,
+              "cap_only_box_floor": 1.0736411795007197
+            }
+          }
+        }
+      },
+      "definition": "Per-fold stripe index is 1 + ring excess + cap excess. Each box takes the maximum across five folds. The ring-only and cap-only floors independently set the other side's ratio to one and then recompute the maximum."
+    }
+  },
+  "cross_seed_verification": {
+    "selected": "j0",
+    "variant": "preflight",
+    "metrics": {
+      "cap_6_delta_e00": {
+        "measured_pairs": 10,
+        "mean_seed_42": 4.104541639486949,
+        "mean_seed_1234": 5.144699422518412,
+        "mean_paired_delta_1234_minus_42": 1.0401577830314637
+      },
+      "cap_6_lpips": {
+        "measured_pairs": 10,
+        "mean_seed_42": 0.37468159819642705,
+        "mean_seed_1234": 0.37724299542605877,
+        "mean_paired_delta_1234_minus_42": 0.002561397229631743
+      },
+      "non_native_7_sdr": {
+        "measured_pairs": 10,
+        "mean_seed_42": 1.5629969477653503,
+        "mean_seed_1234": 2.0241040229797362,
+        "mean_paired_delta_1234_minus_42": 0.461107075214386
+      },
+      "non_native_7_lpips": {
+        "measured_pairs": 10,
+        "mean_seed_42": 0.34492763397949083,
+        "mean_seed_1234": 0.3540435766535146,
+        "mean_paired_delta_1234_minus_42": 0.009115942674023766
+      },
+      "bleed_fill_pct": {
+        "measured_pairs": 10,
+        "mean_seed_42": 67.46014741172438,
+        "mean_seed_1234": 62.3478745286253,
+        "mean_paired_delta_1234_minus_42": -5.112272883099075
+      },
+      "bleed_fill_v2_pct": {
+        "measured_pairs": 10,
+        "mean_seed_42": 58.522454576619815,
+        "mean_seed_1234": 51.24400068563593,
+        "mean_paired_delta_1234_minus_42": -7.278453890983887
+      },
+      "stripe_index": {
+        "measured_pairs": 10,
+        "mean_seed_42": 1.7208844875631943,
+        "mean_seed_1234": 1.3025627084118672,
+        "mean_paired_delta_1234_minus_42": -0.41832177915132707
+      },
+      "clip_score": {
+        "measured_pairs": 10,
+        "mean_seed_42": 0.6873757988214493,
+        "mean_seed_1234": 0.7035919018089771,
+        "mean_paired_delta_1234_minus_42": 0.016216102987527847
+      },
+      "image_reward": {
+        "measured_pairs": 10,
+        "mean_seed_42": -1.6541299104690552,
+        "mean_seed_1234": -1.3773022592067719,
+        "mean_paired_delta_1234_minus_42": 0.2768276512622833
+      },
+      "elapsed_seconds": {
+        "measured_pairs": 10,
+        "mean_seed_42": 54.89987895339728,
+        "mean_seed_1234": 54.50593482963741,
+        "mean_paired_delta_1234_minus_42": -0.39394412375986576
+      },
+      "peak_memory_mib": {
+        "measured_pairs": 10,
+        "mean_seed_42": 10529.544921875,
+        "mean_seed_1234": 10529.076171875,
+        "mean_paired_delta_1234_minus_42": -0.46875
+      },
+      "top_interior_texture_energy": {
+        "measured_pairs": 10,
+        "mean_seed_42": 0.001592333780718036,
+        "mean_seed_1234": 0.001361331831139978,
+        "mean_paired_delta_1234_minus_42": -0.00023100194957805797
+      },
+      "bottom_interior_texture_energy": {
+        "measured_pairs": 10,
+        "mean_seed_42": 0.0013414909830316902,
+        "mean_seed_1234": 0.0013969865802209824,
+        "mean_paired_delta_1234_minus_42": 5.549559718929231e-05
+      },
+      "top_near_seam_energy_gap": {
+        "measured_pairs": 10,
+        "mean_seed_42": 0.0007729367718335803,
+        "mean_seed_1234": 0.0015812256519438961,
+        "mean_paired_delta_1234_minus_42": 0.0008082888801103158
+      },
+      "bottom_near_seam_energy_gap": {
+        "measured_pairs": 10,
+        "mean_seed_42": 0.001340606999292504,
+        "mean_seed_1234": 0.0016552344684896525,
+        "mean_paired_delta_1234_minus_42": 0.00031462746919714847
+      },
+      "cap_6_near_seam_energy_gap": {
+        "measured_pairs": 10,
+        "mean_seed_42": 0.0010567718855630421,
+        "mean_seed_1234": 0.0016182300602167743,
+        "mean_paired_delta_1234_minus_42": 0.0005614581746537322
+      },
+      "wrap_lb_near_seam_energy_gap": {
+        "measured_pairs": 10,
+        "mean_seed_42": 0.00038936074706725777,
+        "mean_seed_1234": 0.0002247471857117489,
+        "mean_paired_delta_1234_minus_42": -0.00016461356135550887
+      },
+      "F_interior_texture_energy": {
+        "measured_pairs": 10,
+        "mean_seed_42": 0.002530770481098443,
+        "mean_seed_1234": 0.0024681931710802017,
+        "mean_paired_delta_1234_minus_42": -6.25773100182414e-05
+      },
+      "L_interior_texture_energy": {
+        "measured_pairs": 10,
+        "mean_seed_42": 0.0024866898078471423,
+        "mean_seed_1234": 0.0025411411363165824,
+        "mean_paired_delta_1234_minus_42": 5.445132846944034e-05
+      },
+      "B_interior_texture_energy": {
+        "measured_pairs": 10,
+        "mean_seed_42": 0.002541477419435978,
+        "mean_seed_1234": 0.002502706786617637,
+        "mean_paired_delta_1234_minus_42": -3.8770632818341257e-05
+      },
+      "R_interior_texture_energy": {
+        "measured_pairs": 10,
+        "mean_seed_42": 0.0025028357631526887,
+        "mean_seed_1234": 0.0024395943502895532,
+        "mean_paired_delta_1234_minus_42": -6.324141286313534e-05
+      },
+      "ring_interior_texture_energy": {
+        "measured_pairs": 10,
+        "mean_seed_42": 0.002515443367883563,
+        "mean_seed_1234": 0.0024879088610759935,
+        "mean_paired_delta_1234_minus_42": -2.7534506807569413e-05
+      },
+      "top_cap_to_ring_texture_ratio": {
+        "measured_pairs": 10,
+        "mean_seed_42": 0.5640447176564679,
+        "mean_seed_1234": 0.5081514304221723,
+        "mean_paired_delta_1234_minus_42": -0.05589328723429559
+      },
+      "bottom_cap_to_ring_texture_ratio": {
+        "measured_pairs": 10,
+        "mean_seed_42": 0.49188537311835173,
+        "mean_seed_1234": 0.5323982668692895,
+        "mean_paired_delta_1234_minus_42": 0.040512893750937716
+      },
+      "top_texture_energy_2x": {
+        "measured_pairs": 10,
+        "mean_seed_42": 0.0036011130665428936,
+        "mean_seed_1234": 0.0032214610313531012,
+        "mean_paired_delta_1234_minus_42": -0.0003796520351897925
+      },
+      "bottom_texture_energy_2x": {
+        "measured_pairs": 10,
+        "mean_seed_42": 0.003189446299802512,
+        "mean_seed_1234": 0.0034751464787404983,
+        "mean_paired_delta_1234_minus_42": 0.0002857001789379865
+      },
+      "top_texture_retention_2x": {
+        "measured_pairs": 10,
+        "mean_seed_42": 2.2297583473827416,
+        "mean_seed_1234": 2.357465695145019,
+        "mean_paired_delta_1234_minus_42": 0.1277073477622768
+      },
+      "bottom_texture_retention_2x": {
+        "measured_pairs": 10,
+        "mean_seed_42": 2.3243265873365933,
+        "mean_seed_1234": 2.4738647541421255,
+        "mean_paired_delta_1234_minus_42": 0.1495381668055324
+      }
+    }
+  }
+}
