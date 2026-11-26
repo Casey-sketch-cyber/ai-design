@@ -170,8 +170,12 @@ def _load(engine, path):
     return PreparedRing(layout, torch.as_tensor(latent), Image.fromarray(rgb), torch.as_tensor(state), None)
 
 
+def validation_rings(experiment):
+    return getattr(experiment, "validation_ring_dir", experiment.output / "ring-validation")
+
+
 def ring(experiment, engine, brief, seed):
-    directory = experiment.original_rings if seed == 42 else experiment.output / "ring-validation"
+    directory = experiment.original_rings if seed == 42 else validation_rings(experiment)
     directory.mkdir(parents=True, exist_ok=True)
     key = f"{brief['id']}-{seed}"
     path = directory / f"{key}.npz"
@@ -208,7 +212,7 @@ def ring(experiment, engine, brief, seed):
 
 def prepare_validation(experiment, device):
     import torch
-    path = experiment.output / "ring-validation"
+    path = validation_rings(experiment)
     if all((path / f"{b['id']}-1234.npz").is_file() and (path / f"{b['id']}-1234.json").is_file()
            for b in experiment.briefs):
         return
@@ -233,7 +237,8 @@ def _style_record(engine, brief, seed, layer, frozen):
     return bank, recorded
 
 
-def generate(experiment, candidate, parameters, device, *, seed=42, source=None, bound_g3=False):
+def generate(experiment, candidate, parameters, device, *, seed=42, source=None, bound_g3=False,
+             engine_factory=_engine, implementation=None):
     import torch
     from .methods.v3_capgeom_attention import inject_aligned_bank
     from .methods.v3_inpainting import verify_inpaint_model
@@ -241,6 +246,8 @@ def generate(experiment, candidate, parameters, device, *, seed=42, source=None,
     destination = experiment.output / candidate
     destination.mkdir(parents=True, exist_ok=True)
     plan = {"parameters": parameters, "seed": seed, "validation_of": source}
+    if implementation is not None:
+        plan["cap_implementation"] = implementation
     if parameters["strength"] is not None:
         plan["harmonic_implementation_sha256"] = file_hash(METHODS_DIR / "v3_capgeom_init.py")
     plan_path = destination / "candidate.json"
@@ -259,7 +266,7 @@ def generate(experiment, candidate, parameters, device, *, seed=42, source=None,
         return jobs, None
 
     hardware = _hardware(device)
-    engine = _engine(experiment, hardware)
+    engine = engine_factory(experiment, hardware)
     models = experiment.root / "cache/models"
     identity = verify_inpaint_model(models)
     engine._open_inpaint()
@@ -341,7 +348,7 @@ def _check_generation(experiment, jobs, *, seed):
         mask = np.isin(np.asarray(source), SIDE_LABELS)
     for job in jobs:
         item = job.atlas
-        expected = (experiment.original_rings if seed == 42 else experiment.output / "ring-validation")
+        expected = (experiment.original_rings if seed == 42 else validation_rings(experiment))
         source = read_json(expected / f"{item.identifier}.json")
         record = read_json(item.metadata)["ring"]
         with Image.open(item.path) as picture:
@@ -353,9 +360,11 @@ def _check_generation(experiment, jobs, *, seed):
             raise ValueError(f"Subsequent ring verification failed for {item.identifier}.")
 
 
-def trial(experiment, name, params, device, *, seed=42, source=None):
+def trial(experiment, name, params, device, *, seed=42, source=None, engine_factory=_engine,
+          implementation=None):
     jobs, rejected = generate(experiment, name, params, device, seed=seed, source=source,
-                               bound_g3=name == "g3")
+                               bound_g3=name == "g3", engine_factory=engine_factory,
+                               implementation=implementation)
     if rejected is not None:
         return rejected
     _check_generation(experiment, jobs, seed=seed)

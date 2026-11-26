@@ -4,7 +4,7 @@
 
 ## 当前状态
 
-任务 11、12 已合并（PR #11、#12）。诊断显示 G2 的盖面几乎是平涂色块（面内纹理能量约为 B2-regional 的 1/50），盖侧 ΔE00 低很大程度上来自这一点。Claude 据此修正立场：暂不引入条带 v2，v1 继续冻结作为关口，问题回到方法本身。任务 13（Codex：ILVR 低频引导等，让盖面颜色对齐且有纹理）与任务 14（Gemini：回应立场修正、审阅任务 13）并行。
+任务 13 已完成，种子 42 按分层规则保留 G5。盖侧六缝 ΔE00 为 4.189，七缝 LPIPS 为 0.3344。顶底纹理硬约束通过，Step 1 未通过。停在 Step 1，待 Claude 审查。 [任务 13 报告](experiments/E02/CAPTEXTURE.md)
 
 ## 待办
 
@@ -28,7 +28,7 @@
 - [x] Gemini：任务 11，见 `tasks/11-gemini-v3-g2-stripe-discussion.md`（已在 PR #10 留言逐条回应 5 项立场）
 - [x] Codex：任务 12，已完成 [CPU 条带诊断](experiments/E02/STRIPE-DIAG.md)
 - [x] Claude：汇总任务 11、12，修正立场（暂不引入条带 v2），合并 PR #11、#12（2026-11-25）
-- [ ] Codex：任务 13，见 `tasks/13-codex-v3-cap-texture.md`（做完停下等审查）
+- [x] Codex：任务 13，见 [盖面颜色与纹理延续报告](experiments/E02/CAPTEXTURE.md)
 - [x] Gemini：任务 14，见 `tasks/14-gemini-respond-revised-stance.md`（已在 PR #12 留言回应立场修正并审阅任务 13 设计）
 - [ ] Claude：审查任务 13 的 PR，结合 Gemini 意见
 - [x] Claude：审查任务 01 的 PR #1（2026-11-24，退回）
@@ -47,6 +47,12 @@
 ---
 
 ## 工作记录
+
+### 2026-11-25 · Codex · v3 盖面颜色与纹理延续
+
+- **完成**：实测四组 ILVR、纹理注入及两档高强度 SDEdit，比对 30 步原日程和冻结环带。
+- **选型**：保留 G5。顶盖和底盖面内纹理硬约束通过，结果同时登记整盒条带、逐折拆解及长尾。
+- **关口与交接**：客观条带 v1 仍未达标，原生折线目视通过。种子 1234 的盖侧 ΔE00 为 5.346，条带 v1 为 1.3455。停在 Step 1，待 Claude 审查。 [报告](experiments/E02/CAPTEXTURE.md)
 
 ### 2026-11-25 · gemini · gemini/v3-cap-texture-review（任务 14：PR #12 立场回应与任务 13 审阅）
 - **完成**：核对任务 12 诊断报告（`STRIPE-DIAG.md`）、`stripe-diag-texture.csv`、`stripe-diag-lpips.csv` 及原像素裁图，结合 `v3_geometry.py`、`v3_capfix_geometry.py`、`v3_capgeom.py`、`v3_inpainting.py` 在 PR #12 留言逐条回应任务 14 的 4 个问题（见 https://github.com/Casey-sketch-cyber/ai-design/pull/12#issuecomment-7166031174 ）。
