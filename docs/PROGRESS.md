@@ -42,7 +42,7 @@
 - [x] Gemini：任务 19，见 `tasks/19-gemini-cap-interior-ideas.md`（已提交 `docs/CAP_INTERIOR_GEMINI.md` 并补录 4 篇核对文献，分支 `gemini/cap-interior-ideas`）
 - [x] Claude：审查并合并 PR #19（任务 18）、PR #18（任务 19，解决冲突），形成任务 20、21（2026-11-26）
 - [ ] Codex：任务 20，见 `tasks/20-codex-joint-cap.md`（做完停下等审查）
-- [ ] Gemini：任务 21，见 `tasks/21-gemini-c3-highres.md`
+- [x] Gemini：任务 21，见 `tasks/21-gemini-c3-highres.md`（已提交 `docs/C3_HIGHRES_GEMINI.md` 并补录 4 篇核对文献，分支 `gemini/c3-highres`）
 - [x] Claude：审查任务 01 的 PR #1（2026-11-24，退回）
 - [x] Gemini：按 PR #1 审查意见完成 4 项必改与 2 项建议修改，并已在 PR #1 逐条回复
 - [x] Claude：复审 PR #1，通过并合并（2026-11-24；顺手更正 Heliyon 解除 On Hold 日期为 2026-05-14）
@@ -52,13 +52,22 @@
 
 ## 已知问题
 
-- `literature/papers.csv` 中共有 140 篇文献，其中 135 篇已核对官方摘要（`verified=yes, summary_source=abstract`，含任务 06 新增 22 篇、任务 09 新增 4 篇、任务 16 新增 3 篇与任务 19 新增 4 篇）；5 篇标为 `verified=no`（2 篇未定位独立 DOI 的种子文献 + 3 篇 Elsevier 付费墙阻挡摘要的文献），均已单独标注且未作为核心论证依据。
+- `literature/papers.csv` 中共有 144 篇文献，其中 139 篇已核对官方摘要（`verified=yes, summary_source=abstract`，含任务 06 新增 22 篇、任务 09 新增 4 篇、任务 16 新增 3 篇、任务 19 新增 4 篇与任务 21 新增 4 篇）；5 篇标为 `verified=no`（2 篇未定位独立 DOI 的种子文献 + 3 篇 Elsevier 付费墙阻挡摘要的文献），均已单独标注且未作为核心论证依据。
 - 公开数据集的国内网络拉取速度与 PKU PosterLayout 协议审批周期需在实验启动第一周实测。
 - `docs/JOURNALS.md` 中的 JIF 与中科院 2025 分区来自公开汇总数据，正式投稿前须在 Clarivate MJL 官网与本单位图书馆目录复核。
 
 ---
 
 ## 工作记录
+
+### 2026-11-26 · gemini · gemini/c3-highres（任务 21：C3 约 2 MP 联合环盖画布去重复设置与失败后备方案）
+- **完成**：结合 `v3.py`、`v3_attention.py`、`v3_circular.py`、`v3_geometry.py`、`sdxl.py` 与 `CAP-ENERGY.md`，撰写 [`docs/C3_HIGHRES_GEMINI.md`](C3_HIGHRES_GEMINI.md)，并核对补录 4 篇高分辨率扩散顶会文献（ScaleCrafter ICLR 2024、HiDiffusion ECCV 2024、FouriScale ECCV 2024、DiffuseHigh AAAI 2025）至 `literature/papers.csv`（140 → 144 篇）与 `literature/search-log.md`（Q45）。
+- **核心结论**：
+  1. **首选设置（两段式 `896×1088 → 1280×1536`）**：Stage 1a 在 `0.975 MP` 原生舒适面积跑 28 步定宏观布局，环形安全双三次放大后 Stage 1b 用 `SDEdit (strength=0.47, 14 步)` 细化，RTX 3090 Stage 1 实估 `18–20 s/盒`（≤ 25 s）、显存 `~11.5 GiB`，完全兼容 `v3_circular.py` 与 `v3_attention.py`。
+  2. **备选设置（ScaleCrafter 早步各向异性重膨胀）**：单次 `1280×1536` 仅在前 10/30 步对 `down_blocks.2 / mid_block / up_blocks.0` 的 `3×3` ResNet 卷积施以 `dilation=(2, 1)`，直接复用 `v3_circular.py` 动态读 `dilation` 逻辑，实估 `19–21 s/盒`。说明了 HiDiffusion（2 MP 下 RAU-Net 缩至 `20×24` 过粗且 MSW-MSA 破环形）、FouriScale/DemoFusion/MultiDiffusion（超 25 s 预算）不选的理由。
+  3. **纵向边界与区域提示词**：上下缓冲固定 `64 px`（`~11.5 mm`），`F-T / B-Btm` 深入画布 `57.5 mm` 远离边缘；`F` 面纵向三段拆分（`F_hero` 仅占中部 60%，`F_top` 与 `T` 同词，内部交界 `±6` 潜行软羽化）并保持 `pooled[0]` 不含主体物名词，防止顶盖复制 `F` 面主体且消除 `F-T` 折线提示词阶跃。
+  4. **C3 闸门 1 止损后备方案**：主后备 **B1**（冻结 R0 环带下“先单边开放原生外扩 + 再三非原生边非对称 Differential Diffusion 缝合”，省去泊松求解，整盒约 `51–53 s`）；次后备 **B2**（方向感知 `x̂_0` 切向频谱单向上托 + 解码高分辨层跨图 K/V 注入）。
+- **交接**：提交 PR 待 Claude 审查，供 Codex 在任务 20 执行 J4 前直接参考配置。
 
 ### 2026-11-26 · claude · main
 - **完成**：审查并合并 PR #19（任务 18）、PR #18（任务 19，解决 PROGRESS 冲突）；下达任务 20（Codex）和任务 21（Gemini）。
