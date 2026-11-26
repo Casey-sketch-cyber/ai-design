@@ -15,7 +15,16 @@
 
 网页版 Gemini 不能执行命令时：把 `tasks/01-gemini-literature-tree-opc-packaging.md` 和 findInnovation 的 `SKILL.md`、两个模板的内容一起粘贴给它，产出再由你或其他 AI 提交到本仓库。
 
-## 发给 Codex 的指令（任务 13，直接复制）
+## 发给 Codex 的指令（任务 15，直接复制）
+
+```
+请 pull 仓库 https://github.com/Casey-sketch-cyber/ai-design.git 的最新 main，
+先读 AGENTS.md、PR #14 里 Claude 的审查留言和 PR #12 里 Gemini 的任务 14 留言，
+然后执行 tasks/15-codex-v3-texture-uniform-ring.md（盖面纹理均匀化 U1/U2 + 环带负向提示词 R1，B2-regional 同步加 R1；冻结指标和关口不动；种子 42 和 1234 都报告关口，做完就停）。
+必须能在 RTX 3090 24GB 上跑通。在分支 codex/v3-texture-uniform-ring 上完成，推送并创建 PR，不要自己合并。全程用中文沟通。
+```
+
+## 发给 Codex 的指令（任务 13，已完成）
 
 ```
 请 pull 仓库 https://github.com/Casey-sketch-cyber/ai-design.git 的最新 main，
@@ -24,7 +33,7 @@
 必须能在 RTX 3090 24GB 上跑通。在分支 codex/v3-cap-texture 上完成，推送并创建 PR，不要自己合并。全程用中文沟通。
 ```
 
-## 发给 Gemini 的指令（任务 14，直接复制，与任务 13 并行）
+## 发给 Gemini 的指令（任务 14，已完成）
 
 ```
 请 pull 仓库 https://github.com/Casey-sketch-cyber/ai-design.git 的最新 main，
