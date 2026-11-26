@@ -60,6 +60,10 @@
 
 ## 工作记录
 
+### 2026-11-26 · claude · main（晚）
+- **完成**：审查并合并 PR #20（Gemini 任务 21）。任务 20 补充：J4 采用两段式首选设置（896×1088 → 1280×1536，SDEdit 0.47）和 F、B 面纵向三段提示词；新增 J4b（冻结 R0 的环向带状外扩），与 J4 并行。
+- **理由**：Gemini 指出现有盖面受“四面冻结墙”夹逼，是草茎转横、内部变简的原因之一。J4b 去掉四面墙且不动环带，不承担闸门 1 风险。
+
 ### 2026-11-26 · gemini · gemini/c3-highres（任务 21：C3 约 2 MP 联合环盖画布去重复设置与失败后备方案）
 - **完成**：结合 `v3.py`、`v3_attention.py`、`v3_circular.py`、`v3_geometry.py`、`sdxl.py` 与 `CAP-ENERGY.md`，撰写 [`docs/C3_HIGHRES_GEMINI.md`](C3_HIGHRES_GEMINI.md)，并核对补录 4 篇高分辨率扩散顶会文献（ScaleCrafter ICLR 2024、HiDiffusion ECCV 2024、FouriScale ECCV 2024、DiffuseHigh AAAI 2025）至 `literature/papers.csv`（140 → 144 篇）与 `literature/search-log.md`（Q45）。
 - **核心结论**：

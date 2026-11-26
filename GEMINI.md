@@ -2,7 +2,7 @@
 
 先读完本仓库根目录的 `AGENTS.md`，按其中的工作规则执行。
 
-当前指派给 Gemini 的任务：`tasks/21-gemini-c3-highres.md`。
+当前指派给 Gemini 的任务：暂无（任务 21 已完成，等待 Codex 任务 20 的结果）。
 
 When choosing a topic, building a literature tree or judging innovation points, first read and follow
 https://github.com/Casey-sketch-cyber/findInnovation/blob/main/skills/research-innovation-points/SKILL.md

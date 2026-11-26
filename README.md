@@ -19,12 +19,12 @@
 
 ```
 请 pull 仓库 https://github.com/Casey-sketch-cyber/ai-design.git 的最新 main，
-先读 AGENTS.md、PR #19 和 PR #18 里 Claude 的留言、docs/CAP_INTERIOR_GEMINI.md 第 1、3 节，
-然后执行 tasks/20-codex-joint-cap.md（按顺序测 J1 提示词净化、J2 SDXL base 混合潜变量替代 inpainting、J3 环内单向统计上托、J4 原生联合环盖生成（先过闸门 1 再做 Stage 2）；冻结指标和关口不动，只能补足内部纹理，不得压低贴边细节；两个种子都报告关口，做完就停）。
+先读 AGENTS.md、PR #19、#18、#20 里 Claude 的留言、docs/CAP_INTERIOR_GEMINI.md 第 1、3 节和 docs/C3_HIGHRES_GEMINI.md，
+然后执行 tasks/20-codex-joint-cap.md（按顺序测 J1 提示词净化、J2 SDXL base 混合潜变量替代 inpainting、J3 环内单向统计上托；再并行做 J4 原生联合环盖生成（两段式设置，先过闸门 1 再做 Stage 2）和 J4b 冻结 R0 的环向带状外扩；冻结指标和关口不动，只能补足内部纹理，不得压低贴边细节；两个种子都报告关口，做完就停）。
 必须能在 RTX 3090 24GB 上跑通。在分支 codex/joint-cap 上完成，推送并创建 PR，不要自己合并。全程用中文沟通。
 ```
 
-## 发给 Gemini 的指令（任务 21，直接复制，与任务 20 并行）
+## 发给 Gemini 的指令（任务 21，已完成）
 
 ```
 请 pull 仓库 https://github.com/Casey-sketch-cyber/ai-design.git 的最新 main，
