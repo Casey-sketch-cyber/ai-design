@@ -1,0 +1,28 @@
+protocol: e02-v3-panel-fix
+seeds: [42, 1234]
+ring: r0
+cap_prompt:
+  style: "flat orthographic print artwork, evenly lit, edge-to-edge illustration"
+  negative_additions: "frame, border, panel, inset picture, card, label, collage, patchwork, split layout, rectangle"
+guidance_gamma:
+  k1: 0.30
+  k2: 0.40
+  k4: 0.30
+outpaint:
+  strip_height_px: 320
+  cap_buffer_px: 64
+  steps: 22
+  guidance: 5.0
+  feather_last: 3
+  orientation: {T: above_F, Btm: below_B}
+stage2:
+  native_lock_mm: 15.0
+  native_unlock_mm: 3.0
+  edge_transition_mm: 20.0
+  edge_strength: 0.85
+  interior_strength: 0.30
+  mix_edge_transition_mm: 20.0
+  harmonic_scale: 2
+  cap_scale: 1
+  steps: 30
+  bleed_mm: 3.0
