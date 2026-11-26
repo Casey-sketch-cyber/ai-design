@@ -1,0 +1,295 @@
+{
+  "selection": "u1",
+  "comparison_briefs": [
+    "E01-001",
+    "E01-003",
+    "E01-007"
+  ],
+  "focus_briefs": [
+    "E01-001",
+    "E01-003",
+    "E01-004",
+    "E01-007",
+    "E01-008"
+  ],
+  "native_edge_width_per_side_px": 25,
+  "native_edge_rendering": "Raw atlas strips with rigid reorientation, no resampling",
+  "columns": [
+    "B2-regional",
+    "Task 13 G5",
+    "Task 15 final U1"
+  ],
+  "geometry_sha256": "d09c45f26f91b6374e40d708fc0748e7194eb41293ed7274c29fb74b4dd0b616",
+  "seeds": {
+    "42": {
+      "E01-001": {
+        "sources": [
+          {
+            "raw_source": "/root/autodl-tmp/ai-design/outputs/e02/step1/c6bb770094d3/b2_regional/E01-001-42.png",
+            "raw_sha256": "9024cf4a61f051a05bb3094e838eb0dac85c921b44a9353e5668ade618af2840",
+            "preflight_source": "/root/autodl-tmp/ai-design/outputs/e02/step1/c6bb770094d3/evaluation/b2_regional/E01-001-42.preflight.png",
+            "preflight_sha256": "bd8b05413fd5e23af6e02f5a49f23eb992aabb088d91529cfd5f4cf8eb2be75d",
+            "score_sha256": "b241b748b01972baeaa6b67cc0878bcd6d370254f0c967dcbffd32ca14e13672"
+          },
+          {
+            "raw_source": "/root/autodl-tmp/ai-design/outputs/e02/captexture/runs/372fd0ca6170/g5/E01-001-42.png",
+            "raw_sha256": "52babbb040363ac49c150796ec816e4f34d303e366dd215c465638b15b3e0e5e",
+            "preflight_source": "/root/autodl-tmp/ai-design/outputs/e02/captexture/runs/372fd0ca6170/evaluation/g5/E01-001-42.preflight.png",
+            "preflight_sha256": "9d4ea4aff4ecf0b37f13ba1f0f664dc3f6dad7632b482703196577e21d025140",
+            "score_sha256": "b7531ad9b2839b1ac107e9293f3cc9757bfe11b3ea7276e2e766bfb4d608ce92"
+          },
+          {
+            "raw_source": "/root/autodl-tmp/ai-design/outputs/e02/uniform-ring/runs/35493b7f5869/u1/E01-001-42.png",
+            "raw_sha256": "ffb7f4bb68314892d1b847b65536e456c8fc9c5e787971e6a61d7b17d52ab5ea",
+            "preflight_source": "/root/autodl-tmp/ai-design/outputs/e02/uniform-ring/runs/35493b7f5869/evaluation/u1/E01-001-42.preflight.png",
+            "preflight_sha256": "bbad4082f3bff38061aa47b7f256a07244bc24351b7694e12e5835b82c00d987",
+            "score_sha256": "0f3f5d411f601abc4aa09d784f0f55e933127644cfaca5d31de6415fc95fa152"
+          }
+        ],
+        "native_cap_edges": "seed-42/E01-001-cap-edges.png",
+        "comparison": "seed-42/E01-001-comparison.jpg"
+      },
+      "E01-003": {
+        "sources": [
+          {
+            "raw_source": "/root/autodl-tmp/ai-design/outputs/e02/step1/c6bb770094d3/b2_regional/E01-003-42.png",
+            "raw_sha256": "ee204e998acd358995a875c41a8faba3cef05b1d74026c8f900a9e760e741180",
+            "preflight_source": "/root/autodl-tmp/ai-design/outputs/e02/step1/c6bb770094d3/evaluation/b2_regional/E01-003-42.preflight.png",
+            "preflight_sha256": "d028fff04b149d8671f2127a0add1e8bbc686113ac354b8d7926999d9d14bc70",
+            "score_sha256": "e15fa958e4c3b152701d7310052cb535e8657b5172e53fd8b6ce515e7bf0b858"
+          },
+          {
+            "raw_source": "/root/autodl-tmp/ai-design/outputs/e02/captexture/runs/372fd0ca6170/g5/E01-003-42.png",
+            "raw_sha256": "8710fa4be9be35a5921a5954826e13e9cf54d0192969f7fec6e6aaaaf65e32fb",
+            "preflight_source": "/root/autodl-tmp/ai-design/outputs/e02/captexture/runs/372fd0ca6170/evaluation/g5/E01-003-42.preflight.png",
+            "preflight_sha256": "12c10210bddd2a8b87b54961da7c7714ac3302e9d0dc3043ff268940e7ec1def",
+            "score_sha256": "de8ea714ab506b04c3c0ec93d294dbb48ff4ccecae2ed77d39d2ab906ad50fd9"
+          },
+          {
+            "raw_source": "/root/autodl-tmp/ai-design/outputs/e02/uniform-ring/runs/35493b7f5869/u1/E01-003-42.png",
+            "raw_sha256": "bca038a8baebf8a09ddcf43412760b45b1b381b80cabdf3a954f2a8fd5f32709",
+            "preflight_source": "/root/autodl-tmp/ai-design/outputs/e02/uniform-ring/runs/35493b7f5869/evaluation/u1/E01-003-42.preflight.png",
+            "preflight_sha256": "a1123d2e283bd09d97fb8eff19385de870679a9b7b385c06b3848dc2ffdc9e68",
+            "score_sha256": "51f55d9b53a6c0828d01a0e7cd71c63256abc006b07b0be14dcaa29011587553"
+          }
+        ],
+        "native_cap_edges": "seed-42/E01-003-cap-edges.png",
+        "comparison": "seed-42/E01-003-comparison.jpg"
+      },
+      "E01-004": {
+        "sources": [
+          {
+            "raw_source": "/root/autodl-tmp/ai-design/outputs/e02/step1/c6bb770094d3/b2_regional/E01-004-42.png",
+            "raw_sha256": "29182111d76cf61dcfcc19c503b0399d7d7bfff350a9eb4d23efb2a8a61b37d5",
+            "preflight_source": "/root/autodl-tmp/ai-design/outputs/e02/step1/c6bb770094d3/evaluation/b2_regional/E01-004-42.preflight.png",
+            "preflight_sha256": "8d4c880bbe11ce6b979b50e7ac0787b5ab20971b5573fd1d9599aba1a73246f8",
+            "score_sha256": "ea1e373a0ff600c7c240d9b4cc21c7cfcb6dfc7d4e9cecf338cf7c819f8a0124"
+          },
+          {
+            "raw_source": "/root/autodl-tmp/ai-design/outputs/e02/captexture/runs/372fd0ca6170/g5/E01-004-42.png",
+            "raw_sha256": "02af905ad665949d5bade9871391524480438a4e7ab33f39367e44deafd19594",
+            "preflight_source": "/root/autodl-tmp/ai-design/outputs/e02/captexture/runs/372fd0ca6170/evaluation/g5/E01-004-42.preflight.png",
+            "preflight_sha256": "4e71a9aea1fd27bbd6c2b156318c01af633ad90133b93415a66398ad821487bf",
+            "score_sha256": "1f0e61c4687a89495f1e6bf47dba6f960fd75d60b26a930f9cd1ec0313783ee2"
+          },
+          {
+            "raw_source": "/root/autodl-tmp/ai-design/outputs/e02/uniform-ring/runs/35493b7f5869/u1/E01-004-42.png",
+            "raw_sha256": "a205c742cce6f732accfd1f999ffe66f5b93c088fc9a4f2886623ceaa7de13ae",
+            "preflight_source": "/root/autodl-tmp/ai-design/outputs/e02/uniform-ring/runs/35493b7f5869/evaluation/u1/E01-004-42.preflight.png",
+            "preflight_sha256": "f7e4adefd4932e50bcd4d207eab2f50ffb5efd96a78d4f0529048f140d8ab2b7",
+            "score_sha256": "dad9fbca873448ef996ee44c7a14223ed9803b827c3bf6e950665dfaf65a542f"
+          }
+        ],
+        "native_cap_edges": "seed-42/E01-004-cap-edges.png"
+      },
+      "E01-007": {
+        "sources": [
+          {
+            "raw_source": "/root/autodl-tmp/ai-design/outputs/e02/step1/c6bb770094d3/b2_regional/E01-007-42.png",
+            "raw_sha256": "fce190b6fe55bc4fe7c56bbe6a71a76868fd0ab231492ed7d691fd9cb66420b4",
+            "preflight_source": "/root/autodl-tmp/ai-design/outputs/e02/step1/c6bb770094d3/evaluation/b2_regional/E01-007-42.preflight.png",
+            "preflight_sha256": "ec3dac8af6e7e28217ade84e2189bd7ad5fbdcb593a867b7baea4f4d585354ff",
+            "score_sha256": "290c498b7713097e34d3c05996a4d973b6ee99d6bac30ee35c7f62423602f9b1"
+          },
+          {
+            "raw_source": "/root/autodl-tmp/ai-design/outputs/e02/captexture/runs/372fd0ca6170/g5/E01-007-42.png",
+            "raw_sha256": "1494c16292f674f0550b3698793f8165a8dd6ea6e597a3a690812860072d8d3e",
+            "preflight_source": "/root/autodl-tmp/ai-design/outputs/e02/captexture/runs/372fd0ca6170/evaluation/g5/E01-007-42.preflight.png",
+            "preflight_sha256": "13a026e3323b76bfa72974ccca2f6becb0d22e383b49737f87c8865fd288ea7a",
+            "score_sha256": "cdbaaf5e678fb26233e0ae58326d618ddc523d742328d6617887f705be5a926a"
+          },
+          {
+            "raw_source": "/root/autodl-tmp/ai-design/outputs/e02/uniform-ring/runs/35493b7f5869/u1/E01-007-42.png",
+            "raw_sha256": "f6b7c5160ef4986fbb4ed9d0056cd3da2ed062b5aa6bde0f7fe3eaac6dd747e1",
+            "preflight_source": "/root/autodl-tmp/ai-design/outputs/e02/uniform-ring/runs/35493b7f5869/evaluation/u1/E01-007-42.preflight.png",
+            "preflight_sha256": "bd87aa8818fa86c8d0589ec553c417c9de4f9e0dd1b6305846de7e9169a98565",
+            "score_sha256": "466ddf1cc65bca0f9bd506027be3a02a854ccecc20916304be057ba534f3f92b"
+          }
+        ],
+        "native_cap_edges": "seed-42/E01-007-cap-edges.png",
+        "comparison": "seed-42/E01-007-comparison.jpg"
+      },
+      "E01-008": {
+        "sources": [
+          {
+            "raw_source": "/root/autodl-tmp/ai-design/outputs/e02/step1/c6bb770094d3/b2_regional/E01-008-42.png",
+            "raw_sha256": "e8334cc7532c9ab2b1823bf4dac5794c188e7bc1844ac3c45556f42a2af83301",
+            "preflight_source": "/root/autodl-tmp/ai-design/outputs/e02/step1/c6bb770094d3/evaluation/b2_regional/E01-008-42.preflight.png",
+            "preflight_sha256": "f5228c61236190b6a91b282fd29eadab1bd43988371d56a40c98a728e9d3282c",
+            "score_sha256": "65df556cb57f21e701db0ac1a22b3ed6e66b42d93be0d4d58979470dd39ae198"
+          },
+          {
+            "raw_source": "/root/autodl-tmp/ai-design/outputs/e02/captexture/runs/372fd0ca6170/g5/E01-008-42.png",
+            "raw_sha256": "74be2e288cf4cccb9fc60c6a030c6d2a4eb8dedb53a06618e5aa82161810efc8",
+            "preflight_source": "/root/autodl-tmp/ai-design/outputs/e02/captexture/runs/372fd0ca6170/evaluation/g5/E01-008-42.preflight.png",
+            "preflight_sha256": "43a87f1971c4caa0e98a5eadece6322dbd2e5ffb3e2d9e054066c8ff349e629e",
+            "score_sha256": "334c01947748157c9a57eaee7a3a418055b6144a3b656eaba4a77eefa1efd66a"
+          },
+          {
+            "raw_source": "/root/autodl-tmp/ai-design/outputs/e02/uniform-ring/runs/35493b7f5869/u1/E01-008-42.png",
+            "raw_sha256": "c9dde7aa8c0b1a46c39468a5a683e80fa6938bbb372bd49212bbb1b13e9e406f",
+            "preflight_source": "/root/autodl-tmp/ai-design/outputs/e02/uniform-ring/runs/35493b7f5869/evaluation/u1/E01-008-42.preflight.png",
+            "preflight_sha256": "aab104b76e96c9e6688ac4aa9b9ba412cd0e12c625fa5ffe700f5d002203957b",
+            "score_sha256": "d3c0245d009dfa1361d41d7ccf3540d34bbbe8b3667fff28839a5a71ca639a1a"
+          }
+        ],
+        "native_cap_edges": "seed-42/E01-008-cap-edges.png"
+      }
+    },
+    "1234": {
+      "E01-001": {
+        "sources": [
+          {
+            "raw_source": "/root/autodl-tmp/ai-design/outputs/e02/uniform-ring/runs/35493b7f5869/b2_regional/E01-001-1234.png",
+            "raw_sha256": "33fc3df65295c36b670cc256f977e95d103a1ce2fcf02eacbea38b3cf629e293",
+            "preflight_source": "/root/autodl-tmp/ai-design/outputs/e02/uniform-ring/runs/35493b7f5869/evaluation/b2_regional/E01-001-1234.preflight.png",
+            "preflight_sha256": "370fe2ef4a121dbd4b80c6df780f82a3925742d51fb09d2706bdb59e88774d7e",
+            "score_sha256": "10f3e81ddd0a7bae8010639632c42677698d91f38a314112bcf03782793f48b2"
+          },
+          {
+            "raw_source": "/root/autodl-tmp/ai-design/outputs/e02/captexture/runs/372fd0ca6170/seed_1234/E01-001-1234.png",
+            "raw_sha256": "28103b307ec6cf9e68b2c01ffdb11c5e7ac8472a83e436f2fef40c2edbc1616f",
+            "preflight_source": "/root/autodl-tmp/ai-design/outputs/e02/captexture/runs/372fd0ca6170/evaluation/seed_1234/E01-001-1234.preflight.png",
+            "preflight_sha256": "90a23c587ebab128fdce4cdde5e5f201d7f52ff9e2f2eac606ccc215196a9827",
+            "score_sha256": "da828902dd46a1bd54d963bb8e472c51c0e7aa53002ffa6cb559a704e03ecbd7"
+          },
+          {
+            "raw_source": "/root/autodl-tmp/ai-design/outputs/e02/uniform-ring/runs/35493b7f5869/validation/u1/E01-001-1234.png",
+            "raw_sha256": "5d8496e1473b23cd3f126b260ed723df72bc01b3d957d77c0e0b123d942ee0ad",
+            "preflight_source": "/root/autodl-tmp/ai-design/outputs/e02/uniform-ring/runs/35493b7f5869/validation/evaluation/u1/E01-001-1234.preflight.png",
+            "preflight_sha256": "6ba70f9bdf505da929858c4a53a24d74f31102a79e620c687dd5263a5b01a34b",
+            "score_sha256": "89727711ec5ae2bfc7e2ce10a37969ba81172ea88c10e3082672467f639e1e95"
+          }
+        ],
+        "native_cap_edges": "seed-1234/E01-001-cap-edges.png",
+        "comparison": "seed-1234/E01-001-comparison.jpg"
+      },
+      "E01-003": {
+        "sources": [
+          {
+            "raw_source": "/root/autodl-tmp/ai-design/outputs/e02/uniform-ring/runs/35493b7f5869/b2_regional/E01-003-1234.png",
+            "raw_sha256": "eb1e511589c0798900e9eaf9dd55a91a4c08026ed9dd61b79c0f96f1eea6424b",
+            "preflight_source": "/root/autodl-tmp/ai-design/outputs/e02/uniform-ring/runs/35493b7f5869/evaluation/b2_regional/E01-003-1234.preflight.png",
+            "preflight_sha256": "534e947be88daa5741fdadba83304ee3acbcce49d65cba4143ff07c656c92e1f",
+            "score_sha256": "740dc0f00bfce229457d2d9461e1f9e1ced08e24607b0d976e5c431c61cd7cb5"
+          },
+          {
+            "raw_source": "/root/autodl-tmp/ai-design/outputs/e02/captexture/runs/372fd0ca6170/seed_1234/E01-003-1234.png",
+            "raw_sha256": "18a1e0e1e6f4db587677092af78618817a30cc520d062a64e68610ff58eb4342",
+            "preflight_source": "/root/autodl-tmp/ai-design/outputs/e02/captexture/runs/372fd0ca6170/evaluation/seed_1234/E01-003-1234.preflight.png",
+            "preflight_sha256": "45d29aa649615a9f6e91e0d1999cc0683c88dd694180548e5b01c65ecda422ca",
+            "score_sha256": "d56f824252df71f6e00545263bf60f06a9c02e6890d6fe064b679089eaaabeb8"
+          },
+          {
+            "raw_source": "/root/autodl-tmp/ai-design/outputs/e02/uniform-ring/runs/35493b7f5869/validation/u1/E01-003-1234.png",
+            "raw_sha256": "d60bdeed930edc2c229463caa5df36acf0b038764c7b67e09b6011c5644ac3db",
+            "preflight_source": "/root/autodl-tmp/ai-design/outputs/e02/uniform-ring/runs/35493b7f5869/validation/evaluation/u1/E01-003-1234.preflight.png",
+            "preflight_sha256": "a5f033f5d561d43f2aeb3c4ef4fc6032d2ec44067c24e416747284b90d0166aa",
+            "score_sha256": "2e1b4ba6a66aedcdc16c9ae90e07c7c599626612883896e6f42d17c45d6b9984"
+          }
+        ],
+        "native_cap_edges": "seed-1234/E01-003-cap-edges.png",
+        "comparison": "seed-1234/E01-003-comparison.jpg"
+      },
+      "E01-004": {
+        "sources": [
+          {
+            "raw_source": "/root/autodl-tmp/ai-design/outputs/e02/uniform-ring/runs/35493b7f5869/b2_regional/E01-004-1234.png",
+            "raw_sha256": "0141b2e3e47b0d2a3951649f5046f86ce3577fc41e7ffb58a6cec1530cbede68",
+            "preflight_source": "/root/autodl-tmp/ai-design/outputs/e02/uniform-ring/runs/35493b7f5869/evaluation/b2_regional/E01-004-1234.preflight.png",
+            "preflight_sha256": "258343361d76014f6e7ca7d96d278c85d9e0d9835246d5dd3f741c5e2e97f7a5",
+            "score_sha256": "8eb13941cf849626730792b0a8687472c6c6f5bf164254547740995f6f354a72"
+          },
+          {
+            "raw_source": "/root/autodl-tmp/ai-design/outputs/e02/captexture/runs/372fd0ca6170/seed_1234/E01-004-1234.png",
+            "raw_sha256": "450dd009d5059e87d67cbeb4beb44330d45bbf80135d0ba7548b5aee63447dbd",
+            "preflight_source": "/root/autodl-tmp/ai-design/outputs/e02/captexture/runs/372fd0ca6170/evaluation/seed_1234/E01-004-1234.preflight.png",
+            "preflight_sha256": "4d33d949d008f0a7efabcd9a4c8f9506f576e70171d8f99d50449ff7a0f0d799",
+            "score_sha256": "4e7ee07f6d98f305e2bb32409ee07510a409d4a26097c2f7872ed2e99d018bff"
+          },
+          {
+            "raw_source": "/root/autodl-tmp/ai-design/outputs/e02/uniform-ring/runs/35493b7f5869/validation/u1/E01-004-1234.png",
+            "raw_sha256": "3fbab2927a988766d4d861bb692b03163f390e49000b0f0faaedd74494e1254d",
+            "preflight_source": "/root/autodl-tmp/ai-design/outputs/e02/uniform-ring/runs/35493b7f5869/validation/evaluation/u1/E01-004-1234.preflight.png",
+            "preflight_sha256": "2efdee2837c5e72f985ce9de7a4450c904c0f32caea7a3dce8116a1e8f3b67de",
+            "score_sha256": "bde937523a317d5481ad4f923793929ace2cd9cba8f94f3ff84c081c5fd0fe36"
+          }
+        ],
+        "native_cap_edges": "seed-1234/E01-004-cap-edges.png"
+      },
+      "E01-007": {
+        "sources": [
+          {
+            "raw_source": "/root/autodl-tmp/ai-design/outputs/e02/uniform-ring/runs/35493b7f5869/b2_regional/E01-007-1234.png",
+            "raw_sha256": "68584dfff4b93d4512cdccb13128ac7cab4d6f4d1fc34c9b26ca292c4369fe0c",
+            "preflight_source": "/root/autodl-tmp/ai-design/outputs/e02/uniform-ring/runs/35493b7f5869/evaluation/b2_regional/E01-007-1234.preflight.png",
+            "preflight_sha256": "120576fd9ef3d1d5c1065cbaaff4630874fc9045d59a2976e2a905cd60891a24",
+            "score_sha256": "38b18d21a4b19fee96748b9da96141f96c02bf73162fcecd35de921940be138a"
+          },
+          {
+            "raw_source": "/root/autodl-tmp/ai-design/outputs/e02/captexture/runs/372fd0ca6170/seed_1234/E01-007-1234.png",
+            "raw_sha256": "2140902d3f1019cd803f61b5beb042f581310f65b7e450b5b478b69f70102ac0",
+            "preflight_source": "/root/autodl-tmp/ai-design/outputs/e02/captexture/runs/372fd0ca6170/evaluation/seed_1234/E01-007-1234.preflight.png",
+            "preflight_sha256": "b7ee3400c6c1462d73531dcef8444f2a2e288db440a6ac06f51e04121496bbd0",
+            "score_sha256": "16444f8a4454e04d4d4fa13f730c0d7d779f615c898a6f3739b141dc0135c0bb"
+          },
+          {
+            "raw_source": "/root/autodl-tmp/ai-design/outputs/e02/uniform-ring/runs/35493b7f5869/validation/u1/E01-007-1234.png",
+            "raw_sha256": "8d8945f2bf90e68004aeef292b14dec788c88ba7f34e0b6400b4b73f958c2ce2",
+            "preflight_source": "/root/autodl-tmp/ai-design/outputs/e02/uniform-ring/runs/35493b7f5869/validation/evaluation/u1/E01-007-1234.preflight.png",
+            "preflight_sha256": "41578cd4693c588850b326cdf426ef97349a003d15a79469d20f5c5918d25636",
+            "score_sha256": "1bacbd44c825a07b6015b422588d42269a16fefe785a28df3327d43c6a383738"
+          }
+        ],
+        "native_cap_edges": "seed-1234/E01-007-cap-edges.png",
+        "comparison": "seed-1234/E01-007-comparison.jpg"
+      },
+      "E01-008": {
+        "sources": [
+          {
+            "raw_source": "/root/autodl-tmp/ai-design/outputs/e02/uniform-ring/runs/35493b7f5869/b2_regional/E01-008-1234.png",
+            "raw_sha256": "a81321bd3bc4c74a0e79aca27d6f1730125345cf15ccee7272aadeaf7bf2fbae",
+            "preflight_source": "/root/autodl-tmp/ai-design/outputs/e02/uniform-ring/runs/35493b7f5869/evaluation/b2_regional/E01-008-1234.preflight.png",
+            "preflight_sha256": "b4ebedc81861cc2b7dd9f2a59d95349a3bb800e634c0517b800738f1941fc879",
+            "score_sha256": "349ddf169f6374eb46da6f5d9ce276634e368f7a4429d9ec1a2de02eebd7f039"
+          },
+          {
+            "raw_source": "/root/autodl-tmp/ai-design/outputs/e02/captexture/runs/372fd0ca6170/seed_1234/E01-008-1234.png",
+            "raw_sha256": "20fc30b097293bb82455ccac708666ff413c279686d14f137502ceba1e9abf15",
+            "preflight_source": "/root/autodl-tmp/ai-design/outputs/e02/captexture/runs/372fd0ca6170/evaluation/seed_1234/E01-008-1234.preflight.png",
+            "preflight_sha256": "255c7e2dc4f3e034733dbf4e00836c92a12403341c57e23f9ccdc35296cd39e4",
+            "score_sha256": "53c8a93c9a0a4b8add756b17a3930494ab51237c14034bf988645f60aa58d4c9"
+          },
+          {
+            "raw_source": "/root/autodl-tmp/ai-design/outputs/e02/uniform-ring/runs/35493b7f5869/validation/u1/E01-008-1234.png",
+            "raw_sha256": "4705b9ababb7825e94925d6c8744cb73a8ddd44e13384f69feb7deb73c6f96bd",
+            "preflight_source": "/root/autodl-tmp/ai-design/outputs/e02/uniform-ring/runs/35493b7f5869/validation/evaluation/u1/E01-008-1234.preflight.png",
+            "preflight_sha256": "a6bf9e70ceaa8bce18efea6b1fcda49e96e8201bcf6a5427cb622b4e7ebf0cf3",
+            "score_sha256": "313de8d0277a1e2ef9a233e6e9043e5af4d818e18415ac308c27e6e48cfadd12"
+          }
+        ],
+        "native_cap_edges": "seed-1234/E01-008-cap-edges.png"
+      }
+    }
+  }
+}

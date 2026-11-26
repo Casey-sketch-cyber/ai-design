@@ -1,0 +1,954 @@
+{
+  "samples": {
+    "g5/E01-001-42": {
+      "raw_sha256": "52babbb040363ac49c150796ec816e4f34d303e366dd215c465638b15b3e0e5e",
+      "ring_source": "r0",
+      "ring_cache_sha256": "fe8206a1420d09067988e9872118437f7bd7fdb3057df896bd46bd2ce4d46b7d",
+      "ring_support_sha256": "635922b214a6b6f3f3cd66fd65f68f503d43fbac6ed46cfeea7fa388b7be98ef",
+      "ring_side_pixels": 1507328,
+      "ring_supported_pixels": 1720910,
+      "validation_of": null
+    },
+    "u1/E01-001-42": {
+      "raw_sha256": "ffb7f4bb68314892d1b847b65536e456c8fc9c5e787971e6a61d7b17d52ab5ea",
+      "ring_source": "r0",
+      "ring_cache_sha256": "fe8206a1420d09067988e9872118437f7bd7fdb3057df896bd46bd2ce4d46b7d",
+      "ring_support_sha256": "635922b214a6b6f3f3cd66fd65f68f503d43fbac6ed46cfeea7fa388b7be98ef",
+      "ring_side_pixels": 1507328,
+      "ring_supported_pixels": 1720910,
+      "validation_of": null
+    },
+    "u2/E01-001-42": {
+      "raw_sha256": "dd88e579b2bdaef3d09ae4b306588b7be4a321a792b98f179f643c27102911ff",
+      "ring_source": "r0",
+      "ring_cache_sha256": "fe8206a1420d09067988e9872118437f7bd7fdb3057df896bd46bd2ce4d46b7d",
+      "ring_support_sha256": "635922b214a6b6f3f3cd66fd65f68f503d43fbac6ed46cfeea7fa388b7be98ef",
+      "ring_side_pixels": 1507328,
+      "ring_supported_pixels": 1720910,
+      "validation_of": null
+    },
+    "g5/E01-002-42": {
+      "raw_sha256": "b148666c8791184ae06422a28805b686cdef7c6910804c6481d5553b0e4c971b",
+      "ring_source": "r0",
+      "ring_cache_sha256": "0065db7fe2cc5cac0007246f17e4a0307c29fc54d2ae477adc0eade81d741282",
+      "ring_support_sha256": "28ab4a25aa915eba2afe8ec4bc16b73babcbae7b3a82e0933ce15b44410f7709",
+      "ring_side_pixels": 1507328,
+      "ring_supported_pixels": 1720910,
+      "validation_of": null
+    },
+    "u1/E01-002-42": {
+      "raw_sha256": "dda47b1fd3a51b63a14f3064111054c880987e57ac06787ece1e6c0442530227",
+      "ring_source": "r0",
+      "ring_cache_sha256": "0065db7fe2cc5cac0007246f17e4a0307c29fc54d2ae477adc0eade81d741282",
+      "ring_support_sha256": "28ab4a25aa915eba2afe8ec4bc16b73babcbae7b3a82e0933ce15b44410f7709",
+      "ring_side_pixels": 1507328,
+      "ring_supported_pixels": 1720910,
+      "validation_of": null
+    },
+    "u2/E01-002-42": {
+      "raw_sha256": "19202c96f6fa3074cdaf489437642abfd5f494f7c29a48f2f55cbc876869932a",
+      "ring_source": "r0",
+      "ring_cache_sha256": "0065db7fe2cc5cac0007246f17e4a0307c29fc54d2ae477adc0eade81d741282",
+      "ring_support_sha256": "28ab4a25aa915eba2afe8ec4bc16b73babcbae7b3a82e0933ce15b44410f7709",
+      "ring_side_pixels": 1507328,
+      "ring_supported_pixels": 1720910,
+      "validation_of": null
+    },
+    "g5/E01-003-42": {
+      "raw_sha256": "8710fa4be9be35a5921a5954826e13e9cf54d0192969f7fec6e6aaaaf65e32fb",
+      "ring_source": "r0",
+      "ring_cache_sha256": "6b2b14dc11e52ba3c8d93b4740d6898c214ad1a506a6bbf9f5bc304879fb8548",
+      "ring_support_sha256": "d568a0d36637913ba2c0f968359bd84129e655c11db0036e1a661f92278347be",
+      "ring_side_pixels": 1507328,
+      "ring_supported_pixels": 1720910,
+      "validation_of": null
+    },
+    "u1/E01-003-42": {
+      "raw_sha256": "bca038a8baebf8a09ddcf43412760b45b1b381b80cabdf3a954f2a8fd5f32709",
+      "ring_source": "r0",
+      "ring_cache_sha256": "6b2b14dc11e52ba3c8d93b4740d6898c214ad1a506a6bbf9f5bc304879fb8548",
+      "ring_support_sha256": "d568a0d36637913ba2c0f968359bd84129e655c11db0036e1a661f92278347be",
+      "ring_side_pixels": 1507328,
+      "ring_supported_pixels": 1720910,
+      "validation_of": null
+    },
+    "u2/E01-003-42": {
+      "raw_sha256": "24236c2b5f4de809faec5eff31fbf80694946f1600d50d3141505dec7aa7768e",
+      "ring_source": "r0",
+      "ring_cache_sha256": "6b2b14dc11e52ba3c8d93b4740d6898c214ad1a506a6bbf9f5bc304879fb8548",
+      "ring_support_sha256": "d568a0d36637913ba2c0f968359bd84129e655c11db0036e1a661f92278347be",
+      "ring_side_pixels": 1507328,
+      "ring_supported_pixels": 1720910,
+      "validation_of": null
+    },
+    "g5/E01-004-42": {
+      "raw_sha256": "02af905ad665949d5bade9871391524480438a4e7ab33f39367e44deafd19594",
+      "ring_source": "r0",
+      "ring_cache_sha256": "565c091a522589ede335028f54cd9ecbe6974eca726f88f60dc52d58f04e4b38",
+      "ring_support_sha256": "d1b14a6b0ae9aa9bc752e7f261339c0f8f5b4557eec9f09a99a034382f5c6006",
+      "ring_side_pixels": 1507328,
+      "ring_supported_pixels": 1720910,
+      "validation_of": null
+    },
+    "u1/E01-004-42": {
+      "raw_sha256": "a205c742cce6f732accfd1f999ffe66f5b93c088fc9a4f2886623ceaa7de13ae",
+      "ring_source": "r0",
+      "ring_cache_sha256": "565c091a522589ede335028f54cd9ecbe6974eca726f88f60dc52d58f04e4b38",
+      "ring_support_sha256": "d1b14a6b0ae9aa9bc752e7f261339c0f8f5b4557eec9f09a99a034382f5c6006",
+      "ring_side_pixels": 1507328,
+      "ring_supported_pixels": 1720910,
+      "validation_of": null
+    },
+    "u2/E01-004-42": {
+      "raw_sha256": "bc39222dd9f81fb5365494cd89d19bfac82d6cece1995d42839284aa7f1ff87c",
+      "ring_source": "r0",
+      "ring_cache_sha256": "565c091a522589ede335028f54cd9ecbe6974eca726f88f60dc52d58f04e4b38",
+      "ring_support_sha256": "d1b14a6b0ae9aa9bc752e7f261339c0f8f5b4557eec9f09a99a034382f5c6006",
+      "ring_side_pixels": 1507328,
+      "ring_supported_pixels": 1720910,
+      "validation_of": null
+    },
+    "g5/E01-005-42": {
+      "raw_sha256": "786ac86e1c2d22f357e70220a4dbcde6bc9c35c62cb081c674cc73d82141f272",
+      "ring_source": "r0",
+      "ring_cache_sha256": "18c5387d2508350e66f36c81c381096887da047aea5804c746d82278d8cf34fa",
+      "ring_support_sha256": "951e315fdf7b38e233ba42409608022bc31848110aff7adb8fe47ab76240880f",
+      "ring_side_pixels": 1507328,
+      "ring_supported_pixels": 1720910,
+      "validation_of": null
+    },
+    "u1/E01-005-42": {
+      "raw_sha256": "3a4251b12599cb18e392379cd6d49f52bbc237201e9ffae1f47e8dc93f496ee0",
+      "ring_source": "r0",
+      "ring_cache_sha256": "18c5387d2508350e66f36c81c381096887da047aea5804c746d82278d8cf34fa",
+      "ring_support_sha256": "951e315fdf7b38e233ba42409608022bc31848110aff7adb8fe47ab76240880f",
+      "ring_side_pixels": 1507328,
+      "ring_supported_pixels": 1720910,
+      "validation_of": null
+    },
+    "u2/E01-005-42": {
+      "raw_sha256": "536d4960bf74773b4db1f07ad7213760a0ef403e6b51df595cb86402d6e9e113",
+      "ring_source": "r0",
+      "ring_cache_sha256": "18c5387d2508350e66f36c81c381096887da047aea5804c746d82278d8cf34fa",
+      "ring_support_sha256": "951e315fdf7b38e233ba42409608022bc31848110aff7adb8fe47ab76240880f",
+      "ring_side_pixels": 1507328,
+      "ring_supported_pixels": 1720910,
+      "validation_of": null
+    },
+    "g5/E01-006-42": {
+      "raw_sha256": "223c56ac41085dbc861471bad12af840555c264d1d6a2de14a8f3eafdf875abd",
+      "ring_source": "r0",
+      "ring_cache_sha256": "c1d1dbf4113f7e03023bd281fe752c91d199ff48ffb82367ef4321cf82f50fef",
+      "ring_support_sha256": "bb2dcf7476b7068701f4a2ff6180e4abed3b88bd22e6071646b3526f6f097618",
+      "ring_side_pixels": 1507328,
+      "ring_supported_pixels": 1720910,
+      "validation_of": null
+    },
+    "u1/E01-006-42": {
+      "raw_sha256": "0c288de363d1a5f3f26777886d05f2964808b142e2439e481e708942625f188d",
+      "ring_source": "r0",
+      "ring_cache_sha256": "c1d1dbf4113f7e03023bd281fe752c91d199ff48ffb82367ef4321cf82f50fef",
+      "ring_support_sha256": "bb2dcf7476b7068701f4a2ff6180e4abed3b88bd22e6071646b3526f6f097618",
+      "ring_side_pixels": 1507328,
+      "ring_supported_pixels": 1720910,
+      "validation_of": null
+    },
+    "u2/E01-006-42": {
+      "raw_sha256": "645b9409c6a27fc5727359b023ab922c6f22b95170aeba972513d0645f91905b",
+      "ring_source": "r0",
+      "ring_cache_sha256": "c1d1dbf4113f7e03023bd281fe752c91d199ff48ffb82367ef4321cf82f50fef",
+      "ring_support_sha256": "bb2dcf7476b7068701f4a2ff6180e4abed3b88bd22e6071646b3526f6f097618",
+      "ring_side_pixels": 1507328,
+      "ring_supported_pixels": 1720910,
+      "validation_of": null
+    },
+    "g5/E01-007-42": {
+      "raw_sha256": "1494c16292f674f0550b3698793f8165a8dd6ea6e597a3a690812860072d8d3e",
+      "ring_source": "r0",
+      "ring_cache_sha256": "92842c215739ecf5499a864182b2b35e37539304f7129dcb5c4d3443d59addd9",
+      "ring_support_sha256": "b144cfc34aa5190642ebbb784abf6f5616f49375db33dc750a6554208d9dfac3",
+      "ring_side_pixels": 1507328,
+      "ring_supported_pixels": 1720910,
+      "validation_of": null
+    },
+    "u1/E01-007-42": {
+      "raw_sha256": "f6b7c5160ef4986fbb4ed9d0056cd3da2ed062b5aa6bde0f7fe3eaac6dd747e1",
+      "ring_source": "r0",
+      "ring_cache_sha256": "92842c215739ecf5499a864182b2b35e37539304f7129dcb5c4d3443d59addd9",
+      "ring_support_sha256": "b144cfc34aa5190642ebbb784abf6f5616f49375db33dc750a6554208d9dfac3",
+      "ring_side_pixels": 1507328,
+      "ring_supported_pixels": 1720910,
+      "validation_of": null
+    },
+    "u2/E01-007-42": {
+      "raw_sha256": "59b4b117e6ebbef82fd30ebdb24a9689829bd157f5d6276253ae9dd3a8013d6a",
+      "ring_source": "r0",
+      "ring_cache_sha256": "92842c215739ecf5499a864182b2b35e37539304f7129dcb5c4d3443d59addd9",
+      "ring_support_sha256": "b144cfc34aa5190642ebbb784abf6f5616f49375db33dc750a6554208d9dfac3",
+      "ring_side_pixels": 1507328,
+      "ring_supported_pixels": 1720910,
+      "validation_of": null
+    },
+    "g5/E01-008-42": {
+      "raw_sha256": "74be2e288cf4cccb9fc60c6a030c6d2a4eb8dedb53a06618e5aa82161810efc8",
+      "ring_source": "r0",
+      "ring_cache_sha256": "15e303cbd3230d03daeda46d68be5c0521b5f19c814a4b26a55a89ef8fb499f4",
+      "ring_support_sha256": "018f0ace903367cc858ab40dfad71357ffdf56a384f51310baa62ac95b2f6e54",
+      "ring_side_pixels": 1507328,
+      "ring_supported_pixels": 1720910,
+      "validation_of": null
+    },
+    "u1/E01-008-42": {
+      "raw_sha256": "c9dde7aa8c0b1a46c39468a5a683e80fa6938bbb372bd49212bbb1b13e9e406f",
+      "ring_source": "r0",
+      "ring_cache_sha256": "15e303cbd3230d03daeda46d68be5c0521b5f19c814a4b26a55a89ef8fb499f4",
+      "ring_support_sha256": "018f0ace903367cc858ab40dfad71357ffdf56a384f51310baa62ac95b2f6e54",
+      "ring_side_pixels": 1507328,
+      "ring_supported_pixels": 1720910,
+      "validation_of": null
+    },
+    "u2/E01-008-42": {
+      "raw_sha256": "9ced947a262d27de40d3b655a860f7056e64a9f7389bf7afe697a66d56a1fe00",
+      "ring_source": "r0",
+      "ring_cache_sha256": "15e303cbd3230d03daeda46d68be5c0521b5f19c814a4b26a55a89ef8fb499f4",
+      "ring_support_sha256": "018f0ace903367cc858ab40dfad71357ffdf56a384f51310baa62ac95b2f6e54",
+      "ring_side_pixels": 1507328,
+      "ring_supported_pixels": 1720910,
+      "validation_of": null
+    },
+    "g5/E01-009-42": {
+      "raw_sha256": "c75ef8b8332fbe6d2fa63273086e0361bed6eca0c7769b8b6ad2fb73b147ba94",
+      "ring_source": "r0",
+      "ring_cache_sha256": "6e770d709d6eb2b98c2f94182f44e44652926f0f6f0e117363fc11dd4eb85ce6",
+      "ring_support_sha256": "b2e3f6653e9f4c47d4badf6ccd38f105c6fd9fa40e03ff6957d289c196492028",
+      "ring_side_pixels": 1507328,
+      "ring_supported_pixels": 1720910,
+      "validation_of": null
+    },
+    "u1/E01-009-42": {
+      "raw_sha256": "68f04f96a08b61438e644eaf05bdbced7ae895d73950c8f8a43a7f4e2b63a8b8",
+      "ring_source": "r0",
+      "ring_cache_sha256": "6e770d709d6eb2b98c2f94182f44e44652926f0f6f0e117363fc11dd4eb85ce6",
+      "ring_support_sha256": "b2e3f6653e9f4c47d4badf6ccd38f105c6fd9fa40e03ff6957d289c196492028",
+      "ring_side_pixels": 1507328,
+      "ring_supported_pixels": 1720910,
+      "validation_of": null
+    },
+    "u2/E01-009-42": {
+      "raw_sha256": "e84b4491995910d071e62c1ca228730a4454b7be7be8f919010055127c8961dc",
+      "ring_source": "r0",
+      "ring_cache_sha256": "6e770d709d6eb2b98c2f94182f44e44652926f0f6f0e117363fc11dd4eb85ce6",
+      "ring_support_sha256": "b2e3f6653e9f4c47d4badf6ccd38f105c6fd9fa40e03ff6957d289c196492028",
+      "ring_side_pixels": 1507328,
+      "ring_supported_pixels": 1720910,
+      "validation_of": null
+    },
+    "g5/E01-010-42": {
+      "raw_sha256": "d129433b8032c2bc39b575a922a57a0ab6caea472a9dabb81ba432f492448d07",
+      "ring_source": "r0",
+      "ring_cache_sha256": "b000782cb6c84be7958a8b6333e90fc4fe182f108850d16b368463b5b228a51d",
+      "ring_support_sha256": "9338149845b97247674651e2832beeed8992088b13d9e7d4fd105189714c0fee",
+      "ring_side_pixels": 1507328,
+      "ring_supported_pixels": 1720910,
+      "validation_of": null
+    },
+    "u1/E01-010-42": {
+      "raw_sha256": "1cea20459f25041784c0ae6d83dff296d751146de719d7d02878a9e5f69f97bc",
+      "ring_source": "r0",
+      "ring_cache_sha256": "b000782cb6c84be7958a8b6333e90fc4fe182f108850d16b368463b5b228a51d",
+      "ring_support_sha256": "9338149845b97247674651e2832beeed8992088b13d9e7d4fd105189714c0fee",
+      "ring_side_pixels": 1507328,
+      "ring_supported_pixels": 1720910,
+      "validation_of": null
+    },
+    "u2/E01-010-42": {
+      "raw_sha256": "52c52bea1149ac546c6c575ea690b9f31e05792e3faa8d2a0270b0f17591796b",
+      "ring_source": "r0",
+      "ring_cache_sha256": "b000782cb6c84be7958a8b6333e90fc4fe182f108850d16b368463b5b228a51d",
+      "ring_support_sha256": "9338149845b97247674651e2832beeed8992088b13d9e7d4fd105189714c0fee",
+      "ring_side_pixels": 1507328,
+      "ring_supported_pixels": 1720910,
+      "validation_of": null
+    },
+    "u1/E01-001-1234": {
+      "raw_sha256": "5d8496e1473b23cd3f126b260ed723df72bc01b3d957d77c0e0b123d942ee0ad",
+      "ring_source": "r0",
+      "ring_cache_sha256": "bd42591e451df4c1975cfdf598508a886995fc0f253c5aa46fd77863c0e80bba",
+      "ring_support_sha256": "5781db62178aea10a8dd816b304e4e943f2a5b982446a471716de9671200cb9a",
+      "ring_side_pixels": 1507328,
+      "ring_supported_pixels": 1720910,
+      "validation_of": "u1"
+    },
+    "u1/E01-002-1234": {
+      "raw_sha256": "fe180b49261614565e34dea13dfb8915e049e2c0f12ae385892201380c0d1875",
+      "ring_source": "r0",
+      "ring_cache_sha256": "223771de874586bfef2f2b6575e74304f47bc697255d3aae42795098664fbefa",
+      "ring_support_sha256": "edcb5640827bb1a37783e15217f59d65979d8271dd79ceb51f2056b23631a50b",
+      "ring_side_pixels": 1507328,
+      "ring_supported_pixels": 1720910,
+      "validation_of": "u1"
+    },
+    "u1/E01-003-1234": {
+      "raw_sha256": "d60bdeed930edc2c229463caa5df36acf0b038764c7b67e09b6011c5644ac3db",
+      "ring_source": "r0",
+      "ring_cache_sha256": "483fac2d8f03b71c71c9bbc64e9fa970059f23928ce2acfd5f1f1effcc480906",
+      "ring_support_sha256": "1fb09953f67c9edac72bd244668c98fa4fdf561a1fdbd2cf3078bbc089687fd9",
+      "ring_side_pixels": 1507328,
+      "ring_supported_pixels": 1720910,
+      "validation_of": "u1"
+    },
+    "u1/E01-004-1234": {
+      "raw_sha256": "3fbab2927a988766d4d861bb692b03163f390e49000b0f0faaedd74494e1254d",
+      "ring_source": "r0",
+      "ring_cache_sha256": "6cbe44cdd2458b2469f5c7b7de0eb259fcee0cdcb345dccf0c0f8e5f79704731",
+      "ring_support_sha256": "ba3c98a626ee0b48c117e1b1bfd7bfe47890602485405bdb4debe476d4e50fc3",
+      "ring_side_pixels": 1507328,
+      "ring_supported_pixels": 1720910,
+      "validation_of": "u1"
+    },
+    "u1/E01-005-1234": {
+      "raw_sha256": "11e264522d79e81aff1832aaee155c8dd5702b1f4cd47c50451992c10e26a090",
+      "ring_source": "r0",
+      "ring_cache_sha256": "a33a3c4ec30450f44048ee2da9ee5fc3bf03ee68fb9bfd452972071080e50fec",
+      "ring_support_sha256": "3cb30d989d49de99c7e78cc067f66e9d6e3c8a4cbbf9d49717811728720f2016",
+      "ring_side_pixels": 1507328,
+      "ring_supported_pixels": 1720910,
+      "validation_of": "u1"
+    },
+    "u1/E01-006-1234": {
+      "raw_sha256": "19ce60d3f2ab8d8d39f6814fd6deba40c2ce9fffc37a3a33a2a2f986b09c2641",
+      "ring_source": "r0",
+      "ring_cache_sha256": "3d8f899920bac1404bd3ac2ec74c33cbbed607122eb46e83fa3687f8ce3739d5",
+      "ring_support_sha256": "80bbd8ea039bc6b388086cc58ab82fc929c5425a52951c86367a4fc78f57e970",
+      "ring_side_pixels": 1507328,
+      "ring_supported_pixels": 1720910,
+      "validation_of": "u1"
+    },
+    "u1/E01-007-1234": {
+      "raw_sha256": "8d8945f2bf90e68004aeef292b14dec788c88ba7f34e0b6400b4b73f958c2ce2",
+      "ring_source": "r0",
+      "ring_cache_sha256": "1dc118123fab93f76fa987a8abc4fbb477b4eaa31dd502fdf1a226639ab7885f",
+      "ring_support_sha256": "2ce4d6a33adede4996eeabfef87dce0981547fd7f3357383f629e2bb945768e0",
+      "ring_side_pixels": 1507328,
+      "ring_supported_pixels": 1720910,
+      "validation_of": "u1"
+    },
+    "u1/E01-008-1234": {
+      "raw_sha256": "4705b9ababb7825e94925d6c8744cb73a8ddd44e13384f69feb7deb73c6f96bd",
+      "ring_source": "r0",
+      "ring_cache_sha256": "c3acf54de26e1c2d0f19c7c2e5497d4d50ce3fd859c57c971c3b3c3cae38eb07",
+      "ring_support_sha256": "0d6cd5669485e0a02c62a0687cae90d75d4c9bfb212f8f4393a7fc5821988dca",
+      "ring_side_pixels": 1507328,
+      "ring_supported_pixels": 1720910,
+      "validation_of": "u1"
+    },
+    "u1/E01-009-1234": {
+      "raw_sha256": "c3ead6d9cc17ae5df571edf163585d3d822b264230cd823a03be3f6ee7bf2dea",
+      "ring_source": "r0",
+      "ring_cache_sha256": "4cfe9e6aa0d412a04d7dc80d7b843ced2a83048bc8e52ec4b8c97fd107519710",
+      "ring_support_sha256": "c128c7d722105fb028a14ddb0afa06c225503474411c03e8257d71977cad4592",
+      "ring_side_pixels": 1507328,
+      "ring_supported_pixels": 1720910,
+      "validation_of": "u1"
+    },
+    "u1/E01-010-1234": {
+      "raw_sha256": "7f6d2c606064fdd1b1178dee42922aa1b934cae3f372f900a7240a7bf277b986",
+      "ring_source": "r0",
+      "ring_cache_sha256": "16b95e92f2a01a6c73957295ba30ec03cc032119a3d0e475c6910055d3d07448",
+      "ring_support_sha256": "161a50b580092d083cedcc84e02039a738737345f2bd71c9254f8494db0be10d",
+      "ring_side_pixels": 1507328,
+      "ring_supported_pixels": 1720910,
+      "validation_of": "u1"
+    }
+  },
+  "uniform_prior": {
+    "u1-42-T": {
+      "mean_applied_ratio": 0.8638981702277293,
+      "minimum_applied_ratio": 0.5676528641735156,
+      "count_lt_0_6": 1,
+      "n": 10,
+      "sample_diagnostics": [
+        {
+          "brief_id": "E01-001",
+          "executed_steps": 25,
+          "center_envelope_min": 0.6000000238418579,
+          "center_to_edge_rms": 0.5676528641735156,
+          "center_residual_rms": 0.028116784989833832,
+          "center_coarse_residual_rms": 0.0014879059744998813,
+          "clipped_core_pixels": 2011
+        },
+        {
+          "brief_id": "E01-002",
+          "executed_steps": 25,
+          "center_envelope_min": 0.6000000238418579,
+          "center_to_edge_rms": 0.8029622329761006,
+          "center_residual_rms": 0.03267233073711395,
+          "center_coarse_residual_rms": 0.001254943897947669,
+          "clipped_core_pixels": 529
+        },
+        {
+          "brief_id": "E01-003",
+          "executed_steps": 25,
+          "center_envelope_min": 0.6000000238418579,
+          "center_to_edge_rms": 1.3889542857970543,
+          "center_residual_rms": 0.037151627242565155,
+          "center_coarse_residual_rms": 0.0013671980705112219,
+          "clipped_core_pixels": 68
+        },
+        {
+          "brief_id": "E01-004",
+          "executed_steps": 25,
+          "center_envelope_min": 0.6000000238418579,
+          "center_to_edge_rms": 0.759389583450446,
+          "center_residual_rms": 0.03633429482579231,
+          "center_coarse_residual_rms": 0.001252408605068922,
+          "clipped_core_pixels": 1399
+        },
+        {
+          "brief_id": "E01-005",
+          "executed_steps": 25,
+          "center_envelope_min": 0.6000000238418579,
+          "center_to_edge_rms": 0.6393183063184084,
+          "center_residual_rms": 0.03943752124905586,
+          "center_coarse_residual_rms": 0.0025921708438545465,
+          "clipped_core_pixels": 272
+        },
+        {
+          "brief_id": "E01-006",
+          "executed_steps": 25,
+          "center_envelope_min": 0.6000000238418579,
+          "center_to_edge_rms": 1.0499135794826147,
+          "center_residual_rms": 0.04675167053937912,
+          "center_coarse_residual_rms": 0.002850469434633851,
+          "clipped_core_pixels": 268
+        },
+        {
+          "brief_id": "E01-007",
+          "executed_steps": 25,
+          "center_envelope_min": 0.6000000238418579,
+          "center_to_edge_rms": 1.068718253411143,
+          "center_residual_rms": 0.039588265120983124,
+          "center_coarse_residual_rms": 0.001713569974526763,
+          "clipped_core_pixels": 128
+        },
+        {
+          "brief_id": "E01-008",
+          "executed_steps": 25,
+          "center_envelope_min": 0.6000000238418579,
+          "center_to_edge_rms": 0.7187120583990012,
+          "center_residual_rms": 0.06175462529063225,
+          "center_coarse_residual_rms": 0.0034155789762735367,
+          "clipped_core_pixels": 1093
+        },
+        {
+          "brief_id": "E01-009",
+          "executed_steps": 25,
+          "center_envelope_min": 0.6000000238418579,
+          "center_to_edge_rms": 1.0000193748060098,
+          "center_residual_rms": 0.024034837260842323,
+          "center_coarse_residual_rms": 0.0009578633471392095,
+          "clipped_core_pixels": 35
+        },
+        {
+          "brief_id": "E01-010",
+          "executed_steps": 25,
+          "center_envelope_min": 0.6000000238418579,
+          "center_to_edge_rms": 0.6433411634629996,
+          "center_residual_rms": 0.047219716012477875,
+          "center_coarse_residual_rms": 0.0019647858571261168,
+          "clipped_core_pixels": 341
+        }
+      ]
+    },
+    "u1-42-Btm": {
+      "mean_applied_ratio": 0.599846945163786,
+      "minimum_applied_ratio": 0.4616214178514931,
+      "count_lt_0_6": 4,
+      "n": 10,
+      "sample_diagnostics": [
+        {
+          "brief_id": "E01-001",
+          "executed_steps": 25,
+          "center_envelope_min": 0.6000000238418579,
+          "center_to_edge_rms": 0.5672413348203049,
+          "center_residual_rms": 0.02694220282137394,
+          "center_coarse_residual_rms": 0.0014605348696932197,
+          "clipped_core_pixels": 17
+        },
+        {
+          "brief_id": "E01-002",
+          "executed_steps": 25,
+          "center_envelope_min": 0.6000000238418579,
+          "center_to_edge_rms": 0.6061112585975306,
+          "center_residual_rms": 0.027922790497541428,
+          "center_coarse_residual_rms": 0.0011280287289991975,
+          "clipped_core_pixels": 5
+        },
+        {
+          "brief_id": "E01-003",
+          "executed_steps": 25,
+          "center_envelope_min": 0.6000000238418579,
+          "center_to_edge_rms": 0.5566322391432804,
+          "center_residual_rms": 0.04546584561467171,
+          "center_coarse_residual_rms": 0.0016139160143211484,
+          "clipped_core_pixels": 12
+        },
+        {
+          "brief_id": "E01-004",
+          "executed_steps": 25,
+          "center_envelope_min": 0.6000000238418579,
+          "center_to_edge_rms": 0.6963257693077873,
+          "center_residual_rms": 0.04852594435214996,
+          "center_coarse_residual_rms": 0.0018741460517048836,
+          "clipped_core_pixels": 59
+        },
+        {
+          "brief_id": "E01-005",
+          "executed_steps": 25,
+          "center_envelope_min": 0.6000000238418579,
+          "center_to_edge_rms": 0.5428059706317664,
+          "center_residual_rms": 0.04303380101919174,
+          "center_coarse_residual_rms": 0.0027765543200075626,
+          "clipped_core_pixels": 269
+        },
+        {
+          "brief_id": "E01-006",
+          "executed_steps": 25,
+          "center_envelope_min": 0.6000000238418579,
+          "center_to_edge_rms": 0.690278815521089,
+          "center_residual_rms": 0.040521569550037384,
+          "center_coarse_residual_rms": 0.0025454657152295113,
+          "clipped_core_pixels": 79
+        },
+        {
+          "brief_id": "E01-007",
+          "executed_steps": 25,
+          "center_envelope_min": 0.6000000238418579,
+          "center_to_edge_rms": 0.4616214178514931,
+          "center_residual_rms": 0.02733871527016163,
+          "center_coarse_residual_rms": 0.0010944922687485814,
+          "clipped_core_pixels": 3
+        },
+        {
+          "brief_id": "E01-008",
+          "executed_steps": 25,
+          "center_envelope_min": 0.6000000238418579,
+          "center_to_edge_rms": 0.6570015703191276,
+          "center_residual_rms": 0.06275603920221329,
+          "center_coarse_residual_rms": 0.003587652463465929,
+          "clipped_core_pixels": 4011
+        },
+        {
+          "brief_id": "E01-009",
+          "executed_steps": 25,
+          "center_envelope_min": 0.6000000238418579,
+          "center_to_edge_rms": 0.6145526623012365,
+          "center_residual_rms": 0.030168334022164345,
+          "center_coarse_residual_rms": 0.001551934750750661,
+          "clipped_core_pixels": 6
+        },
+        {
+          "brief_id": "E01-010",
+          "executed_steps": 25,
+          "center_envelope_min": 0.6000000238418579,
+          "center_to_edge_rms": 0.6058984131442436,
+          "center_residual_rms": 0.05123863369226456,
+          "center_coarse_residual_rms": 0.0027816537767648697,
+          "clipped_core_pixels": 2709
+        }
+      ]
+    },
+    "u2-42-T": {
+      "mean_applied_ratio": 0.8638981702277293,
+      "minimum_applied_ratio": 0.5676528641735156,
+      "count_lt_0_6": 1,
+      "n": 10,
+      "sample_diagnostics": [
+        {
+          "brief_id": "E01-001",
+          "executed_steps": 27,
+          "center_envelope_min": 0.6000000238418579,
+          "center_to_edge_rms": 0.5676528641735156,
+          "center_residual_rms": 0.028116784989833832,
+          "center_coarse_residual_rms": 0.0014879059744998813,
+          "clipped_core_pixels": 2011
+        },
+        {
+          "brief_id": "E01-002",
+          "executed_steps": 27,
+          "center_envelope_min": 0.6000000238418579,
+          "center_to_edge_rms": 0.8029622329761006,
+          "center_residual_rms": 0.03267233073711395,
+          "center_coarse_residual_rms": 0.001254943897947669,
+          "clipped_core_pixels": 529
+        },
+        {
+          "brief_id": "E01-003",
+          "executed_steps": 27,
+          "center_envelope_min": 0.6000000238418579,
+          "center_to_edge_rms": 1.3889542857970543,
+          "center_residual_rms": 0.037151627242565155,
+          "center_coarse_residual_rms": 0.0013671980705112219,
+          "clipped_core_pixels": 68
+        },
+        {
+          "brief_id": "E01-004",
+          "executed_steps": 27,
+          "center_envelope_min": 0.6000000238418579,
+          "center_to_edge_rms": 0.759389583450446,
+          "center_residual_rms": 0.03633429482579231,
+          "center_coarse_residual_rms": 0.001252408605068922,
+          "clipped_core_pixels": 1399
+        },
+        {
+          "brief_id": "E01-005",
+          "executed_steps": 27,
+          "center_envelope_min": 0.6000000238418579,
+          "center_to_edge_rms": 0.6393183063184084,
+          "center_residual_rms": 0.03943752124905586,
+          "center_coarse_residual_rms": 0.0025921708438545465,
+          "clipped_core_pixels": 272
+        },
+        {
+          "brief_id": "E01-006",
+          "executed_steps": 27,
+          "center_envelope_min": 0.6000000238418579,
+          "center_to_edge_rms": 1.0499135794826147,
+          "center_residual_rms": 0.04675167053937912,
+          "center_coarse_residual_rms": 0.002850469434633851,
+          "clipped_core_pixels": 268
+        },
+        {
+          "brief_id": "E01-007",
+          "executed_steps": 27,
+          "center_envelope_min": 0.6000000238418579,
+          "center_to_edge_rms": 1.068718253411143,
+          "center_residual_rms": 0.039588265120983124,
+          "center_coarse_residual_rms": 0.001713569974526763,
+          "clipped_core_pixels": 128
+        },
+        {
+          "brief_id": "E01-008",
+          "executed_steps": 27,
+          "center_envelope_min": 0.6000000238418579,
+          "center_to_edge_rms": 0.7187120583990012,
+          "center_residual_rms": 0.06175462529063225,
+          "center_coarse_residual_rms": 0.0034155789762735367,
+          "clipped_core_pixels": 1093
+        },
+        {
+          "brief_id": "E01-009",
+          "executed_steps": 27,
+          "center_envelope_min": 0.6000000238418579,
+          "center_to_edge_rms": 1.0000193748060098,
+          "center_residual_rms": 0.024034837260842323,
+          "center_coarse_residual_rms": 0.0009578633471392095,
+          "clipped_core_pixels": 35
+        },
+        {
+          "brief_id": "E01-010",
+          "executed_steps": 27,
+          "center_envelope_min": 0.6000000238418579,
+          "center_to_edge_rms": 0.6433411634629996,
+          "center_residual_rms": 0.047219716012477875,
+          "center_coarse_residual_rms": 0.0019647858571261168,
+          "clipped_core_pixels": 341
+        }
+      ]
+    },
+    "u2-42-Btm": {
+      "mean_applied_ratio": 0.599846945163786,
+      "minimum_applied_ratio": 0.4616214178514931,
+      "count_lt_0_6": 4,
+      "n": 10,
+      "sample_diagnostics": [
+        {
+          "brief_id": "E01-001",
+          "executed_steps": 27,
+          "center_envelope_min": 0.6000000238418579,
+          "center_to_edge_rms": 0.5672413348203049,
+          "center_residual_rms": 0.02694220282137394,
+          "center_coarse_residual_rms": 0.0014605348696932197,
+          "clipped_core_pixels": 17
+        },
+        {
+          "brief_id": "E01-002",
+          "executed_steps": 27,
+          "center_envelope_min": 0.6000000238418579,
+          "center_to_edge_rms": 0.6061112585975306,
+          "center_residual_rms": 0.027922790497541428,
+          "center_coarse_residual_rms": 0.0011280287289991975,
+          "clipped_core_pixels": 5
+        },
+        {
+          "brief_id": "E01-003",
+          "executed_steps": 27,
+          "center_envelope_min": 0.6000000238418579,
+          "center_to_edge_rms": 0.5566322391432804,
+          "center_residual_rms": 0.04546584561467171,
+          "center_coarse_residual_rms": 0.0016139160143211484,
+          "clipped_core_pixels": 12
+        },
+        {
+          "brief_id": "E01-004",
+          "executed_steps": 27,
+          "center_envelope_min": 0.6000000238418579,
+          "center_to_edge_rms": 0.6963257693077873,
+          "center_residual_rms": 0.04852594435214996,
+          "center_coarse_residual_rms": 0.0018741460517048836,
+          "clipped_core_pixels": 59
+        },
+        {
+          "brief_id": "E01-005",
+          "executed_steps": 27,
+          "center_envelope_min": 0.6000000238418579,
+          "center_to_edge_rms": 0.5428059706317664,
+          "center_residual_rms": 0.04303380101919174,
+          "center_coarse_residual_rms": 0.0027765543200075626,
+          "clipped_core_pixels": 269
+        },
+        {
+          "brief_id": "E01-006",
+          "executed_steps": 27,
+          "center_envelope_min": 0.6000000238418579,
+          "center_to_edge_rms": 0.690278815521089,
+          "center_residual_rms": 0.040521569550037384,
+          "center_coarse_residual_rms": 0.0025454657152295113,
+          "clipped_core_pixels": 79
+        },
+        {
+          "brief_id": "E01-007",
+          "executed_steps": 27,
+          "center_envelope_min": 0.6000000238418579,
+          "center_to_edge_rms": 0.4616214178514931,
+          "center_residual_rms": 0.02733871527016163,
+          "center_coarse_residual_rms": 0.0010944922687485814,
+          "clipped_core_pixels": 3
+        },
+        {
+          "brief_id": "E01-008",
+          "executed_steps": 27,
+          "center_envelope_min": 0.6000000238418579,
+          "center_to_edge_rms": 0.6570015703191276,
+          "center_residual_rms": 0.06275603920221329,
+          "center_coarse_residual_rms": 0.003587652463465929,
+          "clipped_core_pixels": 4011
+        },
+        {
+          "brief_id": "E01-009",
+          "executed_steps": 27,
+          "center_envelope_min": 0.6000000238418579,
+          "center_to_edge_rms": 0.6145526623012365,
+          "center_residual_rms": 0.030168334022164345,
+          "center_coarse_residual_rms": 0.001551934750750661,
+          "clipped_core_pixels": 6
+        },
+        {
+          "brief_id": "E01-010",
+          "executed_steps": 27,
+          "center_envelope_min": 0.6000000238418579,
+          "center_to_edge_rms": 0.6058984131442436,
+          "center_residual_rms": 0.05123863369226456,
+          "center_coarse_residual_rms": 0.0027816537767648697,
+          "clipped_core_pixels": 2709
+        }
+      ]
+    },
+    "u1-1234-T": {
+      "mean_applied_ratio": 1.052968884761084,
+      "minimum_applied_ratio": 0.5034316912589221,
+      "count_lt_0_6": 4,
+      "n": 10,
+      "sample_diagnostics": [
+        {
+          "brief_id": "E01-001",
+          "executed_steps": 25,
+          "center_envelope_min": 0.6000000238418579,
+          "center_to_edge_rms": 1.9188076300247097,
+          "center_residual_rms": 0.007478703279048204,
+          "center_coarse_residual_rms": 0.0004900462226942182,
+          "clipped_core_pixels": 0
+        },
+        {
+          "brief_id": "E01-002",
+          "executed_steps": 25,
+          "center_envelope_min": 0.6000000238418579,
+          "center_to_edge_rms": 0.5703746201303236,
+          "center_residual_rms": 0.052942726761102676,
+          "center_coarse_residual_rms": 0.0021857067476958036,
+          "clipped_core_pixels": 1797
+        },
+        {
+          "brief_id": "E01-003",
+          "executed_steps": 25,
+          "center_envelope_min": 0.6000000238418579,
+          "center_to_edge_rms": 2.9035620702580247,
+          "center_residual_rms": 0.02499067783355713,
+          "center_coarse_residual_rms": 0.0018901074072346091,
+          "clipped_core_pixels": 527
+        },
+        {
+          "brief_id": "E01-004",
+          "executed_steps": 25,
+          "center_envelope_min": 0.6000000238418579,
+          "center_to_edge_rms": 0.58650491261861,
+          "center_residual_rms": 0.043641816824674606,
+          "center_coarse_residual_rms": 0.002412694739177823,
+          "clipped_core_pixels": 254
+        },
+        {
+          "brief_id": "E01-005",
+          "executed_steps": 25,
+          "center_envelope_min": 0.6000000238418579,
+          "center_to_edge_rms": 0.6074403664546929,
+          "center_residual_rms": 0.0473921075463295,
+          "center_coarse_residual_rms": 0.0020919139496982098,
+          "clipped_core_pixels": 201
+        },
+        {
+          "brief_id": "E01-006",
+          "executed_steps": 25,
+          "center_envelope_min": 0.6000000238418579,
+          "center_to_edge_rms": 0.6269654340142189,
+          "center_residual_rms": 0.04464966803789139,
+          "center_coarse_residual_rms": 0.0022382319439202547,
+          "clipped_core_pixels": 649
+        },
+        {
+          "brief_id": "E01-007",
+          "executed_steps": 25,
+          "center_envelope_min": 0.6000000238418579,
+          "center_to_edge_rms": 1.6071240317676745,
+          "center_residual_rms": 0.028185265138745308,
+          "center_coarse_residual_rms": 0.0020288995001465082,
+          "clipped_core_pixels": 0
+        },
+        {
+          "brief_id": "E01-008",
+          "executed_steps": 25,
+          "center_envelope_min": 0.6000000238418579,
+          "center_to_edge_rms": 0.5883686246885876,
+          "center_residual_rms": 0.06610286980867386,
+          "center_coarse_residual_rms": 0.004186760634183884,
+          "clipped_core_pixels": 1701
+        },
+        {
+          "brief_id": "E01-009",
+          "executed_steps": 25,
+          "center_envelope_min": 0.6000000238418579,
+          "center_to_edge_rms": 0.5034316912589221,
+          "center_residual_rms": 0.04957928881049156,
+          "center_coarse_residual_rms": 0.0022281554993242025,
+          "clipped_core_pixels": 14113
+        },
+        {
+          "brief_id": "E01-010",
+          "executed_steps": 25,
+          "center_envelope_min": 0.6000000238418579,
+          "center_to_edge_rms": 0.6171094663950762,
+          "center_residual_rms": 0.0533452071249485,
+          "center_coarse_residual_rms": 0.0034199717920273542,
+          "clipped_core_pixels": 3214
+        }
+      ]
+    },
+    "u1-1234-Btm": {
+      "mean_applied_ratio": 1.0543252760758324,
+      "minimum_applied_ratio": 0.3927764741102195,
+      "count_lt_0_6": 6,
+      "n": 10,
+      "sample_diagnostics": [
+        {
+          "brief_id": "E01-001",
+          "executed_steps": 25,
+          "center_envelope_min": 0.6000000238418579,
+          "center_to_edge_rms": 5.079257401764596,
+          "center_residual_rms": 0.017413567751646042,
+          "center_coarse_residual_rms": 0.0013124817050993443,
+          "clipped_core_pixels": 0
+        },
+        {
+          "brief_id": "E01-002",
+          "executed_steps": 25,
+          "center_envelope_min": 0.6000000238418579,
+          "center_to_edge_rms": 0.3927764741102195,
+          "center_residual_rms": 0.03783033788204193,
+          "center_coarse_residual_rms": 0.001482561812736094,
+          "clipped_core_pixels": 1130
+        },
+        {
+          "brief_id": "E01-003",
+          "executed_steps": 25,
+          "center_envelope_min": 0.6000000238418579,
+          "center_to_edge_rms": 0.8051213064846983,
+          "center_residual_rms": 0.024283474311232567,
+          "center_coarse_residual_rms": 0.0011400278890505433,
+          "clipped_core_pixels": 905
+        },
+        {
+          "brief_id": "E01-004",
+          "executed_steps": 25,
+          "center_envelope_min": 0.6000000238418579,
+          "center_to_edge_rms": 0.6251012117001381,
+          "center_residual_rms": 0.04263390973210335,
+          "center_coarse_residual_rms": 0.002579593798145652,
+          "clipped_core_pixels": 122
+        },
+        {
+          "brief_id": "E01-005",
+          "executed_steps": 25,
+          "center_envelope_min": 0.6000000238418579,
+          "center_to_edge_rms": 0.3977944854963889,
+          "center_residual_rms": 0.03325924649834633,
+          "center_coarse_residual_rms": 0.0014267305377870798,
+          "clipped_core_pixels": 336
+        },
+        {
+          "brief_id": "E01-006",
+          "executed_steps": 25,
+          "center_envelope_min": 0.6000000238418579,
+          "center_to_edge_rms": 0.40345518810582226,
+          "center_residual_rms": 0.03455622121691704,
+          "center_coarse_residual_rms": 0.001718361978419125,
+          "clipped_core_pixels": 7995
+        },
+        {
+          "brief_id": "E01-007",
+          "executed_steps": 25,
+          "center_envelope_min": 0.6000000238418579,
+          "center_to_edge_rms": 1.2990470492713986,
+          "center_residual_rms": 0.02338511310517788,
+          "center_coarse_residual_rms": 0.001171489362604916,
+          "clipped_core_pixels": 0
+        },
+        {
+          "brief_id": "E01-008",
+          "executed_steps": 25,
+          "center_envelope_min": 0.6000000238418579,
+          "center_to_edge_rms": 0.4478492479675425,
+          "center_residual_rms": 0.038857996463775635,
+          "center_coarse_residual_rms": 0.0027294736355543137,
+          "clipped_core_pixels": 1797
+        },
+        {
+          "brief_id": "E01-009",
+          "executed_steps": 25,
+          "center_envelope_min": 0.6000000238418579,
+          "center_to_edge_rms": 0.5154495369851043,
+          "center_residual_rms": 0.03854955732822418,
+          "center_coarse_residual_rms": 0.0016780521254986525,
+          "clipped_core_pixels": 235
+        },
+        {
+          "brief_id": "E01-010",
+          "executed_steps": 25,
+          "center_envelope_min": 0.6000000238418579,
+          "center_to_edge_rms": 0.5774008588724148,
+          "center_residual_rms": 0.044284332543611526,
+          "center_coarse_residual_rms": 0.0032729797530919313,
+          "clipped_core_pixels": 6651
+        }
+      ]
+    }
+  }
+}

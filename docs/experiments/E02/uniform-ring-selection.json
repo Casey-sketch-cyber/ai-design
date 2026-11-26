@@ -1,0 +1,532 @@
+{
+  "ring": "r0",
+  "cap": {
+    "selected": "u1",
+    "reason": "most_primary_wins_vs_g5",
+    "method_order": [
+      "g5",
+      "u1",
+      "u2"
+    ],
+    "eligible": [
+      "g5",
+      "u1",
+      "u2"
+    ],
+    "primary_ties": [
+      "u1"
+    ],
+    "stripe_ties": [
+      "u1"
+    ],
+    "requires_tie_visual_review": false,
+    "native_artifact_counts": null,
+    "b2_regional_seed_42_means": {
+      "cap_6_delta_e00": 9.493489535649617,
+      "cap_6_lpips": 0.3741687337557475,
+      "non_native_7_sdr": 4.417501974105835,
+      "non_native_7_lpips": 0.3646032963480268,
+      "bleed_fill_pct": 52.99622900239972,
+      "bleed_fill_v2_pct": 28.460747343160783,
+      "stripe_index": 1.1399088085999431,
+      "clip_score": 0.6571861021220684,
+      "image_reward": -1.7549812078475953,
+      "elapsed_seconds": 43.1164291460067,
+      "peak_memory_mib": 10453.65625,
+      "top_interior_texture_energy": 0.0012271111831068993,
+      "bottom_interior_texture_energy": 0.0012491258792579174,
+      "top_near_seam_energy_gap": 0.0006739898861875796,
+      "bottom_near_seam_energy_gap": 0.0008208852528089968,
+      "cap_6_near_seam_energy_gap": 0.0007474375694982883,
+      "wrap_lb_near_seam_energy_gap": 0.00034645373816601934,
+      "F_interior_texture_energy": 0.001635121722938493,
+      "L_interior_texture_energy": 0.0017237349937204271,
+      "B_interior_texture_energy": 0.0014162790612317622,
+      "R_interior_texture_energy": 0.0019294565136078745,
+      "ring_interior_texture_energy": 0.0016761480728746392,
+      "top_cap_to_ring_texture_ratio": 0.72601811349906,
+      "bottom_cap_to_ring_texture_ratio": 0.7036022680518794,
+      "top_texture_energy_2x": 0.0014804001722950489,
+      "bottom_texture_energy_2x": 0.0016391779470723122,
+      "top_texture_retention_2x": 1.1935541232200413,
+      "bottom_texture_retention_2x": 1.3401888674767972
+    },
+    "methods": {
+      "g5": {
+        "means": {
+          "cap_6_delta_e00": 4.188543005784353,
+          "cap_6_lpips": 0.3623981952667236,
+          "non_native_7_sdr": 1.6240647077560424,
+          "non_native_7_lpips": 0.3343990028968879,
+          "bleed_fill_pct": 67.45500514226946,
+          "bleed_fill_v2_pct": 58.50145697634556,
+          "stripe_index": 1.5917150288226207,
+          "clip_score": 0.6812510155141354,
+          "image_reward": -1.6773525714874267,
+          "elapsed_seconds": 49.84416525512934,
+          "peak_memory_mib": 10528.607421875,
+          "top_interior_texture_energy": 0.0008878537133568898,
+          "bottom_interior_texture_energy": 0.0007898623924120329,
+          "top_near_seam_energy_gap": 0.0007188397415726892,
+          "bottom_near_seam_energy_gap": 0.0015490004186479685,
+          "cap_6_near_seam_energy_gap": 0.0011339200801103288,
+          "wrap_lb_near_seam_energy_gap": 0.00038936074706725777,
+          "F_interior_texture_energy": 0.002530770481098443,
+          "L_interior_texture_energy": 0.0024866898078471423,
+          "B_interior_texture_energy": 0.002541477419435978,
+          "R_interior_texture_energy": 0.0025028357631526887,
+          "ring_interior_texture_energy": 0.002515443367883563,
+          "top_cap_to_ring_texture_ratio": 0.3199536598729488,
+          "bottom_cap_to_ring_texture_ratio": 0.27551851970056285,
+          "top_texture_energy_2x": 0.00202051472151652,
+          "bottom_texture_energy_2x": 0.0019426037964876742,
+          "top_texture_retention_2x": 2.217923620330132,
+          "bottom_texture_retention_2x": 2.362882445056052
+        },
+        "wins_vs_g5": [],
+        "delta_vs_g5": {
+          "cap_6_delta_e00": 0.0,
+          "cap_6_lpips": 0.0,
+          "non_native_7_sdr": 0.0,
+          "non_native_7_lpips": 0.0,
+          "bleed_fill_pct": 0.0,
+          "bleed_fill_v2_pct": 0.0
+        },
+        "win_count": 0,
+        "hard_constraints": {
+          "hardware": {
+            "passed": true,
+            "highest_sample_seconds": 53.22286657616496,
+            "highest_sample_peak_mib": 10528.607421875,
+            "seconds_limit": 60,
+            "peak_mib_limit": 20480,
+            "over_limit": []
+          },
+          "clip": {
+            "value": 0.6812510155141354,
+            "minimum": 0.6362,
+            "passed": true
+          },
+          "image_reward": {
+            "value": -1.6773525714874267,
+            "minimum": -1.8549812078475953,
+            "passed": true
+          },
+          "minimum_texture": {
+            "top_interior_texture_energy": {
+              "value": 0.0008878537133568898,
+              "minimum": 0.0006135555915534497,
+              "passed": true
+            },
+            "bottom_interior_texture_energy": {
+              "value": 0.0007898623924120329,
+              "minimum": 0.0006245629396289587,
+              "passed": true
+            }
+          },
+          "maximum_texture": {
+            "ratio_limit": 2.0,
+            "over_limit": [],
+            "passed": true
+          },
+          "passed": true
+        },
+        "eligible": true
+      },
+      "u1": {
+        "means": {
+          "cap_6_delta_e00": 4.187415393193563,
+          "cap_6_lpips": 0.37893150746822357,
+          "non_native_7_sdr": 1.5884507894515991,
+          "non_native_7_lpips": 0.3485704133553164,
+          "bleed_fill_pct": 67.393726431265,
+          "bleed_fill_v2_pct": 58.4401782653411,
+          "stripe_index": 1.6840798444802803,
+          "clip_score": 0.6891461908817291,
+          "image_reward": -1.6334205985069274,
+          "elapsed_seconds": 51.119194712676105,
+          "peak_memory_mib": 10529.544921875,
+          "top_interior_texture_energy": 0.0017690010194201023,
+          "bottom_interior_texture_energy": 0.0013235379796242342,
+          "top_near_seam_energy_gap": 0.0007092115967376836,
+          "bottom_near_seam_energy_gap": 0.0013802345279448976,
+          "cap_6_near_seam_energy_gap": 0.0010447230623412906,
+          "wrap_lb_near_seam_energy_gap": 0.00038936074706725777,
+          "F_interior_texture_energy": 0.002530770481098443,
+          "L_interior_texture_energy": 0.0024866898078471423,
+          "B_interior_texture_energy": 0.002541477419435978,
+          "R_interior_texture_energy": 0.0025028357631526887,
+          "ring_interior_texture_energy": 0.002515443367883563,
+          "top_cap_to_ring_texture_ratio": 0.6370522130586372,
+          "bottom_cap_to_ring_texture_ratio": 0.4856201813147049,
+          "top_texture_energy_2x": 0.0040350781287997965,
+          "bottom_texture_energy_2x": 0.0029783550824504347,
+          "top_texture_retention_2x": 2.2519348053854342,
+          "bottom_texture_retention_2x": 2.2805082729850614
+        },
+        "wins_vs_g5": [
+          "cap_6_delta_e00",
+          "non_native_7_sdr"
+        ],
+        "delta_vs_g5": {
+          "cap_6_delta_e00": -0.0011276125907899726,
+          "cap_6_lpips": 0.01653331220149995,
+          "non_native_7_sdr": -0.03561391830444327,
+          "non_native_7_lpips": 0.014171410458428513,
+          "bleed_fill_pct": -0.06127871100446214,
+          "bleed_fill_v2_pct": -0.06127871100445503
+        },
+        "win_count": 2,
+        "hard_constraints": {
+          "hardware": {
+            "passed": true,
+            "highest_sample_seconds": 53.88520065136254,
+            "highest_sample_peak_mib": 10529.544921875,
+            "seconds_limit": 60,
+            "peak_mib_limit": 20480,
+            "over_limit": []
+          },
+          "clip": {
+            "value": 0.6891461908817291,
+            "minimum": 0.6362,
+            "passed": true
+          },
+          "image_reward": {
+            "value": -1.6334205985069274,
+            "minimum": -1.8549812078475953,
+            "passed": true
+          },
+          "minimum_texture": {
+            "top_interior_texture_energy": {
+              "value": 0.0017690010194201023,
+              "minimum": 0.0006135555915534497,
+              "passed": true
+            },
+            "bottom_interior_texture_energy": {
+              "value": 0.0013235379796242342,
+              "minimum": 0.0006245629396289587,
+              "passed": true
+            }
+          },
+          "maximum_texture": {
+            "ratio_limit": 2.0,
+            "over_limit": [],
+            "passed": true
+          },
+          "passed": true
+        },
+        "eligible": true
+      },
+      "u2": {
+        "means": {
+          "cap_6_delta_e00": 4.287508110205333,
+          "cap_6_lpips": 0.38239507575829823,
+          "non_native_7_sdr": 1.625422751903534,
+          "non_native_7_lpips": 0.35153918617538044,
+          "bleed_fill_pct": 67.38601302708261,
+          "bleed_fill_v2_pct": 58.39689749742887,
+          "stripe_index": 1.642635089281562,
+          "clip_score": 0.6886081695556641,
+          "image_reward": -1.6136045575141906,
+          "elapsed_seconds": 52.68289318513125,
+          "peak_memory_mib": 10529.544921875,
+          "top_interior_texture_energy": 0.0015663572732592002,
+          "bottom_interior_texture_energy": 0.001614094735123217,
+          "top_near_seam_energy_gap": 0.0008773724323267137,
+          "bottom_near_seam_energy_gap": 0.0014387798587752816,
+          "cap_6_near_seam_energy_gap": 0.0011580761455509975,
+          "wrap_lb_near_seam_energy_gap": 0.00038936074706725777,
+          "F_interior_texture_energy": 0.002530770481098443,
+          "L_interior_texture_energy": 0.0024866898078471423,
+          "B_interior_texture_energy": 0.002541477419435978,
+          "R_interior_texture_energy": 0.0025028357631526887,
+          "ring_interior_texture_energy": 0.002515443367883563,
+          "top_cap_to_ring_texture_ratio": 0.5863357208333996,
+          "bottom_cap_to_ring_texture_ratio": 0.5354143306277113,
+          "top_texture_energy_2x": 0.0036784931318834422,
+          "bottom_texture_energy_2x": 0.0037302686425391583,
+          "top_texture_retention_2x": 2.309801822418664,
+          "bottom_texture_retention_2x": 2.342228100715075
+        },
+        "wins_vs_g5": [],
+        "delta_vs_g5": {
+          "cap_6_delta_e00": 0.09896510442098005,
+          "cap_6_lpips": 0.01999688049157461,
+          "non_native_7_sdr": 0.0013580441474916327,
+          "non_native_7_lpips": 0.017140183278492538,
+          "bleed_fill_pct": -0.06899211518684467,
+          "bleed_fill_v2_pct": -0.10455947891669126
+        },
+        "win_count": 0,
+        "hard_constraints": {
+          "hardware": {
+            "passed": true,
+            "highest_sample_seconds": 52.973017409443855,
+            "highest_sample_peak_mib": 10529.544921875,
+            "seconds_limit": 60,
+            "peak_mib_limit": 20480,
+            "over_limit": []
+          },
+          "clip": {
+            "value": 0.6886081695556641,
+            "minimum": 0.6362,
+            "passed": true
+          },
+          "image_reward": {
+            "value": -1.6136045575141906,
+            "minimum": -1.8549812078475953,
+            "passed": true
+          },
+          "minimum_texture": {
+            "top_interior_texture_energy": {
+              "value": 0.0015663572732592002,
+              "minimum": 0.0006135555915534497,
+              "passed": true
+            },
+            "bottom_interior_texture_energy": {
+              "value": 0.001614094735123217,
+              "minimum": 0.0006245629396289587,
+              "passed": true
+            }
+          },
+          "maximum_texture": {
+            "ratio_limit": 2.0,
+            "over_limit": [],
+            "passed": true
+          },
+          "passed": true
+        },
+        "eligible": true
+      }
+    }
+  },
+  "complete": true,
+  "ring_decision_sha256": "d39964315d5eeb467c675ec6b2390627969d52d69146fd11391a1a0032b892e3",
+  "candidate_parameters": {
+    "g5": {
+      "prompt_mode": "plain",
+      "cap_scale": 2,
+      "inpaint": true,
+      "repaint": false,
+      "tight": true,
+      "strength": 0.85,
+      "aligned_attention": false,
+      "inject_texture": true
+    },
+    "u1": {
+      "prompt_mode": "plain",
+      "cap_scale": 2,
+      "inpaint": true,
+      "repaint": false,
+      "tight": true,
+      "strength": 0.85,
+      "aligned_attention": false,
+      "uniform_texture": true
+    },
+    "u2": {
+      "prompt_mode": "plain",
+      "cap_scale": 2,
+      "inpaint": true,
+      "repaint": false,
+      "tight": true,
+      "strength": 0.92,
+      "aligned_attention": false,
+      "uniform_texture": true
+    }
+  },
+  "selection_policy": {
+    "seed": 42,
+    "variant": "preflight",
+    "reference": "g5",
+    "guard_reference": "b2_regional",
+    "clip_minimum": 0.6362,
+    "interior_fraction_vs_original_b2_regional": 0.5,
+    "maximum_cap_ratio_vs_own_ring_each_box": 2.0,
+    "image_reward_margin_vs_original_b2_regional": 0.1,
+    "runtime": "Every case stays within 60 s / 20 GiB.",
+    "primary_directions": {
+      "cap_6_delta_e00": -1,
+      "cap_6_lpips": -1,
+      "non_native_7_sdr": -1,
+      "non_native_7_lpips": -1,
+      "bleed_fill_pct": 1,
+      "bleed_fill_v2_pct": 1
+    },
+    "ranking": [
+      "more_primary_wins_vs_g5",
+      "lower_frozen_stripe_v1",
+      "no_visible_native_artifacts_if_exact_v1_tied",
+      "fewer_native_artifacts",
+      "registered_method_order"
+    ],
+    "gate_seeds": [
+      42,
+      1234
+    ]
+  },
+  "scores_42_sha256": {
+    "b2/E01-001-42": "a099808af971228561da531bfbf558863950ad2b586344851eb7c3678a5a8346",
+    "b2/E01-002-42": "ed790aceb0de128768a239e93ed8abe3210998a8f4e6f718ea0a80713e82f2f9",
+    "b2/E01-003-42": "fecf9ac3d78e2a24696f16074cfeb5b47cb6b3c69e5a4f70f3fff3a25d3a2b54",
+    "b2/E01-004-42": "7970831d8ff54b13a23c5d8b3070e7f52775885b80342272af961e86bb5bfd04",
+    "b2/E01-005-42": "44975453d09cd1ab0ad97bb9ad8cd34d84466a59749d2e27c6fe4eb1c9c795c1",
+    "b2/E01-006-42": "e6b9f356fc30ba23e39d520d1b71789e92030b3fb13d87f56363f6ce89fbf980",
+    "b2/E01-007-42": "06a938d0e2a52d93e816be4258a17c21973f468e888997f31493408e2c6a649d",
+    "b2/E01-008-42": "2bfbcea5cec6f8b0b638ba9fc94903187a6d9628fdaa2c93fcf75526fa182750",
+    "b2/E01-009-42": "6396ea503138324e692376865f5ac4bad81aeed5cb56908d2503212159c10ca7",
+    "b2/E01-010-42": "9208469ffbd40a8e08e153a2943bbad32d03d2535f68b95ad98aa8b861926dbd",
+    "b2_post/E01-001-42": "7d672f97ffea90f27d095a1ffac089350693003f57e6ccb438fb15020b046327",
+    "b2_post/E01-002-42": "5bfa1f5e3c84ab7560ee20b7dd573857cc8894b57810db9d5eb963d89d1981ae",
+    "b2_post/E01-003-42": "6cab6f7d1610091b32d7062080a2c80a39692da755af830a0a5b7c7a9c484729",
+    "b2_post/E01-004-42": "59dc053b224fd22813d52624c8177a3a3dce415b88137eb43685ad3120f646bb",
+    "b2_post/E01-005-42": "bf3a13046a2ffbfa4c54e0f0e56a15a56212a2b3d721dea219ec095aba85d726",
+    "b2_post/E01-006-42": "62c1e82eb7f46523fbcfee95b67ceef38cb487ad0347ddbfde3babfb3a27b866",
+    "b2_post/E01-007-42": "5fb2794b716290bc595cf4903ffa0f22b054c386402c1f73a0eb61e4166884a8",
+    "b2_post/E01-008-42": "e3efcf03cef6418d6c1c8084ea063c867cc3328376b8234197c6c7620ea1c05f",
+    "b2_post/E01-009-42": "ec74391e4f5790ffbbb2de4e763d0e2ec899046db8c68f06b31e27d519e3bc48",
+    "b2_post/E01-010-42": "dad74573633663295c90b6092528e8460f4536eec2a04273a6a30f0992766ca1",
+    "b3/E01-001-42": "5afa04950a0d886aa89bd34cffb3d7a06a7fe51610757feeec8d274e70e1c635",
+    "b3/E01-002-42": "fc0a53b13cbe4c014ef0a5bffe340b9f1fc0e5fea9401998b0089ce6a6920303",
+    "b3/E01-003-42": "521098214c73cf15a3113f5da847342c95ddff6bcaf705a5ba2e62707e0b9eba",
+    "b3/E01-004-42": "7d2d3c46e42a5bd24199c50ae64090d2c1cef4f12d136c892a11ed2aa3374d65",
+    "b3/E01-005-42": "4cde2613450b64c0e1e6988f7b5b014c59be3e663e6660e7a11576669859943c",
+    "b3/E01-006-42": "dc3b4c757583f77e1cf9043d5e4e8b0bec2600a24f86f96019abaa443dc9d3e4",
+    "b3/E01-007-42": "cfb00da03defd7fdc51174e5a7e49b8e0222a588de01b9b2f672da9bddf16e99",
+    "b3/E01-008-42": "fa4a3679b60806bb99ac34779e888c44f90afb5cd82dfe4f7dc8306bbe9dae64",
+    "b3/E01-009-42": "0e989427c6b4e44aff2310160ed38a50857595317439b232971ef901b60d1039",
+    "b3/E01-010-42": "90177bf49e44c186549183c614fe050264c6cf50856311c07af2d94048462b61",
+    "b4/E01-001-42": "67c5a427bb75c7e9f5ecbf49736c13b4afbf174994f597d4f6617451026f779a",
+    "b4/E01-002-42": "e32e10305cf696c844e920636cd7b674b40836de4e20860c94cc3c0861fb5ee8",
+    "b4/E01-003-42": "22e7f03b3ecf400b4c705272658bd5698d4335a111e5c7e5fa53729d98900694",
+    "b4/E01-004-42": "f9bbbfdba5a88a8ead54947a76894387652dcd2c6ac774d1266513692f65db56",
+    "b4/E01-005-42": "7dd0f6d58650fc54f1ec4520ede9fe523bccc80acad83d766e3c0043122efe27",
+    "b4/E01-006-42": "5728c5cfa572307b4d061cd79ac8036aa6a59f549cac536230e926f246b11ed9",
+    "b4/E01-007-42": "78c05d3ccf294616c0fce702e2ad66534775dcfecc5d1b8bde79c7a8f5da9443",
+    "b4/E01-008-42": "72ac536448e46b161bd619918072df792e00674fcbe0e810e5ed4c125d27254e",
+    "b4/E01-009-42": "74d191cf107dc6ffc8bdd709a557166c2991ac6401f817241a8db3b8c7e692d3",
+    "b4/E01-010-42": "16e4c661c079001368f052d1079207ac6f0b76564563ccf768fbae3a0d26a491",
+    "b2_regional/E01-001-42": "b241b748b01972baeaa6b67cc0878bcd6d370254f0c967dcbffd32ca14e13672",
+    "b2_regional/E01-002-42": "de730668753d2e4aa56df4f85df4e4c3f56e8253e8b34ba4fee9053086167838",
+    "b2_regional/E01-003-42": "e15fa958e4c3b152701d7310052cb535e8657b5172e53fd8b6ce515e7bf0b858",
+    "b2_regional/E01-004-42": "ea1e373a0ff600c7c240d9b4cc21c7cfcb6dfc7d4e9cecf338cf7c819f8a0124",
+    "b2_regional/E01-005-42": "de18650ad18b5b4d303dd15ffa398bcae31b6990ad3f9ff23de681a370982151",
+    "b2_regional/E01-006-42": "63a880c5c550c0b5d5a46f8ad4f1aa67a6fbfc11cf7221fdbd9a50782771814b",
+    "b2_regional/E01-007-42": "290c498b7713097e34d3c05996a4d973b6ee99d6bac30ee35c7f62423602f9b1",
+    "b2_regional/E01-008-42": "65df556cb57f21e701db0ac1a22b3ed6e66b42d93be0d4d58979470dd39ae198",
+    "b2_regional/E01-009-42": "4eec8ead4edc37ca7d86df44df5ac41f8291dd8db102038cc337ff39948ee543",
+    "b2_regional/E01-010-42": "4d720786c034c80fd572a16e0d815146a304f529afb9342f0fe2e52209c75a99",
+    "b2_regional_r1/E01-001-42": "78332abbfce8c0cd882a1742cca7aded0e634d7d9134dc04ca0ee21f9ba7e9ff",
+    "b2_regional_r1/E01-002-42": "ce901d6519781ddef0db0974e9a76851707e8c52dd7b2cab48ab528769079f9f",
+    "b2_regional_r1/E01-003-42": "a85e43354f52f52286efca16dafd694a2fc2fc5d11da07d9c236986239456047",
+    "b2_regional_r1/E01-004-42": "c1d043c62965c8f61da56a5827e83764cfe64cda8ed6578fdc1430f1fe73c369",
+    "b2_regional_r1/E01-005-42": "fbb13d21ede81c11158222e191d16900e03855087e217910934b75f52df5fb3c",
+    "b2_regional_r1/E01-006-42": "8f148b64686b155f11c3fe638a497a208ec98f6afa9a41b303a0ddfa716b1146",
+    "b2_regional_r1/E01-007-42": "eb6ef593bf9d004c0d421b33a6f86d703a800e69ca2069c114290f452059534f",
+    "b2_regional_r1/E01-008-42": "bc28fb6183c96366c32a0414a08b67fc427caa043b49d9707f8c7ebb8cedb87f",
+    "b2_regional_r1/E01-009-42": "33e97579eeff2e554c8fb2620b7b8768533c89af08f5af682eead86b15cbc1d8",
+    "b2_regional_r1/E01-010-42": "9888cd282c5168b425c6e75b8bbb9384cebd590cfb4c93080f71011d7d562a1e",
+    "g5/E01-001-42": "b7531ad9b2839b1ac107e9293f3cc9757bfe11b3ea7276e2e766bfb4d608ce92",
+    "g5/E01-002-42": "56278c3983dfb5a7ce92df473198212f77c0c6307f92b8258c3b97bacc17c8d8",
+    "g5/E01-003-42": "de8ea714ab506b04c3c0ec93d294dbb48ff4ccecae2ed77d39d2ab906ad50fd9",
+    "g5/E01-004-42": "1f0e61c4687a89495f1e6bf47dba6f960fd75d60b26a930f9cd1ec0313783ee2",
+    "g5/E01-005-42": "434e6b35c9b7c0c44695667c6af3116aa6df1495b092f536dfad82752a2bc723",
+    "g5/E01-006-42": "9aa24ef29a7a557e891eb34fb3a90beaf019aa5b3aeb69aefbdc94cec6808983",
+    "g5/E01-007-42": "cdbaaf5e678fb26233e0ae58326d618ddc523d742328d6617887f705be5a926a",
+    "g5/E01-008-42": "334c01947748157c9a57eaee7a3a418055b6144a3b656eaba4a77eefa1efd66a",
+    "g5/E01-009-42": "0e69b0e05f02aa738e8ab78051f5e3503e99c59b450a15d028e7215fa42c0b70",
+    "g5/E01-010-42": "ce95822b5d9e617e23a808f9a6e01dc7daacb7d197b6e552386ed3cb0b40b5c0",
+    "u1/E01-001-42": "0f3f5d411f601abc4aa09d784f0f55e933127644cfaca5d31de6415fc95fa152",
+    "u1/E01-002-42": "f48e5074a278a0a1d8b669392985c2246e56933056be15117df9212cd9f2d4dd",
+    "u1/E01-003-42": "51f55d9b53a6c0828d01a0e7cd71c63256abc006b07b0be14dcaa29011587553",
+    "u1/E01-004-42": "dad9fbca873448ef996ee44c7a14223ed9803b827c3bf6e950665dfaf65a542f",
+    "u1/E01-005-42": "48dac83d727a8aafe2f9caa7e2d6bbd137da4fe4b6157160966a57d56a3da075",
+    "u1/E01-006-42": "1a9302026115201190f9f57adc217e6172a58a8224339349a87eec29983f4311",
+    "u1/E01-007-42": "466ddf1cc65bca0f9bd506027be3a02a854ccecc20916304be057ba534f3f92b",
+    "u1/E01-008-42": "d3c0245d009dfa1361d41d7ccf3540d34bbbe8b3667fff28839a5a71ca639a1a",
+    "u1/E01-009-42": "5381927433315791ff3a6ac773f4fa27fbc2726529dd8bfc1f805b7c6278e5aa",
+    "u1/E01-010-42": "8c89082a2005ea3efe1bfae7db8dc7d0b59382ff477f98f394fbc61480ff9679",
+    "u2/E01-001-42": "135695bc356a43175cb4bd340b9eb6b765e85cb863bfa015a7c2d23db2b1c4a6",
+    "u2/E01-002-42": "6e6bcef2b42f91aaa6cd7923b249829cb0274d9a510e41173d52ea5e3470627e",
+    "u2/E01-003-42": "8c72b94322918582f5d9b3b6e5d31718c0969442db8932fc9a47cfab74f1ae2c",
+    "u2/E01-004-42": "28d1444e3544ac62f8130b3044b0e06dc1286a845fadd917cf426714ae77d70f",
+    "u2/E01-005-42": "c7d0de32eb91a1382011364f0befd342b44228b21eb59e4be2f709ffff09c6e0",
+    "u2/E01-006-42": "bbb96b8b6f3468cdf0a6549f878ae10ec8cdb9bd8de64966d6899059d2ff162e",
+    "u2/E01-007-42": "0a88eac60653fff4c0286f55dff65e7ce4e1a540ab190374be2edacf4c376d9e",
+    "u2/E01-008-42": "a77e2d76508681a8aacd88c8e55c19915987b45c218f6fd157db102fb20ecd12",
+    "u2/E01-009-42": "dc922c64475d383fad8ccebc4d185cbf47dcac5abbe5c42914f23acb7854fcea",
+    "u2/E01-010-42": "f0021040c613abd6fde3c0950932e78f5db9ebb6972619363e0af38ad970ff8b"
+  },
+  "visual_review_complete": true,
+  "scores_1234_sha256": {
+    "b2/E01-001-1234": "0cef8ec469fcf74dbd58e25cacd8e986cfa31ce9144ee2a11b613e653bf5a69c",
+    "b2/E01-002-1234": "815b437f715ed5327cbbb467af57e5c27f03c13fcfa60c012f0e3e6b674353e9",
+    "b2/E01-003-1234": "48c1c511208e51e276377f3d8c05309a38b56e9d5107735b53012a92d06ed278",
+    "b2/E01-004-1234": "fcbb7c99e0c664a86d8dcfd84bce0c6eeb39d7bcf106bbfcef1c5b217f5915cd",
+    "b2/E01-005-1234": "812ad93f52a8595614c693cf05be1405b64d6f99f19b0946b3a4fd7b3a96afc1",
+    "b2/E01-006-1234": "d0e731c65d79099b5df9c9a0eac06ca1d9d9a40018972712e5c9d0aec6d7c06d",
+    "b2/E01-007-1234": "c3c1dd0df59445752abc57e363f45c6aa8fe1bc5e2b595efaef3759f76cd5176",
+    "b2/E01-008-1234": "37907043b60b5bc83c6dbd6216c4b0c9badccd6458f74573a0f6d4ca2807ce03",
+    "b2/E01-009-1234": "b0d18c1771662c49596dfb3c93d78c91c90308393bb7b5a3003c57c7e1eda5d0",
+    "b2/E01-010-1234": "a497160b01a3707ce5d01c18c72f6cd99d6c27869f9a2eb2b35bd321a6ab1229",
+    "b2_post/E01-001-1234": "01ab6e2c4c706e38f5a85b6664aaa2db101f950e86891729f716c5883d7af51e",
+    "b2_post/E01-002-1234": "87b6d2c015cd44c6bd4474f918a5a78055472f52f63fbb75e53f4203787bf017",
+    "b2_post/E01-003-1234": "f79b2df8e0e60535ac8d74357eeb78a0228a74346d70830902e09b9a024173f6",
+    "b2_post/E01-004-1234": "fb145ec2e4fe6b11031873335ed7eb0036f4c6fbfaa1431a02a99e3008797b89",
+    "b2_post/E01-005-1234": "c229709d9e596235da7c299f38c04851b49c1e1e2aedf84fbce21600c6ed73bb",
+    "b2_post/E01-006-1234": "72da6f9041b3928aa9b806249ae49ae63d397c27dfea65b6fe60baf8a86be7b6",
+    "b2_post/E01-007-1234": "e618e2002df954f48b980038bd69db66e425a6d893af6eea8a1c2c19adf1239f",
+    "b2_post/E01-008-1234": "17b96dd4d12616e3017d1eb23ff179378193ed31a6020c917143c9adec334045",
+    "b2_post/E01-009-1234": "82ef7fa86271a998e4db9cbd8c0f518c56d7f8d2b1f2b147fdbec9f2b3e44c90",
+    "b2_post/E01-010-1234": "536253a701faf65469d34042b44c22ecf4f288a503403bf1b54b2ca052fddad1",
+    "b3/E01-001-1234": "c1e93519d6cea5bc943d69a6ebc45e58262b17bb1e634c73fa4f2ab383dd84cb",
+    "b3/E01-002-1234": "66fd3f70eea1eb837632597aebfcd6a45a889e63cea99c14596f23cc69d0281d",
+    "b3/E01-003-1234": "e12757d1356220dbeac78f05516121e7a7a47911e1c63f96c43c3ba0fbfcd048",
+    "b3/E01-004-1234": "ae0cbb5a6a8b7a2e77c583162ce20cedf48a69cc947b6a8c9f9b7be6af1a936f",
+    "b3/E01-005-1234": "8380125746d13472b1de3ffd51b02f72817e28bc0ed5fa46cbcb0627543688ab",
+    "b3/E01-006-1234": "f94c06b8e46919d9bf285dadae8ed9aca6dfcce94ee2c525ac450f7e67f58373",
+    "b3/E01-007-1234": "4da32a6dee5c92404c1c969d38d1c3d4c1ba2378cdf5c19d72f5d21fc55c6332",
+    "b3/E01-008-1234": "a57d6db07c2e9bc81e2a4adbd361d276c9a27c6bf5c0a12093bc0a4b98be74af",
+    "b3/E01-009-1234": "9918272394cc4bbc6e709c583f81960746212d90332a7861b5aea57c725e32b6",
+    "b3/E01-010-1234": "6ef9e1eb5831d3446b5139091bccd05e28f7878f7e019b52a92df91445ecc121",
+    "b4/E01-001-1234": "49b1f91882763ca0ca1fd5dd1e43c22e9d0cfc38164dfb6e54f5077a015b7ef3",
+    "b4/E01-002-1234": "743269728dc86e9291943df1be2cebf38eac60322d9b61d34763b910c1b7b308",
+    "b4/E01-003-1234": "12984c1d6acc2224b8aa5707fb1d6036239711b4ee2f3f885ccf5191273363ba",
+    "b4/E01-004-1234": "4082dd2289fb88ca89b279aebc57e362a8f9ac3f66824c4cca6ce459c7a9f20f",
+    "b4/E01-005-1234": "d0f860cebf0437a0f4f8b5815ec2b4fd2de3c8f53c97a2172cbcd55cb165e229",
+    "b4/E01-006-1234": "73971400d62572657f91774c5e7e31623d0e752fcd064f3ccb0199d35aaf758a",
+    "b4/E01-007-1234": "9d23656ae66955dacabce8c6338ff6650d0343812d23226efe43bbbe3bcfe6da",
+    "b4/E01-008-1234": "288b75c7d6bca163089b34ba3bc26bab1074b52da91457287aae11705670b219",
+    "b4/E01-009-1234": "1ceb1818f154f91b50f42c43ef7aed709b220784ae45427c2e9bc370cbbe1c95",
+    "b4/E01-010-1234": "5ad2835c06ad924ce663936b944740c1c711bc5fdfd943ab826d3d553c52d048",
+    "b2_regional/E01-001-1234": "10f3e81ddd0a7bae8010639632c42677698d91f38a314112bcf03782793f48b2",
+    "b2_regional/E01-002-1234": "07142fe93a975531eb9c0ba0cd80b515709b3e199f8340cf5b5e58a1d7c143dd",
+    "b2_regional/E01-003-1234": "740dc0f00bfce229457d2d9461e1f9e1ced08e24607b0d976e5c431c61cd7cb5",
+    "b2_regional/E01-004-1234": "8eb13941cf849626730792b0a8687472c6c6f5bf164254547740995f6f354a72",
+    "b2_regional/E01-005-1234": "015dfb1d31fa2253dbbc63f36149aefba81278b871db759803a736f07fe95fcd",
+    "b2_regional/E01-006-1234": "9a486ef69663bbaf0d3b0693689dc81041b475d6ad4766c19d7d47fb3e73aff0",
+    "b2_regional/E01-007-1234": "38b18d21a4b19fee96748b9da96141f96c02bf73162fcecd35de921940be138a",
+    "b2_regional/E01-008-1234": "349ddf169f6374eb46da6f5d9ce276634e368f7a4429d9ec1a2de02eebd7f039",
+    "b2_regional/E01-009-1234": "f2f6728017b53ef389decb156e1598dd248766c7acdd6934238a3a581d07078d",
+    "b2_regional/E01-010-1234": "7f91376b7d50411108bd631680276305c71e4856e575906f7dae97d621a5fed6",
+    "b2_regional_r1/E01-001-1234": "369e23f9a10c39b0c6ffb28106cc146215a8bb33e68a759f17e50b44bb1a5d9f",
+    "b2_regional_r1/E01-002-1234": "11f1678b837b540cb9aa40535660261ae8b0304590f6cb8c9e80d5dd00c5b058",
+    "b2_regional_r1/E01-003-1234": "b006e3603e656b1abda2b9087619b31b212880482a5412988e5835e7ffbbf404",
+    "b2_regional_r1/E01-004-1234": "172e48e12f5193e0646619294cf6e8d4282439b719a349f9e06c8e2ae57444b1",
+    "b2_regional_r1/E01-005-1234": "a93f37d024e4b5275569f3f2e5aca6f85b92e3b450a5474976488c2ff29ccf3b",
+    "b2_regional_r1/E01-006-1234": "e0d6d150dbdbc0305228375ec1675575b1cc57457ea357890ad411f5985e6927",
+    "b2_regional_r1/E01-007-1234": "887ba67080e26b2aa1d988c2378dc01e31a9af759c553bb9a003da01bc2f1e38",
+    "b2_regional_r1/E01-008-1234": "0a9f1b2a9b556c0738a03beec2e3036dd4c9b46d2befb97a2000a01e29594644",
+    "b2_regional_r1/E01-009-1234": "5d8d08f3345e5f6eeb5df334a94c3f376c5a5123b9ac3a2418a1e70c38af1596",
+    "b2_regional_r1/E01-010-1234": "e03fa87d42c7e91c95d80a009f294e503c06e8f11d7f31a6223209a938e87d62",
+    "u1/E01-001-1234": "89727711ec5ae2bfc7e2ce10a37969ba81172ea88c10e3082672467f639e1e95",
+    "u1/E01-002-1234": "6244ec4a532e2c08386f990c6d1c52caba2e90c06ff348fb7bd1568d7e6bcfca",
+    "u1/E01-003-1234": "2e1b4ba6a66aedcdc16c9ae90e07c7c599626612883896e6f42d17c45d6b9984",
+    "u1/E01-004-1234": "bde937523a317d5481ad4f923793929ace2cd9cba8f94f3ff84c081c5fd0fe36",
+    "u1/E01-005-1234": "a50364937828487d2fc5f9b0d3fd28e33dcbf022953c160a62b5a87ab229ba90",
+    "u1/E01-006-1234": "60ce3e471b49250a5d83b1936d8e40b5c840d5d807c03508d4785eaaefd81697",
+    "u1/E01-007-1234": "1bacbd44c825a07b6015b422588d42269a16fefe785a28df3327d43c6a383738",
+    "u1/E01-008-1234": "313de8d0277a1e2ef9a233e6e9043e5af4d818e18415ac308c27e6e48cfadd12",
+    "u1/E01-009-1234": "b22b21a356d6e4042416d86eb9ec6c5e57f0aaf17bab084222f6e42075d63b55",
+    "u1/E01-010-1234": "99f5d2bc8d2264bb404199bb9a8b57a9acb850c6cfdde508825ea824a337aaab"
+  }
+}

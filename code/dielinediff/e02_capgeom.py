@@ -238,7 +238,7 @@ def _style_record(engine, brief, seed, layer, frozen):
 
 
 def generate(experiment, candidate, parameters, device, *, seed=42, source=None, bound_g3=False,
-             engine_factory=_engine, implementation=None):
+             engine_factory=_engine, implementation=None, ring_loader=ring):
     import torch
     from .methods.v3_capgeom_attention import inject_aligned_bank
     from .methods.v3_inpainting import verify_inpaint_model
@@ -273,7 +273,7 @@ def generate(experiment, candidate, parameters, device, *, seed=42, source=None,
     torch.cuda.synchronize(hardware)
     for job in pending:
         item = job.atlas
-        prepared, proof, body, support = ring(experiment, engine, item.brief, seed)
+        prepared, proof, body, support = ring_loader(experiment, engine, item.brief, seed)
         used = []
         attention = {}
         layer = experiment.config["attention"]["layer"] if parameters["aligned_attention"] else None
@@ -361,10 +361,10 @@ def _check_generation(experiment, jobs, *, seed):
 
 
 def trial(experiment, name, params, device, *, seed=42, source=None, engine_factory=_engine,
-          implementation=None):
+          implementation=None, ring_loader=ring):
     jobs, rejected = generate(experiment, name, params, device, seed=seed, source=source,
                                bound_g3=name == "g3", engine_factory=engine_factory,
-                               implementation=implementation)
+                               implementation=implementation, ring_loader=ring_loader)
     if rejected is not None:
         return rejected
     _check_generation(experiment, jobs, seed=seed)
