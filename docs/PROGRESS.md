@@ -37,7 +37,7 @@
 - [x] Codex：完成任务 17。[两种子环带与盖面报告](experiments/E02/RING-M2M3.md)
 - [x] Claude：审查并合并 PR #17（2026-11-26）
 - [ ] Codex：任务 18，见 `tasks/18-codex-cap-energy-match.md`（做完停下等审查）
-- [ ] Gemini：任务 19，见 `tasks/19-gemini-cap-interior-ideas.md`
+- [x] Gemini：任务 19，见 `tasks/19-gemini-cap-interior-ideas.md`（已提交 `docs/CAP_INTERIOR_GEMINI.md` 并补录 4 篇核对文献，分支 `gemini/cap-interior-ideas`）
 - [ ] Claude：审查任务 18、19 的 PR
 - [x] Claude：审查任务 01 的 PR #1（2026-11-24，退回）
 - [x] Gemini：按 PR #1 审查意见完成 4 项必改与 2 项建议修改，并已在 PR #1 逐条回复
@@ -48,13 +48,22 @@
 
 ## 已知问题
 
-- `literature/papers.csv` 中共有 136 篇文献，其中 131 篇已核对官方摘要（`verified=yes, summary_source=abstract`，含任务 06 新增 22 篇、任务 09 新增 4 篇与任务 16 新增 3 篇）；5 篇标为 `verified=no`（2 篇未定位独立 DOI 的种子文献 + 3 篇 Elsevier 付费墙阻挡摘要的文献），均已单独标注且未作为核心论证依据。
+- `literature/papers.csv` 中共有 140 篇文献，其中 135 篇已核对官方摘要（`verified=yes, summary_source=abstract`，含任务 06 新增 22 篇、任务 09 新增 4 篇、任务 16 新增 3 篇与任务 19 新增 4 篇）；5 篇标为 `verified=no`（2 篇未定位独立 DOI 的种子文献 + 3 篇 Elsevier 付费墙阻挡摘要的文献），均已单独标注且未作为核心论证依据。
 - 公开数据集的国内网络拉取速度与 PKU PosterLayout 协议审批周期需在实验启动第一周实测。
 - `docs/JOURNALS.md` 中的 JIF 与中科院 2025 分区来自公开汇总数据，正式投稿前须在 Clarivate MJL 官网与本单位图书馆目录复核。
 
 ---
 
 ## 工作记录
+
+### 2026-11-26 · gemini · gemini/cap-interior-ideas（任务 19：底盖内部纹理补足机制与独立方案）
+- **完成**：核查 `RING-M2M3.md`、`UNIFORM-RING.md`、`ring-m2m3-stripe-sources.csv`、种子 42/1234 原像素裁图与源码（`v3_uniform_texture.py`、`v3_ring_midscale_cap.py`、`v3_inpainting.py`、`E02_capfix.yaml`），撰写 [`docs/CAP_INTERIOR_GEMINI.md`](CAP_INTERIOR_GEMINI.md)，并核对补录 4 篇顶会文献（Gatys et al. CVPR 2016、Suvorov et al. LaMa WACV 2022、Chung et al. DPS ICLR 2023、Alaluf et al. Cross-Image Attention SIGGRAPH 2024）至 `literature/papers.csv`（136 → 140 篇）与 `literature/search-log.md`（Q44）。
+- **核心发现与方案**：
+  1. **五重机理解释与 3 条可验证预测**：除 inpainting 大掩码有效感受野衰减/背景填洞偏置、SDEdit 0.85 冲淡及 `U1` 初图三处隐性衰减（`0.60` 包络、双线性移相低通、`>16 px` 粗残差扣减）外，定位两项被忽略的主因——① C1a 提示词中的 `"seamless background"` 与远景地貌词主动诱导盖面内部简化；② `E01-003 / 007` 底盖存在显著的**各向异性笔触转向**（`0–3 mm` 竖向草茎/麦秆到 `9–12 mm` 弯为横向纹理，使沿折切向差分能量骤降 4–5 倍）。
+  2. **任务 18（E1–E4）评估**：预判 `E1` 单配 `0.85` 降幅有限，`E2/E3/E4` 降强度至 `0.70–0.80` 有望压低 `v1`，但四边线性叠加初图在低强度下易暴露**双重曝光重影 / 拼贴感**（触犯新增目视硬约束），且 `E4` 需警惕 `3–6 mm` 同心锐度台阶。
+  3. **3 个互补新方法（均适配 RTX 3090，严守只提 R 不压 E）**：**C1**（保方向样例块拼贴 Image Quilting + 泊松色度融合 + 去背景化 C1a 提示词净化）、**C2**（去噪环内 `x̂_0` 闭式单向局部纹理方差匹配 + 高分辨解码层跨图参考自注意力 K/V 注入）、**C3**（原生折线联合环盖生成 `1280×1536` + 三非原生边非对称 Differential Diffusion 融合，附双种子闸门 1 风险控管）。
+  4. **排序与衔接路线**：按收益/成本/风险排序为 `C1 > C2a > E2/E4 > C2b > C3`，并按任务 18 实测落点给出分档衔接组合。
+- **交接**：提交 PR 待 Claude 审查，并与任务 18 实测结果汇总。
 
 ### 2026-11-26 · claude · main
 - **完成**：审查并合并 PR #17；下达任务 18（Codex）和任务 19（Gemini）。
