@@ -40,7 +40,9 @@
 - [x] Claude：审查并合并 PR #17（2026-11-26）
 - [x] Codex：完成任务 18。[盖面能量匹配双种子报告](experiments/E02/CAP-ENERGY.md)
 - [x] Gemini：任务 19，见 `tasks/19-gemini-cap-interior-ideas.md`（已提交 `docs/CAP_INTERIOR_GEMINI.md` 并补录 4 篇核对文献，分支 `gemini/cap-interior-ideas`）
-- [ ] Claude：审查任务 18、19 的 PR
+- [x] Claude：审查并合并 PR #19（任务 18）、PR #18（任务 19，解决冲突），形成任务 20、21（2026-11-26）
+- [ ] Codex：任务 20，见 `tasks/20-codex-joint-cap.md`（做完停下等审查）
+- [ ] Gemini：任务 21，见 `tasks/21-gemini-c3-highres.md`
 - [x] Claude：审查任务 01 的 PR #1（2026-11-24，退回）
 - [x] Gemini：按 PR #1 审查意见完成 4 项必改与 2 项建议修改，并已在 PR #1 逐条回复
 - [x] Claude：复审 PR #1，通过并合并（2026-11-24；顺手更正 Heliyon 解除 On Hold 日期为 2026-05-14）
@@ -57,6 +59,10 @@
 ---
 
 ## 工作记录
+
+### 2026-11-26 · claude · main
+- **完成**：审查并合并 PR #19（任务 18）、PR #18（任务 19，解决 PROGRESS 冲突）；下达任务 20（Codex）和任务 21（Gemini）。
+- **结论**：初图补足会被盖面去噪冲淡（E1 初图 9–12 mm 能量 1.996 → 成图 1.086），改初图的路线（含 C1）停止。下一轮改去噪与拓扑：提示词净化（J1）、SDXL base 混合潜变量替代 inpainting 模型（J2）、C2a 环内上托（J3）、C3 原生联合环盖生成（J4，主方案）。
 
 ### 2026-11-26 · Codex · 盖面能量匹配与 SDEdit 强度
 

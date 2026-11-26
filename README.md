@@ -15,7 +15,25 @@
 
 网页版 Gemini 不能执行命令时：把 `tasks/01-gemini-literature-tree-opc-packaging.md` 和 findInnovation 的 `SKILL.md`、两个模板的内容一起粘贴给它，产出再由你或其他 AI 提交到本仓库。
 
-## 发给 Codex 的指令（任务 18，直接复制）
+## 发给 Codex 的指令（任务 20，直接复制）
+
+```
+请 pull 仓库 https://github.com/Casey-sketch-cyber/ai-design.git 的最新 main，
+先读 AGENTS.md、PR #19 和 PR #18 里 Claude 的留言、docs/CAP_INTERIOR_GEMINI.md 第 1、3 节，
+然后执行 tasks/20-codex-joint-cap.md（按顺序测 J1 提示词净化、J2 SDXL base 混合潜变量替代 inpainting、J3 环内单向统计上托、J4 原生联合环盖生成（先过闸门 1 再做 Stage 2）；冻结指标和关口不动，只能补足内部纹理，不得压低贴边细节；两个种子都报告关口，做完就停）。
+必须能在 RTX 3090 24GB 上跑通。在分支 codex/joint-cap 上完成，推送并创建 PR，不要自己合并。全程用中文沟通。
+```
+
+## 发给 Gemini 的指令（任务 21，直接复制，与任务 20 并行）
+
+```
+请 pull 仓库 https://github.com/Casey-sketch-cyber/ai-design.git 的最新 main，
+阅读 AGENTS.md、tasks/21-gemini-c3-highres.md、PR #18 里 Claude 的留言、tasks/20-codex-joint-cap.md 和 docs/experiments/E02/CAP-ENERGY.md，
+为 C3 联合环盖画布（约 2 MP）给出可直接填进配置的去重复首选与备选设置，并给出 C3 失败时的后备方法，写入 docs/C3_HIGHRES_GEMINI.md。
+在分支 gemini/c3-highres 上完成，推送并创建 PR，不要自己合并。全程用中文。
+```
+
+## 发给 Codex 的指令（任务 18，已完成）
 
 ```
 请 pull 仓库 https://github.com/Casey-sketch-cyber/ai-design.git 的最新 main，
@@ -24,7 +42,7 @@
 必须能在 RTX 3090 24GB 上跑通。在分支 codex/cap-energy-match 上完成，推送并创建 PR，不要自己合并。全程用中文沟通。
 ```
 
-## 发给 Gemini 的指令（任务 19，直接复制，与任务 18 并行）
+## 发给 Gemini 的指令（任务 19，已完成）
 
 ```
 请 pull 仓库 https://github.com/Casey-sketch-cyber/ai-design.git 的最新 main，
